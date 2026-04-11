@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore — WikiPop</title>
+  <meta name="description" content="Explore what the world is reading on Wikipedia — top articles, rising trends, deep cuts, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
+
+    :root {
+      --bg: #0f1117; --bg-raised: #181a23; --text: #c8cdd8;
+      --text-muted: #7a7f8e; --text-bright: #eef0f5;
+      --accent: #f06449; --accent-glow: rgba(240, 100, 73, 0.15);
+      --border: #2a2d3a; --radius: 8px;
+      --green: #4ade80; --red: #f87171;
+    }
+    :root.light {
+      --bg: #faf9f6; --bg-raised: #ffffff; --text: #4a4a4a;
+      --text-muted: #8a8a8a; --text-bright: #1a1a1a;
+      --accent: #d94f3b; --accent-glow: rgba(217, 79, 59, 0.1);
+      --border: #e0ddd6; --green: #16a34a; --red: #dc2626;
+    }
+
+    body {
+      font-family: "Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg); color: var(--text);
+      line-height: 1.7; min-height: 100vh;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      max-width: 860px; margin: 0 auto; padding: 1.25rem 1.5rem;
+      background: var(--bg); backdrop-filter: blur(12px);
+    }
+    .logo { font-family: "Fraunces", serif; font-size: 1.35rem; font-weight: 700; color: var(--text-bright); text-decoration: none; letter-spacing: -0.02em; }
+    .logo span { color: var(--accent); }
+    .theme-toggle {
+      background: none; border: 1px solid var(--border); border-radius: 50%;
+      width: 36px; height: 36px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-muted); font-size: 1rem;
+    }
+    .theme-toggle:hover { color: var(--text-bright); border-color: var(--text-muted); }
+
+    main { max-width: 860px; margin: 0 auto; padding: 1rem 1.5rem 4rem; }
+
+    .page-header { margin-bottom: 2.5rem; }
+    .page-header h1 {
+      font-family: "Fraunces", serif; font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-weight: 700; color: var(--text-bright); letter-spacing: -0.02em;
+    }
+    .page-header p { color: var(--text-muted); font-size: 0.95rem; margin-top: 0.25rem; }
+
+    /* --- SECTIONS --- */
+    .explore-section { margin-bottom: 3rem; }
+    .explore-section h2 {
+      font-family: "Fraunces", serif; font-size: 1.3rem;
+      color: var(--text-bright); margin-bottom: 0.25rem;
+    }
+    .explore-section .section-desc {
+      color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem; line-height: 1.5;
+    }
+
+    /* --- TABLE --- */
+    .explore-table { width: 100%; border-collapse: collapse; }
+    .explore-table th {
+      text-align: left; font-size: 0.7rem; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--text-muted);
+      padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border);
+    }
+    .explore-table th:last-child { text-align: right; }
+    .explore-table td {
+      padding: 0.55rem 0.5rem; border-bottom: 1px solid var(--border); font-size: 0.9rem;
+    }
+
+    .explore-rank {
+      color: var(--text-muted); font-size: 0.8rem; font-variant-numeric: tabular-nums;
+      width: 50px; white-space: nowrap;
+    }
+    .explore-title a { color: var(--text-bright); text-decoration: none; }
+    .explore-title a:hover { color: var(--accent); }
+    .explore-desc {
+      color: var(--text-muted); font-size: 0.8rem;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 250px;
+    }
+    .explore-views {
+      text-align: right; color: var(--text-muted); font-size: 0.85rem;
+      font-variant-numeric: tabular-nums; white-space: nowrap;
+    }
+    .explore-change {
+      text-align: right; font-size: 0.8rem; font-weight: 600;
+      font-variant-numeric: tabular-nums; white-space: nowrap; width: 80px;
+    }
+    .explore-change.up { color: var(--green); }
+    .explore-change.down { color: var(--red); }
+
+    /* --- COUNTRY GRID --- */
+    .country-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.25rem;
+    }
+    .country-block {
+      border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--bg-raised); padding: 1rem 1.1rem; overflow: hidden;
+    }
+    .country-header {
+      display: flex; align-items: center; gap: 0.5rem;
+      margin-bottom: 0.6rem; font-weight: 600; font-size: 0.95rem;
+      color: var(--text-bright);
+    }
+    .country-flag { font-size: 1.25rem; }
+    .country-lang { color: var(--text-muted); font-size: 0.75rem; font-weight: 400; }
+    .country-list { list-style: none; }
+    .country-list li {
+      display: flex; align-items: baseline; gap: 0.4rem;
+      padding: 0.25rem 0; border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+    }
+    .country-list li:last-child { border-bottom: none; }
+    .country-list-rank {
+      color: var(--text-muted); font-size: 0.75rem; min-width: 1.5rem;
+      text-align: right; flex-shrink: 0;
+    }
+    .country-list-title { flex: 1; min-width: 0; }
+    .country-list-title a {
+      color: var(--text-bright); text-decoration: none;
+    }
+    .country-list-title a:hover { color: var(--accent); }
+    .country-list-en {
+      font-size: 0.7rem; color: var(--text-muted); margin-left: 0.15rem;
+    }
+    .country-list-en a { color: var(--text-muted); text-decoration: none; }
+    .country-list-en a:hover { color: var(--accent); }
+    .country-list-views {
+      color: var(--text-muted); font-size: 0.8rem; font-variant-numeric: tabular-nums;
+      white-space: nowrap; flex-shrink: 0;
+    }
+
+    /* --- CARDS --- */
+    .explore-cards {
+      display: grid; grid-template-columns: 1fr; gap: 0.5rem;
+    }
+    .explore-card {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.75rem 1rem; border-radius: var(--radius);
+      border: 1px solid var(--border); background: var(--bg-raised);
+    }
+    .explore-card:hover { border-color: var(--accent); }
+    .explore-card-rank {
+      color: var(--text-muted); font-size: 0.75rem; font-variant-numeric: tabular-nums;
+      min-width: 36px; text-align: right; flex-shrink: 0;
+    }
+    .explore-card-body { flex: 1; min-width: 0; }
+    .explore-card-title {
+      color: var(--text-bright); text-decoration: none; font-weight: 600;
+      font-size: 0.9rem; display: block;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .explore-card-title:hover { color: var(--accent); }
+    .explore-card-desc {
+      color: var(--text-muted); font-size: 0.75rem; display: block;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .explore-card-views {
+      color: var(--text-muted); font-size: 0.8rem; font-variant-numeric: tabular-nums;
+      white-space: nowrap; flex-shrink: 0;
+    }
+
+    /* --- NAV PILLS --- */
+    .section-nav {
+      display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem;
+    }
+    .section-nav a {
+      display: inline-block; font-size: 0.8rem; font-weight: 600;
+      color: var(--text-muted); border: 1px solid var(--border);
+      padding: 0.3rem 0.75rem; border-radius: 100px;
+      text-decoration: none;
+    }
+    .section-nav a:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* --- DIVIDER --- */
+    .section-divider { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+
+    footer {
+      max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 3rem;
+      border-top: 1px solid var(--border); display: flex;
+      justify-content: space-between; align-items: center;
+      color: var(--text-muted); font-size: 0.8rem;
+    }
+    footer a { color: var(--text-muted); text-decoration: none; }
+    footer a:hover { color: var(--text-bright); }
+    .footer-links { display: flex; gap: 1.25rem; }
+
+    @media (max-width: 600px) {
+      nav { padding: 1rem; }
+      main { padding: 1rem 1rem 3rem; }
+      .explore-desc { display: none; }
+      .explore-card-desc { display: none; }
+      .country-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 0.75rem; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">Wiki<span>Pop</span></a>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+      <span class="theme-icon">&#9790;</span>
+    </button>
+  </nav>
+
+  <main>
+    <div class="page-header">
+      <h1>Explore</h1>
+      <p>What the world was reading on Wikipedia &mdash; Mar 30</p>
+    </div>
+
+    <div class="section-nav">
+      <a href="#top25">Top 25</a>
+      <a href="#movers">Biggest Movers</a>
+      <a href="#newcomers">New Arrivals</a>
+      <a href="#world">Around the World</a>
+      <a href="#deep-cuts">Deep Cuts</a>
+    </div>
+
+    <div class="explore-section" id="top25">
+      <h2>Top 25</h2>
+      <p class="section-desc">The most-viewed Wikipedia articles yesterday, excluding meta pages.</p>
+      <table class="explore-table">
+        <thead><tr><th>Rank</th><th>Article</th><th>Category</th><th>Views</th></tr></thead>
+        <tbody><tr>
+    <td class="explore-rank">#3</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Dhurandhar%3A_The_Revenge" target="_blank" rel="noopener">Dhurandhar: The Revenge</a></td>
+    <td class="explore-desc">2026 Indian film by Aditya Dhar</td>
+    <td class="explore-views">421,685</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#6</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/List_of_highest-grossing_Indian_films" target="_blank" rel="noopener">List of highest-grossing Indian films</a></td>
+    <td class="explore-desc"></td>
+    <td class="explore-views">282,996</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#7</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Project_Hail_Mary_(film)" target="_blank" rel="noopener">Project Hail Mary (film)</a></td>
+    <td class="explore-desc">2026 film by Phil Lord and Christopher Miller</td>
+    <td class="explore-views">209,955</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#8</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Scott_Mills" target="_blank" rel="noopener">Scott Mills</a></td>
+    <td class="explore-desc">English radio DJ and television presenter (born 1973)</td>
+    <td class="explore-views">187,885</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#9</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" rel="noopener">2026 Iran war</a></td>
+    <td class="explore-desc">Ongoing armed conflict in West Asia</td>
+    <td class="explore-views">168,809</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#10</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Deaths_in_2026" target="_blank" rel="noopener">Deaths in 2026</a></td>
+    <td class="explore-desc"></td>
+    <td class="explore-views">139,106</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#11</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Vanessa_Trump" target="_blank" rel="noopener">Vanessa Trump</a></td>
+    <td class="explore-desc">Ex-wife of Donald Trump Jr. (born 1977)</td>
+    <td class="explore-views">121,090</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#12</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Dan_Hurley" target="_blank" rel="noopener">Dan Hurley</a></td>
+    <td class="explore-desc">American basketball coach (born 1973)</td>
+    <td class="explore-views">120,159</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#13</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Braylon_Mullins" target="_blank" rel="noopener">Braylon Mullins</a></td>
+    <td class="explore-desc">American basketball player (born 2006)</td>
+    <td class="explore-views">114,520</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#14</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Something_Very_Bad_Is_Going_to_Happen" target="_blank" rel="noopener">Something Very Bad Is Going to Happen</a></td>
+    <td class="explore-desc">American horror television miniseries</td>
+    <td class="explore-views">112,705</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#15</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Project_Hail_Mary" target="_blank" rel="noopener">Project Hail Mary</a></td>
+    <td class="explore-desc">2021 science-fiction novel by Andy Weir</td>
+    <td class="explore-views">103,290</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#16</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Avi_Lewis" target="_blank" rel="noopener">Avi Lewis</a></td>
+    <td class="explore-desc">Canadian politician and filmmaker (born 1967)</td>
+    <td class="explore-views">96,189</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#17</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Neatsville%2C_Kentucky" target="_blank" rel="noopener">Neatsville, Kentucky</a></td>
+    <td class="explore-desc">Unincorporated community in Kentucky, US</td>
+    <td class="explore-views">86,518</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#18</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Dhurandhar" target="_blank" rel="noopener">Dhurandhar</a></td>
+    <td class="explore-desc">2025 Indian film by Aditya Dhar</td>
+    <td class="explore-views">83,929</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#19</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Rahul_Banerjee_(actor)" target="_blank" rel="noopener">Rahul Banerjee (actor)</a></td>
+    <td class="explore-desc">Indian film actor (1983–2026)</td>
+    <td class="explore-views">81,793</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#20</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Mary_Beth_Hurt" target="_blank" rel="noopener">Mary Beth Hurt</a></td>
+    <td class="explore-desc">American actress (1946–2026)</td>
+    <td class="explore-views">81,570</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#21</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Sara_Arjun" target="_blank" rel="noopener">Sara Arjun</a></td>
+    <td class="explore-desc">Indian actress (born 2005)</td>
+    <td class="explore-views">80,193</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#22</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Vaibhav_Sooryavanshi" target="_blank" rel="noopener">Vaibhav Sooryavanshi</a></td>
+    <td class="explore-desc">Indian cricketer (born 2011)</td>
+    <td class="explore-views">79,194</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#23</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Roberto_De_Zerbi" target="_blank" rel="noopener">Roberto De Zerbi</a></td>
+    <td class="explore-desc">Italian football manager (born 1979)</td>
+    <td class="explore-views">76,082</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#24</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/John_F._Kennedy_Jr." target="_blank" rel="noopener">John F. Kennedy Jr.</a></td>
+    <td class="explore-desc">American attorney and magazine publisher (1960–1999)</td>
+    <td class="explore-views">74,037</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#25</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/ChatGPT" target="_blank" rel="noopener">ChatGPT</a></td>
+    <td class="explore-desc">Generative AI chatbot by OpenAI</td>
+    <td class="explore-views">69,878</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#26</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Anna&#039;s_Archive" target="_blank" rel="noopener">Anna&#039;s Archive</a></td>
+    <td class="explore-desc">Shadow library search engine</td>
+    <td class="explore-views">69,748</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#27</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Magistrates&#039;_Court%2C_Christchurch" target="_blank" rel="noopener">Magistrates&#039; Court, Christchurch</a></td>
+    <td class="explore-desc">Former court building in Christchurch, New Zealand</td>
+    <td class="explore-views">69,739</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#28</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/It&#039;s_Christmas_Day" target="_blank" rel="noopener">It&#039;s Christmas Day</a></td>
+    <td class="explore-desc">2014 single by Roy Kim</td>
+    <td class="explore-views">68,867</td>
+    
+  </tr>
+<tr>
+    <td class="explore-rank">#29</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Paradise_(2025_TV_series)" target="_blank" rel="noopener">Paradise (2025 TV series)</a></td>
+    <td class="explore-desc">American television series</td>
+    <td class="explore-views">68,237</td>
+    
+  </tr></tbody>
+      </table>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="explore-section" id="movers">
+      <h2>Biggest Movers</h2>
+      <p class="section-desc">Articles that spiked the most compared to the day before. Something happened.</p>
+      <table class="explore-table">
+        <thead><tr><th>Rank</th><th>Article</th><th>Category</th><th>Views</th><th>Change</th></tr></thead>
+        <tbody><tr>
+    <td class="explore-rank">#36</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Porepunkah_police_shootings" target="_blank" rel="noopener">Porepunkah police shootings</a></td>
+    <td class="explore-desc">2025 killing of police officers</td>
+    <td class="explore-views">63,736</td>
+    <td class="explore-change up">+508%</td>
+  </tr>
+<tr>
+    <td class="explore-rank">#42</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Jaden_Ivey" target="_blank" rel="noopener">Jaden Ivey</a></td>
+    <td class="explore-desc">American basketball player (born 2002)</td>
+    <td class="explore-views">59,543</td>
+    <td class="explore-change up">+508%</td>
+  </tr>
+<tr>
+    <td class="explore-rank">#23</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Roberto_De_Zerbi" target="_blank" rel="noopener">Roberto De Zerbi</a></td>
+    <td class="explore-desc">Italian football manager (born 1979)</td>
+    <td class="explore-views">76,082</td>
+    <td class="explore-change up">+498%</td>
+  </tr>
+<tr>
+    <td class="explore-rank">#35</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Kharg_Island" target="_blank" rel="noopener">Kharg Island</a></td>
+    <td class="explore-desc">Iranian island in Persian Gulf</td>
+    <td class="explore-views">64,440</td>
+    <td class="explore-change up">+321%</td>
+  </tr>
+<tr>
+    <td class="explore-rank">#66</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Mae_Martin" target="_blank" rel="noopener">Mae Martin</a></td>
+    <td class="explore-desc">Canadian comedian and actor (born 1987)</td>
+    <td class="explore-views">41,695</td>
+    <td class="explore-change up">+212%</td>
+  </tr>
+<tr>
+    <td class="explore-rank">#85</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Company" target="_blank" rel="noopener">Company</a></td>
+    <td class="explore-desc">Association or collection of individuals</td>
+    <td class="explore-views">35,194</td>
+    <td class="explore-change up">+206%</td>
+  </tr>
+<tr>
+    <td class="explore-rank">#79</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Alysa_Liu" target="_blank" rel="noopener">Alysa Liu</a></td>
+    <td class="explore-desc">American figure skater (born 2005)</td>
+    <td class="explore-views">37,270</td>
+    <td class="explore-change up">+156%</td>
+  </tr>
+<tr>
+    <td class="explore-rank">#74</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Arnold_Schwarzenegger" target="_blank" rel="noopener">Arnold Schwarzenegger</a></td>
+    <td class="explore-desc">Austrian and American bodybuilder, actor and politician (born 1947)</td>
+    <td class="explore-views">38,835</td>
+    <td class="explore-change up">+116%</td>
+  </tr>
+<tr>
+    <td class="explore-rank">#119</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/2026_FIFA_Series_(men&#039;s_matches)" target="_blank" rel="noopener">2026 FIFA Series (men&#039;s matches)</a></td>
+    <td class="explore-desc">International football competition</td>
+    <td class="explore-views">28,789</td>
+    <td class="explore-change up">+111%</td>
+  </tr>
+<tr>
+    <td class="explore-rank">#20</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Mary_Beth_Hurt" target="_blank" rel="noopener">Mary Beth Hurt</a></td>
+    <td class="explore-desc">American actress (1946–2026)</td>
+    <td class="explore-views">81,570</td>
+    <td class="explore-change up">+98%</td>
+  </tr>
+<tr>
+    <td class="explore-rank">#151</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Joseph_Baena" target="_blank" rel="noopener">Joseph Baena</a></td>
+    <td class="explore-desc">American actor and bodybuilder (born 1997)</td>
+    <td class="explore-views">24,041</td>
+    <td class="explore-change up">+97%</td>
+  </tr>
+<tr>
+    <td class="explore-rank">#171</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Paapa_Essiedu" target="_blank" rel="noopener">Paapa Essiedu</a></td>
+    <td class="explore-desc">British actor (born 1990)</td>
+    <td class="explore-views">23,117</td>
+    <td class="explore-change up">+92%</td>
+  </tr>
+<tr>
+    <td class="explore-rank">#252</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Paul_Schrader" target="_blank" rel="noopener">Paul Schrader</a></td>
+    <td class="explore-desc">American film director (born 1946)</td>
+    <td class="explore-views">18,429</td>
+    <td class="explore-change up">+92%</td>
+  </tr>
+<tr>
+    <td class="explore-rank">#114</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Rob_Schneider" target="_blank" rel="noopener">Rob Schneider</a></td>
+    <td class="explore-desc">American actor and comedian (born 1963)</td>
+    <td class="explore-views">29,504</td>
+    <td class="explore-change up">+90%</td>
+  </tr>
+<tr>
+    <td class="explore-rank">#149</td>
+    <td class="explore-title"><a href="https://en.wikipedia.org/wiki/William_Hurt" target="_blank" rel="noopener">William Hurt</a></td>
+    <td class="explore-desc">American actor (1950–2022)</td>
+    <td class="explore-views">24,119</td>
+    <td class="explore-change up">+89%</td>
+  </tr></tbody>
+      </table>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="explore-section" id="newcomers">
+      <h2>New Arrivals</h2>
+      <p class="section-desc">
+        Articles that appeared in the top 500 yesterday but weren't anywhere in the top 1,000 the day before.
+        These are the articles the world suddenly started caring about.
+      </p>
+      <div class="explore-cards">
+        <div class="explore-card">
+    <div class="explore-card-rank">#8</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Scott_Mills" target="_blank" rel="noopener" class="explore-card-title">Scott Mills</a>
+      <span class="explore-card-desc">English radio DJ and television presenter (born 1973)</span>
+    </div>
+    <div class="explore-card-views">187,885</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#22</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Vaibhav_Sooryavanshi" target="_blank" rel="noopener" class="explore-card-title">Vaibhav Sooryavanshi</a>
+      <span class="explore-card-desc">Indian cricketer (born 2011)</span>
+    </div>
+    <div class="explore-card-views">79,194</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#27</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Magistrates&#039;_Court%2C_Christchurch" target="_blank" rel="noopener" class="explore-card-title">Magistrates&#039; Court, Christchurch</a>
+      <span class="explore-card-desc">Former court building in Christchurch, New Zealand</span>
+    </div>
+    <div class="explore-card-views">69,739</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#28</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/It&#039;s_Christmas_Day" target="_blank" rel="noopener" class="explore-card-title">It&#039;s Christmas Day</a>
+      <span class="explore-card-desc">2014 single by Roy Kim</span>
+    </div>
+    <div class="explore-card-views">68,867</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#30</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/BlaZeon" target="_blank" rel="noopener" class="explore-card-title">BlaZeon</a>
+      <span class="explore-card-desc">1992 video game</span>
+    </div>
+    <div class="explore-card-views">67,380</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#34</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Alex_Duong" target="_blank" rel="noopener" class="explore-card-title">Alex Duong</a>
+      <span class="explore-card-desc">American comedian and television actor (1984–2026)</span>
+    </div>
+    <div class="explore-card-views">65,031</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#52</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Dark_forest_hypothesis" target="_blank" rel="noopener" class="explore-card-title">Dark forest hypothesis</a>
+      <span class="explore-card-desc">Hypothesis for why alien life has not been discovered</span>
+    </div>
+    <div class="explore-card-views">47,870</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#65</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Nelly_Furtado" target="_blank" rel="noopener" class="explore-card-title">Nelly Furtado</a>
+      <span class="explore-card-desc">Canadian singer (born 1978)</span>
+    </div>
+    <div class="explore-card-views">41,770</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#80</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Joni_Mitchell" target="_blank" rel="noopener" class="explore-card-title">Joni Mitchell</a>
+      <span class="explore-card-desc">Canadian singer-songwriter (born 1943)</span>
+    </div>
+    <div class="explore-card-views">37,046</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#94</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/The_Backrooms" target="_blank" rel="noopener" class="explore-card-title">The Backrooms</a>
+      <span class="explore-card-desc">Fictional location</span>
+    </div>
+    <div class="explore-card-views">32,386</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#121</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Karoline_Leavitt" target="_blank" rel="noopener" class="explore-card-title">Karoline Leavitt</a>
+      <span class="explore-card-desc">White House press secretary (born 1997)</span>
+    </div>
+    <div class="explore-card-views">28,522</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#122</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/2025_World_Figure_Skating_Championships" target="_blank" rel="noopener" class="explore-card-title">2025 World Figure Skating Championships</a>
+      <span class="explore-card-desc">International figure skating competition</span>
+    </div>
+    <div class="explore-card-views">28,131</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#130</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/White_torture" target="_blank" rel="noopener" class="explore-card-title">White torture</a>
+      <span class="explore-card-desc">Torture by sensory deprivation</span>
+    </div>
+    <div class="explore-card-views">26,891</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#175</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Celine_Dion" target="_blank" rel="noopener" class="explore-card-title">Celine Dion</a>
+      <span class="explore-card-desc">Canadian singer (born 1968)</span>
+    </div>
+    <div class="explore-card-views">22,711</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#181</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Arielle_Kebbel" target="_blank" rel="noopener" class="explore-card-title">Arielle Kebbel</a>
+      <span class="explore-card-desc">American actress and model (born 1985)</span>
+    </div>
+    <div class="explore-card-views">22,396</div>
+  </div>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="explore-section" id="world">
+      <h2>Around the World</h2>
+      <div class="country-grid">
+        <div class="country-block">
+      <div class="country-header"><span class="country-flag">🇺🇸🇬🇧🇨🇦🇦🇺🇳🇬</span> English Wikipedia</div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://en.wikipedia.org/wiki/Dhurandhar%3A_The_Revenge" target="_blank" rel="noopener">Dhurandhar: The Revenge</a></span>
+        <span class="country-list-views">421,685</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://en.wikipedia.org/wiki/List_of_highest-grossing_Indian_films" target="_blank" rel="noopener">List of highest-grossing Indian films</a></span>
+        <span class="country-list-views">282,996</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://en.wikipedia.org/wiki/Project_Hail_Mary_(film)" target="_blank" rel="noopener">Project Hail Mary (film)</a></span>
+        <span class="country-list-views">209,955</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://en.wikipedia.org/wiki/Scott_Mills" target="_blank" rel="noopener">Scott Mills</a></span>
+        <span class="country-list-views">187,885</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" rel="noopener">2026 Iran war</a></span>
+        <span class="country-list-views">168,809</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇮🇳</span> India <span class="country-lang">hi.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://hi.wikipedia.org/wiki/%E0%A4%95%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A3_%E0%A4%95%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%B0_%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%8D%E0%A4%A8%E0%A5%8B%E0%A4%88_(%E0%A4%86%E0%A4%88%E0%A4%AA%E0%A5%80%E0%A4%8F%E0%A4%B8)" target="_blank" rel="noopener">कृष्ण कुमार विश्नोई (आईपीएस)</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Krishan%20Kumar%20(police%20officer)" target="_blank" rel="noopener">Krishan Kumar (police officer)</a>)</span></span>
+        <span class="country-list-views">3,411</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://hi.wikipedia.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A4%AA%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A0" target="_blank" rel="noopener">मुखपृष्ठ</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Main%20Page" target="_blank" rel="noopener">Main Page</a>)</span></span>
+        <span class="country-list-views">3,280</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://hi.wikipedia.org/wiki/%E0%A4%B0%E0%A5%82%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A5%80_%E0%A4%9A%E0%A4%BE%E0%A4%95%E0%A4%A3%E0%A4%95%E0%A4%B0" target="_blank" rel="noopener">रूपाली चाकणकर</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Rupali%20Chakankar" target="_blank" rel="noopener">Rupali Chakankar</a>)</span></span>
+        <span class="country-list-views">2,613</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://hi.wikipedia.org/wiki/%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%87%E0%A4%B7%3A%E0%A4%96%E0%A5%8B%E0%A4%9C" target="_blank" rel="noopener">विशेष:खोज</a></span>
+        <span class="country-list-views">2,225</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://hi.wikipedia.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%B5%E0%A5%80%E0%A4%B0" target="_blank" rel="noopener">महावीर</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Mahavira" target="_blank" rel="noopener">Mahavira</a>)</span></span>
+        <span class="country-list-views">2,181</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇨🇳</span> China <span class="country-lang">zh.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://zh.wikipedia.org/wiki/%E9%80%90%E7%8E%89" target="_blank" rel="noopener">逐玉</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Pursuit%20of%20Jade" target="_blank" rel="noopener">Pursuit of Jade</a>)</span></span>
+        <span class="country-list-views">83,030</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://zh.wikipedia.org/wiki/%E8%AC%9D%E5%B0%8F%E8%8F%AF" target="_blank" rel="noopener">謝小華</a></span>
+        <span class="country-list-views">38,613</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://zh.wikipedia.org/wiki/%E6%AD%A3%E7%BE%A9%E5%A5%B3%E7%A5%9E_(%E7%84%A1%E7%B6%AB%E9%9B%BB%E8%A6%96%E5%8A%87)" target="_blank" rel="noopener">正義女神 (無綫電視劇)</a></span>
+        <span class="country-list-views">36,574</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://zh.wikipedia.org/wiki/%E5%BC%A0%E5%87%8C%E8%B5%AB" target="_blank" rel="noopener">张凌赫</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Zhang%20Linghe" target="_blank" rel="noopener">Zhang Linghe</a>)</span></span>
+        <span class="country-list-views">35,336</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://zh.wikipedia.org/wiki/%E5%90%B3%E5%93%81%E6%BD%94" target="_blank" rel="noopener">吳品潔</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Oceana%20Wu" target="_blank" rel="noopener">Oceana Wu</a>)</span></span>
+        <span class="country-list-views">23,492</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇫🇷</span> France <span class="country-lang">fr.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia%3AAccueil_principal" target="_blank" rel="noopener">Wikipédia:Accueil principal</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Main%20Page" target="_blank" rel="noopener">Main Page</a>)</span></span>
+        <span class="country-list-views">460,056</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://fr.wikipedia.org/wiki/Cookie_(informatique)" target="_blank" rel="noopener">Cookie (informatique)</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/HTTP%20cookie" target="_blank" rel="noopener">HTTP cookie</a>)</span></span>
+        <span class="country-list-views">134,324</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://fr.wikipedia.org/wiki/Sp%C3%A9cial%3ARecherche" target="_blank" rel="noopener">Spécial:Recherche</a></span>
+        <span class="country-list-views">95,059</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://fr.wikipedia.org/wiki/Isabelle_Mergault" target="_blank" rel="noopener">Isabelle Mergault</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Isabelle%20Mergault" target="_blank" rel="noopener">Isabelle Mergault</a>)</span></span>
+        <span class="country-list-views">68,448</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://fr.wikipedia.org/wiki/Les_Moissons_du_ciel" target="_blank" rel="noopener">Les Moissons du ciel</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Days%20of%20Heaven" target="_blank" rel="noopener">Days of Heaven</a>)</span></span>
+        <span class="country-list-views">61,891</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇮🇩</span> Indonesia <span class="country-lang">id.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://id.wikipedia.org/wiki/Istimewa%3APerubahan_terbaru" target="_blank" rel="noopener">Istimewa:Perubahan terbaru</a></span>
+        <span class="country-list-views">132,324</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://id.wikipedia.org/wiki/Istimewa%3APencarian" target="_blank" rel="noopener">Istimewa:Pencarian</a></span>
+        <span class="country-list-views">74,014</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://id.wikipedia.org/wiki/Halaman_Utama" target="_blank" rel="noopener">Halaman Utama</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Main%20Page" target="_blank" rel="noopener">Main Page</a>)</span></span>
+        <span class="country-list-views">19,128</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://id.wikipedia.org/wiki/Bulgaria" target="_blank" rel="noopener">Bulgaria</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Bulgaria" target="_blank" rel="noopener">Bulgaria</a>)</span></span>
+        <span class="country-list-views">10,102</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://id.wikipedia.org/wiki/Tim_nasional_sepak_bola_Bulgaria" target="_blank" rel="noopener">Tim nasional sepak bola Bulgaria</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Bulgaria%20national%20football%20team" target="_blank" rel="noopener">Bulgaria national football team</a>)</span></span>
+        <span class="country-list-views">9,727</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇵🇰</span> Pakistan <span class="country-lang">ur.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://ur.wikipedia.org/wiki/%D8%B5%D9%81%D8%AD%DB%82_%D8%A7%D9%88%D9%84" target="_blank" rel="noopener">صفحۂ اول</a></span>
+        <span class="country-list-views">1,587</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://ur.wikipedia.org/wiki/%D8%AE%D8%A7%D8%B5%3A%D8%AD%D8%A7%D9%84%DB%8C%DB%81_%D8%AA%D8%A8%D8%AF%DB%8C%D9%84%DB%8C%D8%A7%DA%BA" target="_blank" rel="noopener">خاص:حالیہ تبدیلیاں</a></span>
+        <span class="country-list-views">960</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://ur.wikipedia.org/wiki/%D8%AE%D8%A7%D8%B5%3A%D8%AA%D9%84%D8%A7%D8%B4" target="_blank" rel="noopener">خاص:تلاش</a></span>
+        <span class="country-list-views">582</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://ur.wikipedia.org/wiki/%D8%B3%DB%8C%DA%A9%D8%B3%DB%8C_(%D9%86%D8%A7%D9%88%D9%84)" target="_blank" rel="noopener">سیکسی (ناول)</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Sexy%20(novel)" target="_blank" rel="noopener">Sexy (novel)</a>)</span></span>
+        <span class="country-list-views">335</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://ur.wikipedia.org/wiki/%D8%AA%D8%A8%D8%A7%D8%AF%D9%84%DB%82_%D8%AE%DB%8C%D8%A7%D9%84%3A%D8%B3%DA%A9%D8%B3_%D8%A7%D9%86_%D9%BE%DB%8C%D8%B1%D8%B3" target="_blank" rel="noopener">تبادلۂ خیال:سکس ان پیرس</a></span>
+        <span class="country-list-views">270</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇧🇷</span> Brazil <span class="country-lang">pt.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia%3AP%C3%A1gina_principal" target="_blank" rel="noopener">Wikipédia:Página principal</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Main%20Page" target="_blank" rel="noopener">Main Page</a>)</span></span>
+        <span class="country-list-views">83,003</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://pt.wikipedia.org/wiki/Especial%3APesquisar" target="_blank" rel="noopener">Especial:Pesquisar</a></span>
+        <span class="country-list-views">45,428</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://pt.wikipedia.org/wiki/Acidente_radiol%C3%B3gico_de_Goi%C3%A2nia" target="_blank" rel="noopener">Acidente radiológico de Goiânia</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Goi%C3%A2nia%20accident" target="_blank" rel="noopener">Goiânia accident</a>)</span></span>
+        <span class="country-list-views">31,873</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://pt.wikipedia.org/wiki/Ronaldo_Caiado" target="_blank" rel="noopener">Ronaldo Caiado</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Ronaldo%20Caiado" target="_blank" rel="noopener">Ronaldo Caiado</a>)</span></span>
+        <span class="country-list-views">9,091</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://pt.wikipedia.org/wiki/Domingo_de_Ramos" target="_blank" rel="noopener">Domingo de Ramos</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Palm%20Sunday" target="_blank" rel="noopener">Palm Sunday</a>)</span></span>
+        <span class="country-list-views">8,852</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇧🇩</span> Bangladesh <span class="country-lang">bn.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://bn.wikipedia.org/wiki/%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%87%E0%A6%B7%3A%E0%A6%85%E0%A6%A8%E0%A7%81%E0%A6%B8%E0%A6%A8%E0%A7%8D%E0%A6%A7%E0%A6%BE%E0%A6%A8" target="_blank" rel="noopener">বিশেষ:অনুসন্ধান</a></span>
+        <span class="country-list-views">12,430</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A6%BE%E0%A6%B9%E0%A7%81%E0%A6%B2_%E0%A6%AC%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A7%8B%E0%A6%AA%E0%A6%BE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AF%E0%A6%BC_(%E0%A6%85%E0%A6%AD%E0%A6%BF%E0%A6%A8%E0%A7%87%E0%A6%A4%E0%A6%BE)" target="_blank" rel="noopener">রাহুল বন্দ্যোপাধ্যায় (অভিনেতা)</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Rahul%20Banerjee%20(actor)" target="_blank" rel="noopener">Rahul Banerjee (actor)</a>)</span></span>
+        <span class="country-list-views">7,882</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://bn.wikipedia.org/wiki/%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A7%E0%A6%BE%E0%A6%A8_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE" target="_blank" rel="noopener">প্রধান পাতা</a></span>
+        <span class="country-list-views">3,726</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://bn.wikipedia.org/wiki/%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%99%E0%A7%8D%E0%A6%95%E0%A6%BE_%E0%A6%B8%E0%A6%B0%E0%A6%95%E0%A6%BE%E0%A6%B0" target="_blank" rel="noopener">প্রিয়াঙ্কা সরকার</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Priyanka%20Sarkar" target="_blank" rel="noopener">Priyanka Sarkar</a>)</span></span>
+        <span class="country-list-views">3,548</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://bn.wikipedia.org/wiki/%E0%A6%9A%E0%A6%BF%E0%A6%B0%E0%A6%A6%E0%A6%BF%E0%A6%A8%E0%A6%87_%E0%A6%A4%E0%A7%81%E0%A6%AE%E0%A6%BF_%E0%A6%AF%E0%A7%87_%E0%A6%86%E0%A6%AE%E0%A6%BE%E0%A6%B0" target="_blank" rel="noopener">চিরদিনই তুমি যে আমার</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Chirodini%20Tumi%20Je%20Amar" target="_blank" rel="noopener">Chirodini Tumi Je Amar</a>)</span></span>
+        <span class="country-list-views">3,073</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇷🇺</span> Russia <span class="country-lang">ru.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" target="_blank" rel="noopener">Заглавная страница</a></span>
+        <span class="country-list-views">288,746</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F%3A%D0%9F%D0%BE%D0%B8%D1%81%D0%BA" target="_blank" rel="noopener">Служебная:Поиск</a></span>
+        <span class="country-list-views">75,093</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%B2%D0%B5%D0%BB_I" target="_blank" rel="noopener">Павел I</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Paul%20I%20of%20Russia" target="_blank" rel="noopener">Paul I of Russia</a>)</span></span>
+        <span class="country-list-views">24,152</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D1%80%D0%B8%D0%BF%D0%B0%D1%81%D0%BA%D0%B0%2C_%D0%9E%D0%BB%D0%B5%D0%B3_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87" target="_blank" rel="noopener">Дерипаска, Олег Владимирович</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Oleg%20Deripaska" target="_blank" rel="noopener">Oleg Deripaska</a>)</span></span>
+        <span class="country-list-views">23,922</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BC%D0%B0%D1%80%D0%BE%D0%B2%2C_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%92%D0%B0%D0%BB%D0%B5%D0%BD%D1%82%D0%B8%D0%BD%D0%BE%D0%B2%D0%B8%D1%87" target="_blank" rel="noopener">Комаров, Владимир Валентинович</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Volodymyr%20Komarov" target="_blank" rel="noopener">Volodymyr Komarov</a>)</span></span>
+        <span class="country-list-views">23,151</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇲🇽</span> Mexico <span class="country-lang">es.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://es.wikipedia.org/wiki/Especial%3ABuscar" target="_blank" rel="noopener">Especial:Buscar</a></span>
+        <span class="country-list-views">79,357</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://es.wikipedia.org/wiki/Accidente_radiol%C3%B3gico_de_Goi%C3%A2nia" target="_blank" rel="noopener">Accidente radiológico de Goiânia</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Goi%C3%A2nia%20accident" target="_blank" rel="noopener">Goiânia accident</a>)</span></span>
+        <span class="country-list-views">25,073</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://es.wikipedia.org/wiki/Project_Hail_Mary" target="_blank" rel="noopener">Project Hail Mary</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Project%20Hail%20Mary%20(film)" target="_blank" rel="noopener">Project Hail Mary (film)</a>)</span></span>
+        <span class="country-list-views">17,431</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://es.wikipedia.org/wiki/Domingo_de_Ramos" target="_blank" rel="noopener">Domingo de Ramos</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Palm%20Sunday" target="_blank" rel="noopener">Palm Sunday</a>)</span></span>
+        <span class="country-list-views">16,801</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://es.wikipedia.org/wiki/Caso_Asunta_Basterra" target="_blank" rel="noopener">Caso Asunta Basterra</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Murder%20of%20Asunta%20Basterra" target="_blank" rel="noopener">Murder of Asunta Basterra</a>)</span></span>
+        <span class="country-list-views">16,382</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇯🇵</span> Japan <span class="country-lang">ja.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" target="_blank" rel="noopener">メインページ</a></span>
+        <span class="country-list-views">522,834</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://ja.wikipedia.org/wiki/%E6%BA%80%E5%B3%B6%E3%81%B2%E3%81%8B%E3%82%8A" target="_blank" rel="noopener">満島ひかり</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Hikari%20Mitsushima" target="_blank" rel="noopener">Hikari Mitsushima</a>)</span></span>
+        <span class="country-list-views">239,778</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://ja.wikipedia.org/wiki/%E7%9F%B3%E4%BA%95%E8%A3%95%E4%B9%9F_(%E6%98%A0%E7%94%BB%E7%9B%A3%E7%9D%A3)" target="_blank" rel="noopener">石井裕也 (映画監督)</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Yuya%20Ishii%20(director)" target="_blank" rel="noopener">Yuya Ishii (director)</a>)</span></span>
+        <span class="country-list-views">135,137</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://ja.wikipedia.org/wiki/%E7%89%B9%E5%88%A5%3A%E6%A4%9C%E7%B4%A2" target="_blank" rel="noopener">特別:検索</a></span>
+        <span class="country-list-views">91,897</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://ja.wikipedia.org/wiki/%E7%9B%B8%E6%A5%BD%E6%A8%B9" target="_blank" rel="noopener">相楽樹</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Itsuki%20Sagara" target="_blank" rel="noopener">Itsuki Sagara</a>)</span></span>
+        <span class="country-list-views">66,133</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇰🇷</span> South Korea <span class="country-lang">ko.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://ko.wikipedia.org/wiki/%ED%8A%B9%EC%88%98%3A%EA%B2%80%EC%83%89" target="_blank" rel="noopener">특수:검색</a></span>
+        <span class="country-list-views">34,842</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://ko.wikipedia.org/wiki/%EB%AC%B8%ED%99%94%EB%B0%A9%EC%86%A1" target="_blank" rel="noopener">문화방송</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Munhwa%20Broadcasting%20Corporation" target="_blank" rel="noopener">Munhwa Broadcasting Corporation</a>)</span></span>
+        <span class="country-list-views">27,191</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC%3A%EB%8C%80%EB%AC%B8" target="_blank" rel="noopener">위키백과:대문</a></span>
+        <span class="country-list-views">24,101</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://ko.wikipedia.org/wiki/%ED%99%A9%EC%84%9D%ED%9D%AC" target="_blank" rel="noopener">황석희</a></span>
+        <span class="country-list-views">20,992</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B5%AD%EB%B0%A9%EC%86%A1%EA%B3%B5%EC%82%AC" target="_blank" rel="noopener">한국방송공사</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Korean%20Broadcasting%20System" target="_blank" rel="noopener">Korean Broadcasting System</a>)</span></span>
+        <span class="country-list-views">10,123</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇵🇭</span> Philippines <span class="country-lang">tl.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://tl.wikipedia.org/wiki/Unang_Pahina" target="_blank" rel="noopener">Unang Pahina</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Main%20Page" target="_blank" rel="noopener">Main Page</a>)</span></span>
+        <span class="country-list-views">1,106</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://tl.wikipedia.org/wiki/Natatangi%3AMaghanap" target="_blank" rel="noopener">Natatangi:Maghanap</a></span>
+        <span class="country-list-views">682</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://tl.wikipedia.org/wiki/Natatangi%3AMga_huling_binago" target="_blank" rel="noopener">Natatangi:Mga huling binago</a></span>
+        <span class="country-list-views">342</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://tl.wikipedia.org/wiki/Ang_Pitong_Huling_Salita" target="_blank" rel="noopener">Ang Pitong Huling Salita</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Help%3ACS1%20errors%23parameter%20ignored%20suggest" target="_blank" rel="noopener">Help:CS1 errors#parameter ignored suggest</a>)</span></span>
+        <span class="country-list-views">154</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://tl.wikipedia.org/wiki/Araw_ng_Kagitingan" target="_blank" rel="noopener">Araw ng Kagitingan</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Day%20of%20Valor" target="_blank" rel="noopener">Day of Valor</a>)</span></span>
+        <span class="country-list-views">140</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇪🇬</span> Egypt <span class="country-lang">ar.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://ar.wikipedia.org/wiki/%D8%AE%D8%A7%D8%B5%3A%D8%A8%D8%AD%D8%AB" target="_blank" rel="noopener">خاص:بحث</a></span>
+        <span class="country-list-views">38,099</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D8%A9" target="_blank" rel="noopener">الصفحة الرئيسة</a></span>
+        <span class="country-list-views">36,712</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%8A%D9%85%D9%8A%D9%86_%D8%B2%D8%B1%D9%88%D8%A7%D9%84" target="_blank" rel="noopener">اليمين زروال</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Liamine%20Z%C3%A9roual" target="_blank" rel="noopener">Liamine Zéroual</a>)</span></span>
+        <span class="country-list-views">19,957</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://ar.wikipedia.org/wiki/%D9%85%D9%84%D9%81%3AElissa_-_August_24%2C_2012_(2).jpg" target="_blank" rel="noopener">ملف:Elissa - August 24, 2012 (2).jpg</a></span>
+        <span class="country-list-views">12,274</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://ar.wikipedia.org/wiki/%D9%85%D9%84%D9%81%3AXNXX_logo.png" target="_blank" rel="noopener">ملف:XNXX logo.png</a></span>
+        <span class="country-list-views">7,601</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇨🇩</span> DR Congo <span class="country-lang">fr.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia%3AAccueil_principal" target="_blank" rel="noopener">Wikipédia:Accueil principal</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Main%20Page" target="_blank" rel="noopener">Main Page</a>)</span></span>
+        <span class="country-list-views">460,056</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://fr.wikipedia.org/wiki/Cookie_(informatique)" target="_blank" rel="noopener">Cookie (informatique)</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/HTTP%20cookie" target="_blank" rel="noopener">HTTP cookie</a>)</span></span>
+        <span class="country-list-views">134,324</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://fr.wikipedia.org/wiki/Sp%C3%A9cial%3ARecherche" target="_blank" rel="noopener">Spécial:Recherche</a></span>
+        <span class="country-list-views">95,059</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://fr.wikipedia.org/wiki/Isabelle_Mergault" target="_blank" rel="noopener">Isabelle Mergault</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Isabelle%20Mergault" target="_blank" rel="noopener">Isabelle Mergault</a>)</span></span>
+        <span class="country-list-views">68,448</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://fr.wikipedia.org/wiki/Les_Moissons_du_ciel" target="_blank" rel="noopener">Les Moissons du ciel</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Days%20of%20Heaven" target="_blank" rel="noopener">Days of Heaven</a>)</span></span>
+        <span class="country-list-views">61,891</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇻🇳</span> Vietnam <span class="country-lang">vi.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh" target="_blank" rel="noopener">Trang Chính</a></span>
+        <span class="country-list-views">21,493</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://vi.wikipedia.org/wiki/%C4%90%C3%A0i_Truy%E1%BB%81n_h%C3%ACnh_K%E1%BB%B9_thu%E1%BA%ADt_s%E1%BB%91_VTC" target="_blank" rel="noopener">Đài Truyền hình Kỹ thuật số VTC</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/VTC%20Digital%20Television" target="_blank" rel="noopener">VTC Digital Television</a>)</span></span>
+        <span class="country-list-views">13,188</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://vi.wikipedia.org/wiki/%C4%90%E1%BA%B7c_bi%E1%BB%87t%3AT%C3%ACm_ki%E1%BA%BFm" target="_blank" rel="noopener">Đặc biệt:Tìm kiếm</a></span>
+        <span class="country-list-views">8,447</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://vi.wikipedia.org/wiki/Juky_San" target="_blank" rel="noopener">Juky San</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Juky%20San" target="_blank" rel="noopener">Juky San</a>)</span></span>
+        <span class="country-list-views">3,154</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin%3AYoutube_logo.png" target="_blank" rel="noopener">Tập tin:Youtube logo.png</a></span>
+        <span class="country-list-views">2,886</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇮🇷</span> Iran <span class="country-lang">fa.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://fa.wikipedia.org/wiki/%D8%B5%D9%81%D8%AD%D9%87%D9%94_%D8%A7%D8%B5%D9%84%DB%8C" target="_blank" rel="noopener">صفحهٔ اصلی</a></span>
+        <span class="country-list-views">11,599</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://fa.wikipedia.org/wiki/%D9%88%DB%8C%DA%98%D9%87%3A%D8%AC%D8%B3%D8%AA%D8%AC%D9%88" target="_blank" rel="noopener">ویژه:جستجو</a></span>
+        <span class="country-list-views">5,823</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://fa.wikipedia.org/wiki/%D8%B1%D8%AF%D9%87%3A%D9%81%DB%8C%D9%84%D9%85%E2%80%8C%D9%87%D8%A7%DB%8C_%D8%B3%DA%A9%D8%B3%DB%8C-%DA%A9%D9%85%D8%AF%DB%8C_%D8%A2%D9%85%D8%B1%DB%8C%DA%A9%D8%A7%DB%8C%DB%8C" target="_blank" rel="noopener">رده:فیلم‌های سکسی-کمدی آمریکایی</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Category%3AAmerican%20sex%20comedy%20films" target="_blank" rel="noopener">Category:American sex comedy films</a>)</span></span>
+        <span class="country-list-views">5,428</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://fa.wikipedia.org/wiki/%D8%B3%DA%A9%D8%B3_%D9%88_%D8%B3%DB%8C%D8%AA%DB%8C_%DB%B2" target="_blank" rel="noopener">سکس و سیتی ۲</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Sex%20and%20the%20City%202" target="_blank" rel="noopener">Sex and the City 2</a>)</span></span>
+        <span class="country-list-views">4,147</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://fa.wikipedia.org/wiki/%D8%B9%D9%84%DB%8C%D8%B1%D8%B6%D8%A7_%D8%AA%D9%86%DA%AF%D8%B3%DB%8C%D8%B1%DB%8C" target="_blank" rel="noopener">علیرضا تنگسیری</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Alireza%20Tangsiri" target="_blank" rel="noopener">Alireza Tangsiri</a>)</span></span>
+        <span class="country-list-views">3,645</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇹🇷</span> Turkey <span class="country-lang">tr.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://tr.wikipedia.org/wiki/Anasayfa" target="_blank" rel="noopener">Anasayfa</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Main%20Page" target="_blank" rel="noopener">Main Page</a>)</span></span>
+        <span class="country-list-views">45,255</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://tr.wikipedia.org/wiki/%C3%96zel%3AAra" target="_blank" rel="noopener">Özel:Ara</a></span>
+        <span class="country-list-views">9,637</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://tr.wikipedia.org/wiki/Kosova" target="_blank" rel="noopener">Kosova</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Kosovo" target="_blank" rel="noopener">Kosovo</a>)</span></span>
+        <span class="country-list-views">9,164</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://tr.wikipedia.org/wiki/%C3%96zkan_Yal%C4%B1m" target="_blank" rel="noopener">Özkan Yalım</a></span>
+        <span class="country-list-views">7,888</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://tr.wikipedia.org/wiki/T%C3%BCrkiye" target="_blank" rel="noopener">Türkiye</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Turkey" target="_blank" rel="noopener">Turkey</a>)</span></span>
+        <span class="country-list-views">7,016</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇩🇪</span> Germany <span class="country-lang">de.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://de.wikipedia.org/wiki/Spezial%3ASuche" target="_blank" rel="noopener">Spezial:Suche</a></span>
+        <span class="country-list-views">144,762</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://de.wikipedia.org/wiki/Otto_Addo" target="_blank" rel="noopener">Otto Addo</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Otto%20Addo" target="_blank" rel="noopener">Otto Addo</a>)</span></span>
+        <span class="country-list-views">92,446</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://de.wikipedia.org/wiki/Deniz_Undav" target="_blank" rel="noopener">Deniz Undav</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Deniz%20Undav" target="_blank" rel="noopener">Deniz Undav</a>)</span></span>
+        <span class="country-list-views">61,505</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://de.wikipedia.org/wiki/Winfried_Sch%C3%A4fer" target="_blank" rel="noopener">Winfried Schäfer</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Winfried%20Sch%C3%A4fer" target="_blank" rel="noopener">Winfried Schäfer</a>)</span></span>
+        <span class="country-list-views">48,579</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://de.wikipedia.org/wiki/In_der_Glut_des_S%C3%BCdens" target="_blank" rel="noopener">In der Glut des Südens</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Days%20of%20Heaven" target="_blank" rel="noopener">Days of Heaven</a>)</span></span>
+        <span class="country-list-views">43,953</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇹🇭</span> Thailand <span class="country-lang">th.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://th.wikipedia.org/wiki/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81" target="_blank" rel="noopener">หน้าหลัก</a></span>
+        <span class="country-list-views">15,576</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://th.wikipedia.org/wiki/%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%88%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%81%E0%B8%9E%E0%B8%A3%E0%B9%88%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2" target="_blank" rel="noopener">องค์การกระจายเสียงและแพร่ภาพสาธารณะแห่งประเทศไทย</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Thai%20Public%20Broadcasting%20Service" target="_blank" rel="noopener">Thai Public Broadcasting Service</a>)</span></span>
+        <span class="country-list-views">9,121</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://th.wikipedia.org/wiki/%E0%B8%9E%E0%B8%B4%E0%B9%80%E0%B8%A8%E0%B8%A9%3A%E0%B8%84%E0%B9%89%E0%B8%99%E0%B8%AB%E0%B8%B2" target="_blank" rel="noopener">พิเศษ:ค้นหา</a></span>
+        <span class="country-list-views">8,821</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://th.wikipedia.org/wiki/%E0%B8%AD%E0%B8%94%E0%B8%B4%E0%B8%A8%E0%B8%B1%E0%B8%A2_%E0%B9%82%E0%B8%9E%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%B4%E0%B8%81" target="_blank" rel="noopener">อดิศัย โพธารามิก</a></span>
+        <span class="country-list-views">4,272</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://th.wikipedia.org/wiki/%E0%B8%9E%E0%B8%B4%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B9%8C_%E0%B8%A3%E0%B8%B1%E0%B8%8A%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A3" target="_blank" rel="noopener">พิพัฒน์ รัชกิจประการ</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Phipat%20Ratchakitprakarn" target="_blank" rel="noopener">Phipat Ratchakitprakarn</a>)</span></span>
+        <span class="country-list-views">3,716</span>
+      </li></ol>
+    </div>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="explore-section" id="deep-cuts">
+      <h2>Deep Cuts</h2>
+      <p class="section-desc">
+        Articles ranked 700&ndash;1,000. Popular enough to make the top thousand, obscure enough that you've
+        probably never thought to look them up. The Wikipedia long tail.
+      </p>
+      <div class="explore-cards">
+        <div class="explore-card">
+    <div class="explore-card-rank">#712</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Dark_Winds" target="_blank" rel="noopener" class="explore-card-title">Dark Winds</a>
+      <span class="explore-card-desc">2022 American crime/psychological thriller television series</span>
+    </div>
+    <div class="explore-card-views">9,996</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#713</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Sarfaraz_Khan_(cricketer)" target="_blank" rel="noopener" class="explore-card-title">Sarfaraz Khan (cricketer)</a>
+      <span class="explore-card-desc">Indian cricketer (born 1997)</span>
+    </div>
+    <div class="explore-card-views">9,994</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#713</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Sylvester_Stallone" target="_blank" rel="noopener" class="explore-card-title">Sylvester Stallone</a>
+      <span class="explore-card-desc">American actor and filmmaker (born 1946)</span>
+    </div>
+    <div class="explore-card-views">9,994</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#715</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Hailee_Steinfeld" target="_blank" rel="noopener" class="explore-card-title">Hailee Steinfeld</a>
+      <span class="explore-card-desc">American actress and singer (born 1996)</span>
+    </div>
+    <div class="explore-card-views">9,988</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#716</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Mackenyu" target="_blank" rel="noopener" class="explore-card-title">Mackenyu</a>
+      <span class="explore-card-desc">Japanese actor (born 1996)</span>
+    </div>
+    <div class="explore-card-views">9,978</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#717</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Julianne_Nicholson" target="_blank" rel="noopener" class="explore-card-title">Julianne Nicholson</a>
+      <span class="explore-card-desc">American actress (born 1971)</span>
+    </div>
+    <div class="explore-card-views">9,974</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#718</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Victor_Glover_(astronaut)" target="_blank" rel="noopener" class="explore-card-title">Victor Glover (astronaut)</a>
+      <span class="explore-card-desc">U.S. Navy officer, test pilot, and astronaut (born 1976)</span>
+    </div>
+    <div class="explore-card-views">9,973</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#719</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/John_Lennon" target="_blank" rel="noopener" class="explore-card-title">John Lennon</a>
+      <span class="explore-card-desc">English musician and activist (1940–1980)</span>
+    </div>
+    <div class="explore-card-views">9,965</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#720</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Aadu_3" target="_blank" rel="noopener" class="explore-card-title">Aadu 3</a>
+      <span class="explore-card-desc">2026 Indian film by Midhun Manuel Thomas</span>
+    </div>
+    <div class="explore-card-views">9,939</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#721</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Border_2" target="_blank" rel="noopener" class="explore-card-title">Border 2</a>
+      <span class="explore-card-desc">2026 Indian film by Anurag Singh</span>
+    </div>
+    <div class="explore-card-views">9,938</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#721</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Arjun_Rampal" target="_blank" rel="noopener" class="explore-card-title">Arjun Rampal</a>
+      <span class="explore-card-desc">Indian film actor and model (b. 1972)</span>
+    </div>
+    <div class="explore-card-views">9,938</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#723</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Resident_Evil" target="_blank" rel="noopener" class="explore-card-title">Resident Evil</a>
+      <span class="explore-card-desc">Japanese horror game series and media franchise</span>
+    </div>
+    <div class="explore-card-views">9,928</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#724</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Dakota_Fanning" target="_blank" rel="noopener" class="explore-card-title">Dakota Fanning</a>
+      <span class="explore-card-desc">American actress (born 1994)</span>
+    </div>
+    <div class="explore-card-views">9,920</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#726</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/UEFA_Euro_2028" target="_blank" rel="noopener" class="explore-card-title">UEFA Euro 2028</a>
+      <span class="explore-card-desc">18th edition of UEFA European Championship</span>
+    </div>
+    <div class="explore-card-views">9,916</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#727</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Patrick_Schwarzenegger" target="_blank" rel="noopener" class="explore-card-title">Patrick Schwarzenegger</a>
+      <span class="explore-card-desc">American actor (born 1993)</span>
+    </div>
+    <div class="explore-card-views">9,914</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#728</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Looksmaxxing" target="_blank" rel="noopener" class="explore-card-title">Looksmaxxing</a>
+      <span class="explore-card-desc">Lifestyle(s) intended to improve appearance</span>
+    </div>
+    <div class="explore-card-views">9,908</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#729</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Emma_Stone" target="_blank" rel="noopener" class="explore-card-title">Emma Stone</a>
+      <span class="explore-card-desc">American actress (born 1988)</span>
+    </div>
+    <div class="explore-card-views">9,901</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#730</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/Margaret_Qualley" target="_blank" rel="noopener" class="explore-card-title">Margaret Qualley</a>
+      <span class="explore-card-desc">American actress (born 1994)</span>
+    </div>
+    <div class="explore-card-views">9,887</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#731</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/George_Washington" target="_blank" rel="noopener" class="explore-card-title">George Washington</a>
+      <span class="explore-card-desc">U.S. Founding Father, president from 1789 to 1797</span>
+    </div>
+    <div class="explore-card-views">9,881</div>
+  </div>
+<div class="explore-card">
+    <div class="explore-card-rank">#732</div>
+    <div class="explore-card-body">
+      <a href="https://en.wikipedia.org/wiki/OpenClaw" target="_blank" rel="noopener" class="explore-card-title">OpenClaw</a>
+      <span class="explore-card-desc">Open-source autonomous AI assistant software</span>
+    </div>
+    <div class="explore-card-views">9,857</div>
+  </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span>&copy; 2026 WikiPop</span>
+    <div class="footer-links">
+      <a href="/">Today</a>
+      <a href="/archive.html">Archive</a>
+      <a href="/feed.xml">RSS</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const isLight = root.classList.toggle("light");
+      localStorage.setItem("theme", isLight ? "light" : "dark");
+      document.querySelector(".theme-icon").innerHTML = isLight ? "&#9728;" : "&#9790;";
+    }
+    (function () {
+      const saved = localStorage.getItem("theme");
+      if (saved === "light") {
+        document.documentElement.classList.add("light");
+        document.querySelector(".theme-icon").innerHTML = "&#9728;";
+      }
+    })();
+  </script>
+</body>
+</html>

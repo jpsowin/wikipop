@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# macOS
+.DS_Store
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Local editor and AI agent settings
+.claude/
+.vscode/
+.idea/
+
+# Local testing and scratchpads
+test-tail.html
+
+# NPM logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Documentation
+AGENTS.md
+SETUP.md

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletter Wiggle Explorations</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #d00d00;
+    --yellow: #ffdf00;
+    --blue: #2a3d8f;
+    --cyan: #00aeef;
+    --black: #111;
+    --white: #fdfcf3;
+    --cream: #f7f5eb;
+    --bw: 3px;
+  }
+
+  body {
+    font-family: "Instrument Sans", sans-serif;
+    background-color: var(--yellow);
+    background-image: 
+      radial-gradient(circle, var(--red) 5px, transparent 5.5px),
+      radial-gradient(circle, var(--red) 5px, transparent 5.5px);
+    background-size: 19px 28.5px, 19px 28.5px;
+    background-position: 0 0, 9.5px 14.25px;
+    color: var(--black);
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-family: "Bangers", cursive;
+    text-align: center;
+    background: var(--white);
+    padding: 1rem;
+    border: var(--bw) solid var(--black);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+  }
+
+  .demo-container {
+    margin-bottom: 4rem;
+    background: var(--white);
+    padding: 2rem;
+    border: var(--bw) solid var(--black);
+  }
+  
+  .demo-title {
+    font-family: "Bangers", cursive;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--black);
+    padding-bottom: 0.5rem;
+  }
+
+  .trigger-btn {
+    font-family: "Bangers", cursive;
+    background: var(--cyan);
+    color: var(--black);
+    border: 2px solid var(--black);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .trigger-btn:hover {
+    background: var(--black);
+    color: var(--white);
+  }
+
+  /* ============ BASE NEWSLETTER STYLE ============ */
+  .slanted-newsletter {
+    background: var(--yellow);
+    border: 5px solid var(--black);
+    padding: 1.5rem;
+    box-shadow: -10px 10px 0 var(--black);
+    transform: rotate(2deg); /* Default state */
+    margin: 2rem auto;
+    max-width: 600px;
+  }
+  
+  .slanted-heading {
+    font-family: "Bangers", cursive;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    color: var(--black);
+  }
+  
+  .slanted-form { display: flex; gap: 0.5rem; }
+  .slanted-input {
+    flex: 1; border: 3px solid var(--black); padding: 0.75rem 1rem;
+    font-size: 1.1rem; font-family: inherit; min-width: 0; outline: none;
+    background: var(--white);
+  }
+  .slanted-btn {
+    background: var(--white); color: var(--black);
+    border: 3px solid var(--black); padding: 0.75rem 1.5rem;
+    font-size: 1.1rem; font-family: "Bangers", cursive; cursor: pointer;
+  }
+
+  /* ============ ANIMATIONS ============ */
+  
+  /* 1. Quick Shake */
+  @keyframes wiggle1 {
+    0%, 100% { transform: rotate(2deg); }
+    25% { transform: rotate(-2deg); }
+    50% { transform: rotate(4deg); }
+    75% { transform: rotate(0deg); }
+  }
+  .animate-1 { animation: wiggle1 0.4s ease-in-out; }
+
+  /* 2. Springy Bounce */
+  @keyframes wiggle2 {
+    0%, 100% { transform: rotate(2deg) scale(1); }
+    30% { transform: rotate(6deg) scale(1.05); }
+    60% { transform: rotate(-1deg) scale(0.98); }
+    80% { transform: rotate(3deg) scale(1.02); }
+  }
+  .animate-2 { animation: wiggle2 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+  /* 3. Subtle Tick-Tock */
+  @keyframes wiggle3 {
+    0%, 100% { transform: rotate(2deg); }
+    20% { transform: rotate(4deg); }
+    40% { transform: rotate(0deg); }
+    60% { transform: rotate(3deg); }
+    80% { transform: rotate(1deg); }
+  }
+  .animate-3 { animation: wiggle3 0.5s linear; }
+
+  /* 4. Drop and Settle (Like it fell into place) */
+  @keyframes wiggle4 {
+    0% { transform: translateY(-20px) rotate(8deg); opacity: 0; }
+    50% { transform: translateY(5px) rotate(-1deg); opacity: 1; }
+    75% { transform: translateY(-2px) rotate(3deg); }
+    100% { transform: translateY(0) rotate(2deg); opacity: 1; }
+  }
+  .animate-4 { animation: wiggle4 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+  /* 5. Jelly Wobble */
+  @keyframes wiggle5 {
+    0%, 100% { transform: rotate(2deg) skewX(0deg); }
+    25% { transform: rotate(2deg) skewX(-5deg); }
+    50% { transform: rotate(2deg) skewX(4deg); }
+    75% { transform: rotate(2deg) skewX(-2deg); }
+  }
+  .animate-5 { animation: wiggle5 0.5s ease-out; }
+
+  /* 6. Bell Ring */
+  @keyframes wiggle6 {
+    0%, 100% { transform: rotate(2deg); transform-origin: top center; }
+    20% { transform: rotate(8deg); transform-origin: top center; }
+    40% { transform: rotate(-4deg); transform-origin: top center; }
+    60% { transform: rotate(5deg); transform-origin: top center; }
+    80% { transform: rotate(0deg); transform-origin: top center; }
+  }
+  .animate-6 { animation: wiggle6 0.6s ease-in-out; }
+
+  /* 7. Pop In */
+  @keyframes wiggle7 {
+    0% { transform: scale(0.8) rotate(-5deg); opacity: 0; }
+    40% { transform: scale(1.05) rotate(4deg); opacity: 1; }
+    70% { transform: scale(0.97) rotate(1deg); }
+    100% { transform: scale(1) rotate(2deg); }
+  }
+  .animate-7 { animation: wiggle7 0.5s ease-out; }
+
+  /* 8. Slide & Knock */
+  @keyframes wiggle8 {
+    0% { transform: translateX(30px) rotate(2deg); opacity: 0; }
+    50% { transform: translateX(-10px) rotate(0deg); opacity: 1; }
+    75% { transform: translateX(5px) rotate(4deg); }
+    100% { transform: translateX(0) rotate(2deg); }
+  }
+  .animate-8 { animation: wiggle8 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+  /* 9. Rubber Band */
+  @keyframes wiggle9 {
+    0% { transform: scale3d(1, 1, 1) rotate(2deg); }
+    30% { transform: scale3d(1.05, 0.85, 1) rotate(2deg); }
+    40% { transform: scale3d(0.85, 1.05, 1) rotate(2deg); }
+    50% { transform: scale3d(1.05, 0.95, 1) rotate(2deg); }
+    65% { transform: scale3d(0.95, 1.02, 1) rotate(2deg); }
+    75% { transform: scale3d(1.02, 0.98, 1) rotate(2deg); }
+    100% { transform: scale3d(1, 1, 1) rotate(2deg); }
+  }
+  .animate-9 { animation: wiggle9 0.7s ease-in-out; }
+
+  /* 10. Exaggerated Comic Pop */
+  @keyframes wiggle10 {
+    0% { transform: rotate(2deg) scale(1); }
+    20% { transform: rotate(-5deg) scale(1.1); box-shadow: -15px 15px 0 var(--black); }
+    40% { transform: rotate(8deg) scale(1.05); box-shadow: -5px 5px 0 var(--black); }
+    60% { transform: rotate(-2deg) scale(1.02); }
+    80% { transform: rotate(4deg) scale(1); }
+    100% { transform: rotate(2deg) scale(1); }
+  }
+  .animate-10 { animation: wiggle10 0.6s ease-out; }
+
+</style>
+</head>
+<body>
+
+  <h1>10 Ways to Wiggle</h1>
+
+  <!-- Reusable Template for JavaScript to Clone -->
+  <template id="newsletter-template">
+    <div class="slanted-newsletter">
+      <div class="slanted-heading">Get <span style="color: var(--red);">Wikipop'd every day</span> straight to your overflowing inbox.</div>
+      <form class="slanted-form" onsubmit="event.preventDefault();">
+        <input type="email" placeholder="you@email.com" class="slanted-input" disabled>
+        <button type="button" class="slanted-btn" disabled>Subscribe</button>
+      </form>
+    </div>
+  </template>
+
+  <script>
+    const descriptions = [
+      "1. Quick Shake (Basic left-right rattle)",
+      "2. Springy Bounce (Slightly scales up and down while rotating)",
+      "3. Subtle Tick-Tock (Gentle rotation back and forth)",
+      "4. Drop and Settle (Falls from above and knocks into place)",
+      "5. Jelly Wobble (Skews horizontally like jello)",
+      "6. Bell Ring (Swings from the top center)",
+      "7. Pop In (Scales up from small to full size)",
+      "8. Slide & Knock (Slides in from the right and bumps into place)",
+      "9. Rubber Band (Squishes and stretches)",
+      "10. Exaggerated Comic Pop (Big rotation, scale, and shadow jump)"
+    ];
+
+    for (let i = 1; i <= 10; i++) {
+      const container = document.createElement('div');
+      container.className = 'demo-container';
+
+      const title = document.createElement('div');
+      title.className = 'demo-title';
+      title.textContent = descriptions[i-1];
+      container.appendChild(title);
+
+      const btn = document.createElement('button');
+      btn.className = 'trigger-btn';
+      btn.textContent = `Replay Wiggle ${i}`;
+      container.appendChild(btn);
+
+      const box = document.getElementById('newsletter-template').content.cloneNode(true);
+      const boxElement = box.querySelector('.slanted-newsletter');
+      boxElement.id = `box-${i}`;
+      container.appendChild(box);
+      
+      document.body.appendChild(container);
+
+      // Trigger animation on button click
+      btn.addEventListener('click', () => {
+        boxElement.classList.remove(`animate-${i}`);
+        // Trigger reflow
+        void boxElement.offsetWidth;
+        boxElement.classList.add(`animate-${i}`);
+      });
+      
+      // Autoplay once on load
+      setTimeout(() => {
+        boxElement.classList.add(`animate-${i}`);
+      }, i * 300); // Stagger the initial animations
+    }
+  </script>
+
+</body>
+</html>

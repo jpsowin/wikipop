@@ -1,0 +1,2992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive — WikiPop</title>
+  <meta name="description" content="Full archive of every article featured on WikiPop.">
+  <link rel="alternate" type="application/rss+xml" title="WikiPop RSS" href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0f1117;
+      --bg-raised: #181a23;
+      --text: #c8cdd8;
+      --text-muted: #7a7f8e;
+      --text-bright: #eef0f5;
+      --accent: #f06449;
+      --accent-glow: rgba(240, 100, 73, 0.15);
+      --border: #2a2d3a;
+      --radius: 8px;
+    }
+
+    :root.light {
+      --bg: #faf9f6;
+      --bg-raised: #ffffff;
+      --text: #4a4a4a;
+      --text-muted: #8a8a8a;
+      --text-bright: #1a1a1a;
+      --accent: #d94f3b;
+      --accent-glow: rgba(217, 79, 59, 0.1);
+      --border: #e0ddd6;
+    }
+
+    body {
+      font-family: "Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      transition: background-color 0.3s, color 0.3s;
+      min-height: 100vh;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 1.25rem 1.5rem;
+      background: var(--bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .logo {
+      font-family: "Fraunces", serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .logo span { color: var(--accent); }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 1rem;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .theme-toggle:hover {
+      color: var(--text-bright);
+      border-color: var(--text-muted);
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem 4rem;
+    }
+
+    h1 {
+      font-family: "Fraunces", serif;
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .archive-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .archive-table th {
+      text-align: left;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .archive-table th:last-child {
+      text-align: right;
+    }
+
+    .archive-table td {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    .archive-date {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      white-space: nowrap;
+      width: 100px;
+    }
+
+    .archive-title a {
+      color: var(--text-bright);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .archive-title a:hover {
+      color: var(--accent);
+    }
+
+    .archive-category {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 200px;
+    }
+
+    .archive-views {
+      text-align: right;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    footer {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: var(--text-bright); }
+
+    .footer-links {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 1rem; }
+      main { padding: 1rem 1rem 3rem; }
+      .archive-date { width: auto; }
+      .archive-category { display: none; }
+      footer { flex-direction: column; gap: 0.75rem; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">Wiki<span>Pop</span></a>
+    <div class="nav-controls">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="theme-icon">&#9790;</span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Archive</h1>
+    <p class="subtitle">453 articles featured so far.</p>
+
+    <table class="archive-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Article</th>
+          <th>Category</th>
+          <th>Views</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+            <tr>
+              <td class="archive-date">Apr 10</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Afrika_Bambaataa" target="_blank" rel="noopener noreferrer">Afrika Bambaataa</a></td>
+              <td class="archive-category">American DJ, rapper and producer (1957–2026)</td>
+              <td class="archive-views">188,789</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 8</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Aubrey_Plaza" target="_blank" rel="noopener noreferrer">Aubrey Plaza</a></td>
+              <td class="archive-category">American actress and producer (born 1984)</td>
+              <td class="archive-views">289,395</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 7</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Dusty_May" target="_blank" rel="noopener noreferrer">Dusty May</a></td>
+              <td class="archive-category">American basketball coach (born 1976)</td>
+              <td class="archive-views">200,924</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 6</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Michael_Malone" target="_blank" rel="noopener noreferrer">Michael Malone</a></td>
+              <td class="archive-category">American basketball coach (born 1971)</td>
+              <td class="archive-views">199,763</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 5</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Lauren_Betts" target="_blank" rel="noopener noreferrer">Lauren Betts</a></td>
+              <td class="archive-category">American basketball player (born 2003)</td>
+              <td class="archive-views">194,523</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 4</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/The_Drama_(film)" target="_blank" rel="noopener noreferrer">The Drama (film)</a></td>
+              <td class="archive-category">2026 film by Kristoffer Borgli</td>
+              <td class="archive-views">240,523</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 3</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Good_Friday" target="_blank" rel="noopener noreferrer">Good Friday</a></td>
+              <td class="archive-category">Christian holiday</td>
+              <td class="archive-views">319,118</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 2</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Pam_Bondi" target="_blank" rel="noopener noreferrer">Pam Bondi</a></td>
+              <td class="archive-category">American attorney and politician (born 1965)</td>
+              <td class="archive-views">398,501</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 1</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Artemis_II" target="_blank" rel="noopener noreferrer">Artemis II</a></td>
+              <td class="archive-category">First crewed mission of the Artemis program</td>
+              <td class="archive-views">915,989</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 31</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2026_FIFA_World_Cup" target="_blank" rel="noopener noreferrer">2026 FIFA World Cup</a></td>
+              <td class="archive-category">Soccer tournament in North America</td>
+              <td class="archive-views">222,885</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 30</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Scott_Mills" target="_blank" rel="noopener noreferrer">Scott Mills</a></td>
+              <td class="archive-category">English radio DJ and television presenter (born 1973)</td>
+              <td class="archive-views">187,885</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 29</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Avi_Lewis" target="_blank" rel="noopener noreferrer">Avi Lewis</a></td>
+              <td class="archive-category">Canadian politician and filmmaker (born 1967)</td>
+              <td class="archive-views">142,187</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 28</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Tiger_Woods" target="_blank" rel="noopener noreferrer">Tiger Woods</a></td>
+              <td class="archive-category">American professional golfer (born 1975)</td>
+              <td class="archive-views">217,158</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 27</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Noelia_Castillo_euthanasia_case" target="_blank" rel="noopener noreferrer">Noelia Castillo euthanasia case</a></td>
+              <td class="archive-category">2026 intentional death of Spanish woman</td>
+              <td class="archive-views">207,162</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 26</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Send_Help" target="_blank" rel="noopener noreferrer">Send Help</a></td>
+              <td class="archive-category">2026 film by Sam Raimi</td>
+              <td class="archive-views">148,604</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 25</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/List_of_highest-grossing_Indian_films" target="_blank" rel="noopener noreferrer">List of highest-grossing Indian films</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">207,417</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 24</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Project_Hail_Mary_(film)" target="_blank" rel="noopener noreferrer">Project Hail Mary (film)</a></td>
+              <td class="archive-category">2026 film by Phil Lord and Christopher Miller</td>
+              <td class="archive-views">192,945</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 23</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Leonid_Radvinsky" target="_blank" rel="noopener noreferrer">Leonid Radvinsky</a></td>
+              <td class="archive-category">American businessman (1982–2026)</td>
+              <td class="archive-views">539,536</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 22</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Robert_Mueller" target="_blank" rel="noopener noreferrer">Robert Mueller</a></td>
+              <td class="archive-category">American civil servant and attorney (1944–2026)</td>
+              <td class="archive-views">510,191</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 21</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Nicholas_Brendon" target="_blank" rel="noopener noreferrer">Nicholas Brendon</a></td>
+              <td class="archive-category">American actor, artist and writer (1971–2026)</td>
+              <td class="archive-views">975,310</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 20</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Chuck_Norris" target="_blank" rel="noopener noreferrer">Chuck Norris</a></td>
+              <td class="archive-category">American martial artist and actor (1940–2026)</td>
+              <td class="archive-views">3,620,396</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 19</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Dhurandhar%3A_The_Revenge" target="_blank" rel="noopener noreferrer">Dhurandhar: The Revenge</a></td>
+              <td class="archive-category">2026 Indian film by Aditya Dhar</td>
+              <td class="archive-views">729,158</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 18</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Spider-Man%3A_Brand_New_Day" target="_blank" rel="noopener noreferrer">Spider-Man: Brand New Day</a></td>
+              <td class="archive-category">Upcoming Marvel Studios film</td>
+              <td class="archive-views">280,739</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 17</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Joe_Kent" target="_blank" rel="noopener noreferrer">Joe Kent</a></td>
+              <td class="archive-category">American soldier and politician (born 1980)</td>
+              <td class="archive-views">549,978</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 16</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/98th_Academy_Awards" target="_blank" rel="noopener noreferrer">98th Academy Awards</a></td>
+              <td class="archive-category">Award ceremony for films of 2025</td>
+              <td class="archive-views">1,465,719</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 15</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Benjamin_Netanyahu" target="_blank" rel="noopener noreferrer">Benjamin Netanyahu</a></td>
+              <td class="archive-category">Prime Minister of Israel (1996–1999; 2009–2021; 2022–present)</td>
+              <td class="archive-views">358,216</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 14</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Kharg_Island" target="_blank" rel="noopener noreferrer">Kharg Island</a></td>
+              <td class="archive-category">Iranian island in Persian Gulf</td>
+              <td class="archive-views">330,465</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 13</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Pathfinder_Badge_(United_States)" target="_blank" rel="noopener noreferrer">Pathfinder Badge</a></td>
+              <td class="archive-category">U.S. Army award</td>
+              <td class="archive-views">150,014</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 12</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Deaths_in_2026" target="_blank" rel="noopener noreferrer">Deaths in 2026</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">134,413</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 11</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Bam_Adebayo" target="_blank" rel="noopener noreferrer">Bam Adebayo</a></td>
+              <td class="archive-category">American basketball player (born 1997)</td>
+              <td class="archive-views">370,599</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 10</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" rel="noopener noreferrer">2026 Iran war</a></td>
+              <td class="archive-category">Ongoing armed conflict in West Asia</td>
+              <td class="archive-views">332,375</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 9</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Mojtaba_Khamenei" target="_blank" rel="noopener noreferrer">Mojtaba Khamenei</a></td>
+              <td class="archive-category">Supreme Leader of Iran since 2026</td>
+              <td class="archive-views">518,042</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 8</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Men&#039;s_T20_World_Cup" target="_blank" rel="noopener noreferrer">Men&#039;s T20 World Cup</a></td>
+              <td class="archive-category">Twenty20 International (T20I) cricket competition</td>
+              <td class="archive-views">408,441</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 7</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Soham_murders" target="_blank" rel="noopener noreferrer">Soham murders</a></td>
+              <td class="archive-category">2002 double murder in Cambridgeshire, England</td>
+              <td class="archive-views">701,993</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 6</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Kristi_Noem" target="_blank" rel="noopener noreferrer">Kristi Noem</a></td>
+              <td class="archive-category">American politician (born 1971)</td>
+              <td class="archive-views">702,642</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 5</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Markwayne_Mullin" target="_blank" rel="noopener noreferrer">Markwayne Mullin</a></td>
+              <td class="archive-category">American politician (born 1977)</td>
+              <td class="archive-views">1,089,123</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 4</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/James_Talarico" target="_blank" rel="noopener noreferrer">James Talarico</a></td>
+              <td class="archive-category">American politician, teacher, and seminarian (born 1989)</td>
+              <td class="archive-views">415,813</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 3</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" rel="noopener noreferrer">2026 Iran conflict</a></td>
+              <td class="archive-category">Ongoing armed conflict in West Asia</td>
+              <td class="archive-views">551,083</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 2</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Iran" target="_blank" rel="noopener noreferrer">Iran</a></td>
+              <td class="archive-category">Country in West Asia</td>
+              <td class="archive-views">410,897</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 1</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" rel="noopener noreferrer">2026 Israeli–United States strikes on Iran</a></td>
+              <td class="archive-category">Ongoing armed conflict in West Asia</td>
+              <td class="archive-views">1,060,165</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 28</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Ali_Khamenei" target="_blank" rel="noopener noreferrer">Ali Khamenei</a></td>
+              <td class="archive-category">Supreme Leader of Iran from 1989 to 2026</td>
+              <td class="archive-views">2,738,521</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 27</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Scream_7" target="_blank" rel="noopener noreferrer">Scream 7</a></td>
+              <td class="archive-category">2026 American slasher film</td>
+              <td class="archive-views">218,540</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 26</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Rashmika_Mandanna" target="_blank" rel="noopener noreferrer">Rashmika Mandanna</a></td>
+              <td class="archive-category">Indian actress (born 1996)</td>
+              <td class="archive-views">237,118</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 25</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Martin_Short" target="_blank" rel="noopener noreferrer">Martin Short</a></td>
+              <td class="archive-category">Canadian comedian and actor (born 1950)</td>
+              <td class="archive-views">210,595</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 24</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Robert_Carradine" target="_blank" rel="noopener noreferrer">Robert Carradine</a></td>
+              <td class="archive-category">American actor (1954–2026)</td>
+              <td class="archive-views">1,253,437</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 23</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/El_Mencho" target="_blank" rel="noopener noreferrer">Nemesio Oseguera Cervantes</a></td>
+              <td class="archive-category">Mexican drug lord (1966–2026)</td>
+              <td class="archive-views">1,172,519</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 22</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Johnny_Gaudreau" target="_blank" rel="noopener noreferrer">Johnny Gaudreau</a></td>
+              <td class="archive-category">American ice hockey player (1993–2024)</td>
+              <td class="archive-views">2,094,214</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 21</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Eric_Dane" target="_blank" rel="noopener noreferrer">Eric Dane</a></td>
+              <td class="archive-category">American actor (1972–2026)</td>
+              <td class="archive-views">1,146,401</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 20</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/1989_Tiananmen_Square_protests_and_massacre" target="_blank" rel="noopener noreferrer">1989 Tiananmen Square protests and massacre</a></td>
+              <td class="archive-category">Student-led demonstrations in China</td>
+              <td class="archive-views">4,469,132</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 19</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Andrew_Mountbatten-Windsor" target="_blank" rel="noopener noreferrer">Andrew Mountbatten-Windsor</a></td>
+              <td class="archive-category">Son of Elizabeth II (born 1960)</td>
+              <td class="archive-views">497,997</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 18</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Ash_Wednesday" target="_blank" rel="noopener noreferrer">Ash Wednesday</a></td>
+              <td class="archive-category">First day of Lent in Western Christianity</td>
+              <td class="archive-views">311,650</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 17</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jesse_Jackson" target="_blank" rel="noopener noreferrer">Jesse Jackson</a></td>
+              <td class="archive-category">American minister, activist and politician (1941–2026)</td>
+              <td class="archive-views">825,548</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 16</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Robert_Duvall" target="_blank" rel="noopener noreferrer">Robert Duvall</a></td>
+              <td class="archive-category">American actor and filmmaker (1931–2026)</td>
+              <td class="archive-views">1,675,134</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 15</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Wuthering_Heights" target="_blank" rel="noopener noreferrer">Wuthering Heights</a></td>
+              <td class="archive-category">1847 novel by Emily Brontë</td>
+              <td class="archive-views">287,720</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 14</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Valentine&#039;s_Day" target="_blank" rel="noopener noreferrer">Valentine&#039;s Day</a></td>
+              <td class="archive-category">Holiday observed on February 14</td>
+              <td class="archive-views">355,567</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 13</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Igor_Tudor" target="_blank" rel="noopener noreferrer">Igor Tudor</a></td>
+              <td class="archive-category">Croatian footballer and coach (born 1978)</td>
+              <td class="archive-views">287,063</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 12</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Pam_Bondi" target="_blank" rel="noopener noreferrer">Pam Bondi</a></td>
+              <td class="archive-category">American attorney and politician (born 1965)</td>
+              <td class="archive-views">581,864</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 11</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/James_Van_Der_Beek" target="_blank" rel="noopener noreferrer">James Van Der Beek</a></td>
+              <td class="archive-category">American actor (1977–2026)</td>
+              <td class="archive-views">1,884,041</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 10</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Ilia_Malinin" target="_blank" rel="noopener noreferrer">Ilia Malinin</a></td>
+              <td class="archive-category">American figure skater (born 2004)</td>
+              <td class="archive-views">376,885</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 9</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Bad_Bunny" target="_blank" rel="noopener noreferrer">Bad Bunny</a></td>
+              <td class="archive-category">Puerto Rican rapper (born 1994)</td>
+              <td class="archive-views">1,878,321</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 8</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Lindsey_Vonn" target="_blank" rel="noopener noreferrer">Lindsey Vonn</a></td>
+              <td class="archive-category">American alpine skier (born 1984)</td>
+              <td class="archive-views">954,668</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 7</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Brad_Arnold" target="_blank" rel="noopener noreferrer">Brad Arnold</a></td>
+              <td class="archive-category">American singer (1978–2026)</td>
+              <td class="archive-views">324,353</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 6</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2026_Winter_Olympics" target="_blank" rel="noopener noreferrer">2026 Winter Olympics</a></td>
+              <td class="archive-category">Multi-sport event in Italy</td>
+              <td class="archive-views">396,452</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 5</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Disappearance_of_Nancy_Guthrie" target="_blank" rel="noopener noreferrer">Disappearance of Nancy Guthrie</a></td>
+              <td class="archive-category">2026 missing person case in Arizona, US</td>
+              <td class="archive-views">348,638</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 4</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Savannah_Guthrie" target="_blank" rel="noopener noreferrer">Savannah Guthrie</a></td>
+              <td class="archive-category">American journalist (born 1971)</td>
+              <td class="archive-views">387,967</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 3</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Epstein_files" target="_blank" rel="noopener noreferrer">Epstein files</a></td>
+              <td class="archive-category">Files on Jeffrey Epstein and his affiliates</td>
+              <td class="archive-views">756,803</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 2</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jeffrey_Epstein" target="_blank" rel="noopener noreferrer">Jeffrey Epstein</a></td>
+              <td class="archive-category">American financier and child sex offender (1953–2019)</td>
+              <td class="archive-views">876,413</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 1</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Carlos_Alcaraz" target="_blank" rel="noopener noreferrer">Carlos Alcaraz</a></td>
+              <td class="archive-category">Spanish tennis player (born 2003)</td>
+              <td class="archive-views">692,939</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 31</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Royal_Rumble_(2026)" target="_blank" rel="noopener noreferrer">Royal Rumble (2026)</a></td>
+              <td class="archive-category">WWE pay-per-view and livestreaming event</td>
+              <td class="archive-views">1,209,957</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 30</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Catherine_O&#039;Hara" target="_blank" rel="noopener noreferrer">Catherine O&#039;Hara</a></td>
+              <td class="archive-category">Canadian and American actress (1954–2026)</td>
+              <td class="archive-views">3,529,525</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 29</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Nicki_Minaj" target="_blank" rel="noopener noreferrer">Nicki Minaj</a></td>
+              <td class="archive-category">Trinidadian rapper and singer (born 1982)</td>
+              <td class="archive-views">227,431</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 28</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Ajit_Pawar" target="_blank" rel="noopener noreferrer">Ajit Pawar</a></td>
+              <td class="archive-category">Indian politician (1959–2026)</td>
+              <td class="archive-views">2,796,158</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 27</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Gregory_Bovino" target="_blank" rel="noopener noreferrer">Gregory Bovino</a></td>
+              <td class="archive-category">United States Border Patrol agent (born 1970)</td>
+              <td class="archive-views">517,617</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 26</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Sam_Darnold" target="_blank" rel="noopener noreferrer">Sam Darnold</a></td>
+              <td class="archive-category">American football player (born 1997)</td>
+              <td class="archive-views">598,995</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 25</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Killing_of_Alex_Pretti" target="_blank" rel="noopener noreferrer">Killing of Alex Pretti</a></td>
+              <td class="archive-category">2026 shooting by US Border Patrol agents</td>
+              <td class="archive-views">626,975</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 24</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Border_2" target="_blank" rel="noopener noreferrer">Border 2</a></td>
+              <td class="archive-category">2026 Indian film by Anurag Singh</td>
+              <td class="archive-views">350,223</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 23</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Ryan_Wedding" target="_blank" rel="noopener noreferrer">Ryan Wedding</a></td>
+              <td class="archive-category">Canadian snowboarder and alleged drug trafficker (born 1981)</td>
+              <td class="archive-views">283,690</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 22</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Board_of_Peace" target="_blank" rel="noopener noreferrer">Board of Peace</a></td>
+              <td class="archive-category">International organization led by Donald Trump</td>
+              <td class="archive-views">353,284</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 21</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Nelson_Peltz" target="_blank" rel="noopener noreferrer">Nelson Peltz</a></td>
+              <td class="archive-category">American businessman (born 1942)</td>
+              <td class="archive-views">190,981</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 20</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Nicola_Peltz" target="_blank" rel="noopener noreferrer">Nicola Peltz</a></td>
+              <td class="archive-category">American actress (born 1995)</td>
+              <td class="archive-views">528,662</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 19</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/A_Knight_of_the_Seven_Kingdoms_(TV_series)" target="_blank" rel="noopener noreferrer">A Knight of the Seven Kingdoms (TV series)</a></td>
+              <td class="archive-category">2026 American fantasy TV series</td>
+              <td class="archive-views">240,153</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 18</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jarrett_Stidham" target="_blank" rel="noopener noreferrer">Jarrett Stidham</a></td>
+              <td class="archive-category">American football player (born 1996)</td>
+              <td class="archive-views">423,277</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 17</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/The_Rip_(film)" target="_blank" rel="noopener noreferrer">The Rip (film)</a></td>
+              <td class="archive-category">2026 film by Joe Carnahan</td>
+              <td class="archive-views">385,900</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 16</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2026_Brihanmumbai_Municipal_Corporation_election" target="_blank" rel="noopener noreferrer">2026 Brihanmumbai Municipal Corporation election</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">527,246</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 15</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Charlie_Kirk" target="_blank" rel="noopener noreferrer">Charlie Kirk</a></td>
+              <td class="archive-category">American political activist (1993–2025)</td>
+              <td class="archive-views">223,326</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 14</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Timothy_Busfield" target="_blank" rel="noopener noreferrer">Timothy Busfield</a></td>
+              <td class="archive-category">American actor and director (born 1957)</td>
+              <td class="archive-views">204,298</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 13</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Scott_Adams" target="_blank" rel="noopener noreferrer">Scott Adams</a></td>
+              <td class="archive-category">American cartoonist and author (1957–2026)</td>
+              <td class="archive-views">406,708</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 12</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Donald_Trump" target="_blank" rel="noopener noreferrer">Donald Trump</a></td>
+              <td class="archive-category">President of the United States (2017–2021; since 2025)</td>
+              <td class="archive-views">739,258</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 11</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Bob_Weir" target="_blank" rel="noopener noreferrer">Bob Weir</a></td>
+              <td class="archive-category">American musician (1947–2026)</td>
+              <td class="archive-views">512,266</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 10</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Fernando_Mendoza" target="_blank" rel="noopener noreferrer">Fernando Mendoza</a></td>
+              <td class="archive-category">American football player (born 2003)</td>
+              <td class="archive-views">480,508</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 9</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Carson_Beck" target="_blank" rel="noopener noreferrer">Carson Beck</a></td>
+              <td class="archive-category">American football player (born 2002)</td>
+              <td class="archive-views">354,525</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 8</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Killing_of_Ren%C3%A9e_Good" target="_blank" rel="noopener noreferrer">Killing of Renee Good</a></td>
+              <td class="archive-category">2026 shooting by a US immigration agent</td>
+              <td class="archive-views">669,249</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 7</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Greenland" target="_blank" rel="noopener noreferrer">Greenland</a></td>
+              <td class="archive-category">Autonomous territory of Denmark</td>
+              <td class="archive-views">312,200</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 6</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Liam_Rosenior" target="_blank" rel="noopener noreferrer">Liam Rosenior</a></td>
+              <td class="archive-category">English football manager (born 1984)</td>
+              <td class="archive-views">413,673</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 5</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2026_United_States_intervention_in_Venezuela" target="_blank" rel="noopener noreferrer">2026 United States strikes in Venezuela</a></td>
+              <td class="archive-category">Airstrikes and capture of Nicolás Maduro</td>
+              <td class="archive-views">346,391</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 4</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Venezuela" target="_blank" rel="noopener noreferrer">Venezuela</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">721,556</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 3</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Nicol%C3%A1s_Maduro" target="_blank" rel="noopener noreferrer">Nicolás Maduro</a></td>
+              <td class="archive-category">President of Venezuela from 2013 to 2026</td>
+              <td class="archive-views">2,519,497</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 2</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Stranger_Things" target="_blank" rel="noopener noreferrer">Stranger Things</a></td>
+              <td class="archive-category">American television series (2016–2025)</td>
+              <td class="archive-views">392,376</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 1</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/1989_Tiananmen_Square_protests_and_massacre" target="_blank" rel="noopener noreferrer">1989 Tiananmen Square protests and massacre</a></td>
+              <td class="archive-category">Student-led demonstrations in China</td>
+              <td class="archive-views">2,104,464</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 31</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/New_Year&#039;s_Eve" target="_blank" rel="noopener noreferrer">New Year&#039;s Eve</a></td>
+              <td class="archive-category">Last day of the Gregorian year</td>
+              <td class="archive-views">262,648</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 30</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Tatiana_Schlossberg" target="_blank" rel="noopener noreferrer">Tatiana Schlossberg</a></td>
+              <td class="archive-category">American journalist and author (1990–2025)</td>
+              <td class="archive-views">352,568</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 29</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Stranger_Things_season_5" target="_blank" rel="noopener noreferrer">Stranger Things season 5</a></td>
+              <td class="archive-category">Season of television series</td>
+              <td class="archive-views">178,736</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 28</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Brigitte_Bardot" target="_blank" rel="noopener noreferrer">Brigitte Bardot</a></td>
+              <td class="archive-category">French actress and activist (1934–2025)</td>
+              <td class="archive-views">1,185,770</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 27</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Somaliland" target="_blank" rel="noopener noreferrer">Somaliland</a></td>
+              <td class="archive-category">Partially recognised state in the Horn of Africa</td>
+              <td class="archive-views">259,792</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 26</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Boxing_Day" target="_blank" rel="noopener noreferrer">Boxing Day</a></td>
+              <td class="archive-category">Commonwealth nations holiday on 26 December</td>
+              <td class="archive-views">381,321</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 25</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Marty_Supreme" target="_blank" rel="noopener noreferrer">Marty Supreme</a></td>
+              <td class="archive-category">2025 American film by Josh Safdie</td>
+              <td class="archive-views">195,178</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 24</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Google_Chrome" target="_blank" rel="noopener noreferrer">Google Chrome</a></td>
+              <td class="archive-category">Web browser developed by Google</td>
+              <td class="archive-views">263,211</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 23</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Vince_Zampella" target="_blank" rel="noopener noreferrer">Vince Zampella</a></td>
+              <td class="archive-category">American video game designer (1970–2025)</td>
+              <td class="archive-views">552,272</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 22</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Chris_Rea" target="_blank" rel="noopener noreferrer">Chris Rea</a></td>
+              <td class="archive-category">English musician and producer (1951–2025)</td>
+              <td class="archive-views">678,268</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 21</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/James_Ransone" target="_blank" rel="noopener noreferrer">James Ransone</a></td>
+              <td class="archive-category">American actor (1979–2025)</td>
+              <td class="archive-views">592,099</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 20</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Anthony_Joshua" target="_blank" rel="noopener noreferrer">Anthony Joshua</a></td>
+              <td class="archive-category">British boxer (born 1989)</td>
+              <td class="archive-views">886,740</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 19</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Avatar%3A_Fire_and_Ash" target="_blank" rel="noopener noreferrer">Avatar: Fire and Ash</a></td>
+              <td class="archive-category">2025 film by James Cameron</td>
+              <td class="archive-views">470,921</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 18</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Greg_Biffle" target="_blank" rel="noopener noreferrer">Greg Biffle</a></td>
+              <td class="archive-category">American racing driver (1969–2025)</td>
+              <td class="archive-views">816,931</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 17</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Disclosure_Day" target="_blank" rel="noopener noreferrer">Disclosure Day</a></td>
+              <td class="archive-category">Upcoming film by Steven Spielberg</td>
+              <td class="archive-views">241,167</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 16</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Category%3ARedirects_from_moves" target="_blank" rel="noopener noreferrer">category:redirects from moves</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">392,769</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 15</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Rob_Reiner" target="_blank" rel="noopener noreferrer">Rob Reiner</a></td>
+              <td class="archive-category">American filmmaker and actor (1947–2025)</td>
+              <td class="archive-views">7,791,897</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 14</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2025_Bondi_Beach_shooting" target="_blank" rel="noopener noreferrer">2025 Bondi Beach shooting</a></td>
+              <td class="archive-category">Terrorist attack in Sydney, Australia</td>
+              <td class="archive-views">462,501</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 13</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Peter_Greene" target="_blank" rel="noopener noreferrer">Peter Greene</a></td>
+              <td class="archive-category">American actor (1965–2025)</td>
+              <td class="archive-views">608,898</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 12</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/The_Game_Awards_2025" target="_blank" rel="noopener noreferrer">The Game Awards 2025</a></td>
+              <td class="archive-category">Video game awards show</td>
+              <td class="archive-views">406,266</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 11</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Sherrone_Moore" target="_blank" rel="noopener noreferrer">Sherrone Moore</a></td>
+              <td class="archive-category">American football player and coach (born 1986)</td>
+              <td class="archive-views">443,468</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 10</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/E-Government_in_Saudi_Arabia" target="_blank" rel="noopener noreferrer">E-Government in Saudi Arabia</a></td>
+              <td class="archive-category">Government digitisation policy</td>
+              <td class="archive-views">389,259</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 9</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Philip_Rivers" target="_blank" rel="noopener noreferrer">Philip Rivers</a></td>
+              <td class="archive-category">American football player (born 1981)</td>
+              <td class="archive-views">354,978</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 8</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/List_of_most-visited_websites" target="_blank" rel="noopener noreferrer">List of most-visited websites</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">1,624,950</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 7</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Lando_Norris" target="_blank" rel="noopener noreferrer">Lando Norris</a></td>
+              <td class="archive-category">British racing driver (born 1999)</td>
+              <td class="archive-views">627,809</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 6</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Dhurandhar" target="_blank" rel="noopener noreferrer">Dhurandhar</a></td>
+              <td class="archive-category">2025 Indian film by Aditya Dhar</td>
+              <td class="archive-views">397,874</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 5</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Cary-Hiroyuki_Tagawa" target="_blank" rel="noopener noreferrer">Cary-Hiroyuki Tagawa</a></td>
+              <td class="archive-category">Japanese actor (1950–2025)</td>
+              <td class="archive-views">273,965</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 4</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Steve_Cropper" target="_blank" rel="noopener noreferrer">Steve Cropper</a></td>
+              <td class="archive-category">American musician and record producer (1941–2025)</td>
+              <td class="archive-views">151,245</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 3</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2025_Tennessee&#039;s_7th_congressional_district_special_election" target="_blank" rel="noopener noreferrer">2025 Tennessee&#039;s 7th congressional district special election</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">192,341</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 2</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Lane_Kiffin" target="_blank" rel="noopener noreferrer">Lane Kiffin</a></td>
+              <td class="archive-category">American football coach (born 1975)</td>
+              <td class="archive-views">170,848</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Dec 1</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Raj_%26_DK" target="_blank" rel="noopener noreferrer">Raj &amp; DK</a></td>
+              <td class="archive-category">Indian film-making duo</td>
+              <td class="archive-views">363,667</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 30</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Survivor_Series%3A_WarGames_(2025)" target="_blank" rel="noopener noreferrer">Survivor Series: WarGames (2025)</a></td>
+              <td class="archive-category">WWE pay-per-view and livestreaming event</td>
+              <td class="archive-views">420,997</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 29</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Tom_Stoppard" target="_blank" rel="noopener noreferrer">Tom Stoppard</a></td>
+              <td class="archive-category">British playwright (1937–2025)</td>
+              <td class="archive-views">240,997</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 28</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Millie_Bobby_Brown" target="_blank" rel="noopener noreferrer">Millie Bobby Brown</a></td>
+              <td class="archive-category">British actress (born 2004)</td>
+              <td class="archive-views">158,031</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 27</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Stranger_Things_season_5" target="_blank" rel="noopener noreferrer">Stranger Things season 5</a></td>
+              <td class="archive-category">Season of television series</td>
+              <td class="archive-views">655,701</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 26</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Dancing_with_the_Stars_(American_TV_series)_season_34" target="_blank" rel="noopener noreferrer">Dancing with the Stars (American TV series) season 34</a></td>
+              <td class="archive-category">Season of television series</td>
+              <td class="archive-views">271,802</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 25</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Sawyer_Sweeten" target="_blank" rel="noopener noreferrer">Sawyer Sweeten</a></td>
+              <td class="archive-category">American child actor (1995–2015)</td>
+              <td class="archive-views">314,428</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 24</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Udo_Kier" target="_blank" rel="noopener noreferrer">Udo Kier</a></td>
+              <td class="archive-category">German actor (1944–2025)</td>
+              <td class="archive-views">297,979</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 23</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Tatiana_Schlossberg" target="_blank" rel="noopener noreferrer">Tatiana Schlossberg</a></td>
+              <td class="archive-category">American journalist and author (1990–2025)</td>
+              <td class="archive-views">282,949</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 22</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Marjorie_Taylor_Greene" target="_blank" rel="noopener noreferrer">Marjorie Taylor Greene</a></td>
+              <td class="archive-category">American politician (born 1974)</td>
+              <td class="archive-views">324,661</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 21</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Miss_Universe_2025" target="_blank" rel="noopener noreferrer">Miss Universe 2025</a></td>
+              <td class="archive-category">74th Miss Universe beauty pageant</td>
+              <td class="archive-views">610,834</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 20</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Mani_(musician)" target="_blank" rel="noopener noreferrer">Mani (musician)</a></td>
+              <td class="archive-category">British bassist (1962–2025)</td>
+              <td class="archive-views">199,479</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 19</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Epstein_files" target="_blank" rel="noopener noreferrer">Jeffrey Epstein client list</a></td>
+              <td class="archive-category">Files on Jeffrey Epstein and his affiliates</td>
+              <td class="archive-views">254,983</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 18</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Google_Chrome" target="_blank" rel="noopener noreferrer">Google Chrome</a></td>
+              <td class="archive-category">Web browser developed by Google</td>
+              <td class="archive-views">325,544</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 17</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification" target="_blank" rel="noopener noreferrer">2026 FIFA World Cup qualification</a></td>
+              <td class="archive-category">Association football tournament</td>
+              <td class="archive-views">231,286</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 16</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Troy_Parrott" target="_blank" rel="noopener noreferrer">Troy Parrott</a></td>
+              <td class="archive-category">Irish footballer (born 2002)</td>
+              <td class="archive-views">364,546</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 15</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(UEFA)" target="_blank" rel="noopener noreferrer">2026 FIFA World Cup qualification (UEFA)</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">173,991</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 14</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2025_Bihar_Legislative_Assembly_election" target="_blank" rel="noopener noreferrer">2025 Bihar Legislative Assembly election</a></td>
+              <td class="archive-category">Election in India</td>
+              <td class="archive-views">823,147</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 13</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Virginia_Giuffre" target="_blank" rel="noopener noreferrer">Virginia Giuffre</a></td>
+              <td class="archive-category">American and Australian advocate (1983–2025)</td>
+              <td class="archive-views">158,377</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 12</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Cleto_Escobedo_III" target="_blank" rel="noopener noreferrer">Cleto Escobedo III</a></td>
+              <td class="archive-category">American bandleader (1966–2025)</td>
+              <td class="archive-views">365,511</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 11</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/SS_Edmund_Fitzgerald" target="_blank" rel="noopener noreferrer">SS Edmund Fitzgerald</a></td>
+              <td class="archive-category">Great Lakes freighter sunk in Lake Superior</td>
+              <td class="archive-views">234,029</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 10</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Dharmendra" target="_blank" rel="noopener noreferrer">Dharmendra</a></td>
+              <td class="archive-category">Indian actor and politician (1935–2025)</td>
+              <td class="archive-views">276,723</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 9</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/James_A._Garfield" target="_blank" rel="noopener noreferrer">James A. Garfield</a></td>
+              <td class="archive-category">1881 U.S. presidential administration</td>
+              <td class="archive-views">306,711</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 8</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Frankenstein_(2025_film)" target="_blank" rel="noopener noreferrer">Frankenstein (2025 film)</a></td>
+              <td class="archive-category">2025 film by Guillermo del Toro</td>
+              <td class="archive-views">362,761</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 7</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Rama_Duwaji" target="_blank" rel="noopener noreferrer">Rama Duwaji</a></td>
+              <td class="archive-category">American artist, First Lady of New York City (born 1997)</td>
+              <td class="archive-views">268,166</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 6</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Marshawn_Kneeland" target="_blank" rel="noopener noreferrer">Marshawn Kneeland</a></td>
+              <td class="archive-category">American football player (2001–2025)</td>
+              <td class="archive-views">743,737</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 5</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Zohran_Mamdani" target="_blank" rel="noopener noreferrer">Zohran Mamdani</a></td>
+              <td class="archive-category">Mayor of New York City since January 2026</td>
+              <td class="archive-views">3,842,842</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 4</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Dick_Cheney" target="_blank" rel="noopener noreferrer">Dick Cheney</a></td>
+              <td class="archive-category">Vice President of the United States from 2001 to 2009</td>
+              <td class="archive-views">959,236</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 3</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Diane_Ladd" target="_blank" rel="noopener noreferrer">Diane Ladd</a></td>
+              <td class="archive-category">American actress (1935–2025)</td>
+              <td class="archive-views">259,554</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 2</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Women&#039;s_Cricket_World_Cup" target="_blank" rel="noopener noreferrer">Women&#039;s Cricket World Cup</a></td>
+              <td class="archive-category">One Day International competition</td>
+              <td class="archive-views">530,880</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Nov 1</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/6-7_meme" target="_blank" rel="noopener noreferrer">6-7 (meme)</a></td>
+              <td class="archive-category">2025 Internet meme and slang term</td>
+              <td class="archive-views">158,289</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 31</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Andrew_Mountbatten-Windsor" target="_blank" rel="noopener noreferrer">Prince Andrew</a></td>
+              <td class="archive-category">Son of Elizabeth II (born 1960)</td>
+              <td class="archive-views">378,085</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 30</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Trey_Yesavage" target="_blank" rel="noopener noreferrer">Trey Yesavage</a></td>
+              <td class="archive-category">American baseball player (born 2003)</td>
+              <td class="archive-views">562,310</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 29</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/XXX_(2002_film)" target="_blank" rel="noopener noreferrer">XXX (2002 film)</a></td>
+              <td class="archive-category">American action film directed by Rob Cohen</td>
+              <td class="archive-views">263,374</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 28</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Shohei_Ohtani" target="_blank" rel="noopener noreferrer">Shohei Ohtani</a></td>
+              <td class="archive-category">Japanese baseball player (born 1994)</td>
+              <td class="archive-views">362,072</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 27</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/It_%E2%80%93_Welcome_to_Derry" target="_blank" rel="noopener noreferrer">It – Welcome to Derry</a></td>
+              <td class="archive-category">American supernatural horror television series</td>
+              <td class="archive-views">246,161</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 26</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Nick_Mangold" target="_blank" rel="noopener noreferrer">Nick Mangold</a></td>
+              <td class="archive-category">American football player (1984–2025)</td>
+              <td class="archive-views">424,187</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 25</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Satish_Shah" target="_blank" rel="noopener noreferrer">Satish Shah</a></td>
+              <td class="archive-category">Indian actor and comedian (1951–2025)</td>
+              <td class="archive-views">300,530</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 24</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/East_Wing" target="_blank" rel="noopener noreferrer">East Wing</a></td>
+              <td class="archive-category">Demolished section of the White House</td>
+              <td class="archive-views">145,926</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 23</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Chauncey_Billups" target="_blank" rel="noopener noreferrer">Chauncey Billups</a></td>
+              <td class="archive-category">American basketball player and coach (born 1976)</td>
+              <td class="archive-views">222,566</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 22</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/XXX_(film_series)" target="_blank" rel="noopener noreferrer">XXX (film series)</a></td>
+              <td class="archive-category">American spy action film series by Rich Wilkes</td>
+              <td class="archive-views">209,423</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 21</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Daniel_Naroditsky" target="_blank" rel="noopener noreferrer">Daniel Naroditsky</a></td>
+              <td class="archive-category">American chess grandmaster (1995–2025)</td>
+              <td class="archive-views">493,758</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 20</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Diwali" target="_blank" rel="noopener noreferrer">Diwali</a></td>
+              <td class="archive-category">Hindu festival of lights</td>
+              <td class="archive-views">407,031</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 19</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Sam_Rivers_(bassist)" target="_blank" rel="noopener noreferrer">Sam Rivers (bassist)</a></td>
+              <td class="archive-category">American bassist (1977–2025)</td>
+              <td class="archive-views">554,220</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 18</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Google_Chrome" target="_blank" rel="noopener noreferrer">Google Chrome</a></td>
+              <td class="archive-category">Web browser developed by Google</td>
+              <td class="archive-views">359,664</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 17</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Joe_Flacco" target="_blank" rel="noopener noreferrer">Joe Flacco</a></td>
+              <td class="archive-category">American football player (born 1985)</td>
+              <td class="archive-views">387,478</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 16</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Ace_Frehley" target="_blank" rel="noopener noreferrer">Ace Frehley</a></td>
+              <td class="archive-category">American guitarist (1951–2025)</td>
+              <td class="archive-views">402,541</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 15</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Pankaj_Dheer" target="_blank" rel="noopener noreferrer">Pankaj Dheer</a></td>
+              <td class="archive-category">Indian actor (1956–2025)</td>
+              <td class="archive-views">303,857</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 14</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/D&#039;Angelo" target="_blank" rel="noopener noreferrer">D&#039;Angelo</a></td>
+              <td class="archive-category">American musician (1974–2025)</td>
+              <td class="archive-views">939,624</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 13</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Columbus_Day" target="_blank" rel="noopener noreferrer">Columbus Day</a></td>
+              <td class="archive-category">National holiday in the Americas</td>
+              <td class="archive-views">194,129</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 12</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Ian_Watkins" target="_blank" rel="noopener noreferrer">Ian Watkins (Lostprophets singer)</a></td>
+              <td class="archive-category">Welsh musician and child sex offender (1977–2025)</td>
+              <td class="archive-views">936,085</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 11</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Diane_Keaton" target="_blank" rel="noopener noreferrer">Diane Keaton</a></td>
+              <td class="archive-category">American actress (1946–2025)</td>
+              <td class="archive-views">3,456,836</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 10</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Mar%C3%ADa_Corina_Machado" target="_blank" rel="noopener noreferrer">María Corina Machado</a></td>
+              <td class="archive-category">Venezuelan politician and activist (born 1967)</td>
+              <td class="archive-views">681,717</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 9</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/L%C3%A1szl%C3%B3_Krasznahorkai" target="_blank" rel="noopener noreferrer">László Krasznahorkai</a></td>
+              <td class="archive-category">Hungarian novelist (born 1954)</td>
+              <td class="archive-views">175,354</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 8</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Dolly_Parton" target="_blank" rel="noopener noreferrer">Dolly Parton</a></td>
+              <td class="archive-category">American singer-songwriter (born 1946)</td>
+              <td class="archive-views">180,539</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 7</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Ilse_Koch" target="_blank" rel="noopener noreferrer">Ilse Koch</a></td>
+              <td class="archive-category">German war criminal (1906–1967)</td>
+              <td class="archive-views">248,784</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 6</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Monster%3A_The_Ed_Gein_Story" target="_blank" rel="noopener noreferrer">Monster: The Ed Gein Story</a></td>
+              <td class="archive-category">2025 season of television series</td>
+              <td class="archive-views">386,864</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 4</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Kantara%3A_Chapter_1" target="_blank" rel="noopener noreferrer">Kantara: Chapter 1</a></td>
+              <td class="archive-category">2025 Indian film by Rishab Shetty</td>
+              <td class="archive-views">434,159</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 3</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Ed_Gein" target="_blank" rel="noopener noreferrer">Ed Gein</a></td>
+              <td class="archive-category">American murderer and body snatcher (1906–1984)</td>
+              <td class="archive-views">1,337,334</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 2</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Yom_Kippur" target="_blank" rel="noopener noreferrer">Yom Kippur</a></td>
+              <td class="archive-category">Holiest day in Judaism</td>
+              <td class="archive-views">412,350</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Oct 1</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jane_Goodall" target="_blank" rel="noopener noreferrer">Jane Goodall</a></td>
+              <td class="archive-category">English zoologist (1934–2025)</td>
+              <td class="archive-views">777,022</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 30</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Pete_Hegseth" target="_blank" rel="noopener noreferrer">Pete Hegseth</a></td>
+              <td class="archive-category">American government official and television personality (born 1980)</td>
+              <td class="archive-views">253,405</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 29</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Tilak_Varma" target="_blank" rel="noopener noreferrer">Tilak Varma</a></td>
+              <td class="archive-category">Indian cricketer (born 2002)</td>
+              <td class="archive-views">173,628</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 28</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Mae_Martin" target="_blank" rel="noopener noreferrer">Mae Martin</a></td>
+              <td class="archive-category">Canadian comedian and actor (born 1987)</td>
+              <td class="archive-views">285,441</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 27</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/One_Battle_After_Another" target="_blank" rel="noopener noreferrer">One Battle After Another</a></td>
+              <td class="archive-category">2025 film by Paul Thomas Anderson</td>
+              <td class="archive-views">310,418</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 25</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/ChatGPT" target="_blank" rel="noopener noreferrer">ChatGPT</a></td>
+              <td class="archive-category">Generative AI chatbot by OpenAI</td>
+              <td class="archive-views">157,882</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 23</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/List_of_stations_owned_or_operated_by_Sinclair_Broadcast_Group" target="_blank" rel="noopener noreferrer">List of stations owned or operated by Sinclair Broadcast Group</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">329,702</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 22</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2025_Ballon_d&#039;Or" target="_blank" rel="noopener noreferrer">2025 Ballon d&#039;Or</a></td>
+              <td class="archive-category">Annual association football award event in France</td>
+              <td class="archive-views">554,969</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 21</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Wrestlepalooza_(2025)" target="_blank" rel="noopener noreferrer">Wrestlepalooza (2025)</a></td>
+              <td class="archive-category">WWE pay-per-view and livestreaming event</td>
+              <td class="archive-views">401,704</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 20</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/H-1B_visa" target="_blank" rel="noopener noreferrer">H-1B visa</a></td>
+              <td class="archive-category">US employment visa for specialty occupations</td>
+              <td class="archive-views">294,333</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 19</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Zubeen_Garg" target="_blank" rel="noopener noreferrer">Zubeen Garg</a></td>
+              <td class="archive-category">Indian musician and actor (1972–2025)</td>
+              <td class="archive-views">338,849</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 18</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/D4vd" target="_blank" rel="noopener noreferrer">D4vd</a></td>
+              <td class="archive-category">American singer (born 2005)</td>
+              <td class="archive-views">530,451</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 17</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Google_Chrome" target="_blank" rel="noopener noreferrer">Google Chrome</a></td>
+              <td class="archive-category">Web browser developed by Google</td>
+              <td class="archive-views">394,834</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 16</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Robert_Redford" target="_blank" rel="noopener noreferrer">Robert Redford</a></td>
+              <td class="archive-category">American actor and director (1936–2025)</td>
+              <td class="archive-views">2,864,009</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 15</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Stephen_Graham" target="_blank" rel="noopener noreferrer">Stephen Graham</a></td>
+              <td class="archive-category">English actor (born 1973)</td>
+              <td class="archive-views">606,411</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 14</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Ricky_Hatton" target="_blank" rel="noopener noreferrer">Ricky Hatton</a></td>
+              <td class="archive-category">British professional boxer (1978–2025)</td>
+              <td class="archive-views">1,114,830</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 13</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Groypers" target="_blank" rel="noopener noreferrer">Groypers</a></td>
+              <td class="archive-category">Far-right internet group</td>
+              <td class="archive-views">854,534</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 12</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Killing_of_Iryna_Zarutska" target="_blank" rel="noopener noreferrer">Killing of Iryna Zarutska</a></td>
+              <td class="archive-category">2025 stabbing in Charlotte, North Carolina, U.S.</td>
+              <td class="archive-views">1,056,343</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 10</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Assassination_of_Charlie_Kirk" target="_blank" rel="noopener noreferrer">Shooting of Charlie Kirk</a></td>
+              <td class="archive-category">2025 assassination in Orem, Utah, U.S.</td>
+              <td class="archive-views">2,062,330</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 9</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/J._J._McCarthy" target="_blank" rel="noopener noreferrer">J. J. McCarthy</a></td>
+              <td class="archive-category">American football player (born 2003)</td>
+              <td class="archive-views">439,084</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 8</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Matt_Prater" target="_blank" rel="noopener noreferrer">Matt Prater</a></td>
+              <td class="archive-category">American football player (born 1984)</td>
+              <td class="archive-views">300,244</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 7</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Carlo_Acutis" target="_blank" rel="noopener noreferrer">Carlo Acutis</a></td>
+              <td class="archive-category">Italian saint (1991–2006)</td>
+              <td class="archive-views">511,765</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 6</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Aryna_Sabalenka" target="_blank" rel="noopener noreferrer">Aryna Sabalenka</a></td>
+              <td class="archive-category">Belarusian tennis player (born 1998)</td>
+              <td class="archive-views">365,134</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 5</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Katharine%2C_Duchess_of_Kent" target="_blank" rel="noopener noreferrer">Katharine, Duchess of Kent</a></td>
+              <td class="archive-category">Member of the British royal family (1933–2025)</td>
+              <td class="archive-views">507,882</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 4</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Giorgio_Armani" target="_blank" rel="noopener noreferrer">Giorgio Armani</a></td>
+              <td class="archive-category">Italian fashion designer (1934–2025)</td>
+              <td class="archive-views">588,302</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 3</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Angela_Rayner" target="_blank" rel="noopener noreferrer">Angela Rayner</a></td>
+              <td class="archive-category">Deputy Prime Minister of the United Kingdom from 2024 to 2025</td>
+              <td class="archive-views">164,461</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 2</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Graham_Greene_(actor)" target="_blank" rel="noopener noreferrer">Graham Greene (actor)</a></td>
+              <td class="archive-category">First Nations actor (1952–2025)</td>
+              <td class="archive-views">787,227</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Sep 1</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Labor_Day" target="_blank" rel="noopener noreferrer">Labor Day</a></td>
+              <td class="archive-category">Federal holiday in the United States</td>
+              <td class="archive-views">339,418</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 31</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Clash_in_Paris" target="_blank" rel="noopener noreferrer">Clash in Paris</a></td>
+              <td class="archive-category">2025 WWE pay-per-view and livestreaming event</td>
+              <td class="archive-views">421,294</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 30</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Arch_Manning" target="_blank" rel="noopener noreferrer">Arch Manning</a></td>
+              <td class="archive-category">American football player (born 2004)</td>
+              <td class="archive-views">366,164</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 29</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Micah_Parsons" target="_blank" rel="noopener noreferrer">Micah Parsons</a></td>
+              <td class="archive-category">American football player (born 1999)</td>
+              <td class="archive-views">198,027</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 28</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Nick_Woltemade" target="_blank" rel="noopener noreferrer">Nick Woltemade</a></td>
+              <td class="archive-category">German footballer (born 2002)</td>
+              <td class="archive-views">214,976</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 27</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Taylor_Swift" target="_blank" rel="noopener noreferrer">Taylor Swift</a></td>
+              <td class="archive-category">American singer-songwriter (born 1989)</td>
+              <td class="archive-views">293,943</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 26</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Google" target="_blank" rel="noopener noreferrer">Google</a></td>
+              <td class="archive-category">American multinational technology company</td>
+              <td class="archive-views">1,441,092</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 25</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Rio_Ngumoha" target="_blank" rel="noopener noreferrer">Rio Ngumoha</a></td>
+              <td class="archive-category">English footballer (born 2008)</td>
+              <td class="archive-views">177,997</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 24</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Lee_Majors" target="_blank" rel="noopener noreferrer">Lee Majors</a></td>
+              <td class="archive-category">American actor (born 1939)</td>
+              <td class="archive-views">798,824</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 23</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Lyle_and_Erik_Menendez" target="_blank" rel="noopener noreferrer">Lyle and Erik Menendez</a></td>
+              <td class="archive-category">American murderers and brothers</td>
+              <td class="archive-views">155,421</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 22</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/John_Bolton" target="_blank" rel="noopener noreferrer">John Bolton</a></td>
+              <td class="archive-category">American attorney and diplomat (born 1948)</td>
+              <td class="archive-views">242,100</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 21</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Brent_Hinds" target="_blank" rel="noopener noreferrer">Brent Hinds</a></td>
+              <td class="archive-category">American guitarist and singer (1974–2025)</td>
+              <td class="archive-views">212,800</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 20</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Frank_Caprio" target="_blank" rel="noopener noreferrer">Frank Caprio</a></td>
+              <td class="archive-category">American municipal judge (1936–2025)</td>
+              <td class="archive-views">221,122</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 19</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jeff_Baena" target="_blank" rel="noopener noreferrer">Jeff Baena</a></td>
+              <td class="archive-category">American screenwriter and film director (1977–2025)</td>
+              <td class="archive-views">148,334</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 18</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/C._P._Radhakrishnan" target="_blank" rel="noopener noreferrer">C. P. Radhakrishnan</a></td>
+              <td class="archive-category">Vice President of India since 2025</td>
+              <td class="archive-views">129,986</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 17</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Terence_Stamp" target="_blank" rel="noopener noreferrer">Terence Stamp</a></td>
+              <td class="archive-category">English actor (1938–2025)</td>
+              <td class="archive-views">573,434</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 16</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Superman_(2025_film)" target="_blank" rel="noopener noreferrer">Superman (2025 film)</a></td>
+              <td class="archive-category">DC Studios film</td>
+              <td class="archive-views">167,311</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 15</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/War_2_(film)" target="_blank" rel="noopener noreferrer">War 2 (film)</a></td>
+              <td class="archive-category">2025 Indian film by Ayan Mukerji</td>
+              <td class="archive-views">462,599</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 14</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Coolie_(2025_film)" target="_blank" rel="noopener noreferrer">Coolie (2025 film)</a></td>
+              <td class="archive-category">2025 Indian film by Lokesh Kanagaraj</td>
+              <td class="archive-views">546,378</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 13</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Alien%3A_Earth" target="_blank" rel="noopener noreferrer">Alien: Earth</a></td>
+              <td class="archive-category">American sci-fi horror television series</td>
+              <td class="archive-views">321,951</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 12</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Danielle_Spencer_(American_actress)" target="_blank" rel="noopener noreferrer">Danielle Spencer (American actress)</a></td>
+              <td class="archive-category">American actress and veterinarian (1965–2025)</td>
+              <td class="archive-views">275,062</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 11</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/ChatGPT" target="_blank" rel="noopener noreferrer">ChatGPT</a></td>
+              <td class="archive-category">Generative AI chatbot by OpenAI</td>
+              <td class="archive-views">142,763</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 10</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Wednesday_(TV_series)" target="_blank" rel="noopener noreferrer">Wednesday (TV series)</a></td>
+              <td class="archive-category">American supernatural mystery television series (2022–present)</td>
+              <td class="archive-views">182,029</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 9</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jim_Lovell" target="_blank" rel="noopener noreferrer">Jim Lovell</a></td>
+              <td class="archive-category">American astronaut (1928–2025)</td>
+              <td class="archive-views">234,972</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 8</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Weapons_(2025_film)" target="_blank" rel="noopener noreferrer">Weapons (2025 film)</a></td>
+              <td class="archive-category">2025 film by Zach Cregger</td>
+              <td class="archive-views">605,840</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 6</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Kelley_Mack" target="_blank" rel="noopener noreferrer">Kelley Mack</a></td>
+              <td class="archive-category">American actress (1992–2025)</td>
+              <td class="archive-views">239,616</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 5</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Government_of_Thailand" target="_blank" rel="noopener noreferrer">Government of Thailand</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">422,105</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 4</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Lists_of_deaths_by_year" target="_blank" rel="noopener noreferrer">Deaths in 2025</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">160,049</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 3</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Loni_Anderson" target="_blank" rel="noopener noreferrer">Loni Anderson</a></td>
+              <td class="archive-category">American actress (1945–2025)</td>
+              <td class="archive-views">226,420</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 2</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/SummerSlam_(2025)" target="_blank" rel="noopener noreferrer">SummerSlam (2025)</a></td>
+              <td class="archive-category">WWE pay-per-view and livestreaming event</td>
+              <td class="archive-views">378,974</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Aug 1</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Pamela_Anderson" target="_blank" rel="noopener noreferrer">Pamela Anderson</a></td>
+              <td class="archive-category">Canadian-American actress and model (born 1967)</td>
+              <td class="archive-views">196,308</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 31</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Sydney_Sweeney" target="_blank" rel="noopener noreferrer">Sydney Sweeney</a></td>
+              <td class="archive-category">American actress (born 1997)</td>
+              <td class="archive-views">217,773</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 30</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Lists_of_earthquakes" target="_blank" rel="noopener noreferrer">Lists of earthquakes</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">317,956</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 29</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Search_engine" target="_blank" rel="noopener noreferrer">Search engine</a></td>
+              <td class="archive-category">Software system for finding relevant information on the Web</td>
+              <td class="archive-views">1,197,097</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 28</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Saiyaara" target="_blank" rel="noopener noreferrer">Saiyaara</a></td>
+              <td class="archive-category">Topics referred to by the same term</td>
+              <td class="archive-views">259,184</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 27</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Sarina_Wiegman" target="_blank" rel="noopener noreferrer">Sarina Wiegman</a></td>
+              <td class="archive-category">Dutch footballer and manager (born 1969)</td>
+              <td class="archive-views">311,845</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 26</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Happy_Gilmore_2" target="_blank" rel="noopener noreferrer">Happy Gilmore 2</a></td>
+              <td class="archive-category">2025 film by Kyle Newacheck</td>
+              <td class="archive-views">573,142</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 25</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/The_Fantastic_Four%3A_First_Steps" target="_blank" rel="noopener noreferrer">The Fantastic Four: First Steps</a></td>
+              <td class="archive-category">2025 Marvel Studios film</td>
+              <td class="archive-views">462,062</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 24</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Hulk_Hogan" target="_blank" rel="noopener noreferrer">Hulk Hogan</a></td>
+              <td class="archive-category">American professional wrestler (1953–2025)</td>
+              <td class="archive-views">3,032,625</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 23</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Sharon_Osbourne" target="_blank" rel="noopener noreferrer">Sharon Osbourne</a></td>
+              <td class="archive-category">English and American television personality, music manager, and author (born 1952)</td>
+              <td class="archive-views">542,275</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 22</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Ozzy_Osbourne" target="_blank" rel="noopener noreferrer">Ozzy Osbourne</a></td>
+              <td class="archive-category">English musician and media personality (1948–2025)</td>
+              <td class="archive-views">4,190,815</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 21</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Malcolm-Jamal_Warner" target="_blank" rel="noopener noreferrer">Malcolm-Jamal Warner</a></td>
+              <td class="archive-category">American actor (1970–2025)</td>
+              <td class="archive-views">1,906,205</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 20</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Scottie_Scheffler" target="_blank" rel="noopener noreferrer">Scottie Scheffler</a></td>
+              <td class="archive-category">American professional golfer (born 1996)</td>
+              <td class="archive-views">597,344</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 19</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/I_Know_What_You_Did_Last_Summer_(2025_film)" target="_blank" rel="noopener noreferrer">I Know What You Did Last Summer (2025 film)</a></td>
+              <td class="archive-category">American slasher film</td>
+              <td class="archive-views">192,679</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 18</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Felix_Baumgartner" target="_blank" rel="noopener noreferrer">Felix Baumgartner</a></td>
+              <td class="archive-category">Austrian skydiver and extreme sportsman (1969–2025)</td>
+              <td class="archive-views">277,263</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 17</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Connie_Francis" target="_blank" rel="noopener noreferrer">Connie Francis</a></td>
+              <td class="archive-category">American singer and actress (1937–2025)</td>
+              <td class="archive-views">556,917</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 16</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Druze" target="_blank" rel="noopener noreferrer">Druze</a></td>
+              <td class="archive-category">Ethnoreligious group of the Levant</td>
+              <td class="archive-views">195,291</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 15</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Fourteen_Words" target="_blank" rel="noopener noreferrer">Fourteen Words</a></td>
+              <td class="archive-category">White-supremacist slogans</td>
+              <td class="archive-views">313,188</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 14</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/WWE_Evolution_(2025)" target="_blank" rel="noopener noreferrer">WWE Evolution (2025)</a></td>
+              <td class="archive-category">Women&#039;s professional wrestling pay-per-view and livestreaming event</td>
+              <td class="archive-views">303,744</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 13</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Rosie_O&#039;Donnell" target="_blank" rel="noopener noreferrer">Rosie O&#039;Donnell</a></td>
+              <td class="archive-category">American comedian and actress (born 1962)</td>
+              <td class="archive-views">243,531</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 12</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Iga_%C5%9Awi%C4%85tek" target="_blank" rel="noopener noreferrer">Iga Świątek</a></td>
+              <td class="archive-category">Polish tennis player (born 2001)</td>
+              <td class="archive-views">572,820</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 11</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jannik_Sinner" target="_blank" rel="noopener noreferrer">Jannik Sinner</a></td>
+              <td class="archive-category">Italian tennis player (born 2001)</td>
+              <td class="archive-views">402,669</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 10</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Amanda_Anisimova" target="_blank" rel="noopener noreferrer">Amanda Anisimova</a></td>
+              <td class="archive-category">American tennis player (born 2001)</td>
+              <td class="archive-views">775,924</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 9</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jo%C3%A3o_Pedro_(footballer%2C_born_2001)" target="_blank" rel="noopener noreferrer">João Pedro (footballer, born 2001)</a></td>
+              <td class="archive-category">Brazilian footballer (born 2001)</td>
+              <td class="archive-views">226,745</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 8</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Superman_(2025_film)" target="_blank" rel="noopener noreferrer">Superman (2025 film)</a></td>
+              <td class="archive-category">DC Studios film</td>
+              <td class="archive-views">275,861</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 7</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/McDonald&#039;s" target="_blank" rel="noopener noreferrer">Mcdonalds.com</a></td>
+              <td class="archive-category">American fast food restaurant chain</td>
+              <td class="archive-views">395,842</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 6</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Cameron_Norrie" target="_blank" rel="noopener noreferrer">Cameron Norrie</a></td>
+              <td class="archive-category">British professional tennis player (born 1995)</td>
+              <td class="archive-views">391,878</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 5</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Julian_McMahon" target="_blank" rel="noopener noreferrer">Julian McMahon</a></td>
+              <td class="archive-category">Australian and American actor (1968–2025)</td>
+              <td class="archive-views">1,490,930</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 4</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Michael_Madsen" target="_blank" rel="noopener noreferrer">Michael Madsen</a></td>
+              <td class="archive-category">American actor (1957–2025)</td>
+              <td class="archive-views">724,189</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 3</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Diogo_Jota" target="_blank" rel="noopener noreferrer">Diogo Jota</a></td>
+              <td class="archive-category">Portuguese footballer (1996–2025)</td>
+              <td class="archive-views">2,713,389</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 2</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jurassic_World_Rebirth" target="_blank" rel="noopener noreferrer">Jurassic World Rebirth</a></td>
+              <td class="archive-category">2025 film by Gareth Edwards</td>
+              <td class="archive-views">285,249</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jul 1</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Roman_von_Ungern-Sternberg" target="_blank" rel="noopener noreferrer">Roman von Ungern-Sternberg</a></td>
+              <td class="archive-category">Russian general and warlord (1886–1921)</td>
+              <td class="archive-views">245,772</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 30</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Hess_triangle" target="_blank" rel="noopener noreferrer">Hess triangle</a></td>
+              <td class="archive-category">Small tiled plot of land in New York City</td>
+              <td class="archive-views">284,490</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 29</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Ilia_Topuria" target="_blank" rel="noopener noreferrer">Ilia Topuria</a></td>
+              <td class="archive-category">Georgian and Spanish mixed martial artist (born 1997)</td>
+              <td class="archive-views">455,173</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 28</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Shefali_Jariwala" target="_blank" rel="noopener noreferrer">Shefali Jariwala</a></td>
+              <td class="archive-category">Indian actress (1982–2025)</td>
+              <td class="archive-views">978,526</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 27</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Squid_Game_season_3" target="_blank" rel="noopener noreferrer">Squid Game season 3</a></td>
+              <td class="archive-category">Season of South Korean television series</td>
+              <td class="archive-views">510,232</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 26</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Mira_Nair" target="_blank" rel="noopener noreferrer">Mira Nair</a></td>
+              <td class="archive-category">Indian American filmmaker (born 1957)</td>
+              <td class="archive-views">313,007</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 25</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2025_New_York_City_mayoral_election" target="_blank" rel="noopener noreferrer">2025 New York City mayoral election</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">464,118</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 24</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Zohran_Mamdani" target="_blank" rel="noopener noreferrer">Zohran Mamdani</a></td>
+              <td class="archive-category">Mayor of New York City since January 2026</td>
+              <td class="archive-views">319,735</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 23</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Shai_Gilgeous-Alexander" target="_blank" rel="noopener noreferrer">Shai Gilgeous-Alexander</a></td>
+              <td class="archive-category">Canadian basketball player (born 1998)</td>
+              <td class="archive-views">356,570</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 22</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Northrop_B-2_Spirit" target="_blank" rel="noopener noreferrer">Northrop B-2 Spirit</a></td>
+              <td class="archive-category">American heavy strategic bomber</td>
+              <td class="archive-views">844,999</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 21</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Sitaare_Zameen_Par" target="_blank" rel="noopener noreferrer">Sitaare Zameen Par</a></td>
+              <td class="archive-category">2025 Indian film by R. S. Prasanna</td>
+              <td class="archive-views">198,322</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 20</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2025_FIFA_Club_World_Cup" target="_blank" rel="noopener noreferrer">2025 FIFA Club World Cup</a></td>
+              <td class="archive-category">International soccer tournament held in 2025</td>
+              <td class="archive-views">137,228</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 19</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/28_Years_Later" target="_blank" rel="noopener noreferrer">28 Years Later</a></td>
+              <td class="archive-category">2025 film by Danny Boyle</td>
+              <td class="archive-views">357,618</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 18</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Juneteenth" target="_blank" rel="noopener noreferrer">Juneteenth</a></td>
+              <td class="archive-category">US holiday commemorating the end of slavery in the United States</td>
+              <td class="archive-views">334,327</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 17</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Anne_Burrell" target="_blank" rel="noopener noreferrer">Anne Burrell</a></td>
+              <td class="archive-category">American television chef (1969–2025)</td>
+              <td class="archive-views">603,739</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 16</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/J._J._Spaun" target="_blank" rel="noopener noreferrer">J. J. Spaun</a></td>
+              <td class="archive-category">American professional golfer (born 1990)</td>
+              <td class="archive-views">1,003,511</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 15</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Father&#039;s_Day" target="_blank" rel="noopener noreferrer">Father&#039;s Day</a></td>
+              <td class="archive-category">Celebration honoring fathers</td>
+              <td class="archive-views">221,248</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 14</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Melissa_Hortman" target="_blank" rel="noopener noreferrer">Melissa Hortman</a></td>
+              <td class="archive-category">American lawyer and politician (1970–2025)</td>
+              <td class="archive-views">1,166,111</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 13</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Sam_Altman" target="_blank" rel="noopener noreferrer">Sam Altman</a></td>
+              <td class="archive-category">American entrepreneur and investor (born 1985)</td>
+              <td class="archive-views">584,385</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 12</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Vijay_Rupani" target="_blank" rel="noopener noreferrer">Vijay Rupani</a></td>
+              <td class="archive-category">Chief Minister of Gujarat from 2016 to 2021</td>
+              <td class="archive-views">767,567</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 11</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Brian_Wilson" target="_blank" rel="noopener noreferrer">Brian Wilson</a></td>
+              <td class="archive-category">American musician (1942–2025)</td>
+              <td class="archive-views">783,479</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 9</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Cole_Escola" target="_blank" rel="noopener noreferrer">Cole Escola</a></td>
+              <td class="archive-category">American comedian, actor, and singer (born 1986)</td>
+              <td class="archive-views">322,482</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 8</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Money_in_the_Bank_(2025)" target="_blank" rel="noopener noreferrer">Money in the Bank (2025)</a></td>
+              <td class="archive-category">WWE pay-per-view and livestreaming event</td>
+              <td class="archive-views">437,751</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 7</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Coco_Gauff" target="_blank" rel="noopener noreferrer">Coco Gauff</a></td>
+              <td class="archive-category">American tennis player (born 2004)</td>
+              <td class="archive-views">640,765</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 6</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jannik_Sinner" target="_blank" rel="noopener noreferrer">Jannik Sinner</a></td>
+              <td class="archive-category">Italian tennis player (born 2001)</td>
+              <td class="archive-views">210,651</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 5</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Thug_Life_(2025_film)" target="_blank" rel="noopener noreferrer">Thug Life (2025 film)</a></td>
+              <td class="archive-category">2025 Indian film by Mani Ratnam</td>
+              <td class="archive-views">231,760</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 4</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/ChatGPT" target="_blank" rel="noopener noreferrer">ChatGPT</a></td>
+              <td class="archive-category">Generative AI chatbot by OpenAI</td>
+              <td class="archive-views">832,465</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 3</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/List_of_Indian_Premier_League_seasons_and_results" target="_blank" rel="noopener noreferrer">List of Indian Premier League seasons and results</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">534,315</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 2</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jonathan_Joss" target="_blank" rel="noopener noreferrer">Jonathan Joss</a></td>
+              <td class="archive-category">American actor and musician (1965–2025)</td>
+              <td class="archive-views">422,385</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jun 1</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2025_Polish_presidential_election" target="_blank" rel="noopener noreferrer">2025 Polish presidential election</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">219,033</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 31</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Luis_Enrique" target="_blank" rel="noopener noreferrer">Luis Enrique</a></td>
+              <td class="archive-category">Spanish football manager (born 1970)</td>
+              <td class="archive-views">414,170</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 30</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Loretta_Swit" target="_blank" rel="noopener noreferrer">Loretta Swit</a></td>
+              <td class="archive-category">American actress (1937–2025)</td>
+              <td class="archive-views">335,829</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 29</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Larry_Hoover" target="_blank" rel="noopener noreferrer">Larry Hoover</a></td>
+              <td class="archive-category">American gang leader (born 1950)</td>
+              <td class="archive-views">252,167</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 28</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Rick_Derringer" target="_blank" rel="noopener noreferrer">Rick Derringer</a></td>
+              <td class="archive-category">American rock musician (1947–2025)</td>
+              <td class="archive-views">183,320</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 27</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Brigitte_Macron" target="_blank" rel="noopener noreferrer">Brigitte Macron</a></td>
+              <td class="archive-category">Wife of Emmanuel Macron (born 1953)</td>
+              <td class="archive-views">467,325</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 26</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Phil_Robertson" target="_blank" rel="noopener noreferrer">Phil Robertson</a></td>
+              <td class="archive-category">American hunter, businessman and reality television star (1946–2025)</td>
+              <td class="archive-views">546,083</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 25</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Sirens_(2025_TV_series)" target="_blank" rel="noopener noreferrer">Sirens (2025 TV series)</a></td>
+              <td class="archive-category">2025 American dark comedy television series</td>
+              <td class="archive-views">219,495</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 24</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Mukul_Dev" target="_blank" rel="noopener noreferrer">Mukul Dev</a></td>
+              <td class="archive-category">Indian actor (1970–2025)</td>
+              <td class="archive-views">611,706</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 23</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Lilo_%26_Stitch_(2025_film)" target="_blank" rel="noopener noreferrer">Lilo &amp; Stitch (2025 film)</a></td>
+              <td class="archive-category">Sci-fi comedy film</td>
+              <td class="archive-views">247,831</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 21</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Shai_Gilgeous-Alexander" target="_blank" rel="noopener noreferrer">Shai Gilgeous-Alexander</a></td>
+              <td class="archive-category">Canadian basketball player (born 1998)</td>
+              <td class="archive-views">165,243</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 20</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/George_Wendt" target="_blank" rel="noopener noreferrer">George Wendt</a></td>
+              <td class="archive-category">American actor (1948–2025)</td>
+              <td class="archive-views">461,659</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 19</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Mission%3A_Impossible_%E2%80%93_The_Final_Reckoning" target="_blank" rel="noopener noreferrer">Mission: Impossible – The Final Reckoning</a></td>
+              <td class="archive-category">2025 film by Christopher McQuarrie</td>
+              <td class="archive-views">160,054</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 18</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Scottie_Scheffler" target="_blank" rel="noopener noreferrer">Scottie Scheffler</a></td>
+              <td class="archive-category">American professional golfer (born 1996)</td>
+              <td class="archive-views">352,797</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 17</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/JJ_(singer)" target="_blank" rel="noopener noreferrer">JJ (singer)</a></td>
+              <td class="archive-category">Austrian singer (born 2001)</td>
+              <td class="archive-views">362,168</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 16</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Final_Destination_Bloodlines" target="_blank" rel="noopener noreferrer">Final Destination Bloodlines</a></td>
+              <td class="archive-category">2025 American supernatural horror film</td>
+              <td class="archive-views">225,282</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 15</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Eurovision_Song_Contest_2025" target="_blank" rel="noopener noreferrer">Eurovision Song Contest 2025</a></td>
+              <td class="archive-category">International song competition</td>
+              <td class="archive-views">213,377</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 14</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Andor" target="_blank" rel="noopener noreferrer">Andor (TV series)</a></td>
+              <td class="archive-category">2022–2025 Star Wars television series</td>
+              <td class="archive-views">213,197</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 13</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Cassie_Ventura" target="_blank" rel="noopener noreferrer">Cassie Ventura</a></td>
+              <td class="archive-category">American singer (born 1986)</td>
+              <td class="archive-views">246,677</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 12</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Party-list_representation_in_the_House_of_Representatives_of_the_Philippines" target="_blank" rel="noopener noreferrer">Party-list representation in the House of Representatives of the Philippines</a></td>
+              <td class="archive-category">Feature of the democratic process in the Philippines</td>
+              <td class="archive-views">210,281</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 11</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Mother&#039;s_Day" target="_blank" rel="noopener noreferrer">Mother&#039;s Day</a></td>
+              <td class="archive-category">Celebration honouring mothers</td>
+              <td class="archive-views">292,004</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 10</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Backlash_(2025)" target="_blank" rel="noopener noreferrer">Backlash (2025)</a></td>
+              <td class="archive-category">WWE pay-per-view and livestreaming event</td>
+              <td class="archive-views">204,210</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 9</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Pope_Leo_XIII" target="_blank" rel="noopener noreferrer">Pope Leo XIII</a></td>
+              <td class="archive-category">Head of the Catholic Church from 1878 to 1903</td>
+              <td class="archive-views">361,232</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 8</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Pope_Leo_XIV" target="_blank" rel="noopener noreferrer">Pope Leo XIV</a></td>
+              <td class="archive-category">Head of the Catholic Church since 2025</td>
+              <td class="archive-views">7,538,267</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 7</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2025_India%E2%80%93Pakistan_conflict" target="_blank" rel="noopener noreferrer">2025 India–Pakistan strikes</a></td>
+              <td class="archive-category">Armed conflict in South Asia</td>
+              <td class="archive-views">274,202</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 6</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Rihanna" target="_blank" rel="noopener noreferrer">Rihanna</a></td>
+              <td class="archive-category">Barbadian singer (born 1988)</td>
+              <td class="archive-views">196,328</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 5</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Cinco_de_Mayo" target="_blank" rel="noopener noreferrer">Cinco de Mayo</a></td>
+              <td class="archive-category">Annual celebration held on May 5</td>
+              <td class="archive-views">371,874</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 4</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Secretariat_(horse)" target="_blank" rel="noopener noreferrer">Secretariat (horse)</a></td>
+              <td class="archive-category">1973 US Triple Crown of Thoroughbred Racing winner</td>
+              <td class="archive-views">173,355</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 3</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2025_Australian_federal_election" target="_blank" rel="noopener noreferrer">2025 Australian federal election</a></td>
+              <td class="archive-category">Election of Australia&#039;s 48th parliament</td>
+              <td class="archive-views">431,584</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 2</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Ruth_Buzzi" target="_blank" rel="noopener noreferrer">Ruth Buzzi</a></td>
+              <td class="archive-category">American actress and comedian (1936–2025)</td>
+              <td class="archive-views">260,697</td>
+            </tr>
+            <tr>
+              <td class="archive-date">May 1</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/International_Workers&#039;_Day" target="_blank" rel="noopener noreferrer">International Workers&#039; Day</a></td>
+              <td class="archive-category">Annual labour movement commemoration</td>
+              <td class="archive-views">203,349</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 30</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Thunderbolts*" target="_blank" rel="noopener noreferrer">Thunderbolts*</a></td>
+              <td class="archive-category">2025 Marvel Studios film</td>
+              <td class="archive-views">279,764</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 29</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2025_Canadian_federal_election" target="_blank" rel="noopener noreferrer">2025 Canadian federal election</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">1,189,956</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 28</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Vaibhav_Sooryavanshi" target="_blank" rel="noopener noreferrer">Vaibhav Suryavanshi</a></td>
+              <td class="archive-category">Indian cricketer (born 2011)</td>
+              <td class="archive-views">505,623</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 27</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Pope_Benedict_XVI" target="_blank" rel="noopener noreferrer">Pope Benedict XVI</a></td>
+              <td class="archive-category">Head of the Catholic Church from 2005 to 2013</td>
+              <td class="archive-views">173,097</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 26</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Shedeur_Sanders" target="_blank" rel="noopener noreferrer">Shedeur Sanders</a></td>
+              <td class="archive-category">American football player (born 2002)</td>
+              <td class="archive-views">562,365</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 25</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2025_NFL_draft" target="_blank" rel="noopener noreferrer">2025 NFL draft</a></td>
+              <td class="archive-category">2025 American football draft</td>
+              <td class="archive-views">857,378</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 24</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Simla_Agreement" target="_blank" rel="noopener noreferrer">Simla Agreement</a></td>
+              <td class="archive-category">1972 peace treaty between India and Pakistan</td>
+              <td class="archive-views">362,878</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 23</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2025_Pahalgam_attack" target="_blank" rel="noopener noreferrer">2025 Pahalgam attack</a></td>
+              <td class="archive-category">Islamist terrorist attack in Indian-administered Kashmir</td>
+              <td class="archive-views">376,752</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 22</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/List_of_popes" target="_blank" rel="noopener noreferrer">List of popes</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">378,796</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 21</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Pope_Francis" target="_blank" rel="noopener noreferrer">Pope Francis</a></td>
+              <td class="archive-category">Head of the Catholic Church from 2013 to 2025</td>
+              <td class="archive-views">2,929,703</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 20</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Sinners_(2025_film)" target="_blank" rel="noopener noreferrer">Sinners (2025 film)</a></td>
+              <td class="archive-category">2025 film by Ryan Coogler</td>
+              <td class="archive-views">594,380</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 19</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/WrestleMania_41" target="_blank" rel="noopener noreferrer">WrestleMania 41</a></td>
+              <td class="archive-category">2025 WWE pay-per-view and livestreaming event</td>
+              <td class="archive-views">492,702</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 18</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Good_Friday" target="_blank" rel="noopener noreferrer">Good Friday</a></td>
+              <td class="archive-category">Christian holiday</td>
+              <td class="archive-views">465,081</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 17</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Maundy_Thursday" target="_blank" rel="noopener noreferrer">Maundy Thursday</a></td>
+              <td class="archive-category">Christian holiday commemorating the Last Supper</td>
+              <td class="archive-views">199,422</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 16</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Schutzstaffel" target="_blank" rel="noopener noreferrer">Schutzstaffel</a></td>
+              <td class="archive-category">German Nazi paramilitary organisation (1925–1945)</td>
+              <td class="archive-views">7,849,999</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 15</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Deportation_of_Kilmar_Abrego_Garcia" target="_blank" rel="noopener noreferrer">Deportation of Kilmar Abrego Garcia</a></td>
+              <td class="archive-category">2025 US extrajudicial deportation</td>
+              <td class="archive-views">227,999</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 14</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Grand_Slam_(golf)" target="_blank" rel="noopener noreferrer">Grand Slam (golf)</a></td>
+              <td class="archive-category">Feat in professional golf; winning all major championships in the same year</td>
+              <td class="archive-views">318,828</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 13</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Justin_Rose" target="_blank" rel="noopener noreferrer">Justin Rose</a></td>
+              <td class="archive-category">English professional golfer (born 1980)</td>
+              <td class="archive-views">803,536</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 12</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Rory_McIlroy" target="_blank" rel="noopener noreferrer">Rory McIlroy</a></td>
+              <td class="archive-category">Northern Irish golfer (born 1989)</td>
+              <td class="archive-views">276,485</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 11</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jaat_(film)" target="_blank" rel="noopener noreferrer">Jaat (film)</a></td>
+              <td class="archive-category">2025 Indian film by Gopichand Malineni</td>
+              <td class="archive-views">210,556</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 10</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jillian_Lauren" target="_blank" rel="noopener noreferrer">Jillian Lauren</a></td>
+              <td class="archive-category">American writer, performer and former escort</td>
+              <td class="archive-views">230,543</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 9</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Peter_Navarro" target="_blank" rel="noopener noreferrer">Peter Navarro</a></td>
+              <td class="archive-category">American economist and author (born 1949)</td>
+              <td class="archive-views">186,055</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 8</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Dire_wolf" target="_blank" rel="noopener noreferrer">Dire wolf</a></td>
+              <td class="archive-category">Extinct species of canine mammal</td>
+              <td class="archive-views">993,364</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 7</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jay_North" target="_blank" rel="noopener noreferrer">Jay North</a></td>
+              <td class="archive-category">American actor (1951–2025)</td>
+              <td class="archive-views">369,507</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 6</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Kelvin_Sampson" target="_blank" rel="noopener noreferrer">Kelvin Sampson</a></td>
+              <td class="archive-category">American basketball coach (born 1955)</td>
+              <td class="archive-views">245,972</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 5</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Alexander_Ovechkin" target="_blank" rel="noopener noreferrer">Alexander Ovechkin</a></td>
+              <td class="archive-category">Russian ice hockey player (born 1985)</td>
+              <td class="archive-views">197,712</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 4</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/A_Minecraft_Movie" target="_blank" rel="noopener noreferrer">A Minecraft Movie</a></td>
+              <td class="archive-category">2025 film directed by Jared Hess</td>
+              <td class="archive-views">296,699</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 3</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Laura_Loomer" target="_blank" rel="noopener noreferrer">Laura Loomer</a></td>
+              <td class="archive-category">American political activist (born 1993)</td>
+              <td class="archive-views">166,405</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 2</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Val_Kilmer" target="_blank" rel="noopener noreferrer">Val Kilmer</a></td>
+              <td class="archive-category">American actor (1959–2025)</td>
+              <td class="archive-views">3,977,829</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Apr 1</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/April_Fools&#039;_Day" target="_blank" rel="noopener noreferrer">April Fools&#039; Day</a></td>
+              <td class="archive-category">Annual celebration on 1 April</td>
+              <td class="archive-views">405,746</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 31</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Sikandar_(2025_film)" target="_blank" rel="noopener noreferrer">Sikandar (2025 film)</a></td>
+              <td class="archive-category">2025 Indian film by AR Murugadoss</td>
+              <td class="archive-views">371,036</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 30</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Richard_Chamberlain" target="_blank" rel="noopener noreferrer">Richard Chamberlain</a></td>
+              <td class="archive-category">American actor (1934–2025)</td>
+              <td class="archive-views">590,198</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 29</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Solar_eclipse_of_March_29%2C_2025" target="_blank" rel="noopener noreferrer">Solar eclipse of March 29, 2025</a></td>
+              <td class="archive-category">Partial solar eclipse</td>
+              <td class="archive-views">270,388</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 28</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/L2%3A_Empuraan" target="_blank" rel="noopener noreferrer">L2: Empuraan</a></td>
+              <td class="archive-category">2025 Indian film by Prithviraj Sukumaran</td>
+              <td class="archive-views">191,127</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 27</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Rachel_Zegler" target="_blank" rel="noopener noreferrer">Rachel Zegler</a></td>
+              <td class="archive-category">American actress and singer (born 2001)</td>
+              <td class="archive-views">197,783</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 26</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Natalia_Grace" target="_blank" rel="noopener noreferrer">Natalia Grace</a></td>
+              <td class="archive-category">American adoptee with dwarfism (born 2003)</td>
+              <td class="archive-views">220,724</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 25</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Joe_Gatto" target="_blank" rel="noopener noreferrer">Joe Gatto</a></td>
+              <td class="archive-category">American comedian (born 1976)</td>
+              <td class="archive-views">374,923</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 24</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Vanessa_Trump" target="_blank" rel="noopener noreferrer">Vanessa Trump</a></td>
+              <td class="archive-category">Ex-wife of Donald Trump Jr. (born 1977)</td>
+              <td class="archive-views">683,875</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 23</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Snow_White_(2025_film)" target="_blank" rel="noopener noreferrer">Snow White (2025 film)</a></td>
+              <td class="archive-category">2025 American musical fantasy film</td>
+              <td class="archive-views">370,901</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 22</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/George_Foreman" target="_blank" rel="noopener noreferrer">George Foreman</a></td>
+              <td class="archive-category">American boxer (1949–2025)</td>
+              <td class="archive-views">1,658,526</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 21</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Alpargatas_S.A." target="_blank" rel="noopener noreferrer">Alpargatas S.A.</a></td>
+              <td class="archive-category">Brazilian footwear and canvas company</td>
+              <td class="archive-views">361,968</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 20</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Eddie_Jordan" target="_blank" rel="noopener noreferrer">Eddie Jordan</a></td>
+              <td class="archive-category">Irish motorsport executive and broadcaster (1948–2025)</td>
+              <td class="archive-views">380,053</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 19</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Capri" target="_blank" rel="noopener noreferrer">Capri</a></td>
+              <td class="archive-category">Island in the Tyrrhenian Sea, Italy</td>
+              <td class="archive-views">269,739</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 18</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Sunita_Williams" target="_blank" rel="noopener noreferrer">Sunita Williams</a></td>
+              <td class="archive-category">U.S. Navy officer and NASA astronaut (born 1965)</td>
+              <td class="archive-views">339,330</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 17</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Saint_Patrick&#039;s_Day" target="_blank" rel="noopener noreferrer">Saint Patrick&#039;s Day</a></td>
+              <td class="archive-category">Cultural and religious celebration on 17 March</td>
+              <td class="archive-views">556,467</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 16</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Kyle_Smith_(basketball)" target="_blank" rel="noopener noreferrer">Kyle Smith (basketball)</a></td>
+              <td class="archive-category">American basketball coach (born 1969)</td>
+              <td class="archive-views">314,065</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 15</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Adolescence_(TV_series)" target="_blank" rel="noopener noreferrer">Adolescence (TV series)</a></td>
+              <td class="archive-category">2025 British crime drama TV series</td>
+              <td class="archive-views">266,736</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 14</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Joe_Quesada" target="_blank" rel="noopener noreferrer">Joe Quesada</a></td>
+              <td class="archive-category">American comic book artist and writer (born 1962)</td>
+              <td class="archive-views">217,536</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 13</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/March_2025_lunar_eclipse" target="_blank" rel="noopener noreferrer">March 2025 lunar eclipse</a></td>
+              <td class="archive-category">Total lunar eclipse of 14 March 2025</td>
+              <td class="archive-views">179,632</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 12</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Nausicaa" target="_blank" rel="noopener noreferrer">Náusikaa</a></td>
+              <td class="archive-category">Character from Greek mythology</td>
+              <td class="archive-views">194,320</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 11</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jasmine_Richards" target="_blank" rel="noopener noreferrer">Jasmine Richards</a></td>
+              <td class="archive-category">Canadian actress (born 1990)</td>
+              <td class="archive-views">197,776</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 10</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Mark_Carney" target="_blank" rel="noopener noreferrer">Mark Carney</a></td>
+              <td class="archive-category">Prime Minister of Canada since 2025</td>
+              <td class="archive-views">821,251</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 9</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/ICC_Champions_Trophy" target="_blank" rel="noopener noreferrer">ICC Champions Trophy</a></td>
+              <td class="archive-category">International One Day International (ODI) cricket tournament</td>
+              <td class="archive-views">618,949</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 8</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/International_Women&#039;s_Day" target="_blank" rel="noopener noreferrer">International Women&#039;s Day</a></td>
+              <td class="archive-category">Day to promote women&#039;s rights worldwide</td>
+              <td class="archive-views">327,957</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 7</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Severance_(TV_series)" target="_blank" rel="noopener noreferrer">Severance (TV series)</a></td>
+              <td class="archive-category">American television series (2022–present)</td>
+              <td class="archive-views">250,114</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 6</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Pamela_Bach" target="_blank" rel="noopener noreferrer">Pamela Bach</a></td>
+              <td class="archive-category">American actress (1962–2025)</td>
+              <td class="archive-views">163,868</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 5</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Al_Green_(politician)" target="_blank" rel="noopener noreferrer">Al Green (politician)</a></td>
+              <td class="archive-category">American politician (born 1947)</td>
+              <td class="archive-views">940,515</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 4</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Mikey_Madison" target="_blank" rel="noopener noreferrer">Mikey Madison</a></td>
+              <td class="archive-category">American actress (born 1999)</td>
+              <td class="archive-views">436,364</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 3</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Anora" target="_blank" rel="noopener noreferrer">Anora</a></td>
+              <td class="archive-category">2024 film by Sean Baker</td>
+              <td class="archive-views">2,653,714</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 2</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Elimination_Chamber_(2025)" target="_blank" rel="noopener noreferrer">Elimination Chamber: Toronto</a></td>
+              <td class="archive-category">WWE pay-per-view and livestreaming event</td>
+              <td class="archive-views">552,002</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Mar 1</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Volodymyr_Zelenskyy" target="_blank" rel="noopener noreferrer">Volodymyr Zelenskyy</a></td>
+              <td class="archive-category">President of Ukraine since 2019</td>
+              <td class="archive-views">454,298</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 28</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Ruby_Franke" target="_blank" rel="noopener noreferrer">Ruby Franke</a></td>
+              <td class="archive-category">American vlogger and convicted child abuser (born 1982)</td>
+              <td class="archive-views">193,216</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 27</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Gene_Hackman" target="_blank" rel="noopener noreferrer">Gene Hackman</a></td>
+              <td class="archive-category">American actor (1930–2025)</td>
+              <td class="archive-views">3,500,011</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 26</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Michelle_Trachtenberg" target="_blank" rel="noopener noreferrer">Michelle Trachtenberg</a></td>
+              <td class="archive-category">American actress (1985–2025)</td>
+              <td class="archive-views">3,287,123</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 25</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Roberta_Flack" target="_blank" rel="noopener noreferrer">Roberta Flack</a></td>
+              <td class="archive-category">American singer (1937–2025)</td>
+              <td class="archive-views">279,078</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 24</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2025_German_federal_election" target="_blank" rel="noopener noreferrer">2025 German federal election</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">517,451</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 22</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Kash_Patel" target="_blank" rel="noopener noreferrer">Kash Patel</a></td>
+              <td class="archive-category">Director of the FBI since 2025</td>
+              <td class="archive-views">387,898</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 21</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/4_Nations_Face-Off" target="_blank" rel="noopener noreferrer">2025 4 Nations Face-Off</a></td>
+              <td class="archive-category">International men&#039;s ice hockey tournament</td>
+              <td class="archive-views">451,422</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 20</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Null" target="_blank" rel="noopener noreferrer">Null</a></td>
+              <td class="archive-category">Topics referred to by the same term</td>
+              <td class="archive-views">368,670</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 19</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Rekha_Gupta" target="_blank" rel="noopener noreferrer">Rekha Gupta</a></td>
+              <td class="archive-category">7th Chief Minister of Delhi since 2025</td>
+              <td class="archive-views">498,111</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 18</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Sambhaji" target="_blank" rel="noopener noreferrer">Sambhaji</a></td>
+              <td class="archive-category">Chhatrapati of the Marathas from 1681 to 1689</td>
+              <td class="archive-views">332,718</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 17</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/The_White_Lotus_season_3" target="_blank" rel="noopener noreferrer">The White Lotus season 3</a></td>
+              <td class="archive-category">Season of television series</td>
+              <td class="archive-views">385,238</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 16</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Kim_Sae-ron" target="_blank" rel="noopener noreferrer">Kim Sae-ron</a></td>
+              <td class="archive-category">South Korean actress (2000–2025)</td>
+              <td class="archive-views">506,992</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 15</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Chhaava" target="_blank" rel="noopener noreferrer">Chhaava</a></td>
+              <td class="archive-category">2025 Indian film by Laxman Utekar</td>
+              <td class="archive-views">365,909</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 14</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Elon_Musk" target="_blank" rel="noopener noreferrer">Elon Musk</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">257,341</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 13</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Captain_America%3A_Brave_New_World" target="_blank" rel="noopener noreferrer">Captain America: Brave New World</a></td>
+              <td class="archive-category">2025 Marvel Studios film</td>
+              <td class="archive-views">437,444</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 12</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Marc_Fogel" target="_blank" rel="noopener noreferrer">Marc Fogel</a></td>
+              <td class="archive-category">American previously detained in Russia (born in 1961)</td>
+              <td class="archive-views">400,138</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 11</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Gulf_of_Mexico" target="_blank" rel="noopener noreferrer">Gulf of Mexico</a></td>
+              <td class="archive-category">Marginal sea of the Atlantic Ocean</td>
+              <td class="archive-views">429,416</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 10</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Kendrick_Lamar" target="_blank" rel="noopener noreferrer">Kendrick Lamar</a></td>
+              <td class="archive-category">American rapper and songwriter (born 1987)</td>
+              <td class="archive-views">1,781,900</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 9</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/List_of_Super_Bowl_champions" target="_blank" rel="noopener noreferrer">List of Super Bowl champions</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">374,076</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 8</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/2025_Delhi_Legislative_Assembly_election" target="_blank" rel="noopener noreferrer">2025 Delhi Legislative Assembly election</a></td>
+              <td class="archive-category"></td>
+              <td class="archive-views">311,571</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 7</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Belle_Gibson" target="_blank" rel="noopener noreferrer">Belle Gibson</a></td>
+              <td class="archive-category">Australian convicted scammer (born 1991)</td>
+              <td class="archive-views">298,711</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 6</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Irv_Gotti" target="_blank" rel="noopener noreferrer">Irv Gotti</a></td>
+              <td class="archive-category">American record producer (1970–2025)</td>
+              <td class="archive-views">398,618</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 5</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Aga_Khan_IV" target="_blank" rel="noopener noreferrer">Aga Khan IV</a></td>
+              <td class="archive-category">Islamic Imam, 1957–2025</td>
+              <td class="archive-views">383,567</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 4</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Bianca_Censori" target="_blank" rel="noopener noreferrer">Bianca Censori</a></td>
+              <td class="archive-category">Australian architect and model (born 1995)</td>
+              <td class="archive-views">514,931</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 3</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/67th_Annual_Grammy_Awards" target="_blank" rel="noopener noreferrer">67th Annual Grammy Awards</a></td>
+              <td class="archive-category">2025 music award ceremony</td>
+              <td class="archive-views">1,110,872</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 2</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Luka_Don%C4%8Di%C4%87" target="_blank" rel="noopener noreferrer">Luka Dončić</a></td>
+              <td class="archive-category">Slovenian basketball player (born 1999)</td>
+              <td class="archive-views">552,398</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Feb 1</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Royal_Rumble_(2025)" target="_blank" rel="noopener noreferrer">Royal Rumble (2025)</a></td>
+              <td class="archive-category">World Wrestling Entertainment event</td>
+              <td class="archive-views">445,814</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 31</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Marianne_Faithfull" target="_blank" rel="noopener noreferrer">Marianne Faithfull</a></td>
+              <td class="archive-category">English singer and actress (1946–2025)</td>
+              <td class="archive-views">482,580</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 29</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Robert_F._Kennedy_Jr." target="_blank" rel="noopener noreferrer">Robert F. Kennedy Jr.</a></td>
+              <td class="archive-category">American politician (born 1954)</td>
+              <td class="archive-views">442,533</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 28</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Karoline_Leavitt" target="_blank" rel="noopener noreferrer">Karoline Leavitt</a></td>
+              <td class="archive-category">White House press secretary (born 1997)</td>
+              <td class="archive-views">365,959</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 27</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/DeepSeek" target="_blank" rel="noopener noreferrer">DeepSeek</a></td>
+              <td class="archive-category">Chinese artificial intelligence company</td>
+              <td class="archive-views">660,952</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 26</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jannik_Sinner" target="_blank" rel="noopener noreferrer">Jannik Sinner</a></td>
+              <td class="archive-category">Italian tennis player (born 2001)</td>
+              <td class="archive-views">550,179</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 25</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Madison_Keys" target="_blank" rel="noopener noreferrer">Madison Keys</a></td>
+              <td class="archive-category">American tennis player (born 1995)</td>
+              <td class="archive-views">663,472</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 24</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Instagram" target="_blank" rel="noopener noreferrer">Instagram</a></td>
+              <td class="archive-category">Social media platform owned by Meta</td>
+              <td class="archive-views">224,028</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 23</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/97th_Academy_Awards" target="_blank" rel="noopener noreferrer">97th Academy Awards</a></td>
+              <td class="archive-category">Award ceremony for films of 2024</td>
+              <td class="archive-views">385,236</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 22</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Ross_Ulbricht" target="_blank" rel="noopener noreferrer">Ross Ulbricht</a></td>
+              <td class="archive-category">American founder of Silk Road (born 1984)</td>
+              <td class="archive-views">1,203,355</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 21</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Facebook" target="_blank" rel="noopener noreferrer">Anti-Muslim propaganda on Facebook</a></td>
+              <td class="archive-category">Social networking service owned by Meta Platforms</td>
+              <td class="archive-views">967,374</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 19</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jayden_Daniels" target="_blank" rel="noopener noreferrer">Jayden Daniels</a></td>
+              <td class="archive-category">American football player (born 2000)</td>
+              <td class="archive-views">430,832</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 18</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/MrBeast" target="_blank" rel="noopener noreferrer">MrBeast6000</a></td>
+              <td class="archive-category">American YouTuber (born 1998)</td>
+              <td class="archive-views">334,513</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 17</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/MrBeast" target="_blank" rel="noopener noreferrer">MrBeast</a></td>
+              <td class="archive-category">American YouTuber (born 1998)</td>
+              <td class="archive-views">365,635</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 16</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/David_Lynch" target="_blank" rel="noopener noreferrer">David Lynch</a></td>
+              <td class="archive-category">American filmmaker (1946–2025)</td>
+              <td class="archive-views">1,222,558</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 15</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Linda_Nolan" target="_blank" rel="noopener noreferrer">Linda Nolan</a></td>
+              <td class="archive-category">Irish singer and actress (1959–2025)</td>
+              <td class="archive-views">205,031</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 14</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Pete_Hegseth" target="_blank" rel="noopener noreferrer">Pete Hegseth</a></td>
+              <td class="archive-category">American government official and television personality (born 1980)</td>
+              <td class="archive-views">396,342</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 13</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Aunt_Jemima" target="_blank" rel="noopener noreferrer">Aunt Jemima</a></td>
+              <td class="archive-category">Former brand of breakfast foods</td>
+              <td class="archive-views">295,492</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 12</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Supercopa_de_Espa%C3%B1a" target="_blank" rel="noopener noreferrer">Supercopa de España</a></td>
+              <td class="archive-category">Football tournament</td>
+              <td class="archive-views">363,765</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 11</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Game_Changer_(film)" target="_blank" rel="noopener noreferrer">Game Changer (film)</a></td>
+              <td class="archive-category">2025 film directed by S. Shankar</td>
+              <td class="archive-views">382,104</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 10</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Marcus_Freeman" target="_blank" rel="noopener noreferrer">Marcus Freeman</a></td>
+              <td class="archive-category">American football player and coach (born 1986)</td>
+              <td class="archive-views">386,927</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 9</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jimmy_Carter" target="_blank" rel="noopener noreferrer">Jimmy Carter</a></td>
+              <td class="archive-category">President of the United States from 1977 to 1981</td>
+              <td class="archive-views">742,991</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 8</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Twilight_Zone_accident" target="_blank" rel="noopener noreferrer">Twilight Zone accident</a></td>
+              <td class="archive-category">1982 helicopter crash in California, US</td>
+              <td class="archive-views">386,179</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 7</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Amy_Carter" target="_blank" rel="noopener noreferrer">Amy Carter</a></td>
+              <td class="archive-category">Daughter of Jimmy Carter (born 1967)</td>
+              <td class="archive-views">321,577</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 6</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Emilia_P%C3%A9rez" target="_blank" rel="noopener noreferrer">Emilia Pérez</a></td>
+              <td class="archive-category">2024 film by Jacques Audiard</td>
+              <td class="archive-views">616,790</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 5</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Aubrey_Plaza" target="_blank" rel="noopener noreferrer">Aubrey Plaza</a></td>
+              <td class="archive-category">American actress and producer (born 1984)</td>
+              <td class="archive-views">448,782</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 4</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Jeff_Baena" target="_blank" rel="noopener noreferrer">Jeff Baena</a></td>
+              <td class="archive-category">American screenwriter and film director (1977–2025)</td>
+              <td class="archive-views">716,965</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 3</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Luke_Littler" target="_blank" rel="noopener noreferrer">Luke Littler</a></td>
+              <td class="archive-category">English darts player (born 2007)</td>
+              <td class="archive-views">316,702</td>
+            </tr>
+            <tr>
+              <td class="archive-date">Jan 2</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Squid_Game_season_2" target="_blank" rel="noopener noreferrer">Squid Game season 2</a></td>
+              <td class="archive-category">Season of South Korean television series</td>
+              <td class="archive-views">378,443</td>
+            </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <span>&copy; 2026 WikiPop</span>
+    <div class="footer-links">
+      <a href="/">Today</a>
+      <a href="/feed.xml">RSS</a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const isLight = root.classList.toggle("light");
+      localStorage.setItem("theme", isLight ? "light" : "dark");
+      document.querySelector(".theme-icon").innerHTML = isLight ? "&#9728;" : "&#9790;";
+    }
+    (function () {
+      const saved = localStorage.getItem("theme");
+      if (saved === "light") {
+        document.documentElement.classList.add("light");
+        document.querySelector(".theme-icon").innerHTML = "&#9728;";
+      }
+    })();
+  </script>
+</body>
+</html>

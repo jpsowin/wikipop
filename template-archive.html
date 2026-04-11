@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive — WikiPop</title>
+  <meta name="description" content="Full archive of every article featured on WikiPop.">
+  <link rel="alternate" type="application/rss+xml" title="WikiPop RSS" href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0f1117;
+      --bg-raised: #181a23;
+      --text: #c8cdd8;
+      --text-muted: #7a7f8e;
+      --text-bright: #eef0f5;
+      --accent: #f06449;
+      --accent-glow: rgba(240, 100, 73, 0.15);
+      --border: #2a2d3a;
+      --radius: 8px;
+    }
+
+    :root.light {
+      --bg: #faf9f6;
+      --bg-raised: #ffffff;
+      --text: #4a4a4a;
+      --text-muted: #8a8a8a;
+      --text-bright: #1a1a1a;
+      --accent: #d94f3b;
+      --accent-glow: rgba(217, 79, 59, 0.1);
+      --border: #e0ddd6;
+    }
+
+    body {
+      font-family: "Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      transition: background-color 0.3s, color 0.3s;
+      min-height: 100vh;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 1.25rem 1.5rem;
+      background: var(--bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .logo {
+      font-family: "Fraunces", serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .logo span { color: var(--accent); }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 1rem;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .theme-toggle:hover {
+      color: var(--text-bright);
+      border-color: var(--text-muted);
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem 4rem;
+    }
+
+    h1 {
+      font-family: "Fraunces", serif;
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .archive-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .archive-table th {
+      text-align: left;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .archive-table th:last-child {
+      text-align: right;
+    }
+
+    .archive-table td {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    .archive-date {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      white-space: nowrap;
+      width: 100px;
+    }
+
+    .archive-title a {
+      color: var(--text-bright);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .archive-title a:hover {
+      color: var(--accent);
+    }
+
+    .archive-category {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 200px;
+    }
+
+    .archive-views {
+      text-align: right;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    footer {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: var(--text-bright); }
+
+    .footer-links {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 1rem; }
+      main { padding: 1rem 1rem 3rem; }
+      .archive-date { width: auto; }
+      .archive-category { display: none; }
+      footer { flex-direction: column; gap: 0.75rem; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">Wiki<span>Pop</span></a>
+    <div class="nav-controls">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="theme-icon">&#9790;</span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Archive</h1>
+    <p class="subtitle">{{TOTAL_ARTICLES}} articles featured so far.</p>
+
+    <table class="archive-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Article</th>
+          <th>Category</th>
+          <th>Views</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ALL_ARCHIVE_ROWS}}
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <span>&copy; {{CURRENT_YEAR}} WikiPop</span>
+    <div class="footer-links">
+      <a href="/">Today</a>
+      <a href="/feed.xml">RSS</a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const isLight = root.classList.toggle("light");
+      localStorage.setItem("theme", isLight ? "light" : "dark");
+      document.querySelector(".theme-icon").innerHTML = isLight ? "&#9728;" : "&#9790;";
+    }
+    (function () {
+      const saved = localStorage.getItem("theme");
+      if (saved === "light") {
+        document.documentElement.classList.add("light");
+        document.querySelector(".theme-icon").innerHTML = "&#9728;";
+      }
+    })();
+  </script>
+</body>
+</html>

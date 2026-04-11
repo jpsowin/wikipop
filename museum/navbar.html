@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WikiPop Navbar Explorations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Instrument+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    :root {
+      --red: #d00d00;
+      --yellow: #ffdf00;
+      --cyan: #00aeef;
+      --magenta: #ec008c;
+      --black: #111;
+      --white: #fdfcf3;
+      --cream: #f7f5eb;
+      --bw: 4px; /* Thick borders for comic style */
+    }
+    body {
+      font-family: "Instrument Sans", sans-serif;
+      background: #ccc;
+      margin: 0;
+      padding: 0;
+    }
+    .demo-section {
+      margin-bottom: 2rem;
+      background-color: var(--yellow);
+      background-image: radial-gradient(circle, var(--red) 5px, transparent 5.5px),
+                        radial-gradient(circle, var(--red) 5px, transparent 5.5px);
+      background-size: 19px 28.5px, 19px 28.5px;
+      background-position: 0 0, 9.5px 14.25px;
+      position: relative;
+      border-bottom: 2px solid #999;
+    }
+    .demo-header {
+      background: #333;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+      font-family: sans-serif;
+    }
+    
+    .nav-container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    /* Common elements */
+    .logo {
+      font-family: "Bangers", cursive;
+      font-size: 2.2rem;
+      color: var(--black);
+      text-decoration: none;
+      line-height: 1;
+    }
+    .logo span { color: var(--red); }
+    .btn {
+      font-family: "Bangers", cursive;
+      font-size: 1.1rem;
+      border: var(--bw) solid var(--black);
+      background: var(--white);
+      color: var(--black);
+      padding: 0.3rem 1rem;
+      cursor: pointer;
+    }
+    .btn:hover { background: var(--black); color: var(--white); }
+
+    /* ========================================================
+       1. The Classic Strip (Clean & Simple)
+       ======================================================== */
+    .nav1 {
+      padding: 1rem 0;
+      background: var(--white);
+      border-bottom: var(--bw) solid var(--black);
+    }
+
+    /* ========================================================
+       2. The Diagonal Action Slice
+       ======================================================== */
+    .nav2-wrapper {
+      background: var(--black);
+      padding-bottom: var(--bw);
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    }
+    .nav2 {
+      padding: 1rem 0 2rem 0;
+      background: var(--cyan);
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    }
+
+    /* ========================================================
+       3. The Brutalist Floating Block
+       ======================================================== */
+    .nav3 {
+      padding: 1rem 1.5rem;
+      background: var(--black);
+      color: var(--white);
+      margin: 1.5rem auto;
+      max-width: 760px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .nav3 .logo { color: var(--white); }
+    .nav3 .btn { border-color: var(--white); }
+    .nav3 .btn:hover { background: var(--white); color: var(--black); }
+
+    /* ========================================================
+       4. The Offset Shadow Ribbon (Pill Shape)
+       ======================================================== */
+    .nav4-wrapper {
+      padding: 1.5rem;
+    }
+    .nav4 {
+      padding: 0.8rem 1.5rem;
+      background: var(--white);
+      border: var(--bw) solid var(--black);
+      border-radius: 50px;
+      margin: 0 auto;
+      max-width: 760px;
+      display: flex; justify-content: space-between; align-items: center;
+      box-shadow: 6px 6px 0 var(--black);
+    }
+
+    /* ========================================================
+       5. The Jagged Zig-Zag (Comic Explosion)
+       ======================================================== */
+    .nav5-wrapper {
+      filter: drop-shadow(0 4px 0 var(--black));
+    }
+    .nav5 {
+      padding: 1rem 0 2rem 0;
+      background: var(--white);
+      clip-path: polygon(
+        0% 0%, 100% 0%, 100% 85%, 
+        95% 100%, 90% 85%, 85% 100%, 80% 85%, 75% 100%, 70% 85%, 65% 100%, 60% 85%, 55% 100%, 50% 85%, 45% 100%, 40% 85%, 35% 100%, 30% 85%, 25% 100%, 20% 85%, 15% 100%, 10% 85%, 5% 100%, 0% 85%
+      );
+    }
+
+    /* ========================================================
+       6. The Floating Staggered Boxes
+       ======================================================== */
+    .nav6-wrapper {
+      padding: 1.5rem;
+    }
+    .nav6 {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      margin: 0 auto; max-width: 760px;
+    }
+    .nav6 .logo-box {
+      background: var(--white);
+      border: var(--bw) solid var(--black);
+      padding: 0.5rem 1.5rem;
+      transform: rotate(-3deg);
+      box-shadow: 4px 4px 0 var(--black);
+    }
+    .nav6 .btn-box {
+      transform: rotate(2deg);
+      margin-top: 10px;
+    }
+    .nav6 .btn {
+      box-shadow: 4px 4px 0 var(--black);
+      padding: 0.5rem 1.2rem;
+    }
+
+    /* ========================================================
+       7. The Inverted Halftone Strip
+       ======================================================== */
+    .nav7 {
+      padding: 1.2rem 0;
+      background-color: var(--cyan);
+      background-image: radial-gradient(circle, rgba(255,255,255,0.6) 3px, transparent 3.5px);
+      background-size: 12px 12px;
+      border-bottom: var(--bw) solid var(--black);
+    }
+    .nav7 .logo {
+      background: var(--white);
+      padding: 0.2rem 1rem;
+      border: var(--bw) solid var(--black);
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.15);
+    }
+
+    /* ========================================================
+       8. The Heavy Solid Red Anchor
+       ======================================================== */
+    .nav8-wrapper {
+      background: var(--black);
+      padding-bottom: 6px;
+    }
+    .nav8 {
+      padding: 1.5rem 0;
+      background: var(--red);
+    }
+    .nav8 .logo { color: var(--white); font-size: 2.8rem; letter-spacing: 2px; }
+    .nav8 .logo span { color: var(--yellow); }
+    .nav8 .btn { background: var(--yellow); }
+
+    /* ========================================================
+       9. The Hazard Tape Border
+       ======================================================== */
+    .nav9 {
+      padding: 1rem 0;
+      background: var(--white);
+      position: relative;
+      border-bottom: var(--bw) solid var(--black);
+    }
+    .nav9::after {
+      content: "";
+      position: absolute;
+      bottom: -16px; left: 0; right: 0;
+      height: 12px;
+      background: repeating-linear-gradient(
+        45deg,
+        var(--yellow),
+        var(--yellow) 10px,
+        var(--black) 10px,
+        var(--black) 20px
+      );
+      border-bottom: var(--bw) solid var(--black);
+      z-index: 10;
+    }
+
+    /* ========================================================
+       10. The Comic Panel Grid Structure
+       ======================================================== */
+    .nav10-wrapper {
+      padding: 1rem 1.5rem;
+    }
+    .nav10 {
+      padding: 0.8rem 1.5rem;
+      background: var(--white);
+      border: 4px solid var(--black);
+      outline: 2px solid var(--black);
+      outline-offset: -8px;
+      margin: 0 auto; max-width: 760px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+
+    /* ========================================================
+       11. Staggered Boxes on a Solid Base Strip
+       ======================================================== */
+    .nav11-wrapper {
+      background: var(--white);
+      border-bottom: var(--bw) solid var(--black);
+      padding: 1.5rem 0;
+    }
+    .nav11 {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      margin: 0 auto; max-width: 760px; padding: 0 1.5rem;
+    }
+    .nav11 .logo-box {
+      background: var(--yellow);
+      border: var(--bw) solid var(--black);
+      padding: 0.5rem 1.5rem;
+      transform: rotate(-2deg);
+      box-shadow: 4px 4px 0 var(--black);
+    }
+    .nav11 .btn-box {
+      transform: rotate(3deg);
+      margin-top: 5px;
+    }
+    .nav11 .btn {
+      background: var(--white);
+      box-shadow: 4px 4px 0 var(--black);
+      padding: 0.5rem 1.2rem;
+    }
+
+    /* ========================================================
+       12. Staggered Boxes with Frosted Glass Backdrop
+       ======================================================== */
+    .nav12-wrapper {
+      background: rgba(253, 252, 243, 0.85); /* semi-transparent white */
+      backdrop-filter: blur(8px);
+      border-bottom: var(--bw) solid var(--black);
+      padding: 1.5rem 0;
+    }
+    .nav12 {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      margin: 0 auto; max-width: 760px; padding: 0 1.5rem;
+    }
+    .nav12 .logo-box {
+      background: var(--white);
+      border: var(--bw) solid var(--black);
+      padding: 0.5rem 1.5rem;
+      transform: rotate(-3deg);
+      box-shadow: 4px 4px 0 var(--black);
+    }
+    .nav12 .btn-box {
+      transform: rotate(2deg);
+      margin-top: 10px;
+    }
+    .nav12 .btn {
+      background: var(--yellow);
+      box-shadow: 4px 4px 0 var(--black);
+      padding: 0.5rem 1.2rem;
+    }
+
+    /* ========================================================
+       13. Staggered Boxes on a Heavy Black Strip
+       ======================================================== */
+    .nav13-wrapper {
+      background: var(--black);
+      padding: 1.5rem 0;
+    }
+    .nav13 {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      margin: 0 auto; max-width: 760px; padding: 0 1.5rem;
+    }
+    .nav13 .logo-box {
+      background: var(--cyan);
+      border: var(--bw) solid var(--white);
+      padding: 0.5rem 1.5rem;
+      transform: rotate(2deg);
+      box-shadow: 4px 4px 0 var(--white);
+    }
+    .nav13 .logo-box .logo { color: var(--white); }
+    .nav13 .logo-box .logo span { color: var(--yellow); }
+    .nav13 .btn-box {
+      transform: rotate(-2deg);
+      margin-top: 5px;
+    }
+    .nav13 .btn {
+      background: var(--yellow);
+      border-color: var(--white);
+      box-shadow: 4px 4px 0 var(--white);
+      padding: 0.5rem 1.2rem;
+    }
+    .nav13 .btn:hover { background: var(--white); color: var(--black); }
+
+    /* ========================================================
+       14. Staggered Boxes hanging from a "Clothesline" Header
+       ======================================================== */
+    .nav14-wrapper {
+      background: var(--white);
+      border-top: 12px solid var(--black);
+      border-bottom: 2px solid var(--black);
+      padding: 1rem 0;
+    }
+    .nav14 {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      margin: 0 auto; max-width: 760px; padding: 0 1.5rem;
+    }
+    .nav14 .logo-box {
+      background: var(--white);
+      border: var(--bw) solid var(--black);
+      padding: 0.5rem 1.5rem;
+      transform: rotate(-4deg);
+      box-shadow: -4px 4px 0 var(--black);
+      margin-top: -1.5rem; /* pull up into the black border */
+    }
+    .nav14 .btn-box {
+      transform: rotate(3deg);
+      margin-top: -1.2rem;
+    }
+    .nav14 .btn {
+      background: var(--cyan);
+      box-shadow: 4px 4px 0 var(--black);
+      padding: 0.5rem 1.2rem;
+    }
+
+    /* ========================================================
+       15. Staggered Boxes over Halftone Background Strip
+       ======================================================== */
+    .nav15-wrapper {
+      background-color: var(--cyan);
+      background-image: radial-gradient(circle, rgba(255,255,255,0.6) 3px, transparent 3.5px);
+      background-size: 12px 12px;
+      border-bottom: var(--bw) solid var(--black);
+      padding: 1.5rem 0;
+    }
+    .nav15 {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      margin: 0 auto; max-width: 760px; padding: 0 1.5rem;
+    }
+    .nav15 .logo-box {
+      background: var(--white);
+      border: var(--bw) solid var(--black);
+      padding: 0.5rem 1.5rem;
+      transform: rotate(-2deg);
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.8);
+    }
+    .nav15 .btn-box {
+      transform: rotate(2deg);
+      margin-top: 5px;
+    }
+    .nav15 .btn {
+      background: var(--white);
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.8);
+      padding: 0.5rem 1.2rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- 1 -->
+  <div class="demo-section">
+    <div class="demo-header">1. The Classic Strip (Clean & Simple)</div>
+    <div class="nav1">
+      <div class="nav-container">
+        <a href="#" class="logo">Wiki<span>Pop</span></a>
+        <button class="btn">SHARE</button>
+      </div>
+    </div>
+    <div style="height: 80px;"></div>
+  </div>
+
+  <!-- 2 -->
+  <div class="demo-section">
+    <div class="demo-header">2. The Diagonal Action Slice (Dynamic)</div>
+    <div class="nav2-wrapper">
+      <div class="nav2">
+        <div class="nav-container">
+          <a href="#" class="logo">Wiki<span>Pop</span></a>
+          <button class="btn">SHARE</button>
+        </div>
+      </div>
+    </div>
+    <div style="height: 80px;"></div>
+  </div>
+
+  <!-- 3 -->
+  <div class="demo-section">
+    <div class="demo-header">3. The Brutalist Floating Block (High Contrast)</div>
+    <div class="nav3">
+      <a href="#" class="logo">Wiki<span style="color:var(--yellow)">Pop</span></a>
+      <button class="btn">SHARE</button>
+    </div>
+    <div style="height: 80px;"></div>
+  </div>
+
+  <!-- 4 -->
+  <div class="demo-section">
+    <div class="demo-header">4. The Offset Shadow Ribbon (Playful Pill Shape)</div>
+    <div class="nav4-wrapper">
+      <div class="nav4">
+        <a href="#" class="logo">Wiki<span>Pop</span></a>
+        <button class="btn">SHARE</button>
+      </div>
+    </div>
+    <div style="height: 80px;"></div>
+  </div>
+
+  <!-- 5 -->
+  <div class="demo-section">
+    <div class="demo-header">5. The Jagged Zig-Zag (Comic Explosion)</div>
+    <div class="nav5-wrapper">
+      <div class="nav5">
+        <div class="nav-container">
+          <a href="#" class="logo">Wiki<span>Pop</span></a>
+          <button class="btn">SHARE</button>
+        </div>
+      </div>
+    </div>
+    <div style="height: 80px;"></div>
+  </div>
+
+  <!-- 6 -->
+  <div class="demo-section">
+    <div class="demo-header">6. Floating Staggered Boxes (Scrapbook/Zine style)</div>
+    <div class="nav6-wrapper">
+      <div class="nav6">
+        <div class="logo-box"><a href="#" class="logo">Wiki<span>Pop</span></a></div>
+        <div class="btn-box"><button class="btn">SHARE</button></div>
+      </div>
+    </div>
+    <div style="height: 80px;"></div>
+  </div>
+
+  <!-- 7 -->
+  <div class="demo-section">
+    <div class="demo-header">7. The Inverted Halftone Strip (Layered Textures)</div>
+    <div class="nav7">
+      <div class="nav-container">
+        <a href="#" class="logo">Wiki<span>Pop</span></a>
+        <button class="btn">SHARE</button>
+      </div>
+    </div>
+    <div style="height: 80px;"></div>
+  </div>
+
+  <!-- 8 -->
+  <div class="demo-section">
+    <div class="demo-header">8. The Heavy Title Banner (Solid Red Anchor)</div>
+    <div class="nav8-wrapper">
+      <div class="nav8">
+        <div class="nav-container">
+          <a href="#" class="logo">WIKI<span>POP</span></a>
+          <button class="btn">SHARE</button>
+        </div>
+      </div>
+    </div>
+    <div style="height: 80px;"></div>
+  </div>
+
+  <!-- 9 -->
+  <div class="demo-section">
+    <div class="demo-header">9. The Hazard Tape Border (Industrial Comic)</div>
+    <div class="nav9">
+      <div class="nav-container">
+        <a href="#" class="logo">Wiki<span>Pop</span></a>
+        <button class="btn" style="margin-bottom: 4px;">SHARE</button>
+      </div>
+    </div>
+    <div style="height: 80px;"></div>
+  </div>
+
+  <!-- 10 -->
+  <div class="demo-section">
+    <div class="demo-header">10. The Comic Panel Grid Structure (Double Lines)</div>
+    <div class="nav10-wrapper">
+      <div class="nav10">
+        <a href="#" class="logo">Wiki<span>Pop</span></a>
+        <button class="btn">SHARE</button>
+      </div>
+    </div>
+    <div style="height: 80px;"></div>
+  </div>
+
+  <!-- 11 -->
+  <div class="demo-section">
+    <div class="demo-header">11. Staggered Boxes on a Solid Base Strip</div>
+    <div class="nav11-wrapper">
+      <div class="nav11">
+        <div class="logo-box"><a href="#" class="logo">Wiki<span>Pop</span></a></div>
+        <div class="btn-box"><button class="btn">SHARE</button></div>
+      </div>
+    </div>
+    <div style="height: 80px;"></div>
+  </div>
+
+  <!-- 12 -->
+  <div class="demo-section">
+    <div class="demo-header">12. Staggered Boxes with Frosted Glass Backdrop</div>
+    <div class="nav12-wrapper">
+      <div class="nav12">
+        <div class="logo-box"><a href="#" class="logo">Wiki<span>Pop</span></a></div>
+        <div class="btn-box"><button class="btn">SHARE</button></div>
+      </div>
+    </div>
+    <div style="height: 80px;"></div>
+  </div>
+
+  <!-- 13 -->
+  <div class="demo-section">
+    <div class="demo-header">13. Staggered Boxes on a Heavy Black Strip</div>
+    <div class="nav13-wrapper">
+      <div class="nav13">
+        <div class="logo-box"><a href="#" class="logo">Wiki<span>Pop</span></a></div>
+        <div class="btn-box"><button class="btn">SHARE</button></div>
+      </div>
+    </div>
+    <div style="height: 80px;"></div>
+  </div>
+
+  <!-- 14 -->
+  <div class="demo-section">
+    <div class="demo-header">14. Staggered Boxes hanging from a "Clothesline"</div>
+    <div class="nav14-wrapper">
+      <div class="nav14">
+        <div class="logo-box"><a href="#" class="logo">Wiki<span>Pop</span></a></div>
+        <div class="btn-box"><button class="btn">SHARE</button></div>
+      </div>
+    </div>
+    <div style="height: 80px;"></div>
+  </div>
+
+  <!-- 15 -->
+  <div class="demo-section">
+    <div class="demo-header">15. Staggered Boxes over Halftone Background Strip</div>
+    <div class="nav15-wrapper">
+      <div class="nav15">
+        <div class="logo-box"><a href="#" class="logo">Wiki<span>Pop</span></a></div>
+        <div class="btn-box"><button class="btn">SHARE</button></div>
+      </div>
+    </div>
+    <div style="height: 80px;"></div>
+  </div>
+
+</body>
+</html>

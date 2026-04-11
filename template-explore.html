@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore — WikiPop</title>
+  <meta name="description" content="Explore what the world is reading on Wikipedia — top articles, rising trends, deep cuts, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
+
+    :root {
+      --bg: #0f1117; --bg-raised: #181a23; --text: #c8cdd8;
+      --text-muted: #7a7f8e; --text-bright: #eef0f5;
+      --accent: #f06449; --accent-glow: rgba(240, 100, 73, 0.15);
+      --border: #2a2d3a; --radius: 8px;
+      --green: #4ade80; --red: #f87171;
+    }
+    :root.light {
+      --bg: #faf9f6; --bg-raised: #ffffff; --text: #4a4a4a;
+      --text-muted: #8a8a8a; --text-bright: #1a1a1a;
+      --accent: #d94f3b; --accent-glow: rgba(217, 79, 59, 0.1);
+      --border: #e0ddd6; --green: #16a34a; --red: #dc2626;
+    }
+
+    body {
+      font-family: "Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg); color: var(--text);
+      line-height: 1.7; min-height: 100vh;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      max-width: 860px; margin: 0 auto; padding: 1.25rem 1.5rem;
+      background: var(--bg); backdrop-filter: blur(12px);
+    }
+    .logo { font-family: "Fraunces", serif; font-size: 1.35rem; font-weight: 700; color: var(--text-bright); text-decoration: none; letter-spacing: -0.02em; }
+    .logo span { color: var(--accent); }
+    .theme-toggle {
+      background: none; border: 1px solid var(--border); border-radius: 50%;
+      width: 36px; height: 36px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-muted); font-size: 1rem;
+    }
+    .theme-toggle:hover { color: var(--text-bright); border-color: var(--text-muted); }
+
+    main { max-width: 860px; margin: 0 auto; padding: 1rem 1.5rem 4rem; }
+
+    .page-header { margin-bottom: 2.5rem; }
+    .page-header h1 {
+      font-family: "Fraunces", serif; font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-weight: 700; color: var(--text-bright); letter-spacing: -0.02em;
+    }
+    .page-header p { color: var(--text-muted); font-size: 0.95rem; margin-top: 0.25rem; }
+
+    /* --- SECTIONS --- */
+    .explore-section { margin-bottom: 3rem; }
+    .explore-section h2 {
+      font-family: "Fraunces", serif; font-size: 1.3rem;
+      color: var(--text-bright); margin-bottom: 0.25rem;
+    }
+    .explore-section .section-desc {
+      color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem; line-height: 1.5;
+    }
+
+    /* --- TABLE --- */
+    .explore-table { width: 100%; border-collapse: collapse; }
+    .explore-table th {
+      text-align: left; font-size: 0.7rem; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--text-muted);
+      padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border);
+    }
+    .explore-table th:last-child { text-align: right; }
+    .explore-table td {
+      padding: 0.55rem 0.5rem; border-bottom: 1px solid var(--border); font-size: 0.9rem;
+    }
+
+    .explore-rank {
+      color: var(--text-muted); font-size: 0.8rem; font-variant-numeric: tabular-nums;
+      width: 50px; white-space: nowrap;
+    }
+    .explore-title a { color: var(--text-bright); text-decoration: none; }
+    .explore-title a:hover { color: var(--accent); }
+    .explore-desc {
+      color: var(--text-muted); font-size: 0.8rem;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 250px;
+    }
+    .explore-views {
+      text-align: right; color: var(--text-muted); font-size: 0.85rem;
+      font-variant-numeric: tabular-nums; white-space: nowrap;
+    }
+    .explore-change {
+      text-align: right; font-size: 0.8rem; font-weight: 600;
+      font-variant-numeric: tabular-nums; white-space: nowrap; width: 80px;
+    }
+    .explore-change.up { color: var(--green); }
+    .explore-change.down { color: var(--red); }
+
+    /* --- COUNTRY GRID --- */
+    .country-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.25rem;
+    }
+    .country-block {
+      border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--bg-raised); padding: 1rem 1.1rem; overflow: hidden;
+    }
+    .country-header {
+      display: flex; align-items: center; gap: 0.5rem;
+      margin-bottom: 0.6rem; font-weight: 600; font-size: 0.95rem;
+      color: var(--text-bright);
+    }
+    .country-flag { font-size: 1.25rem; }
+    .country-lang { color: var(--text-muted); font-size: 0.75rem; font-weight: 400; }
+    .country-list { list-style: none; }
+    .country-list li {
+      display: flex; align-items: baseline; gap: 0.4rem;
+      padding: 0.25rem 0; border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+    }
+    .country-list li:last-child { border-bottom: none; }
+    .country-list-rank {
+      color: var(--text-muted); font-size: 0.75rem; min-width: 1.5rem;
+      text-align: right; flex-shrink: 0;
+    }
+    .country-list-title { flex: 1; min-width: 0; }
+    .country-list-title a {
+      color: var(--text-bright); text-decoration: none;
+    }
+    .country-list-title a:hover { color: var(--accent); }
+    .country-list-en {
+      font-size: 0.7rem; color: var(--text-muted); margin-left: 0.15rem;
+    }
+    .country-list-en a { color: var(--text-muted); text-decoration: none; }
+    .country-list-en a:hover { color: var(--accent); }
+    .country-list-views {
+      color: var(--text-muted); font-size: 0.8rem; font-variant-numeric: tabular-nums;
+      white-space: nowrap; flex-shrink: 0;
+    }
+
+    /* --- CARDS --- */
+    .explore-cards {
+      display: grid; grid-template-columns: 1fr; gap: 0.5rem;
+    }
+    .explore-card {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.75rem 1rem; border-radius: var(--radius);
+      border: 1px solid var(--border); background: var(--bg-raised);
+    }
+    .explore-card:hover { border-color: var(--accent); }
+    .explore-card-rank {
+      color: var(--text-muted); font-size: 0.75rem; font-variant-numeric: tabular-nums;
+      min-width: 36px; text-align: right; flex-shrink: 0;
+    }
+    .explore-card-body { flex: 1; min-width: 0; }
+    .explore-card-title {
+      color: var(--text-bright); text-decoration: none; font-weight: 600;
+      font-size: 0.9rem; display: block;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .explore-card-title:hover { color: var(--accent); }
+    .explore-card-desc {
+      color: var(--text-muted); font-size: 0.75rem; display: block;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .explore-card-views {
+      color: var(--text-muted); font-size: 0.8rem; font-variant-numeric: tabular-nums;
+      white-space: nowrap; flex-shrink: 0;
+    }
+
+    /* --- NAV PILLS --- */
+    .section-nav {
+      display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem;
+    }
+    .section-nav a {
+      display: inline-block; font-size: 0.8rem; font-weight: 600;
+      color: var(--text-muted); border: 1px solid var(--border);
+      padding: 0.3rem 0.75rem; border-radius: 100px;
+      text-decoration: none;
+    }
+    .section-nav a:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* --- DIVIDER --- */
+    .section-divider { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+
+    footer {
+      max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 3rem;
+      border-top: 1px solid var(--border); display: flex;
+      justify-content: space-between; align-items: center;
+      color: var(--text-muted); font-size: 0.8rem;
+    }
+    footer a { color: var(--text-muted); text-decoration: none; }
+    footer a:hover { color: var(--text-bright); }
+    .footer-links { display: flex; gap: 1.25rem; }
+
+    @media (max-width: 600px) {
+      nav { padding: 1rem; }
+      main { padding: 1rem 1rem 3rem; }
+      .explore-desc { display: none; }
+      .explore-card-desc { display: none; }
+      .country-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 0.75rem; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">Wiki<span>Pop</span></a>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+      <span class="theme-icon">&#9790;</span>
+    </button>
+  </nav>
+
+  <main>
+    <div class="page-header">
+      <h1>Explore</h1>
+      <p>What the world was reading on Wikipedia &mdash; {{DATE}}</p>
+    </div>
+
+    <div class="section-nav">
+      <a href="#top25">Top 25</a>
+      <a href="#movers">Biggest Movers</a>
+      <a href="#newcomers">New Arrivals</a>
+      <a href="#world">Around the World</a>
+      <a href="#deep-cuts">Deep Cuts</a>
+    </div>
+
+    <div class="explore-section" id="top25">
+      <h2>Top 25</h2>
+      <p class="section-desc">The most-viewed Wikipedia articles yesterday, excluding meta pages.</p>
+      <table class="explore-table">
+        <thead><tr><th>Rank</th><th>Article</th><th>Category</th><th>Views</th></tr></thead>
+        <tbody>{{TOP25_ROWS}}</tbody>
+      </table>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="explore-section" id="movers">
+      <h2>Biggest Movers</h2>
+      <p class="section-desc">Articles that spiked the most compared to the day before. Something happened.</p>
+      <table class="explore-table">
+        <thead><tr><th>Rank</th><th>Article</th><th>Category</th><th>Views</th><th>Change</th></tr></thead>
+        <tbody>{{MOVER_ROWS}}</tbody>
+      </table>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="explore-section" id="newcomers">
+      <h2>New Arrivals</h2>
+      <p class="section-desc">
+        Articles that appeared in the top 500 yesterday but weren't anywhere in the top 1,000 the day before.
+        These are the articles the world suddenly started caring about.
+      </p>
+      <div class="explore-cards">
+        {{NEWCOMER_CARDS}}
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="explore-section" id="world">
+      <h2>Around the World</h2>
+      <div class="country-grid">
+        {{COUNTRY_BLOCKS}}
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="explore-section" id="deep-cuts">
+      <h2>Deep Cuts</h2>
+      <p class="section-desc">
+        Articles ranked 700&ndash;1,000. Popular enough to make the top thousand, obscure enough that you've
+        probably never thought to look them up. The Wikipedia long tail.
+      </p>
+      <div class="explore-cards">
+        {{DEEP_CUT_CARDS}}
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span>&copy; {{CURRENT_YEAR}} WikiPop</span>
+    <div class="footer-links">
+      <a href="/">Today</a>
+      <a href="/archive.html">Archive</a>
+      <a href="/feed.xml">RSS</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const isLight = root.classList.toggle("light");
+      localStorage.setItem("theme", isLight ? "light" : "dark");
+      document.querySelector(".theme-icon").innerHTML = isLight ? "&#9728;" : "&#9790;";
+    }
+    (function () {
+      const saved = localStorage.getItem("theme");
+      if (saved === "light") {
+        document.documentElement.classList.add("light");
+        document.querySelector(".theme-icon").innerHTML = "&#9728;";
+      }
+    })();
+  </script>
+</body>
+</html>
