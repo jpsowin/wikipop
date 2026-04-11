@@ -239,7 +239,7 @@ function buildFeaturedPage() {
   </style>
 </head>
 <body>
-  <nav><a href="/" class="logo">Wiki<span>Pop</span></a></nav>
+  <nav><a href="index.html" class="logo">Wiki<span>Pop</span></a></nav>
   <main>
     <h1>Upcoming Featured Entries</h1>
     <p class="desc">Next 90 days. Current index: ${currentIdx} of ${entries.length}.</p>
@@ -307,7 +307,7 @@ async function buildHtml(articles) {
   // Build recent archive rows
   const archiveRows = recentArchive.map(buildArchiveRow).join("");
   const moreLink = archive.length > RECENT_LIMIT
-    ? `<a href="/archive.html" class="archive-more">View full archive (${archive.length} articles) &rarr;</a>`
+    ? `<a href="archive.html" class="archive-more">View full archive (${archive.length} articles) &rarr;</a>`
     : "";
 
   // Build featured entry section
