@@ -245,14 +245,6 @@ function sendEmail(subject, body) {
 
 async function main() {
   const todayStr = new Date().toISOString().slice(0, 10);
-  if (fs.existsSync(LAST_EMAIL_FILE)) {
-    const lastSent = fs.readFileSync(LAST_EMAIL_FILE, "utf-8").trim();
-    if (lastSent === todayStr) {
-      console.log(`An email has already been sent today (${todayStr}). Skipping.`);
-      return;
-    }
-  }
-
   const articles = JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
 
   // Get the latest article
@@ -260,6 +252,23 @@ async function main() {
   if (!latest) {
     console.error("No articles found");
     process.exit(1);
+  }
+
+  if (fs.existsSync(LAST_EMAIL_FILE)) {
+    const lastSentRaw = fs.readFileSync(LAST_EMAIL_FILE, "utf-8").trim();
+    const [lastSentDate, lastSentArticleDate] = lastSentRaw.split("|");
+    
+    if (lastSentDate === todayStr) {
+      console.log(`An email has already been sent today (${todayStr}). Skipping.`);
+      return;
+    }
+    
+    // Check if we're trying to send an article we've already sent
+    // Also handling the case where lastSentRaw was just the todayStr from previous format
+    if (lastSentArticleDate === latest.date || lastSentRaw === latest.date) {
+      console.log(`An email for article date ${latest.date} has already been sent. Skipping.`);
+      return;
+    }
   }
 
   // Get the last 7 days (excluding today's article)
@@ -273,7 +282,7 @@ async function main() {
   const body = buildEmailHtml(latest, recentArticles, featured);
 
   await sendEmail(subject, body);
-  fs.writeFileSync(LAST_EMAIL_FILE, todayStr + "\n");
+  fs.writeFileSync(LAST_EMAIL_FILE, todayStr + "|" + latest.date + "\n");
 }
 
 main().catch((err) => {
