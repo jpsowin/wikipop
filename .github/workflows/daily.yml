@@ -24,7 +24,7 @@ jobs:
 
       - name: Fetch and build
         run: |
-          node scripts/build.js
+          node scripts/build.js --backfill 3
           node scripts/build-explore.js
 
       - name: Send daily email
