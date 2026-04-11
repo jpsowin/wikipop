@@ -278,7 +278,9 @@ async function main() {
 
   const featured = await getFeaturedEntry();
 
-  const subject = `WikiPop: ${displayTitle(latest.title)}`;
+  const subject = featured 
+    ? `WikiPop: ${displayTitle(latest.title)} + ${displayTitle(featured.title)}`
+    : `WikiPop: ${displayTitle(latest.title)}`;
   const body = buildEmailHtml(latest, recentArticles, featured);
 
   await sendEmail(subject, body);
