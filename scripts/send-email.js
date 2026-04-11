@@ -12,6 +12,7 @@ if (!API_KEY) {
 
 const FEATURED_FILE = path.join(__dirname, "..", "data", "featured-entries.json");
 const FEATURED_INDEX_FILE = path.join(__dirname, "..", "data", "featured-index.json");
+const LAST_EMAIL_FILE = path.join(__dirname, "..", "data", "last-email.txt");
 
 function httpGet(url) {
   return new Promise((resolve, reject) => {
@@ -243,6 +244,15 @@ function sendEmail(subject, body) {
 }
 
 async function main() {
+  const todayStr = new Date().toISOString().slice(0, 10);
+  if (fs.existsSync(LAST_EMAIL_FILE)) {
+    const lastSent = fs.readFileSync(LAST_EMAIL_FILE, "utf-8").trim();
+    if (lastSent === todayStr) {
+      console.log(`An email has already been sent today (${todayStr}). Skipping.`);
+      return;
+    }
+  }
+
   const articles = JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
 
   // Get the latest article
@@ -263,6 +273,7 @@ async function main() {
   const body = buildEmailHtml(latest, recentArticles, featured);
 
   await sendEmail(subject, body);
+  fs.writeFileSync(LAST_EMAIL_FILE, todayStr + "\n");
 }
 
 main().catch((err) => {
