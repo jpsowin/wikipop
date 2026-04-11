@@ -225,6 +225,9 @@ function sendEmail(subject, body) {
             console.log(`  Subject: ${parsed.subject}`);
           } catch {}
           resolve(data);
+        } else if (res.statusCode === 400 && data.includes("email_duplicate")) {
+          console.log("Buttondown: Email is a duplicate of one already sent today. Skipping gracefully.");
+          resolve(data);
         } else {
           console.error(`Failed to send email. Status: ${res.statusCode}`);
           console.error(data);
