@@ -489,6 +489,9 @@ async function main() {
 
   if (changed) {
     saveArticles(articles);
+    if (advanceFeaturedIndex()) {
+      console.log("Advanced featured entry index.");
+    }
   }
 
   console.log("Building HTML...");
@@ -496,11 +499,6 @@ async function main() {
   fs.writeFileSync(ARCHIVE_FILE, buildArchivePage(articles));
   fs.writeFileSync(RSS_FILE, buildRss(articles));
   fs.writeFileSync(FEATURED_PAGE_FILE, buildFeaturedPage());
-  if (changed) {
-    if (advanceFeaturedIndex()) {
-      console.log("Advanced featured entry index.");
-    }
-  }
   console.log(`Done! ${articles.length} total articles.`);
 }
 
