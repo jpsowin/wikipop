@@ -5,8 +5,16 @@
     <description>The most popular Wikipedia article, every day.</description>
     <link>https://wikipop.example.com</link>
     <atom:link href="https://wikipop.example.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 11 Apr 2026 22:17:44 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2026 06:31:54 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Eric Swalwell</title>
+      <link>https://en.wikipedia.org/wiki/Eric_Swalwell</link>
+      <description>Eric Michael Swalwell is an American lawyer and politician serving as the U.S. representative from California&apos;s 14th congressional district since 2023, having previously represented the 15th district from 2013 to 2023. A member of the Democratic Party, his district covers most of eastern Alameda County.</description>
+      <pubDate>Sat, 11 Apr 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Eric_Swalwell#2026-04-11</guid>
+      <category>American lawyer and politician (born 1980)</category>
+    </item>
     <item>
       <title>Afrika Bambaataa</title>
       <link>https://en.wikipedia.org/wiki/Afrika_Bambaataa</link>
@@ -238,17 +246,6 @@
       <pubDate>Fri, 13 Mar 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Pathfinder_Badge_(United_States)#2026-03-13</guid>
       <category>U.S. Army award</category>
-    </item>
-    <item>
-      <title>Deaths in 2026</title>
-      <link>https://en.wikipedia.org/wiki/Deaths_in_2026</link>
-      <description>
-
-
-The following notable deaths occurred in 2026. Names are reported under the date of death, in alphabetical order. A typical entry reports information in the following sequence:Name, age, country of citizenship at birth, subsequent nationality, what subject was noted for, cause of death, and a reference.</description>
-      <pubDate>Thu, 12 Mar 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Deaths_in_2026#2026-03-12</guid>
-      
     </item>
   </channel>
 </rss>
