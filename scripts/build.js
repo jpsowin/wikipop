@@ -389,8 +389,8 @@ function buildRss(articles) {
   <channel>
     <title>WikiPop</title>
     <description>The most popular Wikipedia article, every day.</description>
-    <link>https://wikipop.example.com</link>
-    <atom:link href="https://wikipop.example.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://jpsowin.github.io/wikipop/</link>
+    <atom:link href="https://jpsowin.github.io/wikipop/feed.xml" rel="self" type="application/rss+xml"/>
     <lastBuildDate>${now}</lastBuildDate>
     <language>en-us</language>${items}
   </channel>

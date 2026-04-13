@@ -3,9 +3,9 @@
   <channel>
     <title>WikiPop</title>
     <description>The most popular Wikipedia article, every day.</description>
-    <link>https://wikipop.example.com</link>
-    <atom:link href="https://wikipop.example.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 13 Apr 2026 07:14:26 GMT</lastBuildDate>
+    <link>https://jpsowin.github.io/wikipop/</link>
+    <atom:link href="https://jpsowin.github.io/wikipop/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Mon, 13 Apr 2026 07:15:16 GMT</lastBuildDate>
     <language>en-us</language>
     <item>
       <title>2026 Hungarian parliamentary election</title>
