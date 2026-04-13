@@ -271,7 +271,7 @@ async function buildHtml(articles) {
     todaySection = `
       <div class="hero-zone">
         <div class="comic-panel-woman">
-          <img src="assets/eyes.png?v=2" alt="Comic illustration of a woman with glasses">
+          <img src="assets/eyes.png?v=2" alt="Comic illustration of a woman with glasses" width="768" height="1376">
         </div>
         
         <div class="article-panel">
