@@ -5,7 +5,7 @@
     <description>The most popular Wikipedia article, every day.</description>
     <link>https://wikipop.example.com</link>
     <atom:link href="https://wikipop.example.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 13 Apr 2026 02:50:29 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 06:43:29 GMT</lastBuildDate>
     <language>en-us</language>
     <item>
       <title>2026 Hungarian parliamentary election</title>
