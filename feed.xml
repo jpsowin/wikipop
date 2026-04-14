@@ -5,8 +5,16 @@
     <description>The most popular Wikipedia article, every day.</description>
     <link>https://jpsowin.github.io/wikipop/</link>
     <atom:link href="https://jpsowin.github.io/wikipop/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 13 Apr 2026 07:15:16 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 06:36:33 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Péter Magyar</title>
+      <link>https://en.wikipedia.org/wiki/P%C3%A9ter_Magyar</link>
+      <description>Péter Magyar is a Hungarian politician and lawyer who is the president of the Tisza Party. He led the party to victory in the 2026 Hungarian parliamentary election and is expected to become the next prime minister of Hungary. Magyar has served as a member of the European Parliament (MEP) since 2024.</description>
+      <pubDate>Mon, 13 Apr 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/P%C3%A9ter_Magyar#2026-04-13</guid>
+      <category>Prime Minister-designate of Hungary</category>
+    </item>
     <item>
       <title>2026 Hungarian parliamentary election</title>
       <link>https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election</link>
@@ -238,14 +246,6 @@
       <pubDate>Sun, 15 Mar 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Benjamin_Netanyahu#2026-03-15</guid>
       <category>Prime Minister of Israel (1996–1999; 2009–2021; 2022–present)</category>
-    </item>
-    <item>
-      <title>Kharg Island</title>
-      <link>https://en.wikipedia.org/wiki/Kharg_Island</link>
-      <description>Kharg Island, also spelled Khark Island and often referred to as the &quot;Forbidden Island&quot;, is a continental island of Iran in the Persian Gulf. The island is 25 kilometres (16 mi) off the coast of Iran and 660 kilometres (410 mi) northwest of the Strait of Hormuz. Administered by the adjacent coastal Bushehr Province, Kharg Island provides a sea port for the export of up to 90 % of Iran&apos;s oil products, as well as supplying storage for up to 30 million barrels of oil.</description>
-      <pubDate>Sat, 14 Mar 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Kharg_Island#2026-03-14</guid>
-      <category>Iranian island in Persian Gulf</category>
     </item>
   </channel>
 </rss>
