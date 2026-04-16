@@ -3,234 +3,598 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Changelog — WikiPop</title>
-  <meta name="description" content="Major updates and improvements to WikiPop.">
+  <title>WikiPop! — The Most Popular Wikipedia Article</title>
+  <meta name="description" content="Every day, we feature the most popular Wikipedia article. Discover what the world is reading.">
   <link rel="alternate" type="application/rss+xml" title="WikiPop RSS" href="feed.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    *,
-    *::before,
-    *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg: #0f1117;
-      --bg-raised: #181a23;
-      --text: #c8cdd8;
-      --text-muted: #7a7f8e;
-      --text-bright: #eef0f5;
-      --accent: #f06449;
-      --accent-glow: rgba(240, 100, 73, 0.15);
-      --border: #2a2d3a;
-      --radius: 8px;
+      --red: #d00d00;
+      --yellow: #ffdf00;
+      --blue: #2a3d8f;
+      --cyan: #00aeef;
+      --black: #111;
+      --white: #fdfcf3;
+      --cream: #f7f5eb;
+      --bw: 3px;
     }
 
-    :root.light {
-      --bg: #faf9f6;
-      --bg-raised: #ffffff;
-      --text: #4a4a4a;
-      --text-muted: #8a8a8a;
-      --text-bright: #1a1a1a;
-      --accent: #d94f3b;
-      --accent-glow: rgba(217, 79, 59, 0.1);
-      --border: #e0ddd6;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: "Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      transition: background-color 0.3s, color 0.3s;
+      font-family: "Instrument Sans", -apple-system, sans-serif;
+      /* Yellow bg with large opaque red halftone dots */
+      background-color: var(--yellow);
+      background-image: 
+        linear-gradient(to right,
+          #ffdf00 0%,
+          #ffdf00 calc(50% - 783px),
+          rgba(255, 223, 0, 0.959) calc(50% - 739px),
+          rgba(255, 223, 0, 0.915) calc(50% - 695px),
+          rgba(255, 223, 0, 0.867) calc(50% - 651px),
+          rgba(255, 223, 0, 0.815) calc(50% - 607px),
+          rgba(255, 223, 0, 0.758) calc(50% - 563px),
+          rgba(255, 223, 0, 0.693) calc(50% - 519px),
+          rgba(255, 223, 0, 0.618) calc(50% - 475px),
+          rgba(255, 223, 0, 0.525) calc(50% - 431px),
+          rgba(255, 223, 0, 0.398) calc(50% - 387px),
+          rgba(255, 223, 0, 0) calc(50% - 343px),
+          rgba(255, 223, 0, 0) calc(50% + 343px),
+          rgba(255, 223, 0, 0.398) calc(50% + 387px),
+          rgba(255, 223, 0, 0.525) calc(50% + 431px),
+          rgba(255, 223, 0, 0.618) calc(50% + 475px),
+          rgba(255, 223, 0, 0.693) calc(50% + 519px),
+          rgba(255, 223, 0, 0.758) calc(50% + 563px),
+          rgba(255, 223, 0, 0.815) calc(50% + 607px),
+          rgba(255, 223, 0, 0.867) calc(50% + 651px),
+          rgba(255, 223, 0, 0.915) calc(50% + 695px),
+          rgba(255, 223, 0, 0.959) calc(50% + 739px),
+          #ffdf00 calc(50% + 783px),
+          #ffdf00 100%
+        ),
+        radial-gradient(circle, var(--red) 5px, transparent 5.5px),
+        radial-gradient(circle, var(--red) 5px, transparent 5.5px);
+      background-size: 100% 100%, 19px 28.5px, 19px 28.5px;
+      background-position: center, 0 0, 9.5px 14.25px;
+      color: var(--black);
+      line-height: 1.6;
       min-height: 100vh;
     }
 
+    /* ============ NAV ============ */
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      position: sticky; top: 1.5rem; z-index: 100;
+      padding: 0.8rem 1.5rem;
+      background: var(--white);
+      border: var(--bw) solid var(--black);
+      border-radius: 50px;
+      margin: 1.5rem auto 1.5rem;
+      width: calc(100% - 3rem);
       max-width: 760px;
-      margin: 0 auto;
-      padding: 1.25rem 1.5rem;
-      background: var(--bg);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      display: flex; justify-content: space-between; align-items: center;
+      box-shadow: 6px 6px 0 var(--black);
+      transition: transform 0.3s ease-in-out;
     }
-
+    nav.nav-hidden {
+      transform: translateY(calc(-100% - 4rem));
+    }
     .logo {
-      font-family: "Fraunces", serif;
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--text-bright);
-      text-decoration: none;
-      letter-spacing: -0.02em;
+      font-family: "Bangers", cursive; font-size: 2.2rem;
+      color: var(--black); text-decoration: none; line-height: 1;
+    }
+    .logo span { color: var(--red); }
+    .share-btn {
+      font-family: "Bangers", cursive; font-size: 1.1rem;
+      border: var(--bw) solid var(--black);
+      background: var(--white); color: var(--black);
+      padding: 0.3rem 1rem; cursor: pointer;
+      border-radius: 50px;
+    }
+    .share-btn:hover { background: var(--black); color: var(--white); }
+
+    /* ============ MAIN ============ */
+    main { 
+      max-width: 760px; 
+      margin: 0 auto; 
+      padding: 0 1.5rem 2rem; 
+      position: relative; 
+      z-index: 2; 
     }
 
-    .logo span { color: var(--accent); }
-
-    .nav-controls {
+    /* ============ SPEECH BUBBLE ============ */
+    .speech-bubble-wrap {
+      margin: 2rem auto 0;
+      max-width: 580px;
+      position: relative; z-index: 2; /* Put in front so tail overlaps */
+    }
+    .speech-bubble {
+      background: var(--white);
+      border: 5px solid var(--black);
+      padding: 1.2rem 1.5rem 1.5rem;
+      position: relative;
+      transform: rotate(-6deg);
+      box-shadow: 0 0 0 1px var(--black), 12px 12px 0 var(--black);
+      outline: 1px solid transparent;
+    }
+    /* Tail - outer (black) */
+    .speech-bubble::after {
+      content: ""; position: absolute;
+      bottom: -60px; right: 28%;
+      width: 0; height: 0;
+      border-top: 60px solid var(--black);
+      border-right: 0 solid transparent;
+      border-left: 45px solid transparent;
+      transform: skewX(-15deg);
+      transform-origin: top right;
+    }
+    /* Tail - inner (white) */
+    .speech-bubble::before {
+      content: ""; position: absolute;
+      bottom: -43px; right: calc(28% + 6px);
+      width: 0; height: 0;
+      border-top: 46px solid var(--white);
+      border-right: 0 solid transparent;
+      border-left: 35px solid transparent;
+      transform: skewX(-15deg);
+      transform-origin: top right;
+      z-index: 1;
+    }
+    .speech-bubble h1 {
+      font-family: "Bangers", cursive;
+      color: var(--black);
+      margin: 0;
+      line-height: 0.92;
       display: flex;
-      align-items: center;
-      gap: 0.75rem;
+      flex-direction: column;
+      letter-spacing: 0.01em;
+    }
+    .speech-bubble h1 em {
+      color: var(--red);
+      font-style: normal;
+    }
+    .speech-bubble h1 .line1 {
+      font-size: clamp(1.5rem, 6vw, 3rem);
+      align-self: center;
+    }
+    .speech-bubble h1 .line2 {
+      font-size: clamp(2.4rem, 9.5vw, 4.8rem);
+      align-self: center;
+      text-align: center;
+      letter-spacing: -0.01em;
+    }
+    .speech-bubble h1 .line3 {
+      font-size: clamp(2rem, 7.5vw, 3.8rem);
+      align-self: center;
+      margin-left: 5%;
     }
 
-    .theme-toggle {
-      background: none;
-      border: 1px solid var(--border);
+    /* ============ HERO ZONE ============ */
+    .hero-zone {
+      position: relative;
+      margin-top: -1.5rem; /* Pull up to overlap with speech bubble tail */
+      z-index: 1; /* Put behind the big speech bubble */
+      padding-top: 15px; /* Create space for the skew */
+    }
+    
+    .comic-panel-woman {
+      border: 5px solid var(--black);
+      border-bottom: 0; /* Connects with article panel below */
+      background-color: var(--white);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      height: 280px; /* Increased to show 50px more of the image */
+      width: 100%;
+      transform: skewY(6deg); /* Angle to match the text box above it */
+      transform-origin: center;
+      margin-top: -5px;
+      margin-bottom: -60px; /* Hide the angled bottom edge underneath the article panel completely */
+    }
+    .comic-panel-woman img {
+      width: 100%;
+      height: calc(100% + 80px); /* Taller to cover skewed corners */
+      margin-top: -40px;
+      object-fit: cover;
+      object-position: center 41%; /* Focus on eyes */
+      display: block;
+      transform: skewY(-6deg); /* Counter-skew the image without scaling width */
+    }
+
+    /* ============ ARTICLE PANEL ============ */
+    .article-panel {
+      background: var(--cream);
+      border: 5px solid var(--black);
+      position: relative;
+      z-index: 2;
+    }
+    .article-content {
+      padding: 1.5rem 2rem 1.5rem;
+    }
+
+    /* ============ HERO THUMBNAIL ============ */
+    .hero-thumb {
+      float: right;
+      width: 260px; 
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      border: 5px solid var(--black); /* Made border slightly thicker to match mock */
+      position: relative; z-index: 4;
+      background: #3c1e64; /* placeholder bg */
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 0 1px var(--black), 4px 4px 0 var(--black); /* Add outline to match mock */
+    }
+    .hero-thumb img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+
+    /* ============ COMIC CAPTION BUBBLE ============ */
+    .caption-wrapper {
+      display: flow-root;
+      margin-top: -3.5rem; /* Pull up to overlap woman panel border */
+      margin-bottom: 1.5rem;
+      margin-left: -1rem; /* Hang off the left edge slightly */
+      padding-right: 0px; /* Removed space for the tail */
+      max-width: calc(100% - 290px);
+    }
+    .comic-caption {
+      background: var(--cream);
+      border: 5px solid var(--black);
       border-radius: 50%;
-      width: 36px;
-      height: 36px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
+      padding: 1.25rem 2.5rem;
+      position: relative;
+      transform: rotate(-2deg);
+      box-shadow: 5px 5px 0 var(--black);
+      z-index: 5;
+      text-align: center;
+      display: inline-flex;
+      flex-direction: column;
       justify-content: center;
-      color: var(--text-muted);
-      font-size: 1rem;
-      transition: color 0.2s, border-color 0.2s;
+      outline: 1px solid transparent; /* Prevents jagged edges on rotation */
+    }
+    .caption-title {
+      font-family: "Bangers", cursive;
+      font-size: clamp(2.2rem, 5vw, 3rem);
+      color: var(--black); line-height: 1;
+    }
+    .caption-desc {
+      font-family: "Bangers", cursive;
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      color: var(--black); text-transform: uppercase;
+      letter-spacing: 0.02em; margin-top: 0.2rem;
+      line-height: 1.1;
     }
 
-    .theme-toggle:hover {
-      color: var(--text-bright);
-      border-color: var(--text-muted);
+    /* ============ ARTICLE EXTRACT ============ */
+    .article-extract {
+      font-size: 1.05rem; line-height: 1.6; color: var(--black);
+    }
+    .article-extract p { margin-bottom: 0.5rem; }
+    .drop-cap {
+      font-family: "Bangers", cursive;
+      float: left; font-size: 3.8rem; line-height: 0.8;
+      color: var(--black); margin-right: 0.2rem;
+      padding-top: 0.05em;
     }
 
-    main {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 1rem 1.5rem 4rem;
+    /* ============ ARTICLE FOOTER STRIP ============ */
+    .article-footer-strip {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 0.6rem 1.5rem;
+      border-top: var(--bw) solid var(--black);
+    }
+    .wiki-link {
+      flex: 1; background: var(--red); color: var(--white);
+      text-decoration: none; font-weight: 600; font-size: 0.9rem;
+      border: var(--bw) solid var(--black); padding: 0.4rem 0.9rem;
+    }
+    .wiki-link:hover { background: transparent; color: var(--black); }
+    .strip-views { text-align: right; flex-shrink: 0; }
+    .strip-views-number {
+      font-family: "Bangers", cursive; font-size: 1.4rem;
+      color: var(--black); display: block; line-height: 1.1;
+    }
+    .strip-views-label {
+      font-size: 0.6rem; color: #666; text-transform: uppercase;
+      letter-spacing: 0.06em; font-weight: 700; display: block;
     }
 
-    h1 {
-      font-family: "Fraunces", serif;
-      font-size: clamp(1.5rem, 4vw, 2.25rem);
-      font-weight: 700;
-      color: var(--text-bright);
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.02em;
+    .no-article {
+      text-align: center; padding: 4rem 1rem; color: #666; font-size: 1.1rem;
     }
 
-    .subtitle {
-      color: var(--text-muted);
-      font-size: 0.95rem;
+    /* ============ NEWSLETTER (V3 SLANTED STYLE) ============ */
+    .slanted-newsletter {
+      background: var(--yellow);
+      border: 5px solid var(--black);
+      padding: 1.5rem;
+      box-shadow: -10px 10px 0 var(--black);
+      transform: rotate(2deg);
+      margin-top: 2rem;
       margin-bottom: 2rem;
     }
+    
+    .slanted-heading {
+      font-family: "Bangers", cursive;
+      font-size: clamp(1.4rem, 4vw, 1.8rem);
+      margin-bottom: 1rem;
+      line-height: 1.1;
+      color: var(--black);
+    }
+    
+    .slanted-form { display: flex; gap: 0.5rem; }
+    .slanted-input {
+      flex: 1; border: 3px solid var(--black); padding: 0.75rem 1rem;
+      font-size: 1.1rem; font-family: inherit; min-width: 0; outline: none;
+      background: var(--white);
+    }
+    .slanted-input:focus { border-color: var(--red); }
+    .slanted-btn {
+      background: var(--white); color: var(--black);
+      border: 3px solid var(--black); padding: 0.75rem 1.5rem;
+      font-size: 1.1rem; font-family: "Bangers", cursive; cursor: pointer;
+    }
+    .slanted-btn:hover { background: var(--black); color: var(--white); }
+    
+    /* ============ OBSCURE / FEATURED ENTRY (V2 STYLE) ============ */
+    .v2-featured-box {
+      background: var(--white);
+      border: 5px solid var(--black);
+      padding: 1.5rem 2rem;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+    .v2-featured-content { flex: 1; min-width: 0; }
+    .v2-featured-label { font-family: "Bangers", cursive; color: var(--red); font-size: 1.1rem; letter-spacing: 0.05em; margin-bottom: 0.2rem; display: block; }
+    .v2-featured-title { font-family: "Bangers", cursive; font-size: 2.2rem; margin-bottom: 0.5rem; line-height: 1; display: block; color: var(--black); text-decoration: none; }
+    .v2-featured-title:hover { color: var(--red); }
+    .v2-featured-text { font-size: 0.95rem; line-height: 1.6; color: var(--black); margin-top: 0.3rem; }
+    .v2-featured-readmore { color: var(--red); text-decoration: none; font-weight: 600; }
+    .v2-featured-readmore:hover { text-decoration: underline; }
+    .v2-featured-img { width: 120px; height: 120px; object-fit: cover; border: 2px solid var(--black); flex-shrink: 0; transform: rotate(2deg); margin-right: -10px; }
 
+    /* ============ ARCHIVE ============ */
+    .archive-section {
+      background: var(--white); border: var(--bw) solid var(--black);
+      padding: 1rem 1.5rem; margin-top: 1.25rem;
+    }
+    .archive-section h3 {
+      font-family: "Bangers", cursive; font-size: clamp(1.4rem, 4vw, 1.8rem);
+      color: var(--black); margin-bottom: 0.8rem; line-height: 1.1;
+    }
+    .archive-table { width: 100%; border-collapse: collapse; }
+    .archive-table th {
+      text-align: left; font-size: 0.65rem; text-transform: uppercase;
+      letter-spacing: 0.08em; color: #888; padding: 0.35rem 0;
+      border-bottom: 2px solid var(--black); font-weight: 700;
+    }
+    .archive-table th:last-child { text-align: right; }
+    .archive-table td {
+      padding: 0.5rem 0; border-bottom: 1px solid #ddd; font-size: 0.85rem;
+    }
+    .archive-date { color: #888; font-size: 0.78rem; white-space: nowrap; width: 60px; }
+    .archive-title a { color: var(--black); text-decoration: none; font-weight: 600; }
+    .archive-title a:hover { color: var(--red); }
+    .archive-category {
+      color: #888; font-size: 0.72rem; white-space: nowrap;
+      overflow: hidden; text-overflow: ellipsis; max-width: 200px;
+    }
+    .archive-views {
+      text-align: right; color: #888; font-size: 0.78rem;
+      font-variant-numeric: tabular-nums; white-space: nowrap;
+    }
+    .archive-more {
+      display: inline-block; margin-top: 0.6rem; color: var(--red);
+      text-decoration: none; font-weight: 700; font-size: 0.8rem;
+    }
+    .archive-more:hover { text-decoration: underline; }
+
+    /* ============ FAQ ============ */
+    .faq-section {
+      background: var(--white); border: var(--bw) solid var(--black);
+      padding: 1rem 1.5rem; margin-top: 1.25rem;
+    }
+    .faq-section h3 {
+      font-family: "Bangers", cursive; font-size: clamp(1.4rem, 4vw, 1.8rem);
+      color: var(--black); margin-bottom: 0.8rem; line-height: 1.1;
+    }
+    .faq-item { margin-bottom: 1.25rem; }
+    .faq-item:last-child { margin-bottom: 0; }
+    .faq-item dt { font-weight: 700; color: var(--black); font-size: 1.05rem; margin-bottom: 0.3rem; }
+    .faq-item dd { color: var(--black); font-size: 0.95rem; line-height: 1.7; }
+    .faq-item dd a { color: var(--red); }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background: var(--white);
+      border: var(--bw) solid var(--black);
+      border-radius: 50px;
+      margin: 2rem auto 3rem;
+      width: calc(100% - 3rem);
+      max-width: 760px;
+      padding: 0.8rem 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      color: var(--black); font-size: 0.85rem; font-weight: 700;
+      box-shadow: 6px 6px 0 var(--black);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    footer a { color: var(--black); text-decoration: none; }
+    footer a:hover { color: var(--red); }
+    .footer-links { display: flex; gap: 1.25rem; }
+
+    /* ============ ANIMATIONS ============ */
+    .fade-up {
+      opacity: 0; transform: translateY(14px);
+      animation: fadeUp 0.45s ease forwards;
+    }
+    .fade-up:nth-child(2) { animation-delay: 0.05s; }
+    .fade-up:nth-child(3) { animation-delay: 0.1s; }
+    .fade-up:nth-child(4) { animation-delay: 0.15s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    @keyframes wiggle1 {
+      0%, 100% { transform: rotate(2deg); }
+      25% { transform: rotate(-2deg); }
+      50% { transform: rotate(4deg); }
+      75% { transform: rotate(0deg); }
+    }
+    .wiggle-animate { animation: wiggle1 0.4s ease-in-out; }
+
+    /* ============ TOAST ============ */
+    .toast {
+      position: fixed; bottom: 2rem; left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--black); color: var(--white);
+      padding: 0.65rem 1.1rem; font-size: 0.85rem; font-weight: 600;
+      opacity: 0; transition: transform 0.3s ease, opacity 0.3s ease;
+      z-index: 1000; pointer-events: none;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 600px) {
+      nav { padding: 0.6rem 1.2rem; width: calc(100% - 2rem); margin-top: 1rem; }
+      main { padding: 0 1rem 2rem; }
+      .speech-bubble-wrap { width: calc(100% - 40px); margin-left: 20px; margin-top: calc(2rem + 15px); }
+      .speech-bubble { padding: 0.8rem 1.5rem 1rem; transform: rotate(-2deg); box-shadow: 8px 8px 0 var(--black); }
+      .speech-bubble h1 .line1 { font-size: 7vw; white-space: nowrap; }
+      .speech-bubble h1 .line2 { font-size: 11vw; white-space: nowrap; }
+      .speech-bubble h1 .line3 { font-size: 9vw; margin-left: 0; text-align: center; white-space: nowrap; }
+      
+      .comic-panel-woman { height: 210px; margin-top: 0; margin-bottom: -35px; }
+      .hero-thumb { width: 35%; margin-left: 0.75rem; margin-bottom: 0.5rem; box-shadow: 0 0 0 1px var(--black), 2px 2px 0 var(--black); }
+      .caption-wrapper { margin-left: -0.5rem; padding-right: 0px; margin-top: -2.5rem; margin-bottom: 1rem; max-width: calc(65% - 1rem); }
+      .comic-caption { padding: 1rem 1.2rem; border-width: 4px; box-shadow: 4px 4px 0 var(--black); width: 100%; border-radius: 50%; }
+      .caption-title { font-size: clamp(2rem, 7vw, 2.5rem); line-height: 1; }
+      .caption-desc { font-size: clamp(1rem, 3.5vw, 1.2rem); }
+      
+      .article-content { padding: 1rem; }
+      .article-footer-strip { padding: 0.6rem 1rem; }
+      
+      .slanted-newsletter { width: calc(100% - 10px); margin-left: 10px; box-sizing: border-box; }
+      .slanted-form { flex-direction: column; }
+      
+      .v2-featured-box { flex-direction: column-reverse; padding: 1.5rem 1rem; gap: 1rem; text-align: center; }
+      .v2-featured-img { margin-right: 0; transform: none; width: 120px; height: 120px; }
+
+      .archive-section h3, .faq-section h3 { font-size: 1.8rem; }
+      .archive-table td { font-size: 1.05rem; padding: 0.75rem 0; }
+      .archive-date { font-size: 0.95rem; width: auto; }
+      .archive-title a { font-size: 1.05rem; }
+      .archive-category { display: none; }
+      .archive-views { font-size: 0.95rem; padding-left: 0.5rem; }
+      .archive-more { font-size: 1.05rem; margin-top: 1rem; }
+
+      footer { 
+        flex-direction: column; 
+        gap: 0.75rem; 
+        text-align: center; 
+        border-radius: 20px; 
+        padding: 1.25rem 1.2rem; 
+        width: calc(100% - 2rem); 
+        margin-top: 1rem;
+      }
+      .footer-links { justify-content: center; flex-wrap: wrap; }
+    }
+  
+    /* ============ CHANGELOG PANEL ============ */
+    .changelog-panel {
+      background: var(--cream);
+      border: 5px solid var(--black);
+      position: relative;
+      z-index: 2;
+      padding: 1.5rem 2rem;
+      margin-top: 2rem;
+    }
     .changelog-entry {
       margin-bottom: 2rem;
       padding-bottom: 2rem;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 3px dashed var(--black);
     }
     .changelog-entry:last-child {
       border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
     .changelog-date {
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
+      color: var(--red);
+      font-size: 1.2rem;
+      font-family: "Bangers", cursive;
+      margin-bottom: 0.25rem;
       letter-spacing: 0.05em;
-      text-transform: uppercase;
     }
     .changelog-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--text-bright);
+      font-size: 1.6rem;
+      font-family: "Fraunces", serif;
+      font-weight: 700;
+      color: var(--black);
       margin-bottom: 0.75rem;
+      line-height: 1.1;
     }
     .changelog-content {
-      font-size: 0.95rem;
-      color: var(--text);
+      font-size: 1.05rem;
+      color: var(--black);
+      line-height: 1.6;
     }
     .changelog-content ul {
       margin-left: 1.5rem;
       margin-top: 0.5rem;
     }
     .changelog-content li {
-      margin-bottom: 0.25rem;
-    }
-
-    footer {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 3rem;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: var(--text-muted);
-      font-size: 0.8rem;
-    }
-
-    footer a {
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    footer a:hover { color: var(--text-bright); }
-
-    .footer-links {
-      display: flex;
-      gap: 1.25rem;
-    }
-
-    @media (max-width: 600px) {
-      nav { padding: 1rem; }
-      main { padding: 1rem 1rem 3rem; }
-      footer { flex-direction: column; gap: 0.75rem; text-align: center; }
-      .footer-links { justify-content: center; }
+      margin-bottom: 0.5rem;
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="index.html" class="logo">Wiki<span>Pop</span></a>
-    <div class="nav-controls">
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-        <span class="theme-icon">&#9790;</span>
-      </button>
-    </div>
+    <a href="index.html" class="logo">Wiki<span>Pop!</span></a>
   </nav>
 
   <main>
-    <h1>Changelog</h1>
-    <p class="subtitle">Major updates and improvements to WikiPop.</p>
-
-    <div class="changelog-entries">
-      <div class="changelog-entry">
-        <div class="changelog-date">April 15, 2026</div>
-        <div class="changelog-title">Email Teasers & Bug Fixes</div>
-        <div class="changelog-content">
-          <ul>
-            <li><strong>Email Teasers:</strong> Added a hidden preheader to daily emails so Gmail displays the obscure article's description as a teaser instead of repeating the subject line.</li>
-            <li><strong>Test Emails:</strong> Created a new GitHub Actions workflow to easily send test emails to a specific address without blasting the subscriber list.</li>
-            <li><strong>Duplicate Prevention:</strong> Added strict checks to prevent the system from accidentally sending multiple emails for the same article on the same day.</li>
-            <li><strong>iPad Layout:</strong> Fixed a CSS float bug that caused text to overlap the comic panel on iPad screens.</li>
-            <li><strong>Image Loading:</strong> Added explicit width and height attributes to the hero image to prevent it from squishing while the page loads.</li>
-            <li><strong>Auto-Backfill:</strong> The daily GitHub Action now automatically looks back 3 days to catch and backfill any missed Wikipedia data.</li>
-            <li><strong>Relative URLs:</strong> Updated all templates to use relative URLs for better compatibility with GitHub Pages.</li>
-          </ul>
+    <div class="fade-up" style="position: relative; z-index: 10;">
+      <div class="speech-bubble-wrap">
+        <div class="speech-bubble">
+          <h1>
+            <span class="line1">What's <em>new</em> with</span>
+            <span class="line2">WikiPop</span>
+            <span class="line3">lately?</span>
+          </h1>
         </div>
       </div>
+    </div>
 
-      <div class="changelog-entry">
-        <div class="changelog-date">April 10, 2026</div>
-        <div class="changelog-title">Initial Launch</div>
-        <div class="changelog-content">
-          <ul>
-            <li><strong>Core Site:</strong> Launched the main WikiPop website, featuring the most popular Wikipedia article of the day.</li>
-            <li><strong>Explore & Archive:</strong> Added an Explore page to see top 25 lists and biggest movers, plus a full Archive of past entries.</li>
-            <li><strong>Daily Emails:</strong> Set up automated daily emails via Buttondown and GitHub Actions to deliver the top article and an obscure entry straight to inboxes.</li>
-            <li><strong>Museum:</strong> Added a museum section with interactive toys like the Background Adjuster.</li>
-          </ul>
+    <div class="fade-up">
+      <div class="changelog-panel">
+        <div class="changelog-entry">
+          <div class="changelog-date">April 15, 2026</div>
+          <div class="changelog-title">Email Teasers & Bug Fixes</div>
+          <div class="changelog-content">
+            <ul>
+              <li><strong>Email Teasers:</strong> Added a hidden preheader to daily emails so Gmail displays the obscure article's description as a teaser instead of repeating the subject line.</li>
+              <li><strong>Duplicate Prevention:</strong> Added strict checks to prevent the system from accidentally sending multiple emails for the same article on the same day.</li>
+              <li><strong>iPad Layout:</strong> Fixed a CSS float bug that caused text to overlap the comic panel on iPad screens.</li>
+              <li><strong>Image Loading:</strong> Fix the hero image to prevent it squishing while page loads.</li>
+              <li><strong>Auto-Backfill:</strong> The daily GitHub Action now automatically looks back 3 days to catch and backfill any missed Wikipedia data.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="changelog-entry">
+          <div class="changelog-date">April 10, 2026</div>
+          <div class="changelog-title">Initial Launch</div>
+          <div class="changelog-content">
+            <ul>
+              <li><strong>Explore & Archive:</strong> Added an Explore page to see top 25 lists and biggest movers, plus a full Archive of past entries.</li>
+              <li><strong>Daily Emails:</strong> Set up automated daily emails via Buttondown and GitHub Actions to deliver the top article and an obscure entry straight to inboxes.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -239,27 +603,34 @@
   <footer>
     <span>&copy; 2026 WikiPop</span>
     <div class="footer-links">
-      <a href="index.html">Today</a>
+      <a href="explore.html">Explore</a>
       <a href="archive.html">Archive</a>
+      <a href="changelog.html">Changelog</a>
       <a href="feed.xml">RSS</a>
-      <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
   </footer>
-
+  
   <script>
-    function toggleTheme() {
-      const root = document.documentElement;
-      const isLight = root.classList.toggle("light");
-      localStorage.setItem("theme", isLight ? "light" : "dark");
-      document.querySelector(".theme-icon").innerHTML = isLight ? "&#9728;" : "&#9790;";
-    }
-    (function () {
-      const saved = localStorage.getItem("theme");
-      if (saved === "light") {
-        document.documentElement.classList.add("light");
-        document.querySelector(".theme-icon").innerHTML = "&#9728;";
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('nav');
+    const scrollTolerance = 15; // requires scrolling at least 15px to trigger
+    
+    window.addEventListener('scroll', function() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      // Ignore small scroll bounces
+      if (Math.abs(scrollTop - lastScrollTop) <= scrollTolerance) {
+        return;
       }
-    })();
+      
+      if (scrollTop > lastScrollTop && scrollTop > 80) {
+        navbar.classList.add('nav-hidden'); // Scrolling down
+      } else {
+        navbar.classList.remove('nav-hidden'); // Scrolling up
+      }
+      
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+    });
   </script>
 </body>
 </html>
