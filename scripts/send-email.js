@@ -126,7 +126,7 @@ function buildEmailHtml(article, recentArticles, featured) {
     </tr>`;
   }).join("\n");
 
-  return `<!-- buttondown-editor-mode: fancy -->
+  const html = `<!-- buttondown-editor-mode: fancy -->
 <div style="display:none;max-height:0px;overflow:hidden;opacity:0;mso-hide:all;">
   ${teaserText}
 </div>
@@ -205,13 +205,15 @@ function buildEmailHtml(article, recentArticles, featured) {
   </div>
 
 </div>`;
+  return { html, teaserText };
 }
 
-function sendEmail(subject, body, isTest = false) {
+function sendEmail(subject, body, description, isTest = false) {
   return new Promise((resolve, reject) => {
     const payload = JSON.stringify({
       subject,
       body,
+      description,
       status: isTest ? "draft" : "about_to_send",
     });
 
@@ -336,19 +338,19 @@ async function main() {
   const subject = featured 
     ? `WikiPop: ${displayTitle(latest.title)} + ${displayTitle(featured.title)}`
     : `WikiPop: ${displayTitle(latest.title)}`;
-  const body = buildEmailHtml(latest, recentArticles, featured);
+  const { html: body, teaserText } = buildEmailHtml(latest, recentArticles, featured);
 
   const testEmailTo = process.env.TEST_EMAIL_TO;
   if (testEmailTo) {
     console.log(`TEST MODE: Creating draft and sending test to ${testEmailTo}`);
-    const draftResponse = await sendEmail(subject, body, true);
+    const draftResponse = await sendEmail(subject, body, teaserText, true);
     if (draftResponse && draftResponse.id) {
       await sendDraftTest(draftResponse.id, testEmailTo);
     } else {
       console.error("Failed to get draft ID, cannot send test email.");
     }
   } else {
-    await sendEmail(subject, body, false);
+    await sendEmail(subject, body, teaserText, false);
     fs.writeFileSync(LAST_EMAIL_FILE, todayStr + "|" + latest.date + "\n");
   }
 }
