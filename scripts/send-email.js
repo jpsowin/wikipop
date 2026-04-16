@@ -100,17 +100,6 @@ function buildEmailHtml(article, recentArticles, featured) {
     ? `<img src="${thumbnail}" alt="${title}" style="width:120px;height:120px;object-fit:cover;border-radius:8px;float:right;margin:0 0 12px 16px;" />`
     : "";
 
-  let teaserText = "";
-  if (featured && featured.extract) {
-    teaserText = featured.extract;
-  } else if (description) {
-    teaserText = description;
-  } else {
-    teaserText = extract;
-  }
-  // Truncate to a reasonable length for the preheader
-  if (teaserText.length > 200) teaserText = teaserText.substring(0, 200) + "...";
-
   // Build recent articles rows (last 7 days, excluding today's)
   const recentRows = recentArticles.map((a) => {
     const aTitle = displayTitle(a.title);
@@ -126,11 +115,7 @@ function buildEmailHtml(article, recentArticles, featured) {
     </tr>`;
   }).join("\n");
 
-  const html = `<!-- buttondown-editor-mode: naked -->
-<div style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">
-  ${teaserText}
-  &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
-</div>
+  const html = `<!-- buttondown-editor-mode: fancy -->
 <div style="max-width:560px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1a1a1a;">
 
   <div style="text-align:center;padding:20px 0 12px;">
@@ -202,13 +187,11 @@ function buildEmailHtml(article, recentArticles, featured) {
       <a href="https://wikipop.me/explore.html" style="color:#888;text-decoration:none;">Explore</a>
       &nbsp;&middot;&nbsp;
       <a href="https://wikipop.me/archive.html" style="color:#888;text-decoration:none;">Archive</a>
-      <br><br>
-      <a href="{{ unsubscribe_url }}" style="color:#aaa;text-decoration:underline;">Unsubscribe</a>
     </p>
   </div>
 
 </div>`;
-  return { html, teaserText };
+  return html;
 }
 
 function sendEmail(subject, body, isTest = false) {
@@ -217,7 +200,6 @@ function sendEmail(subject, body, isTest = false) {
       subject,
       body,
       status: isTest ? "draft" : "about_to_send",
-      template: "naked"
     });
 
     const options = {
@@ -338,17 +320,13 @@ async function main() {
 
   const featured = await getFeaturedEntry();
 
-  let subject = featured 
+  const subject = featured 
     ? `WikiPop: ${displayTitle(latest.title)} + ${displayTitle(featured.title)}`
     : `WikiPop: ${displayTitle(latest.title)}`;
 
+  const body = buildEmailHtml(latest, recentArticles, featured);
+
   const testEmailTo = process.env.TEST_EMAIL_TO;
-  if (testEmailTo) {
-    subject = `[Test ${Math.floor(Math.random() * 1000)}] ${subject}`;
-  }
-
-  const { html: body, teaserText } = buildEmailHtml(latest, recentArticles, featured);
-
   if (testEmailTo) {
     console.log(`TEST MODE: Creating draft and sending test to ${testEmailTo}`);
     const draftResponse = await sendEmail(subject, body, true);
