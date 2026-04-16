@@ -100,6 +100,17 @@ function buildEmailHtml(article, recentArticles, featured) {
     ? `<img src="${thumbnail}" alt="${title}" style="width:120px;height:120px;object-fit:cover;border-radius:8px;float:right;margin:0 0 12px 16px;" />`
     : "";
 
+  let teaserText = "";
+  if (featured && featured.extract) {
+    teaserText = featured.extract;
+  } else if (description) {
+    teaserText = description;
+  } else {
+    teaserText = extract;
+  }
+  // Truncate to a reasonable length for the preheader
+  if (teaserText.length > 200) teaserText = teaserText.substring(0, 200) + "...";
+
   // Build recent articles rows (last 7 days, excluding today's)
   const recentRows = recentArticles.map((a) => {
     const aTitle = displayTitle(a.title);
@@ -116,6 +127,9 @@ function buildEmailHtml(article, recentArticles, featured) {
   }).join("\n");
 
   return `<!-- buttondown-editor-mode: fancy -->
+<div style="display:none;max-height:0px;overflow:hidden;opacity:0;mso-hide:all;">
+  ${teaserText}
+</div>
 <div style="max-width:560px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1a1a1a;">
 
   <div style="text-align:center;padding:20px 0 12px;">
@@ -193,12 +207,12 @@ function buildEmailHtml(article, recentArticles, featured) {
 </div>`;
 }
 
-function sendEmail(subject, body) {
+function sendEmail(subject, body, isTest = false) {
   return new Promise((resolve, reject) => {
     const payload = JSON.stringify({
       subject,
       body,
-      status: "about_to_send",
+      status: isTest ? "draft" : "about_to_send",
     });
 
     const options = {
@@ -219,18 +233,59 @@ function sendEmail(subject, body) {
       res.on("data", (chunk) => (data += chunk));
       res.on("end", () => {
         if (res.statusCode >= 200 && res.statusCode < 300) {
-          console.log(`Email sent! Status: ${res.statusCode}`);
+          console.log(`Email ${isTest ? 'draft created' : 'sent'}! Status: ${res.statusCode}`);
           try {
             const parsed = JSON.parse(data);
             console.log(`  ID: ${parsed.id}`);
             console.log(`  Subject: ${parsed.subject}`);
-          } catch {}
-          resolve(data);
+            resolve(parsed);
+          } catch {
+            resolve(data);
+          }
         } else if (res.statusCode === 400 && data.includes("email_duplicate")) {
           console.log("Buttondown: Email is a duplicate of one already sent today. Skipping gracefully.");
           resolve(data);
         } else {
           console.error(`Failed to send email. Status: ${res.statusCode}`);
+          console.error(data);
+          reject(new Error(`HTTP ${res.statusCode}: ${data}`));
+        }
+      });
+    });
+
+    req.on("error", reject);
+    req.write(payload);
+    req.end();
+  });
+}
+
+function sendDraftTest(emailId, testEmailAddress) {
+  return new Promise((resolve, reject) => {
+    const payload = JSON.stringify({
+      recipients: [testEmailAddress],
+    });
+
+    const options = {
+      hostname: "api.buttondown.com",
+      port: 443,
+      path: `/v1/emails/${emailId}/send-draft`,
+      method: "POST",
+      headers: {
+        Authorization: `Token ${API_KEY}`,
+        "Content-Type": "application/json",
+        "Content-Length": Buffer.byteLength(payload),
+      },
+    };
+
+    const req = https.request(options, (res) => {
+      let data = "";
+      res.on("data", (chunk) => (data += chunk));
+      res.on("end", () => {
+        if (res.statusCode >= 200 && res.statusCode < 300) {
+          console.log(`Test email successfully sent to ${testEmailAddress}!`);
+          resolve(data);
+        } else {
+          console.error(`Failed to send test email. Status: ${res.statusCode}`);
           console.error(data);
           reject(new Error(`HTTP ${res.statusCode}: ${data}`));
         }
@@ -254,7 +309,7 @@ async function main() {
     process.exit(1);
   }
 
-  if (fs.existsSync(LAST_EMAIL_FILE)) {
+  if (fs.existsSync(LAST_EMAIL_FILE) && !process.env.TEST_EMAIL_TO) {
     const lastSentRaw = fs.readFileSync(LAST_EMAIL_FILE, "utf-8").trim();
     const [lastSentDate, lastSentArticleDate] = lastSentRaw.split("|");
     
@@ -283,8 +338,19 @@ async function main() {
     : `WikiPop: ${displayTitle(latest.title)}`;
   const body = buildEmailHtml(latest, recentArticles, featured);
 
-  await sendEmail(subject, body);
-  fs.writeFileSync(LAST_EMAIL_FILE, todayStr + "|" + latest.date + "\n");
+  const testEmailTo = process.env.TEST_EMAIL_TO;
+  if (testEmailTo) {
+    console.log(`TEST MODE: Creating draft and sending test to ${testEmailTo}`);
+    const draftResponse = await sendEmail(subject, body, true);
+    if (draftResponse && draftResponse.id) {
+      await sendDraftTest(draftResponse.id, testEmailTo);
+    } else {
+      console.error("Failed to get draft ID, cannot send test email.");
+    }
+  } else {
+    await sendEmail(subject, body, false);
+    fs.writeFileSync(LAST_EMAIL_FILE, todayStr + "|" + latest.date + "\n");
+  }
 }
 
 main().catch((err) => {

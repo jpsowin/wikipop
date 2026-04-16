@@ -1,0 +1,30 @@
+name: Test Email
+
+on:
+  workflow_dispatch:
+    inputs:
+      test_email:
+        description: 'Email address to send the test to'
+        required: true
+        default: 'test@example.com'
+
+permissions:
+  contents: read
+
+jobs:
+  test-email:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+        env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+      - name: Send test email
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          TEST_EMAIL_TO: ${{ github.event.inputs.test_email }}
+        run: node scripts/send-email.js
