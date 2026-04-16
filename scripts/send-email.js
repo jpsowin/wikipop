@@ -129,6 +129,7 @@ function buildEmailHtml(article, recentArticles, featured) {
   const html = `<!-- buttondown-editor-mode: fancy -->
 <div style="display:none;max-height:0px;overflow:hidden;opacity:0;mso-hide:all;">
   ${teaserText}
+  &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
 </div>
 <div style="max-width:560px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1a1a1a;">
 
@@ -208,12 +209,11 @@ function buildEmailHtml(article, recentArticles, featured) {
   return { html, teaserText };
 }
 
-function sendEmail(subject, body, description, isTest = false) {
+function sendEmail(subject, body, isTest = false) {
   return new Promise((resolve, reject) => {
     const payload = JSON.stringify({
       subject,
       body,
-      description,
       status: isTest ? "draft" : "about_to_send",
     });
 
@@ -343,14 +343,14 @@ async function main() {
   const testEmailTo = process.env.TEST_EMAIL_TO;
   if (testEmailTo) {
     console.log(`TEST MODE: Creating draft and sending test to ${testEmailTo}`);
-    const draftResponse = await sendEmail(subject, body, teaserText, true);
+    const draftResponse = await sendEmail(subject, body, true);
     if (draftResponse && draftResponse.id) {
       await sendDraftTest(draftResponse.id, testEmailTo);
     } else {
       console.error("Failed to get draft ID, cannot send test email.");
     }
   } else {
-    await sendEmail(subject, body, teaserText, false);
+    await sendEmail(subject, body, false);
     fs.writeFileSync(LAST_EMAIL_FILE, todayStr + "|" + latest.date + "\n");
   }
 }
