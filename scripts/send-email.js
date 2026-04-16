@@ -338,12 +338,17 @@ async function main() {
 
   const featured = await getFeaturedEntry();
 
-  const subject = featured 
+  let subject = featured 
     ? `WikiPop: ${displayTitle(latest.title)} + ${displayTitle(featured.title)}`
     : `WikiPop: ${displayTitle(latest.title)}`;
-  const { html: body, teaserText } = buildEmailHtml(latest, recentArticles, featured);
 
   const testEmailTo = process.env.TEST_EMAIL_TO;
+  if (testEmailTo) {
+    subject = `[Test ${Math.floor(Math.random() * 1000)}] ${subject}`;
+  }
+
+  const { html: body, teaserText } = buildEmailHtml(latest, recentArticles, featured);
+
   if (testEmailTo) {
     console.log(`TEST MODE: Creating draft and sending test to ${testEmailTo}`);
     const draftResponse = await sendEmail(subject, body, true);
