@@ -36,6 +36,8 @@ const FEATURED_PAGE_FILE = path.join(__dirname, "..", "featured.html");
 const RSS_FILE = path.join(__dirname, "..", "feed.xml");
 const TEMPLATE_FILE = path.join(__dirname, "..", "template.html");
 const ARCHIVE_TEMPLATE_FILE = path.join(__dirname, "..", "template-archive.html");
+const CHANGELOG_TEMPLATE_FILE = path.join(__dirname, "..", "template-changelog.html");
+const CHANGELOG_FILE = path.join(__dirname, "..", "changelog.html");
 const LOOKBACK_DAYS = 30;
 const RECENT_LIMIT = 10; // how many to show on homepage
 
@@ -150,6 +152,11 @@ function buildFullArchiveRow(a) {
               <td class="archive-category">${a.description ? escapeHtml(a.description) : ""}</td>
               <td class="archive-views">${formatNumber(a.views)}</td>
             </tr>`;
+}
+
+function buildChangelogPage() {
+  const template = fs.readFileSync(CHANGELOG_TEMPLATE_FILE, "utf-8");
+  return template.replace(/\{\{CURRENT_YEAR\}\}/g, new Date().getUTCFullYear());
 }
 
 async function getFeaturedEntry() {
@@ -497,6 +504,7 @@ async function main() {
   console.log("Building HTML...");
   fs.writeFileSync(OUTPUT_FILE, await buildHtml(articles));
   fs.writeFileSync(ARCHIVE_FILE, buildArchivePage(articles));
+  fs.writeFileSync(CHANGELOG_FILE, buildChangelogPage());
   fs.writeFileSync(RSS_FILE, buildRss(articles));
   fs.writeFileSync(FEATURED_PAGE_FILE, buildFeaturedPage());
   console.log(`Done! ${articles.length} total articles.`);

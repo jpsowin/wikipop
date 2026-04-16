@@ -5,8 +5,16 @@
     <description>The most popular Wikipedia article, every day.</description>
     <link>https://jpsowin.github.io/wikipop/</link>
     <atom:link href="https://jpsowin.github.io/wikipop/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 15 Apr 2026 06:37:04 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 05:13:40 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Samrat Choudhary</title>
+      <link>https://en.wikipedia.org/wiki/Samrat_Choudhary</link>
+      <description>Samrat Choudhary is an Indian politician who is serving as the 24th Chief Minister of Bihar since 15 April 2026. He has been a member of the Bihar Legislative Assembly representing Tarapur Assembly constituency since 2025 and previously served as deputy chief minister of Bihar in the Nitish Kumar government from 2024 to 2026. Choudhary is the first Bharatiya Janata Party (BJP) member to serve as Chief minister of Bihar.</description>
+      <pubDate>Wed, 15 Apr 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Samrat_Choudhary#2026-04-15</guid>
+      <category>24th Chief Minister of Bihar since 2026</category>
+    </item>
     <item>
       <title>Asha Bhosle</title>
       <link>https://en.wikipedia.org/wiki/Asha_Bhosle</link>
@@ -238,14 +246,6 @@
       <pubDate>Tue, 17 Mar 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Joe_Kent#2026-03-17</guid>
       <category>American soldier and politician (born 1980)</category>
-    </item>
-    <item>
-      <title>98th Academy Awards</title>
-      <link>https://en.wikipedia.org/wiki/98th_Academy_Awards</link>
-      <description>The 98th Academy Awards ceremony, presented by the Academy of Motion Picture Arts and Sciences (AMPAS), took place on March 15, 2026, at the Dolby Theatre in Hollywood, Los Angeles. During the gala, the AMPAS presented the Academy Awards in 24 categories, honoring films released in 2025. The ceremony was televised in the United States by the American Broadcasting Company (ABC) and streamed on Hulu. Comedian Conan O&apos;Brien returned to host the show for the second consecutive time, after receiving acclaim for hosting the previous year, with Raj Kapoor and Katy Mullan returning as executive producers for the third consecutive year, and Hamish Hamilton returning as director.</description>
-      <pubDate>Mon, 16 Mar 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/98th_Academy_Awards#2026-03-16</guid>
-      <category>Award ceremony for films of 2025</category>
     </item>
   </channel>
 </rss>

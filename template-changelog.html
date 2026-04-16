@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Archive — WikiPop</title>
-  <meta name="description" content="Full archive of every article featured on WikiPop.">
+  <title>Changelog — WikiPop</title>
+  <meta name="description" content="Major updates and improvements to WikiPop.">
   <link rel="alternate" type="application/rss+xml" title="WikiPop RSS" href="feed.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -123,63 +123,38 @@
       margin-bottom: 2rem;
     }
 
-    .archive-table {
-      width: 100%;
-      border-collapse: collapse;
+    .changelog-entry {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
     }
-
-    .archive-table th {
-      text-align: left;
-      font-size: 0.75rem;
+    .changelog-entry:last-child {
+      border-bottom: none;
+    }
+    .changelog-date {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      padding: 0.5rem 0;
-      border-bottom: 1px solid var(--border);
     }
-
-    .archive-table th:last-child {
-      text-align: right;
-    }
-
-    .archive-table td {
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.95rem;
-    }
-
-    .archive-date {
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      white-space: nowrap;
-      width: 100px;
-    }
-
-    .archive-title a {
+    .changelog-title {
+      font-size: 1.2rem;
+      font-weight: 600;
       color: var(--text-bright);
-      text-decoration: none;
-      transition: color 0.2s;
+      margin-bottom: 0.75rem;
     }
-
-    .archive-title a:hover {
-      color: var(--accent);
+    .changelog-content {
+      font-size: 0.95rem;
+      color: var(--text);
     }
-
-    .archive-category {
-      color: var(--text-muted);
-      font-size: 0.8rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 200px;
+    .changelog-content ul {
+      margin-left: 1.5rem;
+      margin-top: 0.5rem;
     }
-
-    .archive-views {
-      text-align: right;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      font-variant-numeric: tabular-nums;
-      white-space: nowrap;
+    .changelog-content li {
+      margin-bottom: 0.25rem;
     }
 
     footer {
@@ -210,8 +185,6 @@
     @media (max-width: 600px) {
       nav { padding: 1rem; }
       main { padding: 1rem 1rem 3rem; }
-      .archive-date { width: auto; }
-      .archive-category { display: none; }
       footer { flex-direction: column; gap: 0.75rem; text-align: center; }
       .footer-links { justify-content: center; }
     }
@@ -228,29 +201,46 @@
   </nav>
 
   <main>
-    <h1>Archive</h1>
-    <p class="subtitle">{{TOTAL_ARTICLES}} articles featured so far.</p>
+    <h1>Changelog</h1>
+    <p class="subtitle">Major updates and improvements to WikiPop.</p>
 
-    <table class="archive-table">
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Article</th>
-          <th>Category</th>
-          <th>Views</th>
-        </tr>
-      </thead>
-      <tbody>
-        {{ALL_ARCHIVE_ROWS}}
-      </tbody>
-    </table>
+    <div class="changelog-entries">
+      <div class="changelog-entry">
+        <div class="changelog-date">April 15, 2026</div>
+        <div class="changelog-title">Email Teasers & Bug Fixes</div>
+        <div class="changelog-content">
+          <ul>
+            <li><strong>Email Teasers:</strong> Added a hidden preheader to daily emails so Gmail displays the obscure article's description as a teaser instead of repeating the subject line.</li>
+            <li><strong>Test Emails:</strong> Created a new GitHub Actions workflow to easily send test emails to a specific address without blasting the subscriber list.</li>
+            <li><strong>Duplicate Prevention:</strong> Added strict checks to prevent the system from accidentally sending multiple emails for the same article on the same day.</li>
+            <li><strong>iPad Layout:</strong> Fixed a CSS float bug that caused text to overlap the comic panel on iPad screens.</li>
+            <li><strong>Image Loading:</strong> Added explicit width and height attributes to the hero image to prevent it from squishing while the page loads.</li>
+            <li><strong>Auto-Backfill:</strong> The daily GitHub Action now automatically looks back 3 days to catch and backfill any missed Wikipedia data.</li>
+            <li><strong>Relative URLs:</strong> Updated all templates to use relative URLs for better compatibility with GitHub Pages.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="changelog-entry">
+        <div class="changelog-date">April 10, 2026</div>
+        <div class="changelog-title">Initial Launch</div>
+        <div class="changelog-content">
+          <ul>
+            <li><strong>Core Site:</strong> Launched the main WikiPop website, featuring the most popular Wikipedia article of the day.</li>
+            <li><strong>Explore & Archive:</strong> Added an Explore page to see top 25 lists and biggest movers, plus a full Archive of past entries.</li>
+            <li><strong>Daily Emails:</strong> Set up automated daily emails via Buttondown and GitHub Actions to deliver the top article and an obscure entry straight to inboxes.</li>
+            <li><strong>Museum:</strong> Added a museum section with interactive toys like the Background Adjuster.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
     <span>&copy; {{CURRENT_YEAR}} WikiPop</span>
     <div class="footer-links">
       <a href="index.html">Today</a>
-      <a href="changelog.html">Changelog</a>
+      <a href="archive.html">Archive</a>
       <a href="feed.xml">RSS</a>
       <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
