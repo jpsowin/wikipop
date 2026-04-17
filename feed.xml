@@ -5,8 +5,16 @@
     <description>The most popular Wikipedia article, every day.</description>
     <link>https://jpsowin.github.io/wikipop/</link>
     <atom:link href="https://jpsowin.github.io/wikipop/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 16 Apr 2026 06:37:24 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 06:37:25 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Justin Fairfax</title>
+      <link>https://en.wikipedia.org/wiki/Justin_Fairfax</link>
+      <description>Justin Edward Fairfax was an American lawyer and politician who served as the 41st lieutenant governor of Virginia from 2018 to 2022. A member of the Democratic Party, he was the second African American elected statewide in Virginia, following Douglas Wilder. In 2019, he faced sexual assault allegations dating to 2000 and 2004, which he denied.</description>
+      <pubDate>Thu, 16 Apr 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Justin_Fairfax#2026-04-16</guid>
+      <category>Lieutenant Governor of Virginia from 2018 to 2022</category>
+    </item>
     <item>
       <title>Samrat Choudhary</title>
       <link>https://en.wikipedia.org/wiki/Samrat_Choudhary</link>
@@ -238,14 +246,6 @@
       <pubDate>Wed, 18 Mar 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Spider-Man%3A_Brand_New_Day#2026-03-18</guid>
       <category>Upcoming Marvel Studios film</category>
-    </item>
-    <item>
-      <title>Joe Kent</title>
-      <link>https://en.wikipedia.org/wiki/Joe_Kent</link>
-      <description>Joseph Clay Kent is an American politician, former United States Army warrant officer, and former Central Intelligence Agency paramilitary officer who served as the director of the National Counterterrorism Center from 2025 to 2026. A member of the Republican Party, Kent was its nominee in the United States House of Representatives election for Washington&apos;s third congressional district in 2022 and 2024.</description>
-      <pubDate>Tue, 17 Mar 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Joe_Kent#2026-03-17</guid>
-      <category>American soldier and politician (born 1980)</category>
     </item>
   </channel>
 </rss>
