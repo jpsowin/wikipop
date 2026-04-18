@@ -2,8 +2,10 @@ name: Daily WikiPop Update
 
 on:
   schedule:
-    # Runs at 6:00 AM UTC daily (1-2 AM Eastern, after Wikipedia daily stats finalize)
-    - cron: '0 6 * * *'
+    # Runs at 7:30 AM UTC daily (2:30-3:30 AM Eastern). Shifted later from 6:00
+    # because Wikimedia's pageview publish time for "yesterday" isn't guaranteed
+    # — 06:00 was on the edge and occasionally hit 404s.
+    - cron: '30 7 * * *'
   workflow_dispatch: # Allow manual trigger
 
 env:

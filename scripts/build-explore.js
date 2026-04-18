@@ -172,10 +172,19 @@ async function main() {
 
   console.log(`Fetching top articles for ${formatDateShort(yesterday)} and ${formatDateShort(twoDaysAgo)}...`);
 
-  const [todayArticles, prevArticles] = await Promise.all([
-    fetchTop(yesterday),
-    fetchTop(twoDaysAgo),
-  ]);
+  let todayArticles, prevArticles;
+  try {
+    [todayArticles, prevArticles] = await Promise.all([
+      fetchTop(yesterday),
+      fetchTop(twoDaysAgo),
+    ]);
+  } catch (err) {
+    // Wikimedia's pageview data for "yesterday" is usually available ~4-6h after
+    // UTC midnight, but the exact time isn't guaranteed. If it's not ready yet
+    // (404), leave explore.html as-is — the next day's run will refresh it.
+    console.log(`Could not fetch pageviews (${err.message}). Skipping explore rebuild; will retry tomorrow.`);
+    return;
+  }
 
   const prevMap = new Map(prevArticles.map((a) => [a.article, a]));
 
