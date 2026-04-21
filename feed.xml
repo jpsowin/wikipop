@@ -5,7 +5,7 @@
     <description>The most popular Wikipedia article, every day.</description>
     <link>https://jpsowin.github.io/wikipop/</link>
     <atom:link href="https://jpsowin.github.io/wikipop/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 21 Apr 2026 08:09:03 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2026 16:59:29 GMT</lastBuildDate>
     <language>en-us</language>
     <item>
       <title>Patrick Muldoon</title>
@@ -30,6 +30,14 @@
       <pubDate>Sat, 18 Apr 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/WrestleMania_42#2026-04-18</guid>
       <category>2026 WWE pay-per-view and livestreaming event</category>
+    </item>
+    <item>
+      <title>D4vd</title>
+      <link>https://en.wikipedia.org/wiki/D4vd</link>
+      <description>David Anthony Burke, known professionally as D4vd, is an American singer-songwriter. Born in New York City and raised in Houston, Texas, Burke began composing music in 2021 for his Fortnite gameplay montages. He first achieved commercial success with his 2022 singles &quot;Romantic Homicide&quot; and &quot;Here with Me&quot;, both of which earned multiple platinum certifications. In 2023, he released the EPs Petals to Thorns and The Lost Petals; the former charted in six territories. In 2025, he released his debut studio album, Withered, which peaked at number 13 on the US Billboard 200.</description>
+      <pubDate>Fri, 17 Apr 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/D4vd#2026-04-17</guid>
+      <category>American singer-songwriter (born 2005)</category>
     </item>
     <item>
       <title>Justin Fairfax</title>
@@ -238,14 +246,6 @@
       <pubDate>Sun, 22 Mar 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Robert_Mueller#2026-03-22</guid>
       <category>American civil servant and attorney (1944–2026)</category>
-    </item>
-    <item>
-      <title>Nicholas Brendon</title>
-      <link>https://en.wikipedia.org/wiki/Nicholas_Brendon</link>
-      <description>Nicholas Brendon Schultz was an American actor, artist, and writer. He is best known for playing Xander Harris in the television series Buffy the Vampire Slayer (1997–2003) and Kevin Lynch in Criminal Minds (2007–2014).</description>
-      <pubDate>Sat, 21 Mar 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Nicholas_Brendon#2026-03-21</guid>
-      <category>American actor, artist and writer (1971–2026)</category>
     </item>
   </channel>
 </rss>
