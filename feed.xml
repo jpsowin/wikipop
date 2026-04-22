@@ -5,8 +5,16 @@
     <description>The most popular Wikipedia article, every day.</description>
     <link>https://jpsowin.github.io/wikipop/</link>
     <atom:link href="https://jpsowin.github.io/wikipop/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 21 Apr 2026 17:02:39 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2026 08:07:55 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>John Ternus</title>
+      <link>https://en.wikipedia.org/wiki/John_Ternus</link>
+      <description>John Ternus is an American engineer and business executive who has served as the senior vice president of hardware engineering at Apple Inc. since 2021. He originally joined Apple in 2001.</description>
+      <pubDate>Tue, 21 Apr 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/John_Ternus#2026-04-21</guid>
+      <category>American business executive and engineer (born 1975)</category>
+    </item>
     <item>
       <title>Patrick Muldoon</title>
       <link>https://en.wikipedia.org/wiki/Patrick_Muldoon</link>
@@ -238,14 +246,6 @@
       <pubDate>Mon, 23 Mar 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Leonid_Radvinsky#2026-03-23</guid>
       <category>American businessman (1982–2026)</category>
-    </item>
-    <item>
-      <title>Robert Mueller</title>
-      <link>https://en.wikipedia.org/wiki/Robert_Mueller</link>
-      <description>Robert Swan Mueller III was an American lawyer who served as the sixth director of the Federal Bureau of Investigation (FBI) from 2001 to 2013.</description>
-      <pubDate>Sun, 22 Mar 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Robert_Mueller#2026-03-22</guid>
-      <category>American civil servant and attorney (1944–2026)</category>
     </item>
   </channel>
 </rss>
