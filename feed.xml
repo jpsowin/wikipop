@@ -5,8 +5,16 @@
     <description>The most popular Wikipedia article, every day.</description>
     <link>https://jpsowin.github.io/wikipop/</link>
     <atom:link href="https://jpsowin.github.io/wikipop/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 22 Apr 2026 08:07:55 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 08:10:10 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Dave Mason</title>
+      <link>https://en.wikipedia.org/wiki/Dave_Mason</link>
+      <description>David Thomas Mason was an English singer-songwriter and guitarist, who came to prominence in 1967 as a founding member of the rock band Traffic. He wrote and sang lead vocals on two of the band&apos;s most famous songs, &quot;Hole in My Shoe&quot; and &quot;Feelin&apos; Alright?&quot; His song &quot;Only You Know and I Know&quot; became a signature song for Delaney &amp; Bonnie, and &quot;We Just Disagree&quot;, Mason&apos;s 1977 solo U.S. hit, written by Jim Krueger, has become a staple of U.S. classic hits and adult contemporary radio playlists.</description>
+      <pubDate>Wed, 22 Apr 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Dave_Mason#2026-04-22</guid>
+      <category>English musician (1946–2026)</category>
+    </item>
     <item>
       <title>John Ternus</title>
       <link>https://en.wikipedia.org/wiki/John_Ternus</link>
@@ -238,14 +246,6 @@
       <pubDate>Tue, 24 Mar 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Project_Hail_Mary_(film)#2026-03-24</guid>
       <category>2026 film by Phil Lord and Christopher Miller</category>
-    </item>
-    <item>
-      <title>Leonid Radvinsky</title>
-      <link>https://en.wikipedia.org/wiki/Leonid_Radvinsky</link>
-      <description>Leonid Radvinsky was an American billionaire businessman and the majority owner of OnlyFans.</description>
-      <pubDate>Mon, 23 Mar 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Leonid_Radvinsky#2026-03-23</guid>
-      <category>American businessman (1982–2026)</category>
     </item>
   </channel>
 </rss>
