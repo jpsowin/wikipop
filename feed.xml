@@ -5,8 +5,16 @@
     <description>The most popular Wikipedia article, every day.</description>
     <link>https://jpsowin.github.io/wikipop/</link>
     <atom:link href="https://jpsowin.github.io/wikipop/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 23 Apr 2026 08:10:10 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2026 08:15:31 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>2026 Tamil Nadu Legislative Assembly election</title>
+      <link>https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election</link>
+      <description>Legislative Assembly elections were held in Tamil Nadu on 23 April 2026 to elect all 234 members of the Tamil Nadu Legislative Assembly. The votes will be counted and the results will be declared on 4 May 2026.</description>
+      <pubDate>Thu, 23 Apr 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election#2026-04-23</guid>
+      <category>Election to the legislative assembly of Tamil Nadu</category>
+    </item>
     <item>
       <title>Dave Mason</title>
       <link>https://en.wikipedia.org/wiki/Dave_Mason</link>
@@ -238,14 +246,6 @@
       <pubDate>Wed, 25 Mar 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/List_of_highest-grossing_Indian_films#2026-03-25</guid>
       
-    </item>
-    <item>
-      <title>Project Hail Mary (film)</title>
-      <link>https://en.wikipedia.org/wiki/Project_Hail_Mary_(film)</link>
-      <description>Project Hail Mary is a 2026 American science fiction adventure film produced and directed by Phil Lord and Christopher Miller and written by Drew Goddard, based on the 2021 novel by Andy Weir. It stars Ryan Gosling, Sandra Hüller, James Ortiz, and Lionel Boyce. The film follows the story of Ryland Grace, a man who awakens on an interstellar spacecraft with no memory of how he came to be there.</description>
-      <pubDate>Tue, 24 Mar 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Project_Hail_Mary_(film)#2026-03-24</guid>
-      <category>2026 film by Phil Lord and Christopher Miller</category>
     </item>
   </channel>
 </rss>
