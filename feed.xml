@@ -5,8 +5,16 @@
     <description>The most popular Wikipedia article, every day.</description>
     <link>https://jpsowin.github.io/wikipop/</link>
     <atom:link href="https://jpsowin.github.io/wikipop/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 24 Apr 2026 08:15:31 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2026 07:54:23 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>2026 NFL draft</title>
+      <link>https://en.wikipedia.org/wiki/2026_NFL_draft</link>
+      <description>The 2026 NFL draft is the 91st annual meeting of National Football League (NFL) franchises to select newly eligible players. The event is being held in Pittsburgh on April 23–25. The time between first-round selections was shortened from 10 minutes to 8. Times between selections in other rounds remained unchanged.</description>
+      <pubDate>Fri, 24 Apr 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/2026_NFL_draft#2026-04-24</guid>
+      <category>2026 American football draft</category>
+    </item>
     <item>
       <title>2026 Tamil Nadu Legislative Assembly election</title>
       <link>https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election</link>
@@ -238,14 +246,6 @@
       <pubDate>Thu, 26 Mar 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Send_Help#2026-03-26</guid>
       <category>2026 film by Sam Raimi</category>
-    </item>
-    <item>
-      <title>List of highest-grossing Indian films</title>
-      <link>https://en.wikipedia.org/wiki/List_of_highest-grossing_Indian_films</link>
-      <description>This ranking lists the highest-grossing Indian films produced by Indian cinema, based on conservative global box office estimates as reported by organisations classified as green by Wikipedia. The figures are not adjusted for inflation. However, there is no official tracking of figures and sources publishing data are frequently pressured to increase their estimates.</description>
-      <pubDate>Wed, 25 Mar 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/List_of_highest-grossing_Indian_films#2026-03-25</guid>
-      
     </item>
   </channel>
 </rss>
