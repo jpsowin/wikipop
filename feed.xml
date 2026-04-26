@@ -5,8 +5,16 @@
     <description>The most popular Wikipedia article, every day.</description>
     <link>https://jpsowin.github.io/wikipop/</link>
     <atom:link href="https://jpsowin.github.io/wikipop/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 25 Apr 2026 07:54:23 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 08:01:44 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Michael (2026 film)</title>
+      <link>https://en.wikipedia.org/wiki/Michael_(2026_film)</link>
+      <description>Michael is a 2026 American biographical film directed by Antoine Fuqua and written by John Logan. It follows the life of the American singer Michael Jackson, covering his involvement in the Jackson 5 in the 1960s to the 1980s Bad tour. Jackson is portrayed by his nephew Jaafar Jackson and as a child by Juliano Krue Valdi, both in their film debuts. The supporting cast includes Nia Long, KeiLyn Durrel Jones, Laura Harrier, Jessica Sula, Mike Myers, Miles Teller and Colman Domingo.</description>
+      <pubDate>Sat, 25 Apr 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Michael_(2026_film)#2026-04-25</guid>
+      <category>Biographical film by Antoine Fuqua</category>
+    </item>
     <item>
       <title>2026 NFL draft</title>
       <link>https://en.wikipedia.org/wiki/2026_NFL_draft</link>
@@ -238,14 +246,6 @@
       <pubDate>Fri, 27 Mar 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Noelia_Castillo_euthanasia_case#2026-03-27</guid>
       <category>2026 intentional death of Spanish woman</category>
-    </item>
-    <item>
-      <title>Send Help</title>
-      <link>https://en.wikipedia.org/wiki/Send_Help</link>
-      <description>Send Help is a 2026 American survival horror thriller film co-produced and directed by Sam Raimi and written by Damian Shannon and Mark Swift. The film stars Rachel McAdams and Dylan O&apos;Brien as an employee and her boss, respectively, who become stranded on a deserted island after a plane crash and attempt to survive while tension rises between them. Dennis Haysbert also appears.</description>
-      <pubDate>Thu, 26 Mar 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Send_Help#2026-03-26</guid>
-      <category>2026 film by Sam Raimi</category>
     </item>
   </channel>
 </rss>
