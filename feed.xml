@@ -5,8 +5,16 @@
     <description>The most popular Wikipedia article, every day.</description>
     <link>https://jpsowin.github.io/wikipop/</link>
     <atom:link href="https://jpsowin.github.io/wikipop/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 26 Apr 2026 08:01:44 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 08:17:20 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Michael Jackson</title>
+      <link>https://en.wikipedia.org/wiki/Michael_Jackson</link>
+      <description>Michael Joseph Jackson was an American singer, songwriter, dancer, and philanthropist. Dubbed the &quot;King of Pop&quot;, he is widely regarded as one of the most culturally significant figures of the 20th century. Over a four-decade career, his musical achievements broke American racial barriers and made him a dominant figure worldwide. Through his songs, concerts, and fashion, he proliferated visual performance for artists in popular music, popularizing street dance moves such as the moonwalk, the robot, and the anti-gravity lean. Jackson is often deemed the greatest entertainer of all time.</description>
+      <pubDate>Sun, 26 Apr 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Michael_Jackson#2026-04-26</guid>
+      <category>American singer (1958–2009)</category>
+    </item>
     <item>
       <title>Michael (2026 film)</title>
       <link>https://en.wikipedia.org/wiki/Michael_(2026_film)</link>
@@ -238,14 +246,6 @@
       <pubDate>Sat, 28 Mar 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Tiger_Woods#2026-03-28</guid>
       <category>American professional golfer (born 1975)</category>
-    </item>
-    <item>
-      <title>Noelia Castillo euthanasia case</title>
-      <link>https://en.wikipedia.org/wiki/Noelia_Castillo_euthanasia_case</link>
-      <description>Noelia Castillo Ramos was a Spanish woman who died after receiving euthanasia. Her request for euthanasia became a landmark case in Spain on the application of the Organic Law Regulating Euthanasia in the country. At age 25, she was one of the youngest people to receive assisted dying after demonstrating chronic and irreversible pain. Her case garnered significant public attention due to a two-year legal battle, in which the High Court of Justice of Catalonia (TSJC) had to intervene to validate her right against appeals filed by her father and the Christian Lawyers Association, who questioned her legal capacity.</description>
-      <pubDate>Fri, 27 Mar 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Noelia_Castillo_euthanasia_case#2026-03-27</guid>
-      <category>2026 intentional death of Spanish woman</category>
     </item>
   </channel>
 </rss>

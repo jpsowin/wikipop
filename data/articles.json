@@ -5157,5 +5157,16 @@
     "description": "Biographical film by Antoine Fuqua",
     "thumbnail": "https://upload.wikimedia.org/wikipedia/en/3/37/Michael_%282026_film_poster%29.png",
     "url": "https://en.wikipedia.org/wiki/Michael_(2026_film)"
+  },
+  {
+    "date": "2026-04-26",
+    "title": "Michael_Jackson",
+    "views": 339354,
+    "rank": 5,
+    "type": "standard",
+    "extract": "Michael Joseph Jackson was an American singer, songwriter, dancer, and philanthropist. Dubbed the \"King of Pop\", he is widely regarded as one of the most culturally significant figures of the 20th century. Over a four-decade career, his musical achievements broke American racial barriers and made him a dominant figure worldwide. Through his songs, concerts, and fashion, he proliferated visual performance for artists in popular music, popularizing street dance moves such as the moonwalk, the robot, and the anti-gravity lean. Jackson is often deemed the greatest entertainer of all time.",
+    "description": "American singer (1958–2009)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Michael_Jackson_1983_%283x4_cropped%29_%28contrast%29.jpg/330px-Michael_Jackson_1983_%283x4_cropped%29_%28contrast%29.jpg",
+    "url": "https://en.wikipedia.org/wiki/Michael_Jackson"
   }
 ]
