@@ -5,8 +5,16 @@
     <description>The most popular Wikipedia article, every day.</description>
     <link>https://jpsowin.github.io/wikipop/</link>
     <atom:link href="https://jpsowin.github.io/wikipop/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 27 Apr 2026 08:17:20 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 08:17:56 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Jaafar Jackson</title>
+      <link>https://en.wikipedia.org/wiki/Jaafar_Jackson</link>
+      <description>Jaafar Jeremiah Jackson is an American singer, actor, and dancer. A member of the Jackson family, he portrayed his paternal uncle Michael Jackson in his film debut in the biographical film Michael (2026). He released his debut single, &quot;Got Me Singing&quot;, in 2019.</description>
+      <pubDate>Mon, 27 Apr 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Jaafar_Jackson#2026-04-27</guid>
+      <category>American singer and actor (born 1996)</category>
+    </item>
     <item>
       <title>Michael Jackson</title>
       <link>https://en.wikipedia.org/wiki/Michael_Jackson</link>
@@ -238,14 +246,6 @@
       <pubDate>Sun, 29 Mar 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Avi_Lewis#2026-03-29</guid>
       <category>Canadian politician and filmmaker (born 1967)</category>
-    </item>
-    <item>
-      <title>Tiger Woods</title>
-      <link>https://en.wikipedia.org/wiki/Tiger_Woods</link>
-      <description>Eldrick Tont &quot;Tiger&quot; Woods is an American professional golfer. He is tied for first in PGA Tour wins, ranks second in men&apos;s major championships, and holds numerous golf records. Woods is widely regarded as one of the greatest golfers of all time and as one of the most famous athletes in modern history. He is an inductee of the World Golf Hall of Fame.</description>
-      <pubDate>Sat, 28 Mar 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Tiger_Woods#2026-03-28</guid>
-      <category>American professional golfer (born 1975)</category>
     </item>
   </channel>
 </rss>
