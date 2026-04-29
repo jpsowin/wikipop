@@ -5,8 +5,16 @@
     <description>The most popular Wikipedia article, every day.</description>
     <link>https://jpsowin.github.io/wikipop/</link>
     <atom:link href="https://jpsowin.github.io/wikipop/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 28 Apr 2026 08:17:56 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 08:17:07 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Sabethes cyaneus</title>
+      <link>https://en.wikipedia.org/wiki/Sabethes_cyaneus</link>
+      <description>Sabethes (Sabethes) cyaneus is a species of mosquito native to Central America and South America. It is recognized for its striking iridescent blue scales and leg paddles, which are involved in courtship. The larvae are facultative predators, using their siphon to capture prey, often other mosquito larvae, in their aquatic habitats.</description>
+      <pubDate>Tue, 28 Apr 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Sabethes_cyaneus#2026-04-28</guid>
+      <category>Species of mosquito</category>
+    </item>
     <item>
       <title>Jaafar Jackson</title>
       <link>https://en.wikipedia.org/wiki/Jaafar_Jackson</link>
@@ -238,14 +246,6 @@
       <pubDate>Mon, 30 Mar 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Scott_Mills#2026-03-30</guid>
       <category>English radio DJ and television presenter (born 1973)</category>
-    </item>
-    <item>
-      <title>Avi Lewis</title>
-      <link>https://en.wikipedia.org/wiki/Avi_Lewis</link>
-      <description>Avram David &quot;Avi&quot; Lewis is a Canadian politician and filmmaker who has served as leader of the New Democratic Party (NDP) since 2026.</description>
-      <pubDate>Sun, 29 Mar 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Avi_Lewis#2026-03-29</guid>
-      <category>Canadian politician and filmmaker (born 1967)</category>
     </item>
   </channel>
 </rss>
