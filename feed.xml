@@ -5,8 +5,16 @@
     <description>The most popular Wikipedia article, every day.</description>
     <link>https://jpsowin.github.io/wikipop/</link>
     <atom:link href="https://jpsowin.github.io/wikipop/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 29 Apr 2026 08:17:07 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 08:17:51 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>2026 West Bengal Legislative Assembly election</title>
+      <link>https://en.wikipedia.org/wiki/2026_West_Bengal_Legislative_Assembly_election</link>
+      <description>Legislative Assembly elections were held in West Bengal on 23 and 29 April 2026 to elect all 294 members of the West Bengal Legislative Assembly. The votes will be counted and the results will be declared on 4 May 2026.</description>
+      <pubDate>Wed, 29 Apr 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/2026_West_Bengal_Legislative_Assembly_election#2026-04-29</guid>
+      <category>Election to the 18th Legislative Assembly of the Indian state of West Bengal</category>
+    </item>
     <item>
       <title>Sabethes cyaneus</title>
       <link>https://en.wikipedia.org/wiki/Sabethes_cyaneus</link>
@@ -238,14 +246,6 @@
       <pubDate>Tue, 31 Mar 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/2026_FIFA_World_Cup#2026-03-31</guid>
       <category>Soccer tournament in North America</category>
-    </item>
-    <item>
-      <title>Scott Mills</title>
-      <link>https://en.wikipedia.org/wiki/Scott_Mills</link>
-      <description>Scott Robert Mills is an English radio DJ, television presenter and occasional actor. He is best known for presenting the Scott Mills show on BBC Radio 1 from 2004 to 2022 and then, on BBC Radio 2, hosting the station&apos;s flagship breakfast show from January 2025 until his dismissal from the BBC in March 2026. He has also been a UK commentator for the semi-finals of the Eurovision Song Contest.</description>
-      <pubDate>Mon, 30 Mar 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Scott_Mills#2026-03-30</guid>
-      <category>English radio DJ and television presenter (born 1973)</category>
     </item>
   </channel>
 </rss>
