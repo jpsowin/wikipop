@@ -244,6 +244,14 @@ function buildFeaturedPage() {
     table { width: 100%; border-collapse: collapse; }
     th { text-align: left; padding: 8px 12px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); border-bottom: 1px solid var(--border); }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBPZDVN4FC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SBPZDVN4FC');
+  </script>
 </head>
 <body>
   <nav><a href="index.html" class="logo">Wiki<span>Pop</span></a></nav>

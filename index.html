@@ -504,6 +504,14 @@
       .footer-links { justify-content: center; flex-wrap: wrap; }
     }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBPZDVN4FC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SBPZDVN4FC');
+  </script>
 </head>
 <body>
   <nav>
@@ -752,6 +760,7 @@
 
     function shareArticle() {
       const url = window.location.href;
+      gtag('event', 'share', { method: navigator.share ? 'native' : 'clipboard', content_type: 'article' });
       if (navigator.share) {
         navigator.share({ title: "WikiPop", url });
       } else if (navigator.clipboard) {
@@ -787,6 +796,27 @@
         el.classList.remove('wiggle-animate');
         void el.offsetWidth; // trigger reflow to restart animation
         el.classList.add('wiggle-animate');
+      });
+    });
+
+    // GA event: email subscribe
+    document.querySelectorAll('.slanted-form').forEach(form => {
+      form.addEventListener('submit', () => {
+        gtag('event', 'sign_up', { method: 'email_subscribe' });
+      });
+    });
+
+    // GA event: Read on Wikipedia click
+    document.querySelectorAll('.wiki-link').forEach(link => {
+      link.addEventListener('click', () => {
+        gtag('event', 'click', { event_category: 'outbound', event_label: link.href });
+      });
+    });
+
+    // GA event: featured/obscure article click
+    document.querySelectorAll('.v2-featured-title, .v2-featured-readmore').forEach(link => {
+      link.addEventListener('click', () => {
+        gtag('event', 'click', { event_category: 'featured_article', event_label: link.href || link.textContent });
       });
     });
   </script>
