@@ -5,8 +5,16 @@
     <description>The most popular Wikipedia article, every day.</description>
     <link>https://jpsowin.github.io/wikipop/</link>
     <atom:link href="https://jpsowin.github.io/wikipop/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 30 Apr 2026 08:17:51 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 08:16:10 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>David Allan Coe</title>
+      <link>https://en.wikipedia.org/wiki/David_Allan_Coe</link>
+      <description>David Allan Coe was an American singer and songwriter. Coe took up music after spending much of his early life in reform schools and prisons, and first became notable for busking in Nashville. He initially played mostly in the blues style, before transitioning to country music, becoming a major part of the 1970s outlaw country scene. His biggest hits include &quot;You Never Even Called Me by My Name&quot;, &quot;Longhaired Redneck&quot;, &quot;The Ride&quot;, &quot;Mona Lisa Lost Her Smile&quot;, and &quot;She Used to Love Me a Lot&quot;.</description>
+      <pubDate>Thu, 30 Apr 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/David_Allan_Coe#2026-04-30</guid>
+      <category>American country musician (1939–2026)</category>
+    </item>
     <item>
       <title>2026 West Bengal Legislative Assembly election</title>
       <link>https://en.wikipedia.org/wiki/2026_West_Bengal_Legislative_Assembly_election</link>
@@ -238,14 +246,6 @@
       <pubDate>Wed, 01 Apr 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Artemis_II#2026-04-01</guid>
       <category>First crewed mission of the Artemis program</category>
-    </item>
-    <item>
-      <title>2026 FIFA World Cup</title>
-      <link>https://en.wikipedia.org/wiki/2026_FIFA_World_Cup</link>
-      <description>The 2026 FIFA World Cup will be the 23rd FIFA World Cup, the quadrennial international men&apos;s soccer championship contested by the national teams of the member associations of FIFA. The tournament will take place from June 11 to July 19, 2026. It will be jointly hosted by sixteen cities—eleven in the United States, three in Mexico, and two in Canada. The tournament will be the first FIFA World Cup to be hosted by three nations, and the first to include 48 teams, an expansion from 32.</description>
-      <pubDate>Tue, 31 Mar 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/2026_FIFA_World_Cup#2026-03-31</guid>
-      <category>Soccer tournament in North America</category>
     </item>
   </channel>
 </rss>
