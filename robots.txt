@@ -1,0 +1,6 @@
+# WikiPop — public archive of Wikipedia pageview data.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://wikipop.sowin.io/sitemap.xml

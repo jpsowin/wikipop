@@ -3,9 +3,16 @@
   <channel>
     <title>WikiPop</title>
     <description>The most popular Wikipedia article, every day.</description>
-    <link>https://jpsowin.github.io/wikipop/</link>
-    <atom:link href="https://jpsowin.github.io/wikipop/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 02 May 2026 08:03:26 GMT</lastBuildDate>
+    <link>https://wikipop.sowin.io/</link>
+    <atom:link href="https://wikipop.sowin.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <docs>https://www.rssboard.org/rss-specification</docs>
+    <image>
+      <url>https://wikipop.sowin.io/assets/og-default.png</url>
+      <title>WikiPop</title>
+      <link>https://wikipop.sowin.io/</link>
+    </image>
+    <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
+    <lastBuildDate>Sat, 02 May 2026 19:54:04 GMT</lastBuildDate>
     <language>en-us</language>
     <item>
       <title>The Devil Wears Prada 2</title>

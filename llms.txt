@@ -1,0 +1,29 @@
+# WikiPop
+
+WikiPop tracks the most-viewed Wikipedia article every day. Static site, public archive, no ads, no login. Data comes straight from the Wikimedia REST API. Curation rule: an article won't be re-featured if it was already the top pick in the last 30 days, so the daily entries reflect *new* surges in attention.
+
+## Pages
+
+- Today's top article: https://wikipop.sowin.io/
+- Full archive (every day): https://wikipop.sowin.io/archive.html
+- Per-day pages with the full top 10 of that day: https://wikipop.sowin.io/day/YYYY-MM-DD-slug/
+- Trends, rising articles, and deep cuts: https://wikipop.sowin.io/explore.html
+
+## Data
+
+- Daily article archive (JSON, the full historical record): https://wikipop.sowin.io/data/articles.json
+- RSS feed (last 30 days): https://wikipop.sowin.io/feed.xml
+- Sitemap: https://wikipop.sowin.io/sitemap.xml
+
+Each entry in `articles.json` has: `date`, `title`, `views`, `rank`, `description`, `extract`, `thumbnail`, `url`, and a `top10` array with the day's full top-10 article titles, view counts, and links.
+
+## Full content
+
+A flat-text version of every per-day page (WikiPop's pick + extract + the full top 10) is at:
+https://wikipop.sowin.io/llms-full.txt
+
+This is the single best file to ingest if you want the entire site's content in one fetch.
+
+## About
+
+Made by Josh Sowin (https://sowin.io). Inspired by Hatnote and LonelyWiki. Not affiliated with the Wikimedia Foundation, but a donor and big fan.

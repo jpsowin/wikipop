@@ -5,7 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WikiPop! — The Most Popular Wikipedia Article</title>
   <meta name="description" content="Every day, we feature the most popular Wikipedia article. Discover what the world is reading.">
+  <link rel="canonical" href="{{BASE_URL}}/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WikiPop">
+  <meta property="og:title" content="WikiPop — The Most Popular Wikipedia Article">
+  <meta property="og:description" content="Every day, the most-viewed Wikipedia article. A daily snapshot of what the world is reading.">
+  <meta property="og:url" content="{{BASE_URL}}/">
+  <meta property="og:image" content="{{BASE_URL}}/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WikiPop — The Most Popular Wikipedia Article">
+  <meta name="twitter:description" content="Every day, the most-viewed Wikipedia article.">
+  <meta name="twitter:image" content="{{BASE_URL}}/assets/og-default.png">
   <link rel="alternate" type="application/rss+xml" title="WikiPop RSS" href="feed.xml">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -364,9 +376,10 @@
       background: var(--white); border: var(--bw) solid var(--black);
       padding: 1rem 1.5rem; margin-top: 1.25rem;
     }
-    .archive-section h3 {
+    .archive-section h2 {
       font-family: "Bangers", cursive; font-size: clamp(1.4rem, 4vw, 1.8rem);
       color: var(--black); margin-bottom: 0.8rem; line-height: 1.1;
+      font-weight: normal;
     }
     .archive-table { width: 100%; border-collapse: collapse; }
     .archive-table th {
@@ -381,6 +394,15 @@
     .archive-date { color: #888; font-size: 0.78rem; white-space: nowrap; width: 60px; }
     .archive-title a { color: var(--black); text-decoration: none; font-weight: 600; }
     .archive-title a:hover { color: var(--red); }
+    .archive-day-link {
+      color: #aaa !important;
+      font-weight: 400 !important;
+      font-size: 0.7rem;
+      margin-left: 0.25rem;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+    .archive-day-link:hover { color: var(--red) !important; }
     .archive-category {
       color: #888; font-size: 0.72rem; white-space: nowrap;
       overflow: hidden; text-overflow: ellipsis; max-width: 200px;
@@ -400,9 +422,10 @@
       background: var(--white); border: var(--bw) solid var(--black);
       padding: 1rem 1.5rem; margin-top: 1.25rem;
     }
-    .faq-section h3 {
+    .faq-section h2 {
       font-family: "Bangers", cursive; font-size: clamp(1.4rem, 4vw, 1.8rem);
       color: var(--black); margin-bottom: 0.8rem; line-height: 1.1;
+      font-weight: normal;
     }
     .faq-item { margin-bottom: 1.25rem; }
     .faq-item:last-child { margin-bottom: 0; }
@@ -484,13 +507,14 @@
       .v2-featured-box { flex-direction: column-reverse; padding: 1.5rem 1rem; gap: 1rem; text-align: center; }
       .v2-featured-img { margin-right: 0; transform: none; width: 120px; height: 120px; }
 
-      .archive-section h3, .faq-section h3 { font-size: 1.8rem; }
+      .archive-section h2, .faq-section h2 { font-size: 1.8rem; }
       .archive-table td { font-size: 1.05rem; padding: 0.75rem 0; }
-      .archive-date { font-size: 0.95rem; width: auto; }
+      .archive-table td.archive-date { font-size: 0.95rem; width: auto; padding: 0.75rem 1rem 0.75rem 0; }
       .archive-title a { font-size: 1.05rem; }
       .archive-category { display: none; }
       .archive-views { font-size: 0.95rem; padding-left: 0.5rem; }
       .archive-more { font-size: 1.05rem; margin-top: 1rem; }
+      .archive-day-link { display: none; }
 
       footer { 
         flex-direction: column; 
@@ -512,11 +536,54 @@
     gtag('js', new Date());
     gtag('config', 'G-SBPZDVN4FC');
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "WikiPop",
+    "url": "{{BASE_URL}}/",
+    "description": "Every day, the most-viewed Wikipedia article."
+  }
+  </script>
+  {{TODAY_JSONLD}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "So what's this WikiPop thing?",
+        "acceptedAnswer": { "@type": "Answer", "text": "It's a proxy for what's going on in the world seen through the lens of Wikipedia. WikiPop compiles the most popular Wikipedia article each day and keeps an archive of it. There's a daily email and an RSS feed." }
+      },
+      {
+        "@type": "Question",
+        "name": "Wouldn't there be repeat articles some days?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yeah, that can happen. To keep things interesting, an article won't be featured if it was already the top article in the last 30 days." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you store this data in a database?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Actually, no! WikiPop runs entirely off a flat JSON file, a cron job, and static HTML." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you get the data?",
+        "acceptedAnswer": { "@type": "Answer", "text": "From the Wikimedia REST API." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you associated with Wikipedia?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No, but I'm an everyday user of it and a donor." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <nav>
     <a href="index.html" class="logo">Wiki<span>Pop!</span></a>
-    <button class="share-btn" onclick="shareArticle()">SHARE</button>
+    <button class="share-btn" onclick="shareArticle()" aria-label="Share this page">SHARE</button>
   </nav>
 
   <main>
@@ -539,7 +606,7 @@
     {{FEATURED_SECTION}}
 
     <div class="archive-section fade-up" style="display: {{ARCHIVE_DISPLAY}}">
-      <h3>WIKIPOPs BY DAY</h3>
+      <h2>WIKIPOPs BY DAY</h2>
       <table class="archive-table">
         <thead>
           <tr>
@@ -557,7 +624,7 @@
     </div>
 
     <div class="faq-section fade-up" id="faq">
-      <h3>FAQ</h3>
+      <h2>FAQ</h2>
       <dl>
         <div class="faq-item">
           <dt>So what's this WikiPop thing?</dt>

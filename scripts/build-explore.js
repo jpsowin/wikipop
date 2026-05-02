@@ -5,6 +5,9 @@ const https = require("https");
 const EXPLORE_FILE = path.join(__dirname, "..", "explore.html");
 const TEMPLATE_FILE = path.join(__dirname, "..", "template-explore.html");
 
+// Keep in sync with scripts/build.js BASE_URL constant.
+const BASE_URL = "https://wikipop.sowin.io";
+
 function httpGet(url) {
   return new Promise((resolve, reject) => {
     const doRequest = (reqUrl) => {
@@ -325,6 +328,7 @@ async function main() {
 
   const template = fs.readFileSync(TEMPLATE_FILE, "utf-8");
   const html = template
+    .replace(/\{\{BASE_URL\}\}/g, BASE_URL)
     .replace(/\{\{DATE\}\}/g, dateStr)
     .replace("{{TOP25_ROWS}}", top25Rows)
     .replace("{{MOVER_ROWS}}", moverRows)

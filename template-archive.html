@@ -3,217 +3,265 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Archive — WikiPop</title>
-  <meta name="description" content="Full archive of every article featured on WikiPop.">
+  <title>Archive — Every WikiPop, top to bottom</title>
+  <meta name="description" content="Browse every daily WikiPop. The most-viewed Wikipedia article for every day, with views and category.">
+  <link rel="canonical" href="{{BASE_URL}}/archive.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WikiPop">
+  <meta property="og:title" content="Archive — Every WikiPop, top to bottom">
+  <meta property="og:description" content="Browse every daily WikiPop. The most-viewed Wikipedia article for every day.">
+  <meta property="og:url" content="{{BASE_URL}}/archive.html">
+  <meta property="og:image" content="{{BASE_URL}}/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Archive — Every WikiPop, top to bottom">
+  <meta name="twitter:description" content="Browse every daily WikiPop.">
+  <meta name="twitter:image" content="{{BASE_URL}}/assets/og-default.png">
   <link rel="alternate" type="application/rss+xml" title="WikiPop RSS" href="feed.xml">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    *,
-    *::before,
-    *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg: #0f1117;
-      --bg-raised: #181a23;
-      --text: #c8cdd8;
-      --text-muted: #7a7f8e;
-      --text-bright: #eef0f5;
-      --accent: #f06449;
-      --accent-glow: rgba(240, 100, 73, 0.15);
-      --border: #2a2d3a;
-      --radius: 8px;
+      --red: #d00d00;
+      --yellow: #ffdf00;
+      --black: #111;
+      --white: #fdfcf3;
+      --cream: #f7f5eb;
+      --bw: 3px;
     }
 
-    :root.light {
-      --bg: #faf9f6;
-      --bg-raised: #ffffff;
-      --text: #4a4a4a;
-      --text-muted: #8a8a8a;
-      --text-bright: #1a1a1a;
-      --accent: #d94f3b;
-      --accent-glow: rgba(217, 79, 59, 0.1);
-      --border: #e0ddd6;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: "Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      transition: background-color 0.3s, color 0.3s;
+      font-family: "Instrument Sans", -apple-system, sans-serif;
+      background-color: var(--yellow);
+      background-image:
+        radial-gradient(circle, var(--red) 5px, transparent 5.5px),
+        radial-gradient(circle, var(--red) 5px, transparent 5.5px);
+      background-size: 19px 28.5px, 19px 28.5px;
+      background-position: 0 0, 9.5px 14.25px;
+      color: var(--black);
+      line-height: 1.6;
       min-height: 100vh;
     }
 
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      position: sticky; top: 1.5rem; z-index: 100;
+      padding: 0.8rem 1.5rem;
+      background: var(--white);
+      border: var(--bw) solid var(--black);
+      border-radius: 50px;
+      margin: 1.5rem auto 1.5rem;
+      width: calc(100% - 3rem);
       max-width: 760px;
-      margin: 0 auto;
-      padding: 1.25rem 1.5rem;
-      background: var(--bg);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      display: flex; justify-content: space-between; align-items: center;
+      box-shadow: 6px 6px 0 var(--black);
     }
-
     .logo {
-      font-family: "Fraunces", serif;
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--text-bright);
+      font-family: "Bangers", cursive; font-size: 2.2rem;
+      color: var(--black); text-decoration: none; line-height: 1;
+    }
+    .logo span { color: var(--red); }
+    .nav-back {
+      font-family: "Bangers", cursive; font-size: 1.1rem;
+      border: var(--bw) solid var(--black);
+      background: var(--white); color: var(--black);
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
       text-decoration: none;
-      letter-spacing: -0.02em;
     }
-
-    .logo span { color: var(--accent); }
-
-    .nav-controls {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .theme-toggle {
-      background: none;
-      border: 1px solid var(--border);
-      border-radius: 50%;
-      width: 36px;
-      height: 36px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      font-size: 1rem;
-      transition: color 0.2s, border-color 0.2s;
-    }
-
-    .theme-toggle:hover {
-      color: var(--text-bright);
-      border-color: var(--text-muted);
-    }
+    .nav-back:hover { background: var(--black); color: var(--white); }
 
     main {
       max-width: 760px;
       margin: 0 auto;
-      padding: 1rem 1.5rem 4rem;
+      padding: 0 1.5rem 2rem;
+      position: relative;
+      z-index: 2;
     }
 
-    h1 {
-      font-family: "Fraunces", serif;
-      font-size: clamp(1.5rem, 4vw, 2.25rem);
-      font-weight: 700;
-      color: var(--text-bright);
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.02em;
+    .speech-bubble-wrap {
+      margin: 2rem auto 2rem;
+      max-width: 580px;
+      position: relative; z-index: 2;
+    }
+    .speech-bubble {
+      background: var(--white);
+      border: 5px solid var(--black);
+      padding: 1.2rem 1.5rem 1.5rem;
+      position: relative;
+      transform: rotate(-3deg);
+      box-shadow: 0 0 0 1px var(--black), 10px 10px 0 var(--black);
+      outline: 1px solid transparent;
+    }
+    .speech-bubble h1 {
+      font-family: "Bangers", cursive;
+      color: var(--black);
+      margin: 0;
+      line-height: 0.92;
+      display: flex;
+      flex-direction: column;
+      letter-spacing: 0.01em;
+      font-weight: normal;
+    }
+    .speech-bubble h1 em {
+      color: var(--red);
+      font-style: normal;
+    }
+    .speech-bubble h1 .line1 {
+      font-size: clamp(1.4rem, 5vw, 2.4rem);
+      align-self: center;
+      text-align: center;
+    }
+    .speech-bubble h1 .line2 {
+      font-size: clamp(1.9rem, 7vw, 3.4rem);
+      align-self: center;
+      text-align: center;
+      letter-spacing: -0.01em;
+      line-height: 1;
+      margin-top: 0.1rem;
+    }
+    .speech-bubble h1 .line3 {
+      font-size: clamp(1.5rem, 5.5vw, 2.6rem);
+      align-self: center;
+      text-align: center;
+      margin-top: 0.1rem;
+    }
+    .bubble-footnote {
+      text-align: center;
+      font-size: 0.72rem;
+      color: #666;
+      margin-top: 0.9rem;
+      font-style: italic;
+      letter-spacing: 0.02em;
     }
 
-    .subtitle {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
+    .archive-panel {
+      background: var(--white);
+      border: 5px solid var(--black);
+      box-shadow: 8px 8px 0 var(--black);
+      padding: 1.5rem 1.75rem;
     }
 
-    .archive-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    .archive-table th {
+    .archive-table { width: 100%; border-collapse: collapse; }
+    .archive-table thead th {
       text-align: left;
-      font-size: 0.75rem;
+      font-size: 0.65rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--text-muted);
+      color: #888;
       padding: 0.5rem 0;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 2px solid var(--black);
+      font-weight: 700;
     }
-
-    .archive-table th:last-child {
-      text-align: right;
-    }
-
+    .archive-table thead th:last-child { text-align: right; }
     .archive-table td {
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.95rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 0.92rem;
+      vertical-align: baseline;
     }
+    .archive-table tbody tr:last-child td { border-bottom: none; }
 
     .archive-date {
-      color: var(--text-muted);
-      font-size: 0.85rem;
+      color: #888;
+      font-size: 0.78rem;
       white-space: nowrap;
-      width: 100px;
+      width: 60px;
+      padding-right: 0.75rem !important;
     }
-
     .archive-title a {
-      color: var(--text-bright);
+      color: var(--black);
       text-decoration: none;
-      transition: color 0.2s;
+      font-weight: 600;
     }
-
-    .archive-title a:hover {
-      color: var(--accent);
+    .archive-title a:hover { color: var(--red); }
+    .archive-wiki-link {
+      color: #bbb !important;
+      font-size: 0.78rem;
+      margin-left: 0.4rem;
+      text-decoration: none;
+      font-weight: 400 !important;
     }
-
+    .archive-wiki-link:hover { color: var(--red) !important; }
     .archive-category {
-      color: var(--text-muted);
-      font-size: 0.8rem;
+      color: #888;
+      font-size: 0.75rem;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       max-width: 200px;
+      padding-left: 1rem !important;
     }
-
     .archive-views {
       text-align: right;
-      color: var(--text-muted);
-      font-size: 0.85rem;
+      color: #555;
+      font-size: 0.82rem;
       font-variant-numeric: tabular-nums;
       white-space: nowrap;
+      padding-left: 1rem !important;
     }
+
+    .month-header td {
+      padding-top: 1.75rem !important;
+      padding-bottom: 0.5rem !important;
+      border-bottom: 2px solid var(--black) !important;
+      font-family: "Bangers", cursive;
+      font-size: 1.4rem;
+      color: var(--red);
+      letter-spacing: 0.02em;
+    }
+    .month-header:first-child td { padding-top: 0.5rem !important; }
+    .archive-table tbody tr.month-header + tr td { border-top: none; }
 
     footer {
+      background: var(--white);
+      border: var(--bw) solid var(--black);
+      border-radius: 50px;
+      margin: 2rem auto 3rem;
+      width: calc(100% - 3rem);
       max-width: 760px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 3rem;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: var(--text-muted);
-      font-size: 0.8rem;
+      padding: 0.8rem 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      color: var(--black); font-size: 0.85rem; font-weight: 700;
+      box-shadow: 6px 6px 0 var(--black);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
-
-    footer a {
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    footer a:hover { color: var(--text-bright); }
-
-    .footer-links {
-      display: flex;
-      gap: 1.25rem;
-    }
+    footer a { color: var(--black); text-decoration: none; }
+    footer a:hover { color: var(--red); }
+    .footer-links { display: flex; gap: 1.25rem; }
 
     @media (max-width: 600px) {
-      nav { padding: 1rem; }
-      main { padding: 1rem 1rem 3rem; }
-      .archive-date { width: auto; }
+      nav { padding: 0.6rem 1.2rem; width: calc(100% - 2rem); margin-top: 1rem; }
+      main { padding: 0 1rem 2rem; }
+      .speech-bubble-wrap { width: calc(100% - 30px); margin-left: 15px; }
+      .speech-bubble { padding: 0.9rem 1.2rem 1.1rem; transform: rotate(-2deg); box-shadow: 6px 6px 0 var(--black); }
+      .speech-bubble h1 .line1 { font-size: 7vw; white-space: nowrap; }
+      .speech-bubble h1 .line2 { font-size: 11vw; white-space: nowrap; }
+      .speech-bubble h1 .line3 { font-size: 8vw; margin-left: 0; text-align: center; white-space: nowrap; }
+
+      .archive-panel { padding: 1rem 1rem; }
+      .archive-table td { font-size: 1.05rem; padding: 0.7rem 0; }
+      .archive-table td.archive-date { font-size: 0.95rem; width: auto; padding: 0.7rem 1rem 0.7rem 0 !important; }
+      .archive-title a { font-size: 1.05rem; }
       .archive-category { display: none; }
-      footer { flex-direction: column; gap: 0.75rem; text-align: center; }
-      .footer-links { justify-content: center; }
+      .archive-views { font-size: 0.95rem; padding-left: 0.5rem !important; }
+      .archive-wiki-link { display: none; }
+      .month-header td { font-size: 1.6rem; padding-top: 1.5rem !important; }
+
+      footer {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+        border-radius: 20px;
+        padding: 1.25rem 1.2rem;
+        width: calc(100% - 2rem);
+      }
+      .footer-links { justify-content: center; flex-wrap: wrap; }
     }
   </style>
   <!-- Google tag (gtag.js) -->
@@ -224,60 +272,51 @@
     gtag('js', new Date());
     gtag('config', 'G-SBPZDVN4FC');
   </script>
+  {{ARCHIVE_JSONLD}}
 </head>
 <body>
   <nav>
-    <a href="index.html" class="logo">Wiki<span>Pop</span></a>
-    <div class="nav-controls">
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-        <span class="theme-icon">&#9790;</span>
-      </button>
-    </div>
+    <a href="index.html" class="logo">Wiki<span>Pop!</span></a>
+    <a href="index.html" class="nav-back">Today</a>
   </nav>
 
   <main>
-    <h1>Archive</h1>
-    <p class="subtitle">{{TOTAL_ARTICLES}} articles featured so far.</p>
+    <div class="speech-bubble-wrap">
+      <div class="speech-bubble">
+        <h1>
+          <span class="line1">The most popular</span>
+          <span class="line2"><em>Wikipedia article</em></span>
+          <span class="line3">every day of all time*</span>
+        </h1>
+        <p class="bubble-footnote">* at least since we've been tracking</p>
+      </div>
+    </div>
 
-    <table class="archive-table">
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Article</th>
-          <th>Category</th>
-          <th>Views</th>
-        </tr>
-      </thead>
-      <tbody>
-        {{ALL_ARCHIVE_ROWS}}
-      </tbody>
-    </table>
+    <div class="archive-panel">
+      <table class="archive-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Article</th>
+            <th>Category</th>
+            <th>Views</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ALL_ARCHIVE_ROWS}}
+        </tbody>
+      </table>
+    </div>
   </main>
 
   <footer>
     <span>&copy; {{CURRENT_YEAR}} WikiPop</span>
     <div class="footer-links">
       <a href="index.html">Today</a>
+      <a href="explore.html">Explore</a>
       <a href="changelog.html">Changelog</a>
       <a href="feed.xml">RSS</a>
-      <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
   </footer>
-
-  <script>
-    function toggleTheme() {
-      const root = document.documentElement;
-      const isLight = root.classList.toggle("light");
-      localStorage.setItem("theme", isLight ? "light" : "dark");
-      document.querySelector(".theme-icon").innerHTML = isLight ? "&#9728;" : "&#9790;";
-    }
-    (function () {
-      const saved = localStorage.getItem("theme");
-      if (saved === "light") {
-        document.documentElement.classList.add("light");
-        document.querySelector(".theme-icon").innerHTML = "&#9728;";
-      }
-    })();
-  </script>
 </body>
 </html>
