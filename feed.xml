@@ -5,8 +5,16 @@
     <description>The most popular Wikipedia article, every day.</description>
     <link>https://jpsowin.github.io/wikipop/</link>
     <atom:link href="https://jpsowin.github.io/wikipop/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 01 May 2026 08:16:10 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2026 08:03:26 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>The Devil Wears Prada 2</title>
+      <link>https://en.wikipedia.org/wiki/The_Devil_Wears_Prada_2</link>
+      <description>The Devil Wears Prada 2 is a 2026 American comedy drama film directed by David Frankel and written by Aline Brosh McKenna. A sequel to the 2006 film The Devil Wears Prada, it sees Meryl Streep, Anne Hathaway, Emily Blunt, and Stanley Tucci reprising their roles, with Justin Theroux and Kenneth Branagh joining as new additions.</description>
+      <pubDate>Fri, 01 May 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/The_Devil_Wears_Prada_2#2026-05-01</guid>
+      <category>2026 film by David Frankel</category>
+    </item>
     <item>
       <title>David Allan Coe</title>
       <link>https://en.wikipedia.org/wiki/David_Allan_Coe</link>
@@ -238,14 +246,6 @@
       <pubDate>Thu, 02 Apr 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Pam_Bondi#2026-04-02</guid>
       <category>American attorney and politician (born 1965)</category>
-    </item>
-    <item>
-      <title>Artemis II</title>
-      <link>https://en.wikipedia.org/wiki/Artemis_II</link>
-      <description>Artemis II is an ongoing United States spaceflight mission sending four astronauts on a flyby around the Moon. It launched from Kennedy Space Center on April 1, 2026. The ten-day mission is crewed by NASA astronauts Reid Wiseman, Victor Glover, and Christina Koch, along with Canadian Space Agency astronaut Jeremy Hansen. It is the second flight of the Space Launch System (SLS), the first crewed mission of the Orion spacecraft, and the first crewed mission beyond low Earth orbit since Apollo 17 in December 1972. The Orion spacecraft is currently past equidistance between the Earth and Moon.</description>
-      <pubDate>Wed, 01 Apr 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Artemis_II#2026-04-01</guid>
-      <category>First crewed mission of the Artemis program</category>
     </item>
   </channel>
 </rss>
