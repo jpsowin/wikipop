@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sat, 02 May 2026 19:54:04 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 08:12:28 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Spirit Airlines</title>
+      <link>https://en.wikipedia.org/wiki/Spirit_Airlines</link>
+      <description>Spirit Airlines, Inc. was an American ultralow-cost airline headquartered in Dania Beach, Florida, in the Miami metropolitan area. The airline operated scheduled flights throughout the United States, the Caribbean, and Latin America. In 2023, it was the seventh-largest passenger carrier in North America and the region’s largest ultralow-cost carrier.</description>
+      <pubDate>Sat, 02 May 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Spirit_Airlines#2026-05-02</guid>
+      <category>US ultralow-cost airline (1964–2026)</category>
+    </item>
     <item>
       <title>The Devil Wears Prada 2</title>
       <link>https://en.wikipedia.org/wiki/The_Devil_Wears_Prada_2</link>
@@ -245,14 +253,6 @@
       <pubDate>Fri, 03 Apr 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Good_Friday#2026-04-03</guid>
       <category>Christian holiday</category>
-    </item>
-    <item>
-      <title>Pam Bondi</title>
-      <link>https://en.wikipedia.org/wiki/Pam_Bondi</link>
-      <description>Pamela Jo Bondi is an American attorney and politician who served as the 87th United States attorney general from February 2025 to April 2026. A member of the Republican Party, she served as the 37th attorney general of Florida from 2011 to 2019.</description>
-      <pubDate>Thu, 02 Apr 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Pam_Bondi#2026-04-02</guid>
-      <category>American attorney and politician (born 1965)</category>
     </item>
   </channel>
 </rss>
