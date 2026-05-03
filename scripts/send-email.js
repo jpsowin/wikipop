@@ -119,7 +119,7 @@ function buildEmailHtml(article, recentArticles, featured) {
 <div style="max-width:560px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1a1a1a;">
 
   <div style="text-align:center;padding:20px 0 12px;">
-    <a href="https://wikipop.me" style="text-decoration:none;">
+    <a href="https://wikipop.sowin.io" style="text-decoration:none;">
       <span style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#1a1a1a;">Wiki</span><span style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#c1272d;">Pop</span>
     </a>
   </div>
@@ -182,11 +182,11 @@ function buildEmailHtml(article, recentArticles, featured) {
 
   <div style="border-top:1px solid #e5e5e5;margin-top:24px;padding-top:16px;text-align:center;">
     <p style="font-size:12px;color:#aaa;margin:0;">
-      <a href="https://wikipop.me" style="color:#888;text-decoration:none;">wikipop.me</a>
+      <a href="https://wikipop.sowin.io" style="color:#888;text-decoration:none;">wikipop.sowin.io</a>
       &nbsp;&middot;&nbsp;
-      <a href="https://wikipop.me/explore.html" style="color:#888;text-decoration:none;">Explore</a>
+      <a href="https://wikipop.sowin.io/explore.html" style="color:#888;text-decoration:none;">Explore</a>
       &nbsp;&middot;&nbsp;
-      <a href="https://wikipop.me/archive.html" style="color:#888;text-decoration:none;">Archive</a>
+      <a href="https://wikipop.sowin.io/archive.html" style="color:#888;text-decoration:none;">Archive</a>
     </p>
   </div>
 
