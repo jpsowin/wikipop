@@ -479,9 +479,8 @@ function buildArchivePage(articles) {
     "name": "WikiPop Archive — recent days",
     "url": `${BASE_URL}/archive.html`,
     "numberOfItems": recentForLd.length,
-    "itemListElement": recentForLd.map((a, i) => ({
+    "itemListElement": recentForLd.map((a) => ({
       "@type": "ListItem",
-      "position": i + 1,
       "url": dayAbsoluteUrl(a),
       "name": `${a.title.replace(/_/g, " ")} — ${formatDate(a.date)}`
     }))
@@ -624,9 +623,8 @@ function buildDayPage(article, prevArticle, nextArticle, obscureEntry) {
     "name": `Top ${top10.length} Wikipedia articles on ${formattedDate}`,
     "url": canonicalUrl,
     "numberOfItems": top10.length,
-    "itemListElement": top10.map((t, i) => ({
+    "itemListElement": top10.map((t) => ({
       "@type": "ListItem",
-      "position": i + 1,
       "url": t.url,
       "name": t.title.replace(/_/g, " ")
     }))
@@ -899,9 +897,9 @@ async function processDate(date, articles) {
 
   let topArticles;
   try {
-    topArticles = await fetchTopArticles(date);
+    topArticles = await fetchWithRetry(() => fetchTopArticles(date), `${dateStr} top`);
   } catch (err) {
-    console.log(`  ${dateStr}: API error (${err.message}), skipping.`);
+    console.log(`  ${dateStr}: API error after retries (${err.message}), skipping.`);
     return false;
   }
 
