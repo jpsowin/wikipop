@@ -79,6 +79,26 @@ async function fetchSummary(title) {
   }
 }
 
+// Retry wrapper with exponential backoff. Long pause on 429 (rate limited).
+// Mirrors scripts/build.js so behavior stays consistent across the two builders.
+async function fetchWithRetry(fn, label, maxAttempts = 4) {
+  let lastErr;
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      return await fn();
+    } catch (err) {
+      lastErr = err;
+      const is429 = /HTTP 429/.test(err.message || "");
+      const delay = is429 ? 60000 : 2000 * attempt;
+      if (attempt < maxAttempts) {
+        console.log(`  ${label}: ${err.message}, retrying in ${delay/1000}s (attempt ${attempt}/${maxAttempts})`);
+        await new Promise((r) => setTimeout(r, delay));
+      }
+    }
+  }
+  throw lastErr;
+}
+
 function formatDateShort(date) {
   const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
   return `${months[date.getUTCMonth()]} ${date.getUTCDate()}`;
@@ -240,7 +260,10 @@ async function main() {
     const results = await Promise.all(
       batch.map(async (country) => {
         try {
-          const articles = await fetchTop(yesterday, country.project);
+          const articles = await fetchWithRetry(
+            () => fetchTop(yesterday, country.project),
+            `${country.name} top`
+          );
           const top5 = articles.slice(0, 5);
           let enMap = new Map();
           if (country.lang !== "en") {
