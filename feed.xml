@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Tue, 05 May 2026 18:29:31 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 08:18:13 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Cinco de Mayo</title>
+      <link>https://en.wikipedia.org/wiki/Cinco_de_Mayo</link>
+      <description>Cinco de Mayo is an annual celebration held on May 5 to celebrate Mexico&apos;s victory over the Second French Empire at the Battle of Puebla in 1862, led by General Ignacio Zaragoza. Zaragoza died months after the battle from an illness, however, and a larger French force ultimately defeated the Mexican army at the Second Battle of Puebla and then occupied Mexico City. Following the end of the American Civil War in 1865, the United States began lending money and guns to the Mexican Liberals, pushing France and Mexican Conservatives to the edge of defeat. At the opening of the French chambers in January 1866, Napoleon III announced that he would withdraw French troops from Mexico. In reply to a French request for American neutrality, the American secretary of state William H. Seward replied that French withdrawal from Mexico should be unconditional.</description>
+      <pubDate>Tue, 05 May 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Cinco_de_Mayo#2026-05-05</guid>
+      <category>Annual celebration held on May 5</category>
+    </item>
     <item>
       <title>Vijay (actor)</title>
       <link>https://en.wikipedia.org/wiki/Vijay_(actor)</link>
@@ -245,14 +253,6 @@
       <pubDate>Mon, 06 Apr 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Michael_Malone#2026-04-06</guid>
       <category>American basketball coach (born 1971)</category>
-    </item>
-    <item>
-      <title>Lauren Betts</title>
-      <link>https://en.wikipedia.org/wiki/Lauren_Betts</link>
-      <description>Lauren Marie Betts is an American college basketball player for the UCLA Bruins of the Big Ten Conference. She played for Grandview High School in Aurora, Colorado, where she was ranked as the number one recruit in her class by ESPN. Betts started her college career with the Stanford Cardinal before transferring to UCLA after one season. She has twice been named a first-team All-American with the Bruins. She led UCLA to a national championship in 2026, when she was named the NCAA tournament Most Outstanding Player (MOP).</description>
-      <pubDate>Sun, 05 Apr 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Lauren_Betts#2026-04-05</guid>
-      <category>American basketball player (born 2003)</category>
     </item>
   </channel>
 </rss>

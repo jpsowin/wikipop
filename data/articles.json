@@ -39240,5 +39240,88 @@
         "url": "https://en.wikipedia.org/wiki/2021_West_Bengal_Legislative_Assembly_election"
       }
     ]
+  },
+  {
+    "date": "2026-05-05",
+    "title": "Cinco_de_Mayo",
+    "views": 313093,
+    "rank": 7,
+    "type": "standard",
+    "extract": "Cinco de Mayo is an annual celebration held on May 5 to celebrate Mexico's victory over the Second French Empire at the Battle of Puebla in 1862, led by General Ignacio Zaragoza. Zaragoza died months after the battle from an illness, however, and a larger French force ultimately defeated the Mexican army at the Second Battle of Puebla and then occupied Mexico City. Following the end of the American Civil War in 1865, the United States began lending money and guns to the Mexican Liberals, pushing France and Mexican Conservatives to the edge of defeat. At the opening of the French chambers in January 1866, Napoleon III announced that he would withdraw French troops from Mexico. In reply to a French request for American neutrality, the American secretary of state William H. Seward replied that French withdrawal from Mexico should be unconditional.",
+    "description": "Annual celebration held on May 5",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Batalla_de_Puebla.png/330px-Batalla_de_Puebla.png",
+    "url": "https://en.wikipedia.org/wiki/Cinco_de_Mayo",
+    "top10": [
+      {
+        "rank": 3,
+        "title": "Vijay_(actor)",
+        "views": 519672,
+        "description": "Indian politician and actor (born 1974)",
+        "url": "https://en.wikipedia.org/wiki/Vijay_(actor)"
+      },
+      {
+        "rank": 4,
+        "title": "2026_Tamil_Nadu_Legislative_Assembly_election",
+        "views": 428438,
+        "description": "Election to the legislative assembly of Tamil Nadu",
+        "url": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+      },
+      {
+        "rank": 5,
+        "title": "2026_West_Bengal_Legislative_Assembly_election",
+        "views": 358349,
+        "description": "Election to the 18th Legislative Assembly of the Indian state of West Bengal",
+        "url": "https://en.wikipedia.org/wiki/2026_West_Bengal_Legislative_Assembly_election"
+      },
+      {
+        "rank": 7,
+        "title": "Cinco_de_Mayo",
+        "views": 313093,
+        "description": "Annual celebration held on May 5",
+        "url": "https://en.wikipedia.org/wiki/Cinco_de_Mayo"
+      },
+      {
+        "rank": 8,
+        "title": "Chief_Minister_of_Tamil_Nadu",
+        "views": 213416,
+        "description": "Leader of the executive branch of Government of Tamil Nadu",
+        "url": "https://en.wikipedia.org/wiki/Chief_Minister_of_Tamil_Nadu"
+      },
+      {
+        "rank": 9,
+        "title": "Tamilaga_Vettri_Kazhagam",
+        "views": 199583,
+        "description": "Indian political party",
+        "url": "https://en.wikipedia.org/wiki/Tamilaga_Vettri_Kazhagam"
+      },
+      {
+        "rank": 11,
+        "title": "Michael_Jackson",
+        "views": 181792,
+        "description": "American singer (1958–2009)",
+        "url": "https://en.wikipedia.org/wiki/Michael_Jackson"
+      },
+      {
+        "rank": 12,
+        "title": "Mamata_Banerjee",
+        "views": 179356,
+        "description": "Chief Minister of West Bengal since 2011",
+        "url": "https://en.wikipedia.org/wiki/Mamata_Banerjee"
+      },
+      {
+        "rank": 13,
+        "title": "Orthohantavirus",
+        "views": 166520,
+        "description": "Genus of viruses",
+        "url": "https://en.wikipedia.org/wiki/Orthohantavirus"
+      },
+      {
+        "rank": 14,
+        "title": "The_Odyssey_(2026_film)",
+        "views": 148923,
+        "description": "Upcoming film by Christopher Nolan",
+        "url": "https://en.wikipedia.org/wiki/The_Odyssey_(2026_film)"
+      }
+    ]
   }
 ]
