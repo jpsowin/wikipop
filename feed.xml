@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Wed, 06 May 2026 08:18:13 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2026 08:18:38 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Ted Turner</title>
+      <link>https://en.wikipedia.org/wiki/Ted_Turner</link>
+      <description>Robert Edward Turner III was an American businessman, television producer, media proprietor and philanthropist. He founded CNN, the first 24-hour cable news channel. In addition, he founded WTBS, which pioneered the superstation concept in cable television, as well as television network TNT.</description>
+      <pubDate>Wed, 06 May 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Ted_Turner#2026-05-06</guid>
+      <category>American media mogul (1938–2026)</category>
+    </item>
     <item>
       <title>Cinco de Mayo</title>
       <link>https://en.wikipedia.org/wiki/Cinco_de_Mayo</link>
@@ -245,14 +253,6 @@
       <pubDate>Tue, 07 Apr 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Dusty_May#2026-04-07</guid>
       <category>American basketball coach (born 1976)</category>
-    </item>
-    <item>
-      <title>Michael Malone</title>
-      <link>https://en.wikipedia.org/wiki/Michael_Malone</link>
-      <description>Michael Malone is an American basketball coach who is the head coach of the North Carolina Tar Heels men&apos;s basketball team. He previously coached in the National Basketball Association (NBA), where he was the head coach of the Sacramento Kings from 2013 to 2014 and the Denver Nuggets from 2015 to 2025. With the Nuggets, Malone won the 2023 NBA Finals, the franchise&apos;s first championship.</description>
-      <pubDate>Mon, 06 Apr 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Michael_Malone#2026-04-06</guid>
-      <category>American basketball coach (born 1971)</category>
     </item>
   </channel>
 </rss>
