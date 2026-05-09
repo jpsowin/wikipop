@@ -39489,5 +39489,88 @@
         "url": "https://en.wikipedia.org/wiki/Mortal_Kombat_II_(film)"
       }
     ]
+  },
+  {
+    "date": "2026-05-08",
+    "title": "David_Attenborough",
+    "views": 788980,
+    "rank": 3,
+    "type": "standard",
+    "extract": "Sir David Frederick Attenborough is an English broadcaster, natural historian, conservationist, writer, producer and narrator. His presenting career began as host of Zoo Quest in 1954, and has spanned eight decades; it includes the nine documentary series forming The Life Collection, Natural World, Wildlife on One, the Planet Earth franchise, The Blue Planet and Frozen Planet. He is the only person to have won BAFTA Awards in black-and-white, colour, high-definition, 3D and 4K resolution. Over his life, he has collected dozens of honorary degrees and awards, including three Primetime Emmy Awards for Outstanding Narrator and one Daytime Emmy Award for Outstanding Daytime Personality – Non-Daily.",
+    "description": "English broadcaster and natural historian (born 1926)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/1/14/B%C3%A6rekraftsprisen_2018_%28cropped2%29.jpg",
+    "url": "https://en.wikipedia.org/wiki/David_Attenborough",
+    "top10": [
+      {
+        "rank": 3,
+        "title": "David_Attenborough",
+        "views": 788980,
+        "description": "English broadcaster and natural historian (born 1926)",
+        "url": "https://en.wikipedia.org/wiki/David_Attenborough"
+      },
+      {
+        "rank": 4,
+        "title": "2026_United_Kingdom_local_elections",
+        "views": 361227,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/2026_United_Kingdom_local_elections"
+      },
+      {
+        "rank": 6,
+        "title": "Orthohantavirus",
+        "views": 296006,
+        "description": "Genus of viruses",
+        "url": "https://en.wikipedia.org/wiki/Orthohantavirus"
+      },
+      {
+        "rank": 7,
+        "title": "ShinyHunters",
+        "views": 295250,
+        "description": "Black-hat criminal hacker group",
+        "url": "https://en.wikipedia.org/wiki/ShinyHunters"
+      },
+      {
+        "rank": 8,
+        "title": "Mortal_Kombat_II_(film)",
+        "views": 203695,
+        "description": "2026 film by Simon McQuoid",
+        "url": "https://en.wikipedia.org/wiki/Mortal_Kombat_II_(film)"
+      },
+      {
+        "rank": 9,
+        "title": "2026_Tamil_Nadu_Legislative_Assembly_election",
+        "views": 199082,
+        "description": "Election to the legislative assembly of Tamil Nadu",
+        "url": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+      },
+      {
+        "rank": 10,
+        "title": "Suvendu_Adhikari",
+        "views": 195236,
+        "description": "Chief Minister of West Bengal since 2026",
+        "url": "https://en.wikipedia.org/wiki/Suvendu_Adhikari"
+      },
+      {
+        "rank": 11,
+        "title": "Reform_UK",
+        "views": 172549,
+        "description": "Political party in the United Kingdom",
+        "url": "https://en.wikipedia.org/wiki/Reform_UK"
+      },
+      {
+        "rank": 12,
+        "title": "Vijay_(actor)",
+        "views": 169833,
+        "description": "Indian actor and politician (born 1974)",
+        "url": "https://en.wikipedia.org/wiki/Vijay_(actor)"
+      },
+      {
+        "rank": 13,
+        "title": "Richard_Attenborough",
+        "views": 166762,
+        "description": "English actor, director, and producer (1923–2014)",
+        "url": "https://en.wikipedia.org/wiki/Richard_Attenborough"
+      }
+    ]
   }
 ]
