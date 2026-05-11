@@ -125,12 +125,15 @@
     }
     .speech-bubble {
       background: var(--white);
-      border: 5px solid var(--black);
+      border: 6px solid var(--black);
       padding: 1.2rem 1.5rem 1.5rem;
       position: relative;
-      transform: rotate(-6deg);
-      box-shadow: 0 0 0 1px var(--black), 12px 12px 0 var(--black);
+      transform: rotate(-6deg) translateZ(0);
+      box-shadow: 12px 12px 0 var(--black);
       outline: 1px solid transparent;
+      will-change: transform;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
     }
     /* Tail - outer (black) */
     .speech-bubble::after {
@@ -591,6 +594,15 @@
 
     <div class="fade-up">
       <div class="changelog-panel">
+        <div class="changelog-entry">
+          <div class="changelog-date">May 11, 2026</div>
+          <div class="changelog-content">
+            <ul>
+              <li><strong>Design Fix:</strong> <a href="https://www.abrahampiper.com/" target="_blank" rel="noopener noreferrer">Abraham</a> pointed out an issue with the large speech bubble on some browsers, fixed!</li>
+            </ul>
+          </div>
+        </div>
+
         <div class="changelog-entry">
           <div class="changelog-date">May 2, 2026</div>
           <div class="changelog-content">
