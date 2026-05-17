@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sat, 16 May 2026 08:15:06 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 08:17:20 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Eurovision Song Contest 2026</title>
+      <link>https://en.wikipedia.org/wiki/Eurovision_Song_Contest_2026</link>
+      <description>The Eurovision Song Contest 2026 was the 70th edition of the Eurovision Song Contest. It consisted of two semi-finals on 12 and 14 May and a final on 16 May 2026, held at Wiener Stadthalle in Vienna, Austria, and presented by Victoria Swarovski and Michael Ostrowski, with Emily Busvine acting as the green room host. It was organised by the European Broadcasting Union (EBU) and host broadcaster Österreichischer Rundfunk (ORF), which staged the event after winning the 2025 contest for Austria with the song &quot;Wasted Love&quot; by JJ.</description>
+      <pubDate>Sat, 16 May 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Eurovision_Song_Contest_2026#2026-05-16</guid>
+      <category>International song competition</category>
+    </item>
     <item>
       <title>Iceman (Drake album)</title>
       <link>https://en.wikipedia.org/wiki/Iceman_(Drake_album)</link>
@@ -245,14 +253,6 @@
       <pubDate>Fri, 17 Apr 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/D4vd#2026-04-17</guid>
       <category>American singer-songwriter (born 2005)</category>
-    </item>
-    <item>
-      <title>Justin Fairfax</title>
-      <link>https://en.wikipedia.org/wiki/Justin_Fairfax</link>
-      <description>Justin Edward Fairfax was an American lawyer and politician who served as the 41st lieutenant governor of Virginia from 2018 to 2022. A member of the Democratic Party, he was the second African American elected statewide in Virginia, following Douglas Wilder. In 2019, he faced sexual assault allegations dating to 2000 and 2004, which he denied.</description>
-      <pubDate>Thu, 16 Apr 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Justin_Fairfax#2026-04-16</guid>
-      <category>Lieutenant Governor of Virginia from 2018 to 2022</category>
     </item>
   </channel>
 </rss>
