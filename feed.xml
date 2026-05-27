@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Tue, 26 May 2026 08:42:59 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 08:45:00 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Jalen Brunson</title>
+      <link>https://en.wikipedia.org/wiki/Jalen_Brunson</link>
+      <description>Jalen Marquis Brunson is an American professional basketball player for the New York Knicks of the National Basketball Association (NBA). The son of former NBA guard Rick Brunson, he was selected 33rd overall in the 2018 NBA draft by the Dallas Mavericks and played his first four seasons in the NBA with them. Brunson also played college basketball for the Villanova Wildcats, earning national player of the year honors as a junior and winning two national championships.</description>
+      <pubDate>Tue, 26 May 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Jalen_Brunson#2026-05-26</guid>
+      <category>American basketball player (born 1996)</category>
+    </item>
     <item>
       <title>Memorial Day</title>
       <link>https://en.wikipedia.org/wiki/Memorial_Day</link>
@@ -245,14 +253,6 @@
       <pubDate>Sun, 26 Apr 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Michael_Jackson#2026-04-26</guid>
       <category>American singer (1958–2009)</category>
-    </item>
-    <item>
-      <title>Michael (2026 film)</title>
-      <link>https://en.wikipedia.org/wiki/Michael_(2026_film)</link>
-      <description>Michael is a 2026 American biographical film directed by Antoine Fuqua and written by John Logan. It follows the life of the American singer Michael Jackson, covering his involvement in the Jackson 5 in the 1960s to the 1980s Bad tour. Jackson is portrayed by his nephew Jaafar Jackson and as a child by Juliano Krue Valdi, both in their film debuts. The supporting cast includes Nia Long, KeiLyn Durrel Jones, Laura Harrier, Jessica Sula, Mike Myers, Miles Teller and Colman Domingo.</description>
-      <pubDate>Sat, 25 Apr 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Michael_(2026_film)#2026-04-25</guid>
-      <category>Biographical film by Antoine Fuqua</category>
     </item>
   </channel>
 </rss>
