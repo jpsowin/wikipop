@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Wed, 27 May 2026 08:45:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2026 08:46:01 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Ken Paxton</title>
+      <link>https://en.wikipedia.org/wiki/Ken_Paxton</link>
+      <description>Warren Kenneth Paxton Jr. is an American politician and lawyer who has served as the attorney general of Texas since 2015. A member of the Republican Party, he is the Republican nominee in the U.S. Senate election in Texas in 2026.</description>
+      <pubDate>Wed, 27 May 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Ken_Paxton#2026-05-27</guid>
+      <category>American politician and lawyer (born 1962)</category>
+    </item>
     <item>
       <title>Jalen Brunson</title>
       <link>https://en.wikipedia.org/wiki/Jalen_Brunson</link>
@@ -245,14 +253,6 @@
       <pubDate>Mon, 27 Apr 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Jaafar_Jackson#2026-04-27</guid>
       <category>American singer and actor (born 1996)</category>
-    </item>
-    <item>
-      <title>Michael Jackson</title>
-      <link>https://en.wikipedia.org/wiki/Michael_Jackson</link>
-      <description>Michael Joseph Jackson was an American singer, songwriter, dancer, and philanthropist. Dubbed the &quot;King of Pop&quot;, he is widely regarded as one of the most culturally significant figures of the 20th century. Over a four-decade career, his musical achievements broke American racial barriers and made him a dominant figure worldwide. Through his songs, concerts, and fashion, he proliferated visual performance for artists in popular music, popularizing street dance moves such as the moonwalk, the robot, and the anti-gravity lean. Jackson is often deemed the greatest entertainer of all time.</description>
-      <pubDate>Sun, 26 Apr 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Michael_Jackson#2026-04-26</guid>
-      <category>American singer (1958–2009)</category>
     </item>
   </channel>
 </rss>
