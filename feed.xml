@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Thu, 04 Jun 2026 08:46:54 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 08:45:49 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Marjane Satrapi</title>
+      <link>https://en.wikipedia.org/wiki/Marjane_Satrapi</link>
+      <description>Marjane Satrapi was an Iranian and French graphic novelist, film director, and children&apos;s book author. Her best-known works include the graphic novel Persepolis and its film adaptation; the graphic novel Chicken with Plums; Woman, Life, Freedom; and the Marie Curie biopic Radioactive.</description>
+      <pubDate>Thu, 04 Jun 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Marjane_Satrapi#2026-06-04</guid>
+      <category>French and Iranian author and director (1969–2026)</category>
+    </item>
     <item>
       <title>Peabo Bryson</title>
       <link>https://en.wikipedia.org/wiki/Peabo_Bryson</link>
@@ -245,14 +253,6 @@
       <pubDate>Wed, 06 May 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Ted_Turner#2026-05-06</guid>
       <category>American media mogul (1938–2026)</category>
-    </item>
-    <item>
-      <title>Cinco de Mayo</title>
-      <link>https://en.wikipedia.org/wiki/Cinco_de_Mayo</link>
-      <description>Cinco de Mayo is an annual celebration held on May 5 to celebrate Mexico&apos;s victory over the Second French Empire at the Battle of Puebla in 1862, led by General Ignacio Zaragoza. Zaragoza died months after the battle from an illness, however, and a larger French force ultimately defeated the Mexican army at the Second Battle of Puebla and then occupied Mexico City. Following the end of the American Civil War in 1865, the United States began lending money and guns to the Mexican Liberals, pushing France and Mexican Conservatives to the edge of defeat. At the opening of the French chambers in January 1866, Napoleon III announced that he would withdraw French troops from Mexico. In reply to a French request for American neutrality, the American secretary of state William H. Seward replied that French withdrawal from Mexico should be unconditional.</description>
-      <pubDate>Tue, 05 May 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Cinco_de_Mayo#2026-05-05</guid>
-      <category>Annual celebration held on May 5</category>
     </item>
   </channel>
 </rss>
