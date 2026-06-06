@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Fri, 05 Jun 2026 08:45:49 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 08:18:54 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Anthony Head</title>
+      <link>https://en.wikipedia.org/wiki/Anthony_Head</link>
+      <description>Anthony Stewart Head was an English actor and singer. Primarily a performer in musical theatre, he rose to fame in the UK in the 1980s following his role in the Gold Blend couple television advertisements for Nescafé, which led to major roles in several television series.</description>
+      <pubDate>Fri, 05 Jun 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Anthony_Head#2026-06-05</guid>
+      <category>English actor (1954–2026)</category>
+    </item>
     <item>
       <title>Marjane Satrapi</title>
       <link>https://en.wikipedia.org/wiki/Marjane_Satrapi</link>
@@ -245,14 +253,6 @@
       <pubDate>Thu, 07 May 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Orthohantavirus#2026-05-07</guid>
       <category>Genus of viruses</category>
-    </item>
-    <item>
-      <title>Ted Turner</title>
-      <link>https://en.wikipedia.org/wiki/Ted_Turner</link>
-      <description>Robert Edward Turner III was an American businessman, television producer, media proprietor and philanthropist. He founded CNN, the first 24-hour cable news channel. In addition, he founded WTBS, which pioneered the superstation concept in cable television, as well as television network TNT.</description>
-      <pubDate>Wed, 06 May 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Ted_Turner#2026-05-06</guid>
-      <category>American media mogul (1938–2026)</category>
     </item>
   </channel>
 </rss>
