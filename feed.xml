@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sat, 13 Jun 2026 08:33:59 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 08:44:53 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Folarin Balogun</title>
+      <link>https://en.wikipedia.org/wiki/Folarin_Balogun</link>
+      <description>Folarin Jerry Balogun is a professional soccer player who plays as a striker for Ligue 1 club Monaco and the United States national team.</description>
+      <pubDate>Sat, 13 Jun 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Folarin_Balogun#2026-06-13</guid>
+      <category>Professional soccer player (born 2001)</category>
+    </item>
     <item>
       <title>David Hockney</title>
       <link>https://en.wikipedia.org/wiki/David_Hockney</link>
@@ -245,14 +253,6 @@
       <pubDate>Fri, 15 May 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Iceman_(Drake_album)#2026-05-15</guid>
       <category>2026 studio album by Drake</category>
-    </item>
-    <item>
-      <title>Wes Streeting</title>
-      <link>https://en.wikipedia.org/wiki/Wes_Streeting</link>
-      <description>Wesley Paul William Streeting is a British politician who served as Secretary of State for Health and Social Care from 2024 until his resignation in May 2026. A member of the Labour Party, he has been Member of Parliament (MP) for Ilford North since 2015.</description>
-      <pubDate>Thu, 14 May 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Wes_Streeting#2026-05-14</guid>
-      <category>British politician (born 1983)</category>
     </item>
   </channel>
 </rss>
