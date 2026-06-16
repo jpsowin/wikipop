@@ -42643,5 +42643,88 @@
         "url": "https://en.wikipedia.org/wiki/Nestory_Irankunda"
       }
     ]
+  },
+  {
+    "date": "2026-06-15",
+    "title": "Cape_Verde",
+    "views": 1232812,
+    "rank": 3,
+    "type": "standard",
+    "extract": "Cape Verde, in Portuguese Cabo Verde, in Cape Verdean Creole Kabu Verdi, officially the Republic of Cabo Verde, is an archipelagic country in the central Atlantic Ocean off the coast of West Africa. It consists of ten volcanic islands with a combined land area of about 4,033 square kilometres (1,557 sq mi). These islands lie between 600 and 850 kilometres west of Cap-Vert, the westernmost point of continental Africa, after which they are named. Cape Verde forms part of the Macaronesia ecoregion, along with the Azores, the Canary Islands, Madeira and the Savage Isles.",
+    "description": "Island country in West Africa",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Cape_Verde.svg/330px-Flag_of_Cape_Verde.svg.png",
+    "url": "https://en.wikipedia.org/wiki/Cape_Verde",
+    "top10": [
+      {
+        "rank": 2,
+        "title": "Oliver_Tree",
+        "views": 1495154,
+        "description": "American musician (1993–2026)",
+        "url": "https://en.wikipedia.org/wiki/Oliver_Tree"
+      },
+      {
+        "rank": 3,
+        "title": "Cape_Verde",
+        "views": 1232812,
+        "description": "Island country in West Africa",
+        "url": "https://en.wikipedia.org/wiki/Cape_Verde"
+      },
+      {
+        "rank": 5,
+        "title": "2026_FIFA_World_Cup",
+        "views": 666582,
+        "description": "International men's soccer tournament in North America",
+        "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+      },
+      {
+        "rank": 7,
+        "title": "UFC_Freedom_250",
+        "views": 503558,
+        "description": "2026 mixed martial arts event",
+        "url": "https://en.wikipedia.org/wiki/UFC_Freedom_250"
+      },
+      {
+        "rank": 8,
+        "title": "Yasin_Ayari",
+        "views": 461893,
+        "description": "Swedish footballer (born 2003)",
+        "url": "https://en.wikipedia.org/wiki/Yasin_Ayari"
+      },
+      {
+        "rank": 9,
+        "title": "Justin_Gaethje",
+        "views": 424558,
+        "description": "American mixed martial artist (born 1988)",
+        "url": "https://en.wikipedia.org/wiki/Justin_Gaethje"
+      },
+      {
+        "rank": 10,
+        "title": "Ilia_Topuria",
+        "views": 396497,
+        "description": "Georgian and Spanish mixed martial artist (born 1997)",
+        "url": "https://en.wikipedia.org/wiki/Ilia_Topuria"
+      },
+      {
+        "rank": 11,
+        "title": "Cape_Verde_national_football_team",
+        "views": 370681,
+        "description": "Men's association football team",
+        "url": "https://en.wikipedia.org/wiki/Cape_Verde_national_football_team"
+      },
+      {
+        "rank": 12,
+        "title": "Gaspi",
+        "views": 355371,
+        "description": "Argentine humourist and YouTuber (2002–2026)",
+        "url": "https://en.wikipedia.org/wiki/Gaspi"
+      },
+      {
+        "rank": 13,
+        "title": "Josh_Hokit",
+        "views": 334690,
+        "description": "American mixed martial artist (born 1997)",
+        "url": "https://en.wikipedia.org/wiki/Josh_Hokit"
+      }
+    ]
   }
 ]

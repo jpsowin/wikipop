@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Mon, 15 Jun 2026 09:37:59 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 09:18:38 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Cape Verde</title>
+      <link>https://en.wikipedia.org/wiki/Cape_Verde</link>
+      <description>Cape Verde, in Portuguese Cabo Verde, in Cape Verdean Creole Kabu Verdi, officially the Republic of Cabo Verde, is an archipelagic country in the central Atlantic Ocean off the coast of West Africa. It consists of ten volcanic islands with a combined land area of about 4,033 square kilometres (1,557 sq mi). These islands lie between 600 and 850 kilometres west of Cap-Vert, the westernmost point of continental Africa, after which they are named. Cape Verde forms part of the Macaronesia ecoregion, along with the Azores, the Canary Islands, Madeira and the Savage Isles.</description>
+      <pubDate>Mon, 15 Jun 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Cape_Verde#2026-06-15</guid>
+      <category>Island country in West Africa</category>
+    </item>
     <item>
       <title>Oliver Tree</title>
       <link>https://en.wikipedia.org/wiki/Oliver_Tree</link>
@@ -245,14 +253,6 @@
       <pubDate>Sun, 17 May 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Aaron_Rai#2026-05-17</guid>
       <category>English professional golfer (born 1995)</category>
-    </item>
-    <item>
-      <title>Eurovision Song Contest 2026</title>
-      <link>https://en.wikipedia.org/wiki/Eurovision_Song_Contest_2026</link>
-      <description>The Eurovision Song Contest 2026 was the 70th edition of the Eurovision Song Contest. It consisted of two semi-finals on 12 and 14 May and a final on 16 May 2026, held at Wiener Stadthalle in Vienna, Austria, and presented by Victoria Swarovski and Michael Ostrowski, with Emily Busvine acting as the green room host. It was organised by the European Broadcasting Union (EBU) and host broadcaster Österreichischer Rundfunk (ORF), which staged the event after winning the 2025 contest for Austria with the song &quot;Wasted Love&quot; by JJ.</description>
-      <pubDate>Sat, 16 May 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Eurovision_Song_Contest_2026#2026-05-16</guid>
-      <category>International song competition</category>
     </item>
   </channel>
 </rss>
