@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Tue, 16 Jun 2026 09:18:38 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 09:10:38 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Kylian Mbappé</title>
+      <link>https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9</link>
+      <description>Kylian Mbappé Lottin is a French professional footballer who plays as a forward for La Liga club Real Madrid and captains the France national team. Widely regarded as one of the best players in the world, he is known for his pace, dribbling, and clinical finishing.</description>
+      <pubDate>Tue, 16 Jun 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9#2026-06-16</guid>
+      <category>French footballer (born 1998)</category>
+    </item>
     <item>
       <title>Cape Verde</title>
       <link>https://en.wikipedia.org/wiki/Cape_Verde</link>
@@ -245,14 +253,6 @@
       <pubDate>Mon, 18 May 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Murder_of_Dominic_Russo_and_Davion_Flanagan#2026-05-18</guid>
       <category>2022 American double murder</category>
-    </item>
-    <item>
-      <title>Aaron Rai</title>
-      <link>https://en.wikipedia.org/wiki/Aaron_Rai</link>
-      <description>Aaron Rai is a British professional golfer who plays on the PGA Tour and the European Tour. He has won three times on the European Tour; the 2018 Honma Hong Kong Open and the 2020 Aberdeen Standard Investments Scottish Open, and twice on the PGA Tour, first at the 2024 Wyndham Championship. In 2026, he won the PGA Championship, his first major championship win.</description>
-      <pubDate>Sun, 17 May 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Aaron_Rai#2026-05-17</guid>
-      <category>English professional golfer (born 1995)</category>
     </item>
   </channel>
 </rss>
