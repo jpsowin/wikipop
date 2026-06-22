@@ -43141,5 +43141,88 @@
         "url": "https://en.wikipedia.org/wiki/Juneteenth"
       }
     ]
+  },
+  {
+    "date": "2026-06-21",
+    "title": "Wyndham_Clark",
+    "views": 362807,
+    "rank": 6,
+    "type": "standard",
+    "extract": "Wyndham Robert Clark is an American professional golfer who plays on the PGA Tour. He has won two major championships, the 2023 and 2026 U.S. Opens.",
+    "description": "American professional golfer (born 1993)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Wyndham_Clark_2023_01a.png/330px-Wyndham_Clark_2023_01a.png",
+    "url": "https://en.wikipedia.org/wiki/Wyndham_Clark",
+    "top10": [
+      {
+        "rank": 3,
+        "title": "2026_FIFA_World_Cup",
+        "views": 676352,
+        "description": "International men's soccer tournament in North America",
+        "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+      },
+      {
+        "rank": 5,
+        "title": "Cape_Verde",
+        "views": 428692,
+        "description": "Island country in West Africa",
+        "url": "https://en.wikipedia.org/wiki/Cape_Verde"
+      },
+      {
+        "rank": 6,
+        "title": "Wyndham_Clark",
+        "views": 362807,
+        "description": "American professional golfer (born 1993)",
+        "url": "https://en.wikipedia.org/wiki/Wyndham_Clark"
+      },
+      {
+        "rank": 7,
+        "title": "Curaçao",
+        "views": 331215,
+        "description": "Dutch Caribbean island country",
+        "url": "https://en.wikipedia.org/wiki/Cura%C3%A7ao"
+      },
+      {
+        "rank": 8,
+        "title": "Amelia_Dimoldenberg",
+        "views": 307092,
+        "description": "English comedian, writer, presenter and journalist (born 1994)",
+        "url": "https://en.wikipedia.org/wiki/Amelia_Dimoldenberg"
+      },
+      {
+        "rank": 9,
+        "title": "Lamine_Yamal",
+        "views": 295152,
+        "description": "Spanish footballer (born 2007)",
+        "url": "https://en.wikipedia.org/wiki/Lamine_Yamal"
+      },
+      {
+        "rank": 10,
+        "title": "Deniz_Undav",
+        "views": 294745,
+        "description": "German footballer (born 1996)",
+        "url": "https://en.wikipedia.org/wiki/Deniz_Undav"
+      },
+      {
+        "rank": 11,
+        "title": "Toy_Story_5",
+        "views": 200666,
+        "description": "2026 film by Andrew Stanton",
+        "url": "https://en.wikipedia.org/wiki/Toy_Story_5"
+      },
+      {
+        "rank": 12,
+        "title": "Andy_Burnham",
+        "views": 193562,
+        "description": "British politician (born 1970)",
+        "url": "https://en.wikipedia.org/wiki/Andy_Burnham"
+      },
+      {
+        "rank": 14,
+        "title": "I_Will_Find_You_(miniseries)",
+        "views": 183296,
+        "description": "American television series",
+        "url": "https://en.wikipedia.org/wiki/I_Will_Find_You_(miniseries)"
+      }
+    ]
   }
 ]
