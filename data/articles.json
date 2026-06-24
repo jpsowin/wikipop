@@ -43307,5 +43307,88 @@
         "url": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9"
       }
     ]
+  },
+  {
+    "date": "2026-06-23",
+    "title": "Erling_Haaland",
+    "views": 374533,
+    "rank": 6,
+    "type": "standard",
+    "extract": "Erling Braut Haaland is a Norwegian professional footballer who plays as a striker for Premier League club Manchester City and the Norway national team. Regarded as one of the best players in the world, and the greatest Norwegian player of all time, he is known for his speed, strength, positioning, and finishing inside the box.",
+    "description": "Norwegian footballer (born 2000)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Erling_Haaland_Morocco_v_Norway_7_June_2026-51.jpg/330px-Erling_Haaland_Morocco_v_Norway_7_June_2026-51.jpg",
+    "url": "https://en.wikipedia.org/wiki/Erling_Haaland",
+    "top10": [
+      {
+        "rank": 3,
+        "title": "2026_FIFA_World_Cup",
+        "views": 789442,
+        "description": "International men's soccer tournament in North America",
+        "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+      },
+      {
+        "rank": 5,
+        "title": "List_of_FIFA_World_Cup_top_goalscorers",
+        "views": 480824,
+        "description": "Men's FIFA World Cup top goalscorers",
+        "url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers"
+      },
+      {
+        "rank": 6,
+        "title": "Erling_Haaland",
+        "views": 374533,
+        "description": "Norwegian footballer (born 2000)",
+        "url": "https://en.wikipedia.org/wiki/Erling_Haaland"
+      },
+      {
+        "rank": 7,
+        "title": "Cristiano_Ronaldo",
+        "views": 367251,
+        "description": "Portuguese footballer (born 1985)",
+        "url": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo"
+      },
+      {
+        "rank": 8,
+        "title": "Lionel_Messi",
+        "views": 342187,
+        "description": "Argentine footballer (born 1987)",
+        "url": "https://en.wikipedia.org/wiki/Lionel_Messi"
+      },
+      {
+        "rank": 9,
+        "title": "Andy_Burnham",
+        "views": 310339,
+        "description": "British politician (born 1970)",
+        "url": "https://en.wikipedia.org/wiki/Andy_Burnham"
+      },
+      {
+        "rank": 10,
+        "title": "Kylian_Mbappé",
+        "views": 273730,
+        "description": "French footballer (born 1998)",
+        "url": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9"
+      },
+      {
+        "rank": 11,
+        "title": "Clive_Davis",
+        "views": 212909,
+        "description": "American music executive (1932–2026)",
+        "url": "https://en.wikipedia.org/wiki/Clive_Davis"
+      },
+      {
+        "rank": 12,
+        "title": "FIFA_World_Cup",
+        "views": 209059,
+        "description": "Football tournament",
+        "url": "https://en.wikipedia.org/wiki/FIFA_World_Cup"
+      },
+      {
+        "rank": 14,
+        "title": "Giannis_Antetokounmpo",
+        "views": 171886,
+        "description": "Nigerian-Greek basketball player (born 1994)",
+        "url": "https://en.wikipedia.org/wiki/Giannis_Antetokounmpo"
+      }
+    ]
   }
 ]

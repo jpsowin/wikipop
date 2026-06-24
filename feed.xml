@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Tue, 23 Jun 2026 08:37:58 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 08:35:57 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Erling Haaland</title>
+      <link>https://en.wikipedia.org/wiki/Erling_Haaland</link>
+      <description>Erling Braut Haaland is a Norwegian professional footballer who plays as a striker for Premier League club Manchester City and the Norway national team. Regarded as one of the best players in the world, and the greatest Norwegian player of all time, he is known for his speed, strength, positioning, and finishing inside the box.</description>
+      <pubDate>Tue, 23 Jun 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Erling_Haaland#2026-06-23</guid>
+      <category>Norwegian footballer (born 2000)</category>
+    </item>
     <item>
       <title>Andy Burnham</title>
       <link>https://en.wikipedia.org/wiki/Andy_Burnham</link>
@@ -245,14 +253,6 @@
       <pubDate>Mon, 25 May 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Memorial_Day#2026-05-25</guid>
       <category>Federal holiday in the United States</category>
-    </item>
-    <item>
-      <title>The Mandalorian and Grogu</title>
-      <link>https://en.wikipedia.org/wiki/The_Mandalorian_and_Grogu</link>
-      <description>Star Wars: The Mandalorian and Grogu is a 2026 American science fiction film directed by Jon Favreau, who co-wrote the film with Dave Filoni and Noah Kloor. Produced by Lucasfilm and Fairview Entertainment, and distributed by Walt Disney Studios Motion Pictures, it is part of the Star Wars franchise and is a continuation of the Disney+ television series The Mandalorian (2019–2023). Pedro Pascal stars as Din Djarin / The Mandalorian—who was also portrayed on set by Brendan Wayne and Lateef Crowder—alongside Jeremy Allen White, Jonny Coyne, Martin Scorsese, and Sigourney Weaver. In the film, which is set following the fall of the Galactic Empire, Djarin and his apprentice Grogu are enlisted by the New Republic to rescue Rotta the Hutt (White) in exchange for information on a target.</description>
-      <pubDate>Sun, 24 May 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/The_Mandalorian_and_Grogu#2026-05-24</guid>
-      <category>2026 Star Wars film by Jon Favreau</category>
     </item>
   </channel>
 </rss>
