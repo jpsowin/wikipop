@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Tue, 30 Jun 2026 08:37:48 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 08:47:18 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>.xyz</title>
+      <link>https://en.wikipedia.org/wiki/.xyz</link>
+      <description>.xyz is a top-level domain name that was proposed in ICANN&apos;s new generic top-level domain (gTLD) Program for consisting of the last three letters of the Latin-script alphabet. XYZ.com and CentralNic are the registries for the domain, which was created by entrepreneur Daniel Negari. It became available to the general public on June 2, 2014, thereafter becoming widely used by tech startups, creators, and Web3 projects.</description>
+      <pubDate>Tue, 30 Jun 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/.xyz#2026-06-30</guid>
+      <category>Internet top-level domain</category>
+    </item>
     <item>
       <title>Zion Suzuki</title>
       <link>https://en.wikipedia.org/wiki/Zion_Suzuki</link>
@@ -248,14 +256,6 @@ The knockout stage of the 2026 FIFA World Cup will be the second and final stage
       <pubDate>Mon, 01 Jun 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Euphoria_(American_TV_series)#2026-06-01</guid>
       <category>Television series (2019–2026)</category>
-    </item>
-    <item>
-      <title>Clash in Italy</title>
-      <link>https://en.wikipedia.org/wiki/Clash_in_Italy</link>
-      <description>Clash in Italy was a 2026 professional wrestling pay-per-view (PPV) and livestreaming event produced by the American company WWE. The event took place on Sunday, May 31, 2026, at the Inalpi Arena in Turin, Italy, and was held for wrestlers from the promotion&apos;s Raw and SmackDown brand divisions. This marked WWE&apos;s first-ever PPV and livestreaming event held in Italy.</description>
-      <pubDate>Sun, 31 May 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Clash_in_Italy#2026-05-31</guid>
-      <category>2026 WWE pay-per-view and livestreaming event</category>
     </item>
   </channel>
 </rss>

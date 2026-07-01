@@ -43888,5 +43888,88 @@
         "url": "https://en.wikipedia.org/wiki/FIFA_World_Cup"
       }
     ]
+  },
+  {
+    "date": "2026-06-30",
+    "title": ".xyz",
+    "views": 355402,
+    "rank": 6,
+    "type": "standard",
+    "extract": ".xyz is a top-level domain name that was proposed in ICANN's new generic top-level domain (gTLD) Program for consisting of the last three letters of the Latin-script alphabet. XYZ.com and CentralNic are the registries for the domain, which was created by entrepreneur Daniel Negari. It became available to the general public on June 2, 2014, thereafter becoming widely used by tech startups, creators, and Web3 projects.",
+    "description": "Internet top-level domain",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/.xyz_logo.svg/330px-.xyz_logo.svg.png",
+    "url": "https://en.wikipedia.org/wiki/.xyz",
+    "top10": [
+      {
+        "rank": 3,
+        "title": "2026_FIFA_World_Cup",
+        "views": 823960,
+        "description": "International soccer tournament in North America",
+        "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+      },
+      {
+        "rank": 5,
+        "title": "Erling_Haaland",
+        "views": 376220,
+        "description": "Norwegian footballer (born 2000)",
+        "url": "https://en.wikipedia.org/wiki/Erling_Haaland"
+      },
+      {
+        "rank": 6,
+        "title": ".xyz",
+        "views": 355402,
+        "description": "Internet top-level domain",
+        "url": "https://en.wikipedia.org/wiki/.xyz"
+      },
+      {
+        "rank": 7,
+        "title": "Daveigh_Chase",
+        "views": 318448,
+        "description": "American actress (1990–2026)",
+        "url": "https://en.wikipedia.org/wiki/Daveigh_Chase"
+      },
+      {
+        "rank": 8,
+        "title": "Kylian_Mbappé",
+        "views": 299505,
+        "description": "French footballer (born 1998)",
+        "url": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9"
+      },
+      {
+        "rank": 9,
+        "title": "Antonio_Nusa",
+        "views": 257769,
+        "description": "Norwegian footballer (born 2005)",
+        "url": "https://en.wikipedia.org/wiki/Antonio_Nusa"
+      },
+      {
+        "rank": 10,
+        "title": "Maya_Joint",
+        "views": 241764,
+        "description": "Australian tennis player (born 2006)",
+        "url": "https://en.wikipedia.org/wiki/Maya_Joint"
+      },
+      {
+        "rank": 11,
+        "title": "Serena_Williams",
+        "views": 230689,
+        "description": "American tennis player (born 1981)",
+        "url": "https://en.wikipedia.org/wiki/Serena_Williams"
+      },
+      {
+        "rank": 12,
+        "title": "Issa_Diop_(footballer)",
+        "views": 213703,
+        "description": "Moroccan footballer (born 1997)",
+        "url": "https://en.wikipedia.org/wiki/Issa_Diop_(footballer)"
+      },
+      {
+        "rank": 13,
+        "title": "FIFA_World_Cup",
+        "views": 210043,
+        "description": "Football tournament",
+        "url": "https://en.wikipedia.org/wiki/FIFA_World_Cup"
+      }
+    ]
   }
 ]
