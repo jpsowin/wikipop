@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Wed, 01 Jul 2026 08:47:18 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 08:29:43 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Harry Kane</title>
+      <link>https://en.wikipedia.org/wiki/Harry_Kane</link>
+      <description>Harry Edward Kane is an English professional footballer who plays as a striker for Bundesliga club Bayern Munich and captains the England national team. Regarded as one of the best players in the world, he has scored over 500 career goals for club and country.</description>
+      <pubDate>Wed, 01 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Harry_Kane#2026-07-01</guid>
+      <category>English footballer (born 1993)</category>
+    </item>
     <item>
       <title>.xyz</title>
       <link>https://en.wikipedia.org/wiki/.xyz</link>
@@ -248,14 +256,6 @@ The knockout stage of the 2026 FIFA World Cup will be the second and final stage
       <pubDate>Tue, 02 Jun 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Murder_of_Henry_Nowak#2026-06-02</guid>
       <category>2025 murder in Southampton, England</category>
-    </item>
-    <item>
-      <title>Euphoria (American TV series)</title>
-      <link>https://en.wikipedia.org/wiki/Euphoria_(American_TV_series)</link>
-      <description>Euphoria is an American psychological teen drama television series created and written by Sam Levinson for HBO. Based on the Israeli miniseries of the same name created by Ron Leshem, the series stars Zendaya as drug-addicted teenager Rue Bennett, who also serves as an unreliable narrator. The ensemble cast includes Maude Apatow, Angus Cloud, Eric Dane, Alexa Demie, Jacob Elordi, Barbie Ferreira, Nika King, Storm Reid, Hunter Schafer, Algee Smith, Sydney Sweeney, Colman Domingo, Javon &quot;Wanna&quot; Walton, and Austin Abrams. Dominic Fike, Adewale Akinnuoye-Agbaje, Martha Kelly, Chloe Cherry, and Toby Wallace join later in the series.</description>
-      <pubDate>Mon, 01 Jun 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Euphoria_(American_TV_series)#2026-06-01</guid>
-      <category>Television series (2019–2026)</category>
     </item>
   </channel>
 </rss>

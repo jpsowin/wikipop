@@ -43971,5 +43971,88 @@
         "url": "https://en.wikipedia.org/wiki/FIFA_World_Cup"
       }
     ]
+  },
+  {
+    "date": "2026-07-01",
+    "title": "Harry_Kane",
+    "views": 367545,
+    "rank": 6,
+    "type": "standard",
+    "extract": "Harry Edward Kane is an English professional footballer who plays as a striker for Bundesliga club Bayern Munich and captains the England national team. Regarded as one of the best players in the world, he has scored over 500 career goals for club and country.",
+    "description": "English footballer (born 1993)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Harry_Kane_England_v_Ghana_23_June_2026-219_%28cropped%29.jpg/330px-Harry_Kane_England_v_Ghana_23_June_2026-219_%28cropped%29.jpg",
+    "url": "https://en.wikipedia.org/wiki/Harry_Kane",
+    "top10": [
+      {
+        "rank": 3,
+        "title": "2026_FIFA_World_Cup",
+        "views": 807303,
+        "description": "Soccer tournament in North America",
+        "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+      },
+      {
+        "rank": 5,
+        "title": ".xyz",
+        "views": 382581,
+        "description": "Internet top-level domain",
+        "url": "https://en.wikipedia.org/wiki/.xyz"
+      },
+      {
+        "rank": 6,
+        "title": "Harry_Kane",
+        "views": 367545,
+        "description": "English footballer (born 1993)",
+        "url": "https://en.wikipedia.org/wiki/Harry_Kane"
+      },
+      {
+        "rank": 7,
+        "title": "Julián_Quiñones",
+        "views": 337656,
+        "description": "Mexican footballer (born 1997)",
+        "url": "https://en.wikipedia.org/wiki/Juli%C3%A1n_Qui%C3%B1ones"
+      },
+      {
+        "rank": 8,
+        "title": "List_of_FIFA_World_Cup_top_goalscorers",
+        "views": 296791,
+        "description": "Men's FIFA World Cup top goalscorers",
+        "url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers"
+      },
+      {
+        "rank": 9,
+        "title": "Kylian_Mbappé",
+        "views": 290483,
+        "description": "French footballer (born 1998)",
+        "url": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9"
+      },
+      {
+        "rank": 10,
+        "title": "Democratic_Republic_of_the_Congo",
+        "views": 287779,
+        "description": "Country in Central Africa",
+        "url": "https://en.wikipedia.org/wiki/Democratic_Republic_of_the_Congo"
+      },
+      {
+        "rank": 11,
+        "title": "Erling_Haaland",
+        "views": 249128,
+        "description": "Norwegian footballer (born 2000)",
+        "url": "https://en.wikipedia.org/wiki/Erling_Haaland"
+      },
+      {
+        "rank": 12,
+        "title": "Michael_Olise",
+        "views": 211436,
+        "description": "French footballer (born 2001)",
+        "url": "https://en.wikipedia.org/wiki/Michael_Olise"
+      },
+      {
+        "rank": 13,
+        "title": "DR_Congo_national_football_team",
+        "views": 208281,
+        "description": "Men's association football team",
+        "url": "https://en.wikipedia.org/wiki/DR_Congo_national_football_team"
+      }
+    ]
   }
 ]
