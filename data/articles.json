@@ -44220,5 +44220,88 @@
         "url": "https://en.wikipedia.org/wiki/FIFA_World_Cup"
       }
     ]
+  },
+  {
+    "date": "2026-07-04",
+    "title": "Vozinha",
+    "views": 506757,
+    "rank": 6,
+    "type": "standard",
+    "extract": "Josimar José Évora Dias, commonly known as Vozinha, is a Cape Verdean professional footballer who plays as a goalkeeper for the Cape Verde national team.",
+    "description": "Cape Verdean footballer (born 1986)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Vozinha_Cape_Verde_Goalkeeper.jpg/330px-Vozinha_Cape_Verde_Goalkeeper.jpg",
+    "url": "https://en.wikipedia.org/wiki/Vozinha",
+    "top10": [
+      {
+        "rank": 2,
+        "title": "Cape_Verde",
+        "views": 1301038,
+        "description": "Island country in West Africa",
+        "url": "https://en.wikipedia.org/wiki/Cape_Verde"
+      },
+      {
+        "rank": 4,
+        "title": "2026_FIFA_World_Cup",
+        "views": 700538,
+        "description": "Soccer tournament in North America",
+        "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+      },
+      {
+        "rank": 6,
+        "title": "Vozinha",
+        "views": 506757,
+        "description": "Cape Verdean footballer (born 1986)",
+        "url": "https://en.wikipedia.org/wiki/Vozinha"
+      },
+      {
+        "rank": 7,
+        "title": "Taylor_Swift",
+        "views": 397483,
+        "description": "American singer-songwriter (born 1989)",
+        "url": "https://en.wikipedia.org/wiki/Taylor_Swift"
+      },
+      {
+        "rank": 8,
+        "title": "Kylian_Mbappé",
+        "views": 329386,
+        "description": "French footballer (born 1998)",
+        "url": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9"
+      },
+      {
+        "rank": 9,
+        "title": "Cape_Verde_national_football_team",
+        "views": 299165,
+        "description": "Men's association football team",
+        "url": "https://en.wikipedia.org/wiki/Cape_Verde_national_football_team"
+      },
+      {
+        "rank": 10,
+        "title": "Sidny_Lopes_Cabral",
+        "views": 282672,
+        "description": "Cape Verdean footballer (born 2002)",
+        "url": "https://en.wikipedia.org/wiki/Sidny_Lopes_Cabral"
+      },
+      {
+        "rank": 11,
+        "title": "Lionel_Messi",
+        "views": 242157,
+        "description": "Argentine footballer (born 1987)",
+        "url": "https://en.wikipedia.org/wiki/Lionel_Messi"
+      },
+      {
+        "rank": 12,
+        "title": "Travis_Kelce",
+        "views": 234286,
+        "description": "American football player (born 1989)",
+        "url": "https://en.wikipedia.org/wiki/Travis_Kelce"
+      },
+      {
+        "rank": 13,
+        "title": "Alpha_(2026_film)",
+        "views": 231417,
+        "description": "2026 Indian film by Shiv Rawail",
+        "url": "https://en.wikipedia.org/wiki/Alpha_(2026_film)"
+      }
+    ]
   }
 ]

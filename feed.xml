@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sat, 04 Jul 2026 08:18:30 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2026 08:28:10 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Vozinha</title>
+      <link>https://en.wikipedia.org/wiki/Vozinha</link>
+      <description>Josimar José Évora Dias, commonly known as Vozinha, is a Cape Verdean professional footballer who plays as a goalkeeper for the Cape Verde national team.</description>
+      <pubDate>Sat, 04 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Vozinha#2026-07-04</guid>
+      <category>Cape Verdean footballer (born 1986)</category>
+    </item>
     <item>
       <title>Cristiano Ronaldo</title>
       <link>https://en.wikipedia.org/wiki/Cristiano_Ronaldo</link>
@@ -248,14 +256,6 @@ The knockout stage of the 2026 FIFA World Cup will be the second and final stage
       <pubDate>Fri, 05 Jun 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Anthony_Head#2026-06-05</guid>
       <category>English actor (1954–2026)</category>
-    </item>
-    <item>
-      <title>Marjane Satrapi</title>
-      <link>https://en.wikipedia.org/wiki/Marjane_Satrapi</link>
-      <description>Marjane Satrapi was an Iranian and French graphic novelist, film director, and children&apos;s book author. Her best-known works include the graphic novel Persepolis and its film adaptation; the graphic novel Chicken with Plums; Woman, Life, Freedom; and the Marie Curie biopic Radioactive.</description>
-      <pubDate>Thu, 04 Jun 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Marjane_Satrapi#2026-06-04</guid>
-      <category>French and Iranian author and director (1969–2026)</category>
     </item>
   </channel>
 </rss>
