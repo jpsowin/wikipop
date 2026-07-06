@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sun, 05 Jul 2026 08:28:10 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2026 08:52:07 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Naomi Osaka</title>
+      <link>https://en.wikipedia.org/wiki/Naomi_Osaka</link>
+      <description>Naomi Osaka is a Japanese professional tennis player. She was ranked as the world No. 1 in women&apos;s singles by the WTA for 25 weeks starting in January 2019, the first Asian player to hold the top ranking in singles. Osaka has won seven career singles titles, including four majors: two each at the Australian Open and the US Open. She is the first Japanese player to win a major singles title.</description>
+      <pubDate>Sun, 05 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Naomi_Osaka#2026-07-05</guid>
+      <category>Japanese tennis player (born 1997)</category>
+    </item>
     <item>
       <title>Vozinha</title>
       <link>https://en.wikipedia.org/wiki/Vozinha</link>
@@ -248,14 +256,6 @@ The knockout stage of the 2026 FIFA World Cup will be the second and final stage
       <pubDate>Sat, 06 Jun 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Mirra_Andreeva#2026-06-06</guid>
       <category>Russian tennis player (born 2007)</category>
-    </item>
-    <item>
-      <title>Anthony Head</title>
-      <link>https://en.wikipedia.org/wiki/Anthony_Head</link>
-      <description>Anthony Stewart Head was an English actor and singer. Primarily a performer in musical theatre, he rose to fame in the UK in the 1980s following his role in the Gold Blend couple television advertisements for Nescafé, which led to major roles in several television series.</description>
-      <pubDate>Fri, 05 Jun 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Anthony_Head#2026-06-05</guid>
-      <category>English actor (1954–2026)</category>
     </item>
   </channel>
 </rss>

@@ -44303,5 +44303,88 @@
         "url": "https://en.wikipedia.org/wiki/Alpha_(2026_film)"
       }
     ]
+  },
+  {
+    "date": "2026-07-05",
+    "title": "Naomi_Osaka",
+    "views": 340925,
+    "rank": 6,
+    "type": "standard",
+    "extract": "Naomi Osaka is a Japanese professional tennis player. She was ranked as the world No. 1 in women's singles by the WTA for 25 weeks starting in January 2019, the first Asian player to hold the top ranking in singles. Osaka has won seven career singles titles, including four majors: two each at the Australian Open and the US Open. She is the first Japanese player to win a major singles title.",
+    "description": "Japanese tennis player (born 1997)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/NaomiOsaka-smile-2020_%28cropped_tight%29.png/330px-NaomiOsaka-smile-2020_%28cropped_tight%29.png",
+    "url": "https://en.wikipedia.org/wiki/Naomi_Osaka",
+    "top10": [
+      {
+        "rank": 3,
+        "title": "Erling_Haaland",
+        "views": 889039,
+        "description": "Norwegian footballer (born 2000)",
+        "url": "https://en.wikipedia.org/wiki/Erling_Haaland"
+      },
+      {
+        "rank": 5,
+        "title": "2026_FIFA_World_Cup",
+        "views": 538797,
+        "description": "Soccer tournament in North America",
+        "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+      },
+      {
+        "rank": 6,
+        "title": "Naomi_Osaka",
+        "views": 340925,
+        "description": "Japanese tennis player (born 1997)",
+        "url": "https://en.wikipedia.org/wiki/Naomi_Osaka"
+      },
+      {
+        "rank": 7,
+        "title": "Neymar",
+        "views": 294947,
+        "description": "Brazilian footballer (born 1992)",
+        "url": "https://en.wikipedia.org/wiki/Neymar"
+      },
+      {
+        "rank": 8,
+        "title": "Kylian_Mbappé",
+        "views": 223900,
+        "description": "French footballer (born 1998)",
+        "url": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9"
+      },
+      {
+        "rank": 9,
+        "title": "Cape_Verde",
+        "views": 218422,
+        "description": "Island country in West Africa",
+        "url": "https://en.wikipedia.org/wiki/Cape_Verde"
+      },
+      {
+        "rank": 10,
+        "title": "Obsession_(2025_film)",
+        "views": 211106,
+        "description": "Film by Curry Barker",
+        "url": "https://en.wikipedia.org/wiki/Obsession_(2025_film)"
+      },
+      {
+        "rank": 11,
+        "title": "Folarin_Balogun",
+        "views": 201315,
+        "description": "Professional soccer player (born 2001)",
+        "url": "https://en.wikipedia.org/wiki/Folarin_Balogun"
+      },
+      {
+        "rank": 12,
+        "title": "Alpha_(2026_film)",
+        "views": 188380,
+        "description": "2026 Indian film by Shiv Rawail",
+        "url": "https://en.wikipedia.org/wiki/Alpha_(2026_film)"
+      },
+      {
+        "rank": 13,
+        "title": "Roman_Safiullin",
+        "views": 186308,
+        "description": "Russian tennis player (born 1997)",
+        "url": "https://en.wikipedia.org/wiki/Roman_Safiullin"
+      }
+    ]
   }
 ]
