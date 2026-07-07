@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Mon, 06 Jul 2026 08:52:07 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 08:39:43 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Jude Bellingham</title>
+      <link>https://en.wikipedia.org/wiki/Jude_Bellingham</link>
+      <description>Jude Victor William Bellingham is an English professional footballer who plays as a midfielder for La Liga club Real Madrid and the England national team. He is regarded as one of the best players in the world.</description>
+      <pubDate>Mon, 06 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Jude_Bellingham#2026-07-06</guid>
+      <category>English footballer (born 2003)</category>
+    </item>
     <item>
       <title>Naomi Osaka</title>
       <link>https://en.wikipedia.org/wiki/Naomi_Osaka</link>
@@ -248,14 +256,6 @@ The knockout stage of the 2026 FIFA World Cup will be the second and final stage
       <pubDate>Sun, 07 Jun 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Alexander_Zverev#2026-06-07</guid>
       <category>German tennis player (born 1997)</category>
-    </item>
-    <item>
-      <title>Mirra Andreeva</title>
-      <link>https://en.wikipedia.org/wiki/Mirra_Andreeva</link>
-      <description>Mirra Aleksandrovna Andreeva is a Russian professional tennis player. She has been ranked by the WTA as high as world No. 5 in singles, achieved in July 2025, and No. 12 in doubles, achieved in September 2025. Andreeva has won six WTA Tour–level singles titles, including a major at the 2026 French Open.</description>
-      <pubDate>Sat, 06 Jun 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Mirra_Andreeva#2026-06-06</guid>
-      <category>Russian tennis player (born 2007)</category>
     </item>
   </channel>
 </rss>

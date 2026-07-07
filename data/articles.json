@@ -44386,5 +44386,88 @@
         "url": "https://en.wikipedia.org/wiki/Roman_Safiullin"
       }
     ]
+  },
+  {
+    "date": "2026-07-06",
+    "title": "Jude_Bellingham",
+    "views": 572783,
+    "rank": 6,
+    "type": "standard",
+    "extract": "Jude Victor William Bellingham is an English professional footballer who plays as a midfielder for La Liga club Real Madrid and the England national team. He is regarded as one of the best players in the world.",
+    "description": "English footballer (born 2003)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Jude_Bellingham_England_v_Ghana_23_June_2026-061_%28cropped%29.jpg/330px-Jude_Bellingham_England_v_Ghana_23_June_2026-061_%28cropped%29.jpg",
+    "url": "https://en.wikipedia.org/wiki/Jude_Bellingham",
+    "top10": [
+      {
+        "rank": 3,
+        "title": "Erling_Haaland",
+        "views": 1187621,
+        "description": "Norwegian footballer (born 2000)",
+        "url": "https://en.wikipedia.org/wiki/Erling_Haaland"
+      },
+      {
+        "rank": 4,
+        "title": "2026_FIFA_World_Cup",
+        "views": 802524,
+        "description": "Soccer tournament in North America",
+        "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+      },
+      {
+        "rank": 6,
+        "title": "Jude_Bellingham",
+        "views": 572783,
+        "description": "English footballer (born 2003)",
+        "url": "https://en.wikipedia.org/wiki/Jude_Bellingham"
+      },
+      {
+        "rank": 7,
+        "title": "Folarin_Balogun",
+        "views": 558220,
+        "description": "Professional soccer player (born 2001)",
+        "url": "https://en.wikipedia.org/wiki/Folarin_Balogun"
+      },
+      {
+        "rank": 8,
+        "title": "Cristiano_Ronaldo",
+        "views": 489840,
+        "description": "Portuguese footballer (born 1985)",
+        "url": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo"
+      },
+      {
+        "rank": 9,
+        "title": "Neymar",
+        "views": 443104,
+        "description": "Brazilian footballer (born 1992)",
+        "url": "https://en.wikipedia.org/wiki/Neymar"
+      },
+      {
+        "rank": 10,
+        "title": "Arthur_Fery",
+        "views": 391686,
+        "description": "British tennis player (born 2002)",
+        "url": "https://en.wikipedia.org/wiki/Arthur_Fery"
+      },
+      {
+        "rank": 11,
+        "title": "Harry_Kane",
+        "views": 371896,
+        "description": "English footballer (born 1993)",
+        "url": "https://en.wikipedia.org/wiki/Harry_Kane"
+      },
+      {
+        "rank": 12,
+        "title": "FIFA_World_Cup",
+        "views": 305176,
+        "description": "Football tournament",
+        "url": "https://en.wikipedia.org/wiki/FIFA_World_Cup"
+      },
+      {
+        "rank": 13,
+        "title": "Julián_Quiñones",
+        "views": 272031,
+        "description": "Mexican footballer (born 1997)",
+        "url": "https://en.wikipedia.org/wiki/Juli%C3%A1n_Qui%C3%B1ones"
+      }
+    ]
   }
 ]
