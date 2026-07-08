@@ -44469,5 +44469,88 @@
         "url": "https://en.wikipedia.org/wiki/Juli%C3%A1n_Qui%C3%B1ones"
       }
     ]
+  },
+  {
+    "date": "2026-07-07",
+    "title": "Mitch_McConnell",
+    "views": 461984,
+    "rank": 7,
+    "type": "standard",
+    "extract": "Addison Mitchell McConnell III is an American politician and attorney serving as the senior United States senator from Kentucky, a seat he has held since 1985. A member of the Republican Party, McConnell is in his seventh Senate term, making him the longest-serving senator in Kentucky history. He served from 2007 to 2025 as the leader of the Senate Republican Conference, including two stints as minority leader, and was majority leader from 2015 to 2021, making him the longest-serving Senate party leader in U.S. history.",
+    "description": "American politician and attorney (born 1942)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Mitch_McConnell_2016_official_photo_%281%29_%28cropped%29.jpg/330px-Mitch_McConnell_2016_official_photo_%281%29_%28cropped%29.jpg",
+    "url": "https://en.wikipedia.org/wiki/Mitch_McConnell",
+    "top10": [
+      {
+        "rank": 3,
+        "title": "2026_FIFA_World_Cup",
+        "views": 786698,
+        "description": "Soccer tournament in North America",
+        "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+      },
+      {
+        "rank": 5,
+        "title": "Erling_Haaland",
+        "views": 638705,
+        "description": "Norwegian footballer (born 2000)",
+        "url": "https://en.wikipedia.org/wiki/Erling_Haaland"
+      },
+      {
+        "rank": 6,
+        "title": "Cristiano_Ronaldo",
+        "views": 477150,
+        "description": "Portuguese footballer (born 1985)",
+        "url": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo"
+      },
+      {
+        "rank": 7,
+        "title": "Mitch_McConnell",
+        "views": 461984,
+        "description": "American politician and attorney (born 1942)",
+        "url": "https://en.wikipedia.org/wiki/Mitch_McConnell"
+      },
+      {
+        "rank": 8,
+        "title": "Yandex",
+        "views": 423928,
+        "description": "Russian technology company",
+        "url": "https://en.wikipedia.org/wiki/Yandex"
+      },
+      {
+        "rank": 9,
+        "title": "Lionel_Messi",
+        "views": 397614,
+        "description": "Argentine footballer (born 1987)",
+        "url": "https://en.wikipedia.org/wiki/Lionel_Messi"
+      },
+      {
+        "rank": 10,
+        "title": "Folarin_Balogun",
+        "views": 391876,
+        "description": "Professional soccer player (born 2001)",
+        "url": "https://en.wikipedia.org/wiki/Folarin_Balogun"
+      },
+      {
+        "rank": 11,
+        "title": "Lauren_Bennett",
+        "views": 345101,
+        "description": "English singer and dancer (1989–2026)",
+        "url": "https://en.wikipedia.org/wiki/Lauren_Bennett"
+      },
+      {
+        "rank": 12,
+        "title": "FIFA_World_Cup",
+        "views": 315019,
+        "description": "Football tournament",
+        "url": "https://en.wikipedia.org/wiki/FIFA_World_Cup"
+      },
+      {
+        "rank": 13,
+        "title": ".xyz",
+        "views": 298927,
+        "description": "Internet top-level domain",
+        "url": "https://en.wikipedia.org/wiki/.xyz"
+      }
+    ]
   }
 ]
