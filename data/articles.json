@@ -44552,5 +44552,88 @@
         "url": "https://en.wikipedia.org/wiki/.xyz"
       }
     ]
+  },
+  {
+    "date": "2026-07-08",
+    "title": "Arthur_Fery",
+    "views": 597106,
+    "rank": 4,
+    "type": "standard",
+    "extract": "Arthur Fery is a French-born British professional tennis player. He has a career high ATP singles ranking of world No. 114 achieved on 29 June 2026 and a doubles ranking of No. 201 achieved in July 2024. He is the current British No. 3 in singles.",
+    "description": "British tennis player (born 2002)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Fery_WMQ22_%2813%29_%2852191184348%29.jpg/330px-Fery_WMQ22_%2813%29_%2852191184348%29.jpg",
+    "url": "https://en.wikipedia.org/wiki/Arthur_Fery",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Arthur_Fery",
+        "views": 597106,
+        "description": "British tennis player (born 2002)",
+        "url": "https://en.wikipedia.org/wiki/Arthur_Fery"
+      },
+      {
+        "rank": 5,
+        "title": "Erling_Haaland",
+        "views": 439920,
+        "description": "Norwegian footballer (born 2000)",
+        "url": "https://en.wikipedia.org/wiki/Erling_Haaland"
+      },
+      {
+        "rank": 6,
+        "title": "2026_FIFA_World_Cup",
+        "views": 434629,
+        "description": "Association football tournament in North America",
+        "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+      },
+      {
+        "rank": 7,
+        "title": "Count_Binface",
+        "views": 361723,
+        "description": "British novelty candidate",
+        "url": "https://en.wikipedia.org/wiki/Count_Binface"
+      },
+      {
+        "rank": 8,
+        "title": "Lionel_Messi",
+        "views": 237184,
+        "description": "Argentine footballer (born 1987)",
+        "url": "https://en.wikipedia.org/wiki/Lionel_Messi"
+      },
+      {
+        "rank": 9,
+        "title": ".xyz",
+        "views": 235161,
+        "description": "Internet top-level domain",
+        "url": "https://en.wikipedia.org/wiki/.xyz"
+      },
+      {
+        "rank": 10,
+        "title": "Mitch_McConnell",
+        "views": 219546,
+        "description": "American politician and attorney (born 1942)",
+        "url": "https://en.wikipedia.org/wiki/Mitch_McConnell"
+      },
+      {
+        "rank": 11,
+        "title": "The_Odyssey_(2026_film)",
+        "views": 215801,
+        "description": "Epic film by Christopher Nolan",
+        "url": "https://en.wikipedia.org/wiki/The_Odyssey_(2026_film)"
+      },
+      {
+        "rank": 12,
+        "title": "Cristiano_Ronaldo",
+        "views": 212833,
+        "description": "Portuguese footballer (born 1985)",
+        "url": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo"
+      },
+      {
+        "rank": 13,
+        "title": "Gianni_Infantino",
+        "views": 188530,
+        "description": "Swiss football administrator (born 1970)",
+        "url": "https://en.wikipedia.org/wiki/Gianni_Infantino"
+      }
+    ]
   }
 ]

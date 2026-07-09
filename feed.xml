@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Wed, 08 Jul 2026 08:17:25 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 08:40:49 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Arthur Fery</title>
+      <link>https://en.wikipedia.org/wiki/Arthur_Fery</link>
+      <description>Arthur Fery is a French-born British professional tennis player. He has a career high ATP singles ranking of world No. 114 achieved on 29 June 2026 and a doubles ranking of No. 201 achieved in July 2024. He is the current British No. 3 in singles.</description>
+      <pubDate>Wed, 08 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Arthur_Fery#2026-07-08</guid>
+      <category>British tennis player (born 2002)</category>
+    </item>
     <item>
       <title>Mitch McConnell</title>
       <link>https://en.wikipedia.org/wiki/Mitch_McConnell</link>
@@ -248,14 +256,6 @@ The knockout stage of the 2026 FIFA World Cup will be the second and final stage
       <pubDate>Tue, 09 Jun 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/2026_FIFA_World_Cup#2026-06-09</guid>
       <category>International men&apos;s soccer tournament in North America</category>
-    </item>
-    <item>
-      <title>2026 Peruvian general election</title>
-      <link>https://en.wikipedia.org/wiki/2026_Peruvian_general_election</link>
-      <description>General elections were held in Peru from 12 to 13 April 2026 to elect the president, vice presidents, and the national legislature. As no presidential candidate achieved a majority of votes in the first round, a runoff election was held on 7 June. The presidential election will determine the president and vice presidents. The congressional elections will determine the composition of the Congress of Peru, which will return to being a bicameral legislature with a Senate and a Chamber of Deputies.</description>
-      <pubDate>Mon, 08 Jun 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/2026_Peruvian_general_election#2026-06-08</guid>
-      
     </item>
   </channel>
 </rss>
