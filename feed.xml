@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Thu, 09 Jul 2026 08:40:49 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 08:39:34 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Bonnie Tyler</title>
+      <link>https://en.wikipedia.org/wiki/Bonnie_Tyler</link>
+      <description>Gaynor Sullivan, known professionally as Bonnie Tyler, was a Welsh singer and songwriter. Known for her distinctive husky voice, she came to prominence with the release of her debut studio album The World Starts Tonight (1977) and its singles &quot;Lost in France&quot; and &quot;More Than a Lover&quot;. Her 1977 single &quot;It&apos;s a Heartache&quot; reached number four on the UK singles chart and number three on the US Billboard Hot 100.</description>
+      <pubDate>Thu, 09 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Bonnie_Tyler#2026-07-09</guid>
+      <category>Welsh singer (1951–2026)</category>
+    </item>
     <item>
       <title>Arthur Fery</title>
       <link>https://en.wikipedia.org/wiki/Arthur_Fery</link>
@@ -248,14 +256,6 @@ The knockout stage of the 2026 FIFA World Cup will be the second and final stage
       <pubDate>Wed, 10 Jun 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Murder_of_Austin_Metcalf#2026-06-10</guid>
       <category>2025 murder in Frisco, Texas, U.S.</category>
-    </item>
-    <item>
-      <title>2026 FIFA World Cup</title>
-      <link>https://en.wikipedia.org/wiki/2026_FIFA_World_Cup</link>
-      <description>The 2026 FIFA World Cup will be the 23rd edition of the FIFA World Cup, the quadrennial international men&apos;s soccer championship contested by the national teams of the member associations of FIFA. The tournament will take place from June 11 to July 19, 2026. It will be jointly hosted by sixteen cities—eleven in the United States, three in Mexico, and two in Canada. The tournament will be the first FIFA World Cup to be hosted by three nations, and the first to include 48 teams, an expansion from 32 previously.</description>
-      <pubDate>Tue, 09 Jun 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/2026_FIFA_World_Cup#2026-06-09</guid>
-      <category>International men&apos;s soccer tournament in North America</category>
     </item>
   </channel>
 </rss>
