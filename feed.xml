@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sun, 12 Jul 2026 08:16:13 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 08:31:39 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Lindsey Graham</title>
+      <link>https://en.wikipedia.org/wiki/Lindsey_Graham</link>
+      <description>Lindsey Olin Graham was an American politician and attorney who represented South Carolina in the United States Senate from 2003 until his death in 2026. A member of the Republican Party, he previously represented South Carolina&apos;s 3rd congressional district in the U.S. House of Representatives from 1995 to 2003 and served in the South Carolina House of Representatives from 1993 to 1995.</description>
+      <pubDate>Sun, 12 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Lindsey_Graham#2026-07-12</guid>
+      <category>American politician (1955–2026)</category>
+    </item>
     <item>
       <title>Jayden Adams</title>
       <link>https://en.wikipedia.org/wiki/Jayden_Adams</link>
@@ -248,14 +256,6 @@ The knockout stage of the 2026 FIFA World Cup will be the second and final stage
       <pubDate>Sat, 13 Jun 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Folarin_Balogun#2026-06-13</guid>
       <category>Professional soccer player (born 2001)</category>
-    </item>
-    <item>
-      <title>David Hockney</title>
-      <link>https://en.wikipedia.org/wiki/David_Hockney</link>
-      <description>David Hockney was an English painter, stage designer and photographer. As an important contributor to the pop art movement of the 1960s, he is considered one of the most influential British artists of the 20th and 21st centuries.</description>
-      <pubDate>Fri, 12 Jun 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/David_Hockney#2026-06-12</guid>
-      <category>English artist (1937–2026)</category>
     </item>
   </channel>
 </rss>
