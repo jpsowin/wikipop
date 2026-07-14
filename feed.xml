@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Mon, 13 Jul 2026 08:31:39 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 08:15:26 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Sam Neill</title>
+      <link>https://en.wikipedia.org/wiki/Sam_Neill</link>
+      <description>Sir Nigel John Dermot &quot;Sam&quot; Neill was a New Zealand actor and businessman. Known as a leading man in film and television, he has received nominations for three Primetime Emmy Awards and two Golden Globe Awards. He was appointed an Officer of the Order of the British Empire in the 1991 Queen&apos;s Birthday Honours, for services as an actor.</description>
+      <pubDate>Mon, 13 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Sam_Neill#2026-07-13</guid>
+      <category>New Zealand actor (1947–2026)</category>
+    </item>
     <item>
       <title>Lindsey Graham</title>
       <link>https://en.wikipedia.org/wiki/Lindsey_Graham</link>
@@ -248,14 +256,6 @@ The knockout stage of the 2026 FIFA World Cup will be the second and final stage
       <pubDate>Sun, 14 Jun 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Oliver_Tree#2026-06-14</guid>
       <category>American musician (1993–2026)</category>
-    </item>
-    <item>
-      <title>Folarin Balogun</title>
-      <link>https://en.wikipedia.org/wiki/Folarin_Balogun</link>
-      <description>Folarin Jerry Balogun is a professional soccer player who plays as a striker for Ligue 1 club Monaco and the United States national team.</description>
-      <pubDate>Sat, 13 Jun 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Folarin_Balogun#2026-06-13</guid>
-      <category>Professional soccer player (born 2001)</category>
     </item>
   </channel>
 </rss>
