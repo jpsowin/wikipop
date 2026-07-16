@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Wed, 15 Jul 2026 08:15:54 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 08:16:05 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Lionel Messi</title>
+      <link>https://en.wikipedia.org/wiki/Lionel_Messi</link>
+      <description>Lionel Andrés &quot;Leo&quot; Messi is an Argentine professional footballer who plays as a forward for and captains both Major League Soccer club Inter Miami and the Argentina national team. Widely regarded as one of the greatest players in history, Messi has set numerous records for individual accolades won throughout his professional footballing career, including eight Ballons d&apos;Or, six European Golden Shoes, and being named the world&apos;s best player by FIFA eight times. In 2025, he was named the All Time Men&apos;s World Best Player by the IFFHS.</description>
+      <pubDate>Wed, 15 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Lionel_Messi#2026-07-15</guid>
+      <category>Argentine footballer (born 1987)</category>
+    </item>
     <item>
       <title>Lamine Yamal</title>
       <link>https://en.wikipedia.org/wiki/Lamine_Yamal</link>
@@ -248,14 +256,6 @@ The knockout stage of the 2026 FIFA World Cup will be the second and final stage
       <pubDate>Tue, 16 Jun 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9#2026-06-16</guid>
       <category>French footballer (born 1998)</category>
-    </item>
-    <item>
-      <title>Cape Verde</title>
-      <link>https://en.wikipedia.org/wiki/Cape_Verde</link>
-      <description>Cape Verde, in Portuguese Cabo Verde, in Cape Verdean Creole Kabu Verdi, officially the Republic of Cabo Verde, is an archipelagic country in the central Atlantic Ocean off the coast of West Africa. It consists of ten volcanic islands with a combined land area of about 4,033 square kilometres (1,557 sq mi). These islands lie between 600 and 850 kilometres west of Cap-Vert, the westernmost point of continental Africa, after which they are named. Cape Verde forms part of the Macaronesia ecoregion, along with the Azores, the Canary Islands, Madeira and the Savage Isles.</description>
-      <pubDate>Mon, 15 Jun 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Cape_Verde#2026-06-15</guid>
-      <category>Island country in West Africa</category>
     </item>
   </channel>
 </rss>
