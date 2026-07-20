@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sun, 19 Jul 2026 08:16:20 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 08:26:51 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>List of FIFA World Cup finals</title>
+      <link>https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals</link>
+      <description>The FIFA World Cup is an international association football competition contested by the senior men&apos;s national teams of the Fédération Internationale de Football Association (FIFA), the sport&apos;s global governing body. The championship has been awarded every four years since 1930, except in 1942 and 1946, when it was not held because of World War II.</description>
+      <pubDate>Sun, 19 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals#2026-07-19</guid>
+      
+    </item>
     <item>
       <title>2026 FIFA World Cup</title>
       <link>https://en.wikipedia.org/wiki/2026_FIFA_World_Cup</link>
@@ -248,14 +256,6 @@ The knockout stage of the 2026 FIFA World Cup will be the second and final stage
       <pubDate>Sat, 20 Jun 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Amelia_Dimoldenberg#2026-06-20</guid>
       <category>English comedian, writer, presenter and journalist (born 1994)</category>
-    </item>
-    <item>
-      <title>Juneteenth</title>
-      <link>https://en.wikipedia.org/wiki/Juneteenth</link>
-      <description>Juneteenth, officially Juneteenth National Independence Day, is a federal holiday in the United States. It is celebrated annually on June 19 to commemorate the end of slavery in the United States. The holiday&apos;s name, first used in the 1890s, is a portmanteau of June and nineteenth, referring to June 19, 1865, the day when Major General Gordon Granger ordered the final enforcement of the Emancipation Proclamation in Texas at the end of the American Civil War.</description>
-      <pubDate>Fri, 19 Jun 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Juneteenth#2026-06-19</guid>
-      <category>US holiday commemorating the end of slavery in the United States</category>
     </item>
   </channel>
 </rss>
