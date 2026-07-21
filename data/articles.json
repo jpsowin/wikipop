@@ -45548,5 +45548,88 @@
         "url": "https://en.wikipedia.org/wiki/Ryan_Fox"
       }
     ]
+  },
+  {
+    "date": "2026-07-20",
+    "title": "Kevin_Keegan",
+    "views": 688797,
+    "rank": 8,
+    "type": "standard",
+    "extract": "Joseph Kevin Keegan was an English footballer and manager. Nicknamed \"King Kev\" or \"Mighty Mouse\", Keegan was recognised for his dribbling ability, finishing and presence in the air, and is regarded as one of the greatest players of all time.",
+    "description": "English football player and manager (1951–2026)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Kevin_keegan_panini_card_%28cropped%29.jpg/330px-Kevin_keegan_panini_card_%28cropped%29.jpg",
+    "url": "https://en.wikipedia.org/wiki/Kevin_Keegan",
+    "top10": [
+      {
+        "rank": 3,
+        "title": "Lamine_Yamal",
+        "views": 1205902,
+        "description": "Spanish footballer (born 2007)",
+        "url": "https://en.wikipedia.org/wiki/Lamine_Yamal"
+      },
+      {
+        "rank": 4,
+        "title": "The_Odyssey_(2026_film)",
+        "views": 864339,
+        "description": "Film by Christopher Nolan",
+        "url": "https://en.wikipedia.org/wiki/The_Odyssey_(2026_film)"
+      },
+      {
+        "rank": 5,
+        "title": "Andy_Burnham",
+        "views": 777708,
+        "description": "Prime Minister of the United Kingdom since 2026",
+        "url": "https://en.wikipedia.org/wiki/Andy_Burnham"
+      },
+      {
+        "rank": 6,
+        "title": "2026_FIFA_World_Cup",
+        "views": 730936,
+        "description": "Soccer tournament in Canada, Mexico and the United States",
+        "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+      },
+      {
+        "rank": 8,
+        "title": "Kevin_Keegan",
+        "views": 688797,
+        "description": "English football player and manager (1951–2026)",
+        "url": "https://en.wikipedia.org/wiki/Kevin_Keegan"
+      },
+      {
+        "rank": 9,
+        "title": "Lionel_Messi",
+        "views": 437797,
+        "description": "Argentine footballer (born 1987)",
+        "url": "https://en.wikipedia.org/wiki/Lionel_Messi"
+      },
+      {
+        "rank": 10,
+        "title": "Leandro_Paredes",
+        "views": 419903,
+        "description": "Argentine footballer (born 1994)",
+        "url": "https://en.wikipedia.org/wiki/Leandro_Paredes"
+      },
+      {
+        "rank": 11,
+        "title": "Ferran_Torres",
+        "views": 383545,
+        "description": "Spanish footballer (born 2000)",
+        "url": "https://en.wikipedia.org/wiki/Ferran_Torres"
+      },
+      {
+        "rank": 12,
+        "title": "Rodri_(footballer,_born_1996)",
+        "views": 370456,
+        "description": "Spanish footballer",
+        "url": "https://en.wikipedia.org/wiki/Rodri_(footballer%2C_born_1996)"
+      },
+      {
+        "rank": 13,
+        "title": "FIFA_World_Cup",
+        "views": 367740,
+        "description": "Football tournament",
+        "url": "https://en.wikipedia.org/wiki/FIFA_World_Cup"
+      }
+    ]
   }
 ]

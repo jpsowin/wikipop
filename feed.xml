@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Mon, 20 Jul 2026 08:26:51 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 08:17:15 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Kevin Keegan</title>
+      <link>https://en.wikipedia.org/wiki/Kevin_Keegan</link>
+      <description>Joseph Kevin Keegan was an English footballer and manager. Nicknamed &quot;King Kev&quot; or &quot;Mighty Mouse&quot;, Keegan was recognised for his dribbling ability, finishing and presence in the air, and is regarded as one of the greatest players of all time.</description>
+      <pubDate>Mon, 20 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Kevin_Keegan#2026-07-20</guid>
+      <category>English football player and manager (1951–2026)</category>
+    </item>
     <item>
       <title>List of FIFA World Cup finals</title>
       <link>https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals</link>
@@ -248,14 +256,6 @@ The knockout stage of the 2026 FIFA World Cup will be the second and final stage
       <pubDate>Sun, 21 Jun 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Wyndham_Clark#2026-06-21</guid>
       <category>American professional golfer (born 1993)</category>
-    </item>
-    <item>
-      <title>Amelia Dimoldenberg</title>
-      <link>https://en.wikipedia.org/wiki/Amelia_Dimoldenberg</link>
-      <description>Amelia Dimoldenberg is an English comedian, writer and presenter. She is the creator and host of the web series Chicken Shop Date, in which she interviews celebrities in fried chicken restaurants while subjecting them to her sarcastic, deadpan, and awkward sense of humour.</description>
-      <pubDate>Sat, 20 Jun 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Amelia_Dimoldenberg#2026-06-20</guid>
-      <category>English comedian, writer, presenter and journalist (born 1994)</category>
     </item>
   </channel>
 </rss>
