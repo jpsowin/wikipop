@@ -45714,5 +45714,88 @@
         "url": "https://en.wikipedia.org/wiki/Avengers%3A_Doomsday"
       }
     ]
+  },
+  {
+    "date": "2026-07-22",
+    "title": "ChatGPT",
+    "views": 153090,
+    "rank": 9,
+    "type": "standard",
+    "extract": "ChatGPT is a generative artificial intelligence chatbot developed by OpenAI. Originally released on November 30, 2022, the product uses large language models—specifically generative pre-trained transformers (GPTs)—to generate text, speech, and images in response to user prompts. ChatGPT accelerated the AI boom, an ongoing period marked by rapid investment and public attention toward the field of artificial intelligence (AI). OpenAI operates the service on a freemium model. Users can interact with ChatGPT through text, audio, and image prompts.",
+    "description": "Generative AI chatbot by OpenAI",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/OpenAI_logo_2025_%28symbol%29.svg/330px-OpenAI_logo_2025_%28symbol%29.svg.png",
+    "url": "https://en.wikipedia.org/wiki/ChatGPT",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "The_Odyssey_(2026_film)",
+        "views": 664906,
+        "description": "Film by Christopher Nolan",
+        "url": "https://en.wikipedia.org/wiki/The_Odyssey_(2026_film)"
+      },
+      {
+        "rank": 5,
+        "title": "Kaylee_Hottle",
+        "views": 437518,
+        "description": "American actress (2007/8–2026)",
+        "url": "https://en.wikipedia.org/wiki/Kaylee_Hottle"
+      },
+      {
+        "rank": 6,
+        "title": ".xyz",
+        "views": 330822,
+        "description": "Internet top-level domain",
+        "url": "https://en.wikipedia.org/wiki/.xyz"
+      },
+      {
+        "rank": 7,
+        "title": "Odyssey",
+        "views": 240202,
+        "description": "Epic poem attributed to Homer",
+        "url": "https://en.wikipedia.org/wiki/Odyssey"
+      },
+      {
+        "rank": 8,
+        "title": "Lamine_Yamal",
+        "views": 170214,
+        "description": "Spanish footballer (born 2007)",
+        "url": "https://en.wikipedia.org/wiki/Lamine_Yamal"
+      },
+      {
+        "rank": 9,
+        "title": "ChatGPT",
+        "views": 153090,
+        "description": "Generative AI chatbot by OpenAI",
+        "url": "https://en.wikipedia.org/wiki/ChatGPT"
+      },
+      {
+        "rank": 10,
+        "title": "Andy_Burnham",
+        "views": 152854,
+        "description": "Prime Minister of the United Kingdom since 2026",
+        "url": "https://en.wikipedia.org/wiki/Andy_Burnham"
+      },
+      {
+        "rank": 11,
+        "title": "Deaths_in_2026",
+        "views": 139871,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
+      },
+      {
+        "rank": 12,
+        "title": "Christopher_Nolan",
+        "views": 138197,
+        "description": "British and American filmmaker (born 1970)",
+        "url": "https://en.wikipedia.org/wiki/Christopher_Nolan"
+      },
+      {
+        "rank": 13,
+        "title": "Shakira",
+        "views": 120731,
+        "description": "Colombian singer-songwriter (born 1977)",
+        "url": "https://en.wikipedia.org/wiki/Shakira"
+      }
+    ]
   }
 ]

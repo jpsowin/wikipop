@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Wed, 22 Jul 2026 08:17:11 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 08:17:30 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>ChatGPT</title>
+      <link>https://en.wikipedia.org/wiki/ChatGPT</link>
+      <description>ChatGPT is a generative artificial intelligence chatbot developed by OpenAI. Originally released on November 30, 2022, the product uses large language models—specifically generative pre-trained transformers (GPTs)—to generate text, speech, and images in response to user prompts. ChatGPT accelerated the AI boom, an ongoing period marked by rapid investment and public attention toward the field of artificial intelligence (AI). OpenAI operates the service on a freemium model. Users can interact with ChatGPT through text, audio, and image prompts.</description>
+      <pubDate>Wed, 22 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/ChatGPT#2026-07-22</guid>
+      <category>Generative AI chatbot by OpenAI</category>
+    </item>
     <item>
       <title>Kaylee Hottle</title>
       <link>https://en.wikipedia.org/wiki/Kaylee_Hottle</link>
@@ -248,14 +256,6 @@ The knockout stage of the 2026 FIFA World Cup will be the second and final stage
       <pubDate>Tue, 23 Jun 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Erling_Haaland#2026-06-23</guid>
       <category>Norwegian footballer (born 2000)</category>
-    </item>
-    <item>
-      <title>Andy Burnham</title>
-      <link>https://en.wikipedia.org/wiki/Andy_Burnham</link>
-      <description>Andrew Murray Burnham is a British politician who has served as the Member of Parliament (MP) for Makerfield since June 2026. A Labour Co-op member, he is currently a candidate for the 2026 Labour Party leadership election to succeed Keir Starmer as Prime Minister and leader of the Labour Party. He previously served as the Mayor of Greater Manchester from 2017 to 2026 and the MP for Leigh from 2001 to 2017. During his parliamentary career before becoming mayor, he held several cabinet positions, lastly as Secretary of State for Health from 2009 to 2010 under Gordon Brown. Burnham identifies as a socialist and is associated with the soft left faction of the Labour Party.</description>
-      <pubDate>Mon, 22 Jun 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Andy_Burnham#2026-06-22</guid>
-      <category>British politician (born 1970)</category>
     </item>
   </channel>
 </rss>
