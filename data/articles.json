@@ -45880,5 +45880,88 @@
         "url": "https://en.wikipedia.org/wiki/Jon-Erik_Hexum"
       }
     ]
+  },
+  {
+    "date": "2026-07-24",
+    "title": "LeBron_James",
+    "views": 270930,
+    "rank": 5,
+    "type": "standard",
+    "extract": "LeBron Raymone James Sr. is an American professional basketball player who last played for the Los Angeles Lakers of the National Basketball Association (NBA). Nicknamed \"King James\", he is the NBA's all-time leading scorer and has won four NBA championships from 10 NBA Finals appearances, including eight consecutive appearances between 2011 and 2018. He has won three Olympic gold medals as a member of the U.S. national team, and is widely considered to be one of the greatest basketball players of all time and one of the greatest athletes in modern history.",
+    "description": "American basketball player (born 1984)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/LeBron_James_%2851959977144%29_%28cropped2%29.jpg/330px-LeBron_James_%2851959977144%29_%28cropped2%29.jpg",
+    "url": "https://en.wikipedia.org/wiki/LeBron_James",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "The_Odyssey_(2026_film)",
+        "views": 565207,
+        "description": "Film by Christopher Nolan",
+        "url": "https://en.wikipedia.org/wiki/The_Odyssey_(2026_film)"
+      },
+      {
+        "rank": 5,
+        "title": "LeBron_James",
+        "views": 270930,
+        "description": "American basketball player (born 1984)",
+        "url": "https://en.wikipedia.org/wiki/LeBron_James"
+      },
+      {
+        "rank": 6,
+        "title": "Jana_Nayagan",
+        "views": 196158,
+        "description": "2026 Indian film by H. Vinoth",
+        "url": "https://en.wikipedia.org/wiki/Jana_Nayagan"
+      },
+      {
+        "rank": 7,
+        "title": "Odyssey",
+        "views": 189179,
+        "description": "Epic poem attributed to Homer",
+        "url": "https://en.wikipedia.org/wiki/Odyssey"
+      },
+      {
+        "rank": 8,
+        "title": "Stella_Lefty",
+        "views": 156536,
+        "description": "American singer-songwriter",
+        "url": "https://en.wikipedia.org/wiki/Stella_Lefty"
+      },
+      {
+        "rank": 9,
+        "title": "ChatGPT",
+        "views": 142618,
+        "description": "Generative AI chatbot by OpenAI",
+        "url": "https://en.wikipedia.org/wiki/ChatGPT"
+      },
+      {
+        "rank": 10,
+        "title": "Christopher_Nolan",
+        "views": 137334,
+        "description": "British and American filmmaker (born 1970)",
+        "url": "https://en.wikipedia.org/wiki/Christopher_Nolan"
+      },
+      {
+        "rank": 11,
+        "title": "Deaths_in_2026",
+        "views": 134299,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
+      },
+      {
+        "rank": 12,
+        "title": ".xyz",
+        "views": 123985,
+        "description": "Internet top-level domain",
+        "url": "https://en.wikipedia.org/wiki/.xyz"
+      },
+      {
+        "rank": 13,
+        "title": "Masters_of_the_Universe_(2026_film)",
+        "views": 123534,
+        "description": "2026 film by Travis Knight",
+        "url": "https://en.wikipedia.org/wiki/Masters_of_the_Universe_(2026_film)"
+      }
+    ]
   }
 ]

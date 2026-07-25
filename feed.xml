@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Fri, 24 Jul 2026 08:17:13 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 08:15:04 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>LeBron James</title>
+      <link>https://en.wikipedia.org/wiki/LeBron_James</link>
+      <description>LeBron Raymone James Sr. is an American professional basketball player who last played for the Los Angeles Lakers of the National Basketball Association (NBA). Nicknamed &quot;King James&quot;, he is the NBA&apos;s all-time leading scorer and has won four NBA championships from 10 NBA Finals appearances, including eight consecutive appearances between 2011 and 2018. He has won three Olympic gold medals as a member of the U.S. national team, and is widely considered to be one of the greatest basketball players of all time and one of the greatest athletes in modern history.</description>
+      <pubDate>Fri, 24 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/LeBron_James#2026-07-24</guid>
+      <category>American basketball player (born 1984)</category>
+    </item>
     <item>
       <title>Jana Nayagan</title>
       <link>https://en.wikipedia.org/wiki/Jana_Nayagan</link>
@@ -248,14 +256,6 @@ The knockout stage of the 2026 FIFA World Cup will be the second and final stage
       <pubDate>Thu, 25 Jun 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Sebasti%C3%A1n_Beccacece#2026-06-25</guid>
       <category>Argentine football manager (born 1980)</category>
-    </item>
-    <item>
-      <title>2026 NBA draft</title>
-      <link>https://en.wikipedia.org/wiki/2026_NBA_draft</link>
-      <description>The 2026 NBA draft was the 80th edition of the National Basketball Association&apos;s annual draft. This was the first draft since 2021 with 60 picks, as no teams forfeited second-round draft picks for free agency violations. The first round of the draft was held on June 23, and the second round was held on June 24. The Washington Wizards selected small forward AJ Dybantsa out of BYU first overall.</description>
-      <pubDate>Wed, 24 Jun 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/2026_NBA_draft#2026-06-24</guid>
-      <category>80th edition of the NBA draft</category>
     </item>
   </channel>
 </rss>
