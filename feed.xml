@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sun, 26 Jul 2026 08:17:09 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 08:42:31 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>David Jonsson</title>
+      <link>https://en.wikipedia.org/wiki/David_Jonsson</link>
+      <description>David Jonsson is a British actor. He began his career on the West End, winning a Black British Theatre Award for his performance in the play and breathe... (2021). He is known for his performance in the BBC Two and HBO television series Industry (2020–2022), as well as his roles in the films Rye Lane (2023), Alien: Romulus (2024), and The Long Walk (2025).</description>
+      <pubDate>Sun, 26 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/David_Jonsson#2026-07-26</guid>
+      <category>British actor (born 1993)</category>
+    </item>
     <item>
       <title>Pralhad Joshi</title>
       <link>https://en.wikipedia.org/wiki/Pralhad_Joshi</link>
@@ -245,17 +253,6 @@
       <pubDate>Sat, 27 Jun 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/K._Bhagyaraj#2026-06-27</guid>
       <category>Indian film director and actor (1953–2026)</category>
-    </item>
-    <item>
-      <title>2026 FIFA World Cup knockout stage</title>
-      <link>https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage</link>
-      <description>
-
-
-The knockout stage of the 2026 FIFA World Cup will be the second and final stage of the competition, following the group stage. Played from June 28 to July 19, 2026, the knockout stage will end with the final, to be held at MetLife Stadium in East Rutherford, New Jersey. The top two teams from each of the twelve groups, along with the best eight third-placed teams, will advance to the knockout stage to compete in a single-elimination tournament. There will be 32 matches in the knockout stage, including a match for third place.</description>
-      <pubDate>Fri, 26 Jun 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage#2026-06-26</guid>
-      <category>Stage in FIFA World Cup</category>
     </item>
   </channel>
 </rss>
