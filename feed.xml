@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Tue, 28 Jul 2026 08:17:54 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 08:18:18 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Spider-Man: Brand New Day</title>
+      <link>https://en.wikipedia.org/wiki/Spider-Man%3A_Brand_New_Day</link>
+      <description>Spider-Man: Brand New Day is a 2026 American superhero film based on the Marvel Comics character Spider-Man. Produced by Columbia Pictures, Marvel Studios, and Pascal Pictures, and distributed by Sony Pictures Releasing, it is the 38th film in the Marvel Cinematic Universe (MCU) and the fourth film in the MCU Spider-Man film series following Spider-Man: No Way Home (2021). The film was directed by Destin Daniel Cretton, and written by Chris McKenna and Erik Sommers. Tom Holland stars as Peter Parker / Spider-Man, alongside Zendaya, Sadie Sink, Jacob Batalon, Jon Bernthal, Tramell Tillman, Michael Mando, and Mark Ruffalo. In the film, Parker anonymously protects New York City as the hero Spider-Man and investigates a powerful new threat while his superpowers undergo a surprising and potentially dangerous evolution.</description>
+      <pubDate>Tue, 28 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Spider-Man%3A_Brand_New_Day#2026-07-28</guid>
+      <category>2026 Marvel Studios film</category>
+    </item>
     <item>
       <title>Bill Oddie</title>
       <link>https://en.wikipedia.org/wiki/Bill_Oddie</link>
@@ -245,14 +253,6 @@
       <pubDate>Mon, 29 Jun 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Zion_Suzuki#2026-06-29</guid>
       <category>Japanese football goalkeeper (born 2002)</category>
-    </item>
-    <item>
-      <title>Stephen Eustáquio</title>
-      <link>https://en.wikipedia.org/wiki/Stephen_Eust%C3%A1quio</link>
-      <description>Stephen Antunes Eustáquio is a Canadian professional soccer player who plays as a midfielder for Major League Soccer club Los Angeles FC, on loan from Primeira Liga club Porto, and vice-captains the Canada national team.</description>
-      <pubDate>Sun, 28 Jun 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Stephen_Eust%C3%A1quio#2026-06-28</guid>
-      <category>Canadian soccer player (born 1996)</category>
     </item>
   </channel>
 </rss>
