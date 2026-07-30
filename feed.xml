@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Wed, 29 Jul 2026 08:18:18 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 08:17:06 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Glen Hansard</title>
+      <link>https://en.wikipedia.org/wiki/Glen_Hansard</link>
+      <description>Glen James Hansard was an Irish singer-songwriter and actor. From 1990, he was the frontman of the Irish rock band the Frames, with whom he released six studio albums, four of which reached the top ten of the Irish Album Charts. Hansard was one half of folk rock duo the Swell Season before releasing his debut solo album, Rhythm and Repose, in 2012. His second album, Didn&apos;t He Ramble (2015), was nominated for the Grammy Award for Best Folk Album.</description>
+      <pubDate>Wed, 29 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Glen_Hansard#2026-07-29</guid>
+      <category>Irish musician (1970–2026)</category>
+    </item>
     <item>
       <title>Spider-Man: Brand New Day</title>
       <link>https://en.wikipedia.org/wiki/Spider-Man%3A_Brand_New_Day</link>
@@ -245,14 +253,6 @@
       <pubDate>Tue, 30 Jun 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/.xyz#2026-06-30</guid>
       <category>Internet top-level domain</category>
-    </item>
-    <item>
-      <title>Zion Suzuki</title>
-      <link>https://en.wikipedia.org/wiki/Zion_Suzuki</link>
-      <description>Zion Suzuki  is a Japanese professional footballer who plays as a goalkeeper for Serie A club Parma. He represents the Japan national team.</description>
-      <pubDate>Mon, 29 Jun 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Zion_Suzuki#2026-06-29</guid>
-      <category>Japanese football goalkeeper (born 2002)</category>
     </item>
   </channel>
 </rss>
