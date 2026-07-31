@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Thu, 30 Jul 2026 08:17:06 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2026 08:21:31 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Matthias Jaissle</title>
+      <link>https://en.wikipedia.org/wiki/Matthias_Jaissle</link>
+      <description>Matthias Jaissle is a German professional football manager and former player who is the current head coach of Saudi Pro League club Al-Ahli.</description>
+      <pubDate>Thu, 30 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Matthias_Jaissle#2026-07-30</guid>
+      <category>German football manager (born 1988)</category>
+    </item>
     <item>
       <title>Glen Hansard</title>
       <link>https://en.wikipedia.org/wiki/Glen_Hansard</link>
@@ -245,14 +253,6 @@
       <pubDate>Wed, 01 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Harry_Kane#2026-07-01</guid>
       <category>English footballer (born 1993)</category>
-    </item>
-    <item>
-      <title>.xyz</title>
-      <link>https://en.wikipedia.org/wiki/.xyz</link>
-      <description>.xyz is a top-level domain name that was proposed in ICANN&apos;s new generic top-level domain (gTLD) Program for consisting of the last three letters of the Latin-script alphabet. XYZ.com and CentralNic are the registries for the domain, which was created by entrepreneur Daniel Negari. It became available to the general public on June 2, 2014, thereafter becoming widely used by tech startups, creators, and Web3 projects.</description>
-      <pubDate>Tue, 30 Jun 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/.xyz#2026-06-30</guid>
-      <category>Internet top-level domain</category>
     </item>
   </channel>
 </rss>
