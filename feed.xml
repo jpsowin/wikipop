@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Fri, 31 Jul 2026 08:21:31 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 08:16:33 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Ceuta</title>
+      <link>https://en.wikipedia.org/wiki/Ceuta</link>
+      <description>Ceuta is an autonomous city of Spain on the North African coast. Bordered by Morocco, it lies along the boundary between the Mediterranean Sea and the Atlantic Ocean. Ceuta is one of the special territories of members of the European Economic Area.</description>
+      <pubDate>Fri, 31 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Ceuta#2026-07-31</guid>
+      <category>Spanish autonomous city in northwestern Africa</category>
+    </item>
     <item>
       <title>Matthias Jaissle</title>
       <link>https://en.wikipedia.org/wiki/Matthias_Jaissle</link>
@@ -245,14 +253,6 @@
       <pubDate>Thu, 02 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Malik_Tillman#2026-07-02</guid>
       <category>American soccer player (born 2002)</category>
-    </item>
-    <item>
-      <title>Harry Kane</title>
-      <link>https://en.wikipedia.org/wiki/Harry_Kane</link>
-      <description>Harry Edward Kane is an English professional footballer who plays as a striker for Bundesliga club Bayern Munich and captains the England national team. Regarded as one of the best players in the world, he has scored over 500 career goals for club and country.</description>
-      <pubDate>Wed, 01 Jul 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Harry_Kane#2026-07-01</guid>
-      <category>English footballer (born 1993)</category>
     </item>
   </channel>
 </rss>

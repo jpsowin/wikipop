@@ -46461,5 +46461,88 @@
         "url": "https://en.wikipedia.org/wiki/Ceuta"
       }
     ]
+  },
+  {
+    "date": "2026-07-31",
+    "title": "Ceuta",
+    "views": 546834,
+    "rank": 5,
+    "type": "standard",
+    "extract": "Ceuta is an autonomous city of Spain on the North African coast. Bordered by Morocco, it lies along the boundary between the Mediterranean Sea and the Atlantic Ocean. Ceuta is one of the special territories of members of the European Economic Area.",
+    "description": "Spanish autonomous city in northwestern Africa",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Museo_militar_del_Desnarigado.jpg/330px-Museo_militar_del_Desnarigado.jpg",
+    "url": "https://en.wikipedia.org/wiki/Ceuta",
+    "top10": [
+      {
+        "rank": 2,
+        "title": "Spider-Man:_Brand_New_Day",
+        "views": 984737,
+        "description": "2026 Marvel Studios film",
+        "url": "https://en.wikipedia.org/wiki/Spider-Man%3A_Brand_New_Day"
+      },
+      {
+        "rank": 5,
+        "title": "Ceuta",
+        "views": 546834,
+        "description": "Spanish autonomous city in northwestern Africa",
+        "url": "https://en.wikipedia.org/wiki/Ceuta"
+      },
+      {
+        "rank": 6,
+        "title": "The_Odyssey_(2026_film)",
+        "views": 357861,
+        "description": "Film by Christopher Nolan",
+        "url": "https://en.wikipedia.org/wiki/The_Odyssey_(2026_film)"
+      },
+      {
+        "rank": 7,
+        "title": "Franco_Baresi",
+        "views": 306453,
+        "description": "Italian footballer (1960–2026)",
+        "url": "https://en.wikipedia.org/wiki/Franco_Baresi"
+      },
+      {
+        "rank": 8,
+        "title": "Nirmal_Purja",
+        "views": 219937,
+        "description": "Nepalese mountaineer (born 1983)",
+        "url": "https://en.wikipedia.org/wiki/Nirmal_Purja"
+      },
+      {
+        "rank": 9,
+        "title": "India_at_the_2026_Commonwealth_Games",
+        "views": 217919,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/India_at_the_2026_Commonwealth_Games"
+      },
+      {
+        "rank": 10,
+        "title": "Glen_Hansard",
+        "views": 190615,
+        "description": "Irish musician (1970–2026)",
+        "url": "https://en.wikipedia.org/wiki/Glen_Hansard"
+      },
+      {
+        "rank": 11,
+        "title": "2026_Commonwealth_Games",
+        "views": 176002,
+        "description": "Ongoing multi-sport event in Glasgow, Scotland",
+        "url": "https://en.wikipedia.org/wiki/2026_Commonwealth_Games"
+      },
+      {
+        "rank": 12,
+        "title": "Zendaya",
+        "views": 175157,
+        "description": "American actress and singer (born 1996)",
+        "url": "https://en.wikipedia.org/wiki/Zendaya"
+      },
+      {
+        "rank": 13,
+        "title": "Tom_Holland",
+        "views": 168945,
+        "description": "British actor (born 1996)",
+        "url": "https://en.wikipedia.org/wiki/Tom_Holland"
+      }
+    ]
   }
 ]
