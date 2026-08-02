@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sat, 01 Aug 2026 08:16:33 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 02 Aug 2026 08:16:52 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Nirmal Purja</title>
+      <link>https://en.wikipedia.org/wiki/Nirmal_Purja</link>
+      <description>Nirmal Purja was a Nepalese and British mountaineer. Before beginning a career in mountaineering, he served in the British Army with the Brigade of Gurkhas and later in the Special Boat Service (SBS), the special forces unit of the Royal Navy.</description>
+      <pubDate>Sat, 01 Aug 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Nirmal_Purja#2026-08-01</guid>
+      <category>Nepalese and British mountaineer (1983–2026)</category>
+    </item>
     <item>
       <title>Ceuta</title>
       <link>https://en.wikipedia.org/wiki/Ceuta</link>
@@ -245,14 +253,6 @@
       <pubDate>Fri, 03 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Cristiano_Ronaldo#2026-07-03</guid>
       <category>Portuguese footballer (born 1985)</category>
-    </item>
-    <item>
-      <title>Malik Tillman</title>
-      <link>https://en.wikipedia.org/wiki/Malik_Tillman</link>
-      <description>Malik Leon Tillman is a professional soccer player who plays as an attacking midfielder for Bundesliga club Bayer Leverkusen. Born in Germany, he represents the United States national team.</description>
-      <pubDate>Thu, 02 Jul 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Malik_Tillman#2026-07-02</guid>
-      <category>American soccer player (born 2002)</category>
     </item>
   </channel>
 </rss>
