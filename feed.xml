@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sun, 02 Aug 2026 08:16:52 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 08:41:00 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>SummerSlam (2026)</title>
+      <link>https://en.wikipedia.org/wiki/SummerSlam_(2026)</link>
+      <description>The 2026 SummerSlam, also promoted as SummerSlam: Minnesota, was a professional wrestling pay-per-view (PPV) and livestreaming event produced by WWE. It was the 39th annual SummerSlam and took place as a two-night event on Saturday, August 1, and Sunday, August 2, 2026, at U.S. Bank Stadium in Minneapolis, Minnesota, held for wrestlers from the promotion&apos;s Raw and SmackDown brand divisions.</description>
+      <pubDate>Sun, 02 Aug 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/SummerSlam_(2026)#2026-08-02</guid>
+      <category>WWE pay-per-view and livestreaming event</category>
+    </item>
     <item>
       <title>Nirmal Purja</title>
       <link>https://en.wikipedia.org/wiki/Nirmal_Purja</link>
@@ -245,14 +253,6 @@
       <pubDate>Sat, 04 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Vozinha#2026-07-04</guid>
       <category>Cape Verdean footballer (born 1986)</category>
-    </item>
-    <item>
-      <title>Cristiano Ronaldo</title>
-      <link>https://en.wikipedia.org/wiki/Cristiano_Ronaldo</link>
-      <description>Cristiano Ronaldo dos Santos Aveiro, nicknamed CR7, is a Portuguese professional footballer who plays as a forward for and captains both Saudi Pro League club Al-Nassr and the Portugal national team. Widely regarded as one of the greatest players in history and the greatest Portuguese player ever, he has won numerous individual accolades throughout his career, including five Ballon d&apos;Or awards, a record three UEFA Men&apos;s Player of the Year Awards, and four European Golden Shoes. He was also named the world&apos;s best player five times by FIFA.</description>
-      <pubDate>Fri, 03 Jul 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Cristiano_Ronaldo#2026-07-03</guid>
-      <category>Portuguese footballer (born 1985)</category>
     </item>
   </channel>
 </rss>
