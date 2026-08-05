@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Tue, 04 Aug 2026 08:18:12 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 08:17:57 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Zendaya</title>
+      <link>https://en.wikipedia.org/wiki/Zendaya</link>
+      <description>Zendaya Maree Stoermer Coleman, known mononymously as Zendaya, is an American actress and singer. Her accolades include two Primetime Emmy Awards and a Golden Globe. In 2022, Time named her one of the 100 most influential people in the world.</description>
+      <pubDate>Tue, 04 Aug 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Zendaya#2026-08-04</guid>
+      <category>American actress and singer (born 1996)</category>
+    </item>
     <item>
       <title>Tom Holland</title>
       <link>https://en.wikipedia.org/wiki/Tom_Holland</link>
@@ -245,14 +253,6 @@
       <pubDate>Mon, 06 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Jude_Bellingham#2026-07-06</guid>
       <category>English footballer (born 2003)</category>
-    </item>
-    <item>
-      <title>Naomi Osaka</title>
-      <link>https://en.wikipedia.org/wiki/Naomi_Osaka</link>
-      <description>Naomi Osaka is a Japanese professional tennis player. She was ranked as the world No. 1 in women&apos;s singles by the WTA for 25 weeks starting in January 2019, the first Asian player to hold the top ranking in singles. Osaka has won seven career singles titles, including four majors: two each at the Australian Open and the US Open. She is the first Japanese player to win a major singles title.</description>
-      <pubDate>Sun, 05 Jul 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Naomi_Osaka#2026-07-05</guid>
-      <category>Japanese tennis player (born 1997)</category>
     </item>
   </channel>
 </rss>

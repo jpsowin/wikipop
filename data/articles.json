@@ -46793,5 +46793,88 @@
         "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
       }
     ]
+  },
+  {
+    "date": "2026-08-04",
+    "title": "Zendaya",
+    "views": 165485,
+    "rank": 7,
+    "type": "standard",
+    "extract": "Zendaya Maree Stoermer Coleman, known mononymously as Zendaya, is an American actress and singer. Her accolades include two Primetime Emmy Awards and a Golden Globe. In 2022, Time named her one of the 100 most influential people in the world.",
+    "description": "American actress and singer (born 1996)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Zendaya-byPhilipRomano.jpg/330px-Zendaya-byPhilipRomano.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Zendaya",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Spider-Man:_Brand_New_Day",
+        "views": 638274,
+        "description": "2026 Marvel Studios film",
+        "url": "https://en.wikipedia.org/wiki/Spider-Man%3A_Brand_New_Day"
+      },
+      {
+        "rank": 5,
+        "title": "The_Odyssey_(2026_film)",
+        "views": 315568,
+        "description": "Epic action fantasy film by Christopher Nolan",
+        "url": "https://en.wikipedia.org/wiki/The_Odyssey_(2026_film)"
+      },
+      {
+        "rank": 6,
+        "title": "Glen_Hansard",
+        "views": 177963,
+        "description": "Irish musician (1970–2026)",
+        "url": "https://en.wikipedia.org/wiki/Glen_Hansard"
+      },
+      {
+        "rank": 7,
+        "title": "Zendaya",
+        "views": 165485,
+        "description": "American actress and singer (born 1996)",
+        "url": "https://en.wikipedia.org/wiki/Zendaya"
+      },
+      {
+        "rank": 8,
+        "title": "Tom_Holland",
+        "views": 162801,
+        "description": "British actor (born 1996)",
+        "url": "https://en.wikipedia.org/wiki/Tom_Holland"
+      },
+      {
+        "rank": 9,
+        "title": ".xyz",
+        "views": 161369,
+        "description": "Internet top-level domain",
+        "url": "https://en.wikipedia.org/wiki/.xyz"
+      },
+      {
+        "rank": 10,
+        "title": "Deaths_in_2026",
+        "views": 135589,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
+      },
+      {
+        "rank": 11,
+        "title": "Pan_Am_Flight_103",
+        "views": 126403,
+        "description": "1988 aircraft bombing over Scotland",
+        "url": "https://en.wikipedia.org/wiki/Pan_Am_Flight_103"
+      },
+      {
+        "rank": 12,
+        "title": "Pradeep_Rawat_(actor)",
+        "views": 120687,
+        "description": "Indian actor (1952–2026)",
+        "url": "https://en.wikipedia.org/wiki/Pradeep_Rawat_(actor)"
+      },
+      {
+        "rank": 13,
+        "title": "Neatsville,_Kentucky",
+        "views": 107440,
+        "description": "Unincorporated community in Kentucky, US",
+        "url": "https://en.wikipedia.org/wiki/Neatsville%2C_Kentucky"
+      }
+    ]
   }
 ]
