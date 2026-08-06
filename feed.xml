@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Wed, 05 Aug 2026 08:17:57 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2026 10:07:36 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Perez Hilton</title>
+      <link>https://en.wikipedia.org/wiki/Perez_Hilton</link>
+      <description>Mario Armando Lavandeira Jr., known professionally as Perez Hilton, is an American blogger, columnist, and media personality. His blog is known for posts covering gossip items about celebrities, and for posting tabloid photos over which he has added his own captions or &quot;doodles&quot;. The blog has received controversy for its attitude, its former practice of outing alleged closeted celebrities, and its role in the increasing coverage of celebrities in all forms of media.</description>
+      <pubDate>Wed, 05 Aug 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Perez_Hilton#2026-08-05</guid>
+      <category>American blogger (born 1978)</category>
+    </item>
     <item>
       <title>Zendaya</title>
       <link>https://en.wikipedia.org/wiki/Zendaya</link>
@@ -245,14 +253,6 @@
       <pubDate>Tue, 07 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Mitch_McConnell#2026-07-07</guid>
       <category>American politician and attorney (born 1942)</category>
-    </item>
-    <item>
-      <title>Jude Bellingham</title>
-      <link>https://en.wikipedia.org/wiki/Jude_Bellingham</link>
-      <description>Jude Victor William Bellingham is an English professional footballer who plays as a midfielder for La Liga club Real Madrid and the England national team. He is regarded as one of the best players in the world.</description>
-      <pubDate>Mon, 06 Jul 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Jude_Bellingham#2026-07-06</guid>
-      <category>English footballer (born 2003)</category>
     </item>
   </channel>
 </rss>
