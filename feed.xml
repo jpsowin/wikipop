@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Thu, 06 Aug 2026 10:07:36 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 08:33:45 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Abdul El-Sayed</title>
+      <link>https://en.wikipedia.org/wiki/Abdul_El-Sayed</link>
+      <description>Abdulrahman Mohamed El-Sayed is an American politician and epidemiologist who is the Democratic nominee in the 2026 United States Senate election in Michigan. From 2023 to 2025, he was the director of the Department of Health, Human, and Veterans Services of Wayne County.</description>
+      <pubDate>Thu, 06 Aug 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Abdul_El-Sayed#2026-08-06</guid>
+      <category>American politician and epidemiologist (born 1984)</category>
+    </item>
     <item>
       <title>Perez Hilton</title>
       <link>https://en.wikipedia.org/wiki/Perez_Hilton</link>
@@ -245,14 +253,6 @@
       <pubDate>Wed, 08 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Arthur_Fery#2026-07-08</guid>
       <category>British tennis player (born 2002)</category>
-    </item>
-    <item>
-      <title>Mitch McConnell</title>
-      <link>https://en.wikipedia.org/wiki/Mitch_McConnell</link>
-      <description>Addison Mitchell McConnell III is an American politician and attorney serving as the senior United States senator from Kentucky, a seat he has held since 1985. A member of the Republican Party, McConnell is in his seventh Senate term, making him the longest-serving senator in Kentucky history. He served from 2007 to 2025 as the leader of the Senate Republican Conference, including two stints as minority leader, and was majority leader from 2015 to 2021, making him the longest-serving Senate party leader in U.S. history.</description>
-      <pubDate>Tue, 07 Jul 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Mitch_McConnell#2026-07-07</guid>
-      <category>American politician and attorney (born 1942)</category>
     </item>
   </channel>
 </rss>
