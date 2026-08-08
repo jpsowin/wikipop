@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Fri, 07 Aug 2026 08:33:45 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2026 08:05:53 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Chris Hansen</title>
+      <link>https://en.wikipedia.org/wiki/Chris_Hansen</link>
+      <description>Christopher Edward Hansen is an American television presenter, journalist, and YouTube personality. During his tenure as a correspondent for Dateline NBC, he hosted the program&apos;s segment To Catch a Predator (2004–2007), which revolved around catching potential Internet predators using a sting operation. When the segment&apos;s three-year run concluded, Hansen continued to host shows on other networks with a similar format.</description>
+      <pubDate>Fri, 07 Aug 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Chris_Hansen#2026-08-07</guid>
+      <category>American television journalist (born 1959)</category>
+    </item>
     <item>
       <title>Abdul El-Sayed</title>
       <link>https://en.wikipedia.org/wiki/Abdul_El-Sayed</link>
@@ -245,14 +253,6 @@
       <pubDate>Thu, 09 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Bonnie_Tyler#2026-07-09</guid>
       <category>Welsh singer (1951–2026)</category>
-    </item>
-    <item>
-      <title>Arthur Fery</title>
-      <link>https://en.wikipedia.org/wiki/Arthur_Fery</link>
-      <description>Arthur Fery is a French-born British professional tennis player. He has a career high ATP singles ranking of world No. 114 achieved on 29 June 2026 and a doubles ranking of No. 201 achieved in July 2024. He is the current British No. 3 in singles.</description>
-      <pubDate>Wed, 08 Jul 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Arthur_Fery#2026-07-08</guid>
-      <category>British tennis player (born 2002)</category>
     </item>
   </channel>
 </rss>

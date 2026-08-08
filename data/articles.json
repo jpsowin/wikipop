@@ -47042,5 +47042,88 @@
         "url": "https://en.wikipedia.org/wiki/Tom_Holland"
       }
     ]
+  },
+  {
+    "date": "2026-08-07",
+    "title": "Chris_Hansen",
+    "views": 218524,
+    "rank": 6,
+    "type": "standard",
+    "extract": "Christopher Edward Hansen is an American television presenter, journalist, and YouTube personality. During his tenure as a correspondent for Dateline NBC, he hosted the program's segment To Catch a Predator (2004–2007), which revolved around catching potential Internet predators using a sting operation. When the segment's three-year run concluded, Hansen continued to host shows on other networks with a similar format.",
+    "description": "American television journalist (born 1959)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Chris_Hansen.jpg/330px-Chris_Hansen.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Chris_Hansen",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Spider-Man:_Brand_New_Day",
+        "views": 379690,
+        "description": "2026 Marvel Studios film",
+        "url": "https://en.wikipedia.org/wiki/Spider-Man%3A_Brand_New_Day"
+      },
+      {
+        "rank": 5,
+        "title": "The_Odyssey_(2026_film)",
+        "views": 264218,
+        "description": "Epic action fantasy film by Christopher Nolan",
+        "url": "https://en.wikipedia.org/wiki/The_Odyssey_(2026_film)"
+      },
+      {
+        "rank": 6,
+        "title": "Chris_Hansen",
+        "views": 218524,
+        "description": "American television journalist (born 1959)",
+        "url": "https://en.wikipedia.org/wiki/Chris_Hansen"
+      },
+      {
+        "rank": 7,
+        "title": "Abdul_El-Sayed",
+        "views": 180784,
+        "description": "American politician and epidemiologist (born 1984)",
+        "url": "https://en.wikipedia.org/wiki/Abdul_El-Sayed"
+      },
+      {
+        "rank": 8,
+        "title": "Perez_Hilton",
+        "views": 175351,
+        "description": "American blogger (born 1978)",
+        "url": "https://en.wikipedia.org/wiki/Perez_Hilton"
+      },
+      {
+        "rank": 9,
+        "title": "Primetime_(2026_film)",
+        "views": 170047,
+        "description": "Upcoming film by Lance Oppenheim",
+        "url": "https://en.wikipedia.org/wiki/Primetime_(2026_film)"
+      },
+      {
+        "rank": 10,
+        "title": "Jason_Arday",
+        "views": 150242,
+        "description": "British academic (born 1985)",
+        "url": "https://en.wikipedia.org/wiki/Jason_Arday"
+      },
+      {
+        "rank": 11,
+        "title": "Zendaya",
+        "views": 139968,
+        "description": "American actress (born 1996)",
+        "url": "https://en.wikipedia.org/wiki/Zendaya"
+      },
+      {
+        "rank": 12,
+        "title": "Deaths_in_2026",
+        "views": 131913,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
+      },
+      {
+        "rank": 13,
+        "title": "William_Orbit",
+        "views": 131281,
+        "description": "British musician and record producer (1956–2026)",
+        "url": "https://en.wikipedia.org/wiki/William_Orbit"
+      }
+    ]
   }
 ]
