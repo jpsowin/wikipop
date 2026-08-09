@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sat, 08 Aug 2026 08:05:53 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 08:07:00 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>The Last House</title>
+      <link>https://en.wikipedia.org/wiki/The_Last_House</link>
+      <description>The Last House is a 2026 American science fiction thriller film directed by Louis Leterrier and written by Matthew Robinson. It stars Greta Lee and Wagner Moura. The film follows a family that finds themselves inexplicably sealed in their home, with the whole world being affected by the mysterious disaster, forcing them to learn to survive. The film was released on Netflix on August 7, 2026.</description>
+      <pubDate>Sat, 08 Aug 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/The_Last_House#2026-08-08</guid>
+      <category>2026 American film</category>
+    </item>
     <item>
       <title>Chris Hansen</title>
       <link>https://en.wikipedia.org/wiki/Chris_Hansen</link>
@@ -245,14 +253,6 @@
       <pubDate>Fri, 10 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Ann_Widdecombe#2026-07-10</guid>
       <category>British politician and media personality (1947–2026)</category>
-    </item>
-    <item>
-      <title>Bonnie Tyler</title>
-      <link>https://en.wikipedia.org/wiki/Bonnie_Tyler</link>
-      <description>Gaynor Sullivan, known professionally as Bonnie Tyler, was a Welsh singer and songwriter. Known for her distinctive husky voice, she came to prominence with the release of her debut studio album The World Starts Tonight (1977) and its singles &quot;Lost in France&quot; and &quot;More Than a Lover&quot;. Her 1977 single &quot;It&apos;s a Heartache&quot; reached number four on the UK singles chart and number three on the US Billboard Hot 100.</description>
-      <pubDate>Thu, 09 Jul 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Bonnie_Tyler#2026-07-09</guid>
-      <category>Welsh singer (1951–2026)</category>
     </item>
   </channel>
 </rss>
