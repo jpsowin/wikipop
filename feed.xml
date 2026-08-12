@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Tue, 11 Aug 2026 08:29:15 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 08:45:52 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Lucy Davis</title>
+      <link>https://en.wikipedia.org/wiki/Lucy_Davis</link>
+      <description>Lucy Clare Davis is an English actress and comedian known for playing Dawn Tinsley in the BBC mockumentary television sitcom The Office (2001–2003), Hilda Spellman in the Netflix supernatural horror television series Chilling Adventures of Sabrina (2018–2020), Dianne in the zombie comedy film Shaun of the Dead (2004), and Etta Candy in the superhero film Wonder Woman (2017). She played Eva in Disney Channel&apos;s comedy television series The Villains of Valley View (2022–2023).</description>
+      <pubDate>Tue, 11 Aug 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Lucy_Davis#2026-08-11</guid>
+      <category>British actress and comedian (born 1973)</category>
+    </item>
     <item>
       <title>Roblox</title>
       <link>https://en.wikipedia.org/wiki/Roblox</link>
@@ -245,14 +253,6 @@
       <pubDate>Mon, 13 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Sam_Neill#2026-07-13</guid>
       <category>New Zealand actor (1947–2026)</category>
-    </item>
-    <item>
-      <title>Lindsey Graham</title>
-      <link>https://en.wikipedia.org/wiki/Lindsey_Graham</link>
-      <description>Lindsey Olin Graham was an American politician and attorney who represented South Carolina in the United States Senate from 2003 until his death in 2026. A member of the Republican Party, he previously represented South Carolina&apos;s 3rd congressional district in the U.S. House of Representatives from 1995 to 2003 and served in the South Carolina House of Representatives from 1993 to 1995.</description>
-      <pubDate>Sun, 12 Jul 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Lindsey_Graham#2026-07-12</guid>
-      <category>American politician (1955–2026)</category>
     </item>
   </channel>
 </rss>
