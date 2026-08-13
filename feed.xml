@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Wed, 12 Aug 2026 08:45:52 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 08:49:39 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Joshua Kushner</title>
+      <link>https://en.wikipedia.org/wiki/Joshua_Kushner</link>
+      <description>Joshua Kushner is an American businessman and venture capitalist. He is a founder and managing partner of the venture capital firm Thrive Capital, co-founder and vice-chairman of Oscar Health, and the youngest son of Charles Kushner. He is the younger brother of Jared Kushner.</description>
+      <pubDate>Wed, 12 Aug 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Joshua_Kushner#2026-08-12</guid>
+      <category>American businessman (born 1985)</category>
+    </item>
     <item>
       <title>Lucy Davis</title>
       <link>https://en.wikipedia.org/wiki/Lucy_Davis</link>
@@ -245,14 +253,6 @@
       <pubDate>Tue, 14 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Lamine_Yamal#2026-07-14</guid>
       <category>Spanish footballer (born 2007)</category>
-    </item>
-    <item>
-      <title>Sam Neill</title>
-      <link>https://en.wikipedia.org/wiki/Sam_Neill</link>
-      <description>Sir Nigel John Dermot &quot;Sam&quot; Neill was a New Zealand actor and businessman. Known as a leading man in film and television, he has received nominations for three Primetime Emmy Awards and two Golden Globe Awards. He was appointed an Officer of the Order of the British Empire in the 1991 Queen&apos;s Birthday Honours, for services as an actor.</description>
-      <pubDate>Mon, 13 Jul 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Sam_Neill#2026-07-13</guid>
-      <category>New Zealand actor (1947–2026)</category>
     </item>
   </channel>
 </rss>
