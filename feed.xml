@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Tue, 18 Aug 2026 08:02:01 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 08:02:03 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Wladimir Klitschko</title>
+      <link>https://en.wikipedia.org/wiki/Wladimir_Klitschko</link>
+      <description>Volodymyr Klitschko is a Ukrainian former professional boxer who competed from 1996 to 2017. He held multiple heavyweight world championships between 2000 and 2015, including unified titles between 2008 and 2015. During this time he also held the International Boxing Organization (IBO) and Ring magazine titles.</description>
+      <pubDate>Tue, 18 Aug 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Wladimir_Klitschko#2026-08-18</guid>
+      <category>Ukrainian boxer (born 1976)</category>
+    </item>
     <item>
       <title>Hayden Panettiere</title>
       <link>https://en.wikipedia.org/wiki/Hayden_Panettiere</link>
@@ -245,14 +253,6 @@
       <pubDate>Sun, 19 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals#2026-07-19</guid>
       
-    </item>
-    <item>
-      <title>2026 FIFA World Cup</title>
-      <link>https://en.wikipedia.org/wiki/2026_FIFA_World_Cup</link>
-      <description>The 2026 FIFA World Cup is the 23rd FIFA World Cup and the current edition of the quadrennial international men&apos;s soccer championship contested by the national teams of the member associations of FIFA. The tournament began on June 11, 2026, and will conclude on July 19. It is jointly hosted by 16 cities—11 in the United States, 3 in Mexico, and 2 in Canada. The tournament is the first FIFA World Cup to be hosted by three countries and the first to include 48 teams, an expansion from the previous 32-team format.</description>
-      <pubDate>Sat, 18 Jul 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/2026_FIFA_World_Cup#2026-07-18</guid>
-      <category>Soccer tournament in North America</category>
     </item>
   </channel>
 </rss>

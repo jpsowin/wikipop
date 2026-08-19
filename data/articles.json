@@ -47872,5 +47872,88 @@
         "url": "https://en.wikipedia.org/wiki/Awarapan_2"
       }
     ]
+  },
+  {
+    "date": "2026-08-18",
+    "title": "Wladimir_Klitschko",
+    "views": 404736,
+    "rank": 5,
+    "type": "standard",
+    "extract": "Volodymyr Klitschko is a Ukrainian former professional boxer who competed from 1996 to 2017. He held multiple heavyweight world championships between 2000 and 2015, including unified titles between 2008 and 2015. During this time he also held the International Boxing Organization (IBO) and Ring magazine titles.",
+    "description": "Ukrainian boxer (born 1976)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Volodymyr_Klychko_%28Vladimir_Klitschko%29_of_Ukraine_at_the_59th_Munich_Security_Conference_in_Munich_on_17_February_2023_-_%28cropped%29.jpg/330px-Volodymyr_Klychko_%28Vladimir_Klitschko%29_of_Ukraine_at_the_59th_Munich_Security_Conference_in_Munich_on_17_February_2023_-_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Wladimir_Klitschko",
+    "top10": [
+      {
+        "rank": 2,
+        "title": "Hayden_Panettiere",
+        "views": 2035913,
+        "description": "American actress and singer (1989–2026)",
+        "url": "https://en.wikipedia.org/wiki/Hayden_Panettiere"
+      },
+      {
+        "rank": 5,
+        "title": "Wladimir_Klitschko",
+        "views": 404736,
+        "description": "Ukrainian boxer (born 1976)",
+        "url": "https://en.wikipedia.org/wiki/Wladimir_Klitschko"
+      },
+      {
+        "rank": 6,
+        "title": "Jansen_Panettiere",
+        "views": 289337,
+        "description": "American actor (1994–2023)",
+        "url": "https://en.wikipedia.org/wiki/Jansen_Panettiere"
+      },
+      {
+        "rank": 7,
+        "title": "Natalie_Harp",
+        "views": 282393,
+        "description": "American political aide (born 1990/1991)",
+        "url": "https://en.wikipedia.org/wiki/Natalie_Harp"
+      },
+      {
+        "rank": 8,
+        "title": "Google",
+        "views": 245180,
+        "description": "American multinational technology company",
+        "url": "https://en.wikipedia.org/wiki/Google"
+      },
+      {
+        "rank": 9,
+        "title": "Spider-Man:_Brand_New_Day",
+        "views": 212283,
+        "description": "2026 Marvel Studios film",
+        "url": "https://en.wikipedia.org/wiki/Spider-Man%3A_Brand_New_Day"
+      },
+      {
+        "rank": 10,
+        "title": "Awarapan_2",
+        "views": 179253,
+        "description": "2026 Indian film by Nitin Kakkar",
+        "url": "https://en.wikipedia.org/wiki/Awarapan_2"
+      },
+      {
+        "rank": 12,
+        "title": "Jason_Arday",
+        "views": 168572,
+        "description": "British academic and author (1985–2026)",
+        "url": "https://en.wikipedia.org/wiki/Jason_Arday"
+      },
+      {
+        "rank": 13,
+        "title": "Frank_Beard_(musician)",
+        "views": 166212,
+        "description": "American drummer (1949–2026)",
+        "url": "https://en.wikipedia.org/wiki/Frank_Beard_(musician)"
+      },
+      {
+        "rank": 14,
+        "title": "Michelle_Trachtenberg",
+        "views": 151650,
+        "description": "American actress (1985–2025)",
+        "url": "https://en.wikipedia.org/wiki/Michelle_Trachtenberg"
+      }
+    ]
   }
 ]
