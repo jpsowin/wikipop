@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Wed, 19 Aug 2026 08:02:03 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 08:04:15 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Natalie Harp</title>
+      <link>https://en.wikipedia.org/wiki/Natalie_Harp</link>
+      <description>Natalie Harp is an American political aide and former television presenter who has served as the executive assistant to the president of the United States since 2025.</description>
+      <pubDate>Wed, 19 Aug 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Natalie_Harp#2026-08-19</guid>
+      <category>American political aide (born 1991)</category>
+    </item>
     <item>
       <title>Wladimir Klitschko</title>
       <link>https://en.wikipedia.org/wiki/Wladimir_Klitschko</link>
@@ -245,14 +253,6 @@
       <pubDate>Mon, 20 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Kevin_Keegan#2026-07-20</guid>
       <category>English football player and manager (1951–2026)</category>
-    </item>
-    <item>
-      <title>List of FIFA World Cup finals</title>
-      <link>https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals</link>
-      <description>The FIFA World Cup is an international association football competition contested by the senior men&apos;s national teams of the Fédération Internationale de Football Association (FIFA), the sport&apos;s global governing body. The championship has been awarded every four years since 1930, except in 1942 and 1946, when it was not held because of World War II.</description>
-      <pubDate>Sun, 19 Jul 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals#2026-07-19</guid>
-      
     </item>
   </channel>
 </rss>
