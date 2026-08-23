@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sat, 22 Aug 2026 07:53:16 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2026 07:55:16 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Michael Wright (actor)</title>
+      <link>https://en.wikipedia.org/wiki/Michael_Wright_(actor)</link>
+      <description>Michael Wright was an American actor best known for his roles in the films The Five Heartbeats (1991), Streamers (1983) for which he won the Volpi Cup for Best Actor, and Sugar Hill (1994), and for his television roles Elias Taylor in V: The Series (1984–1985), Omar White in Oz (2001–2003), and Lazarus Prime in Black Lightning (2019).</description>
+      <pubDate>Sat, 22 Aug 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Michael_Wright_(actor)#2026-08-22</guid>
+      <category>American actor (1956–2026)</category>
+    </item>
     <item>
       <title>The Vulture and the Little Girl</title>
       <link>https://en.wikipedia.org/wiki/The_Vulture_and_the_Little_Girl</link>
@@ -248,14 +256,6 @@ The following notable deaths occurred in 2026. Names are reported under the date
       <pubDate>Thu, 23 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Jana_Nayagan#2026-07-23</guid>
       <category>2026 Indian film by H. Vinoth</category>
-    </item>
-    <item>
-      <title>ChatGPT</title>
-      <link>https://en.wikipedia.org/wiki/ChatGPT</link>
-      <description>ChatGPT is a generative artificial intelligence chatbot developed by OpenAI. Originally released on November 30, 2022, the product uses large language models—specifically generative pre-trained transformers (GPTs)—to generate text, speech, and images in response to user prompts. ChatGPT accelerated the AI boom, an ongoing period marked by rapid investment and public attention toward the field of artificial intelligence (AI). OpenAI operates the service on a freemium model. Users can interact with ChatGPT through text, audio, and image prompts.</description>
-      <pubDate>Wed, 22 Jul 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/ChatGPT#2026-07-22</guid>
-      <category>Generative AI chatbot by OpenAI</category>
     </item>
   </channel>
 </rss>
