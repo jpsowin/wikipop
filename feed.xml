@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Tue, 25 Aug 2026 08:05:57 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 08:07:00 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Dolly Parton</title>
+      <link>https://en.wikipedia.org/wiki/Dolly_Parton</link>
+      <description>Dolly Rebecca Parton Dean was an American musician, songwriter, actress, philanthropist, and businesswoman. Dubbed the &quot;Queen of Country&quot;, she was one of the most honored country performers in history. Parton received various accolades, including eleven Grammy Awards, three Emmy Awards and the Jean Hersholt Humanitarian Award, along with nominations for two Academy Awards, six Golden Globe Awards, and a Tony Award.</description>
+      <pubDate>Tue, 25 Aug 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Dolly_Parton#2026-08-25</guid>
+      <category>American singer-songwriter (1946–2026)</category>
+    </item>
     <item>
       <title>Shelley Fabares</title>
       <link>https://en.wikipedia.org/wiki/Shelley_Fabares</link>
@@ -248,14 +256,6 @@ The following notable deaths occurred in 2026. Names are reported under the date
       <pubDate>Sun, 26 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/David_Jonsson#2026-07-26</guid>
       <category>British actor (born 1993)</category>
-    </item>
-    <item>
-      <title>Pralhad Joshi</title>
-      <link>https://en.wikipedia.org/wiki/Pralhad_Joshi</link>
-      <description>Pralhad Venkatesh Joshi is an Indian politician who is serving as the 13th Minister of Consumer Affairs, Food and Public Distribution and 10th Minister of New and Renewable Energy since 2024. In July 2026, following the resignation of Dharmendra Pradhan amid the NEET 2026 Paper leak controversy and criticism over the management of the National Testing Agency (NTA), Joshi assumed office as the 10th Minister of Education while continuing to hold his existing portfolios in the Union Cabinet.</description>
-      <pubDate>Sat, 25 Jul 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Pralhad_Joshi#2026-07-25</guid>
-      <category>Indian politician (born 1962)</category>
     </item>
   </channel>
 </rss>

@@ -48453,5 +48453,88 @@
         "url": "https://en.wikipedia.org/wiki/The_Odyssey_(2026_film)"
       }
     ]
+  },
+  {
+    "date": "2026-08-25",
+    "title": "Dolly_Parton",
+    "views": 5544814,
+    "rank": 2,
+    "type": "standard",
+    "extract": "Dolly Rebecca Parton Dean was an American musician, songwriter, actress, philanthropist, and businesswoman. Dubbed the \"Queen of Country\", she was one of the most honored country performers in history. Parton received various accolades, including eleven Grammy Awards, three Emmy Awards and the Jean Hersholt Humanitarian Award, along with nominations for two Academy Awards, six Golden Globe Awards, and a Tony Award.",
+    "description": "American singer-songwriter (1946–2026)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Young-Dolly-Parton.jpg/330px-Young-Dolly-Parton.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Dolly_Parton",
+    "top10": [
+      {
+        "rank": 2,
+        "title": "Dolly_Parton",
+        "views": 5544814,
+        "description": "American singer-songwriter (1946–2026)",
+        "url": "https://en.wikipedia.org/wiki/Dolly_Parton"
+      },
+      {
+        "rank": 5,
+        "title": "Jed_York",
+        "views": 180256,
+        "description": "American businessman (born 1981)",
+        "url": "https://en.wikipedia.org/wiki/Jed_York"
+      },
+      {
+        "rank": 6,
+        "title": "Deaths_in_2026",
+        "views": 179929,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
+      },
+      {
+        "rank": 7,
+        "title": "Shelley_Fabares",
+        "views": 158704,
+        "description": "American actress and singer (1944–2026)",
+        "url": "https://en.wikipedia.org/wiki/Shelley_Fabares"
+      },
+      {
+        "rank": 8,
+        "title": "Spider-Man:_Brand_New_Day",
+        "views": 141403,
+        "description": "2026 Marvel Studios film",
+        "url": "https://en.wikipedia.org/wiki/Spider-Man%3A_Brand_New_Day"
+      },
+      {
+        "rank": 9,
+        "title": "Hayden_Panettiere",
+        "views": 138765,
+        "description": "American actress and singer (1989–2026)",
+        "url": "https://en.wikipedia.org/wiki/Hayden_Panettiere"
+      },
+      {
+        "rank": 10,
+        "title": "Kwanza_Jones",
+        "views": 136757,
+        "description": "American singer-songwriter and baseball team owner",
+        "url": "https://en.wikipedia.org/wiki/Kwanza_Jones"
+      },
+      {
+        "rank": 11,
+        "title": "Stella_Parton",
+        "views": 121657,
+        "description": "American country singer (born 1949)",
+        "url": "https://en.wikipedia.org/wiki/Stella_Parton"
+      },
+      {
+        "rank": 12,
+        "title": "Randy_Parton",
+        "views": 111316,
+        "description": "American country music singer and actor (1953–2021)",
+        "url": "https://en.wikipedia.org/wiki/Randy_Parton"
+      },
+      {
+        "rank": 13,
+        "title": "José_E._Feliciano",
+        "views": 108786,
+        "description": "Puerto Rican-born American businessman and investor",
+        "url": "https://en.wikipedia.org/wiki/Jos%C3%A9_E._Feliciano"
+      }
+    ]
   }
 ]
