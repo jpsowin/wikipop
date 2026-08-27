@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Wed, 26 Aug 2026 08:07:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 18:21:41 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Tim Curry</title>
+      <link>https://en.wikipedia.org/wiki/Tim_Curry</link>
+      <description>Timothy James Curry was an English actor and singer. He gained early fame portraying Dr. Frank-N-Furter in the stage musical The Rocky Horror Show, reprising the role for its 1975 film adaptation The Rocky Horror Picture Show.</description>
+      <pubDate>Wed, 26 Aug 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Tim_Curry#2026-08-26</guid>
+      <category>English actor and singer (1946–2026)</category>
+    </item>
     <item>
       <title>Dolly Parton</title>
       <link>https://en.wikipedia.org/wiki/Dolly_Parton</link>
@@ -248,14 +256,6 @@ The following notable deaths occurred in 2026. Names are reported under the date
       <pubDate>Mon, 27 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Bill_Oddie#2026-07-27</guid>
       <category>English conservationist, entertainer and ornithologist (1941–2026)</category>
-    </item>
-    <item>
-      <title>David Jonsson</title>
-      <link>https://en.wikipedia.org/wiki/David_Jonsson</link>
-      <description>David Jonsson is a British actor. He began his career on the West End, winning a Black British Theatre Award for his performance in the play and breathe... (2021). He is known for his performance in the BBC Two and HBO television series Industry (2020–2022), as well as his roles in the films Rye Lane (2023), Alien: Romulus (2024), and The Long Walk (2025).</description>
-      <pubDate>Sun, 26 Jul 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/David_Jonsson#2026-07-26</guid>
-      <category>British actor (born 1993)</category>
     </item>
   </channel>
 </rss>
