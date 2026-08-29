@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Fri, 28 Aug 2026 19:30:57 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 13:17:19 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Harald V</title>
+      <link>https://en.wikipedia.org/wiki/Harald_V</link>
+      <description>Harald V was King of Norway from 17 January 1991 until his death in 2026.</description>
+      <pubDate>Fri, 28 Aug 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Harald_V#2026-08-28</guid>
+      <category>King of Norway from 1991 to 2026</category>
+    </item>
     <item>
       <title>Peter Cullen</title>
       <link>https://en.wikipedia.org/wiki/Peter_Cullen</link>
@@ -248,14 +256,6 @@ The following notable deaths occurred in 2026. Names are reported under the date
       <pubDate>Wed, 29 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Glen_Hansard#2026-07-29</guid>
       <category>Irish musician (1970–2026)</category>
-    </item>
-    <item>
-      <title>Spider-Man: Brand New Day</title>
-      <link>https://en.wikipedia.org/wiki/Spider-Man%3A_Brand_New_Day</link>
-      <description>Spider-Man: Brand New Day is a 2026 American superhero film based on the Marvel Comics character Spider-Man. Produced by Columbia Pictures, Marvel Studios, and Pascal Pictures, and distributed by Sony Pictures Releasing, it is the 38th film in the Marvel Cinematic Universe (MCU) and the fourth film in the MCU Spider-Man film series following Spider-Man: No Way Home (2021). The film was directed by Destin Daniel Cretton, and written by Chris McKenna and Erik Sommers. Tom Holland stars as Peter Parker / Spider-Man, alongside Zendaya, Sadie Sink, Jacob Batalon, Jon Bernthal, Tramell Tillman, Michael Mando, and Mark Ruffalo. In the film, Parker anonymously protects New York City as the hero Spider-Man and investigates a powerful new threat while his superpowers undergo a surprising and potentially dangerous evolution.</description>
-      <pubDate>Tue, 28 Jul 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Spider-Man%3A_Brand_New_Day#2026-07-28</guid>
-      <category>2026 Marvel Studios film</category>
     </item>
   </channel>
 </rss>
