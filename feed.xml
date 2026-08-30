@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sat, 29 Aug 2026 13:17:19 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 13:06:01 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>.xyz</title>
+      <link>https://en.wikipedia.org/wiki/.xyz</link>
+      <description>.xyz is a top-level domain name that was proposed in ICANN&apos;s new generic top-level domain (gTLD) Program for consisting of the last three letters of the Latin-script alphabet. XYZ.com and CentralNic are the registries for the domain, which was created by entrepreneur Daniel Negari. It became available to the general public on June 2, 2014, thereafter becoming widely used by tech startups, creators, and Web3 projects.</description>
+      <pubDate>Sat, 29 Aug 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/.xyz#2026-08-29</guid>
+      <category>Internet top-level domain</category>
+    </item>
     <item>
       <title>Harald V</title>
       <link>https://en.wikipedia.org/wiki/Harald_V</link>
@@ -248,14 +256,6 @@ The following notable deaths occurred in 2026. Names are reported under the date
       <pubDate>Thu, 30 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Matthias_Jaissle#2026-07-30</guid>
       <category>German football manager (born 1988)</category>
-    </item>
-    <item>
-      <title>Glen Hansard</title>
-      <link>https://en.wikipedia.org/wiki/Glen_Hansard</link>
-      <description>Glen James Hansard was an Irish singer-songwriter and actor. From 1990, he was the frontman of the Irish rock band the Frames, with whom he released six studio albums, four of which reached the top ten of the Irish Album Charts. Hansard was one half of folk rock duo the Swell Season before releasing his debut solo album, Rhythm and Repose, in 2012. His second album, Didn&apos;t He Ramble (2015), was nominated for the Grammy Award for Best Folk Album.</description>
-      <pubDate>Wed, 29 Jul 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Glen_Hansard#2026-07-29</guid>
-      <category>Irish musician (1970–2026)</category>
     </item>
   </channel>
 </rss>

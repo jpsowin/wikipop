@@ -48785,5 +48785,88 @@
         "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
       }
     ]
+  },
+  {
+    "date": "2026-08-29",
+    "title": ".xyz",
+    "views": 251462,
+    "rank": 6,
+    "type": "standard",
+    "extract": ".xyz is a top-level domain name that was proposed in ICANN's new generic top-level domain (gTLD) Program for consisting of the last three letters of the Latin-script alphabet. XYZ.com and CentralNic are the registries for the domain, which was created by entrepreneur Daniel Negari. It became available to the general public on June 2, 2014, thereafter becoming widely used by tech startups, creators, and Web3 projects.",
+    "description": "Internet top-level domain",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/.xyz_logo.svg/330px-.xyz_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/.xyz",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Toxic_(2026_film)",
+        "views": 466227,
+        "description": "2026 Indian film by Geetu Mohandas",
+        "url": "https://en.wikipedia.org/wiki/Toxic_(2026_film)"
+      },
+      {
+        "rank": 5,
+        "title": "Dolly_Parton",
+        "views": 450416,
+        "description": "American singer-songwriter (1946–2026)",
+        "url": "https://en.wikipedia.org/wiki/Dolly_Parton"
+      },
+      {
+        "rank": 6,
+        "title": ".xyz",
+        "views": 251462,
+        "description": "Internet top-level domain",
+        "url": "https://en.wikipedia.org/wiki/.xyz"
+      },
+      {
+        "rank": 7,
+        "title": "Killing_of_the_Clancy_children",
+        "views": 250473,
+        "description": "2023 triple homicide in Massachusetts, U.S.",
+        "url": "https://en.wikipedia.org/wiki/Killing_of_the_Clancy_children"
+      },
+      {
+        "rank": 8,
+        "title": "Tim_Curry",
+        "views": 234497,
+        "description": "English actor and singer (1946–2026)",
+        "url": "https://en.wikipedia.org/wiki/Tim_Curry"
+      },
+      {
+        "rank": 9,
+        "title": "Harald_V",
+        "views": 188507,
+        "description": "King of Norway from 1991 to 2026",
+        "url": "https://en.wikipedia.org/wiki/Harald_V"
+      },
+      {
+        "rank": 10,
+        "title": "The_Whisper_Man",
+        "views": 156733,
+        "description": "2026 American crime thriller film by James Ashcroft",
+        "url": "https://en.wikipedia.org/wiki/The_Whisper_Man"
+      },
+      {
+        "rank": 11,
+        "title": "Haakon_VIII",
+        "views": 151224,
+        "description": "King of Norway since 2026",
+        "url": "https://en.wikipedia.org/wiki/Haakon_VIII"
+      },
+      {
+        "rank": 12,
+        "title": "Milo_Yiannopoulos",
+        "views": 147306,
+        "description": "British polemicist and political commentator (born 1984)",
+        "url": "https://en.wikipedia.org/wiki/Milo_Yiannopoulos"
+      },
+      {
+        "rank": 13,
+        "title": "Umar_Nurmagomedov",
+        "views": 144997,
+        "description": "Russian mixed martial artist (born 1996)",
+        "url": "https://en.wikipedia.org/wiki/Umar_Nurmagomedov"
+      }
+    ]
   }
 ]
