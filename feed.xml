@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sun, 30 Aug 2026 13:06:01 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2026 15:15:33 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>All In (2026)</title>
+      <link>https://en.wikipedia.org/wiki/All_In_(2026)</link>
+      <description>The 2026 All In, also promoted as All In: London, was a professional wrestling pay-per-view (PPV) event produced by the American company All Elite Wrestling (AEW). It was AEW&apos;s fourth annual All In, and the fifth overall. The event took place on August 30, 2026, at Wembley Stadium in London, England during the United Kingdom&apos;s August Bank Holiday weekend. This marked AEW&apos;s return to Wembley Stadium as well as All In to its traditional August Bank Holiday scheduling, following the 2025 event, which was held in July at Globe Life Field in Arlington, Texas, United States, while that year&apos;s Forbidden Door instead occupied the August Bank Holiday weekend at London&apos;s O2 Arena.</description>
+      <pubDate>Sun, 30 Aug 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/All_In_(2026)#2026-08-30</guid>
+      <category>All Elite Wrestling pay-per-view and livestreaming event</category>
+    </item>
     <item>
       <title>.xyz</title>
       <link>https://en.wikipedia.org/wiki/.xyz</link>
@@ -248,14 +256,6 @@ The following notable deaths occurred in 2026. Names are reported under the date
       <pubDate>Fri, 31 Jul 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Ceuta#2026-07-31</guid>
       <category>Spanish autonomous city in northwestern Africa</category>
-    </item>
-    <item>
-      <title>Matthias Jaissle</title>
-      <link>https://en.wikipedia.org/wiki/Matthias_Jaissle</link>
-      <description>Matthias Jaissle is a German professional football manager and former player who is the current head coach of Saudi Pro League club Al-Ahli.</description>
-      <pubDate>Thu, 30 Jul 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Matthias_Jaissle#2026-07-30</guid>
-      <category>German football manager (born 1988)</category>
     </item>
   </channel>
 </rss>
