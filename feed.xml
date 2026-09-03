@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Wed, 02 Sep 2026 12:13:16 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 12:11:32 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Hanuman Ansh</title>
+      <link>https://en.wikipedia.org/wiki/Hanuman_Ansh</link>
+      <description>Hanuman Ansh is a 2026 Indian Hindi-language devotional drama film written, directed and produced by Dr. Vishal Chaturvedi under his banner Swambhu Media Network and is based on his book Divine Detour: That Changed My Life, which chronicles the life of Neem Karoli Baba. It stars Shobhinav Satyaa and Chandan Anand in the lead roles.</description>
+      <pubDate>Wed, 02 Sep 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Hanuman_Ansh#2026-09-02</guid>
+      <category>2026 Indian film by Vishal Chaturvedi</category>
+    </item>
     <item>
       <title>Murder of Tupac Shakur</title>
       <link>https://en.wikipedia.org/wiki/Murder_of_Tupac_Shakur</link>
@@ -248,14 +256,6 @@ The following notable deaths occurred in 2026. Names are reported under the date
       <pubDate>Mon, 03 Aug 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Tom_Holland#2026-08-03</guid>
       <category>British actor (born 1996)</category>
-    </item>
-    <item>
-      <title>SummerSlam (2026)</title>
-      <link>https://en.wikipedia.org/wiki/SummerSlam_(2026)</link>
-      <description>The 2026 SummerSlam, also promoted as SummerSlam: Minnesota, was a professional wrestling pay-per-view (PPV) and livestreaming event produced by WWE. It was the 39th annual SummerSlam and took place as a two-night event on Saturday, August 1, and Sunday, August 2, 2026, at U.S. Bank Stadium in Minneapolis, Minnesota, held for wrestlers from the promotion&apos;s Raw and SmackDown brand divisions.</description>
-      <pubDate>Sun, 02 Aug 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/SummerSlam_(2026)#2026-08-02</guid>
-      <category>WWE pay-per-view and livestreaming event</category>
     </item>
   </channel>
 </rss>
