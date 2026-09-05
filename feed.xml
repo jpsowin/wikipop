@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Fri, 04 Sep 2026 12:12:23 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 11:20:37 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Richard O&apos;Sullivan</title>
+      <link>https://en.wikipedia.org/wiki/Richard_O&apos;Sullivan</link>
+      <description>Richard Thomas O&apos;Sullivan was an English comedy actor.</description>
+      <pubDate>Fri, 04 Sep 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Richard_O&apos;Sullivan#2026-09-04</guid>
+      <category>English actor (1944–2026)</category>
+    </item>
     <item>
       <title>Gloria Steinem</title>
       <link>https://en.wikipedia.org/wiki/Gloria_Steinem</link>
@@ -248,14 +256,6 @@ The following notable deaths occurred in 2026. Names are reported under the date
       <pubDate>Wed, 05 Aug 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Perez_Hilton#2026-08-05</guid>
       <category>American blogger (born 1978)</category>
-    </item>
-    <item>
-      <title>Zendaya</title>
-      <link>https://en.wikipedia.org/wiki/Zendaya</link>
-      <description>Zendaya Maree Stoermer Coleman, known mononymously as Zendaya, is an American actress and singer. Her accolades include two Primetime Emmy Awards and a Golden Globe. In 2022, Time named her one of the 100 most influential people in the world.</description>
-      <pubDate>Tue, 04 Aug 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Zendaya#2026-08-04</guid>
-      <category>American actress and singer (born 1996)</category>
     </item>
   </channel>
 </rss>
