@@ -49615,5 +49615,88 @@
         "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
       }
     ]
+  },
+  {
+    "date": "2026-09-08",
+    "title": "Alex_Michelsen",
+    "views": 208780,
+    "rank": 6,
+    "type": "standard",
+    "extract": "Alex T. Michelsen is an American professional tennis player from California. His parents, Sondra and Erik Michelsen, both played tennis in college. He has a career-high ATP singles ranking of world No. 30 achieved on July 14, 2025 and a best doubles ranking of No. 67 reached on June 30, 2025.",
+    "description": "American tennis player (born 2004)",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Alex_Michelsen_%282023_US_Open%29_25_%28cropped%29.jpg/330px-Alex_Michelsen_%282023_US_Open%29_25_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Alex_Michelsen",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Elizabeth_Holmes",
+        "views": 423578,
+        "description": "American businesswoman convicted of fraud (born 1984)",
+        "url": "https://en.wikipedia.org/wiki/Elizabeth_Holmes"
+      },
+      {
+        "rank": 5,
+        "title": "Killing_of_the_Clancy_children",
+        "views": 270359,
+        "description": "2023 triple filicide in Massachusetts, United States",
+        "url": "https://en.wikipedia.org/wiki/Killing_of_the_Clancy_children"
+      },
+      {
+        "rank": 6,
+        "title": "Alex_Michelsen",
+        "views": 208780,
+        "description": "American tennis player (born 2004)",
+        "url": "https://en.wikipedia.org/wiki/Alex_Michelsen"
+      },
+      {
+        "rank": 7,
+        "title": "Bernard_Boursicot",
+        "views": 174177,
+        "description": "French diplomat (born 1944)",
+        "url": "https://en.wikipedia.org/wiki/Bernard_Boursicot"
+      },
+      {
+        "rank": 8,
+        "title": "Hanuman_Ansh",
+        "views": 150719,
+        "description": "2026 biographical film by Vishal Chaturvedi",
+        "url": "https://en.wikipedia.org/wiki/Hanuman_Ansh"
+      },
+      {
+        "rank": 9,
+        "title": "Mirzapur_(film)",
+        "views": 140830,
+        "description": "2026 Indian film by Gurmeet Singh",
+        "url": "https://en.wikipedia.org/wiki/Mirzapur_(film)"
+      },
+      {
+        "rank": 10,
+        "title": "You_Can_See_Everything",
+        "views": 139775,
+        "description": "2026 American documentary film",
+        "url": "https://en.wikipedia.org/wiki/You_Can_See_Everything"
+      },
+      {
+        "rank": 11,
+        "title": "Deaths_in_2026",
+        "views": 136646,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
+      },
+      {
+        "rank": 12,
+        "title": "Alice_Weidel",
+        "views": 124967,
+        "description": "German far-right politician (born 1979)",
+        "url": "https://en.wikipedia.org/wiki/Alice_Weidel"
+      },
+      {
+        "rank": 13,
+        "title": "Nathan_Fielder",
+        "views": 123759,
+        "description": "Canadian comedian (born 1983)",
+        "url": "https://en.wikipedia.org/wiki/Nathan_Fielder"
+      }
+    ]
   }
 ]

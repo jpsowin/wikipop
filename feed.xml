@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Tue, 08 Sep 2026 12:13:53 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 12:25:08 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Alex Michelsen</title>
+      <link>https://en.wikipedia.org/wiki/Alex_Michelsen</link>
+      <description>Alex T. Michelsen is an American professional tennis player from California. His parents, Sondra and Erik Michelsen, both played tennis in college. He has a career-high ATP singles ranking of world No. 30 achieved on July 14, 2025 and a best doubles ranking of No. 67 reached on June 30, 2025.</description>
+      <pubDate>Tue, 08 Sep 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Alex_Michelsen#2026-09-08</guid>
+      <category>American tennis player (born 2004)</category>
+    </item>
     <item>
       <title>Elizabeth Holmes</title>
       <link>https://en.wikipedia.org/wiki/Elizabeth_Holmes</link>
@@ -248,14 +256,6 @@ The following notable deaths occurred in 2026. Names are reported under the date
       <pubDate>Sun, 09 Aug 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Toxic_(2026_film)#2026-08-09</guid>
       <category>Upcoming Indian film by Geetu Mohandas</category>
-    </item>
-    <item>
-      <title>The Last House</title>
-      <link>https://en.wikipedia.org/wiki/The_Last_House</link>
-      <description>The Last House is a 2026 American science fiction thriller film directed by Louis Leterrier and written by Matthew Robinson. It stars Greta Lee and Wagner Moura. The film follows a family that finds themselves inexplicably sealed in their home, with the whole world being affected by the mysterious disaster, forcing them to learn to survive. The film was released on Netflix on August 7, 2026.</description>
-      <pubDate>Sat, 08 Aug 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/The_Last_House#2026-08-08</guid>
-      <category>2026 American film</category>
     </item>
   </channel>
 </rss>
