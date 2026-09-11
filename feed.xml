@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Thu, 10 Sep 2026 12:18:42 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 12:17:28 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Barry Melrose</title>
+      <link>https://en.wikipedia.org/wiki/Barry_Melrose</link>
+      <description>Barry James Melrose was a Canadian and American professional ice hockey player, coach and broadcaster. He played in the World Hockey Association (WHA) and National Hockey League (NHL). After retiring from playing, he became a head coach for the Los Angeles Kings in the team&apos;s run to the 1993 Stanley Cup Final. Until 2023, he was a long-time commentator and hockey analyst for ESPN as well as a contributor for the NHL Network.</description>
+      <pubDate>Thu, 10 Sep 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Barry_Melrose#2026-09-10</guid>
+      <category>Canadian and American ice hockey player, coach and broadcaster (1956–2026)</category>
+    </item>
     <item>
       <title>Ben Shelton</title>
       <link>https://en.wikipedia.org/wiki/Ben_Shelton</link>
@@ -248,14 +256,6 @@ The following notable deaths occurred in 2026. Names are reported under the date
       <pubDate>Tue, 11 Aug 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Lucy_Davis#2026-08-11</guid>
       <category>British actress and comedian (born 1973)</category>
-    </item>
-    <item>
-      <title>Roblox</title>
-      <link>https://en.wikipedia.org/wiki/Roblox</link>
-      <description>Roblox is an online game platform and game creation system developed by Roblox Corporation that allows users to program and play games created by themselves or other users. It was developed by David Baszucki and Erik Cassel in 2004, and released to the public in 2006. As of February 2025, the platform has reported an average of 85.3 million daily active users. According to the company, its monthly player base includes half of all American children under the age of 16.</description>
-      <pubDate>Mon, 10 Aug 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Roblox#2026-08-10</guid>
-      <category>Multiplayer game creation platform</category>
     </item>
   </channel>
 </rss>

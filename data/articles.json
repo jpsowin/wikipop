@@ -49781,5 +49781,88 @@
         "url": "https://en.wikipedia.org/wiki/September_11_attacks"
       }
     ]
+  },
+  {
+    "date": "2026-09-10",
+    "title": "Barry_Melrose",
+    "views": 238858,
+    "rank": 4,
+    "type": "standard",
+    "extract": "Barry James Melrose was a Canadian and American professional ice hockey player, coach and broadcaster. He played in the World Hockey Association (WHA) and National Hockey League (NHL). After retiring from playing, he became a head coach for the Los Angeles Kings in the team's run to the 1993 Stanley Cup Final. Until 2023, he was a long-time commentator and hockey analyst for ESPN as well as a contributor for the NHL Network.",
+    "description": "Canadian and American ice hockey player, coach and broadcaster (1956–2026)",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/B_Melrose_cropped.JPG/330px-B_Melrose_cropped.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Barry_Melrose",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Barry_Melrose",
+        "views": 238858,
+        "description": "Canadian and American ice hockey player, coach and broadcaster (1956–2026)",
+        "url": "https://en.wikipedia.org/wiki/Barry_Melrose"
+      },
+      {
+        "rank": 5,
+        "title": "Drew_Lock",
+        "views": 234973,
+        "description": "American football player (born 1996)",
+        "url": "https://en.wikipedia.org/wiki/Drew_Lock"
+      },
+      {
+        "rank": 6,
+        "title": "Charlie_Kirk",
+        "views": 223622,
+        "description": "American political activist (1993–2025)",
+        "url": "https://en.wikipedia.org/wiki/Charlie_Kirk"
+      },
+      {
+        "rank": 7,
+        "title": "Killing_of_the_Clancy_children",
+        "views": 207181,
+        "description": "2023 triple filicide in Massachusetts, United States",
+        "url": "https://en.wikipedia.org/wiki/Killing_of_the_Clancy_children"
+      },
+      {
+        "rank": 8,
+        "title": "Assassination_of_Charlie_Kirk",
+        "views": 199553,
+        "description": "2025 assassination in Orem, Utah, U.S.",
+        "url": "https://en.wikipedia.org/wiki/Assassination_of_Charlie_Kirk"
+      },
+      {
+        "rank": 9,
+        "title": "Elizabeth_Holmes",
+        "views": 162804,
+        "description": "American criminal (born 1984)",
+        "url": "https://en.wikipedia.org/wiki/Elizabeth_Holmes"
+      },
+      {
+        "rank": 10,
+        "title": "September_11_attacks",
+        "views": 158508,
+        "description": "2001 terror attacks in the U.S.",
+        "url": "https://en.wikipedia.org/wiki/September_11_attacks"
+      },
+      {
+        "rank": 11,
+        "title": "Mike_McFarland",
+        "views": 151390,
+        "description": "American voice actor (1970–2026)",
+        "url": "https://en.wikipedia.org/wiki/Mike_McFarland"
+      },
+      {
+        "rank": 12,
+        "title": "Sabah_FK_(Azerbaijan)",
+        "views": 149476,
+        "description": "Azerbaijani football club",
+        "url": "https://en.wikipedia.org/wiki/Sabah_FK_(Azerbaijan)"
+      },
+      {
+        "rank": 13,
+        "title": "List_of_songs_recorded_by_Bruce_Springsteen",
+        "views": 138742,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/List_of_songs_recorded_by_Bruce_Springsteen"
+      }
+    ]
   }
 ]
