@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Fri, 11 Sep 2026 12:17:28 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 11:41:00 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>September 11 attacks</title>
+      <link>https://en.wikipedia.org/wiki/September_11_attacks</link>
+      <description>The September 11 attacks, colloquially known as 9/11, were a coordinated series of suicide attacks perpetrated by the Islamic terrorist organization al-Qaeda against the United States in 2001. A total of 19 hijackers commandeered four commercial passenger airliners. The first two planes were flown into each of the Twin Towers at the World Trade Center in New York City, while the third plane crashed into the Pentagon, the headquarters of the United States Department of Defense, in Arlington County, Virginia. The fourth plane crashed in a rural field in Pennsylvania during a passenger revolt.</description>
+      <pubDate>Fri, 11 Sep 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/September_11_attacks#2026-09-11</guid>
+      <category>2001 terror attacks in the U.S.</category>
+    </item>
     <item>
       <title>Barry Melrose</title>
       <link>https://en.wikipedia.org/wiki/Barry_Melrose</link>
@@ -248,14 +256,6 @@ The following notable deaths occurred in 2026. Names are reported under the date
       <pubDate>Wed, 12 Aug 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Joshua_Kushner#2026-08-12</guid>
       <category>American businessman (born 1985)</category>
-    </item>
-    <item>
-      <title>Lucy Davis</title>
-      <link>https://en.wikipedia.org/wiki/Lucy_Davis</link>
-      <description>Lucy Clare Davis is an English actress and comedian known for playing Dawn Tinsley in the BBC mockumentary television sitcom The Office (2001–2003), Hilda Spellman in the Netflix supernatural horror television series Chilling Adventures of Sabrina (2018–2020), Dianne in the zombie comedy film Shaun of the Dead (2004), and Etta Candy in the superhero film Wonder Woman (2017). She played Eva in Disney Channel&apos;s comedy television series The Villains of Valley View (2022–2023).</description>
-      <pubDate>Tue, 11 Aug 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Lucy_Davis#2026-08-11</guid>
-      <category>British actress and comedian (born 1973)</category>
     </item>
   </channel>
 </rss>

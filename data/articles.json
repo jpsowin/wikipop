@@ -49864,5 +49864,88 @@
         "url": "https://en.wikipedia.org/wiki/List_of_songs_recorded_by_Bruce_Springsteen"
       }
     ]
+  },
+  {
+    "date": "2026-09-11",
+    "title": "September_11_attacks",
+    "views": 665793,
+    "rank": 3,
+    "type": "standard",
+    "extract": "The September 11 attacks, colloquially known as 9/11, were a coordinated series of suicide attacks perpetrated by the Islamic terrorist organization al-Qaeda against the United States in 2001. A total of 19 hijackers commandeered four commercial passenger airliners. The first two planes were flown into each of the Twin Towers at the World Trade Center in New York City, while the third plane crashed into the Pentagon, the headquarters of the United States Department of Defense, in Arlington County, Virginia. The fourth plane crashed in a rural field in Pennsylvania during a passenger revolt.",
+    "description": "2001 terror attacks in the U.S.",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/330px-WTC_smoking_on_9-11.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/September_11_attacks",
+    "top10": [
+      {
+        "rank": 3,
+        "title": "September_11_attacks",
+        "views": 665793,
+        "description": "2001 terror attacks in the U.S.",
+        "url": "https://en.wikipedia.org/wiki/September_11_attacks"
+      },
+      {
+        "rank": 5,
+        "title": "United_Airlines_Flight_93",
+        "views": 259863,
+        "description": "9/11 hijacked passenger flight",
+        "url": "https://en.wikipedia.org/wiki/United_Airlines_Flight_93"
+      },
+      {
+        "rank": 6,
+        "title": "Elena_Rybakina",
+        "views": 231270,
+        "description": "Kazakhstani tennis player (born 1999)",
+        "url": "https://en.wikipedia.org/wiki/Elena_Rybakina"
+      },
+      {
+        "rank": 7,
+        "title": "American_Airlines_Flight_11",
+        "views": 178794,
+        "description": "9/11 hijacked passenger flight",
+        "url": "https://en.wikipedia.org/wiki/American_Airlines_Flight_11"
+      },
+      {
+        "rank": 8,
+        "title": "Shailene_Woodley",
+        "views": 174654,
+        "description": "American actress (born 1991)",
+        "url": "https://en.wikipedia.org/wiki/Shailene_Woodley"
+      },
+      {
+        "rank": 9,
+        "title": "Killing_of_the_Clancy_children",
+        "views": 165310,
+        "description": "2023 triple filicide in Massachusetts, United States",
+        "url": "https://en.wikipedia.org/wiki/Killing_of_the_Clancy_children"
+      },
+      {
+        "rank": 10,
+        "title": "Casualties_of_the_September_11_attacks",
+        "views": 159040,
+        "description": "Victims of terror attacks in the US",
+        "url": "https://en.wikipedia.org/wiki/Casualties_of_the_September_11_attacks"
+      },
+      {
+        "rank": 11,
+        "title": "Aryna_Sabalenka",
+        "views": 152768,
+        "description": "Belarusian tennis player (born 1998)",
+        "url": "https://en.wikipedia.org/wiki/Aryna_Sabalenka"
+      },
+      {
+        "rank": 12,
+        "title": "Hijackers_in_the_September_11_attacks",
+        "views": 149298,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Hijackers_in_the_September_11_attacks"
+      },
+      {
+        "rank": 13,
+        "title": "Mohamed_Atta",
+        "views": 138911,
+        "description": "Egyptian terrorist and 9/11 hijacker (1968–2001)",
+        "url": "https://en.wikipedia.org/wiki/Mohamed_Atta"
+      }
+    ]
   }
 ]
