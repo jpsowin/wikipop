@@ -49947,5 +49947,88 @@
         "url": "https://en.wikipedia.org/wiki/Mohamed_Atta"
       }
     ]
+  },
+  {
+    "date": "2026-09-12",
+    "title": "Elena_Rybakina",
+    "views": 416703,
+    "rank": 6,
+    "type": "standard",
+    "extract": "Elena Andreyevna Rybakina is a Russian-born Kazakhstani professional tennis player. She will be ranked No. 1 in WTA singles, starting on 14 September 2026. Rybakina has won 14 WTA Tour-level singles titles, including three majors at the 2022 Wimbledon Championships, the 2026 Australian Open, and the 2026 US Open, as well as the 2025 WTA Finals and two WTA 1000 events. Rybakina is the first Kazakhstani player to win a major and to be ranked world No. 1 and in the world's top 10.",
+    "description": "Kazakhstani tennis player (born 1999)",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Elena_Rybakina_%282025_DC_Open%29_11_%28cropped%29.jpg/330px-Elena_Rybakina_%282025_DC_Open%29_11_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Elena_Rybakina",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Ben_Shelton",
+        "views": 434567,
+        "description": "American tennis player (born 2002)",
+        "url": "https://en.wikipedia.org/wiki/Ben_Shelton"
+      },
+      {
+        "rank": 5,
+        "title": "September_11_attacks",
+        "views": 430057,
+        "description": "2001 terror attacks in the U.S.",
+        "url": "https://en.wikipedia.org/wiki/September_11_attacks"
+      },
+      {
+        "rank": 6,
+        "title": "Elena_Rybakina",
+        "views": 416703,
+        "description": "Kazakhstani tennis player (born 1999)",
+        "url": "https://en.wikipedia.org/wiki/Elena_Rybakina"
+      },
+      {
+        "rank": 7,
+        "title": "Michael_Polansky",
+        "views": 301297,
+        "description": "American entrepreneur (born 1983)",
+        "url": "https://en.wikipedia.org/wiki/Michael_Polansky"
+      },
+      {
+        "rank": 8,
+        "title": "Aryna_Sabalenka",
+        "views": 270730,
+        "description": "Belarusian tennis player (born 1998)",
+        "url": "https://en.wikipedia.org/wiki/Aryna_Sabalenka"
+      },
+      {
+        "rank": 9,
+        "title": "Lady_Gaga",
+        "views": 227999,
+        "description": "American singer, songwriter and actress (born 1986)",
+        "url": "https://en.wikipedia.org/wiki/Lady_Gaga"
+      },
+      {
+        "rank": 10,
+        "title": "United_Airlines_Flight_93",
+        "views": 225536,
+        "description": "9/11 hijacked passenger flight",
+        "url": "https://en.wikipedia.org/wiki/United_Airlines_Flight_93"
+      },
+      {
+        "rank": 11,
+        "title": "Frances_Tiafoe",
+        "views": 212467,
+        "description": "American tennis player (born 1998)",
+        "url": "https://en.wikipedia.org/wiki/Frances_Tiafoe"
+      },
+      {
+        "rank": 12,
+        "title": "Vishwanath_&_Sons",
+        "views": 166365,
+        "description": "2026 Indian film by Venky Atluri",
+        "url": "https://en.wikipedia.org/wiki/Vishwanath_%26_Sons"
+      },
+      {
+        "rank": 13,
+        "title": "Bryan_Shelton",
+        "views": 162782,
+        "description": "American tennis coach & player (born 1965)",
+        "url": "https://en.wikipedia.org/wiki/Bryan_Shelton"
+      }
+    ]
   }
 ]
