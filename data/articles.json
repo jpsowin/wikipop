@@ -50030,5 +50030,88 @@
         "url": "https://en.wikipedia.org/wiki/Bryan_Shelton"
       }
     ]
+  },
+  {
+    "date": "2026-09-13",
+    "title": "Sitee",
+    "views": 571625,
+    "rank": 4,
+    "type": "standard",
+    "extract": "Sitee is a 1993 Maldivian drama film written and directed by Ahmed Nimal. Produced by Aslam Rasheed under Slam Studio in association with Kid Productions, the film stars Nimal and Fathimath Rameeza in pivotal roles.",
+    "description": "1993 Maldivian film",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/b/ba/Sitee.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "url": "https://en.wikipedia.org/wiki/Sitee",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Sitee",
+        "views": 571625,
+        "description": "1993 Maldivian film",
+        "url": "https://en.wikipedia.org/wiki/Sitee"
+      },
+      {
+        "rank": 5,
+        "title": "Alexander_Zverev",
+        "views": 430774,
+        "description": "German tennis player (born 1997)",
+        "url": "https://en.wikipedia.org/wiki/Alexander_Zverev"
+      },
+      {
+        "rank": 6,
+        "title": "Elena_Rybakina",
+        "views": 365765,
+        "description": "Kazakhstani tennis player (born 1999)",
+        "url": "https://en.wikipedia.org/wiki/Elena_Rybakina"
+      },
+      {
+        "rank": 7,
+        "title": "Ben_Shelton",
+        "views": 345880,
+        "description": "American tennis player (born 2002)",
+        "url": "https://en.wikipedia.org/wiki/Ben_Shelton"
+      },
+      {
+        "rank": 8,
+        "title": "Ryan_Garcia",
+        "views": 243866,
+        "description": "American boxer (born 1998)",
+        "url": "https://en.wikipedia.org/wiki/Ryan_Garcia"
+      },
+      {
+        "rank": 9,
+        "title": "Arch_Manning",
+        "views": 236539,
+        "description": "American football player (born 2004)",
+        "url": "https://en.wikipedia.org/wiki/Arch_Manning"
+      },
+      {
+        "rank": 10,
+        "title": "September_11_attacks",
+        "views": 227231,
+        "description": "2001 terror attacks in the U.S.",
+        "url": "https://en.wikipedia.org/wiki/September_11_attacks"
+      },
+      {
+        "rank": 11,
+        "title": "2026_Swedish_general_election",
+        "views": 196385,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/2026_Swedish_general_election"
+      },
+      {
+        "rank": 12,
+        "title": "Aryna_Sabalenka",
+        "views": 186791,
+        "description": "Belarusian tennis player (born 1998)",
+        "url": "https://en.wikipedia.org/wiki/Aryna_Sabalenka"
+      },
+      {
+        "rank": 13,
+        "title": "John_Tuggle",
+        "views": 175760,
+        "description": "American football player (1961–1986)",
+        "url": "https://en.wikipedia.org/wiki/John_Tuggle"
+      }
+    ]
   }
 ]
