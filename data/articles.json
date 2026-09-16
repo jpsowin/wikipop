@@ -50196,5 +50196,88 @@
         "url": "https://en.wikipedia.org/wiki/Sydney_Sweeney"
       }
     ]
+  },
+  {
+    "date": "2026-09-15",
+    "title": "european_election_2014",
+    "views": 526535,
+    "rank": 4,
+    "type": "standard",
+    "extract": "The 2014 European Parliament election was held in the European Union (EU) between 22 and 25 May 2014. It was the 8th parliamentary election since the first direct elections in 1979, and the first in which the European political parties fielded candidates for President of the Commission.",
+    "description": "",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Ioannes_Claudius_Juncker_die_7_Martis_2014.jpg/330px-Ioannes_Claudius_Juncker_die_7_Martis_2014.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/2014_European_Parliament_election",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "european_election_2014",
+        "views": 526535,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/2014_European_Parliament_election"
+      },
+      {
+        "rank": 5,
+        "title": "Widow's_Bay",
+        "views": 379835,
+        "description": "2026 American comedy horror television series",
+        "url": "https://en.wikipedia.org/wiki/Widow's_Bay"
+      },
+      {
+        "rank": 6,
+        "title": "Matthew_Rhys",
+        "views": 355774,
+        "description": "Welsh actor (born 1974)",
+        "url": "https://en.wikipedia.org/wiki/Matthew_Rhys"
+      },
+      {
+        "rank": 7,
+        "title": "John_Tuggle",
+        "views": 302388,
+        "description": "American football player (1961–1986)",
+        "url": "https://en.wikipedia.org/wiki/John_Tuggle"
+      },
+      {
+        "rank": 8,
+        "title": "Tom_Pelphrey",
+        "views": 285138,
+        "description": "American actor (born 1982)",
+        "url": "https://en.wikipedia.org/wiki/Tom_Pelphrey"
+      },
+      {
+        "rank": 9,
+        "title": "78th_Primetime_Emmy_Awards",
+        "views": 270812,
+        "description": "2026 American television awards",
+        "url": "https://en.wikipedia.org/wiki/78th_Primetime_Emmy_Awards"
+      },
+      {
+        "rank": 10,
+        "title": "Kenneth_Walker_III",
+        "views": 235933,
+        "description": "American football player (born 2000)",
+        "url": "https://en.wikipedia.org/wiki/Kenneth_Walker_III"
+      },
+      {
+        "rank": 11,
+        "title": "Kaley_Cuoco",
+        "views": 234487,
+        "description": "American actress (born 1985)",
+        "url": "https://en.wikipedia.org/wiki/Kaley_Cuoco"
+      },
+      {
+        "rank": 12,
+        "title": "Mariska_Hargitay",
+        "views": 181269,
+        "description": "American actress (born 1964)",
+        "url": "https://en.wikipedia.org/wiki/Mariska_Hargitay"
+      },
+      {
+        "rank": 13,
+        "title": "JJ_Gabriel",
+        "views": 175583,
+        "description": "English footballer (born 2010)",
+        "url": "https://en.wikipedia.org/wiki/JJ_Gabriel"
+      }
+    ]
   }
 ]
