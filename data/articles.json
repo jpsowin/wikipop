@@ -50279,5 +50279,88 @@
         "url": "https://en.wikipedia.org/wiki/JJ_Gabriel"
       }
     ]
+  },
+  {
+    "date": "2026-09-16",
+    "title": "Macklemore",
+    "views": 213767,
+    "rank": 4,
+    "type": "standard",
+    "extract": "Benjamin Hammond Haggerty, better known by his stage name Macklemore, is an American rapper. A native of Seattle, Washington, he started his career in 2000 as an independent artist releasing: Open Your Eyes (2000), The Language of My World (2005), and The Unplanned Mixtape (2009). He rose to international success collaborating with producer Ryan Lewis as the duo Macklemore & Ryan Lewis (2009–2016).",
+    "description": "American rapper (born 1983)",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/P2N2022Macklemore_1.jpg/330px-P2N2022Macklemore_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Macklemore",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Macklemore",
+        "views": 213767,
+        "description": "American rapper (born 1983)",
+        "url": "https://en.wikipedia.org/wiki/Macklemore"
+      },
+      {
+        "rank": 5,
+        "title": "Robert_Kraft",
+        "views": 196796,
+        "description": "American businessman (born 1941)",
+        "url": "https://en.wikipedia.org/wiki/Robert_Kraft"
+      },
+      {
+        "rank": 6,
+        "title": "Lizzie_Borden",
+        "views": 164540,
+        "description": "American acquitted murder suspect (1860–1927)",
+        "url": "https://en.wikipedia.org/wiki/Lizzie_Borden"
+      },
+      {
+        "rank": 7,
+        "title": "Ed_Sheeran",
+        "views": 155393,
+        "description": "English singer-songwriter (born 1991)",
+        "url": "https://en.wikipedia.org/wiki/Ed_Sheeran"
+      },
+      {
+        "rank": 8,
+        "title": "JJ_Gabriel",
+        "views": 146453,
+        "description": "English footballer (born 2010)",
+        "url": "https://en.wikipedia.org/wiki/JJ_Gabriel"
+      },
+      {
+        "rank": 9,
+        "title": "Dancing_with_the_Stars_(American_TV_series)_season_35",
+        "views": 141460,
+        "description": "Season of television series",
+        "url": "https://en.wikipedia.org/wiki/Dancing_with_the_Stars_(American_TV_series)_season_35"
+      },
+      {
+        "rank": 10,
+        "title": "Jyothika",
+        "views": 137155,
+        "description": "Indian actress (born 1978)",
+        "url": "https://en.wikipedia.org/wiki/Jyothika"
+      },
+      {
+        "rank": 11,
+        "title": "Deaths_in_2026",
+        "views": 135040,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
+      },
+      {
+        "rank": 12,
+        "title": "Widow's_Bay",
+        "views": 130566,
+        "description": "2026 American comedy horror television series",
+        "url": "https://en.wikipedia.org/wiki/Widow's_Bay"
+      },
+      {
+        "rank": 13,
+        "title": "Resident_Evil_(2026_film)",
+        "views": 124267,
+        "description": "Film by Zach Cregger",
+        "url": "https://en.wikipedia.org/wiki/Resident_Evil_(2026_film)"
+      }
+    ]
   }
 ]

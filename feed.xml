@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Wed, 16 Sep 2026 12:41:49 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 12:40:54 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Macklemore</title>
+      <link>https://en.wikipedia.org/wiki/Macklemore</link>
+      <description>Benjamin Hammond Haggerty, better known by his stage name Macklemore, is an American rapper. A native of Seattle, Washington, he started his career in 2000 as an independent artist releasing: Open Your Eyes (2000), The Language of My World (2005), and The Unplanned Mixtape (2009). He rose to international success collaborating with producer Ryan Lewis as the duo Macklemore &amp; Ryan Lewis (2009–2016).</description>
+      <pubDate>Wed, 16 Sep 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Macklemore#2026-09-16</guid>
+      <category>American rapper (born 1983)</category>
+    </item>
     <item>
       <title>european election 2014</title>
       <link>https://en.wikipedia.org/wiki/2014_European_Parliament_election</link>
@@ -248,14 +256,6 @@ The following notable deaths occurred in 2026. Names are reported under the date
       <pubDate>Tue, 18 Aug 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Wladimir_Klitschko#2026-08-18</guid>
       <category>Ukrainian boxer (born 1976)</category>
-    </item>
-    <item>
-      <title>Hayden Panettiere</title>
-      <link>https://en.wikipedia.org/wiki/Hayden_Panettiere</link>
-      <description>Hayden Lesley Panettiere was an American actress and singer. She starred as Claire Bennet on the NBC superhero series Heroes (2006–2010), Kirby Reed in the slasher horror franchise Scream (2011–2023), and Juliette Barnes in the ABC/CMT musical drama series Nashville (2012–2018). She received two nominations for acting in Nashville for a Golden Globe Award for Best Supporting Actress – Series, Miniseries or Television Film.</description>
-      <pubDate>Mon, 17 Aug 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Hayden_Panettiere#2026-08-17</guid>
-      <category>American actress and singer (1989–2026)</category>
     </item>
   </channel>
 </rss>
