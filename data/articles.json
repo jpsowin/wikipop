@@ -50362,5 +50362,88 @@
         "url": "https://en.wikipedia.org/wiki/Resident_Evil_(2026_film)"
       }
     ]
+  },
+  {
+    "date": "2026-09-17",
+    "title": "Lizzie_Borden",
+    "views": 557261,
+    "rank": 4,
+    "type": "standard",
+    "extract": "Lizzie Andrew Borden was an American woman who was tried and acquitted of the August 4, 1892 axe murders of her father and stepmother in Fall River, Massachusetts. No other individuals were charged with the murders, and Borden spent the remainder of her life in Fall River. She died of pneumonia at age 66, nine days before the death of her older sister, Emma.",
+    "description": "American acquitted murder suspect (1860–1927)",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Lizzie_Borden_1890.jpg/330px-Lizzie_Borden_1890.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Lizzie_Borden",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Lizzie_Borden",
+        "views": 557261,
+        "description": "American acquitted murder suspect (1860–1927)",
+        "url": "https://en.wikipedia.org/wiki/Lizzie_Borden"
+      },
+      {
+        "rank": 5,
+        "title": "Resident_Evil_(2026_film)",
+        "views": 202570,
+        "description": "Film by Zach Cregger",
+        "url": "https://en.wikipedia.org/wiki/Resident_Evil_(2026_film)"
+      },
+      {
+        "rank": 6,
+        "title": "Monster:_The_Lizzie_Borden_Story",
+        "views": 167234,
+        "description": "Season of television series",
+        "url": "https://en.wikipedia.org/wiki/Monster%3A_The_Lizzie_Borden_Story"
+      },
+      {
+        "rank": 7,
+        "title": "Chicxulub_crater",
+        "views": 159504,
+        "description": "Prehistoric impact crater in Mexico",
+        "url": "https://en.wikipedia.org/wiki/Chicxulub_crater"
+      },
+      {
+        "rank": 8,
+        "title": "Macklemore",
+        "views": 154453,
+        "description": "American rapper (born 1983)",
+        "url": "https://en.wikipedia.org/wiki/Macklemore"
+      },
+      {
+        "rank": 9,
+        "title": "Hugh_Jackman_filmography_and_discography",
+        "views": 153490,
+        "description": "Filmography",
+        "url": "https://en.wikipedia.org/wiki/Hugh_Jackman_filmography_and_discography"
+      },
+      {
+        "rank": 10,
+        "title": "Deaths_in_2026",
+        "views": 137605,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
+      },
+      {
+        "rank": 11,
+        "title": "Julia_Stiles",
+        "views": 136443,
+        "description": "American actress (born 1981)",
+        "url": "https://en.wikipedia.org/wiki/Julia_Stiles"
+      },
+      {
+        "rank": 12,
+        "title": "Robert_Kraft",
+        "views": 134485,
+        "description": "American businessman (born 1941)",
+        "url": "https://en.wikipedia.org/wiki/Robert_Kraft"
+      },
+      {
+        "rank": 13,
+        "title": "ChatGPT",
+        "views": 117779,
+        "description": "Generative AI chatbot by OpenAI",
+        "url": "https://en.wikipedia.org/wiki/ChatGPT"
+      }
+    ]
   }
 ]

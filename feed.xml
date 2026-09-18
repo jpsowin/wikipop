@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Thu, 17 Sep 2026 12:40:54 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 12:18:24 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Lizzie Borden</title>
+      <link>https://en.wikipedia.org/wiki/Lizzie_Borden</link>
+      <description>Lizzie Andrew Borden was an American woman who was tried and acquitted of the August 4, 1892 axe murders of her father and stepmother in Fall River, Massachusetts. No other individuals were charged with the murders, and Borden spent the remainder of her life in Fall River. She died of pneumonia at age 66, nine days before the death of her older sister, Emma.</description>
+      <pubDate>Thu, 17 Sep 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Lizzie_Borden#2026-09-17</guid>
+      <category>American acquitted murder suspect (1860–1927)</category>
+    </item>
     <item>
       <title>Macklemore</title>
       <link>https://en.wikipedia.org/wiki/Macklemore</link>
@@ -248,14 +256,6 @@ The following notable deaths occurred in 2026. Names are reported under the date
       <pubDate>Wed, 19 Aug 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Natalie_Harp#2026-08-19</guid>
       <category>American political aide (born 1991)</category>
-    </item>
-    <item>
-      <title>Wladimir Klitschko</title>
-      <link>https://en.wikipedia.org/wiki/Wladimir_Klitschko</link>
-      <description>Volodymyr Klitschko is a Ukrainian former professional boxer who competed from 1996 to 2017. He held multiple heavyweight world championships between 2000 and 2015, including unified titles between 2008 and 2015. During this time he also held the International Boxing Organization (IBO) and Ring magazine titles.</description>
-      <pubDate>Tue, 18 Aug 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Wladimir_Klitschko#2026-08-18</guid>
-      <category>Ukrainian boxer (born 1976)</category>
     </item>
   </channel>
 </rss>
