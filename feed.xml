@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Fri, 18 Sep 2026 12:18:24 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 11:59:44 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Duncan Sheik</title>
+      <link>https://en.wikipedia.org/wiki/Duncan_Sheik</link>
+      <description>Duncan Scott Sheik was an American singer-songwriter, composer, and actor. Sheik is known for his 1996 debut single &quot;Barely Breathing&quot;, which earned him a Grammy Award nomination for Best Male Pop Vocal Performance. He composed music for motion pictures and Broadway musicals, winning the 2007 Tony Awards for Best Original Score and Best Orchestrations for his work on the musical Spring Awakening.</description>
+      <pubDate>Fri, 18 Sep 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Duncan_Sheik#2026-09-18</guid>
+      <category>American singer-songwriter and composer (1969–2026)</category>
+    </item>
     <item>
       <title>Lizzie Borden</title>
       <link>https://en.wikipedia.org/wiki/Lizzie_Borden</link>
@@ -248,14 +256,6 @@ The following notable deaths occurred in 2026. Names are reported under the date
       <pubDate>Thu, 20 Aug 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Deaths_in_2026#2026-08-20</guid>
       
-    </item>
-    <item>
-      <title>Natalie Harp</title>
-      <link>https://en.wikipedia.org/wiki/Natalie_Harp</link>
-      <description>Natalie Harp is an American political aide and former television presenter who has served as the executive assistant to the president of the United States since 2025.</description>
-      <pubDate>Wed, 19 Aug 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Natalie_Harp#2026-08-19</guid>
-      <category>American political aide (born 1991)</category>
     </item>
   </channel>
 </rss>
