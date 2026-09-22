@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Mon, 21 Sep 2026 14:25:24 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 12:44:51 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Cindy Crawford</title>
+      <link>https://en.wikipedia.org/wiki/Cindy_Crawford</link>
+      <description>Cynthia Ann Crawford is an American model, actress, and television personality. One of the most popular supermodels of the 1980s and 1990s, she achieved a ubiquitous presence on magazine covers, runways, and fashion campaigns. She subsequently expanded into acting and business ventures.</description>
+      <pubDate>Mon, 21 Sep 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Cindy_Crawford#2026-09-21</guid>
+      <category>American model and actress (born 1966)</category>
+    </item>
     <item>
       <title>Monster: The Lizzie Borden Story</title>
       <link>https://en.wikipedia.org/wiki/Monster%3A_The_Lizzie_Borden_Story</link>
@@ -245,14 +253,6 @@
       <pubDate>Sun, 23 Aug 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Kevin_Keegan#2026-08-23</guid>
       <category>English football player and manager (1951–2026)</category>
-    </item>
-    <item>
-      <title>Michael Wright (actor)</title>
-      <link>https://en.wikipedia.org/wiki/Michael_Wright_(actor)</link>
-      <description>Michael Wright was an American actor best known for his roles in the films The Five Heartbeats (1991), Streamers (1983) for which he won the Volpi Cup for Best Actor, and Sugar Hill (1994), and for his television roles Elias Taylor in V: The Series (1984–1985), Omar White in Oz (2001–2003), and Lazarus Prime in Black Lightning (2019).</description>
-      <pubDate>Sat, 22 Aug 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Michael_Wright_(actor)#2026-08-22</guid>
-      <category>American actor (1956–2026)</category>
     </item>
   </channel>
 </rss>
