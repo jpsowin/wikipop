@@ -50777,5 +50777,88 @@
         "url": "https://en.wikipedia.org/wiki/Lanterns_(TV_series)"
       }
     ]
+  },
+  {
+    "date": "2026-09-22",
+    "title": "2026_Asian_Games",
+    "views": 188420,
+    "rank": 5,
+    "type": "standard",
+    "extract": "The 2026 Asian Games , officially the XX Asian Games (第二十回アジア競技大会) and also known as Aichi–Nagoya 2026 (愛知・名古屋2026), is an ongoing multi-sport event which are being held in Aichi Prefecture in Japan from 19 September to 4 October 2026, with several events starting from 10 September. Nagoya is the third Japanese city to host the Asian Games, after Tokyo in 1958 and Hiroshima in 1994. The event has returned to its traditional four-year cycle, after the 2022 edition was postponed to 2023 due to the COVID-19 pandemic. The Games marked the 75th anniversary of the 1951 Asian Games held in New Delhi, India.",
+    "description": "Multi-sport event in Aichi and Nagoya, Japan",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4d/2026_Asian_Games_logo.svg/330px-2026_Asian_Games_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/2026_Asian_Games",
+    "top10": [
+      {
+        "rank": 3,
+        "title": "Lizzie_Borden",
+        "views": 679382,
+        "description": "American woman acquitted of murder (1860–1927)",
+        "url": "https://en.wikipedia.org/wiki/Lizzie_Borden"
+      },
+      {
+        "rank": 5,
+        "title": "2026_Asian_Games",
+        "views": 188420,
+        "description": "Multi-sport event in Aichi and Nagoya, Japan",
+        "url": "https://en.wikipedia.org/wiki/2026_Asian_Games"
+      },
+      {
+        "rank": 6,
+        "title": "Aileen_Wuornos",
+        "views": 176132,
+        "description": "American serial killer (1956–2002)",
+        "url": "https://en.wikipedia.org/wiki/Aileen_Wuornos"
+      },
+      {
+        "rank": 7,
+        "title": "Monster:_The_Lizzie_Borden_Story",
+        "views": 170793,
+        "description": "Season of television series",
+        "url": "https://en.wikipedia.org/wiki/Monster%3A_The_Lizzie_Borden_Story"
+      },
+      {
+        "rank": 8,
+        "title": "Resident_Evil_(2026_film)",
+        "views": 166913,
+        "description": "Film by Zach Cregger",
+        "url": "https://en.wikipedia.org/wiki/Resident_Evil_(2026_film)"
+      },
+      {
+        "rank": 9,
+        "title": "Cindy_Crawford",
+        "views": 160208,
+        "description": "American model and actress (born 1966)",
+        "url": "https://en.wikipedia.org/wiki/Cindy_Crawford"
+      },
+      {
+        "rank": 10,
+        "title": "India_at_the_2026_Asian_Games",
+        "views": 137927,
+        "description": "Sporting event delegation",
+        "url": "https://en.wikipedia.org/wiki/India_at_the_2026_Asian_Games"
+      },
+      {
+        "rank": 11,
+        "title": "Deaths_in_2026",
+        "views": 137453,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
+      },
+      {
+        "rank": 12,
+        "title": "Jameis_Winston",
+        "views": 135173,
+        "description": "American football player (born 1994)",
+        "url": "https://en.wikipedia.org/wiki/Jameis_Winston"
+      },
+      {
+        "rank": 13,
+        "title": "Rande_Gerber",
+        "views": 129657,
+        "description": "American businessman (born 1962)",
+        "url": "https://en.wikipedia.org/wiki/Rande_Gerber"
+      }
+    ]
   }
 ]
