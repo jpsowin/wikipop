@@ -51109,5 +51109,88 @@
         "url": "https://en.wikipedia.org/wiki/Elizabeth_Holmes"
       }
     ]
+  },
+  {
+    "date": "2026-09-26",
+    "title": "Ted_Kaczynski",
+    "views": 376033,
+    "rank": 5,
+    "type": "standard",
+    "extract": "Theodore John Kaczynski, also known as the Unabomber, was an American mathematician and domestic terrorist. A mathematics prodigy, he abandoned his academic career in 1969 to pursue a reclusive primitive lifestyle and lone wolf terrorism campaign.",
+    "description": "American domestic terrorist (1942–2023)",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Ted_Kaczynski_2_%28cropped%29.jpg/330px-Ted_Kaczynski_2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Ted_Kaczynski",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Lizzie_Borden",
+        "views": 421359,
+        "description": "American woman acquitted of murder (1860–1927)",
+        "url": "https://en.wikipedia.org/wiki/Lizzie_Borden"
+      },
+      {
+        "rank": 5,
+        "title": "Ted_Kaczynski",
+        "views": 376033,
+        "description": "American domestic terrorist (1942–2023)",
+        "url": "https://en.wikipedia.org/wiki/Ted_Kaczynski"
+      },
+      {
+        "rank": 6,
+        "title": "Roblox",
+        "views": 370335,
+        "description": "Multiplayer game creation platform",
+        "url": "https://en.wikipedia.org/wiki/Roblox"
+      },
+      {
+        "rank": 7,
+        "title": "India_at_the_2026_Asian_Games",
+        "views": 260257,
+        "description": "Sporting event delegation",
+        "url": "https://en.wikipedia.org/wiki/India_at_the_2026_Asian_Games"
+      },
+      {
+        "rank": 8,
+        "title": "2026_Asian_Games_medal_table",
+        "views": 259696,
+        "description": "Award",
+        "url": "https://en.wikipedia.org/wiki/2026_Asian_Games_medal_table"
+      },
+      {
+        "rank": 9,
+        "title": "2026_Asian_Games",
+        "views": 229525,
+        "description": "Multi-sport event in Aichi and Nagoya, Japan",
+        "url": "https://en.wikipedia.org/wiki/2026_Asian_Games"
+      },
+      {
+        "rank": 10,
+        "title": "The_Paradise_(2026_Indian_film)",
+        "views": 210483,
+        "description": "2026 Indian film by Srikanth Odela",
+        "url": "https://en.wikipedia.org/wiki/The_Paradise_(2026_Indian_film)"
+      },
+      {
+        "rank": 11,
+        "title": "Justin_Verlander",
+        "views": 204136,
+        "description": "American baseball player (born 1983)",
+        "url": "https://en.wikipedia.org/wiki/Justin_Verlander"
+      },
+      {
+        "rank": 13,
+        "title": "Primetime_(film)",
+        "views": 159635,
+        "description": "2026 film by Lance Oppenheim",
+        "url": "https://en.wikipedia.org/wiki/Primetime_(film)"
+      },
+      {
+        "rank": 14,
+        "title": "Christa_Pike",
+        "views": 131276,
+        "description": "American convicted murderer (born 1976)",
+        "url": "https://en.wikipedia.org/wiki/Christa_Pike"
+      }
+    ]
   }
 ]

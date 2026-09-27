@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sat, 26 Sep 2026 12:19:26 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2026 13:12:26 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Ted Kaczynski</title>
+      <link>https://en.wikipedia.org/wiki/Ted_Kaczynski</link>
+      <description>Theodore John Kaczynski, also known as the Unabomber, was an American mathematician and domestic terrorist. A mathematics prodigy, he abandoned his academic career in 1969 to pursue a reclusive primitive lifestyle and lone wolf terrorism campaign.</description>
+      <pubDate>Sat, 26 Sep 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Ted_Kaczynski#2026-09-26</guid>
+      <category>American domestic terrorist (1942–2023)</category>
+    </item>
     <item>
       <title>Nahui Ollin</title>
       <link>https://en.wikipedia.org/wiki/Nahui_Ollin</link>
@@ -245,14 +253,6 @@
       <pubDate>Fri, 28 Aug 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Harald_V#2026-08-28</guid>
       <category>King of Norway from 1991 to 2026</category>
-    </item>
-    <item>
-      <title>Peter Cullen</title>
-      <link>https://en.wikipedia.org/wiki/Peter_Cullen</link>
-      <description>Peter Claver Cullen was a Canadian voice actor. He voiced Optimus Prime in the original 1980s Transformers animated series, later returning to the role in Transformers media in 2007, starting with the first live-action film. He also voiced many other characters across a wide variety of popular media, including Eeyore in the Winnie the Pooh franchise, Monterey Jack in Chip &apos;n Dale: Rescue Rangers, the first voice of KARR in Knight Rider and the vocalizations of the title character in Predator. He also voiced Thaedus in the animated series Invincible.</description>
-      <pubDate>Thu, 27 Aug 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Peter_Cullen#2026-08-27</guid>
-      <category>Canadian voice actor (1941–2026)</category>
     </item>
   </channel>
 </rss>
