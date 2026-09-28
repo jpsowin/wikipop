@@ -51192,5 +51192,88 @@
         "url": "https://en.wikipedia.org/wiki/Christa_Pike"
       }
     ]
+  },
+  {
+    "date": "2026-09-27",
+    "title": "Justin_Verlander",
+    "views": 340205,
+    "rank": 6,
+    "type": "standard",
+    "extract": "Justin Brooks Verlander is a former American professional baseball pitcher who played 21 seasons of Major League Baseball (MLB). He played for the Detroit Tigers, Houston Astros, New York Mets, and San Francisco Giants. A three-time Cy Young Award winner, an American League Most Valuable Player Award recipient, and a two-time World Series champion, Verlander is considered one of the greatest pitchers in baseball history.",
+    "description": "American baseball player (born 1983)",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Justin_Verlander_in_2016.jpg/330px-Justin_Verlander_in_2016.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Justin_Verlander",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Lizzie_Borden",
+        "views": 440478,
+        "description": "American woman acquitted of murder (1860–1927)",
+        "url": "https://en.wikipedia.org/wiki/Lizzie_Borden"
+      },
+      {
+        "rank": 5,
+        "title": "Ted_Kaczynski",
+        "views": 438924,
+        "description": "American domestic terrorist (1942–2023)",
+        "url": "https://en.wikipedia.org/wiki/Ted_Kaczynski"
+      },
+      {
+        "rank": 6,
+        "title": "Justin_Verlander",
+        "views": 340205,
+        "description": "American baseball player (born 1983)",
+        "url": "https://en.wikipedia.org/wiki/Justin_Verlander"
+      },
+      {
+        "rank": 7,
+        "title": "Kate_Upton",
+        "views": 239721,
+        "description": "American model and actress (born 1992)",
+        "url": "https://en.wikipedia.org/wiki/Kate_Upton"
+      },
+      {
+        "rank": 8,
+        "title": "2026_Asian_Games_medal_table",
+        "views": 227528,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/2026_Asian_Games_medal_table"
+      },
+      {
+        "rank": 9,
+        "title": "India_at_the_2026_Asian_Games",
+        "views": 213653,
+        "description": "Sporting event delegation",
+        "url": "https://en.wikipedia.org/wiki/India_at_the_2026_Asian_Games"
+      },
+      {
+        "rank": 10,
+        "title": "2026_Asian_Games",
+        "views": 186716,
+        "description": "Multi-sport event in Aichi and Nagoya, Japan",
+        "url": "https://en.wikipedia.org/wiki/2026_Asian_Games"
+      },
+      {
+        "rank": 12,
+        "title": "The_Paradise_(2026_Indian_film)",
+        "views": 162718,
+        "description": "2026 Indian film by Srikanth Odela",
+        "url": "https://en.wikipedia.org/wiki/The_Paradise_(2026_Indian_film)"
+      },
+      {
+        "rank": 13,
+        "title": "Christa_Pike",
+        "views": 145932,
+        "description": "American convicted murderer (born 1976)",
+        "url": "https://en.wikipedia.org/wiki/Christa_Pike"
+      },
+      {
+        "rank": 14,
+        "title": "Aileen_Wuornos",
+        "views": 135742,
+        "description": "American serial killer (1956–2002)",
+        "url": "https://en.wikipedia.org/wiki/Aileen_Wuornos"
+      }
+    ]
   }
 ]

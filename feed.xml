@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sun, 27 Sep 2026 13:12:26 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 15:44:37 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Justin Verlander</title>
+      <link>https://en.wikipedia.org/wiki/Justin_Verlander</link>
+      <description>Justin Brooks Verlander is a former American professional baseball pitcher who played 21 seasons of Major League Baseball (MLB). He played for the Detroit Tigers, Houston Astros, New York Mets, and San Francisco Giants. A three-time Cy Young Award winner, an American League Most Valuable Player Award recipient, and a two-time World Series champion, Verlander is considered one of the greatest pitchers in baseball history.</description>
+      <pubDate>Sun, 27 Sep 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Justin_Verlander#2026-09-27</guid>
+      <category>American baseball player (born 1983)</category>
+    </item>
     <item>
       <title>Ted Kaczynski</title>
       <link>https://en.wikipedia.org/wiki/Ted_Kaczynski</link>
@@ -245,14 +253,6 @@
       <pubDate>Sat, 29 Aug 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/.xyz#2026-08-29</guid>
       <category>Internet top-level domain</category>
-    </item>
-    <item>
-      <title>Harald V</title>
-      <link>https://en.wikipedia.org/wiki/Harald_V</link>
-      <description>Harald V was King of Norway from 17 January 1991 until his death in 2026.</description>
-      <pubDate>Fri, 28 Aug 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Harald_V#2026-08-28</guid>
-      <category>King of Norway from 1991 to 2026</category>
     </item>
   </channel>
 </rss>
