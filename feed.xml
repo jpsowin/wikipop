@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Mon, 28 Sep 2026 15:44:37 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 14:12:37 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Pac (wrestler)</title>
+      <link>https://en.wikipedia.org/wiki/Pac_(wrestler)</link>
+      <description>Benjamin Satterley, better known by his ring name Pac, was an English professional wrestler. He was best known for his time in All Elite Wrestling (AEW), where he was a member of the Death Riders and Death Triangle, and WWE, where he previously performed under the ring name Adrian Neville, later shortened to Neville.</description>
+      <pubDate>Mon, 28 Sep 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Pac_(wrestler)#2026-09-28</guid>
+      <category>English professional wrestler (1986–2026)</category>
+    </item>
     <item>
       <title>Justin Verlander</title>
       <link>https://en.wikipedia.org/wiki/Justin_Verlander</link>
@@ -245,14 +253,6 @@
       <pubDate>Sun, 30 Aug 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/All_In_(2026)#2026-08-30</guid>
       <category>All Elite Wrestling pay-per-view and livestreaming event</category>
-    </item>
-    <item>
-      <title>.xyz</title>
-      <link>https://en.wikipedia.org/wiki/.xyz</link>
-      <description>.xyz is a top-level domain name that was proposed in ICANN&apos;s new generic top-level domain (gTLD) Program for consisting of the last three letters of the Latin-script alphabet. XYZ.com and CentralNic are the registries for the domain, which was created by entrepreneur Daniel Negari. It became available to the general public on June 2, 2014, thereafter becoming widely used by tech startups, creators, and Web3 projects.</description>
-      <pubDate>Sat, 29 Aug 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/.xyz#2026-08-29</guid>
-      <category>Internet top-level domain</category>
     </item>
   </channel>
 </rss>
