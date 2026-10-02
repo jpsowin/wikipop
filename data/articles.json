@@ -51524,5 +51524,88 @@
         "url": "https://en.wikipedia.org/wiki/Instagram"
       }
     ]
+  },
+  {
+    "date": "2026-10-01",
+    "title": "USS_Theodore_Roosevelt_(CVN-71)",
+    "views": 495200,
+    "rank": 5,
+    "type": "standard",
+    "extract": "USS Theodore Roosevelt (CVN-71) is the fourth Nimitz-class, nuclear-powered, aircraft carrier in the United States Navy. She is named in honor of Theodore Roosevelt, the 26th president of the United States and a proponent of naval power. She is the fourth ship named in honor of Theodore Roosevelt, three bearing his full name and a fourth with just his last name. Another three U.S. Navy ships have \"Roosevelt\" in their names in honor of members of the Roosevelt family.",
+    "description": "US Navy Nimitz-class aircraft carrier",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/200125-N-LH674-1073_USS_Theodore_Roosevelt_%28CVN-71%29.jpg/330px-200125-N-LH674-1073_USS_Theodore_Roosevelt_%28CVN-71%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/USS_Theodore_Roosevelt_(CVN-71)",
+    "top10": [
+      {
+        "rank": 2,
+        "title": "Christa_Pike",
+        "views": 4309025,
+        "description": "American murderer (born 1976)",
+        "url": "https://en.wikipedia.org/wiki/Christa_Pike"
+      },
+      {
+        "rank": 5,
+        "title": "USS_Theodore_Roosevelt_(CVN-71)",
+        "views": 495200,
+        "description": "US Navy Nimitz-class aircraft carrier",
+        "url": "https://en.wikipedia.org/wiki/USS_Theodore_Roosevelt_(CVN-71)"
+      },
+      {
+        "rank": 6,
+        "title": "2026_Asian_Games_medal_table",
+        "views": 291675,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/2026_Asian_Games_medal_table"
+      },
+      {
+        "rank": 7,
+        "title": "India_at_the_2026_Asian_Games",
+        "views": 260558,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/India_at_the_2026_Asian_Games"
+      },
+      {
+        "rank": 8,
+        "title": "Cornell_7",
+        "views": 229476,
+        "description": "Alleged sex crime in Ithaca, New York, US",
+        "url": "https://en.wikipedia.org/wiki/2024_Cornell_University_rape_allegations"
+      },
+      {
+        "rank": 9,
+        "title": "Sebastian_Croft",
+        "views": 220265,
+        "description": "English actor and singer (born 2001)",
+        "url": "https://en.wikipedia.org/wiki/Sebastian_Croft"
+      },
+      {
+        "rank": 10,
+        "title": "2026_Asian_Games",
+        "views": 209287,
+        "description": "Multi-sport event in Aichi and Nagoya, Japan",
+        "url": "https://en.wikipedia.org/wiki/2026_Asian_Games"
+      },
+      {
+        "rank": 11,
+        "title": "Bella_Ramsey",
+        "views": 198968,
+        "description": "English actor (born 2003)",
+        "url": "https://en.wikipedia.org/wiki/Bella_Ramsey"
+      },
+      {
+        "rank": 12,
+        "title": "Lizzie_Borden",
+        "views": 195000,
+        "description": "American woman acquitted of murder (1860–1927)",
+        "url": "https://en.wikipedia.org/wiki/Lizzie_Borden"
+      },
+      {
+        "rank": 13,
+        "title": "Ted_Kaczynski",
+        "views": 188840,
+        "description": "American domestic terrorist (1942–2023)",
+        "url": "https://en.wikipedia.org/wiki/Ted_Kaczynski"
+      }
+    ]
   }
 ]
