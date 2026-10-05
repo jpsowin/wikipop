@@ -51773,5 +51773,88 @@
         "url": "https://en.wikipedia.org/wiki/Lizzie_Borden"
       }
     ]
+  },
+  {
+    "date": "2026-10-04",
+    "title": "Dakota_Johnson",
+    "views": 287360,
+    "rank": 6,
+    "type": "standard",
+    "extract": "Dakota Mayi Johnson is an American actress. Her accolades include nominations for a British Academy Film Award and a Critics' Choice Award. She was featured in the Forbes 30 Under 30 list in 2016.",
+    "description": "American actress (born 1989)",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Dakota_Johnson_at_the_2025_Cannes_Film_Festival_%28cropped%29.jpg/330px-Dakota_Johnson_at_the_2025_Cannes_Film_Festival_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Dakota_Johnson",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Christa_Pike",
+        "views": 461568,
+        "description": "American murderer (born 1976)",
+        "url": "https://en.wikipedia.org/wiki/Christa_Pike"
+      },
+      {
+        "rank": 6,
+        "title": "Dakota_Johnson",
+        "views": 287360,
+        "description": "American actress (born 1989)",
+        "url": "https://en.wikipedia.org/wiki/Dakota_Johnson"
+      },
+      {
+        "rank": 7,
+        "title": "Drishyam:_The_Conclusion",
+        "views": 274677,
+        "description": "2026 Indian film by Abhishek Pathak",
+        "url": "https://en.wikipedia.org/wiki/Drishyam%3A_The_Conclusion"
+      },
+      {
+        "rank": 8,
+        "title": "2026_Brazilian_general_election",
+        "views": 236023,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/2026_Brazilian_general_election"
+      },
+      {
+        "rank": 9,
+        "title": "Digger_(2026_film)",
+        "views": 225059,
+        "description": "Comedy film by Alejandro G. Iñárritu",
+        "url": "https://en.wikipedia.org/wiki/Digger_(2026_film)"
+      },
+      {
+        "rank": 10,
+        "title": "Sass_Jordan",
+        "views": 224485,
+        "description": "Canadian rock singer-songwriter (1960–2026)",
+        "url": "https://en.wikipedia.org/wiki/Sass_Jordan"
+      },
+      {
+        "rank": 11,
+        "title": "East_of_Eden_(novel)",
+        "views": 212157,
+        "description": "1952 novel by John Steinbeck",
+        "url": "https://en.wikipedia.org/wiki/East_of_Eden_(novel)"
+      },
+      {
+        "rank": 12,
+        "title": "2026_Asian_Games_medal_table",
+        "views": 206181,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/2026_Asian_Games_medal_table"
+      },
+      {
+        "rank": 13,
+        "title": "East_of_Eden_(2026_miniseries)",
+        "views": 181621,
+        "description": "2026 drama miniseries",
+        "url": "https://en.wikipedia.org/wiki/East_of_Eden_(2026_miniseries)"
+      },
+      {
+        "rank": 14,
+        "title": "Lizzie_Borden",
+        "views": 180386,
+        "description": "American woman acquitted of murder (1860–1927)",
+        "url": "https://en.wikipedia.org/wiki/Lizzie_Borden"
+      }
+    ]
   }
 ]

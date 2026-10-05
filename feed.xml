@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sun, 04 Oct 2026 13:22:11 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 16:16:43 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Dakota Johnson</title>
+      <link>https://en.wikipedia.org/wiki/Dakota_Johnson</link>
+      <description>Dakota Mayi Johnson is an American actress. Her accolades include nominations for a British Academy Film Award and a Critics&apos; Choice Award. She was featured in the Forbes 30 Under 30 list in 2016.</description>
+      <pubDate>Sun, 04 Oct 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Dakota_Johnson#2026-10-04</guid>
+      <category>American actress (born 1989)</category>
+    </item>
     <item>
       <title>India at the 2026 Asian Games</title>
       <link>https://en.wikipedia.org/wiki/India_at_the_2026_Asian_Games</link>
@@ -245,14 +253,6 @@
       <pubDate>Sat, 05 Sep 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Mirzapur_(film)#2026-09-05</guid>
       <category>2026 Indian film by Gurmeet Singh</category>
-    </item>
-    <item>
-      <title>Richard O&apos;Sullivan</title>
-      <link>https://en.wikipedia.org/wiki/Richard_O&apos;Sullivan</link>
-      <description>Richard Thomas O&apos;Sullivan was an English comedy actor.</description>
-      <pubDate>Fri, 04 Sep 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Richard_O&apos;Sullivan#2026-09-04</guid>
-      <category>English actor (1944–2026)</category>
     </item>
   </channel>
 </rss>
