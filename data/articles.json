@@ -51856,5 +51856,88 @@
         "url": "https://en.wikipedia.org/wiki/Lizzie_Borden"
       }
     ]
+  },
+  {
+    "date": "2026-10-05",
+    "title": "Wikimedia_Foundation",
+    "views": 269550,
+    "rank": 5,
+    "type": "standard",
+    "extract": "The Wikimedia Foundation, Inc. (WMF) is an American 501(c)(3) nonprofit organization headquartered in San Francisco, California, and registered there as a charitable foundation. It is most known for hosting Wikipedia, one of the world's most visited websites. It also hosts and operates 14 related open collaboration projects, and supports the development of MediaWiki, which is the wiki software that underpins them. The foundation was established in 2003 in St. Petersburg, Florida by Jimmy Wales, as a nonprofit way to fund Wikipedia and other wiki projects that had previously been hosted by Bomis, Wales's for-profit company.",
+    "description": "American charitable organization",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Wikimedia_Foundation_logo_-_vertical.svg/330px-Wikimedia_Foundation_logo_-_vertical.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Wikimedia_Foundation",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Christa_Pike",
+        "views": 333405,
+        "description": "American murderer (born 1976)",
+        "url": "https://en.wikipedia.org/wiki/Christa_Pike"
+      },
+      {
+        "rank": 5,
+        "title": "Wikimedia_Foundation",
+        "views": 269550,
+        "description": "American charitable organization",
+        "url": "https://en.wikipedia.org/wiki/Wikimedia_Foundation"
+      },
+      {
+        "rank": 6,
+        "title": "2026_Brazilian_general_election",
+        "views": 247828,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/2026_Brazilian_general_election"
+      },
+      {
+        "rank": 7,
+        "title": "Digger_(2026_film)",
+        "views": 245758,
+        "description": "2026 film by Alejandro G. Iñárritu",
+        "url": "https://en.wikipedia.org/wiki/Digger_(2026_film)"
+      },
+      {
+        "rank": 8,
+        "title": "Drishyam:_The_Conclusion",
+        "views": 226584,
+        "description": "2026 Indian film by Abhishek Pathak",
+        "url": "https://en.wikipedia.org/wiki/Drishyam%3A_The_Conclusion"
+      },
+      {
+        "rank": 9,
+        "title": "Lanterns_(TV_series)",
+        "views": 225799,
+        "description": "2026 DC Studios television series",
+        "url": "https://en.wikipedia.org/wiki/Lanterns_(TV_series)"
+      },
+      {
+        "rank": 11,
+        "title": "East_of_Eden_(novel)",
+        "views": 180516,
+        "description": "1952 novel by John Steinbeck",
+        "url": "https://en.wikipedia.org/wiki/East_of_Eden_(novel)"
+      },
+      {
+        "rank": 12,
+        "title": "East_of_Eden_(2026_miniseries)",
+        "views": 165714,
+        "description": "2026 drama miniseries",
+        "url": "https://en.wikipedia.org/wiki/East_of_Eden_(2026_miniseries)"
+      },
+      {
+        "rank": 13,
+        "title": "Dakota_Johnson",
+        "views": 149574,
+        "description": "American actress (born 1989)",
+        "url": "https://en.wikipedia.org/wiki/Dakota_Johnson"
+      },
+      {
+        "rank": 14,
+        "title": "Deaths_in_2026",
+        "views": 142771,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
+      }
+    ]
   }
 ]

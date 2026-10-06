@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Mon, 05 Oct 2026 16:16:43 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 14:21:02 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Wikimedia Foundation</title>
+      <link>https://en.wikipedia.org/wiki/Wikimedia_Foundation</link>
+      <description>The Wikimedia Foundation, Inc. (WMF) is an American 501(c)(3) nonprofit organization headquartered in San Francisco, California, and registered there as a charitable foundation. It is most known for hosting Wikipedia, one of the world&apos;s most visited websites. It also hosts and operates 14 related open collaboration projects, and supports the development of MediaWiki, which is the wiki software that underpins them. The foundation was established in 2003 in St. Petersburg, Florida by Jimmy Wales, as a nonprofit way to fund Wikipedia and other wiki projects that had previously been hosted by Bomis, Wales&apos;s for-profit company.</description>
+      <pubDate>Mon, 05 Oct 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Wikimedia_Foundation#2026-10-05</guid>
+      <category>American charitable organization</category>
+    </item>
     <item>
       <title>Dakota Johnson</title>
       <link>https://en.wikipedia.org/wiki/Dakota_Johnson</link>
@@ -245,14 +253,6 @@
       <pubDate>Sun, 06 Sep 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/2026_Saxony-Anhalt_state_election#2026-09-06</guid>
       <category>State election in Germany</category>
-    </item>
-    <item>
-      <title>Mirzapur (film)</title>
-      <link>https://en.wikipedia.org/wiki/Mirzapur_(film)</link>
-      <description>Mirzapur: The Movie is a 2026 Indian Hindi-language action crime thriller film directed by Gurmeet Singh and written by Puneet Krishna. Produced by Ritesh Sidhwani and Farhan Akhtar under Excel Entertainment, the film stars Pankaj Tripathi, Ali Fazal, Divyenndu, Jitendra Kumar and Ravi Kishan. It is based on the Amazon Prime Video television series Mirzapur (2018).</description>
-      <pubDate>Sat, 05 Sep 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Mirzapur_(film)#2026-09-05</guid>
-      <category>2026 Indian film by Gurmeet Singh</category>
     </item>
   </channel>
 </rss>
