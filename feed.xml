@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Tue, 06 Oct 2026 14:21:02 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 14:38:23 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Steve Gleason</title>
+      <link>https://en.wikipedia.org/wiki/Steve_Gleason</link>
+      <description>Stephen Michael Gleason is an American former professional football player who played as a safety with the New Orleans Saints of the National Football League (NFL). He played college football for the Washington State Cougars. Originally signed by the Indianapolis Colts as an undrafted free agent in 2000, he played for the Saints through the 2006 season. As a free agent in 2008, Gleason retired from the NFL after eight seasons.</description>
+      <pubDate>Tue, 06 Oct 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Steve_Gleason#2026-10-06</guid>
+      <category>American football player (born 1977)</category>
+    </item>
     <item>
       <title>Wikimedia Foundation</title>
       <link>https://en.wikipedia.org/wiki/Wikimedia_Foundation</link>
@@ -245,14 +253,6 @@
       <pubDate>Mon, 07 Sep 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Elizabeth_Holmes#2026-09-07</guid>
       <category>American businesswoman convicted of fraud (born 1984)</category>
-    </item>
-    <item>
-      <title>2026 Saxony-Anhalt state election</title>
-      <link>https://en.wikipedia.org/wiki/2026_Saxony-Anhalt_state_election</link>
-      <description>The 2026 Saxony-Anhalt state election was held on 6 September 2026 to elect the 9th Landtag of Saxony-Anhalt, two weeks before the state elections in Berlin and Mecklenburg-Vorpommern. It resulted in the highest vote share for the far-right in Germany since 1945.</description>
-      <pubDate>Sun, 06 Sep 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/2026_Saxony-Anhalt_state_election#2026-09-06</guid>
-      <category>State election in Germany</category>
     </item>
   </channel>
 </rss>
