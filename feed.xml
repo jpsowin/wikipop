@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Wed, 07 Oct 2026 14:38:23 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 14:46:12 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Eva Marie Saint</title>
+      <link>https://en.wikipedia.org/wiki/Eva_Marie_Saint</link>
+      <description>Eva Marie Saint was an American actress. In a career spanning nine decades, she received an Academy Award and a Primetime Emmy Award, as well as nominations for two BAFTAs and a Golden Globe. At the time of her death, Saint was one of the earliest and oldest living Academy Award winners and one of the last surviving stars from the Golden Age of Hollywood.</description>
+      <pubDate>Wed, 07 Oct 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Eva_Marie_Saint#2026-10-07</guid>
+      <category>American actress (1924–2026)</category>
+    </item>
     <item>
       <title>Steve Gleason</title>
       <link>https://en.wikipedia.org/wiki/Steve_Gleason</link>
@@ -245,14 +253,6 @@
       <pubDate>Tue, 08 Sep 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Alex_Michelsen#2026-09-08</guid>
       <category>American tennis player (born 2004)</category>
-    </item>
-    <item>
-      <title>Elizabeth Holmes</title>
-      <link>https://en.wikipedia.org/wiki/Elizabeth_Holmes</link>
-      <description>Elizabeth Anne Holmes is an American businesswoman convicted of fraud in connection with her health technology company Theranos. Holmes founded Theranos in 2003, and its valuation soared in the early 2010s after it claimed to have revolutionized blood testing by developing methods that needed only very small volumes of blood, such as from a fingerprick. In 2015, Forbes had named Holmes the youngest and wealthiest self-made female billionaire in the United States on the basis of a $9-billion valuation of her company. In the following year, as accusations of fraud about Theranos&apos;s claims began to surface, Forbes revised its estimate of Holmes&apos;s net worth to zero, and Fortune named her in its feature article on &quot;The World&apos;s 19 Most Disappointing Leaders&quot;.</description>
-      <pubDate>Mon, 07 Sep 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Elizabeth_Holmes#2026-09-07</guid>
-      <category>American businesswoman convicted of fraud (born 1984)</category>
     </item>
   </channel>
 </rss>
