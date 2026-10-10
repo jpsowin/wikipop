@@ -52188,5 +52188,88 @@
         "url": "https://en.wikipedia.org/wiki/Iraq"
       }
     ]
+  },
+  {
+    "date": "2026-10-09",
+    "title": "Nidal_Hasan",
+    "views": 787247,
+    "rank": 3,
+    "type": "standard",
+    "extract": "Nidal Malik Hasan is a former United States Army major and former physician who perpetrated the 2009 Fort Hood shooting, killing 13 people and injuring 32 others, on November 5, 2009. Hasan, an Army Medical Corps psychiatrist, admitted to the shootings at his court-martial in August 2013.",
+    "description": "U.S. Army officer and mass murderer (born 1970)",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Nidal_Hasan%2C_2007.jpg/330px-Nidal_Hasan%2C_2007.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Nidal_Hasan",
+    "top10": [
+      {
+        "rank": 3,
+        "title": "Nidal_Hasan",
+        "views": 787247,
+        "description": "U.S. Army officer and mass murderer (born 1970)",
+        "url": "https://en.wikipedia.org/wiki/Nidal_Hasan"
+      },
+      {
+        "rank": 4,
+        "title": "Mike_Ditka",
+        "views": 627603,
+        "description": "American football player, coach, and commentator (1939–2026)",
+        "url": "https://en.wikipedia.org/wiki/Mike_Ditka"
+      },
+      {
+        "rank": 6,
+        "title": "Mathematics",
+        "views": 391937,
+        "description": "Field of knowledge",
+        "url": "https://en.wikipedia.org/wiki/Mathematics"
+      },
+      {
+        "rank": 7,
+        "title": "List_of_equations",
+        "views": 387779,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/List_of_equations"
+      },
+      {
+        "rank": 8,
+        "title": "Navi_Pillay",
+        "views": 383057,
+        "description": "South African lawyer, judge, and human rights activist (born 1941)",
+        "url": "https://en.wikipedia.org/wiki/Navi_Pillay"
+      },
+      {
+        "rank": 9,
+        "title": "2009_Fort_Hood_shooting",
+        "views": 298849,
+        "description": "Mass shooting in Texas, U.S.",
+        "url": "https://en.wikipedia.org/wiki/2009_Fort_Hood_shooting"
+      },
+      {
+        "rank": 10,
+        "title": "Nana_Patekar",
+        "views": 296778,
+        "description": "Indian actor and filmmaker (1951–2026)",
+        "url": "https://en.wikipedia.org/wiki/Nana_Patekar"
+      },
+      {
+        "rank": 11,
+        "title": "Jalon_Daniels",
+        "views": 256679,
+        "description": "American football player (born 2002)",
+        "url": "https://en.wikipedia.org/wiki/Jalon_Daniels"
+      },
+      {
+        "rank": 12,
+        "title": "Christa_Pike",
+        "views": 216215,
+        "description": "American murderer on death row (born 1976)",
+        "url": "https://en.wikipedia.org/wiki/Christa_Pike"
+      },
+      {
+        "rank": 13,
+        "title": "Carrie_(miniseries)",
+        "views": 192804,
+        "description": "2026 miniseries by Mike Flanagan",
+        "url": "https://en.wikipedia.org/wiki/Carrie_(miniseries)"
+      }
+    ]
   }
 ]
