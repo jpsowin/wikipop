@@ -52271,5 +52271,88 @@
         "url": "https://en.wikipedia.org/wiki/Carrie_(miniseries)"
       }
     ]
+  },
+  {
+    "date": "2026-10-10",
+    "title": "Mathematics",
+    "views": 420278,
+    "rank": 4,
+    "type": "standard",
+    "extract": "Mathematics is a field of knowledge concerned with abstract concepts such as numbers, geometric shapes, sets, functions, and probabilities. It uses logical reasoning and proof to study and establish their properties, often expressed as theorems, formulas, and equations. Mathematics is widely used to model and solve problems in science, engineering, technology, economics, and everyday life.",
+    "description": "Field of knowledge",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Woman_teaching_geometry.jpg/330px-Woman_teaching_geometry.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Mathematics",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Mathematics",
+        "views": 420278,
+        "description": "Field of knowledge",
+        "url": "https://en.wikipedia.org/wiki/Mathematics"
+      },
+      {
+        "rank": 5,
+        "title": "List_of_equations",
+        "views": 417307,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/List_of_equations"
+      },
+      {
+        "rank": 6,
+        "title": "Nidal_Hasan",
+        "views": 382214,
+        "description": "U.S. Army officer and mass murderer (born 1970)",
+        "url": "https://en.wikipedia.org/wiki/Nidal_Hasan"
+      },
+      {
+        "rank": 7,
+        "title": "Mike_Ditka",
+        "views": 361505,
+        "description": "American football player, coach, and commentator (1939–2026)",
+        "url": "https://en.wikipedia.org/wiki/Mike_Ditka"
+      },
+      {
+        "rank": 8,
+        "title": "Christa_Pike",
+        "views": 204814,
+        "description": "American murderer on death row (born 1976)",
+        "url": "https://en.wikipedia.org/wiki/Christa_Pike"
+      },
+      {
+        "rank": 9,
+        "title": "Carrie_(miniseries)",
+        "views": 193876,
+        "description": "2026 miniseries by Mike Flanagan",
+        "url": "https://en.wikipedia.org/wiki/Carrie_(miniseries)"
+      },
+      {
+        "rank": 10,
+        "title": "Money_in_the_Bank_(2026)",
+        "views": 182270,
+        "description": "WWE premium live event",
+        "url": "https://en.wikipedia.org/wiki/Money_in_the_Bank_(2026)"
+      },
+      {
+        "rank": 11,
+        "title": "Navi_Pillay",
+        "views": 178275,
+        "description": "South African lawyer and judge (born 1941)",
+        "url": "https://en.wikipedia.org/wiki/Navi_Pillay"
+      },
+      {
+        "rank": 12,
+        "title": "Katie_Zacharia",
+        "views": 151159,
+        "description": "American political commentator (born 1984)",
+        "url": "https://en.wikipedia.org/wiki/Katie_Zacharia"
+      },
+      {
+        "rank": 13,
+        "title": "Below_(miniseries)",
+        "views": 147649,
+        "description": "2026 Canadian supernatural drama miniseries",
+        "url": "https://en.wikipedia.org/wiki/Below_(miniseries)"
+      }
+    ]
   }
 ]

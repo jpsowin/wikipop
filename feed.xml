@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sat, 10 Oct 2026 13:54:41 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 14:16:37 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Mathematics</title>
+      <link>https://en.wikipedia.org/wiki/Mathematics</link>
+      <description>Mathematics is a field of knowledge concerned with abstract concepts such as numbers, geometric shapes, sets, functions, and probabilities. It uses logical reasoning and proof to study and establish their properties, often expressed as theorems, formulas, and equations. Mathematics is widely used to model and solve problems in science, engineering, technology, economics, and everyday life.</description>
+      <pubDate>Sat, 10 Oct 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Mathematics#2026-10-10</guid>
+      <category>Field of knowledge</category>
+    </item>
     <item>
       <title>Nidal Hasan</title>
       <link>https://en.wikipedia.org/wiki/Nidal_Hasan</link>
@@ -245,14 +253,6 @@
       <pubDate>Fri, 11 Sep 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/September_11_attacks#2026-09-11</guid>
       <category>2001 terror attacks in the U.S.</category>
-    </item>
-    <item>
-      <title>Barry Melrose</title>
-      <link>https://en.wikipedia.org/wiki/Barry_Melrose</link>
-      <description>Barry James Melrose was a Canadian and American professional ice hockey player, coach and broadcaster. He played in the World Hockey Association (WHA) and National Hockey League (NHL). After retiring from playing, he became a head coach for the Los Angeles Kings in the team&apos;s run to the 1993 Stanley Cup Final. Until 2023, he was a long-time commentator and hockey analyst for ESPN as well as a contributor for the NHL Network.</description>
-      <pubDate>Thu, 10 Sep 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Barry_Melrose#2026-09-10</guid>
-      <category>Canadian and American ice hockey player, coach and broadcaster (1956–2026)</category>
     </item>
   </channel>
 </rss>
