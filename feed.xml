@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sun, 11 Oct 2026 14:16:37 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 16:53:22 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Money in the Bank (2026)</title>
+      <link>https://en.wikipedia.org/wiki/Money_in_the_Bank_(2026)</link>
+      <description>The 2026 Money in the Bank, also promoted as Money in the Bank: New Orleans, was a professional wrestling premium live event (PLE) produced by WWE. It was held for wrestlers from the promotion&apos;s main roster brands, Raw and SmackDown. It was the 17th annual Money in the Bank event and took place on Saturday, October 10, 2026, at the Smoothie King Center in New Orleans, Louisiana.</description>
+      <pubDate>Sun, 11 Oct 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Money_in_the_Bank_(2026)#2026-10-11</guid>
+      <category>WWE premium live event</category>
+    </item>
     <item>
       <title>Mathematics</title>
       <link>https://en.wikipedia.org/wiki/Mathematics</link>
@@ -245,14 +253,6 @@
       <pubDate>Sat, 12 Sep 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Elena_Rybakina#2026-09-12</guid>
       <category>Kazakhstani tennis player (born 1999)</category>
-    </item>
-    <item>
-      <title>September 11 attacks</title>
-      <link>https://en.wikipedia.org/wiki/September_11_attacks</link>
-      <description>The September 11 attacks, colloquially known as 9/11, were a coordinated series of suicide attacks perpetrated by the Islamic terrorist organization al-Qaeda against the United States in 2001. A total of 19 hijackers commandeered four commercial passenger airliners. The first two planes were flown into each of the Twin Towers at the World Trade Center in New York City, while the third plane crashed into the Pentagon, the headquarters of the United States Department of Defense, in Arlington County, Virginia. The fourth plane crashed in a rural field in Pennsylvania during a passenger revolt.</description>
-      <pubDate>Fri, 11 Sep 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/September_11_attacks#2026-09-11</guid>
-      <category>2001 terror attacks in the U.S.</category>
     </item>
   </channel>
 </rss>
