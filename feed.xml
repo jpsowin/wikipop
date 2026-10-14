@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Tue, 13 Oct 2026 15:11:39 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 12:58:12 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Katie Zacharia</title>
+      <link>https://en.wikipedia.org/wiki/Katie_Zacharia</link>
+      <description>Kate Sharon Zacharia is an American political commentator who has served as the White House press secretary since October 2026.</description>
+      <pubDate>Tue, 13 Oct 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Katie_Zacharia#2026-10-13</guid>
+      <category>American political spokesperson</category>
+    </item>
     <item>
       <title>RJ Mitte</title>
       <link>https://en.wikipedia.org/wiki/RJ_Mitte</link>
@@ -245,14 +253,6 @@
       <pubDate>Mon, 14 Sep 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/John_Tuggle#2026-09-14</guid>
       <category>American football player (1961–1986)</category>
-    </item>
-    <item>
-      <title>Sitee</title>
-      <link>https://en.wikipedia.org/wiki/Sitee</link>
-      <description>Sitee is a 1993 Maldivian drama film written and directed by Ahmed Nimal. Produced by Aslam Rasheed under Slam Studio in association with Kid Productions, the film stars Nimal and Fathimath Rameeza in pivotal roles.</description>
-      <pubDate>Sun, 13 Sep 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Sitee#2026-09-13</guid>
-      <category>1993 Maldivian film</category>
     </item>
   </channel>
 </rss>
