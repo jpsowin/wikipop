@@ -12,8 +12,17 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Wed, 14 Oct 2026 12:58:12 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 12:44:53 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>List of equations</title>
+      <link>https://en.wikipedia.org/wiki/List_of_equations</link>
+      <description>
+This is a list of equations, indicating each Wikipedia page under appropriate bands of their field.</description>
+      <pubDate>Wed, 14 Oct 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/List_of_equations#2026-10-14</guid>
+      
+    </item>
     <item>
       <title>Katie Zacharia</title>
       <link>https://en.wikipedia.org/wiki/Katie_Zacharia</link>
@@ -245,14 +254,6 @@
       <pubDate>Tue, 15 Sep 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/2014_European_Parliament_election#2026-09-15</guid>
       
-    </item>
-    <item>
-      <title>John Tuggle</title>
-      <link>https://en.wikipedia.org/wiki/John_Tuggle</link>
-      <description>John Davis Tuggle was an American professional football running back who played in the National Football League (NFL) for one season with the New York Giants. He played college football for the California Golden Bears and was selected by the Giants as the final pick of the 1983 NFL draft. Tuggle&apos;s professional career was cut short after his rookie season by a cancer diagnosis which led to his death two years later.</description>
-      <pubDate>Mon, 14 Sep 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/John_Tuggle#2026-09-14</guid>
-      <category>American football player (1961–1986)</category>
     </item>
   </channel>
 </rss>
