@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Thu, 15 Oct 2026 12:44:53 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 12:37:21 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>GBU-43/B MOAB</title>
+      <link>https://en.wikipedia.org/wiki/GBU-43%2FB_MOAB</link>
+      <description>The GBU-43/B Massive Ordnance Air Blast  is a large-yield bomb, developed for the United States military by Albert L. Weimorts, Jr. of the Air Force Research Laboratory. It was first tested in 2003. At the time of development, it was said to be the most powerful non-nuclear weapon in the US military arsenal. The bomb is designed to be delivered by a C-130 Hercules, primarily the MC-130E Combat Talon I or MC-130H Combat Talon II variants. The bomb&apos;s name and nickname were inspired by Iraqi president Saddam Hussein&apos;s invocation of the &quot;mother of all battles&quot; during the 1991 Gulf War.</description>
+      <pubDate>Thu, 15 Oct 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/GBU-43%2FB_MOAB#2026-10-15</guid>
+      <category>American large-yield bomb</category>
+    </item>
     <item>
       <title>List of equations</title>
       <link>https://en.wikipedia.org/wiki/List_of_equations</link>
@@ -246,14 +254,6 @@ This is a list of equations, indicating each Wikipedia page under appropriate ba
       <pubDate>Wed, 16 Sep 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Macklemore#2026-09-16</guid>
       <category>American rapper (born 1983)</category>
-    </item>
-    <item>
-      <title>european election 2014</title>
-      <link>https://en.wikipedia.org/wiki/2014_European_Parliament_election</link>
-      <description>The 2014 European Parliament election was held in the European Union (EU) between 22 and 25 May 2014. It was the 8th parliamentary election since the first direct elections in 1979, and the first in which the European political parties fielded candidates for President of the Commission.</description>
-      <pubDate>Tue, 15 Sep 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/2014_European_Parliament_election#2026-09-15</guid>
-      
     </item>
   </channel>
 </rss>
