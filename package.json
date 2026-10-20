@@ -1,0 +1,8 @@
+{
+  "name": "wikipop",
+  "private": true,
+  "description": "Daily most-viewed Wikipedia article",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.135.0"
+  }
+}

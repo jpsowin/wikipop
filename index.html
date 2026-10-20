@@ -530,6 +530,21 @@
       }
       .footer-links { justify-content: center; flex-wrap: wrap; }
     }
+    /* "Why was everyone looking at this?" box (scripts/why.mjs) */
+    .why-box { margin-top: 1.2rem; padding: 0.9rem 1.1rem 0.8rem; background: var(--white); border: var(--bw) solid var(--black); text-align: left; }
+    .why-label { font-family: "Bangers", cursive; font-weight: normal; font-size: 1.35rem; letter-spacing: 0.03em; margin: 0 0 0.35rem; color: var(--black); }
+    .why-box ul { padding-left: 1.2rem; margin: 0; }
+    .why-box li { margin: 0.3rem 0; line-height: 1.5; }
+    .why-box li::marker { color: var(--red); }
+    .why-box a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    .why-box a:hover { background: var(--yellow, #ffdf00); }
+    .why-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.35rem; }
+    .why-head .why-label { margin: 0; }
+    .ai-info { position: relative; display: inline-flex; }
+    .ai-info-btn { background: none; border: 0; padding: 2px; color: #777; cursor: pointer; display: inline-flex; border-radius: 50%; }
+    .ai-info-btn:hover, .ai-info-btn:focus-visible { color: var(--black); outline: none; }
+    .ai-info-tip { position: absolute; top: calc(100% + 6px); right: -6px; width: min(260px, 70vw); background: var(--black); color: var(--white); font-size: 0.75rem; line-height: 1.4; padding: 0.5rem 0.65rem; border-radius: 6px; opacity: 0; visibility: hidden; transition: opacity 0.15s; z-index: 5; }
+    .ai-info:hover .ai-info-tip, .ai-info-btn:focus-visible + .ai-info-tip, .ai-info.open .ai-info-tip { opacity: 1; visibility: visible; }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBPZDVN4FC"></script>
@@ -552,13 +567,13 @@
 {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  "headline": "Elizabeth Holmes — Top Wikipedia Article on October 18, 2026",
-  "datePublished": "2026-10-18",
-  "dateModified": "2026-10-18",
+  "headline": "You Can See Everything — Top Wikipedia Article on October 19, 2026",
+  "datePublished": "2026-10-19",
+  "dateModified": "2026-10-19",
   "image": [
-    "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Elizabeth_Holmes_2014_%28cropped_2%29.jpg/330px-Elizabeth_Holmes_2014_%28cropped_2%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    "https://upload.wikimedia.org/wikipedia/en/9/9d/You_Can_See_Everything_poster.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
   ],
-  "description": "American businesswoman (born 1984)",
+  "description": "2026 documentary film",
   "url": "https://wikipop.sowin.io/",
   "mainEntityOfPage": "https://wikipop.sowin.io/",
   "publisher": {
@@ -568,13 +583,13 @@
   },
   "about": {
     "@type": "Thing",
-    "name": "Elizabeth Holmes",
-    "sameAs": "https://en.wikipedia.org/wiki/Elizabeth_Holmes"
+    "name": "You Can See Everything",
+    "sameAs": "https://en.wikipedia.org/wiki/You_Can_See_Everything"
   },
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": "https://schema.org/ReadAction",
-    "userInteractionCount": 258023
+    "userInteractionCount": 268900
   }
 }
 </script>
@@ -640,22 +655,45 @@
 
         <div class="article-panel">
           <div class="article-content">
-            <a href="https://en.wikipedia.org/wiki/Elizabeth_Holmes" target="_blank" rel="noopener noreferrer" class="hero-thumb"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Elizabeth_Holmes_2014_%28cropped_2%29.jpg/330px-Elizabeth_Holmes_2014_%28cropped_2%29.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail" alt="Elizabeth Holmes"></a>
+            <a href="https://en.wikipedia.org/wiki/You_Can_See_Everything" target="_blank" rel="noopener noreferrer" class="hero-thumb"><img src="https://upload.wikimedia.org/wikipedia/en/9/9d/You_Can_See_Everything_poster.jpeg?utm_source=en.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail_unscaled" alt="You Can See Everything"></a>
             <div class="caption-wrapper">
               <div class="comic-caption">
-                <h2 class="caption-title">Elizabeth Holmes</h2>
-                <div class="caption-desc">American businesswoman (born 1984)</div>
+                <h2 class="caption-title">You Can See Everything</h2>
+                <div class="caption-desc">2026 documentary film</div>
               </div>
             </div>
             <div class="article-extract">
-              <p><span class="drop-cap">E</span>lizabeth Anne Holmes is an American businesswoman convicted of fraud in connection with her health technology company Theranos. Holmes founded Theranos in 2003, and its valuation soared in the early 2010s after it claimed to have revolutionized blood testing by developing methods that needed only very small volumes of blood, such as from a fingerprick. In 2015, Forbes named Holmes the youngest and wealthiest self-made female billionaire in the United States on the basis of a $9 billion valuation of Theranos. In the following year, as accusations of fraud about Theranos&#039;s claims began to surface, Forbes revised its estimate of Holmes&#039;s net worth to zero, and Fortune named her in its feature article on &quot;The World&#039;s 19 Most Disappointing Leaders&quot;.</p>
+              <p><span class="drop-cap">Y</span>ou Can See Everything is a 2026 American documentary film directed by Nathan Fielder and Lance Oppenheim. It follows Elizabeth Holmes, the founder of the defunct health technology company Theranos, and her partner Billy Evans, who invited a film crew to document them beginning in the weeks before Holmes began serving a United States federal prison sentence for defrauding investors.</p>
             </div>
             <div style="clear: both;"></div>
+            
+            <div class="why-box">
+              <div class="why-head">
+                <h3 class="why-label">Why the popularity?</h3>
+                <span class="ai-info">
+                  <button type="button" class="ai-info-btn" aria-label="About this summary" aria-expanded="false">
+                    <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.2 6.1a1.9 1.9 0 0 1 3.7.5c0 1.3-1.9 1.6-1.9 2.9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="8" cy="11.6" r="0.9" fill="currentColor"/></svg>
+                  </button>
+                  <span class="ai-info-tip" role="tooltip">This summary is AI-generated and may contain errors. It's researched by Claude Sonnet 5.5 using web search and Wikipedia, then reviewed and rewritten by a separate Claude Sonnet 5.5 editor.</span>
+                </span>
+              </div>
+              <ul><li><a href="https://en.wikipedia.org/wiki/A24" target="_blank" rel="noopener noreferrer">A24</a>&#039;s documentary about <a href="https://en.wikipedia.org/wiki/Elizabeth_Holmes" target="_blank" rel="noopener noreferrer">Elizabeth Holmes</a> and <a href="https://en.wikipedia.org/wiki/Theranos" target="_blank" rel="noopener noreferrer">Theranos</a> pulled off a <a href="https://deadline.com/2026/10/you-can-see-everything-box-office-elizabeth-holmes-1237167129/" target="_blank" rel="noopener noreferrer">surprise $15 million opening weekend</a>, huge for a documentary.</li><li>Co-director <a href="https://en.wikipedia.org/wiki/Nathan_Fielder" target="_blank" rel="noopener noreferrer">Nathan Fielder</a> says Holmes <a href="https://variety.com/2026/film/news/nathan-fielder-elizabeth-holmes-phone-call-prison-you-can-see-everything-1236916334/" target="_blank" rel="noopener noreferrer">called him from prison</a> right before release, after a long silence.</li><li>Holmes&#039;s partner <a href="https://en.wikipedia.org/wiki/Billy_Evans_(entrepreneur)" target="_blank" rel="noopener noreferrer">Billy Evans</a> <a href="https://variety.com/2026/film/news/billy-evans-defends-you-can-see-everything-elizabeth-holmes-insane-1236914043/" target="_blank" rel="noopener noreferrer">defended letting the cameras in</a>, while allowing it might be &quot;the dumbest thing&quot; he&#039;s ever done.</li><li>It debuted as a secret <a href="https://en.wikipedia.org/wiki/Telluride_Film_Festival" target="_blank" rel="noopener noreferrer">Telluride Film Festival</a> screening where nobody knew the title and everyone surrendered their phones.</li></ul>
+            </div>
+            <script>
+              (function () {
+                var info = document.currentScript.previousElementSibling.querySelector(".ai-info");
+                var btn = info.querySelector("button");
+                function set(open) { info.classList.toggle("open", open); btn.setAttribute("aria-expanded", String(open)); }
+                btn.addEventListener("click", function (e) { e.stopPropagation(); set(!info.classList.contains("open")); });
+                document.addEventListener("click", function () { set(false); });
+                document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
+              })();
+            </script>
           </div>
           <div class="article-footer-strip">
-            <a href="https://en.wikipedia.org/wiki/Elizabeth_Holmes" target="_blank" rel="noopener noreferrer" class="wiki-link">Read on Wikipedia &rarr;</a>
+            <a href="https://en.wikipedia.org/wiki/You_Can_See_Everything" target="_blank" rel="noopener noreferrer" class="wiki-link">Read on Wikipedia &rarr;</a>
             <div class="strip-views">
-              <span class="strip-views-number">258,023</span>
+              <span class="strip-views-number">268,900</span>
               <span class="strip-views-label">views yesterday</span>
             </div>
           </div>
@@ -677,10 +715,10 @@
       <div class="v2-featured-box">
         <div class="v2-featured-content">
           <span class="v2-featured-label">OBSCURE WIKIPEDIA ENTRY OF THE DAY</span>
-          <a href="https://en.wikipedia.org/wiki/Metal_Open_Air" target="_blank" rel="noopener noreferrer" class="v2-featured-title">Metal Open Air</a>
-          <div class="v2-featured-text">Metal Open Air was an unsuccessful 2012 heavy metal festival. It took place between 20–22 April, at the Parque Independência, 25 km southeast from downtown São Luís, Maranhão, northeastern Brazil. Due to problems with the payment of artists and the accommodation and security of the audience, the festival was ultimately cancelled on its last day. <a href="https://en.wikipedia.org/wiki/Metal_Open_Air" target="_blank" rel="noopener noreferrer" class="v2-featured-readmore">Continue reading</a></div>
+          <a href="https://en.wikipedia.org/wiki/Polybius_(urban_legend)" target="_blank" rel="noopener noreferrer" class="v2-featured-title">Polybius (urban legend)</a>
+          <div class="v2-featured-text">Polybius is an urban legend about a mysterious arcade video game. According to the legend, the game appeared in arcades around Portland, Oregon in 1981. The gameplay was supposedly psychoactive, abstract, and dangerous. Children who played the arcade game were said to suffer from amnesia, seizures, night terrors, and hallucinations. Despite these adverse effects, the arcade cabinet was described as so addictive that players returned to Polybius repeatedly until they went insane, died, or vanished. The lack of any surviving Polybius cabinets is explained by men in black who were said to record data on the players before removing all the arcade machines. <a href="https://en.wikipedia.org/wiki/Polybius_(urban_legend)" target="_blank" rel="noopener noreferrer" class="v2-featured-readmore">Continue reading</a></div>
         </div>
-        
+        <a href="https://en.wikipedia.org/wiki/Polybius_(urban_legend)" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Polybius%2C_coinop.org.jpeg?utm_source=en.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail_unscaled" alt="" class="v2-featured-img"></a>
       </div>
     </div>
 
@@ -697,6 +735,12 @@
         </thead>
         <tbody>
           
+            <tr>
+              <td class="archive-date">Oct 18</td>
+              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Elizabeth_Holmes" target="_blank" rel="noopener noreferrer">Elizabeth Holmes</a> <a href="day/2026-10-18-elizabeth-holmes/" class="archive-day-link" aria-label="View top 10 for October 18, 2026">·day</a></td>
+              <td class="archive-category">American businesswoman (born 1984)</td>
+              <td class="archive-views">258,023</td>
+            </tr>
             <tr>
               <td class="archive-date">Oct 17</td>
               <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Ying" target="_blank" rel="noopener noreferrer">Ying</a> <a href="day/2026-10-17-ying/" class="archive-day-link" aria-label="View top 10 for October 17, 2026">·day</a></td>
@@ -718,7 +762,7 @@
             <tr>
               <td class="archive-date">Oct 14</td>
               <td class="archive-title"><a href="https://en.wikipedia.org/wiki/List_of_equations" target="_blank" rel="noopener noreferrer">List of equations</a> <a href="day/2026-10-14-list-of-equations/" class="archive-day-link" aria-label="View top 10 for October 14, 2026">·day</a></td>
-              <td class="archive-category"></td>
+              <td class="archive-category">List</td>
               <td class="archive-views">232,910</td>
             </tr>
             <tr>
@@ -751,15 +795,9 @@
               <td class="archive-category">U.S. Army officer and mass murderer (born 1970)</td>
               <td class="archive-views">787,247</td>
             </tr>
-            <tr>
-              <td class="archive-date">Oct 8</td>
-              <td class="archive-title"><a href="https://en.wikipedia.org/wiki/Nana_Patekar" target="_blank" rel="noopener noreferrer">Nana Patekar</a> <a href="day/2026-10-08-nana-patekar/" class="archive-day-link" aria-label="View top 10 for October 8, 2026">·day</a></td>
-              <td class="archive-category">Indian actor and filmmaker (1951–2026)</td>
-              <td class="archive-views">1,665,865</td>
-            </tr>
         </tbody>
       </table>
-      <a href="archive.html" class="archive-more">View full archive (643 articles) &rarr;</a>
+      <a href="archive.html" class="archive-more">View full archive (652 articles) &rarr;</a>
     </div>
 
     <div class="faq-section fade-up" id="faq">

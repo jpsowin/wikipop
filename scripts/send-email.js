@@ -14,6 +14,11 @@ const FEATURED_FILE = path.join(__dirname, "..", "data", "featured-entries.json"
 const FEATURED_INDEX_FILE = path.join(__dirname, "..", "data", "featured-index.json");
 const LAST_EMAIL_FILE = path.join(__dirname, "..", "data", "last-email.txt");
 
+// The comic-book layout is sent with Buttondown's "naked" template so our
+// HTML isn't wrapped or recolored. EMAIL_DESIGN=classic falls back to the old
+// layout. EMAIL_PREVIEW_FILE=path writes the HTML to a file instead of sending.
+const EMAIL_DESIGN = process.env.EMAIL_DESIGN || "comic";
+
 function httpGet(url) {
   return new Promise((resolve, reject) => {
     const doRequest = (reqUrl) => {
@@ -44,6 +49,17 @@ async function fetchArticleSummary(title) {
   return httpGet(url);
 }
 
+// Fallback image for articles with no lead image: the first gallery image
+// further down the article. Keep in sync with scripts/build.js.
+async function fetchFirstArticleImage(title) {
+  const url = `https://en.wikipedia.org/api/rest_v1/page/media-list/${encodeURIComponent(title)}`;
+  const data = await httpGet(url);
+  const item = (data.items || []).find((i) => i.type === "image" && i.showInGallery && i.srcset && i.srcset.length);
+  if (!item) return null;
+  const src = item.srcset[0].src;
+  return src.startsWith("//") ? `https:${src}` : src;
+}
+
 async function getFeaturedEntry() {
   if (!fs.existsSync(FEATURED_FILE)) return null;
   const entries = JSON.parse(fs.readFileSync(FEATURED_FILE, "utf-8"));
@@ -57,6 +73,9 @@ async function getFeaturedEntry() {
     const summary = await fetchArticleSummary(decodeURIComponent(wikiTitle));
     entry.extract = summary.extract || "";
     entry.thumbnail = summary.thumbnail ? summary.thumbnail.source : null;
+    if (!entry.thumbnail) {
+      try { entry.thumbnail = await fetchFirstArticleImage(decodeURIComponent(wikiTitle)); } catch (e) {}
+    }
   } catch (e) {
     entry.extract = "";
   }
@@ -85,6 +104,37 @@ function displayTitle(title) {
 function formatDateShort(dateStr) {
   const d = new Date(dateStr + "T00:00:00Z");
   return d.toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+}
+
+// "Why was everyone looking at this?" blurb from data/why.json, if there is
+// one for this day. Bullets carry Markdown links; everything else is escaped.
+function escapeHtml(str) {
+  return String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+}
+
+function buildWhyHtml(article) {
+  const whyFile = path.join(__dirname, "..", "data", "why.json");
+  if (!fs.existsSync(whyFile)) return "";
+  const e = JSON.parse(fs.readFileSync(whyFile, "utf-8"))[article.date];
+  if (!e || !e.show || e.title !== article.title || !e.bullets || !e.bullets.length) return "";
+  const render = (text) => {
+    let html = "";
+    let last = 0;
+    for (const m of text.matchAll(/\[([^\]]+)\]\((https:\/\/(?:[^()\s]|\([^()\s]*\))+)\)/g)) {
+      html += escapeHtml(text.slice(last, m.index));
+      html += `<a href="${escapeHtml(m[2])}" style="color:#1a1a1a;text-decoration:underline;text-decoration-color:#c1272d;">${escapeHtml(m[1])}</a>`;
+      last = m.index + m[0].length;
+    }
+    return html + escapeHtml(text.slice(last));
+  };
+  return `
+    <div style="margin:4px 0 16px;padding:14px 16px;background:#fafaf8;border:1px solid #e5e5e5;border-radius:8px;">
+      <p style="margin:0 0 6px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#c1272d;">Why the popularity?</p>
+      <ul style="margin:0;padding-left:20px;font-size:15px;line-height:1.55;color:#333;">
+        ${e.bullets.map((b) => `<li style="margin:4px 0;">${render(b)}</li>`).join("\n        ")}
+      </ul>
+    </div>`;
 }
 
 function buildEmailHtml(article, recentArticles, featured) {
@@ -141,7 +191,7 @@ function buildEmailHtml(article, recentArticles, featured) {
     </div>
 
     <div style="clear:both;"></div>
-
+${buildWhyHtml(article)}
     <table cellpadding="0" cellspacing="0" border="0" style="margin:16px 0;">
       <tr>
         <td style="background-color:#c1272d;border-radius:6px;padding:10px 22px;">
@@ -194,12 +244,121 @@ function buildEmailHtml(article, recentArticles, featured) {
   return html;
 }
 
+// Comic-book layout matching the site. Email-safe: tables, inline styles,
+// web font with system fallbacks, no CSS the big clients strip.
+// Softer than the site's yellow, which is glaring as a full email background.
+const C = { yellow: "#f4d75e", red: "#d00d00", black: "#111111", cream: "#fdfcf3", gray: "#666666" };
+// The logo is an image (rendered in Bangers) because phone mail apps won't load web fonts.
+// Same file as assets/email-logo.png, hosted by Buttondown.
+const LOGO_URL = "https://assets.buttondown.email/images/2b829be7-b92a-4343-a421-940d32d6a65d.png";
+const HEAD_FONT = "Bangers, Impact, 'Arial Black', 'Helvetica Neue', Arial, sans-serif";
+const BODY_FONT = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+
+function markdownLinks(text, linkStyle) {
+  let html = "";
+  let last = 0;
+  for (const m of text.matchAll(/\[([^\]]+)\]\((https:\/\/(?:[^()\s]|\([^()\s]*\))+)\)/g)) {
+    html += escapeHtml(text.slice(last, m.index));
+    html += `<a href="${escapeHtml(m[2])}" style="${linkStyle}">${escapeHtml(m[1])}</a>`;
+    last = m.index + m[0].length;
+  }
+  return html + escapeHtml(text.slice(last));
+}
+
+function whyEntryFor(article) {
+  const whyFile = path.join(__dirname, "..", "data", "why.json");
+  if (!fs.existsSync(whyFile)) return null;
+  const e = JSON.parse(fs.readFileSync(whyFile, "utf-8"))[article.date];
+  return e && e.show && e.title === article.title && e.bullets && e.bullets.length ? e : null;
+}
+
+function panel(inner) {
+  return `<tr><td style="background:${C.cream};border:3px solid ${C.black};padding:18px 16px 16px;">${inner}</td></tr>
+          <tr><td style="height:22px;line-height:22px;font-size:0;">&nbsp;</td></tr>`;
+}
+
+function buildComicEmailHtml(article, recentArticles, featured) {
+  const title = escapeHtml(displayTitle(article.title));
+  const url = escapeHtml(article.url || `https://en.wikipedia.org/wiki/${encodeURIComponent(article.title)}`);
+  const why = whyEntryFor(article);
+  const linkStyle = `color:${C.black};text-decoration:underline;`;
+  const label = (text) => `<div style="font-family:${HEAD_FONT};font-size:17px;letter-spacing:1px;color:${C.red};margin:0 0 4px;">${text}</div>`;
+
+  // Inbox preview text: the first "why" bullet, else the start of the extract.
+  const preview = (why ? why.bullets[0].replace(/\[([^\]]+)\]\([^)]*\)/g, "$1") : (article.extract || "")).slice(0, 140);
+
+  const thumb = article.thumbnail
+    ? `<img src="${escapeHtml(article.thumbnail)}" alt="" width="120" style="width:120px;max-width:120px;height:auto;float:right;margin:0 0 12px 16px;border:0;">`
+    : "";
+
+  const whyBox = why ? `
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:18px 0 4px;">
+              <tr><td style="background:#ffffff;border:3px solid ${C.black};padding:14px 16px 10px;">
+                <div style="font-family:${HEAD_FONT};font-size:21px;letter-spacing:0.5px;color:${C.black};margin:0 0 6px;">Why the popularity?</div>
+                <ul style="margin:0;padding-left:20px;font-family:${BODY_FONT};font-size:15px;line-height:1.55;color:${C.black};">
+                  ${why.bullets.map((b) => `<li style="margin:5px 0;">${markdownLinks(b, linkStyle)}</li>`).join("\n                  ")}
+                </ul>
+              </td></tr>
+            </table>` : "";
+
+  const hero = panel(`
+            ${label(escapeHtml(formatDateLong(article.date)))}
+            <div style="font-family:${HEAD_FONT};font-size:40px;line-height:1.02;letter-spacing:0.5px;margin:0 0 6px;"><a href="${url}" style="color:${C.black};text-decoration:none;">${title}</a></div>
+            ${article.description ? `<div style="font-family:${BODY_FONT};font-size:14px;font-style:italic;color:${C.gray};margin:0 0 14px;">${escapeHtml(article.description)}</div>` : ""}
+            ${thumb}
+            <div style="font-family:${BODY_FONT};font-size:16px;line-height:1.6;color:#222;">${escapeHtml(article.extract || "")}</div>
+            <div style="clear:both;line-height:0;font-size:0;">&nbsp;</div>
+            ${whyBox}
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:18px 0 0;">
+              <tr>
+                <td style="background:${C.red};border:3px solid ${C.black};padding:9px 20px;">
+                  <a href="${url}" style="font-family:${HEAD_FONT};font-size:20px;letter-spacing:1px;color:#ffffff;text-decoration:none;">Read on Wikipedia &rarr;</a>
+                </td>
+                <td style="padding-left:16px;font-family:${HEAD_FONT};font-size:20px;letter-spacing:0.5px;color:${C.black};">${formatNumber(article.views)} <span style="font-family:${BODY_FONT};font-size:13px;color:${C.gray};">views</span></td>
+              </tr>
+            </table>`);
+
+  const obscure = featured ? panel(`
+            ${label("Obscure entry of the day")}
+            <div style="font-family:${HEAD_FONT};font-size:30px;line-height:1.05;letter-spacing:0.5px;margin:0 0 10px;"><a href="${escapeHtml(featured.url)}" style="color:${C.black};text-decoration:none;">${escapeHtml(displayTitle(featured.title))}</a></div>
+            ${featured.thumbnail ? `<img src="${escapeHtml(featured.thumbnail)}" alt="" width="100" style="width:100px;max-width:100px;height:auto;float:right;margin:0 0 10px 14px;border:0;">` : ""}
+            <div style="font-family:${BODY_FONT};font-size:15px;line-height:1.6;color:#222;">${escapeHtml(featured.extract || "")} <a href="${escapeHtml(featured.url)}" style="color:${C.red};font-weight:700;text-decoration:none;">Continue reading &rarr;</a></div>
+            <div style="clear:both;line-height:0;font-size:0;">&nbsp;</div>`) : "";
+
+  return `<!-- buttondown-editor-mode: naked -->
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;mso-hide:all;">${escapeHtml(preview)}${"&zwnj;&nbsp;".repeat(60)}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${C.yellow}" style="background:${C.yellow};">
+  <tr>
+    <td align="center" style="padding:22px 0 28px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;">
+        <tr>
+          <td align="center" style="padding:0 0 22px;">
+            <a href="https://wikipop.sowin.io" style="text-decoration:none;"><img src="${LOGO_URL}" alt="WikiPop!" width="157" height="53" style="display:inline-block;width:157px;height:53px;border:0;"></a>
+            <div style="font-family:${HEAD_FONT};font-size:20px;line-height:1.15;letter-spacing:1px;color:${C.black};margin:10px 0 0;">Yesterday's Most Popular<br>Wikipedia Page</div>
+          </td>
+        </tr>
+        ${hero}
+        ${obscure}
+        <tr>
+          <td align="center" style="font-family:${BODY_FONT};font-size:13px;color:${C.black};padding:2px 0 0;">
+            <a href="https://wikipop.sowin.io" style="color:${C.black};font-weight:700;text-decoration:none;">wikipop.sowin.io</a>
+            <div style="margin:10px 0 0;"><a href="{{ unsubscribe_url }}" style="font-size:11px;color:#777777;text-decoration:underline;">Unsubscribe</a></div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>`;
+}
+
 function sendEmail(subject, body, isTest = false) {
   return new Promise((resolve, reject) => {
     const payload = JSON.stringify({
       subject,
       body,
       status: isTest ? "draft" : "about_to_send",
+      ...(EMAIL_DESIGN === "comic" ? { template: "naked" } : {}),
     });
 
     const options = {
@@ -324,12 +483,22 @@ async function main() {
     ? `WikiPop: ${displayTitle(latest.title)} + ${displayTitle(featured.title)}`
     : `WikiPop: ${displayTitle(latest.title)}`;
 
-  const body = buildEmailHtml(latest, recentArticles, featured);
+  const body = EMAIL_DESIGN === "comic"
+    ? buildComicEmailHtml(latest, recentArticles, featured)
+    : buildEmailHtml(latest, recentArticles, featured);
+
+  if (process.env.EMAIL_PREVIEW_FILE) {
+    fs.writeFileSync(process.env.EMAIL_PREVIEW_FILE, body);
+    console.log(`Wrote preview to ${process.env.EMAIL_PREVIEW_FILE} (nothing sent).`);
+    return;
+  }
 
   const testEmailTo = process.env.TEST_EMAIL_TO;
   if (testEmailTo) {
     console.log(`TEST MODE: Creating draft and sending test to ${testEmailTo}`);
-    const draftResponse = await sendEmail(subject, body, true);
+    // A unique prefix keeps Gmail from threading tests together and hiding repeated parts.
+    const testSubject = `[Test ${Math.floor(Math.random() * 9000) + 1000}] ${subject}`;
+    const draftResponse = await sendEmail(testSubject, body, true);
     if (draftResponse && draftResponse.id) {
       await sendDraftTest(draftResponse.id, testEmailTo);
     } else {

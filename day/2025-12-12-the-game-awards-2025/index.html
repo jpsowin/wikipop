@@ -355,6 +355,21 @@
       }
       .footer-links { justify-content: center; flex-wrap: wrap; }
     }
+    /* "Why was everyone looking at this?" box (scripts/why.mjs) */
+    .why-box { margin-top: 1.2rem; padding: 0.9rem 1.1rem 0.8rem; background: var(--white); border: var(--bw) solid var(--black); text-align: left; }
+    .why-label { font-family: "Bangers", cursive; font-weight: normal; font-size: 1.35rem; letter-spacing: 0.03em; margin: 0 0 0.35rem; color: var(--black); }
+    .why-box ul { padding-left: 1.2rem; margin: 0; }
+    .why-box li { margin: 0.3rem 0; line-height: 1.5; }
+    .why-box li::marker { color: var(--red); }
+    .why-box a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    .why-box a:hover { background: var(--yellow, #ffdf00); }
+    .why-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.35rem; }
+    .why-head .why-label { margin: 0; }
+    .ai-info { position: relative; display: inline-flex; }
+    .ai-info-btn { background: none; border: 0; padding: 2px; color: #777; cursor: pointer; display: inline-flex; border-radius: 50%; }
+    .ai-info-btn:hover, .ai-info-btn:focus-visible { color: var(--black); outline: none; }
+    .ai-info-tip { position: absolute; top: calc(100% + 6px); right: -6px; width: min(260px, 70vw); background: var(--black); color: var(--white); font-size: 0.75rem; line-height: 1.4; padding: 0.5rem 0.65rem; border-radius: 6px; opacity: 0; visibility: hidden; transition: opacity 0.15s; z-index: 5; }
+    .ai-info:hover .ai-info-tip, .ai-info-btn:focus-visible + .ai-info-tip, .ai-info.open .ai-info-tip { opacity: 1; visibility: visible; }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBPZDVN4FC"></script>
@@ -485,6 +500,7 @@
               <p><span class="drop-cap">T</span>he Game Awards 2025 was an award show to honor the best video games of 2025. It was the twelfth show hosted by Geoff Keighley, creator and producer of the Game Awards, and held with a live audience at the Peacock Theater in Los Angeles on December 11, 2025, and live streamed across online platforms globally. It featured presentations from celebrity guests including David Harbour, Dan Houser, Rahul Kohli, and Lenny Kravitz, and a musical performance from Evanescence.</p>
             </div>
             <div style="clear: both;"></div>
+            
           </div>
           <div class="article-footer-strip">
             <a href="https://en.wikipedia.org/wiki/The_Game_Awards_2025" target="_blank" rel="noopener noreferrer" class="wiki-link">Read on Wikipedia &rarr;</a>
@@ -590,7 +606,7 @@
           <a href="https://en.wikipedia.org/wiki/1945_Mongolian_independence_referendum" target="_blank" rel="noopener noreferrer" class="v2-featured-title">1945 Mongolian independence referendum</a>
           <div class="v2-featured-text">An independence referendum was held in the Mongolian People&#039;s Republic on 20 October 1945. It was approved by 100% of voters, with no votes against, according to official statistics. Voter turnout was 98%. <a href="https://en.wikipedia.org/wiki/1945_Mongolian_independence_referendum" target="_blank" rel="noopener noreferrer" class="v2-featured-readmore">Continue reading</a></div>
         </div>
-        
+        <a href="https://en.wikipedia.org/wiki/1945_Mongolian_independence_referendum" target="_blank" rel="noopener noreferrer"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/%D0%91%D2%AF%D1%85_%D0%B0%D1%80%D0%B4_%D1%82%D2%AF%D0%BC%D0%BD%D0%B8%D0%B9_%D1%81%D0%B0%D0%BD%D0%B0%D0%BB_%D1%85%D1%83%D1%80%D0%B0%D0%B0%D0%BB%D1%82.png/500px-%D0%91%D2%AF%D1%85_%D0%B0%D1%80%D0%B4_%D1%82%D2%AF%D0%BC%D0%BD%D0%B8%D0%B9_%D1%81%D0%B0%D0%BD%D0%B0%D0%BB_%D1%85%D1%83%D1%80%D0%B0%D0%B0%D0%BB%D1%82.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" alt="" class="v2-featured-img"></a>
       </div>
 
     <nav class="day-nav" aria-label="Browse adjacent days">

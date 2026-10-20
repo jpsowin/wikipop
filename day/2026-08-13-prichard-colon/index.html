@@ -355,6 +355,21 @@
       }
       .footer-links { justify-content: center; flex-wrap: wrap; }
     }
+    /* "Why was everyone looking at this?" box (scripts/why.mjs) */
+    .why-box { margin-top: 1.2rem; padding: 0.9rem 1.1rem 0.8rem; background: var(--white); border: var(--bw) solid var(--black); text-align: left; }
+    .why-label { font-family: "Bangers", cursive; font-weight: normal; font-size: 1.35rem; letter-spacing: 0.03em; margin: 0 0 0.35rem; color: var(--black); }
+    .why-box ul { padding-left: 1.2rem; margin: 0; }
+    .why-box li { margin: 0.3rem 0; line-height: 1.5; }
+    .why-box li::marker { color: var(--red); }
+    .why-box a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    .why-box a:hover { background: var(--yellow, #ffdf00); }
+    .why-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.35rem; }
+    .why-head .why-label { margin: 0; }
+    .ai-info { position: relative; display: inline-flex; }
+    .ai-info-btn { background: none; border: 0; padding: 2px; color: #777; cursor: pointer; display: inline-flex; border-radius: 50%; }
+    .ai-info-btn:hover, .ai-info-btn:focus-visible { color: var(--black); outline: none; }
+    .ai-info-tip { position: absolute; top: calc(100% + 6px); right: -6px; width: min(260px, 70vw); background: var(--black); color: var(--white); font-size: 0.75rem; line-height: 1.4; padding: 0.5rem 0.65rem; border-radius: 6px; opacity: 0; visibility: hidden; transition: opacity 0.15s; z-index: 5; }
+    .ai-info:hover .ai-info-tip, .ai-info-btn:focus-visible + .ai-info-tip, .ai-info.open .ai-info-tip { opacity: 1; visibility: visible; }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBPZDVN4FC"></script>
@@ -482,6 +497,7 @@
               <p><span class="drop-cap">P</span>richard Colón Meléndez was a Puerto Rican professional boxer, honorary WBC World Champion, and gold medal winner at the 2010 Pan American Youth Championship in the 64 kg category. After a 2015 match with Terrel Williams, in which he was repeatedly struck in the back of the head, Colón collapsed in the dressing room and remained in a coma for 221 days due to a brain hemorrhage. He was then in a persistent vegetative state and was unable to speak but was eventually released from the hospital, receiving physiotherapy and using a computer for speech until his death.</p>
             </div>
             <div style="clear: both;"></div>
+            
           </div>
           <div class="article-footer-strip">
             <a href="https://en.wikipedia.org/wiki/Prichard_Col%C3%B3n" target="_blank" rel="noopener noreferrer" class="wiki-link">Read on Wikipedia &rarr;</a>
@@ -588,12 +604,12 @@
           <div class="v2-featured-text">
 In the United States, there have been several controversies involving the misunderstanding of the word niggardly, an adjective meaning &quot;stingy&quot; or &quot;miserly&quot;, because of its phonetic similarity to the term nigger, an ethnic slur used against black people. Although the two words are etymologically unrelated, niggard is nonetheless often replaced with a synonym. <a href="https://en.wikipedia.org/wiki/Controversies_about_the_word_niggardly" target="_blank" rel="noopener noreferrer" class="v2-featured-readmore">Continue reading</a></div>
         </div>
-        
+        <a href="https://en.wikipedia.org/wiki/Controversies_about_the_word_niggardly" target="_blank" rel="noopener noreferrer"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Niggardly.jpg/500px-Niggardly.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" alt="" class="v2-featured-img"></a>
       </div>
 
     <nav class="day-nav" aria-label="Browse adjacent days">
       <a href="../2026-08-12-joshua-kushner/" class="day-nav-prev" rel="prev">← Aug 12: Joshua Kushner</a>
-      <a href="../2026-08-15-jason-arday/" class="day-nav-next" rel="next">Aug 15: Jason Arday →</a>
+      <a href="../2026-08-14-2026-clacton-by-election/" class="day-nav-next" rel="next">Aug 14: 2026 Clacton by-election →</a>
     </nav>
 
     <a href="../../archive.html" class="archive-back">← Browse all days</a>

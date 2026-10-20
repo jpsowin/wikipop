@@ -355,6 +355,21 @@
       }
       .footer-links { justify-content: center; flex-wrap: wrap; }
     }
+    /* "Why was everyone looking at this?" box (scripts/why.mjs) */
+    .why-box { margin-top: 1.2rem; padding: 0.9rem 1.1rem 0.8rem; background: var(--white); border: var(--bw) solid var(--black); text-align: left; }
+    .why-label { font-family: "Bangers", cursive; font-weight: normal; font-size: 1.35rem; letter-spacing: 0.03em; margin: 0 0 0.35rem; color: var(--black); }
+    .why-box ul { padding-left: 1.2rem; margin: 0; }
+    .why-box li { margin: 0.3rem 0; line-height: 1.5; }
+    .why-box li::marker { color: var(--red); }
+    .why-box a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    .why-box a:hover { background: var(--yellow, #ffdf00); }
+    .why-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.35rem; }
+    .why-head .why-label { margin: 0; }
+    .ai-info { position: relative; display: inline-flex; }
+    .ai-info-btn { background: none; border: 0; padding: 2px; color: #777; cursor: pointer; display: inline-flex; border-radius: 50%; }
+    .ai-info-btn:hover, .ai-info-btn:focus-visible { color: var(--black); outline: none; }
+    .ai-info-tip { position: absolute; top: calc(100% + 6px); right: -6px; width: min(260px, 70vw); background: var(--black); color: var(--white); font-size: 0.75rem; line-height: 1.4; padding: 0.5rem 0.65rem; border-radius: 6px; opacity: 0; visibility: hidden; transition: opacity 0.15s; z-index: 5; }
+    .ai-info:hover .ai-info-tip, .ai-info-btn:focus-visible + .ai-info-tip, .ai-info.open .ai-info-tip { opacity: 1; visibility: visible; }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBPZDVN4FC"></script>
@@ -485,6 +500,29 @@
               <p><span class="drop-cap">E</span>lizabeth Anne Holmes is an American businesswoman convicted of fraud in connection with her health technology company Theranos. Holmes founded Theranos in 2003, and its valuation soared in the early 2010s after it claimed to have revolutionized blood testing by developing methods that needed only very small volumes of blood, such as from a fingerprick. In 2015, Forbes named Holmes the youngest and wealthiest self-made female billionaire in the United States on the basis of a $9 billion valuation of Theranos. In the following year, as accusations of fraud about Theranos&#039;s claims began to surface, Forbes revised its estimate of Holmes&#039;s net worth to zero, and Fortune named her in its feature article on &quot;The World&#039;s 19 Most Disappointing Leaders&quot;.</p>
             </div>
             <div style="clear: both;"></div>
+            
+            <div class="why-box">
+              <div class="why-head">
+                <h3 class="why-label">Why the popularity?</h3>
+                <span class="ai-info">
+                  <button type="button" class="ai-info-btn" aria-label="About this summary" aria-expanded="false">
+                    <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.2 6.1a1.9 1.9 0 0 1 3.7.5c0 1.3-1.9 1.6-1.9 2.9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="8" cy="11.6" r="0.9" fill="currentColor"/></svg>
+                  </button>
+                  <span class="ai-info-tip" role="tooltip">This summary is AI-generated and may contain errors. It's researched by Claude Sonnet 5.5 using web search and Wikipedia, then reviewed and rewritten by a separate Claude Sonnet 5.5 editor.</span>
+                </span>
+              </div>
+              <ul><li><a href="https://en.wikipedia.org/wiki/Nathan_Fielder" target="_blank" rel="noopener noreferrer">Nathan Fielder</a> and <a href="https://en.wikipedia.org/wiki/Lance_Oppenheim" target="_blank" rel="noopener noreferrer">Lance Oppenheim</a>&#039;s documentary <a href="https://en.wikipedia.org/wiki/You_Can_See_Everything" target="_blank" rel="noopener noreferrer">You Can See Everything</a> about Elizabeth Holmes hit theaters Friday, and people are showing up.</li><li>The setup: weeks before heading to prison, the <a href="https://en.wikipedia.org/wiki/Theranos" target="_blank" rel="noopener noreferrer">Theranos</a> founder invites a skeptical film crew to follow her every move.</li><li><a href="https://en.wikipedia.org/wiki/A24" target="_blank" rel="noopener noreferrer">A24</a> <a href="https://variety.com/2026/film/reviews/nathan-fielder-surprise-film-telluride-elizabeth-holmes-1236853513/" target="_blank" rel="noopener noreferrer">billed it as a mystery film</a> at the <a href="https://en.wikipedia.org/wiki/Telluride_Film_Festival" target="_blank" rel="noopener noreferrer">Telluride Film Festival</a>, then a <a href="https://deadline.com/2026/10/you-can-see-everything-box-office-elizabeth-holmes-1237167129/" target="_blank" rel="noopener noreferrer">meme craze</a> got everyone curious.</li><li>Holmes <a href="https://variety.com/2026/film/news/nathan-fielder-elizabeth-holmes-phone-call-prison-you-can-see-everything-1236916334/" target="_blank" rel="noopener noreferrer">called Fielder from prison right before release</a>, reportedly telling him again and again, &quot;I trust you.&quot;</li></ul>
+            </div>
+            <script>
+              (function () {
+                var info = document.currentScript.previousElementSibling.querySelector(".ai-info");
+                var btn = info.querySelector("button");
+                function set(open) { info.classList.toggle("open", open); btn.setAttribute("aria-expanded", String(open)); }
+                btn.addEventListener("click", function (e) { e.stopPropagation(); set(!info.classList.contains("open")); });
+                document.addEventListener("click", function () { set(false); });
+                document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
+              })();
+            </script>
           </div>
           <div class="article-footer-strip">
             <a href="https://en.wikipedia.org/wiki/Elizabeth_Holmes" target="_blank" rel="noopener noreferrer" class="wiki-link">Read on Wikipedia &rarr;</a>
@@ -596,7 +634,7 @@ This game also features various references to 2channel Shift_JIS art, with the m
 
     <nav class="day-nav" aria-label="Browse adjacent days">
       <a href="../2026-10-17-ying/" class="day-nav-prev" rel="prev">← Oct 17: Ying</a>
-      <span class="day-nav-next day-nav-disabled"></span>
+      <a href="../2026-10-19-you-can-see-everything/" class="day-nav-next" rel="next">Oct 19: You Can See Everything →</a>
     </nav>
 
     <a href="../../archive.html" class="archive-back">← Browse all days</a>

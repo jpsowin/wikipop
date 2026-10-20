@@ -355,6 +355,21 @@
       }
       .footer-links { justify-content: center; flex-wrap: wrap; }
     }
+    /* "Why was everyone looking at this?" box (scripts/why.mjs) */
+    .why-box { margin-top: 1.2rem; padding: 0.9rem 1.1rem 0.8rem; background: var(--white); border: var(--bw) solid var(--black); text-align: left; }
+    .why-label { font-family: "Bangers", cursive; font-weight: normal; font-size: 1.35rem; letter-spacing: 0.03em; margin: 0 0 0.35rem; color: var(--black); }
+    .why-box ul { padding-left: 1.2rem; margin: 0; }
+    .why-box li { margin: 0.3rem 0; line-height: 1.5; }
+    .why-box li::marker { color: var(--red); }
+    .why-box a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    .why-box a:hover { background: var(--yellow, #ffdf00); }
+    .why-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.35rem; }
+    .why-head .why-label { margin: 0; }
+    .ai-info { position: relative; display: inline-flex; }
+    .ai-info-btn { background: none; border: 0; padding: 2px; color: #777; cursor: pointer; display: inline-flex; border-radius: 50%; }
+    .ai-info-btn:hover, .ai-info-btn:focus-visible { color: var(--black); outline: none; }
+    .ai-info-tip { position: absolute; top: calc(100% + 6px); right: -6px; width: min(260px, 70vw); background: var(--black); color: var(--white); font-size: 0.75rem; line-height: 1.4; padding: 0.5rem 0.65rem; border-radius: 6px; opacity: 0; visibility: hidden; transition: opacity 0.15s; z-index: 5; }
+    .ai-info:hover .ai-info-tip, .ai-info-btn:focus-visible + .ai-info-tip, .ai-info.open .ai-info-tip { opacity: 1; visibility: visible; }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBPZDVN4FC"></script>
@@ -485,6 +500,7 @@
               <p><span class="drop-cap">F</span>rank Caprio was an American judge and politician who served as the chief judge of the municipal court of Providence, Rhode Island, and chairman of the Rhode Island Board of Governors for Higher Education. His judicial work was televised on the program Caught in Providence. He also made appearances in the series Parking Wars, adjudicating several cases of traffic violations. The Caught in Providence YouTube channel has 2.92 million subscribers. In 2017, his videos in the courtroom went viral, with more than 15 million views. By 2022, views of Caught in Providence neared 500 million. He became well known for his empathy and light humor in court. A Democrat, Caprio served on the Providence City Council in the 1960s, and unsuccessfully ran for both Lieutenant Governor and Attorney General.</p>
             </div>
             <div style="clear: both;"></div>
+            
           </div>
           <div class="article-footer-strip">
             <a href="https://en.wikipedia.org/wiki/Frank_Caprio" target="_blank" rel="noopener noreferrer" class="wiki-link">Read on Wikipedia &rarr;</a>

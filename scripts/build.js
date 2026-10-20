@@ -42,6 +42,7 @@ const DAY_DIR = path.join(__dirname, "..", "day");
 const DAY_TEMPLATE_FILE = path.join(__dirname, "..", "template-day.html");
 const SITEMAP_FILE = path.join(__dirname, "..", "sitemap.xml");
 const LLMS_FULL_FILE = path.join(__dirname, "..", "llms-full.txt");
+const WHY_FILE = path.join(__dirname, "..", "data", "why.json");
 const LOOKBACK_DAYS = 30;
 const RECENT_LIMIT = 10; // how many to show on homepage
 const TOP_N = 10; // how many top articles to capture per day for per-day pages
@@ -93,6 +94,28 @@ async function fetchArticleSummary(title) {
   return httpGet(url);
 }
 
+// Fallback image for articles with no lead image: the first gallery image
+// that appears further down the article (e.g. an infobox-less page with a
+// photo in the body). Returns a thumbnail URL or null.
+async function fetchFirstArticleImage(title) {
+  const url = `https://en.wikipedia.org/api/rest_v1/page/media-list/${encodeURIComponent(title)}`;
+  const data = await httpGet(url);
+  const item = (data.items || []).find((i) => i.type === "image" && i.showInGallery && i.srcset && i.srcset.length);
+  if (!item) return null;
+  const src = item.srcset[0].src;
+  return src.startsWith("//") ? `https:${src}` : src;
+}
+
+// Summary thumbnail, falling back to the first image in the article body.
+async function thumbnailFor(title, summary) {
+  if (summary && summary.thumbnail) return summary.thumbnail.source;
+  try {
+    return await fetchFirstArticleImage(title);
+  } catch (e) {
+    return null;
+  }
+}
+
 function loadArticles() {
   const raw = fs.readFileSync(DATA_FILE, "utf-8");
   return JSON.parse(raw);
@@ -102,14 +125,21 @@ function saveArticles(articles) {
   fs.writeFileSync(DATA_FILE, JSON.stringify(articles, null, 2) + "\n");
 }
 
+// Titles picked within `days` of the reference date, on either side. Looking
+// forward matters when backfilling an old gap: we shouldn't dedupe against
+// picks from months later, but we also shouldn't repeat a neighbouring day.
 function getRecentTitles(articles, days, referenceDate) {
-  const cutoff = new Date(referenceDate || new Date());
+  const ref = new Date(referenceDate || new Date());
+  const cutoff = new Date(ref);
   cutoff.setUTCDate(cutoff.getUTCDate() - days);
+  const upper = new Date(ref);
+  upper.setUTCDate(upper.getUTCDate() + days);
   const cutoffStr = cutoff.toISOString().slice(0, 10);
+  const upperStr = upper.toISOString().slice(0, 10);
 
   return new Set(
     articles
-      .filter((a) => a.date >= cutoffStr)
+      .filter((a) => a.date >= cutoffStr && a.date <= upperStr)
       .map((a) => a.title)
   );
 }
@@ -178,6 +208,13 @@ function dayAbsoluteUrl(article) {
   return `${BASE_URL}/${dayUrlPath(article)}`;
 }
 
+// Category column: Wikipedia's short description. Lists usually have none,
+// so label them "List" instead of leaving the cell blank.
+function categoryFor(a) {
+  if (a.description) return a.description;
+  return /^Lists?_of_/i.test(a.title) ? "List" : "";
+}
+
 // Homepage recent-archive row: keep title linking to Wikipedia (preserves
 // landing-page click behavior), append a small ".day" link to the on-site
 // per-day page so crawlers can find them from the homepage.
@@ -187,7 +224,7 @@ function buildArchiveRow(a) {
             <tr>
               <td class="archive-date">${formatDateShort(a.date)}</td>
               <td class="archive-title"><a href="${escapeHtml(a.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(a.title.replace(/_/g, " "))}</a> <a href="${dayHref}" class="archive-day-link" aria-label="View top 10 for ${formatDate(a.date)}">·day</a></td>
-              <td class="archive-category">${a.description ? escapeHtml(a.description) : ""}</td>
+              <td class="archive-category">${escapeHtml(categoryFor(a))}</td>
               <td class="archive-views">${formatNumber(a.views)}</td>
             </tr>`;
 }
@@ -201,7 +238,7 @@ function buildFullArchiveRow(a) {
             <tr>
               <td class="archive-date">${formatDateShort(a.date)}</td>
               <td class="archive-title"><a href="${dayHref}">${escapeHtml(a.title.replace(/_/g, " "))}</a><a href="${escapeHtml(a.url)}" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
-              <td class="archive-category">${a.description ? escapeHtml(a.description) : ""}</td>
+              <td class="archive-category">${escapeHtml(categoryFor(a))}</td>
               <td class="archive-views">${formatNumber(a.views)}</td>
             </tr>`;
 }
@@ -228,10 +265,13 @@ async function getFeaturedEntry() {
       const wikiTitle = entry.url.replace("https://en.wikipedia.org/wiki/", "");
       const summary = await fetchArticleSummary(decodeURIComponent(wikiTitle));
       entry.extract = summary.extract || "";
-      entry.thumbnail = summary.thumbnail ? summary.thumbnail.source : null;
+      entry.thumbnail = await thumbnailFor(decodeURIComponent(wikiTitle), summary);
     } catch (e) {
       entry.extract = "";
     }
+  } else if (!entry.thumbnail && !entry.imageChecked) {
+    const wikiTitle = decodeURIComponent(entry.url.replace("https://en.wikipedia.org/wiki/", ""));
+    entry.thumbnail = await thumbnailFor(wikiTitle, null);
   }
   return entry;
 }
@@ -327,6 +367,55 @@ function buildFeaturedPage() {
 </html>`;
 }
 
+// "Why was everyone looking at this?" blurbs written by scripts/why.mjs.
+function loadWhy() {
+  return fs.existsSync(WHY_FILE) ? JSON.parse(fs.readFileSync(WHY_FILE, "utf-8")) : {};
+}
+
+function whyFor(why, article) {
+  const e = why[article.date];
+  return e && e.show && e.title === article.title && e.bullets && e.bullets.length ? e : null;
+}
+
+// Bullets carry Markdown links: [text](https://...). Everything else is escaped.
+function renderWhyBullet(text) {
+  let html = "";
+  let last = 0;
+  for (const m of text.matchAll(/\[([^\]]+)\]\((https:\/\/(?:[^()\s]|\([^()\s]*\))+)\)/g)) {
+    html += escapeHtml(text.slice(last, m.index));
+    html += `<a href="${escapeHtml(m[2])}" target="_blank" rel="noopener noreferrer">${escapeHtml(m[1])}</a>`;
+    last = m.index + m[0].length;
+  }
+  return html + escapeHtml(text.slice(last));
+}
+
+function buildWhyBox(entry) {
+  if (!entry) return "";
+  return `
+            <div class="why-box">
+              <div class="why-head">
+                <h3 class="why-label">Why the popularity?</h3>
+                <span class="ai-info">
+                  <button type="button" class="ai-info-btn" aria-label="About this summary" aria-expanded="false">
+                    <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.2 6.1a1.9 1.9 0 0 1 3.7.5c0 1.3-1.9 1.6-1.9 2.9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="8" cy="11.6" r="0.9" fill="currentColor"/></svg>
+                  </button>
+                  <span class="ai-info-tip" role="tooltip">This summary is AI-generated and may contain errors. It's researched by Claude Sonnet 5.5 using web search and Wikipedia, then reviewed and rewritten by a separate Claude Sonnet 5.5 editor.</span>
+                </span>
+              </div>
+              <ul>${entry.bullets.map((b) => `<li>${renderWhyBullet(b)}</li>`).join("")}</ul>
+            </div>
+            <script>
+              (function () {
+                var info = document.currentScript.previousElementSibling.querySelector(".ai-info");
+                var btn = info.querySelector("button");
+                function set(open) { info.classList.toggle("open", open); btn.setAttribute("aria-expanded", String(open)); }
+                btn.addEventListener("click", function (e) { e.stopPropagation(); set(!info.classList.contains("open")); });
+                document.addEventListener("click", function () { set(false); });
+                document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
+              })();
+            </script>`;
+}
+
 async function buildHtml(articles) {
   const today = articles.length > 0 ? articles[articles.length - 1] : null;
   const archive = [...articles].reverse().slice(1);
@@ -380,6 +469,7 @@ async function buildHtml(articles) {
               <p><span class="drop-cap">${dropCap}</span>${escapeHtml(restOfExtract)}</p>
             </div>
             <div style="clear: both;"></div>
+            ${buildWhyBox(whyFor(loadWhy(), today))}
           </div>
           <div class="article-footer-strip">
             <a href="${escapeHtml(today.url)}" target="_blank" rel="noopener noreferrer" class="wiki-link">Read on Wikipedia &rarr;</a>
@@ -498,7 +588,7 @@ function buildArchivePage(articles) {
 // Per-day page
 // =====================================================================
 
-function buildDayPage(article, prevArticle, nextArticle, obscureEntry) {
+function buildDayPage(article, prevArticle, nextArticle, obscureEntry, whyEntry) {
   const template = fs.readFileSync(DAY_TEMPLATE_FILE, "utf-8");
   const displayTitle = article.title.replace(/_/g, " ");
   const formattedDate = formatDate(article.date);
@@ -534,6 +624,7 @@ function buildDayPage(article, prevArticle, nextArticle, obscureEntry) {
               <p><span class="drop-cap">${escapeHtml(dropCap)}</span>${escapeHtml(restOfExtract)}</p>
             </div>
             <div style="clear: both;"></div>
+            ${buildWhyBox(whyEntry)}
           </div>
           <div class="article-footer-strip">
             <a href="${escapeHtml(article.url)}" target="_blank" rel="noopener noreferrer" class="wiki-link">Read on Wikipedia &rarr;</a>
@@ -684,7 +775,10 @@ async function ensureObscureSummaries(articles) {
   const offset = ((anchorIndex - epochDays(anchorDate)) % N + N) % N;
   for (const a of articles) {
     const idx = ((epochDays(a.date) + offset) % N + N) % N;
-    if (!entries[idx].extract) neededIdx.add(idx);
+    const e = entries[idx];
+    // Also revisit cached entries that have no image yet (older cache rows
+    // predate the first-image fallback).
+    if (!e.extract || (!e.thumbnail && !e.imageChecked)) neededIdx.add(idx);
   }
   if (neededIdx.size === 0) return;
 
@@ -693,6 +787,14 @@ async function ensureObscureSummaries(articles) {
   for (const idx of neededIdx) {
     const e = entries[idx];
     const wikiTitle = decodeURIComponent(e.url.replace("https://en.wikipedia.org/wiki/", ""));
+    if (e.extract && !e.thumbnail) {
+      // Summary already cached; only look for a fallback image.
+      e.thumbnail = await thumbnailFor(wikiTitle, null);
+      e.imageChecked = true;
+      processed++;
+      await new Promise((r) => setTimeout(r, 300));
+      continue;
+    }
     let summary = null;
     let lastErr = null;
     // Retry up to 4 times with backoff. Long backoff on 429 (rate limit).
@@ -709,7 +811,8 @@ async function ensureObscureSummaries(articles) {
     if (summary) {
       e.extract = summary.extract || "";
       e.description = summary.description || "";
-      e.thumbnail = summary.thumbnail ? summary.thumbnail.source : null;
+      e.thumbnail = await thumbnailFor(wikiTitle, summary);
+      e.imageChecked = true;
       fetched++;
     } else {
       // Don't write `extract: ""` so future runs retry
@@ -747,6 +850,8 @@ function buildDayPages(articles) {
     if (state.lastAdvanced) anchorDate = state.lastAdvanced;
   }
 
+  const why = loadWhy();
+
   // Sort ascending so prev/next nav is by chronological order
   const sorted = [...articles].sort((a, b) => a.date.localeCompare(b.date));
   let written = 0;
@@ -757,7 +862,7 @@ function buildDayPages(articles) {
     const obscure = getObscureForDate(a.date, anchorDate, anchorIndex, featuredEntries);
     const dir = path.join(DAY_DIR, dayDirName(a));
     const file = path.join(dir, "index.html");
-    const html = buildDayPage(a, prev, next, obscure);
+    const html = buildDayPage(a, prev, next, obscure, whyFor(why, a));
     // Only write if changed (keeps git diffs small)
     if (fs.existsSync(file)) {
       const existing = fs.readFileSync(file, "utf-8");
@@ -1042,8 +1147,19 @@ async function main() {
     ? parseInt(process.argv[process.argv.indexOf("--backfill") + 1] || "30", 10)
     : 1;
 
+  // Fill specific missed dates, e.g. --dates 2026-08-14,2025-10-05.
+  // Implies --no-daily so the featured index isn't advanced.
+  const datesArg = process.argv.includes("--dates")
+    ? (process.argv[process.argv.indexOf("--dates") + 1] || "").split(",").filter(Boolean)
+    : [];
+  for (const d of datesArg) {
+    console.log(`Fetching ${d}...`);
+    if (await processDate(new Date(d + "T00:00:00Z"), articles)) changed = true;
+    await new Promise((r) => setTimeout(r, 500));
+  }
+
   // Skip the daily fetch in pure --rebuild-top10 mode if no other flags given
-  const skipDaily = process.argv.includes("--no-daily");
+  const skipDaily = process.argv.includes("--no-daily") || datesArg.length > 0;
 
   if (!skipDaily) {
     for (let i = backfillDays; i >= 1; i--) {

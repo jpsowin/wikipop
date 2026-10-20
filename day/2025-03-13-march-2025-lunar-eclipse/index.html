@@ -355,6 +355,21 @@
       }
       .footer-links { justify-content: center; flex-wrap: wrap; }
     }
+    /* "Why was everyone looking at this?" box (scripts/why.mjs) */
+    .why-box { margin-top: 1.2rem; padding: 0.9rem 1.1rem 0.8rem; background: var(--white); border: var(--bw) solid var(--black); text-align: left; }
+    .why-label { font-family: "Bangers", cursive; font-weight: normal; font-size: 1.35rem; letter-spacing: 0.03em; margin: 0 0 0.35rem; color: var(--black); }
+    .why-box ul { padding-left: 1.2rem; margin: 0; }
+    .why-box li { margin: 0.3rem 0; line-height: 1.5; }
+    .why-box li::marker { color: var(--red); }
+    .why-box a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    .why-box a:hover { background: var(--yellow, #ffdf00); }
+    .why-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.35rem; }
+    .why-head .why-label { margin: 0; }
+    .ai-info { position: relative; display: inline-flex; }
+    .ai-info-btn { background: none; border: 0; padding: 2px; color: #777; cursor: pointer; display: inline-flex; border-radius: 50%; }
+    .ai-info-btn:hover, .ai-info-btn:focus-visible { color: var(--black); outline: none; }
+    .ai-info-tip { position: absolute; top: calc(100% + 6px); right: -6px; width: min(260px, 70vw); background: var(--black); color: var(--white); font-size: 0.75rem; line-height: 1.4; padding: 0.5rem 0.65rem; border-radius: 6px; opacity: 0; visibility: hidden; transition: opacity 0.15s; z-index: 5; }
+    .ai-info:hover .ai-info-tip, .ai-info-btn:focus-visible + .ai-info-tip, .ai-info.open .ai-info-tip { opacity: 1; visibility: visible; }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBPZDVN4FC"></script>
@@ -485,6 +500,7 @@
               <p><span class="drop-cap">A</span> total lunar eclipse occurred at the Moon&#039;s descending node of orbit on Friday, March 14, 2025, with an umbral magnitude of 1.1804. A lunar eclipse occurs when the Moon moves into the Earth&#039;s shadow, causing the Moon to be darkened. A total lunar eclipse occurs when the Moon&#039;s near side entirely passes into the Earth&#039;s umbral shadow. Unlike a total solar eclipse, which can only be viewed from a relatively small area of the world, a lunar eclipse may be viewed from anywhere on the night side of Earth. A total lunar eclipse can last up to nearly two hours, while a total solar eclipse lasts only a few minutes at any given place, because the Moon&#039;s shadow is smaller. Occurring about 3.3 days before apogee, the Moon&#039;s apparent diameter was smaller.</p>
             </div>
             <div style="clear: both;"></div>
+            
           </div>
           <div class="article-footer-strip">
             <a href="https://en.wikipedia.org/wiki/March_2025_lunar_eclipse" target="_blank" rel="noopener noreferrer" class="wiki-link">Read on Wikipedia &rarr;</a>

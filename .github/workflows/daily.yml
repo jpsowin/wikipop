@@ -24,12 +24,34 @@ jobs:
         with:
           node-version: '24'
 
+      - name: Install dependencies
+        run: npm ci
+
       - name: Fetch and build
         run: |
-          node scripts/build.js --backfill 3
+          # Look back two weeks so multi-day Wikimedia outages still get filled
+          # in once the data shows up (days we already have are skipped instantly).
+          node scripts/build.js --backfill 14
           node scripts/build-explore.js
 
+      - name: Explain the day's pick
+        # Writes the "Why was everyone looking at this?" blurb, then rebuilds the
+        # pages to include it. Never blocks the rest of the job: if the key isn't
+        # set or the API is unavailable, the site just goes out without a blurb.
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -n "$ANTHROPIC_API_KEY" ]; then
+            node scripts/why.mjs --latest 3
+            node scripts/build.js --no-daily
+          fi
+
       - name: Send daily email
+        id: email
+        # A failed email shouldn't stop the site from updating; the last step
+        # still marks the run as failed so it gets noticed.
+        continue-on-error: true
         env:
           BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
         run: node scripts/send-email.js
@@ -38,7 +60,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/articles.json data/featured-index.json index.html archive.html explore.html featured.html changelog.html feed.xml sitemap.xml llms-full.txt day/
+          git add data/articles.json data/featured-index.json data/featured-entries.json index.html archive.html explore.html featured.html changelog.html feed.xml sitemap.xml llms-full.txt day/
           git add data/last-email.txt || true
+          git add data/why.json || true
           git diff --staged --quiet || git commit -m "Daily update: $(date -u +%Y-%m-%d)"
           git push
+
+      - name: Flag a failed email
+        if: steps.email.outcome == 'failure'
+        run: |
+          echo "::error::The daily email failed to send. The site still updated; check the 'Send daily email' step."
+          exit 1

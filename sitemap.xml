@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://wikipop.sowin.io/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://wikipop.sowin.io/archive.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://wikipop.sowin.io/explore.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://wikipop.sowin.io/changelog.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -321,6 +321,12 @@
   <url>
     <loc>https://wikipop.sowin.io/day/2025-02-22-kash-patel/</loc>
     <lastmod>2025-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wikipop.sowin.io/day/2025-02-23-pope-francis/</loc>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -955,6 +961,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://wikipop.sowin.io/day/2025-06-10-mata-hari/</loc>
+    <lastmod>2025-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://wikipop.sowin.io/day/2025-06-11-brian-wilson/</loc>
     <lastmod>2025-06-11</lastmod>
     <changefreq>monthly</changefreq>
@@ -1297,6 +1309,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://wikipop.sowin.io/day/2025-08-07-thailand/</loc>
+    <lastmod>2025-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://wikipop.sowin.io/day/2025-08-08-weapons-2025-film/</loc>
     <lastmod>2025-08-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -1501,6 +1519,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://wikipop.sowin.io/day/2025-09-11-charlie-kirk/</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://wikipop.sowin.io/day/2025-09-12-killing-of-iryna-zarutska/</loc>
     <lastmod>2025-09-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -1573,8 +1597,20 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://wikipop.sowin.io/day/2025-09-24-claudia-cardinale/</loc>
+    <lastmod>2025-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://wikipop.sowin.io/day/2025-09-25-chatgpt/</loc>
     <lastmod>2025-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wikipop.sowin.io/day/2025-09-26-assata-shakur/</loc>
+    <lastmod>2025-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1623,6 +1659,12 @@
   <url>
     <loc>https://wikipop.sowin.io/day/2025-10-04-kantara-chapter-1/</loc>
     <lastmod>2025-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wikipop.sowin.io/day/2025-10-05-lamine-yamal/</loc>
+    <lastmod>2025-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3499,6 +3541,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://wikipop.sowin.io/day/2026-08-14-2026-clacton-by-election/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://wikipop.sowin.io/day/2026-08-15-jason-arday/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -3885,6 +3933,12 @@
   <url>
     <loc>https://wikipop.sowin.io/day/2026-10-18-elizabeth-holmes/</loc>
     <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wikipop.sowin.io/day/2026-10-19-you-can-see-everything/</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

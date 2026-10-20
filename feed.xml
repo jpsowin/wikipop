@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Mon, 19 Oct 2026 14:50:58 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 23:44:20 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>You Can See Everything</title>
+      <link>https://en.wikipedia.org/wiki/You_Can_See_Everything</link>
+      <description>You Can See Everything is a 2026 American documentary film directed by Nathan Fielder and Lance Oppenheim. It follows Elizabeth Holmes, the founder of the defunct health technology company Theranos, and her partner Billy Evans, who invited a film crew to document them beginning in the weeks before Holmes began serving a United States federal prison sentence for defrauding investors.</description>
+      <pubDate>Mon, 19 Oct 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/You_Can_See_Everything#2026-10-19</guid>
+      <category>2026 documentary film</category>
+    </item>
     <item>
       <title>Elizabeth Holmes</title>
       <link>https://en.wikipedia.org/wiki/Elizabeth_Holmes</link>
@@ -246,14 +254,6 @@ This is a list of equations, indicating each Wikipedia page under appropriate ba
       <pubDate>Sun, 20 Sep 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Monster%3A_The_Lizzie_Borden_Story#2026-09-20</guid>
       <category>Season of television series</category>
-    </item>
-    <item>
-      <title>Resident Evil (2026 film)</title>
-      <link>https://en.wikipedia.org/wiki/Resident_Evil_(2026_film)</link>
-      <description>Resident Evil is a 2026 horror film directed by Zach Cregger and written by Cregger and Shay Hatten, based on the Resident Evil video game franchise by Capcom. It follows Bryan, a medical courier who must fight through an outbreak of infected monsters in Raccoon City. Zach Cherry, Kali Reis, and Paul Walter Hauser feature in supporting roles.</description>
-      <pubDate>Sat, 19 Sep 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Resident_Evil_(2026_film)#2026-09-19</guid>
-      <category>Film by Zach Cregger</category>
     </item>
   </channel>
 </rss>

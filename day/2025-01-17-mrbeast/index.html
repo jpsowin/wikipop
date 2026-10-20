@@ -355,6 +355,21 @@
       }
       .footer-links { justify-content: center; flex-wrap: wrap; }
     }
+    /* "Why was everyone looking at this?" box (scripts/why.mjs) */
+    .why-box { margin-top: 1.2rem; padding: 0.9rem 1.1rem 0.8rem; background: var(--white); border: var(--bw) solid var(--black); text-align: left; }
+    .why-label { font-family: "Bangers", cursive; font-weight: normal; font-size: 1.35rem; letter-spacing: 0.03em; margin: 0 0 0.35rem; color: var(--black); }
+    .why-box ul { padding-left: 1.2rem; margin: 0; }
+    .why-box li { margin: 0.3rem 0; line-height: 1.5; }
+    .why-box li::marker { color: var(--red); }
+    .why-box a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    .why-box a:hover { background: var(--yellow, #ffdf00); }
+    .why-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.35rem; }
+    .why-head .why-label { margin: 0; }
+    .ai-info { position: relative; display: inline-flex; }
+    .ai-info-btn { background: none; border: 0; padding: 2px; color: #777; cursor: pointer; display: inline-flex; border-radius: 50%; }
+    .ai-info-btn:hover, .ai-info-btn:focus-visible { color: var(--black); outline: none; }
+    .ai-info-tip { position: absolute; top: calc(100% + 6px); right: -6px; width: min(260px, 70vw); background: var(--black); color: var(--white); font-size: 0.75rem; line-height: 1.4; padding: 0.5rem 0.65rem; border-radius: 6px; opacity: 0; visibility: hidden; transition: opacity 0.15s; z-index: 5; }
+    .ai-info:hover .ai-info-tip, .ai-info-btn:focus-visible + .ai-info-tip, .ai-info.open .ai-info-tip { opacity: 1; visibility: visible; }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBPZDVN4FC"></script>
@@ -485,6 +500,7 @@
               <p><span class="drop-cap">J</span>ames Stephen &quot;Jimmy&quot; Donaldson, better known as MrBeast, is an American YouTuber, media personality, philanthropist, and businessman. The founder of Beast Industries, a conglomerate that holds various media channels, MrBeast Burger, Feastables, Lunchly and more, he produces high-paced YouTube videos built around elaborate challenges and grandiose philanthropic efforts, that are noted for their high production values. With more than 475 million subscribers, his main channel is the most subscribed on YouTube. He also is the third most followed account on TikTok.</p>
             </div>
             <div style="clear: both;"></div>
+            
           </div>
           <div class="article-footer-strip">
             <a href="https://en.wikipedia.org/wiki/MrBeast" target="_blank" rel="noopener noreferrer" class="wiki-link">Read on Wikipedia &rarr;</a>
@@ -591,7 +607,7 @@
           <div class="v2-featured-text">
 The Principality of Sealand, an unrecognized micronation situated on HM Fort Roughs in the North Sea, has national sport teams that compete in association football and American football. Additionally, the micronation has been the site of a skateboarding event, a half-marathon, and a long-distance swimming event. <a href="https://en.wikipedia.org/wiki/Sport_in_the_Principality_of_Sealand" target="_blank" rel="noopener noreferrer" class="v2-featured-readmore">Continue reading</a></div>
         </div>
-        
+        <a href="https://en.wikipedia.org/wiki/Sport_in_the_Principality_of_Sealand" target="_blank" rel="noopener noreferrer"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Sealand_football.jpg/500px-Sealand_football.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" alt="" class="v2-featured-img"></a>
       </div>
 
     <nav class="day-nav" aria-label="Browse adjacent days">

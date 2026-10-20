@@ -355,6 +355,21 @@
       }
       .footer-links { justify-content: center; flex-wrap: wrap; }
     }
+    /* "Why was everyone looking at this?" box (scripts/why.mjs) */
+    .why-box { margin-top: 1.2rem; padding: 0.9rem 1.1rem 0.8rem; background: var(--white); border: var(--bw) solid var(--black); text-align: left; }
+    .why-label { font-family: "Bangers", cursive; font-weight: normal; font-size: 1.35rem; letter-spacing: 0.03em; margin: 0 0 0.35rem; color: var(--black); }
+    .why-box ul { padding-left: 1.2rem; margin: 0; }
+    .why-box li { margin: 0.3rem 0; line-height: 1.5; }
+    .why-box li::marker { color: var(--red); }
+    .why-box a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    .why-box a:hover { background: var(--yellow, #ffdf00); }
+    .why-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.35rem; }
+    .why-head .why-label { margin: 0; }
+    .ai-info { position: relative; display: inline-flex; }
+    .ai-info-btn { background: none; border: 0; padding: 2px; color: #777; cursor: pointer; display: inline-flex; border-radius: 50%; }
+    .ai-info-btn:hover, .ai-info-btn:focus-visible { color: var(--black); outline: none; }
+    .ai-info-tip { position: absolute; top: calc(100% + 6px); right: -6px; width: min(260px, 70vw); background: var(--black); color: var(--white); font-size: 0.75rem; line-height: 1.4; padding: 0.5rem 0.65rem; border-radius: 6px; opacity: 0; visibility: hidden; transition: opacity 0.15s; z-index: 5; }
+    .ai-info:hover .ai-info-tip, .ai-info-btn:focus-visible + .ai-info-tip, .ai-info.open .ai-info-tip { opacity: 1; visibility: visible; }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBPZDVN4FC"></script>
@@ -485,6 +500,7 @@
               <p><span class="drop-cap">O</span>n August 22, 2025, Iryna Zarutska was killed at the East/West Boulevard station on the Lynx Blue Line, in Charlotte, North Carolina, United States. Zarutska, a 23-year-old Ukrainian refugee who had fled her country because of the Russian invasion, was stabbed from behind three times while seated on the train. The suspect, Decarlos Dejuan Brown Jr., was arrested upon exiting the train and charged with first-degree murder.</p>
             </div>
             <div style="clear: both;"></div>
+            
           </div>
           <div class="article-footer-strip">
             <a href="https://en.wikipedia.org/wiki/Killing_of_Iryna_Zarutska" target="_blank" rel="noopener noreferrer" class="wiki-link">Read on Wikipedia &rarr;</a>
@@ -594,7 +610,7 @@
       </div>
 
     <nav class="day-nav" aria-label="Browse adjacent days">
-      <a href="../2025-09-10-shooting-of-charlie-kirk/" class="day-nav-prev" rel="prev">← Sep 10: Shooting of Charlie Kirk</a>
+      <a href="../2025-09-11-charlie-kirk/" class="day-nav-prev" rel="prev">← Sep 11: Charlie Kirk</a>
       <a href="../2025-09-13-groypers/" class="day-nav-next" rel="next">Sep 13: Groypers →</a>
     </nav>
 

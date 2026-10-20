@@ -355,6 +355,21 @@
       }
       .footer-links { justify-content: center; flex-wrap: wrap; }
     }
+    /* "Why was everyone looking at this?" box (scripts/why.mjs) */
+    .why-box { margin-top: 1.2rem; padding: 0.9rem 1.1rem 0.8rem; background: var(--white); border: var(--bw) solid var(--black); text-align: left; }
+    .why-label { font-family: "Bangers", cursive; font-weight: normal; font-size: 1.35rem; letter-spacing: 0.03em; margin: 0 0 0.35rem; color: var(--black); }
+    .why-box ul { padding-left: 1.2rem; margin: 0; }
+    .why-box li { margin: 0.3rem 0; line-height: 1.5; }
+    .why-box li::marker { color: var(--red); }
+    .why-box a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    .why-box a:hover { background: var(--yellow, #ffdf00); }
+    .why-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.35rem; }
+    .why-head .why-label { margin: 0; }
+    .ai-info { position: relative; display: inline-flex; }
+    .ai-info-btn { background: none; border: 0; padding: 2px; color: #777; cursor: pointer; display: inline-flex; border-radius: 50%; }
+    .ai-info-btn:hover, .ai-info-btn:focus-visible { color: var(--black); outline: none; }
+    .ai-info-tip { position: absolute; top: calc(100% + 6px); right: -6px; width: min(260px, 70vw); background: var(--black); color: var(--white); font-size: 0.75rem; line-height: 1.4; padding: 0.5rem 0.65rem; border-radius: 6px; opacity: 0; visibility: hidden; transition: opacity 0.15s; z-index: 5; }
+    .ai-info:hover .ai-info-tip, .ai-info-btn:focus-visible + .ai-info-tip, .ai-info.open .ai-info-tip { opacity: 1; visibility: visible; }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBPZDVN4FC"></script>
@@ -485,6 +500,7 @@
               <p><span class="drop-cap">T</span>he Rip is a 2026 American action thriller film written and directed by Joe Carnahan, who developed the story with Michael McGrale. The film stars Matt Damon and Ben Affleck as police officers in the Miami-Dade Police Department narcotics unit. It also stars Steven Yeun, Teyana Taylor, Sasha Calle, Catalina Sandino Moreno, Scott Adkins, and Kyle Chandler.</p>
             </div>
             <div style="clear: both;"></div>
+            
           </div>
           <div class="article-footer-strip">
             <a href="https://en.wikipedia.org/wiki/The_Rip_(film)" target="_blank" rel="noopener noreferrer" class="wiki-link">Read on Wikipedia &rarr;</a>
@@ -590,7 +606,7 @@
           <a href="https://en.wikipedia.org/wiki/Raccoon_of_Kherson" target="_blank" rel="noopener noreferrer" class="v2-featured-title">Raccoon of Kherson</a>
           <div class="v2-featured-text">The raccoon of Kherson is a raccoon that was stolen from the city of Kherson in November 2022 by Russian zookeeper Oleg Zubkov. The theft occurred during the Russian retreat from Kherson during the Russian invasion of Ukraine, with Zubkov stating that he took the raccoon, along with several other animals, from Kherson to his safari park in Crimea to protect them from the war. The animal became a subject of satirical memes in Ukraine while in Russia it became a reported source of morale and tool in pro-Russian propaganda, receiving the call name Kherson in Russian media. <a href="https://en.wikipedia.org/wiki/Raccoon_of_Kherson" target="_blank" rel="noopener noreferrer" class="v2-featured-readmore">Continue reading</a></div>
         </div>
-        
+        <a href="https://en.wikipedia.org/wiki/Raccoon_of_Kherson" target="_blank" rel="noopener noreferrer"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/%D0%94%D0%BE%D0%BB%D0%BE%D0%B6%D0%B8%D1%82%D0%B5_%D0%BE%D0%B1_%D1%83%D1%81%D0%BF%D0%B5%D1%85%D0%B0%D1%85.png/500px-%D0%94%D0%BE%D0%BB%D0%BE%D0%B6%D0%B8%D1%82%D0%B5_%D0%BE%D0%B1_%D1%83%D1%81%D0%BF%D0%B5%D1%85%D0%B0%D1%85.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" alt="" class="v2-featured-img"></a>
       </div>
 
     <nav class="day-nav" aria-label="Browse adjacent days">

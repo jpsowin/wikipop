@@ -16,6 +16,9 @@ node_modules/
 
 # Local testing and scratchpads
 test-tail.html
+why-preview.html
+email-preview.html
+data/why-drafts*.json
 
 # NPM logs
 npm-debug.log*

@@ -355,6 +355,21 @@
       }
       .footer-links { justify-content: center; flex-wrap: wrap; }
     }
+    /* "Why was everyone looking at this?" box (scripts/why.mjs) */
+    .why-box { margin-top: 1.2rem; padding: 0.9rem 1.1rem 0.8rem; background: var(--white); border: var(--bw) solid var(--black); text-align: left; }
+    .why-label { font-family: "Bangers", cursive; font-weight: normal; font-size: 1.35rem; letter-spacing: 0.03em; margin: 0 0 0.35rem; color: var(--black); }
+    .why-box ul { padding-left: 1.2rem; margin: 0; }
+    .why-box li { margin: 0.3rem 0; line-height: 1.5; }
+    .why-box li::marker { color: var(--red); }
+    .why-box a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    .why-box a:hover { background: var(--yellow, #ffdf00); }
+    .why-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.35rem; }
+    .why-head .why-label { margin: 0; }
+    .ai-info { position: relative; display: inline-flex; }
+    .ai-info-btn { background: none; border: 0; padding: 2px; color: #777; cursor: pointer; display: inline-flex; border-radius: 50%; }
+    .ai-info-btn:hover, .ai-info-btn:focus-visible { color: var(--black); outline: none; }
+    .ai-info-tip { position: absolute; top: calc(100% + 6px); right: -6px; width: min(260px, 70vw); background: var(--black); color: var(--white); font-size: 0.75rem; line-height: 1.4; padding: 0.5rem 0.65rem; border-radius: 6px; opacity: 0; visibility: hidden; transition: opacity 0.15s; z-index: 5; }
+    .ai-info:hover .ai-info-tip, .ai-info-btn:focus-visible + .ai-info-tip, .ai-info.open .ai-info-tip { opacity: 1; visibility: visible; }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBPZDVN4FC"></script>
@@ -485,6 +500,29 @@
               <p><span class="drop-cap">E</span>va Marie Saint was an American actress. In a career spanning nine decades, she received an Academy Award and a Primetime Emmy Award, as well as nominations for two BAFTAs and a Golden Globe. At the time of her death, Saint was one of the earliest and oldest living Academy Award winners and one of the last surviving stars from the Golden Age of Hollywood.</p>
             </div>
             <div style="clear: both;"></div>
+            
+            <div class="why-box">
+              <div class="why-head">
+                <h3 class="why-label">Why the popularity?</h3>
+                <span class="ai-info">
+                  <button type="button" class="ai-info-btn" aria-label="About this summary" aria-expanded="false">
+                    <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.2 6.1a1.9 1.9 0 0 1 3.7.5c0 1.3-1.9 1.6-1.9 2.9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="8" cy="11.6" r="0.9" fill="currentColor"/></svg>
+                  </button>
+                  <span class="ai-info-tip" role="tooltip">This summary is AI-generated and may contain errors. It's researched by Claude Sonnet 5.5 using web search and Wikipedia, then reviewed and rewritten by a separate Claude Sonnet 5.5 editor.</span>
+                </span>
+              </div>
+              <ul><li>Eva Marie Saint, the Oscar-winning star of <a href="https://en.wikipedia.org/wiki/On_the_Waterfront" target="_blank" rel="noopener noreferrer">On the Waterfront</a> and <a href="https://en.wikipedia.org/wiki/North_by_Northwest" target="_blank" rel="noopener noreferrer">North by Northwest</a>, <a href="https://deadline.com/2026/10/eva-marie-saint-dead-on-the-waterfront-1237148334/" target="_blank" rel="noopener noreferrer">died at 102</a>.</li><li>Her very first film role was opposite <a href="https://en.wikipedia.org/wiki/Marlon_Brando" target="_blank" rel="noopener noreferrer">Marlon Brando</a>, as the grief-toughened girlfriend of his boxer.</li><li>In North by Northwest she held her own against <a href="https://en.wikipedia.org/wiki/Cary_Grant" target="_blank" rel="noopener noreferrer">Cary Grant</a>, giving <a href="https://en.wikipedia.org/wiki/Alfred_Hitchcock" target="_blank" rel="noopener noreferrer">Alfred Hitchcock</a>&#039;s &quot;icy blonde&quot; type real brains and wit.</li><li>She was one of the last stars of Hollywood&#039;s Golden Age, and she stayed married to director <a href="https://en.wikipedia.org/wiki/Jeffrey_Hayden" target="_blank" rel="noopener noreferrer">Jeffrey Hayden</a> until he died.</li></ul>
+            </div>
+            <script>
+              (function () {
+                var info = document.currentScript.previousElementSibling.querySelector(".ai-info");
+                var btn = info.querySelector("button");
+                function set(open) { info.classList.toggle("open", open); btn.setAttribute("aria-expanded", String(open)); }
+                btn.addEventListener("click", function (e) { e.stopPropagation(); set(!info.classList.contains("open")); });
+                document.addEventListener("click", function () { set(false); });
+                document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
+              })();
+            </script>
           </div>
           <div class="article-footer-strip">
             <a href="https://en.wikipedia.org/wiki/Eva_Marie_Saint" target="_blank" rel="noopener noreferrer" class="wiki-link">Read on Wikipedia &rarr;</a>
