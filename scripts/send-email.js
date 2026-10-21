@@ -448,8 +448,10 @@ async function main() {
   const todayStr = new Date().toISOString().slice(0, 10);
   const articles = JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
 
-  // Get the latest article
-  const latest = articles[articles.length - 1];
+  // Get the latest article (or, for previews only, a chosen day).
+  const latest = process.env.EMAIL_PREVIEW_FILE && process.env.EMAIL_PREVIEW_DATE
+    ? articles.find((a) => a.date === process.env.EMAIL_PREVIEW_DATE)
+    : articles[articles.length - 1];
   if (!latest) {
     console.error("No articles found");
     process.exit(1);
@@ -510,7 +512,11 @@ async function main() {
   }
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
+
+module.exports = { buildComicEmailHtml };

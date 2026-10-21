@@ -75,7 +75,9 @@ const SKIP_EXACT = [
 ];
 
 function shouldSkip(title) {
-  return SKIP_PREFIXES.some((p) => title.startsWith(p))
+  // Case-insensitive: Wikimedia sometimes reports "category:..." in lowercase.
+  const lower = title.toLowerCase();
+  return SKIP_PREFIXES.some((p) => lower.startsWith(p.toLowerCase()))
     || SKIP_EXACT.includes(title);
 }
 
@@ -991,6 +993,75 @@ function escapeXml(str) {
     .replace(/'/g, "&apos;");
 }
 
+// Article titles linked from a page (main namespace only), e.g. the entries
+// on a disambiguation page.
+async function fetchLinkedTitles(title) {
+  const titles = [];
+  let cont = "";
+  for (let i = 0; i < 5; i++) {
+    const url = `https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=links&plnamespace=0&pllimit=max&redirects=1&titles=${encodeURIComponent(title)}${cont}`;
+    const data = await httpGet(url);
+    for (const l of data.query?.pages?.[0]?.links || []) titles.push(l.title.replace(/ /g, "_"));
+    if (!data.continue?.plcontinue) break;
+    cont = `&plcontinue=${encodeURIComponent(data.continue.plcontinue)}`;
+  }
+  return titles;
+}
+
+// When the top article is a disambiguation page ("Ying may refer to:"),
+// feature the page it lists that was clearly trending the same day, e.g.
+// "Saiyaara" → "Saiyaara (film)". Returns null if nothing stands out.
+const DISAMBIGUATION_MIN_SHARE = 0.2; // linked page needs at least 20% of the disambiguation page's views
+async function resolveDisambiguation(entry, topArticles, recentTitles) {
+  let linked;
+  try {
+    linked = new Set(await fetchLinkedTitles(entry.article));
+  } catch (err) {
+    return null;
+  }
+  const best = topArticles.find((t) => linked.has(t.article) && !shouldSkip(t.article) && !recentTitles.has(t.article));
+  if (!best || best.views < entry.views * DISAMBIGUATION_MIN_SHARE) return null;
+  try {
+    const summary = await fetchArticleSummary(best.article);
+    if (summary.type === "disambiguation" || !summary.extract) return null;
+    return { chosen: best, summary };
+  } catch (err) {
+    return null;
+  }
+}
+
+// Pick the day's featured article: the most-viewed one that isn't a special
+// page, wasn't featured in the last month, and has a real intro to show.
+async function pickFeatured(topArticles, recentTitles) {
+  for (const entry of topArticles) {
+    if (shouldSkip(entry.article)) continue;
+    if (recentTitles.has(entry.article)) continue;
+
+    let summary;
+    try {
+      summary = await fetchArticleSummary(entry.article);
+    } catch (err) {
+      console.log(`  Skipping ${entry.article} due to summary fetch error: ${err.message}`);
+      continue;
+    }
+    if (summary.type === "disambiguation") {
+      const resolved = await resolveDisambiguation(entry, topArticles, recentTitles);
+      if (resolved) {
+        console.log(`  ${entry.article} is a disambiguation page; featuring ${resolved.chosen.article} instead.`);
+        return resolved;
+      }
+      console.log(`  Skipping ${entry.article}: disambiguation page with no clear trending entry.`);
+      continue;
+    }
+    if (!summary.extract) {
+      console.log(`  Skipping ${entry.article}: no intro text.`);
+      continue;
+    }
+    return { chosen: entry, summary };
+  }
+  return { chosen: null, summary: null };
+}
+
 async function processDate(date, articles) {
   const dateStr = date.toISOString().slice(0, 10);
 
@@ -1010,21 +1081,7 @@ async function processDate(date, articles) {
 
   const recentTitles = getRecentTitles(articles, LOOKBACK_DAYS, date);
 
-  // Find the first qualifying article
-  let chosen = null;
-  let summary = null;
-  for (const entry of topArticles) {
-    if (shouldSkip(entry.article)) continue;
-    if (recentTitles.has(entry.article)) continue;
-
-    try {
-      summary = await fetchArticleSummary(entry.article);
-      chosen = entry;
-      break;
-    } catch (err) {
-      console.log(`  Skipping ${entry.article} due to summary fetch error: ${err.message}`);
-    }
-  }
+  const { chosen, summary } = await pickFeatured(topArticles, recentTitles);
 
   if (!chosen) {
     console.log(`  ${dateStr}: no qualifying article found.`);
@@ -1204,7 +1261,11 @@ async function main() {
   console.log(`Done! ${articles.length} total articles.`);
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
+
+module.exports = { pickFeatured, fetchTopArticles, getRecentTitles, LOOKBACK_DAYS };
