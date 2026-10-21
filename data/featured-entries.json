@@ -1458,7 +1458,11 @@
   },
   {
     "title": "Polybius (urban legend)",
-    "url": "https://en.wikipedia.org/wiki/Polybius_(urban_legend)"
+    "url": "https://en.wikipedia.org/wiki/Polybius_(urban_legend)",
+    "extract": "Polybius is an urban legend about a mysterious arcade video game. According to the legend, the game appeared in arcades around Portland, Oregon in 1981. The gameplay was supposedly psychoactive, abstract, and dangerous. Children who played the arcade game were said to suffer from amnesia, seizures, night terrors, and hallucinations. Despite these adverse effects, the arcade cabinet was described as so addictive that players returned to Polybius repeatedly until they went insane, died, or vanished. The lack of any surviving Polybius cabinets is explained by men in black who were said to record data on the players before removing all the arcade machines.",
+    "description": "Fictitious 1981 arcade game",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Polybius%2C_coinop.org.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "imageChecked": true
   },
   {
     "title": "Bravely Default II",

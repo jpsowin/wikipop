@@ -53765,5 +53765,88 @@
         "url": "https://en.wikipedia.org/wiki/Nathan_Fielder"
       }
     ]
+  },
+  {
+    "date": "2026-10-20",
+    "title": "Kim_Jong_Un",
+    "views": 321739,
+    "rank": 4,
+    "type": "standard",
+    "extract": "\n\nKim Jong Un is a North Korean politician and dictator who has been serving as the supreme leader of North Korea since 2011, following the death of his father, Kim Jong Il. He is the third ruler from the Kim family to lead the country, which was founded by his grandfather Kim Il Sung. Kim holds the positions of general secretary of the Workers' Party of Korea (WPK) and president of the State Affairs Commission, as well as the highest offices in the Korean People's Army.",
+    "description": "Supreme Leader of North Korea since 2011",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Kim_Jong-un_and_Vladimir_Putin_%282023-09-13%29_12_%28cropped_2%29.jpg/330px-Kim_Jong-un_and_Vladimir_Putin_%282023-09-13%29_12_%28cropped_2%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Kim_Jong_Un",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Kim_Jong_Un",
+        "views": 321739,
+        "description": "Supreme Leader of North Korea since 2011",
+        "url": "https://en.wikipedia.org/wiki/Kim_Jong_Un"
+      },
+      {
+        "rank": 5,
+        "title": "Jailer_2",
+        "views": 303129,
+        "description": "2026 Indian film by Nelson Dilipkumar",
+        "url": "https://en.wikipedia.org/wiki/Jailer_2"
+      },
+      {
+        "rank": 6,
+        "title": "Elizabeth_Holmes",
+        "views": 253155,
+        "description": "American businesswoman (born 1984)",
+        "url": "https://en.wikipedia.org/wiki/Elizabeth_Holmes"
+      },
+      {
+        "rank": 7,
+        "title": "You_Can_See_Everything",
+        "views": 206507,
+        "description": "2026 documentary film",
+        "url": "https://en.wikipedia.org/wiki/You_Can_See_Everything"
+      },
+      {
+        "rank": 8,
+        "title": "Helen_Haines",
+        "views": 158924,
+        "description": "Australian politician (born 1961)",
+        "url": "https://en.wikipedia.org/wiki/Helen_Haines"
+      },
+      {
+        "rank": 9,
+        "title": "Luke_McCaffrey",
+        "views": 142208,
+        "description": "American football player (born 2001)",
+        "url": "https://en.wikipedia.org/wiki/Luke_McCaffrey"
+      },
+      {
+        "rank": 10,
+        "title": "ChatGPT",
+        "views": 140548,
+        "description": "Generative AI chatbot by OpenAI",
+        "url": "https://en.wikipedia.org/wiki/ChatGPT"
+      },
+      {
+        "rank": 11,
+        "title": "Deaths_in_2026",
+        "views": 134021,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
+      },
+      {
+        "rank": 12,
+        "title": "Hunter_Schafer",
+        "views": 117851,
+        "description": "American actress and model (born 1998)",
+        "url": "https://en.wikipedia.org/wiki/Hunter_Schafer"
+      },
+      {
+        "rank": 13,
+        "title": "Street_Fighter_(2026_film)",
+        "views": 110411,
+        "description": "2026 film by Kitao Sakurai",
+        "url": "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)"
+      }
+    ]
   }
 ]
