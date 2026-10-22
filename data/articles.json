@@ -53848,5 +53848,88 @@
         "url": "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)"
       }
     ]
+  },
+  {
+    "date": "2026-10-21",
+    "title": "PHP2Shell",
+    "views": 238212,
+    "rank": 5,
+    "type": "standard",
+    "extract": "PHP2Shell is a pair of high-impact vulnerabilities in PHP versions 5.4–8.5 that allow remote code execution (RCE). Their existence was publicly announced on 20 October 2026. An emergency patch for versions 8.2, 8.3, 8.4 and 8.5 and details about the vulnerabilities were released the following day.",
+    "description": "2026 software security vulnerability",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Wikimedia_Phabricator_PHP2Shell.png/330px-Wikimedia_Phabricator_PHP2Shell.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/PHP2Shell",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Jailer_2",
+        "views": 278796,
+        "description": "2026 Indian film by Nelson Dilipkumar",
+        "url": "https://en.wikipedia.org/wiki/Jailer_2"
+      },
+      {
+        "rank": 5,
+        "title": "PHP2Shell",
+        "views": 238212,
+        "description": "2026 software security vulnerability",
+        "url": "https://en.wikipedia.org/wiki/PHP2Shell"
+      },
+      {
+        "rank": 6,
+        "title": "Elizabeth_Holmes",
+        "views": 208412,
+        "description": "American businesswoman (born 1984)",
+        "url": "https://en.wikipedia.org/wiki/Elizabeth_Holmes"
+      },
+      {
+        "rank": 7,
+        "title": "Aberfan_disaster",
+        "views": 187692,
+        "description": "1966 Welsh colliery disaster",
+        "url": "https://en.wikipedia.org/wiki/Aberfan_disaster"
+      },
+      {
+        "rank": 8,
+        "title": "Heath_Ledger",
+        "views": 177482,
+        "description": "Australian actor (1979–2008)",
+        "url": "https://en.wikipedia.org/wiki/Heath_Ledger"
+      },
+      {
+        "rank": 9,
+        "title": "BioWare",
+        "views": 170992,
+        "description": "Canadian video game developer",
+        "url": "https://en.wikipedia.org/wiki/BioWare"
+      },
+      {
+        "rank": 10,
+        "title": "You_Can_See_Everything",
+        "views": 170153,
+        "description": "2026 documentary film",
+        "url": "https://en.wikipedia.org/wiki/You_Can_See_Everything"
+      },
+      {
+        "rank": 11,
+        "title": "ChatGPT",
+        "views": 163328,
+        "description": "Generative AI chatbot by OpenAI",
+        "url": "https://en.wikipedia.org/wiki/ChatGPT"
+      },
+      {
+        "rank": 12,
+        "title": "Amy_Acton",
+        "views": 158230,
+        "description": "American physician and politician (born 1966)",
+        "url": "https://en.wikipedia.org/wiki/Amy_Acton"
+      },
+      {
+        "rank": 13,
+        "title": "Helen_Haines",
+        "views": 154476,
+        "description": "Australian politician (born 1961)",
+        "url": "https://en.wikipedia.org/wiki/Helen_Haines"
+      }
+    ]
   }
 ]

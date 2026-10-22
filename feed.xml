@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Wed, 21 Oct 2026 13:07:38 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 13:07:00 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>PHP2Shell</title>
+      <link>https://en.wikipedia.org/wiki/PHP2Shell</link>
+      <description>PHP2Shell is a pair of high-impact vulnerabilities in PHP versions 5.4–8.5 that allow remote code execution (RCE). Their existence was publicly announced on 20 October 2026. An emergency patch for versions 8.2, 8.3, 8.4 and 8.5 and details about the vulnerabilities were released the following day.</description>
+      <pubDate>Wed, 21 Oct 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/PHP2Shell#2026-10-21</guid>
+      <category>2026 software security vulnerability</category>
+    </item>
     <item>
       <title>Kim Jong Un</title>
       <link>https://en.wikipedia.org/wiki/Kim_Jong_Un</link>
@@ -248,14 +256,6 @@ This is a list of equations, indicating each Wikipedia page under appropriate ba
       <pubDate>Tue, 22 Sep 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/2026_Asian_Games#2026-09-22</guid>
       <category>Multi-sport event in Aichi and Nagoya, Japan</category>
-    </item>
-    <item>
-      <title>Cindy Crawford</title>
-      <link>https://en.wikipedia.org/wiki/Cindy_Crawford</link>
-      <description>Cynthia Ann Crawford is an American model, actress, and television personality. One of the most popular supermodels of the 1980s and 1990s, she achieved a ubiquitous presence on magazine covers, runways, and fashion campaigns. She subsequently expanded into acting and business ventures.</description>
-      <pubDate>Mon, 21 Sep 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Cindy_Crawford#2026-09-21</guid>
-      <category>American model and actress (born 1966)</category>
     </item>
   </channel>
 </rss>

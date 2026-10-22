@@ -5,6 +5,29 @@ Updated daily. Each section is one day. WikiPop's Pick is the curated entry; the
 
 ---
 
+## 2026-10-21 — WikiPop's Pick: PHP2Shell
+
+Category: 2026 software security vulnerability
+Views: 238,212
+Wikipedia: https://en.wikipedia.org/wiki/PHP2Shell
+On-site page: https://wikipop.sowin.io/day/2026-10-21-php2shell/
+
+PHP2Shell is a pair of high-impact vulnerabilities in PHP versions 5.4–8.5 that allow remote code execution (RCE). Their existence was publicly announced on 20 October 2026. An emergency patch for versions 8.2, 8.3, 8.4 and 8.5 and details about the vulnerabilities were released the following day.
+
+### Full top 10 on 2026-10-21
+- Jailer 2 (278,796 views): 2026 Indian film by Nelson Dilipkumar
+- PHP2Shell (238,212 views): 2026 software security vulnerability
+- Elizabeth Holmes (208,412 views): American businesswoman (born 1984)
+- Aberfan disaster (187,692 views): 1966 Welsh colliery disaster
+- Heath Ledger (177,482 views): Australian actor (1979–2008)
+- BioWare (170,992 views): Canadian video game developer
+- You Can See Everything (170,153 views): 2026 documentary film
+- ChatGPT (163,328 views): Generative AI chatbot by OpenAI
+- Amy Acton (158,230 views): American physician and politician (born 1966)
+- Helen Haines (154,476 views): Australian politician (born 1961)
+
+---
+
 ## 2026-10-20 — WikiPop's Pick: Kim Jong Un
 
 Category: Supreme Leader of North Korea since 2011

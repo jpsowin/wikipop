@@ -216,5 +216,20 @@
     "sources": [],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-10-21T13:07:38.386Z"
+  },
+  "2026-10-21": {
+    "date": "2026-10-21",
+    "title": "PHP2Shell",
+    "show": true,
+    "confidence": 85,
+    "bullets": [
+      "Two newly revealed flaws in [PHP](https://en.wikipedia.org/wiki/PHP) allow [remote code execution](https://en.wikipedia.org/wiki/Arbitrary_code_execution), meaning attackers could run their own code on affected servers.",
+      "Fixes are out, but the maintainers say no full workaround exists, so updating is the only safe move.",
+      "AI helped hunt the bugs down, and [Wiz](https://en.wikipedia.org/wiki/Wiz,_Inc.) and a researcher in [OpenAI](https://en.wikipedia.org/wiki/OpenAI)'s \"Patch the Planet\" project found them separately.",
+      "[Cloudflare](https://en.wikipedia.org/wiki/Cloudflare) and Amazon both spotted signs of attacks before the fix went public, so hackers may have had a head start."
+    ],
+    "sources": [],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-22T13:07:00.684Z"
   }
 }
