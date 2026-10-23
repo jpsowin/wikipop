@@ -53931,5 +53931,88 @@
         "url": "https://en.wikipedia.org/wiki/Helen_Haines"
       }
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "title": "Tom_Skerritt",
+    "views": 371141,
+    "rank": 4,
+    "type": "standard",
+    "extract": "Thomas Roy Skerritt was an American actor and director who appeared in over 170 film and television productions between 1962 and 2025. The beginning of his film career coincided with the New Hollywood movement, with a breakthrough role as Duke Forrest in Robert Altman's M*A*S*H (1970). He then starred in notable films like The Turning Point (1977), Up in Smoke (1978), Ice Castles (1978), Alien (1979), The Dead Zone (1983), Top Gun (1986), SpaceCamp (1986), Steel Magnolias (1989), and A River Runs Through It (1992).",
+    "description": "American actor (1933–2026)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/d/de/Tom_Skerritt_at_the_47th_Emmy_Awards_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "url": "https://en.wikipedia.org/wiki/Tom_Skerritt",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Tom_Skerritt",
+        "views": 371141,
+        "description": "American actor (1933–2026)",
+        "url": "https://en.wikipedia.org/wiki/Tom_Skerritt"
+      },
+      {
+        "rank": 5,
+        "title": "John_Anderson_(singer)",
+        "views": 336579,
+        "description": "American country musician (1954–2026)",
+        "url": "https://en.wikipedia.org/wiki/John_Anderson_(singer)"
+      },
+      {
+        "rank": 6,
+        "title": "Jailer_2",
+        "views": 243842,
+        "description": "2026 Indian film by Nelson Dilipkumar",
+        "url": "https://en.wikipedia.org/wiki/Jailer_2"
+      },
+      {
+        "rank": 7,
+        "title": "Elizabeth_Holmes",
+        "views": 182703,
+        "description": "American businesswoman (born 1984)",
+        "url": "https://en.wikipedia.org/wiki/Elizabeth_Holmes"
+      },
+      {
+        "rank": 8,
+        "title": "Clayface_(film)",
+        "views": 168347,
+        "description": "2026 DC Studios film",
+        "url": "https://en.wikipedia.org/wiki/Clayface_(film)"
+      },
+      {
+        "rank": 9,
+        "title": "ChatGPT",
+        "views": 155469,
+        "description": "Generative AI chatbot by OpenAI",
+        "url": "https://en.wikipedia.org/wiki/ChatGPT"
+      },
+      {
+        "rank": 10,
+        "title": "PHP2Shell",
+        "views": 153627,
+        "description": "2026 software security vulnerability",
+        "url": "https://en.wikipedia.org/wiki/PHP2Shell"
+      },
+      {
+        "rank": 11,
+        "title": "Deaths_in_2026",
+        "views": 142776,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
+      },
+      {
+        "rank": 12,
+        "title": "Jerry_Hall",
+        "views": 138456,
+        "description": "American model and actress (born 1956)",
+        "url": "https://en.wikipedia.org/wiki/Jerry_Hall"
+      },
+      {
+        "rank": 13,
+        "title": "You_Can_See_Everything",
+        "views": 138013,
+        "description": "2026 documentary film",
+        "url": "https://en.wikipedia.org/wiki/You_Can_See_Everything"
+      }
+    ]
   }
 ]

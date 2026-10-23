@@ -1474,7 +1474,11 @@
   },
   {
     "title": "Missing Post Office",
-    "url": "https://en.wikipedia.org/wiki/Missing_Post_Office"
+    "url": "https://en.wikipedia.org/wiki/Missing_Post_Office",
+    "extract": "The Missing Post Office is an artwork by Japanese artist Saya Kubota as an installation for the Setouchi Triennale in 2013. It is not affiliated with Japan Post. \nIt is a \"post office\" where undeliverable letters are collected, using the former Awashima Post Office building on Awashima Island in Mitoyo City, Kagawa Prefecture.\nKubota serves as the \"post office worker\" of the Missing Post Office, and Katsuhisa Nakata, the former postmaster of the Awashima Post Office, as the \"postmaster\". The public is encouraged to send mail there, preferably on postcards. Its address is c/o Hyoryu Yubinkyoku 1317-2 Takumacho Awashima, Mitoyo Kagawa 769-1108 Japan.",
+    "description": "Art installation on Awashima Island, Kagawa Prefecture, Japan",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Missing_Post_Office_building%EF%BC%88Japan%2C_Kagawa_Prefecture_Mitoyo_Takuma_cho_Awashima%EF%BC%89.JPG/330px-Missing_Post_Office_building%EF%BC%88Japan%2C_Kagawa_Prefecture_Mitoyo_Takuma_cho_Awashima%EF%BC%89.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "imageChecked": true
   },
   {
     "title": "An Alan Smithee Film: Burn Hollywood Burn",

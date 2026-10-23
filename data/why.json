@@ -231,5 +231,25 @@
     "sources": [],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-10-22T13:07:00.684Z"
+  },
+  "2026-10-22": {
+    "date": "2026-10-22",
+    "title": "Tom_Skerritt",
+    "show": true,
+    "confidence": 97,
+    "bullets": [
+      "Tom Skerritt, the captain in [Alien](https://en.wikipedia.org/wiki/Alien_(film)), Tom Cruise's instructor in [Top Gun](https://en.wikipedia.org/wiki/Top_Gun) and the Emmy-winning sheriff of [Picket Fences](https://en.wikipedia.org/wiki/Picket_Fences), [died at 93](https://www.rollingstone.com/tv-movies/tv-movie-news/tom-skerritt-alien-picket-fences-actor-dead-obituary-1235646827/).",
+      "He once lost a role to [Robert Redford](https://en.wikipedia.org/wiki/Robert_Redford), who later directed him in [A River Runs Through It](https://en.wikipedia.org/wiki/A_River_Runs_Through_It_(film)), and the two [became lifelong friends](https://www.cbsnews.com/news/tom-skerritt-dies-age-93-alien-top-gun-picket-fences/).",
+      "Before acting, he served in the Air Force, and a viewing of Citizen Kane [reportedly sent him to UCLA](https://www.hollywoodreporter.com/movies/movie-news/tom-skerritt-dead-picket-fences-alien-mash-1236738429/) to study filmmaking.",
+      "His family remembered a man of [\"humor, curiosity, wisdom, generosity\"](https://www.indiewire.com/news/obituary/tom-skerritt-dead-alien-mash-1235223498/) who cared about storytelling, veterans and the natural world."
+    ],
+    "sources": [
+      "https://www.rollingstone.com/tv-movies/tv-movie-news/tom-skerritt-alien-picket-fences-actor-dead-obituary-1235646827/",
+      "https://www.cbsnews.com/news/tom-skerritt-dies-age-93-alien-top-gun-picket-fences/",
+      "https://www.hollywoodreporter.com/movies/movie-news/tom-skerritt-dead-picket-fences-alien-mash-1236738429/",
+      "https://www.indiewire.com/news/obituary/tom-skerritt-dead-alien-mash-1235223498/"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-23T12:46:55.565Z"
   }
 }
