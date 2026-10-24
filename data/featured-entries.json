@@ -1482,7 +1482,11 @@
   },
   {
     "title": "An Alan Smithee Film: Burn Hollywood Burn",
-    "url": "https://en.wikipedia.org/wiki/An_Alan_Smithee_Film%3A_Burn_Hollywood_Burn"
+    "url": "https://en.wikipedia.org/wiki/An_Alan_Smithee_Film%3A_Burn_Hollywood_Burn",
+    "extract": "An Alan Smithee Film: Burn Hollywood Burn is a 1997 American mockumentary black comedy film directed by Arthur Hiller, written by Joe Eszterhas and starring Eric Idle as a director unfortunately named Alan Smithee, a traditional pseudonym used in Hollywood for directors disowning a project. The film follows Smithee as he steals the negatives to his latest film and goes on the run.",
+    "description": "1997 American mockumentary film",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/e/e8/Alan_smithee_film_burn_hollywood_burn.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "imageChecked": true
   },
   {
     "title": "Boston Corbett",

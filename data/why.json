@@ -251,5 +251,20 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-10-23T12:46:55.565Z"
+  },
+  "2026-10-23": {
+    "date": "2026-10-23",
+    "title": "Clayface_(film)",
+    "show": true,
+    "confidence": 90,
+    "bullets": [
+      "[Clayface](https://en.wikipedia.org/wiki/Clayface), the shape-shifting Batman villain, finally has his own movie, and it opened in theaters just before Halloween.",
+      "[Tom Rhys Harries](https://en.wikipedia.org/wiki/Tom_Rhys_Harries) plays an actor disfigured by a mobster, who turns to a scientist for a fix that turns his body into clay.",
+      "Producer [Peter Safran](https://en.wikipedia.org/wiki/Peter_Safran) promised no camp, comparing it to the body horror of [The Fly](https://en.wikipedia.org/wiki/The_Fly_(1986_film)), which is a dark turn for a superhero movie.",
+      "Harries shot every scene with a torn ACL, and Liverpool's courthouse and library stood in for Gotham."
+    ],
+    "sources": [],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-24T12:11:27.367Z"
   }
 }
