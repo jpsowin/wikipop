@@ -1490,7 +1490,11 @@
   },
   {
     "title": "Boston Corbett",
-    "url": "https://en.wikipedia.org/wiki/Boston_Corbett"
+    "url": "https://en.wikipedia.org/wiki/Boston_Corbett",
+    "extract": "Thomas H. \"Boston\" Corbett was an American soldier and milliner who, on April 26, 1865, killed John Wilkes Booth, the assassin of President Abraham Lincoln.",
+    "description": "American soldier who killed John Wilkes Booth (1832–1888)",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Boston_Corbett_-_Brady-Handy.jpg/330px-Boston_Corbett_-_Brady-Handy.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "imageChecked": true
   },
   {
     "title": "Pasilalinic-sympathetic compass",

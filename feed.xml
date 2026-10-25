@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sat, 24 Oct 2026 12:11:27 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 12:42:49 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>UFC 333</title>
+      <link>https://en.wikipedia.org/wiki/UFC_333</link>
+      <description>UFC 333: Volkanovski vs. Evloev was a mixed martial arts event produced by the Ultimate Fighting Championship that took place on October 24, 2026, at the Etihad Arena in Abu Dhabi, United Arab Emirates.</description>
+      <pubDate>Sat, 24 Oct 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/UFC_333#2026-10-24</guid>
+      <category>Mixed martial arts event in 2026</category>
+    </item>
     <item>
       <title>Clayface (film)</title>
       <link>https://en.wikipedia.org/wiki/Clayface_(film)</link>
@@ -248,14 +256,6 @@ This is a list of equations, indicating each Wikipedia page under appropriate ba
       <pubDate>Fri, 25 Sep 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Nahui_Ollin#2026-09-25</guid>
       <category>Concept in 16th-century Aztec/Mexica cosmology</category>
-    </item>
-    <item>
-      <title>The Paradise (2026 Indian film)</title>
-      <link>https://en.wikipedia.org/wiki/The_Paradise_(2026_Indian_film)</link>
-      <description>The Paradise is a 2026 Indian Telugu-language period action drama film directed by Srikanth Odela and produced by Sudhakar Cherukuri and Ishan Saksena, under Sri Lakshmi Venkateshwara Cinemas and IVY Entertainment, respectively. The film stars Nani, Mohan Babu, Kayadu Lohar, Sonali Kulkarni and Raghav Juyal in the lead roles. In the film, Nani plays the leader of a struggling tribe in 1980s Secunderabad as they battle discrimination and fight for citizenship.</description>
-      <pubDate>Thu, 24 Sep 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/The_Paradise_(2026_Indian_film)#2026-09-24</guid>
-      <category>2026 Indian film by Srikanth Odela</category>
     </item>
   </channel>
 </rss>

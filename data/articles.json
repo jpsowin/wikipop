@@ -54097,5 +54097,88 @@
         "url": "https://en.wikipedia.org/wiki/Miranda_Hart"
       }
     ]
+  },
+  {
+    "date": "2026-10-24",
+    "title": "UFC_333",
+    "views": 224691,
+    "rank": 5,
+    "type": "standard",
+    "extract": "UFC 333: Volkanovski vs. Evloev was a mixed martial arts event produced by the Ultimate Fighting Championship that took place on October 24, 2026, at the Etihad Arena in Abu Dhabi, United Arab Emirates.",
+    "description": "Mixed martial arts event in 2026",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/f/fe/UFC_333_Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "url": "https://en.wikipedia.org/wiki/UFC_333",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Clayface_(film)",
+        "views": 231483,
+        "description": "2026 DC Studios film",
+        "url": "https://en.wikipedia.org/wiki/Clayface_(film)"
+      },
+      {
+        "rank": 5,
+        "title": "UFC_333",
+        "views": 224691,
+        "description": "Mixed martial arts event in 2026",
+        "url": "https://en.wikipedia.org/wiki/UFC_333"
+      },
+      {
+        "rank": 6,
+        "title": "Jailer_2",
+        "views": 190945,
+        "description": "2026 Indian film by Nelson Dilipkumar",
+        "url": "https://en.wikipedia.org/wiki/Jailer_2"
+      },
+      {
+        "rank": 7,
+        "title": "Elizabeth_Holmes",
+        "views": 188874,
+        "description": "American businesswoman (born 1984)",
+        "url": "https://en.wikipedia.org/wiki/Elizabeth_Holmes"
+      },
+      {
+        "rank": 9,
+        "title": "You_Can_See_Everything",
+        "views": 152908,
+        "description": "2026 documentary film",
+        "url": "https://en.wikipedia.org/wiki/You_Can_See_Everything"
+      },
+      {
+        "rank": 10,
+        "title": "Jacob_Misiorowski",
+        "views": 133083,
+        "description": "American baseball player (born 2002)",
+        "url": "https://en.wikipedia.org/wiki/Jacob_Misiorowski"
+      },
+      {
+        "rank": 11,
+        "title": "Deaths_in_2026",
+        "views": 124463,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
+      },
+      {
+        "rank": 12,
+        "title": "Ansel_Adams",
+        "views": 124107,
+        "description": "American photographer and environmentalist (1902–1984)",
+        "url": "https://en.wikipedia.org/wiki/Ansel_Adams"
+      },
+      {
+        "rank": 13,
+        "title": "Kehlsteinhaus",
+        "views": 110874,
+        "description": "Former Nazi residence in Obersalzberg, Germany",
+        "url": "https://en.wikipedia.org/wiki/Kehlsteinhaus"
+      },
+      {
+        "rank": 14,
+        "title": "Wildwood_(film)",
+        "views": 96858,
+        "description": "2026 film by Travis Knight",
+        "url": "https://en.wikipedia.org/wiki/Wildwood_(film)"
+      }
+    ]
   }
 ]

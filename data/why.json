@@ -266,5 +266,21 @@
     "sources": [],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-10-24T12:11:27.367Z"
+  },
+  "2026-10-24": {
+    "date": "2026-10-24",
+    "title": "UFC_333",
+    "show": true,
+    "confidence": 95,
+    "bullets": [
+      "[Alexander Volkanovski](https://en.wikipedia.org/wiki/Alexander_Volkanovski) and [Petr Yan](https://en.wikipedia.org/wiki/Petr_Yan) both [kept their belts](https://www.espn.com/mma/story/_/id/50220522/ufc-333-results-volkanovski-evloev) in Abu Dhabi, so neither title changed hands.",
+      "Volkanovski dropped previously unbeaten [Movsar Evloev](https://en.wikipedia.org/wiki/Movsar_Evloev) with one clean left hand and finished him in round two.",
+      "Yan's gritty win closed out his trilogy with [Merab Dvalishvili](https://en.wikipedia.org/wiki/Merab_Dvalishvili), and the fight earned Fight of the Night."
+    ],
+    "sources": [
+      "https://www.espn.com/mma/story/_/id/50220522/ufc-333-results-volkanovski-evloev"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-25T12:42:48.836Z"
   }
 }
