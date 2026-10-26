@@ -282,5 +282,23 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-10-25T12:42:48.836Z"
+  },
+  "2026-10-25": {
+    "date": "2026-10-25",
+    "title": "2026_Brazilian_general_election",
+    "show": true,
+    "confidence": 97,
+    "bullets": [
+      "[Luiz Inácio Lula da Silva](https://en.wikipedia.org/wiki/Luiz_In%C3%A1cio_Lula_da_Silva) beat [Flávio Bolsonaro](https://en.wikipedia.org/wiki/Fl%C3%A1vio_Bolsonaro) in Brazil's runoff, [winning a fourth term](https://www.pbs.org/newshour/world/brazil-votes-in-a-tense-lula-vs-bolsonaro-runoff-with-u-s-influence-over-latin-america-at-stake) after a chaotic election day.",
+      "Since democracy returned in 1989, nobody who lost the first round had won the runoff, until Lula [took it with over 51%](https://www.npr.org/2026/10/25/nx-s1-6016299/brazil-lula-bolsonaro-election).",
+      "His campaign video shows him celebrating in star-shaped red glasses a supporter gave him, and kissing his wife.",
+      "It cuts against a Latin American run of Trump-allied winners, leaving Mexico and Brazil, the region's biggest countries, both with left-of-center leaders."
+    ],
+    "sources": [
+      "https://www.pbs.org/newshour/world/brazil-votes-in-a-tense-lula-vs-bolsonaro-runoff-with-u-s-influence-over-latin-america-at-stake",
+      "https://www.npr.org/2026/10/25/nx-s1-6016299/brazil-lula-bolsonaro-election"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-26T14:32:10.402Z"
   }
 }
