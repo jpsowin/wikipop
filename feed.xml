@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Mon, 26 Oct 2026 14:32:10 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 13:30:25 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Eric Bauza</title>
+      <link>https://en.wikipedia.org/wiki/Eric_Bauza</link>
+      <description>Eric Bauza was a Canadian voice actor and animator. He voiced various Looney Tunes characters, and won three Emmy Awards for his performances in Looney Tunes Cartoons (2020–2024), Bugs Bunny Builders (2022–2025), and Teen Titans Go! (2024). His other major roles in television and film include Puss in Boots in The Adventures of Puss in Boots (2015–2018), Belly Bag in Uncle Grandpa (2013–2017), Baby Fozzie in Muppet Babies (2018–2022), Luke Skywalker in Lego Star Wars, Woody Woodpecker in Woody Woodpecker (2017) and Woody Woodpecker Goes to Camp (2024), and Mr. Mailbox in Buddy (2026).</description>
+      <pubDate>Mon, 26 Oct 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Eric_Bauza#2026-10-26</guid>
+      <category>Canadian voice actor (1979–2026)</category>
+    </item>
     <item>
       <title>2026 Brazilian general election</title>
       <link>https://en.wikipedia.org/wiki/2026_Brazilian_general_election</link>
@@ -248,14 +256,6 @@ This is a list of equations, indicating each Wikipedia page under appropriate ba
       <pubDate>Sun, 27 Sep 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Justin_Verlander#2026-09-27</guid>
       <category>American baseball player (born 1983)</category>
-    </item>
-    <item>
-      <title>Ted Kaczynski</title>
-      <link>https://en.wikipedia.org/wiki/Ted_Kaczynski</link>
-      <description>Theodore John Kaczynski, also known as the Unabomber, was an American mathematician and domestic terrorist. A mathematics prodigy, he abandoned his academic career in 1969 to pursue a reclusive primitive lifestyle and lone wolf terrorism campaign.</description>
-      <pubDate>Sat, 26 Sep 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Ted_Kaczynski#2026-09-26</guid>
-      <category>American domestic terrorist (1942–2023)</category>
     </item>
   </channel>
 </rss>

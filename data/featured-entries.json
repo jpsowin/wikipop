@@ -1506,7 +1506,11 @@
   },
   {
     "title": "Attack of the Dead Men",
-    "url": "https://en.wikipedia.org/wiki/Attack_of_the_Dead_Men"
+    "url": "https://en.wikipedia.org/wiki/Attack_of_the_Dead_Men",
+    "extract": "The Attack of the Dead Men, or the Battle of Osowiec Fortress, was a battle of World War I that took place at Osowiec Fortress, at 4:00 AM on August 6, 1915.",
+    "description": "Battle at Osowiec Fortress during WWI",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Osowiec_fortress_church.jpg/330px-Osowiec_fortress_church.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "imageChecked": true
   },
   {
     "title": "White-nose syndrome",

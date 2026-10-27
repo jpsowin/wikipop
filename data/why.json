@@ -300,5 +300,23 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-10-26T14:32:10.402Z"
+  },
+  "2026-10-26": {
+    "date": "2026-10-26",
+    "title": "Eric_Bauza",
+    "show": true,
+    "confidence": 97,
+    "bullets": [
+      "Eric Bauza, the voice actor who gave [Bugs Bunny](https://en.wikipedia.org/wiki/Bugs_Bunny) and [Daffy Duck](https://en.wikipedia.org/wiki/Daffy_Duck) their modern voices, [died at 46](https://www.cbsnews.com/losangeles/news/eric-bauza-death-at-46-bugs-bunny-daffy-duck-looney-tunes/).",
+      "He grew up in [Scarborough, Toronto](https://en.wikipedia.org/wiki/Scarborough,_Toronto), drawing along with [Mr. Dressup](https://en.wikipedia.org/wiki/Mr._Dressup) and watching [Looney Tunes](https://en.wikipedia.org/wiki/Looney_Tunes) with his dad and grandfather.",
+      "He went on to win [three Children's & Family Emmys](https://variety.com/2026/film/people-news/eric-bauza-dead-looney-tunes-voice-actor-1236930931/), including for [Teen Titans Go!](https://en.wikipedia.org/wiki/Teen_Titans_Go!) and [Looney Tunes Cartoons](https://en.wikipedia.org/wiki/Looney_Tunes_Cartoons).",
+      "Animation colleagues including Dan Povenmire, Dana Terrace and Jorge R. Gutierrez have paid tribute to him."
+    ],
+    "sources": [
+      "https://www.cbsnews.com/losangeles/news/eric-bauza-death-at-46-bugs-bunny-daffy-duck-looney-tunes/",
+      "https://variety.com/2026/film/people-news/eric-bauza-dead-looney-tunes-voice-actor-1236930931/"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-27T13:30:25.312Z"
   }
 }
