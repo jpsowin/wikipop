@@ -338,5 +338,22 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-10-28T14:18:25.623Z"
+  },
+  "2026-10-28": {
+    "date": "2026-10-28",
+    "title": "Susan_Saint_James",
+    "show": true,
+    "confidence": 93,
+    "bullets": [
+      "Susan Saint James, who starred opposite [Rock Hudson](https://en.wikipedia.org/wiki/Rock_Hudson) in [McMillan & Wife](https://en.wikipedia.org/wiki/McMillan_%26_Wife) and [Jane Curtin](https://en.wikipedia.org/wiki/Jane_Curtin) in [Kate & Allie](https://en.wikipedia.org/wiki/Kate_%26_Allie), died at 80.",
+      "Her family [said](https://www.cnn.com/2026/10/27/entertainment/susan-saint-james-death), \"She never met a stranger,\" and even the shoe-store clerk usually left knowing her whole life story.",
+      "She was a longtime volunteer and board member for the [Special Olympics](https://en.wikipedia.org/wiki/Special_Olympics), and Curtin [paid tribute](https://abcnews.com/GMA/Culture/jane-curtin-pays-tribute-kate-allie-star-susan/story?id=137617978) after her death."
+    ],
+    "sources": [
+      "https://www.cnn.com/2026/10/27/entertainment/susan-saint-james-death",
+      "https://abcnews.com/GMA/Culture/jane-curtin-pays-tribute-kate-allie-star-susan/story?id=137617978"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-29T14:36:16.849Z"
   }
 }
