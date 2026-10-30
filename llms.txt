@@ -7,6 +7,8 @@ WikiPop tracks the most-viewed Wikipedia article every day. Static site, public 
 - Today's top article: https://wikipop.sowin.io/
 - Full archive (every day): https://wikipop.sowin.io/archive.html
 - Per-day pages with the full top 10 of that day: https://wikipop.sowin.io/day/YYYY-MM-DD-slug/
+- Monthly roundups (top 25 for the month and its biggest single days): https://wikipop.sowin.io/month/YYYY-MM/
+- Year pages (top 25 of the year, biggest single-day spikes, month by month): https://wikipop.sowin.io/year/YYYY/
 - Trends, rising articles, and deep cuts: https://wikipop.sowin.io/explore.html
 
 ## Data

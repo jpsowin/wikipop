@@ -13,6 +13,12 @@ if (!API_KEY) {
 const FEATURED_FILE = path.join(__dirname, "..", "data", "featured-entries.json");
 const FEATURED_INDEX_FILE = path.join(__dirname, "..", "data", "featured-index.json");
 const LAST_EMAIL_FILE = path.join(__dirname, "..", "data", "last-email.txt");
+const { dayAbsoluteUrl } = require("./build");
+
+// Each subscriber's personal signup link. Buttondown fills in the code per
+// recipient (Settings → General → Referrals must be on to credit referrals),
+// so a forwarded email credits whoever forwarded it.
+const REFERRAL_URL = "https://buttondown.com/wikipop?referral_code={{ subscriber.referral_code }}";
 
 // The comic-book layout is sent with Buttondown's "naked" template so our
 // HTML isn't wrapped or recolored. EMAIL_DESIGN=classic falls back to the old
@@ -280,6 +286,7 @@ function panel(inner) {
 function buildComicEmailHtml(article, recentArticles, featured) {
   const title = escapeHtml(displayTitle(article.title));
   const url = escapeHtml(article.url || `https://en.wikipedia.org/wiki/${encodeURIComponent(article.title)}`);
+  const dayUrl = escapeHtml(dayAbsoluteUrl(article));
   const why = whyEntryFor(article);
   const linkStyle = `color:${C.black};text-decoration:underline;`;
   const label = (text) => `<div style="font-family:${HEAD_FONT};font-size:17px;letter-spacing:1px;color:${C.red};margin:0 0 4px;">${text}</div>`;
@@ -303,7 +310,7 @@ function buildComicEmailHtml(article, recentArticles, featured) {
 
   const hero = panel(`
             ${label(escapeHtml(formatDateLong(article.date)))}
-            <div style="font-family:${HEAD_FONT};font-size:40px;line-height:1.02;letter-spacing:0.5px;margin:0 0 6px;"><a href="${url}" style="color:${C.black};text-decoration:none;">${title}</a></div>
+            <div style="font-family:${HEAD_FONT};font-size:40px;line-height:1.02;letter-spacing:0.5px;margin:0 0 6px;"><a href="${dayUrl}" style="color:${C.black};text-decoration:none;">${title}</a></div>
             ${article.description ? `<div style="font-family:${BODY_FONT};font-size:14px;font-style:italic;color:${C.gray};margin:0 0 14px;">${escapeHtml(article.description)}</div>` : ""}
             ${thumb}
             <div style="font-family:${BODY_FONT};font-size:16px;line-height:1.6;color:#222;">${escapeHtml(article.extract || "")}</div>
@@ -316,7 +323,8 @@ function buildComicEmailHtml(article, recentArticles, featured) {
                 </td>
                 <td style="padding-left:16px;font-family:${HEAD_FONT};font-size:20px;letter-spacing:0.5px;color:${C.black};">${formatNumber(article.views)} <span style="font-family:${BODY_FONT};font-size:13px;color:${C.gray};">views</span></td>
               </tr>
-            </table>`);
+            </table>
+            <div style="margin:12px 0 0;font-family:${BODY_FONT};font-size:14px;"><a href="${dayUrl}" style="color:${C.red};font-weight:700;text-decoration:none;">See the full top 10 &rarr;</a></div>`);
 
   const obscure = featured ? panel(`
             ${label("Obscure entry of the day")}
@@ -342,8 +350,11 @@ function buildComicEmailHtml(article, recentArticles, featured) {
         ${obscure}
         <tr>
           <td align="center" style="font-family:${BODY_FONT};font-size:13px;color:${C.black};padding:2px 0 0;">
-            <a href="https://wikipop.sowin.io" style="color:${C.black};font-weight:700;text-decoration:none;">wikipop.sowin.io</a>
-            <div style="margin:10px 0 0;"><a href="{{ unsubscribe_url }}" style="font-size:11px;color:#777777;text-decoration:underline;">Unsubscribe</a></div>
+            <div style="font-size:14px;line-height:1.55;margin:0 0 14px;">
+              <strong>Got this from a friend?</strong> <a href="${REFERRAL_URL}" style="color:${C.black};font-weight:700;">Get WikiPop every morning</a>, free.<br>
+              Know someone who'd like it? Forward this email or send them <a href="${REFERRAL_URL}" style="color:${C.black};">your invite link</a>.
+            </div>
+            <div><a href="{{ unsubscribe_url }}" style="font-size:11px;color:#777777;text-decoration:underline;">Unsubscribe</a></div>
           </td>
         </tr>
       </table>

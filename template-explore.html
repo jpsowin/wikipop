@@ -20,202 +20,322 @@
   <link rel="sitemap" type="application/xml" href="sitemap.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg: #0f1117; --bg-raised: #181a23; --text: #c8cdd8;
-      --text-muted: #7a7f8e; --text-bright: #eef0f5;
-      --accent: #f06449; --accent-glow: rgba(240, 100, 73, 0.15);
-      --border: #2a2d3a; --radius: 8px;
-      --green: #4ade80; --red: #f87171;
+      --red: #d00d00;
+      --yellow: #ffdf00;
+      --black: #111;
+      --white: #fdfcf3;
+      --cream: #f7f5eb;
+      --green: #0b7a2b;
+      --bw: 3px;
     }
-    :root.light {
-      --bg: #faf9f6; --bg-raised: #ffffff; --text: #4a4a4a;
-      --text-muted: #8a8a8a; --text-bright: #1a1a1a;
-      --accent: #d94f3b; --accent-glow: rgba(217, 79, 59, 0.1);
-      --border: #e0ddd6; --green: #16a34a; --red: #dc2626;
-    }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: "Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg); color: var(--text);
-      line-height: 1.7; min-height: 100vh;
+      font-family: "Instrument Sans", -apple-system, sans-serif;
+      background-color: var(--yellow);
+      background-image:
+        radial-gradient(circle, var(--red) 5px, transparent 5.5px),
+        radial-gradient(circle, var(--red) 5px, transparent 5.5px);
+      background-size: 19px 28.5px, 19px 28.5px;
+      background-position: 0 0, 9.5px 14.25px;
+      color: var(--black);
+      line-height: 1.6;
+      min-height: 100vh;
     }
 
+    /* ============ NAV ============ */
     nav {
-      position: sticky; top: 0; z-index: 100;
+      position: sticky; top: 1.5rem; z-index: 100;
+      padding: 0.8rem 1.5rem;
+      background: var(--white);
+      border: var(--bw) solid var(--black);
+      border-radius: 50px;
+      margin: 1.5rem auto 1.5rem;
+      width: calc(100% - 3rem);
+      max-width: 760px;
       display: flex; justify-content: space-between; align-items: center;
-      max-width: 860px; margin: 0 auto; padding: 1.25rem 1.5rem;
-      background: var(--bg); backdrop-filter: blur(12px);
+      box-shadow: 6px 6px 0 var(--black);
     }
-    .logo { font-family: "Fraunces", serif; font-size: 1.35rem; font-weight: 700; color: var(--text-bright); text-decoration: none; letter-spacing: -0.02em; }
-    .logo span { color: var(--accent); }
-    .theme-toggle {
-      background: none; border: 1px solid var(--border); border-radius: 50%;
-      width: 36px; height: 36px; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--text-muted); font-size: 1rem;
+    .logo {
+      font-family: "Bangers", cursive; font-size: 2.2rem;
+      color: var(--black); text-decoration: none; line-height: 1;
     }
-    .theme-toggle:hover { color: var(--text-bright); border-color: var(--text-muted); }
+    .logo span { color: var(--red); }
+    .nav-back {
+      font-family: "Bangers", cursive; font-size: 1.1rem;
+      border: var(--bw) solid var(--black);
+      background: var(--white); color: var(--black);
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      text-decoration: none;
+    }
+    .nav-back:hover { background: var(--black); color: var(--white); }
 
-    main { max-width: 860px; margin: 0 auto; padding: 1rem 1.5rem 4rem; }
-
-    .page-header { margin-bottom: 2.5rem; }
-    .page-header h1 {
-      font-family: "Fraunces", serif; font-size: clamp(1.5rem, 4vw, 2.25rem);
-      font-weight: 700; color: var(--text-bright); letter-spacing: -0.02em;
-    }
-    .page-header p { color: var(--text-muted); font-size: 0.95rem; margin-top: 0.25rem; }
-
-    /* --- SECTIONS --- */
-    .explore-section { margin-bottom: 3rem; }
-    .explore-section h2 {
-      font-family: "Fraunces", serif; font-size: 1.3rem;
-      color: var(--text-bright); margin-bottom: 0.25rem;
-    }
-    .explore-section .section-desc {
-      color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem; line-height: 1.5;
+    /* ============ MAIN ============ */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 1.5rem 2rem;
+      position: relative;
+      z-index: 2;
     }
 
-    /* --- TABLE --- */
+    /* ============ SPEECH BUBBLE ============ */
+    .speech-bubble-wrap {
+      margin: 2rem auto 2rem;
+      max-width: 580px;
+      position: relative; z-index: 2;
+    }
+    .speech-bubble {
+      background: var(--white);
+      border: 5px solid var(--black);
+      padding: 1.2rem 1.5rem 1.5rem;
+      position: relative;
+      transform: rotate(-3deg);
+      box-shadow: 0 0 0 1px var(--black), 10px 10px 0 var(--black);
+      outline: 1px solid transparent;
+    }
+    .speech-bubble h1 {
+      font-family: "Bangers", cursive;
+      color: var(--black);
+      margin: 0;
+      line-height: 0.92;
+      display: flex;
+      flex-direction: column;
+      letter-spacing: 0.01em;
+      font-weight: normal;
+    }
+    .speech-bubble h1 em { color: var(--red); font-style: normal; }
+    .speech-bubble h1 .line1 {
+      font-size: clamp(1.4rem, 5vw, 2.4rem);
+      align-self: center; text-align: center;
+    }
+    .speech-bubble h1 .line2 {
+      font-size: clamp(2.4rem, 9vw, 4.6rem);
+      align-self: center; text-align: center;
+      letter-spacing: -0.01em; line-height: 1; margin-top: 0.1rem;
+    }
+    .speech-bubble h1 .line3 {
+      font-size: clamp(1.5rem, 5.5vw, 2.6rem);
+      align-self: center; text-align: center; margin-top: 0.1rem;
+    }
+
+    /* ============ SECTION PILLS ============ */
+    .section-nav {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 0.7rem; margin: 0 0 1.75rem;
+    }
+    .section-nav a {
+      font-family: "Bangers", cursive; font-size: 1.15rem; letter-spacing: 0.03em;
+      background: var(--white); color: var(--black); text-decoration: none;
+      border: var(--bw) solid var(--black); border-radius: 50px;
+      padding: 0.3rem 1.1rem; line-height: 1.4;
+      box-shadow: 4px 4px 0 var(--black);
+    }
+    .section-nav a:hover { background: var(--black); color: var(--white); }
+
+    /* ============ PANELS ============ */
+    .panel {
+      background: var(--white);
+      border: 5px solid var(--black);
+      box-shadow: 8px 8px 0 var(--black);
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1.75rem;
+    }
+    .explore-section { scroll-margin-top: 6.5rem; }
+    .panel h2 {
+      font-family: "Bangers", cursive; font-weight: normal;
+      font-size: clamp(1.4rem, 4vw, 1.8rem); line-height: 1.1;
+      margin-bottom: 0.3rem;
+    }
+    .panel .section-desc {
+      font-size: 0.85rem; color: #666; line-height: 1.5; margin-bottom: 1rem;
+    }
+
+    /* ============ TABLES (Top 25, Biggest Movers) ============ */
     .explore-table { width: 100%; border-collapse: collapse; }
     .explore-table th {
-      text-align: left; font-size: 0.7rem; text-transform: uppercase;
-      letter-spacing: 0.08em; color: var(--text-muted);
-      padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border);
+      text-align: left; font-size: 0.65rem; text-transform: uppercase;
+      letter-spacing: 0.08em; color: #888; font-weight: 700;
+      padding: 0.5rem 0; border-bottom: 2px solid var(--black);
     }
     .explore-table th:last-child { text-align: right; }
     .explore-table td {
-      padding: 0.55rem 0.5rem; border-bottom: 1px solid var(--border); font-size: 0.9rem;
+      padding: 0.6rem 0; border-bottom: 1px solid #ddd;
+      font-size: 0.92rem; vertical-align: baseline;
     }
+    .explore-table tbody tr:last-child td { border-bottom: none; }
 
     .explore-rank {
-      color: var(--text-muted); font-size: 0.8rem; font-variant-numeric: tabular-nums;
-      width: 50px; white-space: nowrap;
+      font-family: "Bangers", cursive; font-size: 1.3rem; color: var(--red);
+      width: 52px; white-space: nowrap; letter-spacing: 0.02em;
     }
-    .explore-title a { color: var(--text-bright); text-decoration: none; }
-    .explore-title a:hover { color: var(--accent); }
+    .explore-title a { color: var(--black); text-decoration: none; font-weight: 600; }
+    .explore-title a:hover { color: var(--red); }
     .explore-desc {
-      color: var(--text-muted); font-size: 0.8rem;
+      color: #666; font-size: 0.8rem; padding-left: 1rem !important;
       white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 250px;
     }
     .explore-views {
-      text-align: right; color: var(--text-muted); font-size: 0.85rem;
-      font-variant-numeric: tabular-nums; white-space: nowrap;
+      text-align: right; color: #555; font-size: 0.85rem;
+      font-variant-numeric: tabular-nums; white-space: nowrap; padding-left: 1rem !important;
     }
     .explore-change {
-      text-align: right; font-size: 0.8rem; font-weight: 600;
-      font-variant-numeric: tabular-nums; white-space: nowrap; width: 80px;
+      text-align: right; font-size: 0.85rem; font-weight: 700;
+      font-variant-numeric: tabular-nums; white-space: nowrap; width: 80px; padding-left: 0.75rem !important;
     }
     .explore-change.up { color: var(--green); }
     .explore-change.down { color: var(--red); }
 
-    /* --- COUNTRY GRID --- */
+    /* ============ CARDS (New Arrivals, Deep Cuts) ============ */
+    .explore-cards {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem;
+    }
+    .explore-card {
+      display: grid; grid-template-columns: 2.5rem minmax(0, 1fr) auto;
+      gap: 0.2rem 0.5rem; align-items: baseline;
+      border: 2px solid var(--black); background: var(--cream);
+      padding: 0.65rem 0.85rem;
+    }
+    .explore-card-rank {
+      font-family: "Bangers", cursive; font-size: 1.15rem; color: var(--red);
+      letter-spacing: 0.03em;
+    }
+    .explore-card-body { min-width: 0; }
+    .explore-card-title {
+      color: var(--black); text-decoration: none; font-weight: 600;
+      font-size: 0.92rem; line-height: 1.3; display: block; overflow-wrap: anywhere;
+    }
+    .explore-card-title:hover { color: var(--red); }
+    .explore-card-desc {
+      color: #666; font-size: 0.78rem; line-height: 1.4; display: block; margin-top: 0.1rem;
+    }
+    .explore-card-desc:empty { display: none; }
+    .explore-card-views {
+      color: #555; font-size: 0.8rem; font-variant-numeric: tabular-nums;
+      white-space: nowrap; text-align: right;
+    }
+
+    /* ============ AROUND THE WORLD ============ */
     .country-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.25rem;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem;
     }
     .country-block {
-      border: 1px solid var(--border); border-radius: var(--radius);
-      background: var(--bg-raised); padding: 1rem 1.1rem; overflow: hidden;
+      border: 2px solid var(--black); background: var(--cream);
+      padding: 0.75rem 0.95rem 0.5rem; min-width: 0;
     }
     .country-header {
-      display: flex; align-items: center; gap: 0.5rem;
-      margin-bottom: 0.6rem; font-weight: 600; font-size: 0.95rem;
-      color: var(--text-bright);
+      display: flex; flex-wrap: wrap; align-items: center; gap: 0.1rem 0.5rem;
+      margin-bottom: 0.35rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--black);
+      font-family: "Bangers", cursive; font-size: 1.3rem; line-height: 1.15; letter-spacing: 0.03em;
     }
-    .country-flag { font-size: 1.25rem; }
-    .country-lang { color: var(--text-muted); font-size: 0.75rem; font-weight: 400; }
+    .country-flag { font-size: 1.1rem; letter-spacing: 0; }
+    .country-lang {
+      font-family: "Instrument Sans", sans-serif; font-size: 0.7rem; font-weight: 600;
+      color: #666; letter-spacing: 0.02em;
+    }
     .country-list { list-style: none; }
     .country-list li {
-      display: flex; align-items: baseline; gap: 0.4rem;
-      padding: 0.25rem 0; border-bottom: 1px solid var(--border);
-      font-size: 0.85rem;
+      display: flex; align-items: baseline; gap: 0.55rem;
+      padding: 0.35rem 0; border-bottom: 1px solid #ddd; font-size: 0.88rem;
     }
     .country-list li:last-child { border-bottom: none; }
     .country-list-rank {
-      color: var(--text-muted); font-size: 0.75rem; min-width: 1.5rem;
-      text-align: right; flex-shrink: 0;
+      font-family: "Bangers", cursive; color: var(--red); font-size: 1.1rem;
+      min-width: 1rem; flex-shrink: 0;
     }
-    .country-list-title { flex: 1; min-width: 0; }
-    .country-list-title a {
-      color: var(--text-bright); text-decoration: none;
-    }
-    .country-list-title a:hover { color: var(--accent); }
-    .country-list-en {
-      font-size: 0.7rem; color: var(--text-muted); margin-left: 0.15rem;
-    }
-    .country-list-en a { color: var(--text-muted); text-decoration: none; }
-    .country-list-en a:hover { color: var(--accent); }
+    .country-list-title { flex: 1; min-width: 0; overflow-wrap: anywhere; line-height: 1.35; }
+    .country-list-title a { color: var(--black); text-decoration: none; font-weight: 600; }
+    .country-list-title a:hover { color: var(--red); }
+    .country-list-en { display: block; font-size: 0.74rem; color: #666; line-height: 1.3; }
+    .country-list-en a { color: #666; font-weight: 400; text-decoration: none; }
+    .country-list-en a:hover { color: var(--red); }
     .country-list-views {
-      color: var(--text-muted); font-size: 0.8rem; font-variant-numeric: tabular-nums;
+      color: #555; font-size: 0.78rem; font-variant-numeric: tabular-nums;
       white-space: nowrap; flex-shrink: 0;
     }
 
-    /* --- CARDS --- */
-    .explore-cards {
-      display: grid; grid-template-columns: 1fr; gap: 0.5rem;
-    }
-    .explore-card {
-      display: flex; align-items: center; gap: 0.75rem;
-      padding: 0.75rem 1rem; border-radius: var(--radius);
-      border: 1px solid var(--border); background: var(--bg-raised);
-    }
-    .explore-card:hover { border-color: var(--accent); }
-    .explore-card-rank {
-      color: var(--text-muted); font-size: 0.75rem; font-variant-numeric: tabular-nums;
-      min-width: 36px; text-align: right; flex-shrink: 0;
-    }
-    .explore-card-body { flex: 1; min-width: 0; }
-    .explore-card-title {
-      color: var(--text-bright); text-decoration: none; font-weight: 600;
-      font-size: 0.9rem; display: block;
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-    }
-    .explore-card-title:hover { color: var(--accent); }
-    .explore-card-desc {
-      color: var(--text-muted); font-size: 0.75rem; display: block;
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-    }
-    .explore-card-views {
-      color: var(--text-muted); font-size: 0.8rem; font-variant-numeric: tabular-nums;
-      white-space: nowrap; flex-shrink: 0;
-    }
-
-    /* --- NAV PILLS --- */
-    .section-nav {
-      display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem;
-    }
-    .section-nav a {
-      display: inline-block; font-size: 0.8rem; font-weight: 600;
-      color: var(--text-muted); border: 1px solid var(--border);
-      padding: 0.3rem 0.75rem; border-radius: 100px;
-      text-decoration: none;
-    }
-    .section-nav a:hover { color: var(--accent); border-color: var(--accent); }
-
-    /* --- DIVIDER --- */
-    .section-divider { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
-
+    /* ============ FOOTER ============ */
     footer {
-      max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 3rem;
-      border-top: 1px solid var(--border); display: flex;
-      justify-content: space-between; align-items: center;
-      color: var(--text-muted); font-size: 0.8rem;
+      background: var(--white);
+      border: var(--bw) solid var(--black);
+      border-radius: 50px;
+      margin: 2rem auto 3rem;
+      width: calc(100% - 3rem);
+      max-width: 760px;
+      padding: 0.8rem 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      color: var(--black); font-size: 0.85rem; font-weight: 700;
+      box-shadow: 6px 6px 0 var(--black);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
-    footer a { color: var(--text-muted); text-decoration: none; }
-    footer a:hover { color: var(--text-bright); }
+    footer a { color: var(--black); text-decoration: none; }
+    footer a:hover { color: var(--red); }
     .footer-links { display: flex; gap: 1.25rem; }
 
+{{SIGNUP_CSS}}
+
+    @media (max-width: 700px) {
+      .explore-cards { grid-template-columns: 1fr; }
+    }
+
     @media (max-width: 600px) {
-      nav { padding: 1rem; }
-      main { padding: 1rem 1rem 3rem; }
-      .explore-desc { display: none; }
-      .explore-card-desc { display: none; }
-      .country-grid { grid-template-columns: 1fr; }
-      footer { flex-direction: column; gap: 0.75rem; text-align: center; }
-      .footer-links { justify-content: center; }
+      nav { padding: 0.6rem 1.2rem; width: calc(100% - 2rem); margin-top: 1rem; }
+      main { padding: 0 1rem 2rem; }
+      .speech-bubble-wrap { width: calc(100% - 30px); margin-left: 15px; }
+      .speech-bubble { padding: 0.9rem 1.2rem 1.1rem; transform: rotate(-2deg); box-shadow: 6px 6px 0 var(--black); }
+      .speech-bubble h1 .line1 { font-size: 6.5vw; white-space: nowrap; }
+      .speech-bubble h1 .line2 { font-size: 15vw; white-space: nowrap; }
+      .speech-bubble h1 .line3 { font-size: 7.5vw; white-space: nowrap; }
+
+      .section-nav { gap: 0.55rem; margin-bottom: 1.5rem; }
+      .section-nav a { font-size: 1.05rem; padding: 0.3rem 0.9rem; box-shadow: 3px 3px 0 var(--black); }
+
+      .panel { padding: 1rem; box-shadow: 5px 5px 0 var(--black); }
+
+      /* Tables turn into ranked rows: rank | title + category | views (+ change) */
+      .explore-table, .explore-table tbody { display: block; }
+      .explore-table thead {
+        position: absolute; width: 1px; height: 1px; overflow: hidden;
+        clip: rect(0 0 0 0); white-space: nowrap;
+      }
+      .explore-table tr {
+        display: grid; grid-template-columns: 40px minmax(0, 1fr) auto;
+        column-gap: 0.5rem; align-items: baseline;
+        padding: 0.75rem 0; border-bottom: 1px solid #ddd;
+      }
+      .explore-table tbody tr:last-child { border-bottom: none; }
+      .explore-table td { display: block; padding: 0; border: none; font-size: 0.95rem; }
+      .explore-rank { grid-column: 1; grid-row: 1; width: auto; font-size: 1.2rem; }
+      .explore-title { grid-column: 2; grid-row: 1; min-width: 0; overflow-wrap: anywhere; line-height: 1.35; }
+      .explore-desc {
+        grid-column: 2; grid-row: 2; padding-left: 0 !important; max-width: none;
+        white-space: normal; overflow: visible; line-height: 1.4;
+      }
+      .explore-desc:empty { display: none; }
+      .explore-views { grid-column: 3; grid-row: 1; padding-left: 0 !important; font-size: 0.9rem; }
+      .explore-change { grid-column: 3; grid-row: 2; width: auto; padding-left: 0 !important; font-size: 0.85rem; }
+
+      .explore-card { padding: 0.65rem 0.8rem; }
+      .country-block { padding: 0.7rem 0.85rem 0.45rem; }
+      .country-list li { padding: 0.55rem 0; }
+
+      footer {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+        border-radius: 20px;
+        padding: 1.25rem 1.2rem;
+        width: calc(100% - 2rem);
+      }
+      .footer-links { justify-content: center; flex-wrap: wrap; }
     }
   </style>
   <!-- Google tag (gtag.js) -->
@@ -229,16 +349,19 @@
 </head>
 <body>
   <nav>
-    <a href="index.html" class="logo">Wiki<span>Pop</span></a>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-      <span class="theme-icon">&#9790;</span>
-    </button>
+    <a href="index.html" class="logo">Wiki<span>Pop!</span></a>
+    <a href="index.html" class="nav-back">Today</a>
   </nav>
 
   <main>
-    <div class="page-header">
-      <h1>Explore</h1>
-      <p>What the world was reading on Wikipedia &mdash; {{DATE}}</p>
+    <div class="speech-bubble-wrap">
+      <div class="speech-bubble">
+        <h1>
+          <span class="line1">Explore what&rsquo;s</span>
+          <span class="line2"><em>trending</em></span>
+          <span class="line3">on Wikipedia &mdash; {{DATE}}</span>
+        </h1>
+      </div>
     </div>
 
     <div class="section-nav">
@@ -249,29 +372,27 @@
       <a href="#deep-cuts">Deep Cuts</a>
     </div>
 
-    <div class="explore-section" id="top25">
+    <section class="panel explore-section" id="top25">
       <h2>Top 25</h2>
       <p class="section-desc">The most-viewed Wikipedia articles yesterday, excluding meta pages.</p>
       <table class="explore-table">
         <thead><tr><th>Rank</th><th>Article</th><th>Category</th><th>Views</th></tr></thead>
         <tbody>{{TOP25_ROWS}}</tbody>
       </table>
-    </div>
+    </section>
 
-    <hr class="section-divider">
+    <div class="explore-signup">{{SIGNUP}}</div>
 
-    <div class="explore-section" id="movers">
+    <section class="panel explore-section" id="movers">
       <h2>Biggest Movers</h2>
       <p class="section-desc">Articles that spiked the most compared to the day before. Something happened.</p>
       <table class="explore-table">
         <thead><tr><th>Rank</th><th>Article</th><th>Category</th><th>Views</th><th>Change</th></tr></thead>
         <tbody>{{MOVER_ROWS}}</tbody>
       </table>
-    </div>
+    </section>
 
-    <hr class="section-divider">
-
-    <div class="explore-section" id="newcomers">
+    <section class="panel explore-section" id="newcomers">
       <h2>New Arrivals</h2>
       <p class="section-desc">
         Articles that appeared in the top 500 yesterday but weren't anywhere in the top 1,000 the day before.
@@ -280,20 +401,16 @@
       <div class="explore-cards">
         {{NEWCOMER_CARDS}}
       </div>
-    </div>
+    </section>
 
-    <hr class="section-divider">
-
-    <div class="explore-section" id="world">
+    <section class="panel explore-section" id="world">
       <h2>Around the World</h2>
       <div class="country-grid">
         {{COUNTRY_BLOCKS}}
       </div>
-    </div>
+    </section>
 
-    <hr class="section-divider">
-
-    <div class="explore-section" id="deep-cuts">
+    <section class="panel explore-section" id="deep-cuts">
       <h2>Deep Cuts</h2>
       <p class="section-desc">
         Articles ranked 700&ndash;1,000. Popular enough to make the top thousand, obscure enough that you've
@@ -302,7 +419,7 @@
       <div class="explore-cards">
         {{DEEP_CUT_CARDS}}
       </div>
-    </div>
+    </section>
   </main>
 
   <footer>
@@ -314,21 +431,6 @@
       <a href="feed.xml">RSS</a>
     </div>
   </footer>
-
-  <script>
-    function toggleTheme() {
-      const root = document.documentElement;
-      const isLight = root.classList.toggle("light");
-      localStorage.setItem("theme", isLight ? "light" : "dark");
-      document.querySelector(".theme-icon").innerHTML = isLight ? "&#9728;" : "&#9790;";
-    }
-    (function () {
-      const saved = localStorage.getItem("theme");
-      if (saved === "light") {
-        document.documentElement.classList.add("light");
-        document.querySelector(".theme-icon").innerHTML = "&#9728;";
-      }
-    })();
-  </script>
+{{SIGNUP_SCRIPT}}
 </body>
 </html>

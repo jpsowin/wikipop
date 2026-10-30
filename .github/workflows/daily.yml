@@ -29,10 +29,11 @@ jobs:
 
       - name: Fetch and build
         run: |
+          # Explore goes first so the sitemap's lastmod sees today's version.
+          node scripts/build-explore.js
           # Look back two weeks so multi-day Wikimedia outages still get filled
           # in once the data shows up (days we already have are skipped instantly).
           node scripts/build.js --backfill 14
-          node scripts/build-explore.js
 
       - name: Explain the day's pick
         # Writes the "Why was everyone looking at this?" blurb, then rebuilds the
@@ -47,24 +48,52 @@ jobs:
             node scripts/build.js --no-daily
           fi
 
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/articles.json data/featured-index.json data/featured-entries.json index.html archive.html explore.html featured.html changelog.html feed.xml sitemap.xml llms-full.txt day/ month/ year/
+          git add data/monthly-top.json data/lastmod.json || true
+          git add data/why.json || true
+          git diff --staged --quiet || git commit -m "Daily update: $(date -u +%Y-%m-%d)"
+          git push
+
+      - name: Wait for the site to update
+        # The email and IndexNow both point at the newest day page, so wait
+        # until GitHub Pages serves it (up to 5 minutes).
+        continue-on-error: true
+        run: |
+          URL=$(node -e 'const a = require("./data/articles.json"); console.log(require("./scripts/build").dayAbsoluteUrl(a[a.length - 1]))')
+          for i in $(seq 1 30); do
+            if curl -sf -o /dev/null "$URL"; then echo "Live: $URL"; exit 0; fi
+            sleep 10
+          done
+          echo "::warning::$URL still isn't live after 5 minutes; continuing anyway."
+
       - name: Send daily email
         id: email
-        # A failed email shouldn't stop the site from updating; the last step
+        # A failed email shouldn't stop the rest of the run; the last step
         # still marks the run as failed so it gets noticed.
         continue-on-error: true
         env:
           BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
         run: node scripts/send-email.js
 
-      - name: Commit and push
+      - name: Record the sent email
+        # last-email.txt keeps a re-run from emailing everyone twice, so retry
+        # the push once (after pulling) if something else pushed in between.
+        if: steps.email.outcome == 'success'
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/articles.json data/featured-index.json data/featured-entries.json index.html archive.html explore.html featured.html changelog.html feed.xml sitemap.xml llms-full.txt day/
-          git add data/last-email.txt || true
-          git add data/why.json || true
-          git diff --staged --quiet || git commit -m "Daily update: $(date -u +%Y-%m-%d)"
-          git push
+          git add data/last-email.txt
+          git diff --staged --quiet && exit 0
+          git commit -m "Record daily email: $(date -u +%Y-%m-%d)"
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Tell search engines about changed pages
+        # IndexNow (Bing and others) gets every page whose HTML changed today.
+        # Never fails the run.
+        continue-on-error: true
+        run: node scripts/indexnow.js
 
       - name: Flag a failed email
         if: steps.email.outcome == 'failure'

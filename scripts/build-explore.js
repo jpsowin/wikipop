@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const https = require("https");
+const { SIGNUP_CSS, SIGNUP_SCRIPT, signupHtml } = require("./signup");
 
 const EXPLORE_FILE = path.join(__dirname, "..", "explore.html");
 const TEMPLATE_FILE = path.join(__dirname, "..", "template-explore.html");
@@ -351,14 +352,17 @@ async function main() {
 
   const template = fs.readFileSync(TEMPLATE_FILE, "utf-8");
   const html = template
-    .replace(/\{\{BASE_URL\}\}/g, BASE_URL)
-    .replace(/\{\{DATE\}\}/g, dateStr)
-    .replace("{{TOP25_ROWS}}", top25Rows)
-    .replace("{{MOVER_ROWS}}", moverRows)
-    .replace("{{NEWCOMER_CARDS}}", newcomerCards)
-    .replace("{{DEEP_CUT_CARDS}}", deepCutCards)
-    .replace("{{COUNTRY_BLOCKS}}", countryBlocks)
-    .replace("{{CURRENT_YEAR}}", new Date().getUTCFullYear().toString());
+    .replace(/\{\{BASE_URL\}\}/g, () => BASE_URL)
+    .replace(/\{\{DATE\}\}/g, () => dateStr)
+    .replace("{{TOP25_ROWS}}", () => top25Rows)
+    .replace("{{MOVER_ROWS}}", () => moverRows)
+    .replace("{{NEWCOMER_CARDS}}", () => newcomerCards)
+    .replace("{{DEEP_CUT_CARDS}}", () => deepCutCards)
+    .replace("{{COUNTRY_BLOCKS}}", () => countryBlocks)
+    .replace("{{SIGNUP_CSS}}", () => SIGNUP_CSS)
+    .replace("{{SIGNUP}}", () => signupHtml("explore"))
+    .replace("{{SIGNUP_SCRIPT}}", () => SIGNUP_SCRIPT)
+    .replace("{{CURRENT_YEAR}}", () => new Date().getUTCFullYear().toString());
 
   fs.writeFileSync(EXPLORE_FILE, html);
   console.log("Explore page built!");

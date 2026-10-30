@@ -216,6 +216,18 @@
     }
     .month-header:first-child td { padding-top: 0.5rem !important; }
     .archive-table tbody tr.month-header + tr td { border-top: none; }
+    .month-header a { color: inherit; text-decoration: none; }
+    .month-header a:hover { text-decoration: underline; }
+    .month-header .month-top { font-family: "Instrument Sans", sans-serif; font-size: 0.75rem; font-weight: 700; color: #555; letter-spacing: 0.04em; text-transform: uppercase; margin-left: 0.5rem; }
+    .year-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin: 0 0 0.5rem; }
+    .year-link {
+      font-family: "Bangers", cursive; font-size: 1.15rem; letter-spacing: 0.03em;
+      background: var(--white); color: var(--black); text-decoration: none;
+      border: var(--bw) solid var(--black); border-radius: 50px; padding: 0.35rem 1.1rem;
+      box-shadow: 4px 4px 0 var(--black);
+    }
+    .year-link:hover { background: var(--black); color: var(--white); }
+{{SIGNUP_CSS}}
 
     footer {
       background: var(--white);
@@ -292,6 +304,10 @@
       </div>
     </div>
 
+    <div class="year-links">{{YEAR_LINKS}}</div>
+
+    {{SIGNUP}}
+
     <div class="archive-panel">
       <table class="archive-table">
         <thead>
@@ -318,5 +334,6 @@
       <a href="feed.xml">RSS</a>
     </div>
   </footer>
+{{SIGNUP_SCRIPT}}
 </body>
 </html>

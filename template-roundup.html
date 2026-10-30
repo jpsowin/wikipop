@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <link rel="canonical" href="{{CANONICAL_URL}}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WikiPop">
+  <meta property="og:title" content="{{PAGE_TITLE}}">
+  <meta property="og:description" content="{{META_DESCRIPTION}}">
+  <meta property="og:url" content="{{CANONICAL_URL}}">
+  <meta property="og:image" content="{{OG_IMAGE}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{PAGE_TITLE}}">
+  <meta name="twitter:description" content="{{META_DESCRIPTION}}">
+  <meta name="twitter:image" content="{{OG_IMAGE}}">
+  <link rel="alternate" type="application/rss+xml" title="WikiPop RSS" href="{{ROOT}}feed.xml">
+  <link rel="sitemap" type="application/xml" href="{{ROOT}}sitemap.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --red: #d00d00;
+      --yellow: #ffdf00;
+      --black: #111;
+      --white: #fdfcf3;
+      --cream: #f7f5eb;
+      --bw: 3px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Instrument Sans", -apple-system, sans-serif;
+      background-color: var(--yellow);
+      background-image:
+        radial-gradient(circle, var(--red) 5px, transparent 5.5px),
+        radial-gradient(circle, var(--red) 5px, transparent 5.5px);
+      background-size: 19px 28.5px, 19px 28.5px;
+      background-position: 0 0, 9.5px 14.25px;
+      color: var(--black);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    nav {
+      position: sticky; top: 1.5rem; z-index: 100;
+      padding: 0.8rem 1.5rem;
+      background: var(--white);
+      border: var(--bw) solid var(--black);
+      border-radius: 50px;
+      margin: 1.5rem auto 1.5rem;
+      width: calc(100% - 3rem);
+      max-width: 760px;
+      display: flex; justify-content: space-between; align-items: center;
+      box-shadow: 6px 6px 0 var(--black);
+    }
+    .logo {
+      font-family: "Bangers", cursive; font-size: 2.2rem;
+      color: var(--black); text-decoration: none; line-height: 1;
+    }
+    .logo span { color: var(--red); }
+    .nav-back {
+      font-family: "Bangers", cursive; font-size: 1.1rem;
+      border: var(--bw) solid var(--black);
+      background: var(--white); color: var(--black);
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      text-decoration: none;
+    }
+    .nav-back:hover { background: var(--black); color: var(--white); }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 1.5rem 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .speech-bubble-wrap {
+      margin: 2rem auto 2rem;
+      max-width: 580px;
+      position: relative; z-index: 2;
+    }
+    .speech-bubble {
+      background: var(--white);
+      border: 5px solid var(--black);
+      padding: 1.2rem 1.5rem 1.5rem;
+      position: relative;
+      transform: rotate(-3deg);
+      box-shadow: 0 0 0 1px var(--black), 10px 10px 0 var(--black);
+      outline: 1px solid transparent;
+    }
+    .bubble-head {
+      font-family: "Bangers", cursive;
+      color: var(--black);
+      line-height: 0.92;
+      display: flex;
+      flex-direction: column;
+      letter-spacing: 0.01em;
+    }
+    .bubble-head em { color: var(--red); font-style: normal; }
+    .bubble-head .line1 { font-size: clamp(1.4rem, 5.5vw, 2.6rem); align-self: center; }
+    .bubble-head .line2 { font-size: clamp(2.2rem, 8.5vw, 4.2rem); align-self: center; text-align: center; letter-spacing: -0.01em; }
+    .bubble-head .line3 { font-size: clamp(1.6rem, 6vw, 2.8rem); align-self: center; text-align: center; }
+
+    .panel {
+      background: var(--white);
+      border: 5px solid var(--black);
+      box-shadow: 8px 8px 0 var(--black);
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1.75rem;
+    }
+    .panel.lead { background: var(--cream); }
+    .panel-label {
+      font-family: "Bangers", cursive; color: var(--red);
+      font-size: 1rem; letter-spacing: 0.06em; text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    h1 {
+      font-family: "Bangers", cursive; font-weight: normal;
+      font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1;
+      margin-bottom: 0.8rem;
+    }
+    h2 {
+      font-family: "Bangers", cursive; font-weight: normal;
+      font-size: clamp(1.4rem, 4vw, 1.8rem); line-height: 1.1;
+      margin-bottom: 0.3rem;
+    }
+    .answer { font-size: 1.05rem; line-height: 1.55; }
+    .answer strong { font-weight: 700; }
+    .note { font-size: 0.85rem; color: #555; margin-top: 0.75rem; }
+    .section-sub { font-size: 0.85rem; color: #666; margin-bottom: 1rem; }
+
+    .rank-list { list-style: none; }
+    .rank-item {
+      display: grid; grid-template-columns: 40px minmax(0, 1fr) auto;
+      gap: 0.8rem; padding: 0.6rem 0; border-bottom: 1px solid #ddd; align-items: baseline;
+    }
+    .rank-item:last-child { border-bottom: none; }
+    .rank-num { font-family: "Bangers", cursive; font-size: 1.3rem; color: var(--red); }
+    .rank-title { color: var(--black); text-decoration: none; font-weight: 600; }
+    .rank-title:hover { color: var(--red); }
+    .rank-desc { color: #666; font-size: 0.8rem; margin-top: 0.1rem; }
+    .rank-views { font-variant-numeric: tabular-nums; color: #555; font-size: 0.85rem; white-space: nowrap; text-align: right; }
+    .pick-tag {
+      font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--red); font-weight: 700; margin-left: 0.3rem; text-decoration: none;
+    }
+    .pick-tag:hover { text-decoration: underline; }
+    .rank-why { font-size: 0.85rem; color: #333; margin-top: 0.2rem; line-height: 1.45; }
+
+    .month-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.75rem; }
+    .month-card {
+      border: 2px solid var(--black); padding: 0.7rem 0.85rem; text-decoration: none; color: var(--black);
+      background: var(--cream); display: grid; gap: 0.15rem;
+    }
+    .month-card:hover { background: var(--yellow); }
+    .month-card .m { font-family: "Bangers", cursive; font-size: 1.15rem; color: var(--red); letter-spacing: 0.03em; }
+    .month-card .t { font-weight: 600; font-size: 0.92rem; line-height: 1.3; }
+    .month-card .v { font-size: 0.78rem; color: #555; font-variant-numeric: tabular-nums; }
+
+    .pager {
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      background: var(--white); border: var(--bw) solid var(--black);
+      padding: 1rem 1.25rem; font-size: 0.9rem;
+    }
+    .pager a { color: var(--black); text-decoration: none; font-weight: 600; }
+    .pager a:hover { color: var(--red); }
+    .pager .mid { font-family: "Bangers", cursive; font-size: 1.15rem; letter-spacing: 0.03em; }
+    .pager .off { visibility: hidden; }
+
+    footer {
+      background: var(--white);
+      border: var(--bw) solid var(--black);
+      border-radius: 50px;
+      margin: 2rem auto 3rem;
+      width: calc(100% - 3rem);
+      max-width: 760px;
+      padding: 0.8rem 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      color: var(--black); font-size: 0.85rem; font-weight: 700;
+      box-shadow: 6px 6px 0 var(--black);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    footer a { color: var(--black); text-decoration: none; }
+    footer a:hover { color: var(--red); }
+    .footer-links { display: flex; gap: 1.25rem; }
+{{SIGNUP_CSS}}
+
+    @media (max-width: 600px) {
+      nav { padding: 0.6rem 1.2rem; width: calc(100% - 2rem); margin-top: 1rem; }
+      main { padding: 0 1rem 2rem; }
+      .speech-bubble-wrap { width: calc(100% - 30px); margin-left: 15px; margin-top: 1.5rem; }
+      .speech-bubble { padding: 0.9rem 1.2rem 1.1rem; transform: rotate(-2deg); box-shadow: 6px 6px 0 var(--black); }
+      .bubble-head .line1 { font-size: 6.5vw; white-space: nowrap; }
+      .bubble-head .line2 { font-size: 9vw; white-space: nowrap; }
+      .bubble-head .line3 { font-size: 7vw; white-space: nowrap; }
+      .panel { padding: 1rem; box-shadow: 5px 5px 0 var(--black); }
+      .rank-item { grid-template-columns: 32px minmax(0, 1fr) auto; gap: 0.6rem; }
+      .pager { flex-direction: column; text-align: center; }
+      footer {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+        border-radius: 20px;
+        padding: 1.25rem 1.2rem;
+        width: calc(100% - 2rem);
+      }
+      .footer-links { justify-content: center; flex-wrap: wrap; }
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBPZDVN4FC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SBPZDVN4FC');
+  </script>
+  {{JSONLD}}
+</head>
+<body>
+  <nav>
+    <a href="{{ROOT}}" class="logo">Wiki<span>Pop!</span></a>
+    <a href="{{ROOT}}archive.html" class="nav-back">Archive</a>
+  </nav>
+
+  <main>
+    <div class="speech-bubble-wrap">
+      <div class="speech-bubble">
+        <p class="bubble-head">
+          <span class="line1">{{BUBBLE_LINE1}}</span>
+          <span class="line2">{{BUBBLE_LINE2}}</span>
+          <span class="line3">{{BUBBLE_LINE3}}</span>
+        </p>
+      </div>
+    </div>
+
+    <section class="panel lead">
+      <div class="panel-label">{{LABEL}}</div>
+      <h1>{{H1}}</h1>
+      <p class="answer">{{ANSWER}}</p>
+      {{NOTE}}
+    </section>
+
+    {{SECTIONS}}
+
+    {{SIGNUP}}
+
+    <nav class="pager" aria-label="{{PAGER_LABEL}}">
+      {{PAGER}}
+    </nav>
+  </main>
+
+  <footer>
+    <span>&copy; {{CURRENT_YEAR}} WikiPop</span>
+    <div class="footer-links">
+      <a href="{{ROOT}}">Today</a>
+      <a href="{{ROOT}}explore.html">Explore</a>
+      <a href="{{ROOT}}archive.html">Archive</a>
+      <a href="{{ROOT}}feed.xml">RSS</a>
+    </div>
+  </footer>
+{{SIGNUP_SCRIPT}}
+</body>
+</html>

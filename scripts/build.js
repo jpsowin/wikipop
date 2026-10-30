@@ -1,6 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 const https = require("https");
+const crypto = require("crypto");
+const { SIGNUP_CSS, SIGNUP_SCRIPT, SIGNUP_HEADING, SIGNUP_PITCH, signupHtml } = require("./signup");
 
 function httpGet(url) {
   return new Promise((resolve, reject) => {
@@ -210,6 +212,33 @@ function dayAbsoluteUrl(article) {
   return `${BASE_URL}/${dayUrlPath(article)}`;
 }
 
+// Month and year pages, e.g. month/2026-10/ and year/2026/
+function monthKey(dateStr) {
+  return dateStr.slice(0, 7);
+}
+function monthLabel(dateStr) {
+  const d = new Date(dateStr.slice(0, 7) + "-01T00:00:00Z");
+  return d.toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
+}
+function monthUrlPath(dateStr) {
+  return `month/${monthKey(dateStr)}/`;
+}
+function yearUrlPath(year) {
+  return `year/${year}/`;
+}
+
+// "Why" bullets carry Markdown links; strip them for plain-text uses
+// (meta descriptions, summaries).
+function plainWhyText(text) {
+  return text.replace(/\[([^\]]+)\]\((https:\/\/(?:[^()\s]|\([^()\s]*\))+)\)/g, "$1");
+}
+
+function trimAtWord(text, max) {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max);
+  return cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:.]$/, "") + "…";
+}
+
 // Category column: Wikipedia's short description. Lists usually have none,
 // so label them "List" instead of leaving the cell blank.
 function categoryFor(a) {
@@ -248,7 +277,7 @@ function buildFullArchiveRow(a) {
 function buildChangelogPage() {
   const template = fs.readFileSync(CHANGELOG_TEMPLATE_FILE, "utf-8");
   return template
-    .replace(/\{\{BASE_URL\}\}/g, BASE_URL)
+    .replace(/\{\{BASE_URL\}\}/g, () => BASE_URL)
     .replace(/\{\{CURRENT_YEAR\}\}/g, new Date().getUTCFullYear());
 }
 
@@ -436,7 +465,7 @@ async function buildHtml(articles) {
     todayJsonLd = jsonLd({
       "@context": "https://schema.org",
       "@type": "NewsArticle",
-      "headline": `${displayTitle} — Top Wikipedia Article on ${formatDate(today.date)}`,
+      "headline": `${displayTitle}: WikiPop's pick for ${formatDate(today.date)}`,
       "datePublished": today.date,
       "dateModified": today.date,
       "image": today.thumbnail ? [today.thumbnail] : undefined,
@@ -492,18 +521,21 @@ async function buildHtml(articles) {
 
   // Build recent archive rows
   const archiveRows = recentArchive.map(buildArchiveRow).join("");
-  const moreLink = archive.length > RECENT_LIMIT
+  const thisYear = today ? today.date.slice(0, 4) : String(new Date().getUTCFullYear());
+  const moreLink = (archive.length > RECENT_LIMIT
     ? `<a href="archive.html" class="archive-more">View full archive (${archive.length} articles) &rarr;</a>`
-    : "";
+    : "") + ` <a href="${yearUrlPath(thisYear)}" class="archive-more">Wikipedia's most-viewed of ${thisYear} &rarr;</a>`;
 
-  // Build featured entry section
+  // Build featured entry section. The signup pitch matches signup.js; the
+  // homepage keeps its own wiggle styling in template.html.
   const featured = await getFeaturedEntry();
   let featuredSection = `
     <div class="fade-up">
       <div class="slanted-newsletter">
-        <div class="slanted-heading">Get <span style="color: var(--red);">Wikipop'd every day</span> straight to your overflowing inbox.</div>
-        <form class="slanted-form" action="https://buttondown.com/api/emails/embed-subscribe/wikipop" method="post">
-          <input type="email" name="email" id="bd-email" placeholder="you@email.com" required class="slanted-input">
+        <div class="slanted-heading">${SIGNUP_HEADING.replace('class="signup-red"', 'style="color: var(--red);"')}</div>
+        <p class="slanted-sub">${SIGNUP_PITCH}</p>
+        <form class="slanted-form" action="https://buttondown.com/api/emails/embed-subscribe/wikipop" method="post" data-placement="home">
+          <input type="email" name="email" id="bd-email" placeholder="you@email.com" required class="slanted-input" aria-label="Email address" autocomplete="email">
           <button type="submit" class="slanted-btn">Subscribe</button>
         </form>
       </div>
@@ -530,14 +562,15 @@ async function buildHtml(articles) {
   }
 
   let html = template
-    .replace("{{TODAY_SECTION}}", todaySection)
-    .replace("{{FEATURED_SECTION}}", featuredSection)
-    .replace("{{ARCHIVE_ROWS}}", archiveRows)
-    .replace("{{ARCHIVE_MORE_LINK}}", moreLink)
-    .replace("{{ARCHIVE_DISPLAY}}", recentArchive.length > 0 ? "block" : "none")
-    .replace("{{TODAY_JSONLD}}", todayJsonLd)
-    .replace(/\{\{BASE_URL\}\}/g, BASE_URL)
-    .replace("{{CURRENT_YEAR}}", new Date().getUTCFullYear().toString());
+    .replace("{{TODAY_SECTION}}", () => todaySection)
+    .replace("{{FEATURED_SECTION}}", () => featuredSection)
+    .replace("{{ARCHIVE_ROWS}}", () => archiveRows)
+    .replace("{{ARCHIVE_MORE_LINK}}", () => moreLink)
+    .replace("{{ARCHIVE_DISPLAY}}", () => recentArchive.length > 0 ? "block" : "none")
+    .replace("{{TODAY_JSONLD}}", () => todayJsonLd)
+    .replace(/\{\{BASE_URL\}\}/g, () => BASE_URL)
+    .replace(/\{\{LATEST_YEAR\}\}/g, () => thisYear)
+    .replace(/\{\{CURRENT_YEAR\}\}/g, new Date().getUTCFullYear().toString());
 
   return html;
 }
@@ -556,12 +589,14 @@ function buildArchivePage(articles) {
   for (const a of all) {
     const m = monthLabel(a.date);
     if (m !== currentMonth) {
-      rowParts.push(`\n            <tr class="month-header"><td colspan="4">${escapeHtml(m)}</td></tr>`);
+      rowParts.push(`\n            <tr class="month-header"><td colspan="4"><a href="${monthUrlPath(a.date)}">${escapeHtml(m)}<span class="month-top">Top 25 &rarr;</span></a></td></tr>`);
       currentMonth = m;
     }
     rowParts.push(buildFullArchiveRow(a));
   }
   const rows = rowParts.join("");
+  const years = [...new Set(all.map((a) => a.date.slice(0, 4)))];
+  const yearLinks = years.map((y) => `<a href="${yearUrlPath(y)}" class="year-link">Most-viewed of ${y} &rarr;</a>`).join("");
 
   // ItemList JSON-LD for the most recent 30 articles (cap to keep page size sensible)
   const recentForLd = all.slice(0, 30);
@@ -579,10 +614,14 @@ function buildArchivePage(articles) {
   });
 
   return template
-    .replace("{{ALL_ARCHIVE_ROWS}}", rows)
-    .replace("{{TOTAL_ARTICLES}}", all.length.toString())
-    .replace("{{ARCHIVE_JSONLD}}", archiveJsonLd)
-    .replace(/\{\{BASE_URL\}\}/g, BASE_URL)
+    .replace("{{ALL_ARCHIVE_ROWS}}", () => rows)
+    .replace("{{TOTAL_ARTICLES}}", () => all.length.toString())
+    .replace("{{ARCHIVE_JSONLD}}", () => archiveJsonLd)
+    .replace("{{YEAR_LINKS}}", () => yearLinks)
+    .replace("{{SIGNUP_CSS}}", () => SIGNUP_CSS)
+    .replace("{{SIGNUP}}", () => signupHtml("archive", { compact: true }))
+    .replace("{{SIGNUP_SCRIPT}}", () => SIGNUP_SCRIPT)
+    .replace(/\{\{BASE_URL\}\}/g, () => BASE_URL)
     .replace("{{CURRENT_YEAR}}", new Date().getUTCFullYear().toString());
 }
 
@@ -590,7 +629,18 @@ function buildArchivePage(articles) {
 // Per-day page
 // =====================================================================
 
-function buildDayPage(article, prevArticle, nextArticle, obscureEntry, whyEntry) {
+// When an article above the pick was itself featured within LOOKBACK_DAYS
+// (the rule pickFeatured applies), returns that earlier (or, for backfilled
+// days, later) pick. Null means the data doesn't explain the skip.
+function nearbyPick(title, date, picksByTitle) {
+  const near = (picksByTitle.get(title) || []).filter((a) =>
+    a.date !== date && Math.abs(Date.parse(a.date) - Date.parse(date)) <= LOOKBACK_DAYS * 864e5);
+  if (!near.length) return null;
+  const before = near.filter((a) => a.date < date);
+  return before.length ? before[before.length - 1] : near[0];
+}
+
+function buildDayPage(article, prevArticle, nextArticle, obscureEntry, whyEntry, picksByTitle = new Map()) {
   const template = fs.readFileSync(DAY_TEMPLATE_FILE, "utf-8");
   const displayTitle = article.title.replace(/_/g, " ");
   const formattedDate = formatDate(article.date);
@@ -603,30 +653,83 @@ function buildDayPage(article, prevArticle, nextArticle, obscureEntry, whyEntry)
   const ogImage = article.thumbnail || `${BASE_URL}/assets/og-default.png`;
   const canonicalUrl = dayAbsoluteUrl(article);
 
-  // Description: top 3 article names + view counts, makes a useful SERP snippet.
+  // Title leads with the topic people search for, not just the date. Pages
+  // with a "why" blurb can promise the reason; the rest name the pick.
   const top10 = article.top10 || [];
+  const pageTitle = whyEntry
+    ? `Why ${displayTitle} was trending on Wikipedia (${speechDate})`
+    : `${displayTitle} and Wikipedia's top 10 for ${speechDate}`;
+
+  // Description: the first "why" sentence when there is one, otherwise the
+  // top 3 article names + view counts. Either way it names the day's #1.
+  const top1 = top10[0];
+  const top1Name = top1 ? top1.title.replace(/_/g, " ") : "";
+  const pickIsTop1 = !!top1 && top1.title === article.title;
   const descBits = top10.slice(0, 3).map((t) => {
     const name = t.title.replace(/_/g, " ");
     return `${name} (${formatViewsShort(t.views)} views)`;
   });
-  const metaDescription = top10.length > 0
-    ? `The ${top10.length} most-viewed Wikipedia articles on ${formattedDate}: ${descBits.join(", ")}, and more.`
-    : `${displayTitle} was the top Wikipedia article on ${formattedDate} with ${formatNumber(article.views)} views.`;
+  let metaDescription;
+  if (whyEntry) {
+    metaDescription = trimAtWord(plainWhyText(whyEntry.bullets[0]), 150);
+    if (!pickIsTop1) metaDescription += ` ${top1Name} was the day's #1 article (${formatViewsShort(top1.views)} views).`;
+  } else if (top10.length > 0) {
+    metaDescription = `The ${top10.length} most-viewed Wikipedia articles on ${formattedDate}: ${descBits.join(", ")}, and more.`;
+  } else {
+    metaDescription = `${displayTitle} was the top Wikipedia article on ${formattedDate} with ${formatNumber(article.views)} views.`;
+  }
 
-  // Hero article markup (mirrors homepage style)
+  // Answer at the top of the page: the day's #1 article, then where WikiPop's
+  // pick ranked and, when we can tell, why the articles above it were passed over.
+  const pickIndex = top10.findIndex((t) => t.title === article.title);
+  let answer;
+  if (!top1) {
+    answer = `<strong>WikiPop's pick for ${escapeHtml(formattedDate)} was ${escapeHtml(displayTitle)}, with ${formatNumber(article.views)} views.</strong>${whyEntry ? " Here's why it spiked." : ""}`;
+  } else if (pickIsTop1) {
+    answer = `<strong>On ${escapeHtml(formattedDate)}, the most-viewed article on Wikipedia was ${escapeHtml(displayTitle)}, with ${formatNumber(article.views)} views.</strong> ${whyEntry ? "Here's why it spiked." : "The rest of the day's top 10 is below."}`;
+  } else {
+    const lead = `<strong>On ${escapeHtml(formattedDate)}, the most-viewed article on Wikipedia was ${escapeHtml(top1Name)}, with ${formatNumber(top1.views)} views.</strong>`;
+    const above = pickIndex > 0 ? top10.slice(0, pickIndex) : [];
+    const repeats = above.map((t) => nearbyPick(t.title, article.date, picksByTitle));
+    if (above.length && repeats.every(Boolean)) {
+      const earlier = repeats.every((r) => r.date < article.date);
+      const when = earlier ? "in the past 30 days" : "within 30 days of this one";
+      const dayLink = (r) => {
+        const label = formatDate(r.date).replace(`, ${article.date.slice(0, 4)}`, "");
+        return `<a href="../${dayDirName(r)}/">${escapeHtml(label)}</a>`;
+      };
+      let reason;
+      if (above.length === 1) {
+        reason = `It was ${earlier ? "already" : "also"} WikiPop's pick on ${dayLink(repeats[0])}, and we don't repeat an article within 30 days.`;
+      } else if (above.length === 2) {
+        reason = `It and #2, ${escapeHtml(above[1].title.replace(/_/g, " "))}, were both WikiPop's picks ${when}, and we don't repeat an article that soon.`;
+      } else {
+        const next = ["two", "three", "four", "five", "six", "seven", "eight", "nine"][above.length - 3] || above.length - 1;
+        reason = `It and the next ${next} articles were all WikiPop's picks ${when}, and we don't repeat an article that soon.`;
+      }
+      answer = `${lead} ${reason} So WikiPop's pick is #${pickIndex + 1}, ${escapeHtml(displayTitle)}, with ${formatNumber(article.views)} views.${whyEntry ? " Here's why it spiked." : ""}`;
+    } else {
+      const rankText = pickIndex >= 0 ? `came in at #${pickIndex + 1}` : "drew attention too";
+      answer = `${lead} WikiPop's pick, ${escapeHtml(displayTitle)}, ${rankText} with ${formatNumber(article.views)} views${whyEntry ? ". Here's why it spiked." : "."}`;
+    }
+  }
+
+  // Hero article markup. The photo sits at the top; the original part
+  // (answer + why) comes before the Wikipedia extract.
   const heroSection = `
       <div class="hero-zone">
         <div class="article-panel">
           <div class="article-content">
             ${article.thumbnail ? `<a href="${escapeHtml(article.url)}" target="_blank" rel="noopener noreferrer" class="hero-thumb"><img src="${escapeHtml(article.thumbnail)}" alt="${escapeHtml(displayTitle)}"></a>` : ""}
             <div class="day-hero-label">WikiPop's Pick · ${escapeHtml(formattedDate)}</div>
-            <h2 class="day-hero-title">${escapeHtml(displayTitle)}</h2>
+            <h1 class="day-hero-title">${escapeHtml(displayTitle)}</h1>
             ${article.description ? `<div class="day-hero-desc">${escapeHtml(article.description)}</div>` : ""}
+            <p class="day-answer">${answer}</p>
+            ${buildWhyBox(whyEntry)}
             <div class="article-extract">
               <p><span class="drop-cap">${escapeHtml(dropCap)}</span>${escapeHtml(restOfExtract)}</p>
             </div>
             <div style="clear: both;"></div>
-            ${buildWhyBox(whyEntry)}
           </div>
           <div class="article-footer-strip">
             <a href="${escapeHtml(article.url)}" target="_blank" rel="noopener noreferrer" class="wiki-link">Read on Wikipedia &rarr;</a>
@@ -641,12 +744,14 @@ function buildDayPage(article, prevArticle, nextArticle, obscureEntry, whyEntry)
   // Top-10 list
   let top10Section = "";
   if (top10.length > 0) {
-    const items = top10.map((t) => {
+    // Numbered by position in the list, not Wikimedia's raw rank (which
+    // counts the Main Page and search pages), so it matches the summary above.
+    const items = top10.map((t, i) => {
       const name = t.title.replace(/_/g, " ");
       const isPick = t.title === article.title;
       return `
         <li class="top10-item${isPick ? " top10-pick" : ""}">
-          <span class="top10-rank">#${t.rank}</span>
+          <span class="top10-rank">#${i + 1}</span>
           <div class="top10-body">
             <a href="${escapeHtml(t.url)}" target="_blank" rel="noopener noreferrer" class="top10-title">${escapeHtml(name)}</a>${isPick ? ` <span class="top10-pick-tag">WikiPop's pick</span>` : ""}
             ${t.description ? `<div class="top10-desc">${escapeHtml(t.description)}</div>` : ""}
@@ -695,7 +800,7 @@ function buildDayPage(article, prevArticle, nextArticle, obscureEntry, whyEntry)
   const newsArticleLd = jsonLd({
     "@context": "https://schema.org",
     "@type": "NewsArticle",
-    "headline": `Top Wikipedia articles on ${formattedDate}`,
+    "headline": pageTitle,
     "datePublished": article.date,
     "dateModified": article.date,
     "image": article.thumbnail ? [article.thumbnail] : undefined,
@@ -725,18 +830,23 @@ function buildDayPage(article, prevArticle, nextArticle, obscureEntry, whyEntry)
   const dayJsonLd = `${newsArticleLd}\n${itemListLd}`;
 
   return template
-    .replace(/\{\{BASE_URL\}\}/g, BASE_URL)
-    .replace(/\{\{CANONICAL_URL\}\}/g, canonicalUrl)
-    .replace(/\{\{PAGE_TITLE\}\}/g, `Top Wikipedia articles on ${formattedDate} — WikiPop`)
-    .replace(/\{\{META_DESCRIPTION\}\}/g, metaDescription.replace(/"/g, "&quot;"))
-    .replace(/\{\{OG_IMAGE\}\}/g, ogImage)
-    .replace(/\{\{DATE_FORMATTED\}\}/g, escapeHtml(speechDate))
-    .replace(/\{\{HERO_SECTION\}\}/g, heroSection)
-    .replace(/\{\{TOP10_SECTION\}\}/g, top10Section)
-    .replace(/\{\{OBSCURE_SECTION\}\}/g, obscureSection)
-    .replace(/\{\{PREV_LINK\}\}/g, prevLink)
-    .replace(/\{\{NEXT_LINK\}\}/g, nextLink)
-    .replace(/\{\{DAY_JSONLD\}\}/g, dayJsonLd)
+    .replace(/\{\{BASE_URL\}\}/g, () => BASE_URL)
+    .replace(/\{\{CANONICAL_URL\}\}/g, () => canonicalUrl)
+    .replace(/\{\{PAGE_TITLE\}\}/g, () => escapeHtml(pageTitle))
+    .replace(/\{\{META_DESCRIPTION\}\}/g, () => escapeHtml(metaDescription))
+    .replace(/\{\{SIGNUP_CSS\}\}/g, () => SIGNUP_CSS)
+    .replace(/\{\{SIGNUP\}\}/g, () => signupHtml("day"))
+    .replace(/\{\{SIGNUP_BOTTOM\}\}/g, () => signupHtml("day-bottom", { compact: true }))
+    .replace(/\{\{SIGNUP_SCRIPT\}\}/g, () => SIGNUP_SCRIPT)
+    .replace(/\{\{MONTH_LINK\}\}/g, () => `<a href="../../${monthUrlPath(article.date)}" class="archive-back">More from ${escapeHtml(monthLabel(article.date))} →</a>`)
+    .replace(/\{\{OG_IMAGE\}\}/g, () => ogImage)
+    .replace(/\{\{DATE_FORMATTED\}\}/g, () => escapeHtml(speechDate))
+    .replace(/\{\{HERO_SECTION\}\}/g, () => heroSection)
+    .replace(/\{\{TOP10_SECTION\}\}/g, () => top10Section)
+    .replace(/\{\{OBSCURE_SECTION\}\}/g, () => obscureSection)
+    .replace(/\{\{PREV_LINK\}\}/g, () => prevLink)
+    .replace(/\{\{NEXT_LINK\}\}/g, () => nextLink)
+    .replace(/\{\{DAY_JSONLD\}\}/g, () => dayJsonLd)
     .replace(/\{\{CURRENT_YEAR\}\}/g, new Date().getUTCFullYear().toString());
 }
 
@@ -856,6 +966,11 @@ function buildDayPages(articles) {
 
   // Sort ascending so prev/next nav is by chronological order
   const sorted = [...articles].sort((a, b) => a.date.localeCompare(b.date));
+  const picksByTitle = new Map();
+  for (const a of sorted) {
+    if (!picksByTitle.has(a.title)) picksByTitle.set(a.title, []);
+    picksByTitle.get(a.title).push(a);
+  }
   let written = 0;
   for (let i = 0; i < sorted.length; i++) {
     const a = sorted[i];
@@ -864,7 +979,7 @@ function buildDayPages(articles) {
     const obscure = getObscureForDate(a.date, anchorDate, anchorIndex, featuredEntries);
     const dir = path.join(DAY_DIR, dayDirName(a));
     const file = path.join(dir, "index.html");
-    const html = buildDayPage(a, prev, next, obscure, whyFor(why, a));
+    const html = buildDayPage(a, prev, next, obscure, whyFor(why, a), picksByTitle);
     // Only write if changed (keeps git diffs small)
     if (fs.existsSync(file)) {
       const existing = fs.readFileSync(file, "utf-8");
@@ -879,28 +994,497 @@ function buildDayPages(articles) {
 }
 
 // =====================================================================
+// Month and year pages
+// =====================================================================
+
+const MONTHLY_FILE = path.join(__dirname, "..", "data", "monthly-top.json");
+const ROUNDUP_TEMPLATE_FILE = path.join(__dirname, "..", "template-roundup.html");
+const MONTH_DIR = path.join(__dirname, "..", "month");
+const YEAR_DIR = path.join(__dirname, "..", "year");
+const MONTHLY_KEEP = 300; // articles cached per month; plenty to add up a year's top 25
+// Pages that get almost no phone traffic are bots or automated tools (in
+// December 2025, "Google_Chrome" had 7.7M views and 0.4% from phones), so
+// the monthly and yearly rankings leave them out.
+const MIN_MOBILE_SHARE = 0.25;
+
+function loadMonthly() {
+  if (!fs.existsSync(MONTHLY_FILE)) return { months: {}, descriptions: {} };
+  return JSON.parse(fs.readFileSync(MONTHLY_FILE, "utf-8"));
+}
+
+function saveMonthly(monthly) {
+  fs.writeFileSync(MONTHLY_FILE, JSON.stringify(monthly, null, 1) + "\n");
+}
+
+async function fetchMonthTop(key, access) {
+  const [y, m] = key.split("-");
+  const data = await httpGet(`https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/${access}/${y}/${m}/all-days`);
+  return data.items[0].articles;
+}
+
+// Wikimedia publishes a month's ranking a day or two after it ends. Fetch and
+// cache every finished month we have days for; finished months never change.
+async function ensureMonthlyTop(articles, monthly) {
+  const thisMonth = new Date().toISOString().slice(0, 7);
+  const months = [...new Set(articles.map((a) => monthKey(a.date)))];
+  let added = 0;
+  for (const key of months) {
+    // Months cached without phone data get another try until it shows up.
+    if ((monthly.months[key] && !monthly.months[key].noPhoneData) || key >= thisMonth) continue;
+    let all, web, app;
+    try {
+      all = await fetchWithRetry(() => fetchMonthTop(key, "all-access"), `${key} monthly`, 2);
+    } catch (err) {
+      console.log(`  ${key}: monthly ranking not available yet (${err.message})`);
+      continue;
+    }
+    try {
+      web = await fetchWithRetry(() => fetchMonthTop(key, "mobile-web"), `${key} mobile-web`, 2);
+      app = await fetchWithRetry(() => fetchMonthTop(key, "mobile-app"), `${key} mobile-app`, 2);
+    } catch (err) {
+      // Wikimedia sometimes publishes the phone lists weeks late. After 10
+      // days, rank the month anyway, leaving out pages flagged as bots in
+      // two or more other months.
+      const monthEnd = new Date(Date.UTC(+key.slice(0, 4), +key.slice(5, 7), 1));
+      if (monthly.months[key] || Date.now() - monthEnd.getTime() < 10 * 86400000) {
+        console.log(`  ${key}: phone lists not available yet (${err.message})`);
+        continue;
+      }
+      const repeat = repeatAutomated(monthly);
+      const top = all.filter((a) => !shouldSkip(a.article) && !repeat.has(a.article)).slice(0, MONTHLY_KEEP).map((a) => [a.article, a.views]);
+      monthly.months[key] = { top, automated: [], noPhoneData: true };
+      added++;
+      console.log(`  ${key}: cached monthly ranking without phone data (${err.message})`);
+      continue;
+    }
+    // Each list is a top 1,000, so a page missing from a phone list had at
+    // most that list's lowest count. Only flag a page when even that upper
+    // bound leaves it under MIN_MOBILE_SHARE.
+    const webViews = new Map(web.map((a) => [a.article, a.views]));
+    const appViews = new Map(app.map((a) => [a.article, a.views]));
+    const webMin = Math.min(...web.map((a) => a.views));
+    const appMin = Math.min(...app.map((a) => a.views));
+    const top = [];
+    const automated = [];
+    for (const a of all) {
+      if (shouldSkip(a.article)) continue;
+      const mobileMax = (webViews.get(a.article) ?? webMin) + (appViews.get(a.article) ?? appMin);
+      if (mobileMax / a.views < MIN_MOBILE_SHARE) {
+        automated.push(a.article);
+        continue;
+      }
+      if (top.length < MONTHLY_KEEP) top.push([a.article, a.views]);
+    }
+    monthly.months[key] = { top, automated };
+    added++;
+    console.log(`  ${key}: cached monthly ranking (${automated.length} automated pages left out)`);
+    await new Promise((r) => setTimeout(r, 300));
+  }
+  return added;
+}
+
+// Short descriptions ("American businesswoman (born 1984)") for ranked
+// articles. Most come from the daily top 10s; the rest are fetched once and cached.
+function knownDescriptions(articles, monthly) {
+  const known = new Map(Object.entries(monthly.descriptions || {}));
+  for (const a of articles) {
+    if (a.description) known.set(a.title, a.description);
+    for (const t of a.top10 || []) if (t.description) known.set(t.title, t.description);
+  }
+  return known;
+}
+
+async function ensureDescriptions(titles, articles, monthly) {
+  const known = knownDescriptions(articles, monthly);
+  monthly.descriptions = monthly.descriptions || {};
+  let fetched = 0;
+  for (const t of titles) {
+    if (known.has(t) || t in monthly.descriptions) continue;
+    try {
+      const s = await fetchWithRetry(() => fetchArticleSummary(t), `summary ${t}`, 2);
+      monthly.descriptions[t] = s.description || "";
+      fetched++;
+    } catch (err) {
+      // Leave it out so the next build tries again.
+    }
+    await new Promise((r) => setTimeout(r, 300));
+  }
+  return fetched;
+}
+
+function wikiUrl(title) {
+  return `https://en.wikipedia.org/wiki/${encodeURIComponent(title)}`;
+}
+
+function formatViewsLong(n) {
+  if (n >= 1000000) return `${(n / 1000000).toFixed(1).replace(/\.0$/, "")} million`;
+  return formatNumber(n);
+}
+
+// Year totals: each month's cached ranking added up. Months with no cached
+// ranking (the current one) aren't counted.
+function yearTotals(year, monthly) {
+  const totals = new Map();
+  const months = Object.keys(monthly.months).filter((k) => k.startsWith(year)).sort();
+  for (const k of months) {
+    for (const [title, views] of monthly.months[k].top) totals.set(title, (totals.get(title) || 0) + views);
+  }
+  return { months, ranked: [...totals.entries()].sort((a, b) => b[1] - a[1]) };
+}
+
+// Pages flagged as automated in two or more months: bots that keep coming
+// back (e.g. "1989_Tiananmen_Square_protests_and_massacre").
+function repeatAutomated(monthly) {
+  const counts = new Map();
+  for (const m of Object.values(monthly.months)) for (const t of m.automated || []) counts.set(t, (counts.get(t) || 0) + 1);
+  return new Set([...counts].filter(([, n]) => n >= 2).map(([t]) => t));
+}
+
+// The biggest single days in a set of days: every top-10 entry, one per
+// article (its best day). Pages flagged as automated that month, or in two
+// or more months, are left out.
+function biggestDays(days, monthly, limit) {
+  const repeat = repeatAutomated(monthly);
+  const best = new Map();
+  for (const a of days) {
+    const automated = new Set(monthly.months[monthKey(a.date)]?.automated || []);
+    for (const t of a.top10 || []) {
+      if (automated.has(t.title) || repeat.has(t.title)) continue;
+      const prev = best.get(t.title);
+      if (!prev || t.views > prev.views) best.set(t.title, { ...t, date: a.date, day: a });
+    }
+  }
+  return [...best.values()].sort((x, y) => y.views - x.views).slice(0, limit);
+}
+
+function roundupRankItem({ rank, title, views, desc, url, tagHtml = "", whyHtml = "" }) {
+  return `
+        <li class="rank-item">
+          <span class="rank-num">${rank}</span>
+          <div>
+            <a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" class="rank-title">${escapeHtml(title.replace(/_/g, " "))}</a>${tagHtml}
+            ${desc ? `<div class="rank-desc">${escapeHtml(desc)}</div>` : ""}
+            ${whyHtml}
+          </div>
+          <span class="rank-views">${formatNumber(views)}</span>
+        </li>`;
+}
+
+function firstWhyLine(why, a, max = 160) {
+  const e = whyFor(why, a);
+  return e ? `<div class="rank-why">${escapeHtml(trimAtWord(plainWhyText(e.bullets[0]), max))}</div>` : "";
+}
+
+function renderRoundup(fields) {
+  const template = fs.readFileSync(ROUNDUP_TEMPLATE_FILE, "utf-8");
+  const out = template
+    .replace(/\{\{PAGE_TITLE\}\}/g, () => escapeHtml(fields.title))
+    .replace(/\{\{META_DESCRIPTION\}\}/g, () => escapeHtml(fields.description))
+    .replace(/\{\{CANONICAL_URL\}\}/g, () => fields.canonical)
+    .replace(/\{\{OG_IMAGE\}\}/g, () => fields.ogImage || `${BASE_URL}/assets/og-default.png`)
+    .replace("{{BUBBLE_LINE1}}", "What did everyone read")
+    .replace("{{BUBBLE_LINE2}}", "on Wikipedia")
+    .replace("{{BUBBLE_LINE3}}", () => fields.bubble)
+    .replace("{{LABEL}}", () => fields.label)
+    .replace("{{H1}}", () => escapeHtml(fields.h1))
+    .replace("{{ANSWER}}", () => fields.answer)
+    .replace("{{NOTE}}", () => fields.note ? `<p class="note">${fields.note}</p>` : "")
+    .replace("{{SECTIONS}}", () => fields.sections)
+    .replace("{{PAGER_LABEL}}", () => fields.pagerLabel)
+    .replace("{{PAGER}}", () => fields.pager)
+    .replace("{{JSONLD}}", () => fields.jsonLd)
+    .replace("{{SIGNUP_CSS}}", () => SIGNUP_CSS)
+    .replace("{{SIGNUP}}", () => signupHtml(fields.placement))
+    .replace("{{SIGNUP_SCRIPT}}", () => SIGNUP_SCRIPT)
+    .replace(/\{\{CURRENT_YEAR\}\}/g, new Date().getUTCFullYear().toString());
+  return out.replace(/\{\{ROOT\}\}/g, "../../");
+}
+
+function breadcrumbLd(items) {
+  return jsonLd({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map(([name, url], i) => ({ "@type": "ListItem", "position": i + 1, "name": name, "item": url })),
+  });
+}
+
+function buildMonthPage(key, days, allKeys, monthly, why, known) {
+  const label = monthLabel(key);
+  const year = key.slice(0, 4);
+  const entry = monthly.months[key];
+  const canonical = `${BASE_URL}/${monthUrlPath(key)}`;
+  const descOf = (title) => known.get(title) || "";
+  const top25 = entry ? entry.top.slice(0, 25) : [];
+  // Without a monthly ranking yet, the biggest days are the whole page.
+  const spikes = biggestDays(days, monthly, top25.length ? 5 : 10);
+  const name = (t) => t.replace(/_/g, " ");
+
+  let answer, description, note = "";
+  if (top25.length >= 3) {
+    const [[t1, v1], [t2, v2], [t3, v3]] = top25;
+    answer = `<strong>The most-viewed article on Wikipedia in ${escapeHtml(label)} was ${escapeHtml(name(t1))}, with ${formatViewsLong(v1)} views.</strong> ${escapeHtml(name(t2))} (${formatViewsLong(v2)}) and ${escapeHtml(name(t3))} (${formatViewsLong(v3)}) came next.`;
+    description = `${name(t1)} led Wikipedia in ${label} with ${formatViewsLong(v1)} views, ahead of ${name(t2)} and ${name(t3)}. See the top 25 and the month's biggest single days.`;
+    note = entry.noPhoneData
+      ? "Totals for the whole month from Wikimedia's pageview data. Wikimedia hasn't published this month's phone-only numbers yet, so the bot filter leaves out pages flagged as automated in two or more other months. The Main Page and search pages are left out too."
+      : "Totals for the whole month from Wikimedia's pageview data. The Main Page, search pages and pages whose views look automated (almost none from phones) are left out.";
+  } else {
+    // No monthly ranking yet: either the month is still going, or it ended
+    // and Wikimedia hasn't published every list we need.
+    const s = spikes[0];
+    const ongoing = key >= new Date().toISOString().slice(0, 7);
+    const biggest = s ? ` ${escapeHtml(name(s.title))} had the biggest single day, with ${formatNumber(s.views)} views on ${escapeHtml(formatDate(s.date))}.` : "";
+    answer = ongoing
+      ? `<strong>${escapeHtml(label)} isn't over yet.</strong>${biggest ? ` So far,${biggest}` : ""} Wikimedia publishes the full monthly ranking a few days after the month ends, and the top 25 appears here then.`
+      : `<strong>Wikimedia hasn't published ${escapeHtml(label)}'s full ranking yet.</strong>${biggest} The month's top 25 appears here as soon as the numbers are out.`;
+    description = `What everyone read on Wikipedia in ${label}: the biggest single days${ongoing ? " so far" : ""} and why they spiked. The month's top 25 follows once Wikimedia publishes it.`;
+  }
+
+  let sections = "";
+  if (top25.length) {
+    sections += `
+    <section class="panel">
+      <h2>The top 25 of ${escapeHtml(label)}</h2>
+      <p class="section-sub">Total views for the month.</p>
+      <ol class="rank-list">${top25.map(([t, v], i) => roundupRankItem({ rank: `#${i + 1}`, title: t, views: v, desc: descOf(t), url: wikiUrl(t) })).join("")}
+      </ol>
+    </section>`;
+  }
+  if (spikes.length) {
+    sections += `
+    <section class="panel">
+      <h2>Biggest single days</h2>
+      <p class="section-sub">The most views any one article got in a single day this month.</p>
+      <ol class="rank-list">${spikes.map((s, i) => roundupRankItem({
+        rank: `#${i + 1}`, title: s.title, views: s.views, desc: `${formatDate(s.date)}${descOf(s.title) ? ` · ${descOf(s.title)}` : ""}`, url: s.url || wikiUrl(s.title),
+        tagHtml: ` <a href="../../${dayUrlPath(s.day)}" class="pick-tag">See that day</a>`,
+        whyHtml: s.day.title === s.title ? firstWhyLine(why, s.day) : "",
+      })).join("")}
+      </ol>
+    </section>`;
+  }
+
+  // A new month whose first days have no top 10 yet still gets a body.
+  if (!sections) {
+    sections = `
+    <section class="panel">
+      <p class="section-sub">${escapeHtml(label)} has only just started. Check back tomorrow.</p>
+    </section>`;
+  }
+
+  const idx = allKeys.indexOf(key);
+  const prev = idx > 0 ? allKeys[idx - 1] : null;
+  const next = idx < allKeys.length - 1 ? allKeys[idx + 1] : null;
+  const pager = `
+      ${prev ? `<a href="../${prev}/" rel="prev">← ${escapeHtml(monthLabel(prev))}</a>` : `<span class="off">←</span>`}
+      <a href="../../${yearUrlPath(year)}" class="mid">All of ${year}</a>
+      ${next ? `<a href="../${next}/" rel="next">${escapeHtml(monthLabel(next))} →</a>` : `<span class="off">→</span>`}`;
+
+  const listLd = top25.length
+    ? jsonLd({
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": `Most-viewed Wikipedia articles of ${label}`,
+      "url": canonical,
+      "numberOfItems": top25.length,
+      "itemListElement": top25.map(([t], i) => ({ "@type": "ListItem", "position": i + 1, "name": name(t), "url": wikiUrl(t) })),
+    })
+    : "";
+  const ogPick = [...days].filter((a) => a.thumbnail).sort((x, y) => y.views - x.views)[0];
+
+  return renderRoundup({
+    title: `Most-viewed Wikipedia articles of ${label}${top25.length || key < new Date().toISOString().slice(0, 7) ? "" : " (so far)"} · WikiPop`,
+    description,
+    canonical,
+    ogImage: ogPick ? ogPick.thumbnail : null,
+    bubble: `in <em>${escapeHtml(label)}</em>?`,
+    label: "Monthly roundup",
+    h1: `Most-viewed Wikipedia articles of ${label}`,
+    answer,
+    note,
+    sections,
+    pagerLabel: "Browse months",
+    pager,
+    jsonLd: [listLd, breadcrumbLd([["WikiPop", `${BASE_URL}/`], [year, `${BASE_URL}/${yearUrlPath(year)}`], [label, canonical]])].filter(Boolean).join("\n  "),
+    placement: "month",
+  });
+}
+
+function buildYearPage(year, days, years, monthKeysWithDays, monthly, why, known) {
+  const canonical = `${BASE_URL}/${yearUrlPath(year)}`;
+  const { months, ranked } = yearTotals(year, monthly);
+  const top25 = ranked.slice(0, 25);
+  const complete = months.length === 12;
+  const name = (t) => t.replace(/_/g, " ");
+  const descOf = (title) => known.get(title) || "";
+  const lastFull = months.length ? monthLabel(months[months.length - 1]) : null;
+
+  let answer, description;
+  if (top25.length >= 3) {
+    const [[t1, v1], [t2], [t3]] = top25;
+    answer = complete
+      ? `<strong>The most-viewed article on Wikipedia in ${year} was ${escapeHtml(name(t1))}, with about ${formatViewsLong(v1)} views.</strong> ${escapeHtml(name(t2))} and ${escapeHtml(name(t3))} rounded out the top three.`
+      : `<strong>Through ${escapeHtml(lastFull)}, the most-viewed article on Wikipedia in ${year} is ${escapeHtml(name(t1))}, with about ${formatViewsLong(v1)} views.</strong> ${escapeHtml(name(t2))} and ${escapeHtml(name(t3))} are next. The ranking updates as each month's numbers come in.`;
+    description = complete
+      ? `${name(t1)} was Wikipedia's most-viewed article of ${year}. See the top 25, the biggest single-day spikes and why they happened, month by month.`
+      : `${name(t1)} leads Wikipedia's most-viewed articles of ${year} so far. See the top 25, the biggest single-day spikes and why they happened, month by month.`;
+  } else {
+    answer = `<strong>No monthly rankings for ${year} are in yet.</strong> The yearly ranking appears once the first month's numbers are published.`;
+    description = `The most-viewed Wikipedia articles of ${year}, month by month.`;
+  }
+  const note = months.length
+    ? `Estimated by adding up Wikimedia's monthly rankings${complete ? "" : ` through ${escapeHtml(lastFull)}`}. The Main Page, search pages and pages whose views look automated (almost none from phones) are left out.`
+    : "";
+
+  const yearDays = days.filter((a) => a.date.startsWith(year));
+  const spikes = biggestDays(yearDays, monthly, 10);
+  let sections = "";
+  if (top25.length) {
+    sections += `
+    <section class="panel">
+      <h2>The top 25 of ${year}${complete ? "" : " so far"}</h2>
+      <p class="section-sub">Total views across ${complete ? "the year" : `${months.length} month${months.length === 1 ? "" : "s"}`}.</p>
+      <ol class="rank-list">${top25.map(([t, v], i) => roundupRankItem({ rank: `#${i + 1}`, title: t, views: v, desc: descOf(t), url: wikiUrl(t) })).join("")}
+      </ol>
+    </section>`;
+  }
+  if (spikes.length) {
+    sections += `
+    <section class="panel">
+      <h2>The biggest single days of ${year}</h2>
+      <p class="section-sub">The most views any one article got in a single day, and why when we know.</p>
+      <ol class="rank-list">${spikes.map((s, i) => roundupRankItem({
+        rank: `#${i + 1}`, title: s.title, views: s.views, desc: `${formatDate(s.date)}${descOf(s.title) ? ` · ${descOf(s.title)}` : ""}`, url: s.url || wikiUrl(s.title),
+        tagHtml: ` <a href="../../${dayUrlPath(s.day)}" class="pick-tag">See that day</a>`,
+        whyHtml: s.day.title === s.title ? firstWhyLine(why, s.day) : "",
+      })).join("")}
+      </ol>
+    </section>`;
+  }
+  const yearMonthKeys = monthKeysWithDays.filter((k) => k.startsWith(year));
+  sections += `
+    <section class="panel">
+      <h2>Month by month</h2>
+      <p class="section-sub">Each month's most-viewed article. Open a month for its top 25 and biggest single days.</p>
+      <div class="month-grid">${yearMonthKeys.map((k) => {
+        const m = monthly.months[k];
+        const lead = m && m.top[0];
+        const monthDays = days.filter((a) => monthKey(a.date) === k);
+        const s = lead ? null : biggestDays(monthDays, monthly, 1)[0];
+        const status = k >= new Date().toISOString().slice(0, 7) ? "In progress" : "Ranking coming soon";
+        const inner = lead
+          ? `<span class="t">${escapeHtml(name(lead[0]))}</span><span class="v">${formatViewsLong(lead[1])} views</span>`
+          : `<span class="t">${s ? escapeHtml(name(s.title)) : status}</span><span class="v">${s ? `${status} · top day ${formatViewsShort(s.views)}` : ""}</span>`;
+        return `
+        <a class="month-card" href="../../${monthUrlPath(k)}"><span class="m">${escapeHtml(monthLabel(k).split(" ")[0])}</span>${inner}</a>`;
+      }).join("")}
+      </div>
+    </section>`;
+
+  const idx = years.indexOf(year);
+  const prev = idx > 0 ? years[idx - 1] : null;
+  const next = idx < years.length - 1 ? years[idx + 1] : null;
+  const pager = `
+      ${prev ? `<a href="../${prev}/" rel="prev">← ${prev}</a>` : `<span class="off">←</span>`}
+      <a href="../../archive.html" class="mid">Every day</a>
+      ${next ? `<a href="../${next}/" rel="next">${next} →</a>` : `<span class="off">→</span>`}`;
+
+  const listLd = top25.length
+    ? jsonLd({
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": `Most-viewed Wikipedia articles of ${year}`,
+      "url": canonical,
+      "numberOfItems": top25.length,
+      "itemListElement": top25.map(([t], i) => ({ "@type": "ListItem", "position": i + 1, "name": name(t), "url": wikiUrl(t) })),
+    })
+    : "";
+  const ogPick = [...yearDays].filter((a) => a.thumbnail).sort((x, y) => y.views - x.views)[0];
+
+  return renderRoundup({
+    title: `Most-viewed Wikipedia articles of ${year}${complete ? "" : " (so far)"} · WikiPop`,
+    description,
+    canonical,
+    ogImage: ogPick ? ogPick.thumbnail : null,
+    bubble: `in <em>${year}</em>${complete ? "" : " so far"}?`,
+    label: complete ? "Year in review" : "Year so far",
+    h1: `Most-viewed Wikipedia articles of ${year}`,
+    answer,
+    note,
+    sections,
+    pagerLabel: "Browse years",
+    pager,
+    jsonLd: [listLd, breadcrumbLd([["WikiPop", `${BASE_URL}/`], [year, canonical]])].filter(Boolean).join("\n  "),
+    placement: "year",
+  });
+}
+
+function writeIfChanged(file, html) {
+  if (fs.existsSync(file) && fs.readFileSync(file, "utf-8") === html) return false;
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.writeFileSync(file, html);
+  return true;
+}
+
+async function buildRoundupPages(articles) {
+  const monthly = loadMonthly();
+  const added = await ensureMonthlyTop(articles, monthly);
+  const why = loadWhy();
+  const sorted = [...articles].sort((a, b) => a.date.localeCompare(b.date));
+  const monthKeys = [...new Set(sorted.map((a) => monthKey(a.date)))];
+  const years = [...new Set(sorted.map((a) => a.date.slice(0, 4)))];
+
+  // Descriptions for every article a roundup lists.
+  const titles = new Set();
+  for (const k of monthKeys) for (const [t] of (monthly.months[k]?.top || []).slice(0, 25)) titles.add(t);
+  for (const y of years) for (const [t] of yearTotals(y, monthly).ranked.slice(0, 25)) titles.add(t);
+  const fetched = await ensureDescriptions([...titles], articles, monthly);
+  if (added || fetched) saveMonthly(monthly);
+  const known = knownDescriptions(articles, monthly);
+
+  let written = 0;
+  for (const k of monthKeys) {
+    const days = sorted.filter((a) => monthKey(a.date) === k);
+    if (writeIfChanged(path.join(MONTH_DIR, k, "index.html"), buildMonthPage(k, days, monthKeys, monthly, why, known))) written++;
+  }
+  for (const y of years) {
+    if (writeIfChanged(path.join(YEAR_DIR, y, "index.html"), buildYearPage(y, sorted, years, monthKeys, monthly, why, known))) written++;
+  }
+  return { written, months: monthKeys, years };
+}
+
+// =====================================================================
 // Sitemap
 // =====================================================================
 
-function buildSitemap(articles) {
+// lastmod only moves when a page's HTML actually changes. data/lastmod.json
+// keeps a hash of each page as of its last change; scripts/indexnow.js
+// submits the pages that changed today.
+const LASTMOD_FILE = path.join(__dirname, "..", "data", "lastmod.json");
+
+function buildSitemap(articles, roundups) {
   const today = new Date().toISOString().slice(0, 10);
+  const prior = fs.existsSync(LASTMOD_FILE) ? JSON.parse(fs.readFileSync(LASTMOD_FILE, "utf-8")) : {};
+  const next = {};
   const urls = [];
-  const u = (loc, lastmod, changefreq, priority) =>
-    urls.push(`  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`);
+  const u = (urlPath) => {
+    const file = path.join(__dirname, "..", urlPath.endsWith("/") || urlPath === "" ? path.join(urlPath, "index.html") : urlPath);
+    if (!fs.existsSync(file)) return;
+    const hash = crypto.createHash("sha1").update(fs.readFileSync(file)).digest("hex").slice(0, 16);
+    const lastmod = prior[urlPath] && prior[urlPath].hash === hash ? prior[urlPath].lastmod : today;
+    next[urlPath] = { hash, lastmod };
+    urls.push(`  <url>\n    <loc>${BASE_URL}/${urlPath}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`);
+  };
 
-  u(`${BASE_URL}/`, today, "daily", "1.0");
-  u(`${BASE_URL}/archive.html`, today, "daily", "0.8");
-  u(`${BASE_URL}/explore.html`, today, "daily", "0.6");
-  u(`${BASE_URL}/changelog.html`, today, "monthly", "0.3");
-
-  // Per-day URLs (only those that produced a page)
+  u("");
+  u("archive.html");
+  u("explore.html");
+  u("changelog.html");
+  for (const y of roundups.years) u(yearUrlPath(y));
+  for (const k of roundups.months) u(monthUrlPath(k));
   const sorted = [...articles].sort((a, b) => a.date.localeCompare(b.date));
-  for (const a of sorted) {
-    const file = path.join(DAY_DIR, dayDirName(a), "index.html");
-    if (!fs.existsSync(file)) continue;
-    u(dayAbsoluteUrl(a), a.date, "monthly", "0.7");
-  }
+  for (const a of sorted) u(dayUrlPath(a));
 
+  fs.writeFileSync(LASTMOD_FILE, JSON.stringify(next, null, 1) + "\n");
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`;
 }
 
@@ -1254,7 +1838,10 @@ async function main() {
   const dayCount = buildDayPages(articles);
   console.log(`Wrote/updated ${dayCount} per-day pages.`);
 
-  fs.writeFileSync(SITEMAP_FILE, buildSitemap(articles));
+  const roundups = await buildRoundupPages(articles);
+  console.log(`Wrote/updated ${roundups.written} month and year pages.`);
+
+  fs.writeFileSync(SITEMAP_FILE, buildSitemap(articles, roundups));
   fs.writeFileSync(LLMS_FULL_FILE, buildLlmsFullTxt(articles));
   console.log("Wrote sitemap.xml and llms-full.txt.");
 
@@ -1268,4 +1855,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { pickFeatured, fetchTopArticles, getRecentTitles, LOOKBACK_DAYS };
+module.exports = { pickFeatured, fetchTopArticles, getRecentTitles, LOOKBACK_DAYS, dayAbsoluteUrl };

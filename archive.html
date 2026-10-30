@@ -216,6 +216,53 @@
     }
     .month-header:first-child td { padding-top: 0.5rem !important; }
     .archive-table tbody tr.month-header + tr td { border-top: none; }
+    .month-header a { color: inherit; text-decoration: none; }
+    .month-header a:hover { text-decoration: underline; }
+    .month-header .month-top { font-family: "Instrument Sans", sans-serif; font-size: 0.75rem; font-weight: 700; color: #555; letter-spacing: 0.04em; text-transform: uppercase; margin-left: 0.5rem; }
+    .year-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin: 0 0 0.5rem; }
+    .year-link {
+      font-family: "Bangers", cursive; font-size: 1.15rem; letter-spacing: 0.03em;
+      background: var(--white); color: var(--black); text-decoration: none;
+      border: var(--bw) solid var(--black); border-radius: 50px; padding: 0.35rem 1.1rem;
+      box-shadow: 4px 4px 0 var(--black);
+    }
+    .year-link:hover { background: var(--black); color: var(--white); }
+
+    .slanted-newsletter {
+      background: var(--yellow, #ffdf00);
+      border: 5px solid var(--black, #111);
+      padding: 1.5rem;
+      box-shadow: -10px 10px 0 var(--black, #111);
+      transform: rotate(1.5deg);
+      margin: 2.25rem 0.5rem 2rem 1rem;
+    }
+    .slanted-heading {
+      font-family: "Bangers", cursive; font-weight: normal;
+      font-size: clamp(1.4rem, 4vw, 1.8rem);
+      line-height: 1.1; color: var(--black, #111); margin: 0 0 0.35rem;
+    }
+    .signup-red { color: #d00d00; }
+    .slanted-sub { font-size: 0.95rem; line-height: 1.45; color: var(--black, #111); margin: 0 0 1rem; }
+    .slanted-form { display: flex; gap: 0.5rem; }
+    .slanted-input {
+      flex: 1; border: 3px solid var(--black, #111); padding: 0.75rem 1rem;
+      font-size: 1.1rem; font-family: inherit; min-width: 0; outline: none;
+      background: var(--white, #fdfcf3);
+    }
+    .slanted-input:focus { border-color: #d00d00; }
+    .slanted-btn {
+      background: var(--white, #fdfcf3); color: var(--black, #111);
+      border: 3px solid var(--black, #111); padding: 0.75rem 1.5rem;
+      font-size: 1.1rem; font-family: "Bangers", cursive; cursor: pointer;
+    }
+    .slanted-btn:hover { background: var(--black, #111); color: var(--white, #fdfcf3); }
+    .slanted-newsletter.compact { transform: rotate(-1deg); box-shadow: 8px 8px 0 var(--black, #111); margin: 1.75rem 0 1.5rem; padding: 1.1rem 1.25rem; }
+    .slanted-newsletter.compact .slanted-heading { font-size: clamp(1.2rem, 3.5vw, 1.5rem); }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    @media (max-width: 600px) {
+      .slanted-newsletter { margin: 1.75rem 0.25rem 1.5rem 0.5rem; padding: 1.1rem; }
+      .slanted-form { flex-direction: column; }
+    }
 
     footer {
       background: var(--white);
@@ -452,6 +499,19 @@
       </div>
     </div>
 
+    <div class="year-links"><a href="year/2026/" class="year-link">Most-viewed of 2026 &rarr;</a><a href="year/2025/" class="year-link">Most-viewed of 2025 &rarr;</a></div>
+
+    
+    <aside class="slanted-newsletter compact" aria-labelledby="bd-email-archive-h">
+      <h2 class="slanted-heading" id="bd-email-archive-h">Get <span class="signup-red">WikiPop'd</span> every morning</h2>
+      <p class="slanted-sub">See what's trending on Wikipedia and why it spiked, plus one obscure gem.</p>
+      <form class="slanted-form" action="https://buttondown.com/api/emails/embed-subscribe/wikipop" method="post" data-placement="archive">
+        <label for="bd-email-archive" class="visually-hidden">Email address</label>
+        <input type="email" name="email" id="bd-email-archive" placeholder="you@email.com" required class="slanted-input" autocomplete="email">
+        <button type="submit" class="slanted-btn">Subscribe</button>
+      </form>
+    </aside>
+
     <div class="archive-panel">
       <table class="archive-table">
         <thead>
@@ -464,7 +524,7 @@
         </thead>
         <tbody>
           
-            <tr class="month-header"><td colspan="4">October 2026</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2026-10/">October 2026<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Oct 29</td>
               <td class="archive-title"><a href="day/2026-10-29-patrick-stewart/">Patrick Stewart</a><a href="https://en.wikipedia.org/wiki/Patrick_Stewart" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -639,7 +699,7 @@
               <td class="archive-category">US Navy Nimitz-class aircraft carrier</td>
               <td class="archive-views">495,200</td>
             </tr>
-            <tr class="month-header"><td colspan="4">September 2026</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2026-09/">September 2026<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Sep 30</td>
               <td class="archive-title"><a href="day/2026-09-30-christa-pike/">Christa Pike</a><a href="https://en.wikipedia.org/wiki/Christa_Pike" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -820,7 +880,7 @@
               <td class="archive-category">1996 killing in Paradise, Nevada, U.S.</td>
               <td class="archive-views">231,824</td>
             </tr>
-            <tr class="month-header"><td colspan="4">August 2026</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2026-08/">August 2026<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Aug 31</td>
               <td class="archive-title"><a href="day/2026-08-31-killing-of-the-clancy-children/">Killing of the Clancy children</a><a href="https://en.wikipedia.org/wiki/Killing_of_the_Clancy_children" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -1007,7 +1067,7 @@
               <td class="archive-category">Nepalese and British mountaineer (1983–2026)</td>
               <td class="archive-views">458,352</td>
             </tr>
-            <tr class="month-header"><td colspan="4">July 2026</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2026-07/">July 2026<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Jul 31</td>
               <td class="archive-title"><a href="day/2026-07-31-ceuta/">Ceuta</a><a href="https://en.wikipedia.org/wiki/Ceuta" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -1194,7 +1254,7 @@
               <td class="archive-category">English footballer (born 1993)</td>
               <td class="archive-views">367,545</td>
             </tr>
-            <tr class="month-header"><td colspan="4">June 2026</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2026-06/">June 2026<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Jun 30</td>
               <td class="archive-title"><a href="day/2026-06-30-xyz/">.xyz</a><a href="https://en.wikipedia.org/wiki/.xyz" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -1375,7 +1435,7 @@
               <td class="archive-category">Television series (2019–2026)</td>
               <td class="archive-views">373,031</td>
             </tr>
-            <tr class="month-header"><td colspan="4">May 2026</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2026-05/">May 2026<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">May 31</td>
               <td class="archive-title"><a href="day/2026-05-31-clash-in-italy/">Clash in Italy</a><a href="https://en.wikipedia.org/wiki/Clash_in_Italy" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -1562,7 +1622,7 @@
               <td class="archive-category">2026 film by David Frankel</td>
               <td class="archive-views">209,431</td>
             </tr>
-            <tr class="month-header"><td colspan="4">April 2026</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2026-04/">April 2026<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Apr 30</td>
               <td class="archive-title"><a href="day/2026-04-30-david-allan-coe/">David Allan Coe</a><a href="https://en.wikipedia.org/wiki/David_Allan_Coe" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -1743,7 +1803,7 @@
               <td class="archive-category">First crewed mission of the Artemis program</td>
               <td class="archive-views">915,989</td>
             </tr>
-            <tr class="month-header"><td colspan="4">March 2026</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2026-03/">March 2026<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Mar 31</td>
               <td class="archive-title"><a href="day/2026-03-31-2026-fifa-world-cup/">2026 FIFA World Cup</a><a href="https://en.wikipedia.org/wiki/2026_FIFA_World_Cup" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -1930,7 +1990,7 @@
               <td class="archive-category">Ongoing armed conflict in West Asia</td>
               <td class="archive-views">1,060,165</td>
             </tr>
-            <tr class="month-header"><td colspan="4">February 2026</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2026-02/">February 2026<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Feb 28</td>
               <td class="archive-title"><a href="day/2026-02-28-ali-khamenei/">Ali Khamenei</a><a href="https://en.wikipedia.org/wiki/Ali_Khamenei" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -2099,7 +2159,7 @@
               <td class="archive-category">Spanish tennis player (born 2003)</td>
               <td class="archive-views">692,939</td>
             </tr>
-            <tr class="month-header"><td colspan="4">January 2026</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2026-01/">January 2026<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Jan 31</td>
               <td class="archive-title"><a href="day/2026-01-31-royal-rumble-2026/">Royal Rumble (2026)</a><a href="https://en.wikipedia.org/wiki/Royal_Rumble_(2026)" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -2286,7 +2346,7 @@
               <td class="archive-category">Student-led demonstrations in China</td>
               <td class="archive-views">2,104,464</td>
             </tr>
-            <tr class="month-header"><td colspan="4">December 2025</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2025-12/">December 2025<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Dec 31</td>
               <td class="archive-title"><a href="day/2025-12-31-new-years-eve/">New Year&#039;s Eve</a><a href="https://en.wikipedia.org/wiki/New_Year&#039;s_Eve" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -2473,7 +2533,7 @@
               <td class="archive-category">Indian film-making duo</td>
               <td class="archive-views">363,667</td>
             </tr>
-            <tr class="month-header"><td colspan="4">November 2025</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2025-11/">November 2025<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Nov 30</td>
               <td class="archive-title"><a href="day/2025-11-30-survivor-series-wargames-2025/">Survivor Series: WarGames (2025)</a><a href="https://en.wikipedia.org/wiki/Survivor_Series%3A_WarGames_(2025)" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -2654,7 +2714,7 @@
               <td class="archive-category">2025 Internet meme and slang term</td>
               <td class="archive-views">158,289</td>
             </tr>
-            <tr class="month-header"><td colspan="4">October 2025</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2025-10/">October 2025<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Oct 31</td>
               <td class="archive-title"><a href="day/2025-10-31-prince-andrew/">Prince Andrew</a><a href="https://en.wikipedia.org/wiki/Andrew_Mountbatten-Windsor" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -2841,7 +2901,7 @@
               <td class="archive-category">English zoologist (1934–2025)</td>
               <td class="archive-views">777,022</td>
             </tr>
-            <tr class="month-header"><td colspan="4">September 2025</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2025-09/">September 2025<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Sep 30</td>
               <td class="archive-title"><a href="day/2025-09-30-pete-hegseth/">Pete Hegseth</a><a href="https://en.wikipedia.org/wiki/Pete_Hegseth" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -3022,7 +3082,7 @@
               <td class="archive-category">Federal holiday in the United States</td>
               <td class="archive-views">339,418</td>
             </tr>
-            <tr class="month-header"><td colspan="4">August 2025</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2025-08/">August 2025<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Aug 31</td>
               <td class="archive-title"><a href="day/2025-08-31-clash-in-paris/">Clash in Paris</a><a href="https://en.wikipedia.org/wiki/Clash_in_Paris" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -3209,7 +3269,7 @@
               <td class="archive-category">Canadian-American actress and model (born 1967)</td>
               <td class="archive-views">196,308</td>
             </tr>
-            <tr class="month-header"><td colspan="4">July 2025</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2025-07/">July 2025<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Jul 31</td>
               <td class="archive-title"><a href="day/2025-07-31-sydney-sweeney/">Sydney Sweeney</a><a href="https://en.wikipedia.org/wiki/Sydney_Sweeney" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -3396,7 +3456,7 @@
               <td class="archive-category">Russian general and warlord (1886–1921)</td>
               <td class="archive-views">245,772</td>
             </tr>
-            <tr class="month-header"><td colspan="4">June 2025</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2025-06/">June 2025<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Jun 30</td>
               <td class="archive-title"><a href="day/2025-06-30-hess-triangle/">Hess triangle</a><a href="https://en.wikipedia.org/wiki/Hess_triangle" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -3577,7 +3637,7 @@
               <td class="archive-category"></td>
               <td class="archive-views">219,033</td>
             </tr>
-            <tr class="month-header"><td colspan="4">May 2025</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2025-05/">May 2025<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">May 31</td>
               <td class="archive-title"><a href="day/2025-05-31-luis-enrique/">Luis Enrique</a><a href="https://en.wikipedia.org/wiki/Luis_Enrique" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -3758,7 +3818,7 @@
               <td class="archive-category">Annual labour movement commemoration</td>
               <td class="archive-views">203,349</td>
             </tr>
-            <tr class="month-header"><td colspan="4">April 2025</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2025-04/">April 2025<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Apr 30</td>
               <td class="archive-title"><a href="day/2025-04-30-thunderbolts/">Thunderbolts*</a><a href="https://en.wikipedia.org/wiki/Thunderbolts*" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -3939,7 +3999,7 @@
               <td class="archive-category">Annual celebration on 1 April</td>
               <td class="archive-views">405,746</td>
             </tr>
-            <tr class="month-header"><td colspan="4">March 2025</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2025-03/">March 2025<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Mar 31</td>
               <td class="archive-title"><a href="day/2025-03-31-sikandar-2025-film/">Sikandar (2025 film)</a><a href="https://en.wikipedia.org/wiki/Sikandar_(2025_film)" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -4126,7 +4186,7 @@
               <td class="archive-category">President of Ukraine since 2019</td>
               <td class="archive-views">454,298</td>
             </tr>
-            <tr class="month-header"><td colspan="4">February 2025</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2025-02/">February 2025<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Feb 28</td>
               <td class="archive-title"><a href="day/2025-02-28-ruby-franke/">Ruby Franke</a><a href="https://en.wikipedia.org/wiki/Ruby_Franke" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -4295,7 +4355,7 @@
               <td class="archive-category">World Wrestling Entertainment event</td>
               <td class="archive-views">445,814</td>
             </tr>
-            <tr class="month-header"><td colspan="4">January 2025</td></tr>
+            <tr class="month-header"><td colspan="4"><a href="month/2025-01/">January 2025<span class="month-top">Top 25 &rarr;</span></a></td></tr>
             <tr>
               <td class="archive-date">Jan 31</td>
               <td class="archive-title"><a href="day/2025-01-31-marianne-faithfull/">Marianne Faithfull</a><a href="https://en.wikipedia.org/wiki/Marianne_Faithfull" target="_blank" rel="noopener noreferrer" class="archive-wiki-link" aria-label="Read on Wikipedia">↗</a></td>
@@ -4478,5 +4538,13 @@
       <a href="feed.xml">RSS</a>
     </div>
   </footer>
+
+  <script>
+    document.querySelectorAll('.slanted-form').forEach(function (form) {
+      form.addEventListener('submit', function () {
+        if (window.gtag) gtag('event', 'sign_up', { method: 'email_subscribe', placement: form.dataset.placement });
+      });
+    });
+  </script>
 </body>
 </html>

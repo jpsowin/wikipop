@@ -20,202 +20,357 @@
   <link rel="sitemap" type="application/xml" href="sitemap.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg: #0f1117; --bg-raised: #181a23; --text: #c8cdd8;
-      --text-muted: #7a7f8e; --text-bright: #eef0f5;
-      --accent: #f06449; --accent-glow: rgba(240, 100, 73, 0.15);
-      --border: #2a2d3a; --radius: 8px;
-      --green: #4ade80; --red: #f87171;
+      --red: #d00d00;
+      --yellow: #ffdf00;
+      --black: #111;
+      --white: #fdfcf3;
+      --cream: #f7f5eb;
+      --green: #0b7a2b;
+      --bw: 3px;
     }
-    :root.light {
-      --bg: #faf9f6; --bg-raised: #ffffff; --text: #4a4a4a;
-      --text-muted: #8a8a8a; --text-bright: #1a1a1a;
-      --accent: #d94f3b; --accent-glow: rgba(217, 79, 59, 0.1);
-      --border: #e0ddd6; --green: #16a34a; --red: #dc2626;
-    }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: "Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg); color: var(--text);
-      line-height: 1.7; min-height: 100vh;
+      font-family: "Instrument Sans", -apple-system, sans-serif;
+      background-color: var(--yellow);
+      background-image:
+        radial-gradient(circle, var(--red) 5px, transparent 5.5px),
+        radial-gradient(circle, var(--red) 5px, transparent 5.5px);
+      background-size: 19px 28.5px, 19px 28.5px;
+      background-position: 0 0, 9.5px 14.25px;
+      color: var(--black);
+      line-height: 1.6;
+      min-height: 100vh;
     }
 
+    /* ============ NAV ============ */
     nav {
-      position: sticky; top: 0; z-index: 100;
+      position: sticky; top: 1.5rem; z-index: 100;
+      padding: 0.8rem 1.5rem;
+      background: var(--white);
+      border: var(--bw) solid var(--black);
+      border-radius: 50px;
+      margin: 1.5rem auto 1.5rem;
+      width: calc(100% - 3rem);
+      max-width: 760px;
       display: flex; justify-content: space-between; align-items: center;
-      max-width: 860px; margin: 0 auto; padding: 1.25rem 1.5rem;
-      background: var(--bg); backdrop-filter: blur(12px);
+      box-shadow: 6px 6px 0 var(--black);
     }
-    .logo { font-family: "Fraunces", serif; font-size: 1.35rem; font-weight: 700; color: var(--text-bright); text-decoration: none; letter-spacing: -0.02em; }
-    .logo span { color: var(--accent); }
-    .theme-toggle {
-      background: none; border: 1px solid var(--border); border-radius: 50%;
-      width: 36px; height: 36px; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--text-muted); font-size: 1rem;
+    .logo {
+      font-family: "Bangers", cursive; font-size: 2.2rem;
+      color: var(--black); text-decoration: none; line-height: 1;
     }
-    .theme-toggle:hover { color: var(--text-bright); border-color: var(--text-muted); }
+    .logo span { color: var(--red); }
+    .nav-back {
+      font-family: "Bangers", cursive; font-size: 1.1rem;
+      border: var(--bw) solid var(--black);
+      background: var(--white); color: var(--black);
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      text-decoration: none;
+    }
+    .nav-back:hover { background: var(--black); color: var(--white); }
 
-    main { max-width: 860px; margin: 0 auto; padding: 1rem 1.5rem 4rem; }
-
-    .page-header { margin-bottom: 2.5rem; }
-    .page-header h1 {
-      font-family: "Fraunces", serif; font-size: clamp(1.5rem, 4vw, 2.25rem);
-      font-weight: 700; color: var(--text-bright); letter-spacing: -0.02em;
-    }
-    .page-header p { color: var(--text-muted); font-size: 0.95rem; margin-top: 0.25rem; }
-
-    /* --- SECTIONS --- */
-    .explore-section { margin-bottom: 3rem; }
-    .explore-section h2 {
-      font-family: "Fraunces", serif; font-size: 1.3rem;
-      color: var(--text-bright); margin-bottom: 0.25rem;
-    }
-    .explore-section .section-desc {
-      color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem; line-height: 1.5;
+    /* ============ MAIN ============ */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 1.5rem 2rem;
+      position: relative;
+      z-index: 2;
     }
 
-    /* --- TABLE --- */
+    /* ============ SPEECH BUBBLE ============ */
+    .speech-bubble-wrap {
+      margin: 2rem auto 2rem;
+      max-width: 580px;
+      position: relative; z-index: 2;
+    }
+    .speech-bubble {
+      background: var(--white);
+      border: 5px solid var(--black);
+      padding: 1.2rem 1.5rem 1.5rem;
+      position: relative;
+      transform: rotate(-3deg);
+      box-shadow: 0 0 0 1px var(--black), 10px 10px 0 var(--black);
+      outline: 1px solid transparent;
+    }
+    .speech-bubble h1 {
+      font-family: "Bangers", cursive;
+      color: var(--black);
+      margin: 0;
+      line-height: 0.92;
+      display: flex;
+      flex-direction: column;
+      letter-spacing: 0.01em;
+      font-weight: normal;
+    }
+    .speech-bubble h1 em { color: var(--red); font-style: normal; }
+    .speech-bubble h1 .line1 {
+      font-size: clamp(1.4rem, 5vw, 2.4rem);
+      align-self: center; text-align: center;
+    }
+    .speech-bubble h1 .line2 {
+      font-size: clamp(2.4rem, 9vw, 4.6rem);
+      align-self: center; text-align: center;
+      letter-spacing: -0.01em; line-height: 1; margin-top: 0.1rem;
+    }
+    .speech-bubble h1 .line3 {
+      font-size: clamp(1.5rem, 5.5vw, 2.6rem);
+      align-self: center; text-align: center; margin-top: 0.1rem;
+    }
+
+    /* ============ SECTION PILLS ============ */
+    .section-nav {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 0.7rem; margin: 0 0 1.75rem;
+    }
+    .section-nav a {
+      font-family: "Bangers", cursive; font-size: 1.15rem; letter-spacing: 0.03em;
+      background: var(--white); color: var(--black); text-decoration: none;
+      border: var(--bw) solid var(--black); border-radius: 50px;
+      padding: 0.3rem 1.1rem; line-height: 1.4;
+      box-shadow: 4px 4px 0 var(--black);
+    }
+    .section-nav a:hover { background: var(--black); color: var(--white); }
+
+    /* ============ PANELS ============ */
+    .panel {
+      background: var(--white);
+      border: 5px solid var(--black);
+      box-shadow: 8px 8px 0 var(--black);
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1.75rem;
+    }
+    .explore-section { scroll-margin-top: 6.5rem; }
+    .panel h2 {
+      font-family: "Bangers", cursive; font-weight: normal;
+      font-size: clamp(1.4rem, 4vw, 1.8rem); line-height: 1.1;
+      margin-bottom: 0.3rem;
+    }
+    .panel .section-desc {
+      font-size: 0.85rem; color: #666; line-height: 1.5; margin-bottom: 1rem;
+    }
+
+    /* ============ TABLES (Top 25, Biggest Movers) ============ */
     .explore-table { width: 100%; border-collapse: collapse; }
     .explore-table th {
-      text-align: left; font-size: 0.7rem; text-transform: uppercase;
-      letter-spacing: 0.08em; color: var(--text-muted);
-      padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border);
+      text-align: left; font-size: 0.65rem; text-transform: uppercase;
+      letter-spacing: 0.08em; color: #888; font-weight: 700;
+      padding: 0.5rem 0; border-bottom: 2px solid var(--black);
     }
     .explore-table th:last-child { text-align: right; }
     .explore-table td {
-      padding: 0.55rem 0.5rem; border-bottom: 1px solid var(--border); font-size: 0.9rem;
+      padding: 0.6rem 0; border-bottom: 1px solid #ddd;
+      font-size: 0.92rem; vertical-align: baseline;
     }
+    .explore-table tbody tr:last-child td { border-bottom: none; }
 
     .explore-rank {
-      color: var(--text-muted); font-size: 0.8rem; font-variant-numeric: tabular-nums;
-      width: 50px; white-space: nowrap;
+      font-family: "Bangers", cursive; font-size: 1.3rem; color: var(--red);
+      width: 52px; white-space: nowrap; letter-spacing: 0.02em;
     }
-    .explore-title a { color: var(--text-bright); text-decoration: none; }
-    .explore-title a:hover { color: var(--accent); }
+    .explore-title a { color: var(--black); text-decoration: none; font-weight: 600; }
+    .explore-title a:hover { color: var(--red); }
     .explore-desc {
-      color: var(--text-muted); font-size: 0.8rem;
+      color: #666; font-size: 0.8rem; padding-left: 1rem !important;
       white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 250px;
     }
     .explore-views {
-      text-align: right; color: var(--text-muted); font-size: 0.85rem;
-      font-variant-numeric: tabular-nums; white-space: nowrap;
+      text-align: right; color: #555; font-size: 0.85rem;
+      font-variant-numeric: tabular-nums; white-space: nowrap; padding-left: 1rem !important;
     }
     .explore-change {
-      text-align: right; font-size: 0.8rem; font-weight: 600;
-      font-variant-numeric: tabular-nums; white-space: nowrap; width: 80px;
+      text-align: right; font-size: 0.85rem; font-weight: 700;
+      font-variant-numeric: tabular-nums; white-space: nowrap; width: 80px; padding-left: 0.75rem !important;
     }
     .explore-change.up { color: var(--green); }
     .explore-change.down { color: var(--red); }
 
-    /* --- COUNTRY GRID --- */
+    /* ============ CARDS (New Arrivals, Deep Cuts) ============ */
+    .explore-cards {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem;
+    }
+    .explore-card {
+      display: grid; grid-template-columns: 2.5rem minmax(0, 1fr) auto;
+      gap: 0.2rem 0.5rem; align-items: baseline;
+      border: 2px solid var(--black); background: var(--cream);
+      padding: 0.65rem 0.85rem;
+    }
+    .explore-card-rank {
+      font-family: "Bangers", cursive; font-size: 1.15rem; color: var(--red);
+      letter-spacing: 0.03em;
+    }
+    .explore-card-body { min-width: 0; }
+    .explore-card-title {
+      color: var(--black); text-decoration: none; font-weight: 600;
+      font-size: 0.92rem; line-height: 1.3; display: block; overflow-wrap: anywhere;
+    }
+    .explore-card-title:hover { color: var(--red); }
+    .explore-card-desc {
+      color: #666; font-size: 0.78rem; line-height: 1.4; display: block; margin-top: 0.1rem;
+    }
+    .explore-card-desc:empty { display: none; }
+    .explore-card-views {
+      color: #555; font-size: 0.8rem; font-variant-numeric: tabular-nums;
+      white-space: nowrap; text-align: right;
+    }
+
+    /* ============ AROUND THE WORLD ============ */
     .country-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.25rem;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem;
     }
     .country-block {
-      border: 1px solid var(--border); border-radius: var(--radius);
-      background: var(--bg-raised); padding: 1rem 1.1rem; overflow: hidden;
+      border: 2px solid var(--black); background: var(--cream);
+      padding: 0.75rem 0.95rem 0.5rem; min-width: 0;
     }
     .country-header {
-      display: flex; align-items: center; gap: 0.5rem;
-      margin-bottom: 0.6rem; font-weight: 600; font-size: 0.95rem;
-      color: var(--text-bright);
+      display: flex; flex-wrap: wrap; align-items: center; gap: 0.1rem 0.5rem;
+      margin-bottom: 0.35rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--black);
+      font-family: "Bangers", cursive; font-size: 1.3rem; line-height: 1.15; letter-spacing: 0.03em;
     }
-    .country-flag { font-size: 1.25rem; }
-    .country-lang { color: var(--text-muted); font-size: 0.75rem; font-weight: 400; }
+    .country-flag { font-size: 1.1rem; letter-spacing: 0; }
+    .country-lang {
+      font-family: "Instrument Sans", sans-serif; font-size: 0.7rem; font-weight: 600;
+      color: #666; letter-spacing: 0.02em;
+    }
     .country-list { list-style: none; }
     .country-list li {
-      display: flex; align-items: baseline; gap: 0.4rem;
-      padding: 0.25rem 0; border-bottom: 1px solid var(--border);
-      font-size: 0.85rem;
+      display: flex; align-items: baseline; gap: 0.55rem;
+      padding: 0.35rem 0; border-bottom: 1px solid #ddd; font-size: 0.88rem;
     }
     .country-list li:last-child { border-bottom: none; }
     .country-list-rank {
-      color: var(--text-muted); font-size: 0.75rem; min-width: 1.5rem;
-      text-align: right; flex-shrink: 0;
+      font-family: "Bangers", cursive; color: var(--red); font-size: 1.1rem;
+      min-width: 1rem; flex-shrink: 0;
     }
-    .country-list-title { flex: 1; min-width: 0; }
-    .country-list-title a {
-      color: var(--text-bright); text-decoration: none;
-    }
-    .country-list-title a:hover { color: var(--accent); }
-    .country-list-en {
-      font-size: 0.7rem; color: var(--text-muted); margin-left: 0.15rem;
-    }
-    .country-list-en a { color: var(--text-muted); text-decoration: none; }
-    .country-list-en a:hover { color: var(--accent); }
+    .country-list-title { flex: 1; min-width: 0; overflow-wrap: anywhere; line-height: 1.35; }
+    .country-list-title a { color: var(--black); text-decoration: none; font-weight: 600; }
+    .country-list-title a:hover { color: var(--red); }
+    .country-list-en { display: block; font-size: 0.74rem; color: #666; line-height: 1.3; }
+    .country-list-en a { color: #666; font-weight: 400; text-decoration: none; }
+    .country-list-en a:hover { color: var(--red); }
     .country-list-views {
-      color: var(--text-muted); font-size: 0.8rem; font-variant-numeric: tabular-nums;
+      color: #555; font-size: 0.78rem; font-variant-numeric: tabular-nums;
       white-space: nowrap; flex-shrink: 0;
     }
 
-    /* --- CARDS --- */
-    .explore-cards {
-      display: grid; grid-template-columns: 1fr; gap: 0.5rem;
-    }
-    .explore-card {
-      display: flex; align-items: center; gap: 0.75rem;
-      padding: 0.75rem 1rem; border-radius: var(--radius);
-      border: 1px solid var(--border); background: var(--bg-raised);
-    }
-    .explore-card:hover { border-color: var(--accent); }
-    .explore-card-rank {
-      color: var(--text-muted); font-size: 0.75rem; font-variant-numeric: tabular-nums;
-      min-width: 36px; text-align: right; flex-shrink: 0;
-    }
-    .explore-card-body { flex: 1; min-width: 0; }
-    .explore-card-title {
-      color: var(--text-bright); text-decoration: none; font-weight: 600;
-      font-size: 0.9rem; display: block;
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-    }
-    .explore-card-title:hover { color: var(--accent); }
-    .explore-card-desc {
-      color: var(--text-muted); font-size: 0.75rem; display: block;
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-    }
-    .explore-card-views {
-      color: var(--text-muted); font-size: 0.8rem; font-variant-numeric: tabular-nums;
-      white-space: nowrap; flex-shrink: 0;
-    }
-
-    /* --- NAV PILLS --- */
-    .section-nav {
-      display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem;
-    }
-    .section-nav a {
-      display: inline-block; font-size: 0.8rem; font-weight: 600;
-      color: var(--text-muted); border: 1px solid var(--border);
-      padding: 0.3rem 0.75rem; border-radius: 100px;
-      text-decoration: none;
-    }
-    .section-nav a:hover { color: var(--accent); border-color: var(--accent); }
-
-    /* --- DIVIDER --- */
-    .section-divider { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
-
+    /* ============ FOOTER ============ */
     footer {
-      max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 3rem;
-      border-top: 1px solid var(--border); display: flex;
-      justify-content: space-between; align-items: center;
-      color: var(--text-muted); font-size: 0.8rem;
+      background: var(--white);
+      border: var(--bw) solid var(--black);
+      border-radius: 50px;
+      margin: 2rem auto 3rem;
+      width: calc(100% - 3rem);
+      max-width: 760px;
+      padding: 0.8rem 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      color: var(--black); font-size: 0.85rem; font-weight: 700;
+      box-shadow: 6px 6px 0 var(--black);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
-    footer a { color: var(--text-muted); text-decoration: none; }
-    footer a:hover { color: var(--text-bright); }
+    footer a { color: var(--black); text-decoration: none; }
+    footer a:hover { color: var(--red); }
     .footer-links { display: flex; gap: 1.25rem; }
 
+
+    .slanted-newsletter {
+      background: var(--yellow, #ffdf00);
+      border: 5px solid var(--black, #111);
+      padding: 1.5rem;
+      box-shadow: -10px 10px 0 var(--black, #111);
+      transform: rotate(1.5deg);
+      margin: 2.25rem 0.5rem 2rem 1rem;
+    }
+    .slanted-heading {
+      font-family: "Bangers", cursive; font-weight: normal;
+      font-size: clamp(1.4rem, 4vw, 1.8rem);
+      line-height: 1.1; color: var(--black, #111); margin: 0 0 0.35rem;
+    }
+    .signup-red { color: #d00d00; }
+    .slanted-sub { font-size: 0.95rem; line-height: 1.45; color: var(--black, #111); margin: 0 0 1rem; }
+    .slanted-form { display: flex; gap: 0.5rem; }
+    .slanted-input {
+      flex: 1; border: 3px solid var(--black, #111); padding: 0.75rem 1rem;
+      font-size: 1.1rem; font-family: inherit; min-width: 0; outline: none;
+      background: var(--white, #fdfcf3);
+    }
+    .slanted-input:focus { border-color: #d00d00; }
+    .slanted-btn {
+      background: var(--white, #fdfcf3); color: var(--black, #111);
+      border: 3px solid var(--black, #111); padding: 0.75rem 1.5rem;
+      font-size: 1.1rem; font-family: "Bangers", cursive; cursor: pointer;
+    }
+    .slanted-btn:hover { background: var(--black, #111); color: var(--white, #fdfcf3); }
+    .slanted-newsletter.compact { transform: rotate(-1deg); box-shadow: 8px 8px 0 var(--black, #111); margin: 1.75rem 0 1.5rem; padding: 1.1rem 1.25rem; }
+    .slanted-newsletter.compact .slanted-heading { font-size: clamp(1.2rem, 3.5vw, 1.5rem); }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
     @media (max-width: 600px) {
-      nav { padding: 1rem; }
-      main { padding: 1rem 1rem 3rem; }
-      .explore-desc { display: none; }
-      .explore-card-desc { display: none; }
-      .country-grid { grid-template-columns: 1fr; }
-      footer { flex-direction: column; gap: 0.75rem; text-align: center; }
-      .footer-links { justify-content: center; }
+      .slanted-newsletter { margin: 1.75rem 0.25rem 1.5rem 0.5rem; padding: 1.1rem; }
+      .slanted-form { flex-direction: column; }
+    }
+
+    @media (max-width: 700px) {
+      .explore-cards { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 0.6rem 1.2rem; width: calc(100% - 2rem); margin-top: 1rem; }
+      main { padding: 0 1rem 2rem; }
+      .speech-bubble-wrap { width: calc(100% - 30px); margin-left: 15px; }
+      .speech-bubble { padding: 0.9rem 1.2rem 1.1rem; transform: rotate(-2deg); box-shadow: 6px 6px 0 var(--black); }
+      .speech-bubble h1 .line1 { font-size: 6.5vw; white-space: nowrap; }
+      .speech-bubble h1 .line2 { font-size: 15vw; white-space: nowrap; }
+      .speech-bubble h1 .line3 { font-size: 7.5vw; white-space: nowrap; }
+
+      .section-nav { gap: 0.55rem; margin-bottom: 1.5rem; }
+      .section-nav a { font-size: 1.05rem; padding: 0.3rem 0.9rem; box-shadow: 3px 3px 0 var(--black); }
+
+      .panel { padding: 1rem; box-shadow: 5px 5px 0 var(--black); }
+
+      /* Tables turn into ranked rows: rank | title + category | views (+ change) */
+      .explore-table, .explore-table tbody { display: block; }
+      .explore-table thead {
+        position: absolute; width: 1px; height: 1px; overflow: hidden;
+        clip: rect(0 0 0 0); white-space: nowrap;
+      }
+      .explore-table tr {
+        display: grid; grid-template-columns: 40px minmax(0, 1fr) auto;
+        column-gap: 0.5rem; align-items: baseline;
+        padding: 0.75rem 0; border-bottom: 1px solid #ddd;
+      }
+      .explore-table tbody tr:last-child { border-bottom: none; }
+      .explore-table td { display: block; padding: 0; border: none; font-size: 0.95rem; }
+      .explore-rank { grid-column: 1; grid-row: 1; width: auto; font-size: 1.2rem; }
+      .explore-title { grid-column: 2; grid-row: 1; min-width: 0; overflow-wrap: anywhere; line-height: 1.35; }
+      .explore-desc {
+        grid-column: 2; grid-row: 2; padding-left: 0 !important; max-width: none;
+        white-space: normal; overflow: visible; line-height: 1.4;
+      }
+      .explore-desc:empty { display: none; }
+      .explore-views { grid-column: 3; grid-row: 1; padding-left: 0 !important; font-size: 0.9rem; }
+      .explore-change { grid-column: 3; grid-row: 2; width: auto; padding-left: 0 !important; font-size: 0.85rem; }
+
+      .explore-card { padding: 0.65rem 0.8rem; }
+      .country-block { padding: 0.7rem 0.85rem 0.45rem; }
+      .country-list li { padding: 0.55rem 0; }
+
+      footer {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+        border-radius: 20px;
+        padding: 1.25rem 1.2rem;
+        width: calc(100% - 2rem);
+      }
+      .footer-links { justify-content: center; flex-wrap: wrap; }
     }
   </style>
   <!-- Google tag (gtag.js) -->
@@ -229,16 +384,19 @@
 </head>
 <body>
   <nav>
-    <a href="index.html" class="logo">Wiki<span>Pop</span></a>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-      <span class="theme-icon">&#9790;</span>
-    </button>
+    <a href="index.html" class="logo">Wiki<span>Pop!</span></a>
+    <a href="index.html" class="nav-back">Today</a>
   </nav>
 
   <main>
-    <div class="page-header">
-      <h1>Explore</h1>
-      <p>What the world was reading on Wikipedia &mdash; Oct 29</p>
+    <div class="speech-bubble-wrap">
+      <div class="speech-bubble">
+        <h1>
+          <span class="line1">Explore what&rsquo;s</span>
+          <span class="line2"><em>trending</em></span>
+          <span class="line3">on Wikipedia &mdash; Oct 29</span>
+        </h1>
+      </div>
     </div>
 
     <div class="section-nav">
@@ -249,7 +407,7 @@
       <a href="#deep-cuts">Deep Cuts</a>
     </div>
 
-    <div class="explore-section" id="top25">
+    <section class="panel explore-section" id="top25">
       <h2>Top 25</h2>
       <p class="section-desc">The most-viewed Wikipedia articles yesterday, excluding meta pages.</p>
       <table class="explore-table">
@@ -292,7 +450,7 @@
 <tr>
     <td class="explore-rank">#10</td>
     <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Patrick_Stewart_on_stage_and_screen" target="_blank" rel="noopener">Patrick Stewart on stage and screen</a></td>
-    <td class="explore-desc">Acting works of Sir Patrick Stewart</td>
+    <td class="explore-desc">Acting parts of Sir Patrick Stewart</td>
     <td class="explore-views">212,550</td>
     
   </tr>
@@ -313,7 +471,7 @@
 <tr>
     <td class="explore-rank">#13</td>
     <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Pat_Murphy_(baseball_manager)" target="_blank" rel="noopener">Pat Murphy (baseball manager)</a></td>
-    <td class="explore-desc"></td>
+    <td class="explore-desc">American baseball manager (born 1958)</td>
     <td class="explore-views">196,456</td>
     
   </tr>
@@ -348,14 +506,14 @@
 <tr>
     <td class="explore-rank">#18</td>
     <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Elizabeth_Holmes" target="_blank" rel="noopener">Elizabeth Holmes</a></td>
-    <td class="explore-desc"></td>
+    <td class="explore-desc">American businesswoman (born 1984)</td>
     <td class="explore-views">140,836</td>
     
   </tr>
 <tr>
     <td class="explore-rank">#19</td>
     <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Cooper_Pratt" target="_blank" rel="noopener">Cooper Pratt</a></td>
-    <td class="explore-desc"></td>
+    <td class="explore-desc">American baseball player (born 2004)</td>
     <td class="explore-views">130,967</td>
     
   </tr>
@@ -369,42 +527,42 @@
 <tr>
     <td class="explore-rank">#21</td>
     <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Jeffery_Simmons" target="_blank" rel="noopener">Jeffery Simmons</a></td>
-    <td class="explore-desc"></td>
+    <td class="explore-desc">American football player (born 1997)</td>
     <td class="explore-views">122,632</td>
     
   </tr>
 <tr>
     <td class="explore-rank">#22</td>
     <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Jailer_2" target="_blank" rel="noopener">Jailer 2</a></td>
-    <td class="explore-desc"></td>
+    <td class="explore-desc">2026 Indian film by Nelson Dilipkumar</td>
     <td class="explore-views">122,337</td>
     
   </tr>
 <tr>
     <td class="explore-rank">#23</td>
     <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Wendy_Neuss" target="_blank" rel="noopener">Wendy Neuss</a></td>
-    <td class="explore-desc"></td>
+    <td class="explore-desc">American television and film producer (born 1954)</td>
     <td class="explore-views">113,901</td>
     
   </tr>
 <tr>
     <td class="explore-rank">#24</td>
     <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Christian_Yelich" target="_blank" rel="noopener">Christian Yelich</a></td>
-    <td class="explore-desc"></td>
+    <td class="explore-desc">American baseball player (born 1991)</td>
     <td class="explore-views">102,416</td>
     
   </tr>
 <tr>
     <td class="explore-rank">#25</td>
     <td class="explore-title"><a href="https://en.wikipedia.org/wiki/You_Can_See_Everything" target="_blank" rel="noopener">You Can See Everything</a></td>
-    <td class="explore-desc"></td>
+    <td class="explore-desc">2026 film by Nathan Fielder and Lance Oppenheim</td>
     <td class="explore-views">99,486</td>
     
   </tr>
 <tr>
     <td class="explore-rank">#26</td>
     <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Matthew_Perry" target="_blank" rel="noopener">Matthew Perry</a></td>
-    <td class="explore-desc"></td>
+    <td class="explore-desc">American and Canadian actor (1969–2023)</td>
     <td class="explore-views">96,174</td>
     
   </tr>
@@ -430,11 +588,20 @@
     
   </tr></tbody>
       </table>
-    </div>
+    </section>
 
-    <hr class="section-divider">
+    <div class="explore-signup">
+    <aside class="slanted-newsletter" aria-labelledby="bd-email-explore-h">
+      <h2 class="slanted-heading" id="bd-email-explore-h">Get <span class="signup-red">WikiPop'd</span> every morning</h2>
+      <p class="slanted-sub">See what's trending on Wikipedia and why it spiked, plus one obscure gem.</p>
+      <form class="slanted-form" action="https://buttondown.com/api/emails/embed-subscribe/wikipop" method="post" data-placement="explore">
+        <label for="bd-email-explore" class="visually-hidden">Email address</label>
+        <input type="email" name="email" id="bd-email-explore" placeholder="you@email.com" required class="slanted-input" autocomplete="email">
+        <button type="submit" class="slanted-btn">Subscribe</button>
+      </form>
+    </aside></div>
 
-    <div class="explore-section" id="movers">
+    <section class="panel explore-section" id="movers">
       <h2>Biggest Movers</h2>
       <p class="section-desc">Articles that spiked the most compared to the day before. Something happened.</p>
       <table class="explore-table">
@@ -463,7 +630,7 @@
 <tr>
     <td class="explore-rank">#13</td>
     <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Pat_Murphy_(baseball_manager)" target="_blank" rel="noopener">Pat Murphy (baseball manager)</a></td>
-    <td class="explore-desc"></td>
+    <td class="explore-desc">American baseball manager (born 1958)</td>
     <td class="explore-views">196,456</td>
     <td class="explore-change up">+545%</td>
   </tr>
@@ -477,7 +644,7 @@
 <tr>
     <td class="explore-rank">#66</td>
     <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Michael_Sheen" target="_blank" rel="noopener">Michael Sheen</a></td>
-    <td class="explore-desc"></td>
+    <td class="explore-desc">Welsh actor and presenter (born 1969)</td>
     <td class="explore-views">49,324</td>
     <td class="explore-change up">+332%</td>
   </tr>
@@ -512,28 +679,28 @@
 <tr>
     <td class="explore-rank">#120</td>
     <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Jake_Bauers" target="_blank" rel="noopener">Jake Bauers</a></td>
-    <td class="explore-desc"></td>
+    <td class="explore-desc">American baseball player (born 1995)</td>
     <td class="explore-views">32,056</td>
     <td class="explore-change up">+246%</td>
   </tr>
 <tr>
     <td class="explore-rank">#56</td>
     <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Baththa" target="_blank" rel="noopener">Baththa</a></td>
-    <td class="explore-desc"></td>
+    <td class="explore-desc">2026 film directed by Balaji Tharaneetharan</td>
     <td class="explore-views">55,094</td>
     <td class="explore-change up">+233%</td>
   </tr>
 <tr>
     <td class="explore-rank">#76</td>
     <td class="explore-title"><a href="https://en.wikipedia.org/wiki/Karva_Chauth" target="_blank" rel="noopener">Karva Chauth</a></td>
-    <td class="explore-desc"></td>
+    <td class="explore-desc">Festival celebrated by Hindu women</td>
     <td class="explore-views">42,808</td>
     <td class="explore-change up">+215%</td>
   </tr>
 <tr>
     <td class="explore-rank">#54</td>
     <td class="explore-title"><a href="https://en.wikipedia.org/wiki/The_Celebrity_Traitors_series_2" target="_blank" rel="noopener">The Celebrity Traitors series 2</a></td>
-    <td class="explore-desc"></td>
+    <td class="explore-desc">2026 series of The Celebrity Traitors</td>
     <td class="explore-views">55,983</td>
     <td class="explore-change up">+210%</td>
   </tr>
@@ -545,11 +712,9 @@
     <td class="explore-change up">+204%</td>
   </tr></tbody>
       </table>
-    </div>
+    </section>
 
-    <hr class="section-divider">
-
-    <div class="explore-section" id="newcomers">
+    <section class="panel explore-section" id="newcomers">
       <h2>New Arrivals</h2>
       <p class="section-desc">
         Articles that appeared in the top 500 yesterday but weren't anywhere in the top 1,000 the day before.
@@ -576,7 +741,7 @@
     <div class="explore-card-rank">#10</div>
     <div class="explore-card-body">
       <a href="https://en.wikipedia.org/wiki/Patrick_Stewart_on_stage_and_screen" target="_blank" rel="noopener" class="explore-card-title">Patrick Stewart on stage and screen</a>
-      <span class="explore-card-desc">Acting works of Sir Patrick Stewart</span>
+      <span class="explore-card-desc">Acting parts of Sir Patrick Stewart</span>
     </div>
     <div class="explore-card-views">212,550</div>
   </div>
@@ -600,7 +765,7 @@
     <div class="explore-card-rank">#21</div>
     <div class="explore-card-body">
       <a href="https://en.wikipedia.org/wiki/Jeffery_Simmons" target="_blank" rel="noopener" class="explore-card-title">Jeffery Simmons</a>
-      <span class="explore-card-desc"></span>
+      <span class="explore-card-desc">American football player (born 1997)</span>
     </div>
     <div class="explore-card-views">122,632</div>
   </div>
@@ -608,7 +773,7 @@
     <div class="explore-card-rank">#23</div>
     <div class="explore-card-body">
       <a href="https://en.wikipedia.org/wiki/Wendy_Neuss" target="_blank" rel="noopener" class="explore-card-title">Wendy Neuss</a>
-      <span class="explore-card-desc"></span>
+      <span class="explore-card-desc">American television and film producer (born 1954)</span>
     </div>
     <div class="explore-card-views">113,901</div>
   </div>
@@ -640,7 +805,7 @@
     <div class="explore-card-rank">#37</div>
     <div class="explore-card-body">
       <a href="https://en.wikipedia.org/wiki/Mark_Attanasio" target="_blank" rel="noopener" class="explore-card-title">Mark Attanasio</a>
-      <span class="explore-card-desc"></span>
+      <span class="explore-card-desc">American businessman (born 1957)</span>
     </div>
     <div class="explore-card-views">71,618</div>
   </div>
@@ -648,7 +813,7 @@
     <div class="explore-card-rank">#46</div>
     <div class="explore-card-body">
       <a href="https://en.wikipedia.org/wiki/Trevor_Megill" target="_blank" rel="noopener" class="explore-card-title">Trevor Megill</a>
-      <span class="explore-card-desc"></span>
+      <span class="explore-card-desc">American baseball player (born 1993)</span>
     </div>
     <div class="explore-card-views">63,720</div>
   </div>
@@ -672,16 +837,14 @@
     <div class="explore-card-rank">#88</div>
     <div class="explore-card-body">
       <a href="https://en.wikipedia.org/wiki/James_Acaster" target="_blank" rel="noopener" class="explore-card-title">James Acaster</a>
-      <span class="explore-card-desc"></span>
+      <span class="explore-card-desc">English comedian (born 1985)</span>
     </div>
     <div class="explore-card-views">39,028</div>
   </div>
       </div>
-    </div>
+    </section>
 
-    <hr class="section-divider">
-
-    <div class="explore-section" id="world">
+    <section class="panel explore-section" id="world">
       <h2>Around the World</h2>
       <div class="country-grid">
         <div class="country-block">
@@ -838,17 +1001,17 @@
       </li>
 <li>
         <span class="country-list-rank">3</span>
-        <span class="country-list-title"><a href="https://ur.wikipedia.org/wiki/%D8%B3%DB%8C%DA%A9%D8%B3%DB%8C_(%D9%86%D8%A7%D9%88%D9%84)" target="_blank" rel="noopener">سیکسی (ناول)</a></span>
+        <span class="country-list-title"><a href="https://ur.wikipedia.org/wiki/%D8%B3%DB%8C%DA%A9%D8%B3%DB%8C_(%D9%86%D8%A7%D9%88%D9%84)" target="_blank" rel="noopener">سیکسی (ناول)</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Sexy%20(novel)" target="_blank" rel="noopener">Sexy (novel)</a>)</span></span>
         <span class="country-list-views">230</span>
       </li>
 <li>
         <span class="country-list-rank">4</span>
-        <span class="country-list-title"><a href="https://ur.wikipedia.org/wiki/%DA%A9%D9%88%D8%B3" target="_blank" rel="noopener">کوس</a></span>
+        <span class="country-list-title"><a href="https://ur.wikipedia.org/wiki/%DA%A9%D9%88%D8%B3" target="_blank" rel="noopener">کوس</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Kos" target="_blank" rel="noopener">Kos</a>)</span></span>
         <span class="country-list-views">155</span>
       </li>
 <li>
         <span class="country-list-rank">5</span>
-        <span class="country-list-title"><a href="https://ur.wikipedia.org/wiki/%D8%B4%D8%A7%DB%81_%D8%A8%D8%AF%DB%8C%D8%B9_%D8%A7%D9%84%D8%AF%DB%8C%D9%86_%D8%A7%D8%AD%D9%85%D8%AF_%D9%82%D8%B7%D8%A8_%D8%A7%D9%84%D9%85%D8%AF%D8%A7%D8%B1" target="_blank" rel="noopener">شاہ بدیع الدین احمد قطب المدار</a></span>
+        <span class="country-list-title"><a href="https://ur.wikipedia.org/wiki/%D8%B4%D8%A7%DB%81_%D8%A8%D8%AF%DB%8C%D8%B9_%D8%A7%D9%84%D8%AF%DB%8C%D9%86_%D8%A7%D8%AD%D9%85%D8%AF_%D9%82%D8%B7%D8%A8_%D8%A7%D9%84%D9%85%D8%AF%D8%A7%D8%B1" target="_blank" rel="noopener">شاہ بدیع الدین احمد قطب المدار</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Badi&#039;%20al-Din" target="_blank" rel="noopener">Badi&#039; al-Din</a>)</span></span>
         <span class="country-list-views">150</span>
       </li></ol>
     </div>
@@ -856,7 +1019,7 @@
       <div class="country-header"><span class="country-flag">🇧🇷</span> Brazil <span class="country-lang">pt.wikipedia</span></div>
       <ol class="country-list"><li>
         <span class="country-list-rank">1</span>
-        <span class="country-list-title"><a href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia%3AP%C3%A1gina_principal" target="_blank" rel="noopener">Wikipédia:Página principal</a></span>
+        <span class="country-list-title"><a href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia%3AP%C3%A1gina_principal" target="_blank" rel="noopener">Wikipédia:Página principal</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Main%20Page" target="_blank" rel="noopener">Main Page</a>)</span></span>
         <span class="country-list-views">120,696</span>
       </li>
 <li>
@@ -866,17 +1029,17 @@
       </li>
 <li>
         <span class="country-list-rank">3</span>
-        <span class="country-list-title"><a href="https://pt.wikipedia.org/wiki/Patrick_Stewart" target="_blank" rel="noopener">Patrick Stewart</a></span>
+        <span class="country-list-title"><a href="https://pt.wikipedia.org/wiki/Patrick_Stewart" target="_blank" rel="noopener">Patrick Stewart</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Patrick%20Stewart" target="_blank" rel="noopener">Patrick Stewart</a>)</span></span>
         <span class="country-list-views">27,489</span>
       </li>
 <li>
         <span class="country-list-rank">4</span>
-        <span class="country-list-title"><a href="https://pt.wikipedia.org/wiki/Elei%C3%A7%C3%B5es_nos_Estados_Unidos_em_2026" target="_blank" rel="noopener">Eleições nos Estados Unidos em 2026</a></span>
+        <span class="country-list-title"><a href="https://pt.wikipedia.org/wiki/Elei%C3%A7%C3%B5es_nos_Estados_Unidos_em_2026" target="_blank" rel="noopener">Eleições nos Estados Unidos em 2026</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/2026%20United%20States%20elections" target="_blank" rel="noopener">2026 United States elections</a>)</span></span>
         <span class="country-list-views">25,386</span>
       </li>
 <li>
         <span class="country-list-rank">5</span>
-        <span class="country-list-title"><a href="https://pt.wikipedia.org/wiki/WhatsApp" target="_blank" rel="noopener">WhatsApp</a></span>
+        <span class="country-list-title"><a href="https://pt.wikipedia.org/wiki/WhatsApp" target="_blank" rel="noopener">WhatsApp</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/WhatsApp" target="_blank" rel="noopener">WhatsApp</a>)</span></span>
         <span class="country-list-views">20,718</span>
       </li></ol>
     </div>
@@ -894,17 +1057,17 @@
       </li>
 <li>
         <span class="country-list-rank">3</span>
-        <span class="country-list-title"><a href="https://bn.wikipedia.org/wiki/%E0%A6%A0%E0%A6%BE%E0%A6%95%E0%A7%81%E0%A6%B0%E0%A6%97%E0%A6%BE%E0%A6%81%E0%A6%93-%E0%A7%A7" target="_blank" rel="noopener">ঠাকুরগাঁও-১</a></span>
+        <span class="country-list-title"><a href="https://bn.wikipedia.org/wiki/%E0%A6%A0%E0%A6%BE%E0%A6%95%E0%A7%81%E0%A6%B0%E0%A6%97%E0%A6%BE%E0%A6%81%E0%A6%93-%E0%A7%A7" target="_blank" rel="noopener">ঠাকুরগাঁও-১</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Thakurgaon-1" target="_blank" rel="noopener">Thakurgaon-1</a>)</span></span>
         <span class="country-list-views">1,173</span>
       </li>
 <li>
         <span class="country-list-rank">4</span>
-        <span class="country-list-title"><a href="https://bn.wikipedia.org/wiki/%E0%A6%AA%E0%A6%B0%E0%A7%80%E0%A6%AE%E0%A6%A8%E0%A6%BF" target="_blank" rel="noopener">পরীমনি</a></span>
+        <span class="country-list-title"><a href="https://bn.wikipedia.org/wiki/%E0%A6%AA%E0%A6%B0%E0%A7%80%E0%A6%AE%E0%A6%A8%E0%A6%BF" target="_blank" rel="noopener">পরীমনি</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Pori%20Moni" target="_blank" rel="noopener">Pori Moni</a>)</span></span>
         <span class="country-list-views">862</span>
       </li>
 <li>
         <span class="country-list-rank">5</span>
-        <span class="country-list-title"><a href="https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE_%E0%A6%96%E0%A6%B2%E0%A6%BF%E0%A6%AB%E0%A6%BE" target="_blank" rel="noopener">মিয়া খলিফা</a></span>
+        <span class="country-list-title"><a href="https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE_%E0%A6%96%E0%A6%B2%E0%A6%BF%E0%A6%AB%E0%A6%BE" target="_blank" rel="noopener">মিয়া খলিফা</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Mia%20Khalifa" target="_blank" rel="noopener">Mia Khalifa</a>)</span></span>
         <span class="country-list-views">780</span>
       </li></ol>
     </div>
@@ -912,7 +1075,7 @@
       <div class="country-header"><span class="country-flag">🇷🇺</span> Russia <span class="country-lang">ru.wikipedia</span></div>
       <ol class="country-list"><li>
         <span class="country-list-rank">1</span>
-        <span class="country-list-title"><a href="https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" target="_blank" rel="noopener">Заглавная страница</a></span>
+        <span class="country-list-title"><a href="https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" target="_blank" rel="noopener">Заглавная страница</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Main%20Page" target="_blank" rel="noopener">Main Page</a>)</span></span>
         <span class="country-list-views">229,377</span>
       </li>
 <li>
@@ -922,18 +1085,74 @@
       </li>
 <li>
         <span class="country-list-rank">3</span>
-        <span class="country-list-title"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D1%8E%D0%B0%D1%80%D1%82%2C_%D0%9F%D0%B0%D1%82%D1%80%D0%B8%D0%BA" target="_blank" rel="noopener">Стюарт, Патрик</a></span>
+        <span class="country-list-title"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D1%8E%D0%B0%D1%80%D1%82%2C_%D0%9F%D0%B0%D1%82%D1%80%D0%B8%D0%BA" target="_blank" rel="noopener">Стюарт, Патрик</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Patrick%20Stewart" target="_blank" rel="noopener">Patrick Stewart</a>)</span></span>
         <span class="country-list-views">43,866</span>
       </li>
 <li>
         <span class="country-list-rank">4</span>
-        <span class="country-list-title"><a href="https://ru.wikipedia.org/wiki/Mail.ru" target="_blank" rel="noopener">Mail.ru</a></span>
+        <span class="country-list-title"><a href="https://ru.wikipedia.org/wiki/Mail.ru" target="_blank" rel="noopener">Mail.ru</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Mail.ru" target="_blank" rel="noopener">Mail.ru</a>)</span></span>
         <span class="country-list-views">22,564</span>
       </li>
 <li>
         <span class="country-list-rank">5</span>
-        <span class="country-list-title"><a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D1%91%D1%88%D0%BA%D0%B8" target="_blank" rel="noopener">Алёшки</a></span>
+        <span class="country-list-title"><a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D1%91%D1%88%D0%BA%D0%B8" target="_blank" rel="noopener">Алёшки</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Oleshky" target="_blank" rel="noopener">Oleshky</a>)</span></span>
         <span class="country-list-views">21,389</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇲🇽</span> Mexico <span class="country-lang">es.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://es.wikipedia.org/wiki/F%C3%A1tima_B%C3%A1%C3%B1ez" target="_blank" rel="noopener">Fátima Báñez</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/F%C3%A1tima%20B%C3%A1%C3%B1ez" target="_blank" rel="noopener">Fátima Báñez</a>)</span></span>
+        <span class="country-list-views">151,816</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://es.wikipedia.org/wiki/Patrick_Stewart" target="_blank" rel="noopener">Patrick Stewart</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Patrick%20Stewart" target="_blank" rel="noopener">Patrick Stewart</a>)</span></span>
+        <span class="country-list-views">118,234</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://es.wikipedia.org/wiki/Cuauht%C3%A9moc_C%C3%A1rdenas" target="_blank" rel="noopener">Cuauhtémoc Cárdenas</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Cuauht%C3%A9moc%20C%C3%A1rdenas" target="_blank" rel="noopener">Cuauhtémoc Cárdenas</a>)</span></span>
+        <span class="country-list-views">93,331</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://es.wikipedia.org/wiki/Especial%3ABuscar" target="_blank" rel="noopener">Especial:Buscar</a></span>
+        <span class="country-list-views">80,800</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Santiago_de_Compostela" target="_blank" rel="noopener">Accidente ferroviario de Santiago de Compostela</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Santiago%20de%20Compostela%20derailment" target="_blank" rel="noopener">Santiago de Compostela derailment</a>)</span></span>
+        <span class="country-list-views">38,767</span>
+      </li></ol>
+    </div>
+<div class="country-block">
+      <div class="country-header"><span class="country-flag">🇯🇵</span> Japan <span class="country-lang">ja.wikipedia</span></div>
+      <ol class="country-list"><li>
+        <span class="country-list-rank">1</span>
+        <span class="country-list-title"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" target="_blank" rel="noopener">メインページ</a></span>
+        <span class="country-list-views">607,204</span>
+      </li>
+<li>
+        <span class="country-list-rank">2</span>
+        <span class="country-list-title"><a href="https://ja.wikipedia.org/wiki/%E7%89%B9%E5%88%A5%3A%E6%A4%9C%E7%B4%A2" target="_blank" rel="noopener">特別:検索</a></span>
+        <span class="country-list-views">71,849</span>
+      </li>
+<li>
+        <span class="country-list-rank">3</span>
+        <span class="country-list-title"><a href="https://ja.wikipedia.org/wiki/%E5%AE%87%E9%87%8E%E5%8D%83%E4%BB%A3" target="_blank" rel="noopener">宇野千代</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Chiyo%20Uno" target="_blank" rel="noopener">Chiyo Uno</a>)</span></span>
+        <span class="country-list-views">67,079</span>
+      </li>
+<li>
+        <span class="country-list-rank">4</span>
+        <span class="country-list-title"><a href="https://ja.wikipedia.org/wiki/%E5%A4%A7%E6%A0%84%E5%88%A9%E5%93%89" target="_blank" rel="noopener">大栄利哉</a></span>
+        <span class="country-list-views">41,998</span>
+      </li>
+<li>
+        <span class="country-list-rank">5</span>
+        <span class="country-list-title"><a href="https://ja.wikipedia.org/wiki/%E6%B1%A0%E8%B0%B7%E5%85%AC%E4%BA%8C%E9%83%8E" target="_blank" rel="noopener">池谷公二郎</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Kojiro%20Ikegaya" target="_blank" rel="noopener">Kojiro Ikegaya</a>)</span></span>
+        <span class="country-list-views">41,011</span>
       </li></ol>
     </div>
 <div class="country-block">
@@ -996,7 +1215,7 @@
       <div class="country-header"><span class="country-flag">🇪🇬</span> Egypt <span class="country-lang">ar.wikipedia</span></div>
       <ol class="country-list"><li>
         <span class="country-list-rank">1</span>
-        <span class="country-list-title"><a href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D8%A9" target="_blank" rel="noopener">الصفحة الرئيسة</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Main%20Page" target="_blank" rel="noopener">Main Page</a>)</span></span>
+        <span class="country-list-title"><a href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D8%A9" target="_blank" rel="noopener">الصفحة الرئيسة</a></span>
         <span class="country-list-views">34,129</span>
       </li>
 <li>
@@ -1011,7 +1230,7 @@
       </li>
 <li>
         <span class="country-list-rank">4</span>
-        <span class="country-list-title"><a href="https://ar.wikipedia.org/wiki/%D9%83%D9%84%D8%A8_(%D8%AC%D9%86%D8%B3)" target="_blank" rel="noopener">كلب (جنس)</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Canis" target="_blank" rel="noopener">Canis</a>)</span></span>
+        <span class="country-list-title"><a href="https://ar.wikipedia.org/wiki/%D9%83%D9%84%D8%A8_(%D8%AC%D9%86%D8%B3)" target="_blank" rel="noopener">كلب (جنس)</a></span>
         <span class="country-list-views">12,757</span>
       </li>
 <li>
@@ -1024,7 +1243,7 @@
       <div class="country-header"><span class="country-flag">🇨🇩</span> DR Congo <span class="country-lang">fr.wikipedia</span></div>
       <ol class="country-list"><li>
         <span class="country-list-rank">1</span>
-        <span class="country-list-title"><a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia%3AAccueil_principal" target="_blank" rel="noopener">Wikipédia:Accueil principal</a></span>
+        <span class="country-list-title"><a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia%3AAccueil_principal" target="_blank" rel="noopener">Wikipédia:Accueil principal</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Main%20Page" target="_blank" rel="noopener">Main Page</a>)</span></span>
         <span class="country-list-views">457,844</span>
       </li>
 <li>
@@ -1034,17 +1253,17 @@
       </li>
 <li>
         <span class="country-list-rank">3</span>
-        <span class="country-list-title"><a href="https://fr.wikipedia.org/wiki/Patrick_Stewart" target="_blank" rel="noopener">Patrick Stewart</a></span>
+        <span class="country-list-title"><a href="https://fr.wikipedia.org/wiki/Patrick_Stewart" target="_blank" rel="noopener">Patrick Stewart</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Patrick%20Stewart" target="_blank" rel="noopener">Patrick Stewart</a>)</span></span>
         <span class="country-list-views">70,323</span>
       </li>
 <li>
         <span class="country-list-rank">4</span>
-        <span class="country-list-title"><a href="https://fr.wikipedia.org/wiki/Christine_Lagarde" target="_blank" rel="noopener">Christine Lagarde</a></span>
+        <span class="country-list-title"><a href="https://fr.wikipedia.org/wiki/Christine_Lagarde" target="_blank" rel="noopener">Christine Lagarde</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Christine%20Lagarde" target="_blank" rel="noopener">Christine Lagarde</a>)</span></span>
         <span class="country-list-views">36,456</span>
       </li>
 <li>
         <span class="country-list-rank">5</span>
-        <span class="country-list-title"><a href="https://fr.wikipedia.org/wiki/%C3%89lections_l%C3%A9gislatives_isra%C3%A9liennes_de_2026" target="_blank" rel="noopener">Élections législatives israéliennes de 2026</a></span>
+        <span class="country-list-title"><a href="https://fr.wikipedia.org/wiki/%C3%89lections_l%C3%A9gislatives_isra%C3%A9liennes_de_2026" target="_blank" rel="noopener">Élections législatives israéliennes de 2026</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/2026%20Israeli%20legislative%20election" target="_blank" rel="noopener">2026 Israeli legislative election</a>)</span></span>
         <span class="country-list-views">36,309</span>
       </li></ol>
     </div>
@@ -1085,22 +1304,22 @@
       </li>
 <li>
         <span class="country-list-rank">2</span>
-        <span class="country-list-title"><a href="https://fa.wikipedia.org/wiki/%D8%B1%D8%AF%D9%87%3A%D9%81%DB%8C%D9%84%D9%85%E2%80%8C%D9%87%D8%A7%DB%8C_%D8%B3%DA%A9%D8%B3%DB%8C-%DA%A9%D9%85%D8%AF%DB%8C_%D8%A2%D9%85%D8%B1%DB%8C%DA%A9%D8%A7%DB%8C%DB%8C" target="_blank" rel="noopener">رده:فیلم‌های سکسی-کمدی آمریکایی</a></span>
+        <span class="country-list-title"><a href="https://fa.wikipedia.org/wiki/%D8%B1%D8%AF%D9%87%3A%D9%81%DB%8C%D9%84%D9%85%E2%80%8C%D9%87%D8%A7%DB%8C_%D8%B3%DA%A9%D8%B3%DB%8C-%DA%A9%D9%85%D8%AF%DB%8C_%D8%A2%D9%85%D8%B1%DB%8C%DA%A9%D8%A7%DB%8C%DB%8C" target="_blank" rel="noopener">رده:فیلم‌های سکسی-کمدی آمریکایی</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Category%3AAmerican%20sex%20comedy%20films" target="_blank" rel="noopener">Category:American sex comedy films</a>)</span></span>
         <span class="country-list-views">37,504</span>
       </li>
 <li>
         <span class="country-list-rank">3</span>
-        <span class="country-list-title"><a href="https://fa.wikipedia.org/wiki/%D8%A2%D8%B1%D8%B4_%DB%8C%D9%88%D8%B4%DB%8C%D8%AF%D8%A7" target="_blank" rel="noopener">آرش یوشیدا</a></span>
+        <span class="country-list-title"><a href="https://fa.wikipedia.org/wiki/%D8%A2%D8%B1%D8%B4_%DB%8C%D9%88%D8%B4%DB%8C%D8%AF%D8%A7" target="_blank" rel="noopener">آرش یوشیدا</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Arash%20Yoshida" target="_blank" rel="noopener">Arash Yoshida</a>)</span></span>
         <span class="country-list-views">31,662</span>
       </li>
 <li>
         <span class="country-list-rank">4</span>
-        <span class="country-list-title"><a href="https://fa.wikipedia.org/wiki/%D9%87%D8%A7%D9%84%D9%88%D9%88%DB%8C%D9%86" target="_blank" rel="noopener">هالووین</a></span>
+        <span class="country-list-title"><a href="https://fa.wikipedia.org/wiki/%D9%87%D8%A7%D9%84%D9%88%D9%88%DB%8C%D9%86" target="_blank" rel="noopener">هالووین</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Halloween" target="_blank" rel="noopener">Halloween</a>)</span></span>
         <span class="country-list-views">18,327</span>
       </li>
 <li>
         <span class="country-list-rank">5</span>
-        <span class="country-list-title"><a href="https://fa.wikipedia.org/wiki/%D8%AD%D8%B3%D9%86_%DB%8C%D8%B2%D8%AF%D8%A7%D9%86%DB%8C" target="_blank" rel="noopener">حسن یزدانی</a></span>
+        <span class="country-list-title"><a href="https://fa.wikipedia.org/wiki/%D8%AD%D8%B3%D9%86_%DB%8C%D8%B2%D8%AF%D8%A7%D9%86%DB%8C" target="_blank" rel="noopener">حسن یزدانی</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Hassan%20Yazdani" target="_blank" rel="noopener">Hassan Yazdani</a>)</span></span>
         <span class="country-list-views">16,979</span>
       </li></ol>
     </div>
@@ -1136,12 +1355,12 @@
       <div class="country-header"><span class="country-flag">🇩🇪</span> Germany <span class="country-lang">de.wikipedia</span></div>
       <ol class="country-list"><li>
         <span class="country-list-rank">1</span>
-        <span class="country-list-title"><a href="https://de.wikipedia.org/wiki/Elke_Sommer" target="_blank" rel="noopener">Elke Sommer</a></span>
+        <span class="country-list-title"><a href="https://de.wikipedia.org/wiki/Elke_Sommer" target="_blank" rel="noopener">Elke Sommer</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Elke%20Sommer" target="_blank" rel="noopener">Elke Sommer</a>)</span></span>
         <span class="country-list-views">174,290</span>
       </li>
 <li>
         <span class="country-list-rank">2</span>
-        <span class="country-list-title"><a href="https://de.wikipedia.org/wiki/Patrick_Stewart" target="_blank" rel="noopener">Patrick Stewart</a></span>
+        <span class="country-list-title"><a href="https://de.wikipedia.org/wiki/Patrick_Stewart" target="_blank" rel="noopener">Patrick Stewart</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Patrick%20Stewart" target="_blank" rel="noopener">Patrick Stewart</a>)</span></span>
         <span class="country-list-views">172,957</span>
       </li>
 <li>
@@ -1151,12 +1370,12 @@
       </li>
 <li>
         <span class="country-list-rank">4</span>
-        <span class="country-list-title"><a href="https://de.wikipedia.org/wiki/Elif_Eralp" target="_blank" rel="noopener">Elif Eralp</a></span>
+        <span class="country-list-title"><a href="https://de.wikipedia.org/wiki/Elif_Eralp" target="_blank" rel="noopener">Elif Eralp</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Elif%20Eralp" target="_blank" rel="noopener">Elif Eralp</a>)</span></span>
         <span class="country-list-views">46,454</span>
       </li>
 <li>
         <span class="country-list-rank">5</span>
-        <span class="country-list-title"><a href="https://de.wikipedia.org/wiki/Christine_Lagarde" target="_blank" rel="noopener">Christine Lagarde</a></span>
+        <span class="country-list-title"><a href="https://de.wikipedia.org/wiki/Christine_Lagarde" target="_blank" rel="noopener">Christine Lagarde</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Christine%20Lagarde" target="_blank" rel="noopener">Christine Lagarde</a>)</span></span>
         <span class="country-list-views">40,703</span>
       </li></ol>
     </div>
@@ -1164,7 +1383,7 @@
       <div class="country-header"><span class="country-flag">🇹🇭</span> Thailand <span class="country-lang">th.wikipedia</span></div>
       <ol class="country-list"><li>
         <span class="country-list-rank">1</span>
-        <span class="country-list-title"><a href="https://th.wikipedia.org/wiki/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81" target="_blank" rel="noopener">หน้าหลัก</a></span>
+        <span class="country-list-title"><a href="https://th.wikipedia.org/wiki/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81" target="_blank" rel="noopener">หน้าหลัก</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Main%20Page" target="_blank" rel="noopener">Main Page</a>)</span></span>
         <span class="country-list-views">12,723</span>
       </li>
 <li>
@@ -1174,12 +1393,12 @@
       </li>
 <li>
         <span class="country-list-rank">3</span>
-        <span class="country-list-title"><a href="https://th.wikipedia.org/wiki/%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%88%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%81%E0%B8%9E%E0%B8%A3%E0%B9%88%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2" target="_blank" rel="noopener">องค์การกระจายเสียงและแพร่ภาพสาธารณะแห่งประเทศไทย</a></span>
+        <span class="country-list-title"><a href="https://th.wikipedia.org/wiki/%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%88%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%81%E0%B8%9E%E0%B8%A3%E0%B9%88%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2" target="_blank" rel="noopener">องค์การกระจายเสียงและแพร่ภาพสาธารณะแห่งประเทศไทย</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Thai%20Public%20Broadcasting%20Service" target="_blank" rel="noopener">Thai Public Broadcasting Service</a>)</span></span>
         <span class="country-list-views">7,500</span>
       </li>
 <li>
         <span class="country-list-rank">4</span>
-        <span class="country-list-title"><a href="https://th.wikipedia.org/wiki/%E0%B8%AB%E0%B8%B5" target="_blank" rel="noopener">หี</a></span>
+        <span class="country-list-title"><a href="https://th.wikipedia.org/wiki/%E0%B8%AB%E0%B8%B5" target="_blank" rel="noopener">หี</a> <span class="country-list-en">(<a href="https://en.wikipedia.org/wiki/Cunt" target="_blank" rel="noopener">Cunt</a>)</span></span>
         <span class="country-list-views">3,548</span>
       </li>
 <li>
@@ -1189,11 +1408,9 @@
       </li></ol>
     </div>
       </div>
-    </div>
+    </section>
 
-    <hr class="section-divider">
-
-    <div class="explore-section" id="deep-cuts">
+    <section class="panel explore-section" id="deep-cuts">
       <h2>Deep Cuts</h2>
       <p class="section-desc">
         Articles ranked 700&ndash;1,000. Popular enough to make the top thousand, obscure enough that you've
@@ -1212,7 +1429,7 @@
     <div class="explore-card-rank">#717</div>
     <div class="explore-card-body">
       <a href="https://en.wikipedia.org/wiki/Alexandria_Ocasio-Cortez" target="_blank" rel="noopener" class="explore-card-title">Alexandria Ocasio-Cortez</a>
-      <span class="explore-card-desc"></span>
+      <span class="explore-card-desc">American politician and activist (born 1989)</span>
     </div>
     <div class="explore-card-views">9,466</div>
   </div>
@@ -1228,7 +1445,7 @@
     <div class="explore-card-rank">#719</div>
     <div class="explore-card-body">
       <a href="https://en.wikipedia.org/wiki/Rent_(musical)" target="_blank" rel="noopener" class="explore-card-title">Rent (musical)</a>
-      <span class="explore-card-desc"></span>
+      <span class="explore-card-desc">American rock musical by Jonathan Larson</span>
     </div>
     <div class="explore-card-views">9,440</div>
   </div>
@@ -1236,7 +1453,7 @@
     <div class="explore-card-rank">#720</div>
     <div class="explore-card-body">
       <a href="https://en.wikipedia.org/wiki/Jenna_Dewan" target="_blank" rel="noopener" class="explore-card-title">Jenna Dewan</a>
-      <span class="explore-card-desc"></span>
+      <span class="explore-card-desc">American actress and dancer (born 1980)</span>
     </div>
     <div class="explore-card-views">9,439</div>
   </div>
@@ -1244,7 +1461,7 @@
     <div class="explore-card-rank">#722</div>
     <div class="explore-card-body">
       <a href="https://en.wikipedia.org/wiki/Jos%C3%A9_Mourinho" target="_blank" rel="noopener" class="explore-card-title">José Mourinho</a>
-      <span class="explore-card-desc"></span>
+      <span class="explore-card-desc">Portuguese football manager (born 1963)</span>
     </div>
     <div class="explore-card-views">9,422</div>
   </div>
@@ -1252,7 +1469,7 @@
     <div class="explore-card-rank">#723</div>
     <div class="explore-card-body">
       <a href="https://en.wikipedia.org/wiki/DeForest_Buckner" target="_blank" rel="noopener" class="explore-card-title">DeForest Buckner</a>
-      <span class="explore-card-desc"></span>
+      <span class="explore-card-desc">American football player (born 1994)</span>
     </div>
     <div class="explore-card-views">9,413</div>
   </div>
@@ -1260,7 +1477,7 @@
     <div class="explore-card-rank">#724</div>
     <div class="explore-card-body">
       <a href="https://en.wikipedia.org/wiki/UBlock_Origin" target="_blank" rel="noopener" class="explore-card-title">UBlock Origin</a>
-      <span class="explore-card-desc"></span>
+      <span class="explore-card-desc">Web browser content blocking extension</span>
     </div>
     <div class="explore-card-views">9,404</div>
   </div>
@@ -1292,7 +1509,7 @@
     <div class="explore-card-rank">#728</div>
     <div class="explore-card-body">
       <a href="https://en.wikipedia.org/wiki/Kevin_Cash" target="_blank" rel="noopener" class="explore-card-title">Kevin Cash</a>
-      <span class="explore-card-desc"></span>
+      <span class="explore-card-desc">American baseball player and manager (born 1977)</span>
     </div>
     <div class="explore-card-views">9,366</div>
   </div>
@@ -1308,7 +1525,7 @@
     <div class="explore-card-rank">#730</div>
     <div class="explore-card-body">
       <a href="https://en.wikipedia.org/wiki/Muggsy_Bogues" target="_blank" rel="noopener" class="explore-card-title">Muggsy Bogues</a>
-      <span class="explore-card-desc"></span>
+      <span class="explore-card-desc">American basketball player (born 1965)</span>
     </div>
     <div class="explore-card-views">9,346</div>
   </div>
@@ -1324,7 +1541,7 @@
     <div class="explore-card-rank">#732</div>
     <div class="explore-card-body">
       <a href="https://en.wikipedia.org/wiki/Avigdor_Lieberman" target="_blank" rel="noopener" class="explore-card-title">Avigdor Lieberman</a>
-      <span class="explore-card-desc"></span>
+      <span class="explore-card-desc">Israeli politician (born 1958)</span>
     </div>
     <div class="explore-card-views">9,341</div>
   </div>
@@ -1348,7 +1565,7 @@
     <div class="explore-card-rank">#736</div>
     <div class="explore-card-body">
       <a href="https://en.wikipedia.org/wiki/Robert_Pattinson" target="_blank" rel="noopener" class="explore-card-title">Robert Pattinson</a>
-      <span class="explore-card-desc"></span>
+      <span class="explore-card-desc">English actor (born 1986)</span>
     </div>
     <div class="explore-card-views">9,311</div>
   </div>
@@ -1361,7 +1578,7 @@
     <div class="explore-card-views">9,301</div>
   </div>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer>
@@ -1375,19 +1592,11 @@
   </footer>
 
   <script>
-    function toggleTheme() {
-      const root = document.documentElement;
-      const isLight = root.classList.toggle("light");
-      localStorage.setItem("theme", isLight ? "light" : "dark");
-      document.querySelector(".theme-icon").innerHTML = isLight ? "&#9728;" : "&#9790;";
-    }
-    (function () {
-      const saved = localStorage.getItem("theme");
-      if (saved === "light") {
-        document.documentElement.classList.add("light");
-        document.querySelector(".theme-icon").innerHTML = "&#9728;";
-      }
-    })();
+    document.querySelectorAll('.slanted-form').forEach(function (form) {
+      form.addEventListener('submit', function () {
+        if (window.gtag) gtag('event', 'sign_up', { method: 'email_subscribe', placement: form.dataset.placement });
+      });
+    });
   </script>
 </body>
 </html>

@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WikiPop! — The Most Popular Wikipedia Article</title>
-  <meta name="description" content="Every day, we feature the most popular Wikipedia article. Discover what the world is reading.">
+  <title>What's Trending on Wikipedia Today · WikiPop</title>
+  <meta name="description" content="See what's trending on Wikipedia and why it spiked, plus one obscure gem. Updated every morning, with a free daily email.">
   <link rel="canonical" href="https://wikipop.sowin.io/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="WikiPop">
-  <meta property="og:title" content="WikiPop — The Most Popular Wikipedia Article">
-  <meta property="og:description" content="Every day, the most-viewed Wikipedia article. A daily snapshot of what the world is reading.">
+  <meta property="og:title" content="What's Trending on Wikipedia Today · WikiPop">
+  <meta property="og:description" content="See what's trending on Wikipedia and why it spiked. Updated every morning.">
   <meta property="og:url" content="https://wikipop.sowin.io/">
   <meta property="og:image" content="https://wikipop.sowin.io/assets/og-default.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="WikiPop — The Most Popular Wikipedia Article">
-  <meta name="twitter:description" content="Every day, the most-viewed Wikipedia article.">
+  <meta name="twitter:title" content="What's Trending on Wikipedia Today · WikiPop">
+  <meta name="twitter:description" content="See what's trending on Wikipedia and why it spiked.">
   <meta name="twitter:image" content="https://wikipop.sowin.io/assets/og-default.png">
   <link rel="alternate" type="application/rss+xml" title="WikiPop RSS" href="feed.xml">
   <link rel="sitemap" type="application/xml" href="sitemap.xml">
@@ -341,6 +341,7 @@
       color: var(--black);
     }
     
+    .slanted-sub { font-size: 0.95rem; line-height: 1.45; color: var(--black); margin: -0.6rem 0 1rem; }
     .slanted-form { display: flex; gap: 0.5rem; }
     .slanted-input {
       flex: 1; border: 3px solid var(--black); padding: 0.75rem 1rem;
@@ -560,14 +561,14 @@
     "@type": "WebSite",
     "name": "WikiPop",
     "url": "https://wikipop.sowin.io/",
-    "description": "Every day, the most-viewed Wikipedia article."
+    "description": "What's trending on Wikipedia and why it spiked, plus one obscure gem, updated every morning."
   }
   </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  "headline": "Patrick Stewart — Top Wikipedia Article on October 29, 2026",
+  "headline": "Patrick Stewart: WikiPop's pick for October 29, 2026",
   "datePublished": "2026-10-29",
   "dateModified": "2026-10-29",
   "image": [
@@ -601,7 +602,7 @@
       {
         "@type": "Question",
         "name": "So what's this WikiPop thing?",
-        "acceptedAnswer": { "@type": "Answer", "text": "It's a proxy for what's going on in the world seen through the lens of Wikipedia. WikiPop compiles the most popular Wikipedia article each day and keeps an archive of it. There's a daily email and an RSS feed." }
+        "acceptedAnswer": { "@type": "Answer", "text": "It's a proxy for what's going on in the world seen through the lens of Wikipedia. WikiPop picks one of the most popular Wikipedia articles each day and keeps an archive of it. There's a daily email and an RSS feed." }
       },
       {
         "@type": "Question",
@@ -704,9 +705,10 @@
     
     <div class="fade-up">
       <div class="slanted-newsletter">
-        <div class="slanted-heading">Get <span style="color: var(--red);">Wikipop'd every day</span> straight to your overflowing inbox.</div>
-        <form class="slanted-form" action="https://buttondown.com/api/emails/embed-subscribe/wikipop" method="post">
-          <input type="email" name="email" id="bd-email" placeholder="you@email.com" required class="slanted-input">
+        <div class="slanted-heading">Get <span style="color: var(--red);">WikiPop'd</span> every morning</div>
+        <p class="slanted-sub">See what's trending on Wikipedia and why it spiked, plus one obscure gem.</p>
+        <form class="slanted-form" action="https://buttondown.com/api/emails/embed-subscribe/wikipop" method="post" data-placement="home">
+          <input type="email" name="email" id="bd-email" placeholder="you@email.com" required class="slanted-input" aria-label="Email address" autocomplete="email">
           <button type="submit" class="slanted-btn">Subscribe</button>
         </form>
       </div>
@@ -797,7 +799,7 @@
             </tr>
         </tbody>
       </table>
-      <a href="archive.html" class="archive-more">View full archive (662 articles) &rarr;</a>
+      <a href="archive.html" class="archive-more">View full archive (662 articles) &rarr;</a> <a href="year/2026/" class="archive-more">Wikipedia's most-viewed of 2026 &rarr;</a>
     </div>
 
     <div class="faq-section fade-up" id="faq">
@@ -806,7 +808,7 @@
         <div class="faq-item">
           <dt>So what's this WikiPop thing?</dt>
           <dd>
-            It’s a proxy for what's going on in the world seen through the lens of Wikipedia. WikiPop compiles the most popular Wikipedia article each day and keeps an archive of it. There’s a daily email and an RSS feed.
+            It’s a proxy for what's going on in the world seen through the lens of Wikipedia. WikiPop picks one of the most popular Wikipedia articles each day and keeps an archive of it. There’s a daily email and an RSS feed.
           </dd>
         </div>
         <div class="faq-item">
@@ -866,6 +868,7 @@
     <div class="footer-links">
       <a href="explore.html">Explore</a>
       <a href="archive.html">Archive</a>
+      <a href="year/2026/">Top of 2026</a>
       <a href="changelog.html">Changelog</a>
       <a href="feed.xml">RSS</a>
     </div>
@@ -939,7 +942,7 @@
     // GA event: email subscribe
     document.querySelectorAll('.slanted-form').forEach(form => {
       form.addEventListener('submit', () => {
-        gtag('event', 'sign_up', { method: 'email_subscribe' });
+        gtag('event', 'sign_up', { method: 'email_subscribe', placement: form.dataset.placement });
       });
     });
 

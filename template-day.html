@@ -98,7 +98,7 @@
       outline: 1px solid transparent;
       margin-bottom: 2rem;
     }
-    .speech-bubble h1 {
+    .speech-bubble .bubble-head {
       font-family: "Bangers", cursive;
       color: var(--black);
       margin: 0;
@@ -108,21 +108,21 @@
       letter-spacing: 0.01em;
       font-weight: normal;
     }
-    .speech-bubble h1 em {
+    .speech-bubble .bubble-head em {
       color: var(--red);
       font-style: normal;
     }
-    .speech-bubble h1 .line1 {
+    .speech-bubble .bubble-head .line1 {
       font-size: clamp(1.4rem, 5.5vw, 2.6rem);
       align-self: center;
     }
-    .speech-bubble h1 .line2 {
+    .speech-bubble .bubble-head .line2 {
       font-size: clamp(2.2rem, 8.5vw, 4.2rem);
       align-self: center;
       text-align: center;
       letter-spacing: -0.01em;
     }
-    .speech-bubble h1 .line3 {
+    .speech-bubble .bubble-head .line3 {
       font-size: clamp(1.6rem, 6vw, 2.8rem);
       align-self: center;
       margin-left: 5%;
@@ -180,8 +180,16 @@
     }
     .hero-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
+    .day-answer {
+      font-size: 1.05rem; line-height: 1.55; color: var(--black);
+      margin: 0.2rem 0 0;
+    }
+    .day-answer strong { font-weight: 700; }
+    .day-answer a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    .day-answer a:hover { background: var(--yellow); }
     .article-extract {
       font-size: 1.05rem; line-height: 1.6; color: var(--black);
+      margin-top: 1.4rem;
     }
     .drop-cap {
       font-family: "Bangers", cursive;
@@ -309,6 +317,9 @@
       letter-spacing: 0.05em;
     }
     .archive-back:hover { color: var(--red); border-color: var(--red); }
+    .day-more-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-top: 1rem; }
+    .day-more-links .archive-back { margin: 0; }
+{{SIGNUP_CSS}}
 
     footer {
       background: var(--white);
@@ -334,9 +345,9 @@
       .article-content { padding: 1rem; }
       .speech-bubble-wrap { width: calc(100% - 30px); margin-left: 15px; margin-top: 1.5rem; }
       .speech-bubble { padding: 0.9rem 1.2rem 1.1rem; transform: rotate(-2deg); box-shadow: 6px 6px 0 var(--black); margin-bottom: 1.5rem; }
-      .speech-bubble h1 .line1 { font-size: 6.5vw; white-space: nowrap; }
-      .speech-bubble h1 .line2 { font-size: 9vw; white-space: nowrap; }
-      .speech-bubble h1 .line3 { font-size: 7vw; white-space: nowrap; margin-left: 0; text-align: center; }
+      .speech-bubble .bubble-head .line1 { font-size: 6.5vw; white-space: nowrap; }
+      .speech-bubble .bubble-head .line2 { font-size: 9vw; white-space: nowrap; }
+      .speech-bubble .bubble-head .line3 { font-size: 7vw; white-space: nowrap; margin-left: 0; text-align: center; }
       .hero-thumb { width: 40%; margin-left: 0.75rem; margin-bottom: 0.5rem; box-shadow: 0 0 0 1px var(--black), 2px 2px 0 var(--black); }
       .article-footer-strip { padding: 0.6rem 1rem; }
       .top10-section { padding: 1rem; }
@@ -356,7 +367,7 @@
       .footer-links { justify-content: center; flex-wrap: wrap; }
     }
     /* "Why was everyone looking at this?" box (scripts/why.mjs) */
-    .why-box { margin-top: 1.2rem; padding: 0.9rem 1.1rem 0.8rem; background: var(--white); border: var(--bw) solid var(--black); text-align: left; }
+    .why-box { clear: both; margin-top: 1.2rem; padding: 0.9rem 1.1rem 0.8rem; background: var(--white); border: var(--bw) solid var(--black); text-align: left; }
     .why-label { font-family: "Bangers", cursive; font-weight: normal; font-size: 1.35rem; letter-spacing: 0.03em; margin: 0 0 0.35rem; color: var(--black); }
     .why-box ul { padding-left: 1.2rem; margin: 0; }
     .why-box li { margin: 0.3rem 0; line-height: 1.5; }
@@ -390,26 +401,33 @@
   <main>
     <div class="speech-bubble-wrap">
       <div class="speech-bubble">
-        <h1>
+        <p class="bubble-head">
           <span class="line1">What did everyone read</span>
           <span class="line2">on Wikipedia</span>
           <span class="line3">on <em>{{DATE_FORMATTED}}</em>?</span>
-        </h1>
+        </p>
       </div>
     </div>
 
     {{HERO_SECTION}}
 
+    {{SIGNUP}}
+
     {{TOP10_SECTION}}
 
     {{OBSCURE_SECTION}}
+
+    {{SIGNUP_BOTTOM}}
 
     <nav class="day-nav" aria-label="Browse adjacent days">
       {{PREV_LINK}}
       {{NEXT_LINK}}
     </nav>
 
-    <a href="../../archive.html" class="archive-back">← Browse all days</a>
+    <div class="day-more-links">
+      {{MONTH_LINK}}
+      <a href="../../archive.html" class="archive-back">← Browse all days</a>
+    </div>
   </main>
 
   <footer>
@@ -429,5 +447,6 @@
       });
     });
   </script>
+{{SIGNUP_SCRIPT}}
 </body>
 </html>
