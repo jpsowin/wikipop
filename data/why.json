@@ -355,5 +355,22 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-10-29T14:36:16.849Z"
+  },
+  "2026-10-29": {
+    "date": "2026-10-29",
+    "title": "Patrick_Stewart",
+    "show": true,
+    "confidence": 96,
+    "bullets": [
+      "Patrick Stewart, the Shakespeare-trained actor who became [Captain Picard](https://en.wikipedia.org/wiki/Jean-Luc_Picard) and [Professor X](https://en.wikipedia.org/wiki/Professor_X), [died at 86](https://www.npr.org/2026/10/29/1230906945/patrick-stewart-dead).",
+      "He started out with the [Royal Shakespeare Company](https://en.wikipedia.org/wiki/Royal_Shakespeare_Company), then won over a whole generation leading the starship crew of [Star Trek: The Next Generation](https://en.wikipedia.org/wiki/Star_Trek:_The_Next_Generation).",
+      "Raised by an abusive father, he became best known for playing kind, fatherly leaders who turned a band of misfits into a family.",
+      "He had a playful side too, voicing a CIA deputy director for years on [American Dad!](https://en.wikipedia.org/wiki/American_Dad!)."
+    ],
+    "sources": [
+      "https://www.npr.org/2026/10/29/1230906945/patrick-stewart-dead"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-30T14:27:22.947Z"
   }
 }

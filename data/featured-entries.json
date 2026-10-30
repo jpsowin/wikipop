@@ -1530,7 +1530,11 @@
   },
   {
     "title": "Gävle goat",
-    "url": "https://en.wikipedia.org/wiki/G%C3%A4vle_goat"
+    "url": "https://en.wikipedia.org/wiki/G%C3%A4vle_goat",
+    "extract": "The Gävle Goat is a traditional Christmas display erected annually at Slottstorget in central Gävle, Sweden. The display is a giant version of a traditional Swedish Yule goat figure made of straw. It is erected each year by local community groups at the beginning of Advent over a period of two days.",
+    "description": "Straw Christmas goat in Gävle, Sweden",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Yule_goat_Gefle_Sweden_2009_crop.jpg/330px-Yule_goat_Gefle_Sweden_2009_crop.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "imageChecked": true
   },
   {
     "title": "Michael Forbes (farmer)",

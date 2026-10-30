@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Thu, 29 Oct 2026 14:36:17 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 14:27:23 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Patrick Stewart</title>
+      <link>https://en.wikipedia.org/wiki/Patrick_Stewart</link>
+      <description>Sir Patrick Hewes Stewart was an English actor. With a career spanning over 60 years on stage and screen, he received numerous accolades, including two Laurence Olivier Awards and a Grammy Award, as well as nominations for a Tony Award, three Golden Globes, four Emmy Awards, and three Screen Actors Guild Awards. He was knighted by Queen Elizabeth II for his services to drama in 2010.</description>
+      <pubDate>Thu, 29 Oct 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Patrick_Stewart#2026-10-29</guid>
+      <category>English actor (1940–2026)</category>
+    </item>
     <item>
       <title>Susan Saint James</title>
       <link>https://en.wikipedia.org/wiki/Susan_Saint_James</link>
@@ -248,14 +256,6 @@ This is a list of equations, indicating each Wikipedia page under appropriate ba
       <pubDate>Wed, 30 Sep 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Christa_Pike#2026-09-30</guid>
       <category>American murderer (born 1976)</category>
-    </item>
-    <item>
-      <title>Case Keenum</title>
-      <link>https://en.wikipedia.org/wiki/Case_Keenum</link>
-      <description>Casey Austin Keenum is an American professional football quarterback for the Chicago Bears of the National Football League (NFL). He played college football for the Houston Cougars, where he became the NCAA&apos;s all-time leader in total passing yards, touchdowns, and completions. In the 2008 college football season, Keenum ranked first nationally in total offense and second in total passing yards.</description>
-      <pubDate>Tue, 29 Sep 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Case_Keenum#2026-09-29</guid>
-      <category>American football player (born 1988)</category>
     </item>
   </channel>
 </rss>
