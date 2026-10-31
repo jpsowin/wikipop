@@ -54595,5 +54595,88 @@
         "url": "https://en.wikipedia.org/wiki/Milwaukee_Brewers"
       }
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "title": "Sunny_Ozell",
+    "views": 488907,
+    "rank": 5,
+    "type": "standard",
+    "extract": "Sunny Ozell, Lady Stewart, is an American singer and songwriter who resides in Los Angeles, California. She was married to the English actor Sir Patrick Stewart from 2013 until his death in 2026.",
+    "description": "American singer-songwriter (born 1978)",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Sunny_Ozell_-_5_-_Stierch.jpg/330px-Sunny_Ozell_-_5_-_Stierch.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Sunny_Ozell",
+    "top10": [
+      {
+        "rank": 2,
+        "title": "Patrick_Stewart",
+        "views": 1882386,
+        "description": "English actor (1940–2026)",
+        "url": "https://en.wikipedia.org/wiki/Patrick_Stewart"
+      },
+      {
+        "rank": 5,
+        "title": "Sunny_Ozell",
+        "views": 488907,
+        "description": "American singer-songwriter (born 1978)",
+        "url": "https://en.wikipedia.org/wiki/Sunny_Ozell"
+      },
+      {
+        "rank": 7,
+        "title": "Ian_McKellen",
+        "views": 213817,
+        "description": "English actor (born 1939)",
+        "url": "https://en.wikipedia.org/wiki/Ian_McKellen"
+      },
+      {
+        "rank": 8,
+        "title": "Wendy_Neuss",
+        "views": 163945,
+        "description": "American television and film producer (born 1954)",
+        "url": "https://en.wikipedia.org/wiki/Wendy_Neuss"
+      },
+      {
+        "rank": 9,
+        "title": "Lewy_body_dementia",
+        "views": 160656,
+        "description": "Umbrella term covering two types of dementia",
+        "url": "https://en.wikipedia.org/wiki/Lewy_body_dementia"
+      },
+      {
+        "rank": 10,
+        "title": "2026_Israeli_legislative_election",
+        "views": 152854,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/2026_Israeli_legislative_election"
+      },
+      {
+        "rank": 11,
+        "title": "Sebastian_Croft",
+        "views": 152737,
+        "description": "English actor (born 2001)",
+        "url": "https://en.wikipedia.org/wiki/Sebastian_Croft"
+      },
+      {
+        "rank": 12,
+        "title": "Deaths_in_2026",
+        "views": 152362,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
+      },
+      {
+        "rank": 13,
+        "title": "Jonestown",
+        "views": 143302,
+        "description": "Peoples Temple cult settlement in Guyana, led by Jim Jones",
+        "url": "https://en.wikipedia.org/wiki/Jonestown"
+      },
+      {
+        "rank": 14,
+        "title": "Maya_Jama",
+        "views": 139120,
+        "description": "British television and radio presenter (born 1994)",
+        "url": "https://en.wikipedia.org/wiki/Maya_Jama"
+      }
+    ]
   }
 ]

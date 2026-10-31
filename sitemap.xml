@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://wikipop.sowin.io/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
   </url>
   <url>
     <loc>https://wikipop.sowin.io/archive.html</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
   </url>
   <url>
     <loc>https://wikipop.sowin.io/explore.html</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
   </url>
   <url>
     <loc>https://wikipop.sowin.io/changelog.html</loc>
@@ -2762,6 +2762,10 @@
   </url>
   <url>
     <loc>https://wikipop.sowin.io/day/2026-10-29-patrick-stewart/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://wikipop.sowin.io/day/2026-10-30-sunny-ozell/</loc>
+    <lastmod>2026-10-31</lastmod>
   </url>
 </urlset>

@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Fri, 30 Oct 2026 19:54:37 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 13:48:08 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Sunny Ozell</title>
+      <link>https://en.wikipedia.org/wiki/Sunny_Ozell</link>
+      <description>Sunny Ozell, Lady Stewart, is an American singer and songwriter who resides in Los Angeles, California. She was married to the English actor Sir Patrick Stewart from 2013 until his death in 2026.</description>
+      <pubDate>Fri, 30 Oct 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Sunny_Ozell#2026-10-30</guid>
+      <category>American singer-songwriter (born 1978)</category>
+    </item>
     <item>
       <title>Patrick Stewart</title>
       <link>https://en.wikipedia.org/wiki/Patrick_Stewart</link>
@@ -248,14 +256,6 @@ This is a list of equations, indicating each Wikipedia page under appropriate ba
       <pubDate>Thu, 01 Oct 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/USS_Theodore_Roosevelt_(CVN-71)#2026-10-01</guid>
       <category>US Navy Nimitz-class aircraft carrier</category>
-    </item>
-    <item>
-      <title>Christa Pike</title>
-      <link>https://en.wikipedia.org/wiki/Christa_Pike</link>
-      <description>Christa Gail Pike is an American convicted murderer who is incarcerated on death row in Tennessee. In 1995, when she was 18, Pike murdered her 19-year-old Job Corps classmate Colleen Slemmer in Knoxville. Pike and two friends led Slemmer into the woods where they tortured and killed her. In 1996, at the age of 20, Pike was sentenced to death, making her one of the youngest women to receive a death sentence in the United States during the post-Furman period. If the execution is carried out, she will be the 19th woman executed nationwide since 1976 and the first woman executed in Tennessee in 206 years, since the hanging of Eve Martin in 1820.</description>
-      <pubDate>Wed, 30 Sep 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Christa_Pike#2026-09-30</guid>
-      <category>American murderer (born 1976)</category>
     </item>
   </channel>
 </rss>

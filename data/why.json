@@ -1142,5 +1142,23 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-10-30T14:27:22.947Z"
+  },
+  "2026-10-30": {
+    "date": "2026-10-30",
+    "title": "Sunny_Ozell",
+    "show": true,
+    "confidence": 90,
+    "bullets": [
+      "[Patrick Stewart](https://en.wikipedia.org/wiki/Patrick_Stewart), TV's [Captain Picard](https://en.wikipedia.org/wiki/Jean-Luc_Picard) and the movies' [Professor X](https://en.wikipedia.org/wiki/Professor_X), [died at 86](https://www.npr.org/2026/10/29/1230906945/patrick-stewart-dead), leaving his wife, singer-songwriter Sunny Ozell.",
+      "They met in 2008, when she was waiting tables at a Brooklyn restaurant and he was starring in Macbeth nearby.",
+      "Years later, [Ian McKellen](https://en.wikipedia.org/wiki/Ian_McKellen) officiated their wedding beside [Lake Tahoe](https://en.wikipedia.org/wiki/Lake_Tahoe).",
+      "[Hugh Jackman](https://en.wikipedia.org/wiki/Hugh_Jackman) [called him](https://www.cbsnews.com/news/patrick-stewart-dies-age-86-star-trek-actor/) \"a tremendous friend and man\" and said he'd miss him \"all of my days.\""
+    ],
+    "sources": [
+      "https://www.npr.org/2026/10/29/1230906945/patrick-stewart-dead",
+      "https://www.cbsnews.com/news/patrick-stewart-dies-age-86-star-trek-actor/"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-31T13:48:08.170Z"
   }
 }

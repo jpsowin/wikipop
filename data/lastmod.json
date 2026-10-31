@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "786df730a2d81c5f",
-  "lastmod": "2026-10-30"
+  "hash": "dc75bf3f525b5fca",
+  "lastmod": "2026-10-31"
  },
  "archive.html": {
-  "hash": "710f2ab99f3c4098",
-  "lastmod": "2026-10-30"
+  "hash": "7386de93b345ca55",
+  "lastmod": "2026-10-31"
  },
  "explore.html": {
-  "hash": "3b2d1d8bd6b126bc",
-  "lastmod": "2026-10-30"
+  "hash": "610c3715d4218c3a",
+  "lastmod": "2026-10-31"
  },
  "changelog.html": {
   "hash": "6507c72597619376",
@@ -2760,7 +2760,11 @@
   "lastmod": "2026-10-30"
  },
  "day/2026-10-29-patrick-stewart/": {
-  "hash": "eb64da4c326e1abc",
-  "lastmod": "2026-10-30"
+  "hash": "cb0eb23f7bf9dd44",
+  "lastmod": "2026-10-31"
+ },
+ "day/2026-10-30-sunny-ozell/": {
+  "hash": "47d4af9f1d461fd1",
+  "lastmod": "2026-10-31"
  }
 }
