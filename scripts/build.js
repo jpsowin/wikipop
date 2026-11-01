@@ -856,19 +856,36 @@ function formatViewsShort(n) {
   return String(n);
 }
 
-// Deterministic mapping of date → obscure-entry index. Anchored to today's
-// current featured-index value, then projected backward by epoch-days delta.
-// Stable across rebuilds: each calendar date always gets the same entry,
-// regardless of when the build runs.
+// Which obscure entry a day's page shows. Each day remembers the entry that
+// ran with it on the homepage and in the email (article.obscure, set by
+// pinObscureEntry). Days without one (backfilled later, or from before the
+// feature existed) fall back to projecting by date from the newest day, which
+// lines up with the entry the homepage is showing right now.
 function epochDays(dateStr) {
   return Math.floor(new Date(dateStr + "T00:00:00Z").getTime() / 86400000);
 }
-function getObscureForDate(dateStr, anchorDate, anchorIndex, entries) {
-  if (!entries || entries.length === 0) return null;
+function obscureIndexer(articles, entries, state) {
   const N = entries.length;
-  const offset = ((anchorIndex - epochDays(anchorDate)) % N + N) % N;
-  const idx = ((epochDays(dateStr) + offset) % N + N) % N;
-  return entries[idx];
+  const byUrl = new Map(entries.map((e, i) => [e.url, i]));
+  const newest = articles.reduce((m, a) => (a.date > m ? a.date : m), "");
+  const anchorIndex = (state.index || 0) % N;
+  return (a) => {
+    if (a.obscure && byUrl.has(a.obscure)) return byUrl.get(a.obscure);
+    const delta = epochDays(a.date) - epochDays(newest);
+    return ((anchorIndex + delta) % N + N) % N;
+  };
+}
+
+// Remember which obscure entry ran alongside the newest day, so its page keeps
+// showing that one even after the index moves on or misses a day.
+function pinObscureEntry(articles) {
+  if (!fs.existsSync(FEATURED_FILE) || !fs.existsSync(FEATURED_INDEX_FILE)) return false;
+  const newest = articles[articles.length - 1];
+  if (!newest || newest.obscure) return false;
+  const entries = JSON.parse(fs.readFileSync(FEATURED_FILE, "utf-8"));
+  const state = JSON.parse(fs.readFileSync(FEATURED_INDEX_FILE, "utf-8"));
+  newest.obscure = entries[(state.index || 0) % entries.length].url;
+  return true;
 }
 
 // Fetch + cache extract/description/thumbnail for any obscure entries
@@ -878,15 +895,12 @@ async function ensureObscureSummaries(articles) {
   if (!fs.existsSync(FEATURED_FILE) || !fs.existsSync(FEATURED_INDEX_FILE)) return;
   const entries = JSON.parse(fs.readFileSync(FEATURED_FILE, "utf-8"));
   const state = JSON.parse(fs.readFileSync(FEATURED_INDEX_FILE, "utf-8"));
-  const anchorDate = state.lastAdvanced || new Date().toISOString().slice(0, 10);
-  const anchorIndex = state.index || 0;
+  const obscureIndexFor = obscureIndexer(articles, entries, state);
 
   // Determine which entry indices are referenced by any per-day page
   const neededIdx = new Set();
-  const N = entries.length;
-  const offset = ((anchorIndex - epochDays(anchorDate)) % N + N) % N;
   for (const a of articles) {
-    const idx = ((epochDays(a.date) + offset) % N + N) % N;
+    const idx = obscureIndexFor(a);
     const e = entries[idx];
     // Also revisit cached entries that have no image yet (older cache rows
     // predate the first-image fallback).
@@ -949,18 +963,16 @@ function buildDayPages(articles) {
   }
   if (!fs.existsSync(DAY_DIR)) fs.mkdirSync(DAY_DIR, { recursive: true });
 
-  // Load featured entries and compute the date→entry anchor once
+  // Load featured entries and work out which one goes with each day
   let featuredEntries = [];
-  let anchorDate = new Date().toISOString().slice(0, 10);
-  let anchorIndex = 0;
+  let state = { index: 0 };
   if (fs.existsSync(FEATURED_FILE)) {
     featuredEntries = JSON.parse(fs.readFileSync(FEATURED_FILE, "utf-8"));
   }
   if (fs.existsSync(FEATURED_INDEX_FILE)) {
-    const state = JSON.parse(fs.readFileSync(FEATURED_INDEX_FILE, "utf-8"));
-    anchorIndex = state.index || 0;
-    if (state.lastAdvanced) anchorDate = state.lastAdvanced;
+    state = JSON.parse(fs.readFileSync(FEATURED_INDEX_FILE, "utf-8"));
   }
+  const obscureIndexFor = featuredEntries.length ? obscureIndexer(articles, featuredEntries, state) : null;
 
   const why = loadWhy();
 
@@ -976,7 +988,7 @@ function buildDayPages(articles) {
     const a = sorted[i];
     const prev = i > 0 ? sorted[i - 1] : null;
     const next = i < sorted.length - 1 ? sorted[i + 1] : null;
-    const obscure = getObscureForDate(a.date, anchorDate, anchorIndex, featuredEntries);
+    const obscure = obscureIndexFor ? featuredEntries[obscureIndexFor(a)] : null;
     const dir = path.join(DAY_DIR, dayDirName(a));
     const file = path.join(dir, "index.html");
     const html = buildDayPage(a, prev, next, obscure, whyFor(why, a), picksByTitle);
@@ -1819,12 +1831,14 @@ async function main() {
   // Sort by date
   articles.sort((a, b) => a.date.localeCompare(b.date));
 
-  if (changed) {
-    saveArticles(articles);
-    if (!skipDaily && advanceFeaturedIndex()) {
-      console.log("Advanced featured entry index.");
-    }
+  // Move to the next obscure entry only when a new day has arrived (a newest
+  // day with no entry yet), then pin it to that day.
+  const newest = articles[articles.length - 1];
+  if (changed && !skipDaily && newest && !newest.obscure && advanceFeaturedIndex()) {
+    console.log("Advanced featured entry index.");
   }
+  if (pinObscureEntry(articles)) changed = true;
+  if (changed) saveArticles(articles);
 
   console.log("Building HTML...");
   fs.writeFileSync(OUTPUT_FILE, await buildHtml(articles));

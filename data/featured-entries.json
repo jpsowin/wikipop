@@ -1554,7 +1554,15 @@
   },
   {
     "title": "Mimosa pudica",
-    "url": "https://en.wikipedia.org/wiki/Mimosa_pudica"
+    "url": "https://en.wikipedia.org/wiki/Mimosa_pudica",
+    "extract": "Mimosa pudica is a creeping annual or perennial flowering plant of the pea/legume family Fabaceae. It is often grown for its curiosity value: the sensitive compound leaves quickly fold inward and droop when touched or shaken and re-open a few minutes later. For this reason, this species is commonly cited as an example of rapid plant movement. Like a number of other plant species, it undergoes changes in leaf orientation termed \"sleep\" or nyctinastic movement. The foliage closes during darkness and reopens in light. This was first studied by French scientist Jean-Jacques d'Ortous. In the UK it has gained the Royal Horticultural Society's Award of Garden Merit.",
+    "description": "Species of creeping annual plant",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Mimosa_pudica_in_September_month.jpg/330px-Mimosa_pudica_in_September_month.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "imageChecked": true
+  },
+  {
+    "title": "United States v. Forty Barrels and Twenty Kegs of Coca-Cola",
+    "url": "https://en.wikipedia.org/wiki/United_States_v._Forty_Barrels_and_Twenty_Kegs_of_Coca-Cola"
   },
   {
     "title": "Death of Edgar Allan Poe",
@@ -1579,6 +1587,10 @@
   {
     "title": "Faggin–Nazzi alphabet",
     "url": "https://en.wikipedia.org/wiki/Faggin%E2%80%93Nazzi_alphabet"
+  },
+  {
+    "title": "Harvey Washington Wiley",
+    "url": "https://en.wikipedia.org/wiki/Harvey_Washington_Wiley"
   },
   {
     "title": "Punjabi Mexican Americans",
@@ -18891,7 +18903,8 @@
     "url": "https://en.wikipedia.org/wiki/A_language_is_a_dialect_with_an_army_and_navy",
     "extract": "\"A language is a dialect with an army and navy\", sometimes called the Weinreich witticism, is a mordant aphorism about the arbitrariness of the distinction between a dialect and a language. It was originally said in the context of the \"social plight of Yiddish\", and has been widely adopted as a shorthand for the importance of social and political conditions, rather than purely linguistic considerations, in defining the status of a language or dialect. The witticism was popularized by the sociolinguist and Yiddish scholar Max Weinreich, who heard it from a member of the audience at one of his lectures in the 1940s. A more scholarly approach to the problem of dialect versus language is the framework of abstand and ausbau languages.",
     "description": "Facetious characterization of dialect",
-    "thumbnail": null
+    "thumbnail": null,
+    "imageChecked": true
   },
   {
     "title": "Sergeant Reckless",
@@ -19774,7 +19787,8 @@
     "url": "https://en.wikipedia.org/wiki/Le_Train_de_Nulle_Part",
     "extract": "Le Train de Nulle Part is a 233-page French novel, written in 2004 by a French doctor of letters, Michel Dansel, under the pen name Michel Thaler. Notable as an example of constrained writing, the entire novel is written without a single verb.",
     "description": "French novel noted for being written without a single verb",
-    "thumbnail": null
+    "thumbnail": null,
+    "imageChecked": true
   },
   {
     "title": "Big Bird",
