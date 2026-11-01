@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "dc75bf3f525b5fca",
-  "lastmod": "2026-10-31"
+  "hash": "4069980924c99dd1",
+  "lastmod": "2026-11-01"
  },
  "archive.html": {
-  "hash": "7386de93b345ca55",
-  "lastmod": "2026-10-31"
+  "hash": "6aa4a1fafabbe41d",
+  "lastmod": "2026-11-01"
  },
  "explore.html": {
-  "hash": "610c3715d4218c3a",
-  "lastmod": "2026-10-31"
+  "hash": "b3e5c3de98af44f1",
+  "lastmod": "2026-11-01"
  },
  "changelog.html": {
   "hash": "6507c72597619376",
@@ -20,8 +20,8 @@
   "lastmod": "2026-10-30"
  },
  "year/2026/": {
-  "hash": "8faeab0961dbc97c",
-  "lastmod": "2026-10-30"
+  "hash": "a859e1f75fb996af",
+  "lastmod": "2026-11-01"
  },
  "month/2025-01/": {
   "hash": "13e44c12d0b16ecf",
@@ -108,8 +108,8 @@
   "lastmod": "2026-10-30"
  },
  "month/2026-10/": {
-  "hash": "c259893f19fdd940",
-  "lastmod": "2026-10-30"
+  "hash": "497da6df72ee361f",
+  "lastmod": "2026-11-01"
  },
  "day/2025-01-02-squid-game-season-2/": {
   "hash": "fea095462877a44b",
@@ -2764,7 +2764,11 @@
   "lastmod": "2026-10-31"
  },
  "day/2026-10-30-sunny-ozell/": {
-  "hash": "47d4af9f1d461fd1",
-  "lastmod": "2026-10-31"
+  "hash": "ca5e4630b8ab6860",
+  "lastmod": "2026-11-01"
+ },
+ "day/2026-10-31-nidhi-razdan/": {
+  "hash": "6b2a5ce84a1e51f8",
+  "lastmod": "2026-11-01"
  }
 }

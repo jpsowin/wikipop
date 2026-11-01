@@ -1160,5 +1160,19 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-10-31T13:48:08.170Z"
+  },
+  "2026-10-31": {
+    "date": "2026-10-31",
+    "title": "Nidhi_Razdan",
+    "show": true,
+    "confidence": 88,
+    "bullets": [
+      "Veteran TV journalist Nidhi Razdan married [Omar Abdullah](https://en.wikipedia.org/wiki/Omar_Abdullah), the [Chief Minister of Jammu and Kashmir](https://en.wikipedia.org/wiki/Chief_minister_of_Jammu_and_Kashmir).",
+      "Razdan was a familiar face on NDTV for more than 20 years, anchoring debate shows like Left, Right & Centre.",
+      "Politics runs in his family: his father, [Farooq Abdullah](https://en.wikipedia.org/wiki/Farooq_Abdullah), was also Chief Minister of Jammu and Kashmir."
+    ],
+    "sources": [],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-01T14:26:55.393Z"
   }
 }

@@ -1546,7 +1546,11 @@
   },
   {
     "title": "PS General Slocum",
-    "url": "https://en.wikipedia.org/wiki/PS_General_Slocum"
+    "url": "https://en.wikipedia.org/wiki/PS_General_Slocum",
+    "extract": "PS General Slocum was an American sidewheel passenger steamboat built in Brooklyn, New York, in 1891. During her service history, she was involved in a number of mishaps, including multiple groundings and collisions.",
+    "description": "Passenger steamboat; sank in New York City in 1904",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/PS_General_Slocum.jpg/330px-PS_General_Slocum.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "imageChecked": true
   },
   {
     "title": "Mimosa pudica",
