@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "4069980924c99dd1",
-  "lastmod": "2026-11-01"
+  "hash": "123645d6e754bbc6",
+  "lastmod": "2026-11-02"
  },
  "archive.html": {
-  "hash": "6aa4a1fafabbe41d",
-  "lastmod": "2026-11-01"
+  "hash": "43ab45654cc2567f",
+  "lastmod": "2026-11-02"
  },
  "explore.html": {
-  "hash": "b3e5c3de98af44f1",
-  "lastmod": "2026-11-01"
+  "hash": "1f8a1ed8b9a629a5",
+  "lastmod": "2026-11-02"
  },
  "changelog.html": {
   "hash": "78a3938bbb92b06e",
@@ -20,8 +20,8 @@
   "lastmod": "2026-10-30"
  },
  "year/2026/": {
-  "hash": "a859e1f75fb996af",
-  "lastmod": "2026-11-01"
+  "hash": "bb68babcee2a2cd0",
+  "lastmod": "2026-11-02"
  },
  "month/2025-01/": {
   "hash": "13e44c12d0b16ecf",
@@ -108,8 +108,12 @@
   "lastmod": "2026-10-30"
  },
  "month/2026-10/": {
-  "hash": "497da6df72ee361f",
-  "lastmod": "2026-11-01"
+  "hash": "458ce444baac1b8f",
+  "lastmod": "2026-11-02"
+ },
+ "month/2026-11/": {
+  "hash": "892a893a1b9f3910",
+  "lastmod": "2026-11-02"
  },
  "day/2025-01-02-squid-game-season-2/": {
   "hash": "20cf959a2e66b8e1",
@@ -2768,7 +2772,11 @@
   "lastmod": "2026-11-01"
  },
  "day/2026-10-31-nidhi-razdan/": {
-  "hash": "d62b0db038c66ece",
-  "lastmod": "2026-11-01"
+  "hash": "8332ab0bb1324c67",
+  "lastmod": "2026-11-02"
+ },
+ "day/2026-11-01-tung-tung-tung-sahur/": {
+  "hash": "ac77992576f83710",
+  "lastmod": "2026-11-02"
  }
 }
