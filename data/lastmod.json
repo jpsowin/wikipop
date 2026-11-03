@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "123645d6e754bbc6",
-  "lastmod": "2026-11-02"
+  "hash": "e7fe322928911c4a",
+  "lastmod": "2026-11-03"
  },
  "archive.html": {
-  "hash": "43ab45654cc2567f",
-  "lastmod": "2026-11-02"
+  "hash": "d4077019b572f49c",
+  "lastmod": "2026-11-03"
  },
  "explore.html": {
-  "hash": "1f8a1ed8b9a629a5",
-  "lastmod": "2026-11-02"
+  "hash": "415c6abe4172311a",
+  "lastmod": "2026-11-03"
  },
  "changelog.html": {
   "hash": "78a3938bbb92b06e",
@@ -20,8 +20,8 @@
   "lastmod": "2026-10-30"
  },
  "year/2026/": {
-  "hash": "bb68babcee2a2cd0",
-  "lastmod": "2026-11-02"
+  "hash": "6c9faa9eacaa9794",
+  "lastmod": "2026-11-03"
  },
  "month/2025-01/": {
   "hash": "13e44c12d0b16ecf",
@@ -112,8 +112,8 @@
   "lastmod": "2026-11-02"
  },
  "month/2026-11/": {
-  "hash": "892a893a1b9f3910",
-  "lastmod": "2026-11-02"
+  "hash": "7eab131fb285b2d7",
+  "lastmod": "2026-11-03"
  },
  "day/2025-01-02-squid-game-season-2/": {
   "hash": "20cf959a2e66b8e1",
@@ -2776,7 +2776,11 @@
   "lastmod": "2026-11-02"
  },
  "day/2026-11-01-tung-tung-tung-sahur/": {
-  "hash": "ac77992576f83710",
-  "lastmod": "2026-11-02"
+  "hash": "4d7d078e2721d97a",
+  "lastmod": "2026-11-03"
+ },
+ "day/2026-11-02-karl-bushby/": {
+  "hash": "ddff2cd05fe85a48",
+  "lastmod": "2026-11-03"
  }
 }

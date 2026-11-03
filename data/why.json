@@ -1184,5 +1184,22 @@
     "sources": [],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-02T17:23:28.466Z"
+  },
+  "2026-11-02": {
+    "date": "2026-11-02",
+    "title": "Karl_Bushby",
+    "show": true,
+    "confidence": 97,
+    "bullets": [
+      "Karl Bushby [finished a 28-year walk around the world](https://abcnews.com/International/wireStory/karl-bushby-completes-28-year-31000-mile-walk-137765943) at his mum's front door in [Hull](https://en.wikipedia.org/wiki/Kingston_upon_Hull), England.",
+      "He set off from [Punta Arenas](https://en.wikipedia.org/wiki/Punta_Arenas), Chile, in 1998 and [covered about 31,000 miles](https://www.nbcnews.com/world/united-kingdom/karl-bushby-completes-28-year-31000-mile-walk-world-returns-mothers-ho-rcna606998) across four continents and 30 countries.",
+      "His mum, Angela, wept as he hugged her under a \"Welcome Home Son\" banner, with a cheering crowd looking on."
+    ],
+    "sources": [
+      "https://abcnews.com/International/wireStory/karl-bushby-completes-28-year-31000-mile-walk-137765943",
+      "https://www.nbcnews.com/world/united-kingdom/karl-bushby-completes-28-year-31000-mile-walk-world-returns-mothers-ho-rcna606998"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-03T15:28:47.789Z"
   }
 }

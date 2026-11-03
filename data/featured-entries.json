@@ -1570,7 +1570,11 @@
   },
   {
     "title": "Death of Edgar Allan Poe",
-    "url": "https://en.wikipedia.org/wiki/Death_of_Edgar_Allan_Poe"
+    "url": "https://en.wikipedia.org/wiki/Death_of_Edgar_Allan_Poe",
+    "extract": "The death of American author Edgar Allan Poe on October 7, 1849, has remained mysterious in regard to both the cause of death and the circumstances leading to it. Poe was found delirious and disheveled at a tavern in Baltimore, Maryland, on October 3. He sought the help of magazine editor Joseph E. Snodgrass and was taken to the Washington College Hospital, where he was treated for his apparent alcohol intoxication. Poe had no visitors in the hospital and gave no account of how he came to be in his condition before dying on October 7 at age 40.",
+    "description": "Sudden and mysterious death of the American author",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/EdgarAllanPoeGrave.jpg/330px-EdgarAllanPoeGrave.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "imageChecked": true
   },
   {
     "title": "Screen burn-in",
