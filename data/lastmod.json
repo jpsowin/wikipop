@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "e7fe322928911c4a",
-  "lastmod": "2026-11-03"
+  "hash": "f25ad25dad41b71e",
+  "lastmod": "2026-11-04"
  },
  "archive.html": {
-  "hash": "d4077019b572f49c",
-  "lastmod": "2026-11-03"
+  "hash": "98e70bb7baa91147",
+  "lastmod": "2026-11-04"
  },
  "explore.html": {
-  "hash": "415c6abe4172311a",
-  "lastmod": "2026-11-03"
+  "hash": "473ee6edfc4369d2",
+  "lastmod": "2026-11-04"
  },
  "changelog.html": {
   "hash": "78a3938bbb92b06e",
@@ -20,8 +20,8 @@
   "lastmod": "2026-10-30"
  },
  "year/2026/": {
-  "hash": "6c9faa9eacaa9794",
-  "lastmod": "2026-11-03"
+  "hash": "aaf71f90cdb7d6c1",
+  "lastmod": "2026-11-04"
  },
  "month/2025-01/": {
   "hash": "13e44c12d0b16ecf",
@@ -100,20 +100,20 @@
   "lastmod": "2026-10-30"
  },
  "month/2026-08/": {
-  "hash": "3e25e4a24873ee96",
-  "lastmod": "2026-10-30"
+  "hash": "4366ed7cd807988f",
+  "lastmod": "2026-11-04"
  },
  "month/2026-09/": {
   "hash": "954c5ba0ab45286d",
   "lastmod": "2026-10-30"
  },
  "month/2026-10/": {
-  "hash": "458ce444baac1b8f",
-  "lastmod": "2026-11-02"
+  "hash": "c193db5e9ee8127a",
+  "lastmod": "2026-11-04"
  },
  "month/2026-11/": {
-  "hash": "7eab131fb285b2d7",
-  "lastmod": "2026-11-03"
+  "hash": "d7db08f62f946b1c",
+  "lastmod": "2026-11-04"
  },
  "day/2025-01-02-squid-game-season-2/": {
   "hash": "20cf959a2e66b8e1",
@@ -2780,7 +2780,11 @@
   "lastmod": "2026-11-03"
  },
  "day/2026-11-02-karl-bushby/": {
-  "hash": "ddff2cd05fe85a48",
-  "lastmod": "2026-11-03"
+  "hash": "ca06c271ace5627f",
+  "lastmod": "2026-11-04"
+ },
+ "day/2026-11-03-jesus-de-miguel/": {
+  "hash": "608925ffcf266dc8",
+  "lastmod": "2026-11-04"
  }
 }

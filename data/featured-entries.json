@@ -1578,7 +1578,11 @@
   },
   {
     "title": "Screen burn-in",
-    "url": "https://en.wikipedia.org/wiki/Screen_burn-in"
+    "url": "https://en.wikipedia.org/wiki/Screen_burn-in",
+    "extract": "Screen burn-in, image burn-in, ghost image, or shadow image, is a permanent discoloration of areas on an electronic visual display such as a cathode-ray tube (CRT) or organic light-emitting diode (OLED) in a computer monitor or television set. It is caused by cumulative non-uniform use of the screen.",
+    "description": "Disfigurement of an electronic display",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/4/45/Screen_burn_screen_off.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "imageChecked": true
   },
   {
     "title": "Turkish Abductions",

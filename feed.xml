@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Tue, 03 Nov 2026 15:28:47 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 15:42:04 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Jesús de Miguel</title>
+      <link>https://en.wikipedia.org/wiki/Jes%C3%BAs_de_Miguel</link>
+      <description>Jesús de Miguel Alameda was a Spanish professional footballer who played as a striker.</description>
+      <pubDate>Tue, 03 Nov 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Jes%C3%BAs_de_Miguel#2026-11-03</guid>
+      <category>Spanish footballer (1996–2026)</category>
+    </item>
     <item>
       <title>Karl Bushby</title>
       <link>https://en.wikipedia.org/wiki/Karl_Bushby</link>
@@ -248,14 +256,6 @@ This is a list of equations, indicating each Wikipedia page under appropriate ba
       <pubDate>Mon, 05 Oct 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Wikimedia_Foundation#2026-10-05</guid>
       <category>American charitable organization</category>
-    </item>
-    <item>
-      <title>Dakota Johnson</title>
-      <link>https://en.wikipedia.org/wiki/Dakota_Johnson</link>
-      <description>Dakota Mayi Johnson is an American actress. Her accolades include nominations for a British Academy Film Award and a Critics&apos; Choice Award. She was featured in the Forbes 30 Under 30 list in 2016.</description>
-      <pubDate>Sun, 04 Oct 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Dakota_Johnson#2026-10-04</guid>
-      <category>American actress (born 1989)</category>
     </item>
   </channel>
 </rss>

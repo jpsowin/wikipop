@@ -1201,5 +1201,24 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-03T15:28:47.789Z"
+  },
+  "2026-11-03": {
+    "date": "2026-11-03",
+    "title": "Jesús_de_Miguel",
+    "show": true,
+    "confidence": 97,
+    "bullets": [
+      "[CD Tenerife](https://en.wikipedia.org/wiki/CD_Tenerife) striker Jesús de Miguel died at 30, a day after [collapsing following an on-pitch collision](https://www.cnn.com/2026/11/03/sport/jesus-de-miguel-spain-dies-after-on-pitch-collision) in a game against [FC Andorra](https://en.wikipedia.org/wiki/FC_Andorra).",
+      "Born in Madrid, he spent most of his career in the third tier and won promotion with both [CD Castellón](https://en.wikipedia.org/wiki/CD_Castell%C3%B3n) and Tenerife.",
+      "UEFA announced a [period of silence before all European games](https://www.nbcnews.com/world/europe/tenerife-soccer-star-jesus-de-miguel-dies-collision-match-rcna607189) this week, and [Gerard Piqué](https://en.wikipedia.org/wiki/Gerard_Piqu%C3%A9), who owns Andorra, was among those paying tribute.",
+      "His family asked that he be taken to [Navahermosa](https://en.wikipedia.org/wiki/Navahermosa), his parents' hometown where he spent childhood summers, for a [final farewell](https://www.abc.net.au/news/2026-11-04/football-jesus-de-miguel-dead-after-goalkeeper-clash-police/107343990) with teammates."
+    ],
+    "sources": [
+      "https://www.cnn.com/2026/11/03/sport/jesus-de-miguel-spain-dies-after-on-pitch-collision",
+      "https://www.nbcnews.com/world/europe/tenerife-soccer-star-jesus-de-miguel-dies-collision-match-rcna607189",
+      "https://www.abc.net.au/news/2026-11-04/football-jesus-de-miguel-dead-after-goalkeeper-clash-police/107343990"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-04T15:42:04.081Z"
   }
 }
