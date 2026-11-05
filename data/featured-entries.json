@@ -1586,7 +1586,11 @@
   },
   {
     "title": "Turkish Abductions",
-    "url": "https://en.wikipedia.org/wiki/Turkish_Abductions"
+    "url": "https://en.wikipedia.org/wiki/Turkish_Abductions",
+    "extract": "The Turkish Abductions were a series of slave raids by pirates from Algiers and Salé that took place in Iceland in the summer of 1627.",
+    "description": "Barbary slave raids against Iceland",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Marche_aux_esclaves_d_alger_gravure.jpg/330px-Marche_aux_esclaves_d_alger_gravure.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "imageChecked": true
   },
   {
     "title": "Machine translation",

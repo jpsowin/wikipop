@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://wikipop.sowin.io/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://wikipop.sowin.io/archive.html</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://wikipop.sowin.io/explore.html</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://wikipop.sowin.io/changelog.html</loc>
@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://wikipop.sowin.io/year/2026/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://wikipop.sowin.io/month/2025-01/</loc>
@@ -102,7 +102,7 @@
   </url>
   <url>
     <loc>https://wikipop.sowin.io/month/2026-08/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://wikipop.sowin.io/month/2026-09/</loc>
@@ -114,7 +114,7 @@
   </url>
   <url>
     <loc>https://wikipop.sowin.io/month/2026-11/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://wikipop.sowin.io/day/2025-01-02-squid-game-season-2/</loc>
@@ -2786,6 +2786,10 @@
   </url>
   <url>
     <loc>https://wikipop.sowin.io/day/2026-11-03-jesus-de-miguel/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://wikipop.sowin.io/day/2026-11-04-abdul-el-sayed/</loc>
+    <lastmod>2026-11-05</lastmod>
   </url>
 </urlset>

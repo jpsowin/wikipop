@@ -1220,5 +1220,23 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-04T15:42:04.081Z"
+  },
+  "2026-11-04": {
+    "date": "2026-11-04",
+    "title": "Abdul_El-Sayed",
+    "show": true,
+    "confidence": 97,
+    "bullets": [
+      "Democrat Abdul El-Sayed [won](https://time.com/article/2026/11/03/abdul-el-sayed-michigan-senate-2026-midterm-elections-mike-rogers/) [Michigan's Senate race](https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Michigan) over Republican [Mike Rogers](https://en.wikipedia.org/wiki/Mike_Rogers_(Michigan_politician)), becoming the first Muslim elected to the U.S. Senate.",
+      "In his [victory speech](https://www.bloomberg.com/news/articles/2026-11-04/democrat-el-sayed-wins-michigan-senate-race-ddhq-projects), he said his name and faith \"aren't the reason you can't afford your gas,\" or groceries, or a doctor.",
+      "The 42-year-old's win was part of a [run of Democratic victories](https://www.cbsnews.com/news/michigan-2026-senate-el-sayed-rogers/) in states Trump won comfortably in 2024."
+    ],
+    "sources": [
+      "https://time.com/article/2026/11/03/abdul-el-sayed-michigan-senate-2026-midterm-elections-mike-rogers/",
+      "https://www.bloomberg.com/news/articles/2026-11-04/democrat-el-sayed-wins-michigan-senate-race-ddhq-projects",
+      "https://www.cbsnews.com/news/michigan-2026-senate-el-sayed-rogers/"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-05T15:44:26.240Z"
   }
 }

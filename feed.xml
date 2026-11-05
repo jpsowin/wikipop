@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Wed, 04 Nov 2026 15:42:04 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 15:44:26 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Abdul El-Sayed</title>
+      <link>https://en.wikipedia.org/wiki/Abdul_El-Sayed</link>
+      <description>Abdulrahman Mohamed El-Sayed is an American epidemiologist, public health administrator, academic, and politician who is the United States senator-elect from the state of Michigan.</description>
+      <pubDate>Wed, 04 Nov 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Abdul_El-Sayed#2026-11-04</guid>
+      <category>American epidemiologist and politician (born 1984)</category>
+    </item>
     <item>
       <title>Jesús de Miguel</title>
       <link>https://en.wikipedia.org/wiki/Jes%C3%BAs_de_Miguel</link>
@@ -248,14 +256,6 @@ This is a list of equations, indicating each Wikipedia page under appropriate ba
       <pubDate>Tue, 06 Oct 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Steve_Gleason#2026-10-06</guid>
       <category>American football player (born 1977)</category>
-    </item>
-    <item>
-      <title>Wikimedia Foundation</title>
-      <link>https://en.wikipedia.org/wiki/Wikimedia_Foundation</link>
-      <description>The Wikimedia Foundation, Inc. (WMF) is an American 501(c)(3) nonprofit organization headquartered in San Francisco, California, and registered there as a charitable foundation. It is most known for hosting Wikipedia, one of the world&apos;s most visited websites. It also hosts and operates 14 related open collaboration projects, and supports the development of MediaWiki, which is the wiki software that underpins them. The foundation was established in 2003 in St. Petersburg, Florida by Jimmy Wales, as a nonprofit way to fund Wikipedia and other wiki projects that had previously been hosted by Bomis, Wales&apos;s for-profit company.</description>
-      <pubDate>Mon, 05 Oct 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Wikimedia_Foundation#2026-10-05</guid>
-      <category>American charitable organization</category>
     </item>
   </channel>
 </rss>
