@@ -1594,7 +1594,11 @@
   },
   {
     "title": "Machine translation",
-    "url": "https://en.wikipedia.org/wiki/Machine_translation"
+    "url": "https://en.wikipedia.org/wiki/Machine_translation",
+    "extract": "Machine translation is the use of computational techniques to translate text or speech from one language to another, including the contextual, idiomatic, and pragmatic nuances of both languages.",
+    "description": "Computerized translation between natural languages",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/WordLensDemo5Feb2012.jpg/330px-WordLensDemo5Feb2012.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "imageChecked": true
   },
   {
     "title": "Osama bin Laden (elephant)",

@@ -1238,5 +1238,21 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-05T15:44:26.240Z"
+  },
+  "2026-11-05": {
+    "date": "2026-11-05",
+    "title": "Russell_Brand",
+    "show": true,
+    "confidence": 96,
+    "bullets": [
+      "A jury at [Southwark Crown Court](https://en.wikipedia.org/wiki/Southwark_Crown_Court) [found Russell Brand guilty](https://deadline.com/2026/11/russell-brand-found-guilty-rape-sexual-assault-1237212032/) of one count of rape and three counts of sexual assault.",
+      "The case grew out of a joint investigation by The Times and Channel 4's [Dispatches](https://en.wikipedia.org/wiki/Dispatches_(TV_programme)), in which women accused him of abuse.",
+      "He was cleared on three other counts, including two of rape, and was remanded into custody after the verdicts."
+    ],
+    "sources": [
+      "https://deadline.com/2026/11/russell-brand-found-guilty-rape-sexual-assault-1237212032/"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-06T15:18:32.853Z"
   }
 }

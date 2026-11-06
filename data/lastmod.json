@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "5927c3eeab07d49f",
-  "lastmod": "2026-11-05"
+  "hash": "e0f18bd6f4153519",
+  "lastmod": "2026-11-06"
  },
  "archive.html": {
-  "hash": "1b08b87addf92698",
-  "lastmod": "2026-11-05"
+  "hash": "028a7db9a7efd9d1",
+  "lastmod": "2026-11-06"
  },
  "explore.html": {
-  "hash": "a886105b90e8c9cc",
-  "lastmod": "2026-11-05"
+  "hash": "b5f2ee6576d9c19c",
+  "lastmod": "2026-11-06"
  },
  "changelog.html": {
   "hash": "78a3938bbb92b06e",
@@ -112,8 +112,8 @@
   "lastmod": "2026-11-04"
  },
  "month/2026-11/": {
-  "hash": "1781889fff7faf92",
-  "lastmod": "2026-11-05"
+  "hash": "eff53fceb6c0c95c",
+  "lastmod": "2026-11-06"
  },
  "day/2025-01-02-squid-game-season-2/": {
   "hash": "20cf959a2e66b8e1",
@@ -2788,7 +2788,11 @@
   "lastmod": "2026-11-05"
  },
  "day/2026-11-04-abdul-el-sayed/": {
-  "hash": "f17542881ed2b1f8",
-  "lastmod": "2026-11-05"
+  "hash": "1a163e6d354e5030",
+  "lastmod": "2026-11-06"
+ },
+ "day/2026-11-05-russell-brand/": {
+  "hash": "5e4d0462ef256163",
+  "lastmod": "2026-11-06"
  }
 }

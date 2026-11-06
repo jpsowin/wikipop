@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Thu, 05 Nov 2026 15:44:26 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 15:18:32 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Russell Brand</title>
+      <link>https://en.wikipedia.org/wiki/Russell_Brand</link>
+      <description>Russell Edward Brand is an English comedian, actor, media personality and convicted rapist. He rose to prominence as the host of Big Brother&apos;s Big Mouth, a spin-off of the reality television series Big Brother broadcast on E4. He had his first major film role in the British comedy St Trinian&apos;s (2007), after which he starred in the Hollywood comedies Forgetting Sarah Marshall (2008), Get Him to the Greek (2010), Arthur (2011), and Rock of Ages (2012). He has released several stand-up specials, including Scandalous (2009), Messiah Complex (2013), and Brandemic (2023). He hosted his own radio show The Russell Brand Show and hosts the podcasts Stay Free with Russell Brand and Under the Skin with Russell Brand. He has received three British Comedy Awards and a nomination for a BAFTA Award.</description>
+      <pubDate>Thu, 05 Nov 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Russell_Brand#2026-11-05</guid>
+      <category>English comedian and actor (born 1975)</category>
+    </item>
     <item>
       <title>Abdul El-Sayed</title>
       <link>https://en.wikipedia.org/wiki/Abdul_El-Sayed</link>
@@ -248,14 +256,6 @@ This is a list of equations, indicating each Wikipedia page under appropriate ba
       <pubDate>Wed, 07 Oct 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Eva_Marie_Saint#2026-10-07</guid>
       <category>American actress (1924–2026)</category>
-    </item>
-    <item>
-      <title>Steve Gleason</title>
-      <link>https://en.wikipedia.org/wiki/Steve_Gleason</link>
-      <description>Stephen Michael Gleason is an American former professional football player who played as a safety with the New Orleans Saints of the National Football League (NFL). He played college football for the Washington State Cougars. Originally signed by the Indianapolis Colts as an undrafted free agent in 2000, he played for the Saints through the 2006 season. As a free agent in 2008, Gleason retired from the NFL after eight seasons.</description>
-      <pubDate>Tue, 06 Oct 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Steve_Gleason#2026-10-06</guid>
-      <category>American football player (born 1977)</category>
     </item>
   </channel>
 </rss>
