@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "e0f18bd6f4153519",
-  "lastmod": "2026-11-06"
+  "hash": "5288d92bf1ee88e2",
+  "lastmod": "2026-11-07"
  },
  "archive.html": {
-  "hash": "028a7db9a7efd9d1",
-  "lastmod": "2026-11-06"
+  "hash": "925e9c5a568bd16d",
+  "lastmod": "2026-11-07"
  },
  "explore.html": {
-  "hash": "b5f2ee6576d9c19c",
-  "lastmod": "2026-11-06"
+  "hash": "42713d113491538c",
+  "lastmod": "2026-11-07"
  },
  "changelog.html": {
   "hash": "78a3938bbb92b06e",
@@ -112,8 +112,8 @@
   "lastmod": "2026-11-04"
  },
  "month/2026-11/": {
-  "hash": "eff53fceb6c0c95c",
-  "lastmod": "2026-11-06"
+  "hash": "7d493315bb4cf79a",
+  "lastmod": "2026-11-07"
  },
  "day/2025-01-02-squid-game-season-2/": {
   "hash": "20cf959a2e66b8e1",
@@ -2792,7 +2792,11 @@
   "lastmod": "2026-11-06"
  },
  "day/2026-11-05-russell-brand/": {
-  "hash": "5e4d0462ef256163",
-  "lastmod": "2026-11-06"
+  "hash": "25b0bfc288aa028f",
+  "lastmod": "2026-11-07"
+ },
+ "day/2026-11-06-ramayana-part-1/": {
+  "hash": "609a25dddba85088",
+  "lastmod": "2026-11-07"
  }
 }

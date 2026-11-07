@@ -1254,5 +1254,22 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-06T15:18:32.853Z"
+  },
+  "2026-11-06": {
+    "date": "2026-11-06",
+    "title": "Ramayana:_Part_1",
+    "show": true,
+    "confidence": 90,
+    "bullets": [
+      "[Nitesh Tiwari](https://en.wikipedia.org/wiki/Nitesh_Tiwari)'s epic retelling of the [Ramayana](https://en.wikipedia.org/wiki/Ramayana) hit theaters worldwide in five languages, right in time for [Diwali](https://en.wikipedia.org/wiki/Diwali).",
+      "[Ranbir Kapoor](https://en.wikipedia.org/wiki/Ranbir_Kapoor) is Rama and [Sai Pallavi](https://en.wikipedia.org/wiki/Sai_Pallavi) is Sita, but critics keep talking about [Yash](https://en.wikipedia.org/wiki/Yash_(actor))'s Ravana.",
+      "[Hans Zimmer](https://en.wikipedia.org/wiki/Hans_Zimmer) co-composed the score with [A. R. Rahman](https://en.wikipedia.org/wiki/A._R._Rahman), his first time working in Indian cinema.",
+      "For the English version, human voice actors were recorded, then [AI was used in post-production](https://www.cbc.ca/news/entertainment/ramayana-part-one-review-9.7409628) to reshape the actors' mouths so they look like they're speaking English."
+    ],
+    "sources": [
+      "https://www.cbc.ca/news/entertainment/ramayana-part-one-review-9.7409628"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-07T14:18:18.217Z"
   }
 }
