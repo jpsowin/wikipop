@@ -3,6 +3,7 @@ const path = require("path");
 const https = require("https");
 const crypto = require("crypto");
 const { SIGNUP_CSS, SIGNUP_SCRIPT, SIGNUP_HEADING, SIGNUP_PITCH, signupHtml } = require("./signup");
+const { fetchTopFromHourly } = require("./hourly-top");
 
 function httpGet(url) {
   return new Promise((resolve, reject) => {
@@ -1658,24 +1659,46 @@ async function pickFeatured(topArticles, recentTitles) {
   return { chosen: null, summary: null };
 }
 
-async function processDate(date, articles) {
+// opts.hourlyFallback: if Wikimedia's daily list is missing, build the day from
+// the hourly pageview files instead and mark it provisional. A provisional day
+// is redone from the official list on a later run once that list exists.
+async function processDate(date, articles, opts = {}) {
   const dateStr = date.toISOString().slice(0, 10);
 
   // Check if we already have an entry for this date
-  if (articles.some((a) => a.date === dateStr)) {
+  const existing = articles.find((a) => a.date === dateStr);
+  if (existing && !existing.provisional) {
     console.log(`  ${dateStr}: already have an article, skipping.`);
     return false;
   }
 
   let topArticles;
+  let provisional = null;
   try {
     topArticles = await fetchWithRetry(() => fetchTopArticles(date), `${dateStr} top`);
   } catch (err) {
-    console.log(`  ${dateStr}: API error after retries (${err.message}), skipping.`);
-    return false;
+    if (existing) {
+      console.log(`  ${dateStr}: still provisional (official list not out yet: ${err.message}).`);
+      return false;
+    }
+    if (!opts.hourlyFallback) {
+      console.log(`  ${dateStr}: API error after retries (${err.message}), skipping.`);
+      return false;
+    }
+    try {
+      const hourly = await fetchTopFromHourly(dateStr, { log: (s) => console.log(s) });
+      topArticles = hourly.articles;
+      provisional = { source: "hourly", hours: hourly.hours };
+      console.log(`  ${dateStr}: official list missing; using ${hourly.hours}/24 hourly files.`);
+    } catch (hourlyErr) {
+      console.log(`  ${dateStr}: official list missing and hourly fallback failed (${hourlyErr.message}), skipping.`);
+      return false;
+    }
   }
 
-  const recentTitles = getRecentTitles(articles, LOOKBACK_DAYS, date);
+  // Leave out the day being replaced, or its own provisional pick would be
+  // ruled out as a recent repeat.
+  const recentTitles = getRecentTitles(articles.filter((a) => a !== existing), LOOKBACK_DAYS, date);
 
   const { chosen, summary } = await pickFeatured(topArticles, recentTitles);
 
@@ -1701,9 +1724,18 @@ async function processDate(date, articles) {
     url: summary.content_urls ? summary.content_urls.desktop.page : `https://en.wikipedia.org/wiki/${chosen.article}`,
     top10,
   };
+  if (provisional) newEntry.provisional = provisional;
 
-  articles.push(newEntry);
-  console.log(`  ${dateStr}: "${chosen.article}" — ${formatNumber(chosen.views)} views (+ ${top10.length} in top10)`);
+  if (existing) {
+    // Official numbers replace a provisional day. Keep the obscure entry that
+    // was already pinned to it so the obscure queue doesn't move again.
+    if (existing.obscure) newEntry.obscure = existing.obscure;
+    articles.splice(articles.indexOf(existing), 1, newEntry);
+    console.log(`  ${dateStr}: replaced provisional day with official numbers.`);
+  } else {
+    articles.push(newEntry);
+  }
+  console.log(`  ${dateStr}: "${chosen.article}" — ${formatNumber(chosen.views)} views (+ ${top10.length} in top10)${provisional ? ` [provisional: ${provisional.hours}/24 hours]` : ""}`);
   return true;
 }
 
@@ -1796,6 +1828,9 @@ async function main() {
     changed = true;
   }
 
+  // Manual only for now: build a missing day from Wikimedia's hourly files.
+  const hourlyFallback = process.argv.includes("--hourly-fallback");
+
   const backfillDays = process.argv.includes("--backfill")
     ? parseInt(process.argv[process.argv.indexOf("--backfill") + 1] || "30", 10)
     : 1;
@@ -1807,7 +1842,7 @@ async function main() {
     : [];
   for (const d of datesArg) {
     console.log(`Fetching ${d}...`);
-    if (await processDate(new Date(d + "T00:00:00Z"), articles)) changed = true;
+    if (await processDate(new Date(d + "T00:00:00Z"), articles, { hourlyFallback })) changed = true;
     await new Promise((r) => setTimeout(r, 500));
   }
 
@@ -1820,7 +1855,7 @@ async function main() {
       date.setUTCDate(date.getUTCDate() - i);
       console.log(`Fetching ${date.toISOString().slice(0, 10)}...`);
 
-      const added = await processDate(date, articles);
+      const added = await processDate(date, articles, { hourlyFallback });
       if (added) changed = true;
 
       // Small delay between API calls to be polite

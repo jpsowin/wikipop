@@ -299,7 +299,7 @@ async function buildTrending(article, why, dir, tmp) {
   const slides = [];
   let fit;
   for (let i = 0; i < 6; i++) {
-    fit = renderSlide(S.trendingCover({ image, imgPos, views: viewsShort(article.views), title, hook }),
+    fit = renderSlide(S.trendingCover({ image, imgPos, views: viewsShort(article.views) + (article.provisional ? "+" : ""), title, hook }),
       path.join(dir, 'trending-1.html'), path.join(dir, 'trending-1.png'));
     if (!fit.issues.some(x => /hook|photo/.test(x)) || plain(hook).length < 30) break;
     hook = trimTo(hook, Math.floor(plain(hook).length * 0.8));
@@ -328,7 +328,7 @@ async function buildTrending(article, why, dir, tmp) {
   if (fit.issues.length) reasons.push(`bullets: ${fit.issues.join(', ')}`);
   slides.push({ png: path.join(dir, 'trending-2.png'), alt: (heading ? heading + ': ' : '') + bullets.map(plain).join(' '), fit });
 
-  const caption = `${why && why.caption ? why.caption.trim() : `${title}: ${first}`}\n\nAbout ${viewsLong(article.views)} people looked it up on Wikipedia.\n\nThe rest of the top list: link in bio.${credit ? `\n\n${credit}` : ''}`;
+  const caption = `${why && why.caption ? why.caption.trim() : `${title}: ${first}`}\n\n${article.provisional ? 'More than' : 'About'} ${viewsLong(article.views)} people looked it up on Wikipedia.\n\nThe rest of the top list: link in bio.${credit ? `\n\n${credit}` : ''}`;
 
   // Review flags → draft.
   const copy = [caption, hook, ...bullets];

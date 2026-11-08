@@ -10,6 +10,11 @@ on:
     # hours late). Each retry stops right away once the day is already there.
     - cron: '30 8-23 * * *'
   workflow_dispatch: # Allow manual trigger
+    inputs:
+      hourly_fallback:
+        description: "If Wikimedia's daily top list is still missing, build the day from the hourly pageview files (marked provisional; official numbers replace it later)"
+        type: boolean
+        default: false
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -38,7 +43,7 @@ jobs:
           DAY=$(date -u -d yesterday +%F)
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
-          elif node -e "process.exit(require('./data/articles.json').some(d => d.date === '$DAY') ? 0 : 1)"; then
+          elif node -e "process.exit(require('./data/articles.json').some(d => d.date === '$DAY' && !d.provisional) ? 0 : 1)"; then
             echo "$DAY is already in; nothing to do."
             echo "run=false" >> "$GITHUB_OUTPUT"
           else
@@ -56,7 +61,7 @@ jobs:
           node scripts/build-explore.js
           # Look back two weeks so multi-day Wikimedia outages still get filled
           # in once the data shows up (days we already have are skipped instantly).
-          node scripts/build.js --backfill 14
+          node scripts/build.js --backfill 14 ${{ inputs.hourly_fallback && '--hourly-fallback' || '' }}
 
       - name: Explain the day's pick
         if: steps.gate.outputs.run == 'true'
