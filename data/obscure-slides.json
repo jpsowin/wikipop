@@ -1,5 +1,6 @@
 {
   "Harvey Washington Wiley": {
+    "date": "2026-11-08",
     "slide1": {
       "text": "Harvey Washington Wiley was an American physician and chemist. He was the [[first commissioner of the United States Food and Drug Administration]]."
     },
@@ -24,8 +25,274 @@
     },
     "imgPos": "50% 25%",
     "imgZoom": 1.1,
-    "flags": [
-      "Mentions cocaine (Coca-Cola lawsuit)"
-    ]
+    "hard": false
+  },
+  "Lowercase (music)": {
+    "date": "2026-11-09",
+    "slide1": {
+      "text": "Lowercase is an extreme form of ambient minimalism in which [[very quiet sounds are amplified to extreme levels]]."
+    },
+    "slide2": {
+      "heading": "Origins",
+      "paras": [
+        "Minimal artist Steve Roden popularized the movement with an album entitled Forms of Paper, in which he made [[recordings of himself handling paper]] in various ways. These recordings were commissioned by the Hollywood branch of the Los Angeles Public Library."
+      ]
+    },
+    "slide3": {
+      "heading": "Definition",
+      "paras": [
+        "Steve Roden stated this about the lowercase tendencies which he began to develop in his later works: “It bears a certain sense of quiet and humility; it doesn't demand attention, it must be discovered. [[It’s the opposite of capital letters]]—loud things which draw attention to themselves.”"
+      ]
+    },
+    "extraSlides": [],
+    "caption": "Lowercase (music): a genre built on tiny, quiet sounds turned up very loud. It took off with an album of an artist recording himself handling paper.",
+    "image": {
+      "file": "File:Woman crumpling a paper.jpg",
+      "artist": "Shixart1985",
+      "license": "CC BY 2.0",
+      "imgPos": "50% 30%"
+    },
+    "imgPos": "50% 30%",
+    "imgZoom": 1,
+    "hard": false
+  },
+  "List of people who have lived in airports": {
+    "date": "2026-11-10",
+    "slide1": {
+      "text": "This is a list of people notable for [[living for periods of more than a week in airports]]. The reasons are usually protesting, asylum seeking or having difficulty with visas and passports."
+    },
+    "extraSlides": [
+      {
+        "heading": "Edward Snowden",
+        "paras": [
+          "While on a flight to Moscow-Sheremetyevo, authorities [[revoked Snowden's U.S. passport]].",
+          "He was granted temporary asylum in Russia. He later received Russian citizenship."
+        ],
+        "image": {
+          "file": "File:Edward Snowden 2013-10-9 (1) (cropped).jpg",
+          "artist": "TheWikiLeaksChannel",
+          "license": "CC BY 3.0",
+          "imgPos": "50% 30%"
+        },
+        "imgPos": "50% 30%"
+      },
+      {
+        "heading": "Mehran Karimi Nasseri",
+        "paras": [
+          "Originally from Iran, Nasseri was given refugee status by UNHCR and claimed that [[his documents were stolen]] in Paris en route to the United Kingdom.",
+          "He was refused entry and declined new papers due to [[changing his own name and place of birth]]."
+        ],
+        "image": {
+          "file": "File:Merhan Karimi Nasseri Walkway Look 2004-12-30 01.jpg",
+          "artist": "Docpi",
+          "license": "CC BY-SA 3.0",
+          "imgPos": "50% 62%"
+        },
+        "imgPos": "50% 62%"
+      },
+      {
+        "heading": "Wei Jianguo",
+        "paras": [
+          "Wei wanted to [[smoke and drink without his family bothering him]]. He also had difficulty finding work.",
+          "He still lives in the airport, but comes out occasionally."
+        ],
+        "image": {
+          "file": "File:Beijing Capital International Airport Terminal 3 Interior 20090818.jpg",
+          "artist": "颐园新居",
+          "license": "CC BY-SA 3.0"
+        },
+        "imgPos": "50% 50%"
+      },
+      {
+        "heading": "Hiroshi Nohara",
+        "paras": [
+          "Nohara [[declined to give his reasons]].",
+          "He left with [[a woman identified as Oyuki]]."
+        ],
+        "image": null
+      },
+      {
+        "heading": "Heinz Müller",
+        "paras": [
+          "Müller flew to Rio de Janeiro to meet with [[a woman he met online, who did not show up]]. He ran out of money and ended up in Campinas."
+        ],
+        "image": null
+      },
+      {
+        "heading": "Bayram Tepeli",
+        "paras": [
+          "Tepeli ran away from family problems and worked at the airport for a while. Eventually he became sick, and could not work anymore, but [[decided to keep living at the airport]].",
+          "The airport closed for commercial passenger travel in 2019, so he had to leave. He now lives in Sabiha Gökçen Airport."
+        ],
+        "image": null
+      },
+      {
+        "heading": "Aditya Singh",
+        "paras": [
+          "Singh [[decided not to take his connecting flight]] to India due to fear of COVID-19.",
+          "He was arrested in January 2021, but cleared of charges in late 2021."
+        ],
+        "image": null
+      },
+      {
+        "heading": "Sanjay Shah",
+        "paras": [
+          "Shah spent 13 months [[living in the duty-free section]] of Nairobi's Jomo Kenyatta International Airport, petitioning for full British citizenship. This was eventually granted on the grounds that he had already given up his former Kenyan citizenship."
+        ],
+        "image": null
+      }
+    ],
+    "caption": "List of people who have lived in airports: one man lived in Paris's Charles de Gaulle Airport for nearly 18 years, and another moved into Beijing's airport so he could smoke and drink without his family bothering him.",
+    "image": {
+      "file": "File:MKNasseri.jpg",
+      "artist": "Saint Martin",
+      "license": "CC BY-SA 3.0"
+    },
+    "imgPos": "50% 35%",
+    "imgZoom": 1,
+    "hard": false
+  },
+  "Romeo and Juliet (swans)": {
+    "date": "2026-11-11",
+    "slide1": {
+      "text": "Romeo and Juliet are a pair of [[female mute swans]] that previously resided in the pond of the Public Garden of Boston, Massachusetts, United States, during the spring and summer months."
+    },
+    "slide2": {
+      "heading": "A surprise",
+      "paras": [
+        "The same two swans were introduced yearly to the Public Garden since 2003, but were not discovered to both be female until 2005. The swans were obtained from a breeder who had informed the city's Parks and Recreation Department that both were female. Park rangers had assumed that the breeder [[mistakenly provided a male swan]] when the pair began exhibiting parenting behavior."
+      ]
+    },
+    "slide3": {
+      "heading": "Return of the Swans",
+      "paras": [
+        "The swans resided at the Franklin Park Zoo during the winter months and were reintroduced to the Public Garden during the annual Return of the Swans celebration. The swans are escorted to the garden's pond by a [[parade and brass band]] and then released into the water during the ceremony."
+      ]
+    },
+    "extraSlides": [],
+    "caption": "Romeo and Juliet (swans): Boston's famous swan couple turned out to both be female, even though the breeder had said so all along. Each spring the city escorted them back to their pond with a parade and a brass band.",
+    "image": {
+      "file": "File:Boston Public Garden Swan Nesting Area (cropped).jpg",
+      "artist": "Education Prof",
+      "license": "CC0"
+    },
+    "imgPos": "50% 50%",
+    "imgZoom": 1,
+    "hard": false
+  },
+  "Mountain, West Virginia": {
+    "date": "2026-11-13",
+    "slide1": {
+      "text": "The community was known as Mole Hill prior to 1949, when residents requested that the name be changed to Mountain as part of a publicity stunt to [[literally make a mountain out of a molehill]]."
+    },
+    "slide2": {
+      "heading": "Despite the name",
+      "paras": [
+        "Mountain is an unincorporated community in Ritchie County, West Virginia, United States. Despite the name, there is [[no mountain in or even visible from the community]]."
+      ]
+    },
+    "slide3": {
+      "heading": "Mole Hill",
+      "paras": [
+        "The community most likely was named after the [[local Mole family]].",
+        "The post office ultimately closed on November 9, 2002."
+      ]
+    },
+    "extraSlides": [],
+    "caption": "Mountain, West Virginia: this tiny community used to be called Mole Hill, until residents renamed it in 1949 to literally make a mountain out of a molehill. There's no mountain anywhere in sight.",
+    "image": {
+      "file": "File:Molshopen in weiland.jpg",
+      "artist": "Rasbak",
+      "license": "CC BY-SA 3.0",
+      "imgPos": "50% 50%"
+    },
+    "imgPos": "50% 50%",
+    "imgZoom": 1,
+    "hard": false
+  },
+  "Juan Pujol García": {
+    "date": "2026-11-15",
+    "slide1": {
+      "text": "Juan Pujol García was a Spanish spy who worked as a [[double agent]] loyal to the United Kingdom against Nazi Germany during World War II. Eventually the Germans were funding [[a network of 27 agents, all fictitious]]."
+    },
+    "slide2": {
+      "heading": "Independent spying",
+      "paras": [
+        "His instructions were to move to Britain and recruit a network of British agents. He moved instead to Lisbon; using a tourist's guide to Britain, he created seemingly credible reports that appeared to come from London.",
+        "He made several mistakes, such as claiming that his alleged contact in Glasgow [[\"would do anything for a litre of wine\"]]."
+      ]
+    },
+    "slide3": {
+      "heading": "Work with MI6",
+      "paras": [
+        "He reported that his (fabricated) Liverpool agent had fallen ill just before a major fleet movement from that port, and so was unable to report the event. To support this story, [[the agent eventually \"died\"]] and an obituary was placed in the local newspaper. The Germans were also persuaded to [[pay a pension to the agent's \"widow\"]]."
+      ]
+    },
+    "extraSlides": [],
+    "caption": "Juan Pujol García: a Spanish double agent who invented 27 fake spies for the Nazis and fed them fake news about D-Day, then got medals from both sides: an Iron Cross from Germany and an MBE from Britain.",
+    "image": {
+      "file": "File:Joan pujol garcia.jpg",
+      "artist": "Unknown author",
+      "license": "Public domain"
+    },
+    "imgPos": "50% 48%",
+    "imgZoom": 1,
+    "hard": false
+  },
+  "Freddy Got Fingered": {
+    "date": "2026-11-16",
+    "slide1": {
+      "text": "Freddy Got Fingered is a 2001 American surreal black comedy film directed by Tom Green. The film was overwhelmingly panned by critics at the time. Some also referred to it as [[one of the worst films of all time]]."
+    },
+    "slide2": {
+      "heading": "Critical response",
+      "paras": [
+        "Roger Ebert gave the film a rare zero-star rating and described the film thus: \"This movie doesn't scrape the bottom of the barrel. This movie isn't the bottom of the barrel. This movie isn't below the bottom of the barrel. This movie doesn't deserve to be [[mentioned in the same sentence with barrels]].\""
+      ]
+    },
+    "slide3": {
+      "heading": "Accolades",
+      "paras": [
+        "The film received eight Golden Raspberry Award nominations in 2002, winning five. Green personally appeared at the ceremony to accept his awards, [[bringing his own red carpet]]. Green would go on to play the harmonica badly for so long that he was [[dragged off the stage]]."
+      ]
+    },
+    "extraSlides": [],
+    "caption": "Freddy Got Fingered: critics called Tom Green's 2001 comedy one of the worst films ever made. When it won five Razzies, Green showed up with his own red carpet and played the harmonica until he was dragged off the stage.",
+    "image": {
+      "file": "File:Freddy Got Fingered (movie poster).jpg",
+      "artist": "20th Century Fox",
+      "license": "Fair use"
+    },
+    "imgPos": "50% 22%",
+    "imgZoom": 1,
+    "hard": false
+  },
+  "Mattel, Inc. v. MCA Records, Inc.": {
+    "date": "2026-11-17",
+    "slide1": {
+      "text": "Mattel v. MCA Records was a series of lawsuits between Mattel and MCA Records that resulted from the 1997 hit single [[\"Barbie Girl\" by Danish-Norwegian group Aqua]]. The case was ultimately dismissed."
+    },
+    "slide2": {
+      "heading": "Background",
+      "paras": [
+        "Mattel claimed the song violated the Barbie trademark and turned Barbie into a sex object, referring to her as a \"Blonde Bimbo.\" MCA contested Mattel's claims and filed a counterclaim for defamation after [[Mattel had likened MCA to a bank robber]]."
+      ]
+    },
+    "slide3": {
+      "heading": "Background",
+      "paras": [
+        "On appeal, the Ninth Circuit ruled the song was protected as a parody, in an opinion penned by Judge Alex Kozinski. Kozinski concluded his ruling by famously saying, [[\"The parties are advised to chill.\"]]"
+      ]
+    },
+    "extraSlides": [],
+    "caption": "Mattel, Inc. v. MCA Records, Inc.: Barbie's maker sued over Aqua's \"Barbie Girl\" and lost, with the judge telling both sides to \"chill.\" Years later, Mattel's own Barbie movie used a song that samples it.",
+    "image": {
+      "file": "File:Aqua performing at Caesars Windsor, Windsor, Ontario, 2025-09-26 30.jpg",
+      "artist": "Chris Woodrich",
+      "license": "CC BY-SA 4.0"
+    },
+    "imgPos": "50% 15%",
+    "imgZoom": 1,
+    "hard": false
   }
 }
