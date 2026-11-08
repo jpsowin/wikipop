@@ -1609,24 +1609,12 @@
     "imageChecked": true
   },
   {
-    "title": "Faggin–Nazzi alphabet",
-    "url": "https://en.wikipedia.org/wiki/Faggin%E2%80%93Nazzi_alphabet"
-  },
-  {
     "title": "Harvey Washington Wiley",
     "url": "https://en.wikipedia.org/wiki/Harvey_Washington_Wiley"
   },
   {
-    "title": "Punjabi Mexican Americans",
-    "url": "https://en.wikipedia.org/wiki/Punjabi_Mexican_Americans"
-  },
-  {
     "title": "Lowercase (music)",
     "url": "https://en.wikipedia.org/wiki/Lowercase_(music)"
-  },
-  {
-    "title": "Westfjords",
-    "url": "https://en.wikipedia.org/wiki/Westfjords"
   },
   {
     "title": "List of people who have lived in airports",
@@ -22207,5 +22195,17 @@
     "extract": "The James–Lange theory (1884) is a hypothesis on the origin and nature of emotions and is one of the earliest theories of emotion within modern psychology. It was developed by philosopher John Dewey and named for two 19th-century scholars, William James and Carl Lange. The basic premise of the theory is that physiological arousal instigates the experience of emotion. Previously people considered emotions as reactions to some significant events or their features, i.e. events come first, and then there is an emotional response. James-Lange theory proposed that the state of the body can induce emotions or emotional dispositions. In other words, this theory suggests that when we feel teary, it generates a disposition for sad emotions; when our heartbeat is out of normality, it makes us feel anxiety. Instead of feeling an emotion and subsequent physiological (bodily) response, the theory proposes that the physiological change is primary, and emotion is then experienced when the brain reacts to the information received via the body's nervous system. It proposes that each specific category of emotion is attached to a unique and different pattern of physiological arousal and emotional behaviour in reaction due to an exciting stimulus.",
     "description": "Hypothesis on the origin and nature of emotions",
     "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/James-lange_theory_figure.png/330px-James-lange_theory_figure.png"
+  },
+  {
+    "title": "Faggin–Nazzi alphabet",
+    "url": "https://en.wikipedia.org/wiki/Faggin%E2%80%93Nazzi_alphabet"
+  },
+  {
+    "title": "Punjabi Mexican Americans",
+    "url": "https://en.wikipedia.org/wiki/Punjabi_Mexican_Americans"
+  },
+  {
+    "title": "Westfjords",
+    "url": "https://en.wikipedia.org/wiki/Westfjords"
   }
 ]
