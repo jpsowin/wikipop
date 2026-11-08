@@ -22206,6 +22206,10 @@
   },
   {
     "title": "Westfjords",
-    "url": "https://en.wikipedia.org/wiki/Westfjords"
+    "url": "https://en.wikipedia.org/wiki/Westfjords",
+    "extract": "The Westfjords or West Fjords is a large peninsula in northwestern Iceland and an administrative region, the least populous in the country. It lies on the Denmark Strait, facing the east coast of Greenland. It is connected to the rest of Iceland by a seven-kilometre-wide isthmus between Gilsfjörður and Bitrufjörður. The Westfjords are mountainous; the coastline is heavily indented by dozens of fjords surrounded by steep hills. These indentations make roads very circuitous and communications by land difficult. In addition, many roads are closed by ice and snow for several months of the year. The Vestfjarðagöng road tunnel from 1996 has improved that situation. The cliffs at Látrabjarg comprise the longest bird cliff in the northern Atlantic Ocean and are at the westernmost point in Iceland. Drangajökull, the only glacier in the region, is located in the north of the peninsula and is the fifth-largest in the country. Westfjords is certified by the EarthCheck Sustainable Destinations program.",
+    "description": "Peninsula and region of Iceland",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Vestfir%C3%B0ir_in_Iceland_2018.svg/330px-Vestfir%C3%B0ir_in_Iceland_2018.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "imageChecked": true
   }
 ]
