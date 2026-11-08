@@ -6,6 +6,9 @@ on:
     # because Wikimedia's pageview publish time for "yesterday" isn't guaranteed
     # — 06:00 was on the edge and occasionally hit 404s.
     - cron: '30 7 * * *'
+    # Hourly retries until that day's data is in (Wikimedia sometimes publishes
+    # hours late). Each retry stops right away once the day is already there.
+    - cron: '30 8-23 * * *'
   workflow_dispatch: # Allow manual trigger
 
 env:
@@ -13,6 +16,10 @@ env:
 
 permissions:
   contents: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -24,10 +31,26 @@ jobs:
         with:
           node-version: '24'
 
+      - name: Is yesterday already in?
+        # The retries only do work until yesterday's top article is in.
+        id: gate
+        run: |
+          DAY=$(date -u -d yesterday +%F)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          elif node -e "process.exit(require('./data/articles.json').some(d => d.date === '$DAY') ? 0 : 1)"; then
+            echo "$DAY is already in; nothing to do."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Install dependencies
+        if: steps.gate.outputs.run == 'true'
         run: npm ci
 
       - name: Fetch and build
+        if: steps.gate.outputs.run == 'true'
         run: |
           # Explore goes first so the sitemap's lastmod sees today's version.
           node scripts/build-explore.js
@@ -36,6 +59,7 @@ jobs:
           node scripts/build.js --backfill 14
 
       - name: Explain the day's pick
+        if: steps.gate.outputs.run == 'true'
         # Writes the "Why was everyone looking at this?" blurb, then rebuilds the
         # pages to include it. Never blocks the rest of the job: if the key isn't
         # set or the API is unavailable, the site just goes out without a blurb.
@@ -49,6 +73,7 @@ jobs:
           fi
 
       - name: Commit and push
+        if: steps.gate.outputs.run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -59,6 +84,7 @@ jobs:
           git push
 
       - name: Wait for the site to update
+        if: steps.gate.outputs.run == 'true'
         # The email and IndexNow both point at the newest day page, so wait
         # until GitHub Pages serves it (up to 5 minutes).
         continue-on-error: true
@@ -71,6 +97,7 @@ jobs:
           echo "::warning::$URL still isn't live after 5 minutes; continuing anyway."
 
       - name: Send daily email
+        if: steps.gate.outputs.run == 'true'
         id: email
         # A failed email shouldn't stop the rest of the run; the last step
         # still marks the run as failed so it gets noticed.
@@ -80,6 +107,7 @@ jobs:
         run: node scripts/send-email.js
 
       - name: Post to Instagram
+        if: steps.gate.outputs.run == 'true'
         # Renders the day's two carousels and schedules them in Publer: the
         # WikiPop pick around 8 AM Pacific, the obscure entry 5 minutes later.
         # Sensitive picks go in as drafts for review. Never blocks the run, and
@@ -105,6 +133,7 @@ jobs:
           git push || (git pull --rebase origin main && git push)
 
       - name: Tell search engines about changed pages
+        if: steps.gate.outputs.run == 'true'
         # IndexNow (Bing and others) gets every page whose HTML changed today.
         # Never fails the run.
         continue-on-error: true
