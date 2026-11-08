@@ -1,0 +1,48 @@
+name: Post to Instagram
+
+# Manual retry of the daily Instagram step (it normally runs inside the daily
+# workflow). Uses the data already committed for today.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Render only and print what would be sent to Publer"
+        type: boolean
+        default: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: read
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Post to Instagram
+        env:
+          PUBLER_API_KEY: ${{ secrets.PUBLER_API_KEY }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            node scripts/social.mjs post --dry-run
+          elif [ -n "$PUBLER_API_KEY" ]; then
+            node scripts/social.mjs post
+          else
+            echo "::error::PUBLER_API_KEY isn't set."
+            exit 1
+          fi
+
+      - name: Keep the rendered slides
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: instagram-slides
+          path: social/out/
+          if-no-files-found: ignore

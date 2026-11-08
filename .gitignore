@@ -19,6 +19,7 @@ test-tail.html
 why-preview.html
 email-preview.html
 data/why-drafts*.json
+social/out/
 
 # NPM logs
 npm-debug.log*

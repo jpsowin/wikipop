@@ -79,6 +79,21 @@ jobs:
           BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
         run: node scripts/send-email.js
 
+      - name: Post to Instagram
+        # Renders the day's two carousels and schedules them in Publer: the
+        # WikiPop pick around 8 AM Pacific, the obscure entry 5 minutes later.
+        # Sensitive picks go in as drafts for review. Never blocks the run, and
+        # does nothing until the PUBLER_API_KEY secret is added.
+        continue-on-error: true
+        env:
+          PUBLER_API_KEY: ${{ secrets.PUBLER_API_KEY }}
+        run: |
+          if [ -n "$PUBLER_API_KEY" ]; then
+            node scripts/social.mjs post
+          else
+            echo "PUBLER_API_KEY isn't set; skipping Instagram."
+          fi
+
       - name: Record the sent email
         # last-email.txt keeps a re-run from emailing everyone twice, so retry
         # the push once (after pulling) if something else pushed in between.

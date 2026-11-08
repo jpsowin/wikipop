@@ -1,0 +1,31 @@
+{
+  "Harvey Washington Wiley": {
+    "slide1": {
+      "text": "Harvey Washington Wiley was an American physician and chemist. He was the [[first commissioner of the United States Food and Drug Administration]]."
+    },
+    "slide2": {
+      "heading": "Government career",
+      "paras": [
+        "Wiley was appropriated $5,000 in 1902 to study the effects of a diet including various preservatives, on human volunteers. The subjects received $5 a month and free food to be systematically poisoned. First to be tested was borax which tightened old meat which was starting to decompose. These \"[[poison squad]]\" studies drew national attention to the need for a federal food and drug law."
+      ]
+    },
+    "slide3": {
+      "heading": "Work at Good Housekeeping",
+      "paras": [
+        "In a famous action he brought against The Coca-Cola Company in 1911, he contended that it was illegal to use the name Coca-Cola when there was no actual cocaine in the drink, and also that it was illegal for it to contain caffeine as an additive. Perversely, this was as much as to say that the product [[ought to have contained cocaine and not caffeine]]."
+      ]
+    },
+    "extraSlides": [],
+    "caption": "Harvey Washington Wiley: before he became the first head of the FDA, he paid volunteers $5 a month to eat meals laced with preservatives like borax, a group that became known as the \"Poison Squad.\"",
+    "image": {
+      "file": "File:WILEY, HARVEY W. LCCN2016862478.jpg",
+      "artist": "Harris & Ewing",
+      "license": "Public domain"
+    },
+    "imgPos": "50% 25%",
+    "imgZoom": 1.1,
+    "flags": [
+      "Mentions cocaine (Coca-Cola lawsuit)"
+    ]
+  }
+}

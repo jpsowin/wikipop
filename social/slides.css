@@ -1,0 +1,98 @@
+/* WikiPop Instagram slides (1080x1440). Rendered by scripts/social.mjs with headless Chrome.
+   Lifted from the approved design mockups; sizes use cqw so everything scales with the 1080px canvas.
+   Nothing here should look like a link: posts can not be tapped. */
+:root { --paper: #f7f5eb; --panel: #fdfcf3; --ink: #15130f; --ink-2: #5a554b; --rule: #dcd6c4; --chip: #ebe6d4; --accent: #d00d00; --pop: #ffdf00; --link: #2a3d8f; --ok: #1d7a3a; --wip: #9a5a00; --new: #2a3d8f; /* Mockups are pictures of 1080px images, so their colors are fixed in both themes. */ --m-ink: #111111; --m-white: #fdfcf3; --m-cream: #f7f5eb; --m-yellow: #ffdf00; --m-red: #d00d00; --m-blue: #2a3d8f; --m-cyan: #00aeef; --m-sky: #e6f6fd; --wp-bg: #ffffff; --wp-text: #202122; --wp-muted: #54595d; --wp-link: #3366cc; --wp-rule: #a2a9b1; --wp-hl: #ffe94d; /* Instagram's own chrome follows the viewer's theme, like the app does. */ --ig-bg: #ffffff; --ig-fg: #0f0f0f; --ig-muted: #737373; --ig-line: #dbdbdb; --f-display: "Bangers", "Impact", "Arial Black", sans-serif; --f-body: "Instrument Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; --f-wp-head: "Linux Libertine", Georgia, "Times New Roman", serif; --f-wp-body: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; --stage: 1120px; --col: 44rem; }
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 17px; line-height: 1.6; margin: 0; }
+p, li { text-wrap: pretty; }
+/* ---------- 1080px canvases, scaled with container units ---------- */
+.cv { container-type: inline-size; position: relative; z-index: 0; overflow: hidden; width: 100%; max-width: 100%; color: var(--m-ink); }
+.r34 { aspect-ratio: 3 / 4; }
+.logo { font-family: var(--f-display); line-height: 1; color: var(--m-ink); letter-spacing: 0.01em; }
+.logo span { color: var(--m-red); }
+.hl { background: linear-gradient(transparent 12%, var(--wp-hl) 12%, var(--wp-hl) 92%, transparent 92%); box-decoration-break: clone; -webkit-box-decoration-break: clone; padding: 0 0.4cqw; }
+/* Bigger halftone for frames. ::before so cqw resolves against the canvas. */
+.dots-y, .dots-c { position: relative; z-index: 0; }
+.dots-y { background-color: var(--m-yellow); --dot: var(--m-red); }
+.dots-c { background-color: var(--m-cyan); --dot: var(--m-blue); }
+.dots-y::before, .dots-c::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background-image: radial-gradient(circle, var(--dot) 1.05cqw, transparent 1.12cqw), radial-gradient(circle, var(--dot) 1.05cqw, transparent 1.12cqw); background-size: 4.4cqw 4.4cqw, 4.4cqw 4.4cqw; background-position: 0 0, 2.2cqw 2.2cqw; }
+/* Why slide in Wikipedia's type */
+.wb { list-style: none; padding: 0; margin: 0; display: grid; gap: 3.6cqw; }
+.wb li { display: grid; grid-template-columns: 3.4cqw minmax(0, 1fr); gap: 2.6cqw; font-size: 4.9cqw; line-height: 1.55; }
+.wb li::before { content: ""; width: 3.4cqw; height: 3.4cqw; margin-top: 2.1cqw; box-sizing: border-box; }
+.wb-1 li::before { width: 2.6cqw; height: 2.6cqw; margin: 2.5cqw 0 0 0.4cqw; border-radius: 50%; background: var(--m-red); }
+.wb.sm { gap: 3.2cqw; }
+.wb.sm li { font-size: 4.6cqw; }
+.wb.sm.wb-1 li::before { margin-top: 2.3cqw; }
+.cap5 { position: absolute; z-index: 2; background: var(--m-ink); color: var(--m-white); border: 0.9cqw solid var(--m-ink); font-family: var(--f-body); padding: 3.6cqw 5cqw 4.4cqw; }
+.cap5 .nm { font-family: var(--f-display); font-size: 15cqw; line-height: 0.9; color: var(--m-yellow); }
+.cap5 .ln { font-size: 5.8cqw; line-height: 1.3; font-weight: 600; margin: 2.4cqw 0 0; text-wrap: pretty; }
+.mini5 { position: absolute; z-index: 4; background: var(--m-yellow); border: 0.55cqw solid var(--m-ink); box-shadow: 0.7cqw 0.7cqw 0 var(--m-ink); padding: 1.05cqw 1.85cqw 0.65cqw; transform: rotate(-4deg); }
+.mini5 .logo { font-size: 4.25cqw; display: block; }
+.card5 { position: absolute; z-index: 1; border: 0.9cqw solid var(--m-ink); background: var(--wp-bg); color: var(--wp-text); font-family: var(--f-wp-body); overflow: hidden; }
+.card5 > img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; display: block; }
+.card5 .t { font-family: var(--f-wp-head); font-weight: 400; font-size: 6.2cqw; line-height: 1.18; margin: 0; padding-bottom: 1.6cqw; border-bottom: 0.25cqw solid var(--wp-rule); }
+.card5 .f { font-size: 3.1cqw; color: var(--wp-muted); margin: 1.8cqw 0 3.6cqw; }
+.card5 p { font-size: 4.6cqw; line-height: 1.55; margin: 0; }
+.card5 .sec { font-family: var(--f-wp-head); font-weight: 400; font-size: 5.8cqw; line-height: 1.2; margin: 0 0 3.4cqw; padding-bottom: 1.2cqw; border-bottom: 0.25cqw solid var(--wp-rule); }
+.card5 .of { font-size: 3.1cqw; color: var(--wp-muted); margin: 0 0 1.2cqw; }
+.c5 .card5 { left: 5.5cqw; right: 5.5cqw; top: 16.5cqw; bottom: 5.5cqw; }
+.c5 .cap5 { left: 5.5cqw; right: 5.5cqw; bottom: 5.5cqw; padding: 3cqw 4.5cqw 3.8cqw; }
+.c5 .cap5 .nm { font-size: 13cqw; }
+.c5 .cap5 .ln { font-size: 5.2cqw; margin-top: 2cqw; }
+.c5 .mini5 { right: 2.5cqw; bottom: 2.5cqw; }
+/* Later slides: thin frame, article card only */
+.f5 .card5 { inset: 5.5cqw; padding: 6cqw 6cqw 5cqw; }
+.cap5 .kk { font-family: var(--f-body); font-size: 3.1cqw; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--m-white); opacity: 0.85; margin-bottom: 1.6cqw; }
+.card5 .tx { min-width: 0; }
+/* Screenshot page: the canvas is the whole window */
+html, body { margin:0;padding:0;background:#fff }
+.cv { width:1080px !important;max-width:none !important }
+.c5.hc .cap5 { padding: 3cqw 4.5cqw 3.8cqw; }
+.c5.hc .cap5 .kk { margin-bottom: 1.2cqw; }
+.c5.hc .cap5 .nm { font-size: 12cqw; }
+.c5.hc .cap5 .ln { font-size: 5cqw; margin-top: 1.6cqw; }
+/* Cover C: the photo sits above the black box, never under it, so faces stay visible. */
+.c5.hc .card5.ph { top: 5.5cqw; bottom: 5.5cqw; display: flex; flex-direction: column; background: var(--m-ink); }
+.c5.hc .card5.ph > .pf { flex: 1 1 0; min-height: 0; overflow: hidden; position: relative; }
+.c5.hc .card5.ph > .pf > img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.c5.hc .card5.ph > .cap5 { position: static; border: 0; flex: none; }
+.cap5 .kk em { font-style: normal; color: var(--m-yellow); }
+/* Obscure, round 8: back on the old blue dots, the label moves to the bottom right. */
+.ob8 .obc { position: absolute; z-index: 1; background: var(--wp-bg); color: var(--wp-text); font-family: var(--f-wp-body); border: 0.9cqw solid var(--m-ink); overflow: hidden; display: flex; flex-direction: column; }
+.ob8.fp .obc { inset: 5.5cqw; }
+.ob8 .obc > img { width: 100%; height: 47%; object-fit: cover; display: block; flex: none; border-bottom: 0.9cqw solid var(--m-ink); }
+.ob8 .tx { padding: 4.4cqw 5.6cqw 4cqw; }
+.ob8 .t { font-family: var(--f-wp-head); font-weight: 400; font-size: 5.8cqw; line-height: 1.18; margin: 0; padding-bottom: 1.4cqw; border-bottom: 0.25cqw solid var(--wp-rule); }
+.ob8 .f { font-size: 3cqw; color: var(--wp-muted); margin: 1.4cqw 0 2.6cqw; }
+.ob8 p { font-size: 4.3cqw; line-height: 1.5; margin: 0; }
+.ob8 .of { font-size: 3cqw; color: var(--wp-muted); margin: 0 0 1.2cqw; }
+.ob8 .sec { font-family: var(--f-wp-head); font-weight: 400; font-size: 5.8cqw; line-height: 1.2; margin: 0 0 3.4cqw; padding-bottom: 1.2cqw; border-bottom: 0.25cqw solid var(--wp-rule); }
+.ob8 .obc.txt .tx { padding: 6cqw 6cqw 5cqw; }
+.ob8 .obc.txt p { font-size: 4.6cqw; line-height: 1.55; }
+.ob8 .obc.txt p + p { margin-top: 3cqw; }
+/* "WikiPop! Obscure" sticker, bottom right of obscure slides */
+.nv { position: absolute; z-index: 4; right: 2.5cqw; bottom: 2.5cqw; transform: rotate(-4deg); display: flex; align-items: stretch; border: 0.55cqw solid var(--m-ink); box-shadow: 0.7cqw 0.7cqw 0 var(--m-ink); background: var(--m-blue); font-family: var(--f-display); font-size: 4.25cqw; line-height: 1; letter-spacing: 0.01em; white-space: nowrap; color: var(--m-white); }
+.nv > span { display: block; padding: 1.05cqw 1.85cqw 0.65cqw; }
+.nv i { font-style: normal; }
+.nv .w { color: var(--m-ink); }
+.nv .p { color: var(--m-yellow); }
+.nv .o { color: var(--m-cyan); }
+/* Sticker 3: yellow WikiPop! half (like the daily) + navy Obscure half; t3 = tighter padding */
+.nv3 > span:first-child { background: var(--m-yellow); border-right: 0.55cqw solid var(--m-ink); }
+.nv3 .p { color: var(--m-red); }
+.nv3.t3 > span { padding-left: 0.75cqw; padding-right: 0.75cqw; }
+/* Image box that supports zoom (obscure slides with imgZoom) */
+.ob8 .obc > .pfo { width: 100%; height: 47%; flex: none; overflow: hidden; border-bottom: 0.9cqw solid var(--m-ink); }
+.ob8 .obc > .pfo > img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ob8 .obc .tx .of + .sec { margin-top: 0; }
+/* Obscure slide 1 when the entry has no photo: bigger type fills the card */
+.ob8 .obc.txt .t.big { font-size: 7.4cqw; }
+.ob8 .obc.txt p.big { font-size: 5.4cqw; }
+/* Linux (CI) has no Georgia, so Gelasio (same letter widths as Georgia) stands in there. Body text is
+   Helvetica on a Mac and Liberation Sans (same widths) on Linux, so lines break the same way. */
+:root { --f-wp-head: "Linux Libertine", Georgia, "Gelasio", "Times New Roman", serif; }
+/* Long text: the photo gives up height (down to a floor) so all the text stays on the card.
+   When the text fits, nothing changes. */
+.ob8 .obc > img, .ob8 .obc > .pfo { flex: 0 1 auto; min-height: 24%; }
+.ob8 .obc > .tx { flex: none; }
