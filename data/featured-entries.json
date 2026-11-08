@@ -1610,7 +1610,11 @@
   },
   {
     "title": "Harvey Washington Wiley",
-    "url": "https://en.wikipedia.org/wiki/Harvey_Washington_Wiley"
+    "url": "https://en.wikipedia.org/wiki/Harvey_Washington_Wiley",
+    "extract": "Harvey Washington Wiley was an American physician and chemist who advocated successfully for the passage of the landmark Pure Food and Drug Act of 1906 and subsequently worked at the Good Housekeeping Institute laboratories. He was the first commissioner of the United States Food and Drug Administration. Wiley's advocacy for stricter food and drug regulations indirectly contributed to Coca-Cola's decision to remove cocaine from its formula in the early 20th century. This move addressed public health concerns but has drawn modern criticism for its impact on drug policy perceptions.",
+    "description": "American physician and Food and Drugs Commissioner (1844–1930)",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/WILEY%2C_HARVEY_W._LCCN2016862478.jpg/330px-WILEY%2C_HARVEY_W._LCCN2016862478.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "imageChecked": true
   },
   {
     "title": "Lowercase (music)",

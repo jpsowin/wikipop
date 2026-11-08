@@ -1271,5 +1271,23 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-07T14:18:18.217Z"
+  },
+  "2026-11-07": {
+    "date": "2026-11-07",
+    "title": "Stephen_Miller",
+    "show": true,
+    "confidence": 96,
+    "bullets": [
+      "Trump [announced on Truth Social](https://www.washingtonpost.com/politics/2026/11/06/trump-names-stephen-miller-new-white-house-chief-staff/) that Stephen Miller will replace [Susie Wiles](https://en.wikipedia.org/wiki/Susie_Wiles) as [White House chief of staff](https://en.wikipedia.org/wiki/White_House_Chief_of_Staff) on Monday.",
+      "CNN [called it a \"seismic\" staff shakeup](https://www.cnn.com/2026/11/06/politics/stephen-miller-trump-susie-wiles), coming just days after Republicans took heavy losses in Tuesday's midterm elections.",
+      "Plot twist: Trump also said he [offered the press secretary job](https://www.cnbc.com/2026/11/07/trump-ufc-dana-white-press-secretary-offer.html) to UFC boss [Dana White](https://en.wikipedia.org/wiki/Dana_White), who plans to meet him Monday."
+    ],
+    "sources": [
+      "https://www.washingtonpost.com/politics/2026/11/06/trump-names-stephen-miller-new-white-house-chief-staff/",
+      "https://www.cnn.com/2026/11/06/politics/stephen-miller-trump-susie-wiles",
+      "https://www.cnbc.com/2026/11/07/trump-ufc-dana-white-press-secretary-offer.html"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-08T22:34:01.720Z"
   }
 }

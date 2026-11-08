@@ -1,11 +1,11 @@
 {
  "": {
-  "hash": "5288d92bf1ee88e2",
-  "lastmod": "2026-11-07"
+  "hash": "c77ed85d757d3268",
+  "lastmod": "2026-11-08"
  },
  "archive.html": {
-  "hash": "925e9c5a568bd16d",
-  "lastmod": "2026-11-07"
+  "hash": "b1777036a221c4bf",
+  "lastmod": "2026-11-08"
  },
  "explore.html": {
   "hash": "42713d113491538c",
@@ -112,8 +112,8 @@
   "lastmod": "2026-11-04"
  },
  "month/2026-11/": {
-  "hash": "7d493315bb4cf79a",
-  "lastmod": "2026-11-07"
+  "hash": "d3b7157759596d7b",
+  "lastmod": "2026-11-08"
  },
  "day/2025-01-02-squid-game-season-2/": {
   "hash": "d2821cd8f5fd906a",
@@ -2796,7 +2796,11 @@
   "lastmod": "2026-11-07"
  },
  "day/2026-11-06-ramayana-part-1/": {
-  "hash": "609a25dddba85088",
-  "lastmod": "2026-11-07"
+  "hash": "115af47ed8cff083",
+  "lastmod": "2026-11-08"
+ },
+ "day/2026-11-07-stephen-miller/": {
+  "hash": "067cad6d8954baeb",
+  "lastmod": "2026-11-08"
  }
 }
