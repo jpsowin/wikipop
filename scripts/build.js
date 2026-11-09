@@ -962,7 +962,7 @@ async function ensureObscureSummaries(articles) {
 // image chosen for social in data/obscure-slides.json, the site and email
 // use it too instead of Wikipedia's default.
 const OBSCURE_SLIDES_FILE = path.join(__dirname, "..", "data", "obscure-slides.json");
-function applySocialImages() {
+async function applySocialImages() {
   if (!fs.existsSync(OBSCURE_SLIDES_FILE) || !fs.existsSync(FEATURED_FILE)) return;
   const curated = JSON.parse(fs.readFileSync(OBSCURE_SLIDES_FILE, "utf-8"));
   const entries = JSON.parse(fs.readFileSync(FEATURED_FILE, "utf-8"));
@@ -970,13 +970,26 @@ function applySocialImages() {
   for (const e of entries) {
     const img = curated[e.title] && curated[e.title].image;
     if (!img || !img.file) continue;
-    const name = img.file.replace(/^File:/, "").replace(/ /g, "_");
-    const url = `https://en.wikipedia.org/wiki/Special:FilePath/${encodeURIComponent(name)}?width=640`;
-    if (e.thumbnail !== url) {
+    const file = "File:" + img.file.replace(/^File:/, "");
+    // Already pointing at this file's direct image address.
+    if (e.socialImage === file && e.thumbnail && e.thumbnail.includes("wikimedia.org")) continue;
+    // Browsers won't load Wikipedia's Special:FilePath redirect as an <img>,
+    // so look up the direct thumbnail address once and keep it.
+    try {
+      const api = `https://en.wikipedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url&iiurlwidth=640&titles=${encodeURIComponent(file)}`;
+      const data = await httpGet(api);
+      const page = Object.values((data.query && data.query.pages) || {})[0];
+      const info = page && page.imageinfo && page.imageinfo[0];
+      const url = info && (info.thumburl || info.url);
+      if (!url) throw new Error("no image info");
       e.thumbnail = url;
+      e.socialImage = file;
       e.imageChecked = true;
       changed++;
+    } catch (err) {
+      console.log(`  Couldn't look up the social image for ${e.title} (${err.message}); keeping its old image.`);
     }
+    await new Promise((r) => setTimeout(r, 200));
   }
   if (changed) {
     fs.writeFileSync(FEATURED_FILE, JSON.stringify(entries, null, 2) + "\n");
@@ -1941,7 +1954,7 @@ async function main() {
   if (pinObscureEntry(articles)) changed = true;
   if (changed) saveArticles(articles);
 
-  applySocialImages();
+  await applySocialImages();
 
   console.log("Building HTML...");
   fs.writeFileSync(OUTPUT_FILE, await buildHtml(articles));
@@ -1951,7 +1964,7 @@ async function main() {
   fs.writeFileSync(FEATURED_PAGE_FILE, buildFeaturedPage());
 
   await ensureObscureSummaries(articles);
-  applySocialImages(); // summaries may have reset a thumbnail
+  await applySocialImages(); // summaries may have reset a thumbnail
 
   const dayCount = buildDayPages(articles);
   console.log(`Wrote/updated ${dayCount} per-day pages.`);
