@@ -1288,6 +1288,8 @@
       "https://www.cnbc.com/2026/11/07/trump-ufc-dana-white-press-secretary-offer.html"
     ],
     "model": "claude-sonnet-5-5",
-    "generatedAt": "2026-11-08T22:34:01.720Z"
+    "generatedAt": "2026-11-08T22:34:01.720Z",
+    "hook": "will replace Susie Wiles as White House chief of staff.",
+    "hard": false
   }
 }

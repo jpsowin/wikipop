@@ -143,7 +143,9 @@ Event:
 
 Before answering, check every bullet against these rules and fix any that break one.
 
-Return the bullets as JSON: {"bullets": ["...", "..."]}.`;
+Also write "hook": the one-line Instagram cover caption printed under the article's name. It continues the name as a sentence, so it must read naturally right after the name, e.g. "was found guilty of rape and three counts of sexual assault." or "will replace Susie Wiles as White House chief of staff." Rules: plain text with no links or Markdown, 64 characters at most, a complete phrase ending with a period (never cut off), and name the famous people who make the story land. Same tone rules as the bullets.
+
+Return JSON: {"bullets": ["...", "..."], "hook": "..."}.`;
 })();
 
 // Wikimedia rate-limits bursts; back off and retry on 429.
@@ -388,8 +390,8 @@ async function edit(client, a, notes, usage) {
         type: "json_schema",
         schema: {
           type: "object",
-          properties: { bullets: { type: "array", items: { type: "string" } } },
-          required: ["bullets"],
+          properties: { bullets: { type: "array", items: { type: "string" } }, hook: { type: "string" } },
+          required: ["bullets", "hook"],
           additionalProperties: false,
         },
       },
@@ -414,7 +416,12 @@ async function edit(client, a, notes, usage) {
     .slice(0, 4);
   const bullets = [];
   for (const b of raw) bullets.push(await cleanLinks(b, a.title));
-  return bullets;
+  // Instagram cover line (see scripts/social.mjs). Plain text; dropped if it
+  // breaks the rules, and social.mjs falls back to its own line.
+  let hook = String(parsed.hook || "").replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/\s+/g, " ").trim();
+  if (hook.startsWith(name + " ")) hook = hook.slice(name.length + 1);
+  if (!hook || hook.length > 70 || !/[.!?]["”')]*$/.test(hook)) hook = "";
+  return { bullets, hook };
 }
 
 async function explain(client, a, saved) {
@@ -422,7 +429,7 @@ async function explain(client, a, saved) {
   const { notes, confidence } = saved || await research(client, a, usage);
   const show = confidence >= MIN_CONFIDENCE;
   // Days below the bar get no blurb, so skip the editor.
-  const bullets = show ? await edit(client, a, notes, usage) : [];
+  const { bullets, hook } = show ? await edit(client, a, notes, usage) : { bullets: [], hook: "" };
 
   const sources = [];
   for (const b of bullets) {
@@ -437,6 +444,7 @@ async function explain(client, a, saved) {
     show,
     confidence,
     bullets,
+    ...(hook ? { hook } : {}),
     sources,
     model: MODEL,
     generatedAt: new Date().toISOString(),

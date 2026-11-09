@@ -17,7 +17,8 @@
 //   CHROME=/path/to/chrome overrides the browser binary.
 //
 // data/why.json entries (written by scripts/why.mjs) may carry these OPTIONAL fields for social:
-//   hook     cover line under the title, ≤70 characters. Default: the first bullet, trimmed.
+//   hook     cover line under the title, ≤70 characters (written by why.mjs). Default: the first
+//            bullet or its first clause if short enough, else Wikipedia's short description.
 //   caption  one or two sentences, starting "Title: ...". Default: "<Title>: <first bullet>".
 //   imgPos   CSS object-position for the cover photo. Default "50% 20%" ("50% 100%" for posters).
 //   hard     true: always a Publer draft for review; false: never auto-flag. Default: keyword check.
@@ -155,7 +156,7 @@ function extractSentences(text) {
 // Leads with the action when it starts with the title ("Russell Brand was..." → "was...").
 // Returns { hook, cut } where cut means words had to be chopped (the post then waits for review).
 const HOOK_MAX = 64;
-function deriveHook(candidates, title) {
+function deriveHook(candidates, title, description) {
   const tidy = t => { let s = plain(t).trim(); if (s.startsWith(title + ' ')) s = s.slice(title.length + 1); return s; };
   const end = t => (/[.!?]["”')]*$/.test(t) ? t : t.replace(/[\s,;:—–-]+$/, '') + '.');
   for (const c of candidates) {
@@ -164,6 +165,10 @@ function deriveHook(candidates, title) {
     const clause = s.split(/, | — | – |; /)[0];
     if (clause.length >= 25 && clause.length <= HOOK_MAX && clause.length < s.length) return { hook: end(clause), cut: false };
   }
+  // Never ship a sentence chopped mid-way. Fall back to Wikipedia's short
+  // description ("American political advisor (born 1985)" → "American political advisor.").
+  const desc = (description || '').replace(/\s*\([^)]*\)\s*/g, ' ').trim();
+  if (desc && desc.length <= HOOK_MAX) return { hook: end(desc.charAt(0).toUpperCase() + desc.slice(1)), cut: false };
   return { hook: trimTo(tidy(candidates[0] || title), HOOK_MAX), cut: true };
 }
 
@@ -275,7 +280,7 @@ async function buildTrending(article, why, dir, tmp) {
   const heading = w ? 'What happened' : null;
   const first = w ? plain(mdToMarked(w.bullets[0])) : (extractSentences(article.extract)[0] || article.description || '');
   // Only the first bullet: it's the story. A later bullet can be a side note ("He was cleared on...").
-  const derived = deriveHook(w ? [mdToMarked(w.bullets[0])] : extractSentences(article.extract).slice(0, 1), title);
+  const derived = deriveHook(w ? [mdToMarked(w.bullets[0])] : extractSentences(article.extract).slice(0, 1), title, article.description);
   let hook = why && why.hook ? why.hook : derived.hook;
   if (!(why && why.hook) && derived.cut) reasons.push('cover line had to be cut mid-sentence');
 
@@ -509,9 +514,10 @@ async function main() {
   const day = DATE_ARG || addDays(latest.date, 1);
   const article = articles.find(a => a.date === addDays(day, -1));
   if (!article) throw new Error(`No article for ${day} (looking for data date ${addDays(day, -1)})`);
-  if (MODE === 'post' && !DATE_ARG && daysBetween(day, new Date().toISOString().slice(0, 10)) > 1) {
-    fail(`Newest data is for ${day}, more than a day old. Not posting a stale pick.`);
-    process.exitCode = 1;
+  // Only post the pick for today (UTC): a retry run before the new day's data
+  // lands would otherwise re-post yesterday's pick.
+  if (MODE === 'post' && !DATE_ARG && day !== new Date().toISOString().slice(0, 10)) {
+    console.log(`Newest data is for ${day}, not today; today's isn't in yet. Nothing to post.`);
     return;
   }
 
