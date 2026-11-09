@@ -1,10 +1,10 @@
 {
  "": {
-  "hash": "ba78ea6718a8661b",
+  "hash": "16b248a1f32ca391",
   "lastmod": "2026-11-09"
  },
  "archive.html": {
-  "hash": "7b88ff34b90bb8e5",
+  "hash": "75e8812c0d6f962b",
   "lastmod": "2026-11-09"
  },
  "explore.html": {
@@ -12,8 +12,8 @@
   "lastmod": "2026-11-09"
  },
  "changelog.html": {
-  "hash": "b87eee8bca5b3058",
-  "lastmod": "2026-11-08"
+  "hash": "323aa7d09edc82ad",
+  "lastmod": "2026-11-09"
  },
  "year/2025/": {
   "hash": "c428ff1444a9a10c",
@@ -2800,11 +2800,11 @@
   "lastmod": "2026-11-08"
  },
  "day/2026-11-07-stephen-miller/": {
-  "hash": "2f0e03ad447fa892",
+  "hash": "276672f287064ee3",
   "lastmod": "2026-11-09"
  },
- "day/2026-11-08-xyz/": {
-  "hash": "7b5e57edf85ff729",
+ "day/2026-11-08-godzilla-minus-zero/": {
+  "hash": "99667f4bc02dfb7e",
   "lastmod": "2026-11-09"
  }
 }

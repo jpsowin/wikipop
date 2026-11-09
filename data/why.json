@@ -1294,12 +1294,22 @@
   },
   "2026-11-08": {
     "date": "2026-11-08",
-    "title": ".xyz",
-    "show": false,
-    "confidence": 5,
-    "bullets": [],
-    "sources": [],
-    "model": "claude-sonnet-5-5",
-    "generatedAt": "2026-11-09T17:45:56.271Z"
+    "title": "Godzilla_Minus_Zero",
+    "show": true,
+    "confidence": 88,
+    "bullets": [
+      "[Takashi Yamazaki](https://en.wikipedia.org/wiki/Takashi_Yamazaki)'s sequel to the Oscar-winning [Godzilla Minus One](https://en.wikipedia.org/wiki/Godzilla_Minus_One) stomped into North American theaters on Nov. 6.",
+      "Weekend estimates put its US debut near [$31 million](https://thewrap.com/creative-content/movies/godzilla-minus-zero-saturday-box-office), almost triple what the first film opened with.",
+      "That would be the biggest US opening ever for a live-action foreign-language film."
+    ],
+    "hook": "is stomping to a record US opening for Takashi Yamazaki.",
+    "sources": [
+      "https://thewrap.com/creative-content/movies/godzilla-minus-zero-saturday-box-office",
+      "https://www.scifijapan.com/news/godzilla-minus-zero-confirmed-for-north-american-theatrical-release-on-november-6"
+    ],
+    "model": "hand-written in a Claude Code session (no API)",
+    "generatedAt": "2026-11-09T18:30:27.128Z",
+    "notes": "Replaced .xyz (no known reason it was trending) with the owner's pick on 2026-11-09. US/UK release Nov 6 2026, so Nov 8 was opening-weekend Sunday; Japan release Nov 3. About $31M US estimate (TheWrap, Saturday estimate).",
+    "imgPos": "50% 0%"
   }
 }

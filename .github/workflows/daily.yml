@@ -66,14 +66,21 @@ jobs:
       - name: Explain the day's pick
         if: steps.gate.outputs.run == 'true'
         # Writes the "Why was everyone looking at this?" blurb, then rebuilds the
-        # pages to include it. Never blocks the rest of the job: if the key isn't
-        # set or the API is unavailable, the site just goes out without a blurb.
+        # pages to include it. If it can't tell why the pick was trending, the
+        # day takes the next pick in line and tries again (up to 3 times).
+        # Never blocks the rest of the job: if the key isn't set or the API is
+        # unavailable, the site just goes out without a blurb.
         continue-on-error: true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           if [ -n "$ANTHROPIC_API_KEY" ]; then
             node scripts/why.mjs --latest 3
+            for attempt in 1 2 3; do
+              # Exit code 3: the pick has a known reason, keep it.
+              node scripts/build.js --repick-if-no-why || break
+              node scripts/why.mjs --latest 1
+            done
             node scripts/build.js --no-daily
           fi
 

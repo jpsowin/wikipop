@@ -36,6 +36,8 @@ Scripts and people both read this file, so each rule is one short line.
 - No usable image: propose a few related Commons photos for review before posting.
 
 ## WikiPop (trending) carousel
+- Only feature a pick when we know why it's trending. If the reason is unclear, take the next most-viewed article instead.
+- Skip pages that trend from bots or spam, not readers (for example .xxx and .xyz).
 - Cover kicker: "Trending on Wikipedia · N views", with "Trending" in yellow.
 - Cover hook: one line that names the people who make the story land.
 - Slide 2: three or four short fact bullets. Never "we're not sure why."

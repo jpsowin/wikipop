@@ -75,6 +75,7 @@ const SKIP_PREFIXES = [
 // Exact titles to always skip
 const SKIP_EXACT = [
   ".xxx",
+  ".xyz",
 ];
 
 function shouldSkip(title) {
@@ -957,6 +958,32 @@ async function ensureObscureSummaries(articles) {
   console.log(`Done. Cached ${fetched} new obscure entry summaries (${failed} failed).`);
 }
 
+// The obscure entry uses the same image everywhere: when an entry has an
+// image chosen for social in data/obscure-slides.json, the site and email
+// use it too instead of Wikipedia's default.
+const OBSCURE_SLIDES_FILE = path.join(__dirname, "..", "data", "obscure-slides.json");
+function applySocialImages() {
+  if (!fs.existsSync(OBSCURE_SLIDES_FILE) || !fs.existsSync(FEATURED_FILE)) return;
+  const curated = JSON.parse(fs.readFileSync(OBSCURE_SLIDES_FILE, "utf-8"));
+  const entries = JSON.parse(fs.readFileSync(FEATURED_FILE, "utf-8"));
+  let changed = 0;
+  for (const e of entries) {
+    const img = curated[e.title] && curated[e.title].image;
+    if (!img || !img.file) continue;
+    const name = img.file.replace(/^File:/, "").replace(/ /g, "_");
+    const url = `https://en.wikipedia.org/wiki/Special:FilePath/${encodeURIComponent(name)}?width=640`;
+    if (e.thumbnail !== url) {
+      e.thumbnail = url;
+      e.imageChecked = true;
+      changed++;
+    }
+  }
+  if (changed) {
+    fs.writeFileSync(FEATURED_FILE, JSON.stringify(entries, null, 2) + "\n");
+    console.log(`Using the social image for ${changed} obscure entr${changed === 1 ? "y" : "ies"}.`);
+  }
+}
+
 function buildDayPages(articles) {
   if (!fs.existsSync(DAY_TEMPLATE_FILE)) {
     console.log("No template-day.html found; skipping per-day page generation.");
@@ -1667,7 +1694,7 @@ async function processDate(date, articles, opts = {}) {
 
   // Check if we already have an entry for this date
   const existing = articles.find((a) => a.date === dateStr);
-  if (existing && !existing.provisional) {
+  if (existing && !existing.provisional && !opts.redo) {
     console.log(`  ${dateStr}: already have an article, skipping.`);
     return false;
   }
@@ -1699,8 +1726,14 @@ async function processDate(date, articles, opts = {}) {
   // Leave out the day being replaced, or its own provisional pick would be
   // ruled out as a recent repeat.
   const recentTitles = getRecentTitles(articles.filter((a) => a !== existing), LOOKBACK_DAYS, date);
+  // Titles passed over for this day (e.g. no known reason it was trending).
+  const skipped = [...new Set([...((existing && existing.skipped) || []), ...(opts.exclude || [])])];
+  for (const t of skipped) recentTitles.add(t);
+  // A hand-chosen pick overrides the usual order.
+  if (opts.pick) recentTitles.delete(opts.pick);
+  const pool = opts.pick ? topArticles.filter((a) => a.article === opts.pick) : topArticles;
 
-  const { chosen, summary } = await pickFeatured(topArticles, recentTitles);
+  const { chosen, summary } = await pickFeatured(pool, recentTitles);
 
   if (!chosen) {
     console.log(`  ${dateStr}: no qualifying article found.`);
@@ -1725,13 +1758,16 @@ async function processDate(date, articles, opts = {}) {
     top10,
   };
   if (provisional) newEntry.provisional = provisional;
+  if (skipped.length) newEntry.skipped = skipped;
 
   if (existing) {
     // Official numbers replace a provisional day. Keep the obscure entry that
     // was already pinned to it so the obscure queue doesn't move again.
     if (existing.obscure) newEntry.obscure = existing.obscure;
     articles.splice(articles.indexOf(existing), 1, newEntry);
-    console.log(`  ${dateStr}: replaced provisional day with official numbers.`);
+    console.log(existing.provisional && !opts.redo
+      ? `  ${dateStr}: replaced provisional day with official numbers.`
+      : `  ${dateStr}: replaced "${existing.title}" with a new pick.`);
   } else {
     articles.push(newEntry);
   }
@@ -1846,8 +1882,38 @@ async function main() {
     await new Promise((r) => setTimeout(r, 500));
   }
 
+  // Redo one day with a hand-chosen pick: --redo 2026-11-08 --pick Godzilla_Minus_Zero
+  // (without --pick it takes the next pick in line). Keeps the day's obscure entry.
+  const redoDate = process.argv.includes("--redo") ? process.argv[process.argv.indexOf("--redo") + 1] : null;
+  const pickArg = process.argv.includes("--pick") ? process.argv[process.argv.indexOf("--pick") + 1] : null;
+  if (redoDate) {
+    const cur = articles.find((a) => a.date === redoDate);
+    const exclude = pickArg || !cur ? [] : [cur.title];
+    console.log(`Redoing ${redoDate}${pickArg ? ` with ${pickArg}` : ""}...`);
+    if (await processDate(new Date(redoDate + "T00:00:00Z"), articles, { redo: true, pick: pickArg, exclude })) changed = true;
+  }
+
+  // Skip a pick when the "why" step couldn't tell why it was trending: take the
+  // next one in line instead. The daily workflow runs this after scripts/why.mjs
+  // and repeats a few times. Exit code 3 means nothing needed changing.
+  let repicked = false;
+  if (process.argv.includes("--repick-if-no-why")) {
+    const newest = articles[articles.length - 1];
+    const why = loadWhy();
+    const w = newest && why[newest.date];
+    if (newest && w && w.title === newest.title && !w.show) {
+      console.log(`${newest.date}: no known reason "${newest.title}" was trending; taking the next pick.`);
+      if (await processDate(new Date(newest.date + "T00:00:00Z"), articles, { redo: true, exclude: [newest.title] })) {
+        changed = true;
+        repicked = true;
+      }
+    } else {
+      console.log("Newest pick has a known reason (or no why yet); keeping it.");
+    }
+  }
+
   // Skip the daily fetch in pure --rebuild-top10 mode if no other flags given
-  const skipDaily = process.argv.includes("--no-daily") || datesArg.length > 0;
+  const skipDaily = process.argv.includes("--no-daily") || datesArg.length > 0 || !!redoDate || process.argv.includes("--repick-if-no-why");
 
   if (!skipDaily) {
     for (let i = backfillDays; i >= 1; i--) {
@@ -1875,6 +1941,8 @@ async function main() {
   if (pinObscureEntry(articles)) changed = true;
   if (changed) saveArticles(articles);
 
+  applySocialImages();
+
   console.log("Building HTML...");
   fs.writeFileSync(OUTPUT_FILE, await buildHtml(articles));
   fs.writeFileSync(ARCHIVE_FILE, buildArchivePage(articles));
@@ -1883,6 +1951,7 @@ async function main() {
   fs.writeFileSync(FEATURED_PAGE_FILE, buildFeaturedPage());
 
   await ensureObscureSummaries(articles);
+  applySocialImages(); // summaries may have reset a thumbnail
 
   const dayCount = buildDayPages(articles);
   console.log(`Wrote/updated ${dayCount} per-day pages.`);
@@ -1895,6 +1964,7 @@ async function main() {
   console.log("Wrote sitemap.xml and llms-full.txt.");
 
   console.log(`Done! ${articles.length} total articles.`);
+  if (process.argv.includes("--repick-if-no-why") && !repicked) process.exitCode = 3;
 }
 
 if (require.main === module) {
