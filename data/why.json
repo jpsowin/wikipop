@@ -1291,5 +1291,15 @@
     "generatedAt": "2026-11-08T22:34:01.720Z",
     "hook": "will replace Susie Wiles as White House chief of staff.",
     "hard": false
+  },
+  "2026-11-08": {
+    "date": "2026-11-08",
+    "title": ".xyz",
+    "show": false,
+    "confidence": 5,
+    "bullets": [],
+    "sources": [],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-09T17:45:56.271Z"
   }
 }

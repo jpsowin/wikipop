@@ -12,12 +12,20 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Mon, 09 Nov 2026 01:09:10 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 17:45:56 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>.xyz</title>
+      <link>https://en.wikipedia.org/wiki/.xyz</link>
+      <description>.xyz is a top-level domain name introduced through ICANN&apos;s new generic top-level domain (gTLD) Program. Its name consists of the last three letters of the Latin-script alphabet. XYZ.com and CentralNic are the registries for the domain, which was created by entrepreneur Daniel Negari. It became available to the general public on June 2, 2014, thereafter becoming widely used by tech startups, creators, and Web3 projects.</description>
+      <pubDate>Sun, 08 Nov 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/.xyz#2026-11-08</guid>
+      <category>Internet top-level domain</category>
+    </item>
     <item>
       <title>Stephen Miller</title>
       <link>https://en.wikipedia.org/wiki/Stephen_Miller</link>
-      <description>Stephen N. Miller is an American political advisor who has served as the White House deputy chief of staff for policy and the homeland security advisor since 2025. He previously served as senior advisor to the president and director of speechwriting from 2017 to 2021 during the first Trump administration. Considered one of the most influential figures of the Trump administrations and Trumpism movement, Miller&apos;s politics have been described as ultraconservative, anti-immigrant, ultranationalist, and white nationalist.</description>
+      <description>Stephen N. Miller is an American political advisor who has served as the White House chief of staff since 2026. Miller has additionally served as the homeland security advisor since 2025. He previously served as the White House deputy chief of staff for policy from 2025 to 2026, and as the senior advisor to the president and the White House director of speechwriting from 2017 to 2021. Considered one of the most influential figures of the Trump administrations and Trumpism movement, Miller&apos;s politics have been described as far-right, ultraconservative, anti-immigrant, ultranationalist, and white nationalist.</description>
       <pubDate>Sat, 07 Nov 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Stephen_Miller#2026-11-07</guid>
       <category>American political advisor (born 1985)</category>
@@ -248,14 +256,6 @@ This is a list of equations, indicating each Wikipedia page under appropriate ba
       <pubDate>Sat, 10 Oct 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Mathematics#2026-10-10</guid>
       <category>Field of knowledge</category>
-    </item>
-    <item>
-      <title>Nidal Hasan</title>
-      <link>https://en.wikipedia.org/wiki/Nidal_Hasan</link>
-      <description>Nidal Malik Hasan is a former United States Army major and former physician who perpetrated the 2009 Fort Hood shooting, killing 13 people and injuring 32 others, on November 5, 2009. Hasan, an Army Medical Corps psychiatrist, admitted to the shootings at his court-martial in August 2013.</description>
-      <pubDate>Fri, 09 Oct 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Nidal_Hasan#2026-10-09</guid>
-      <category>U.S. Army officer and mass murderer (born 1970)</category>
     </item>
   </channel>
 </rss>

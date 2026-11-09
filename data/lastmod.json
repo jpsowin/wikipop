@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "c77ed85d757d3268",
-  "lastmod": "2026-11-08"
+  "hash": "ba78ea6718a8661b",
+  "lastmod": "2026-11-09"
  },
  "archive.html": {
-  "hash": "b1777036a221c4bf",
-  "lastmod": "2026-11-08"
+  "hash": "7b88ff34b90bb8e5",
+  "lastmod": "2026-11-09"
  },
  "explore.html": {
-  "hash": "42713d113491538c",
-  "lastmod": "2026-11-07"
+  "hash": "48419e9006a188a8",
+  "lastmod": "2026-11-09"
  },
  "changelog.html": {
   "hash": "b87eee8bca5b3058",
@@ -112,8 +112,8 @@
   "lastmod": "2026-11-04"
  },
  "month/2026-11/": {
-  "hash": "d3b7157759596d7b",
-  "lastmod": "2026-11-08"
+  "hash": "7d493315bb4cf79a",
+  "lastmod": "2026-11-09"
  },
  "day/2025-01-02-squid-game-season-2/": {
   "hash": "d2821cd8f5fd906a",
@@ -2800,7 +2800,11 @@
   "lastmod": "2026-11-08"
  },
  "day/2026-11-07-stephen-miller/": {
-  "hash": "067cad6d8954baeb",
-  "lastmod": "2026-11-08"
+  "hash": "2f0e03ad447fa892",
+  "lastmod": "2026-11-09"
+ },
+ "day/2026-11-08-xyz/": {
+  "hash": "7b5e57edf85ff729",
+  "lastmod": "2026-11-09"
  }
 }
