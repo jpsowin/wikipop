@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Tue, 10 Nov 2026 02:21:39 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 15:45:27 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Jensen Huang</title>
+      <link>https://en.wikipedia.org/wiki/Jensen_Huang</link>
+      <description>Jen-Hsun &quot;Jensen&quot; Huang is a Taiwanese and American electrical engineer and business executive who is the co-founder, president, and CEO of Nvidia, one of the world&apos;s most valuable companies. As of October 2026, Forbes estimates his net worth at over US$200 billion, making him the seventh-wealthiest individual in the world.</description>
+      <pubDate>Mon, 09 Nov 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Jensen_Huang#2026-11-09</guid>
+      <category>Taiwanese and American businessman (born 1963)</category>
+    </item>
     <item>
       <title>Godzilla Minus Zero</title>
       <link>https://en.wikipedia.org/wiki/Godzilla_Minus_Zero</link>
@@ -248,14 +256,6 @@ This is a list of equations, indicating each Wikipedia page under appropriate ba
       <pubDate>Sun, 11 Oct 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Money_in_the_Bank_(2026)#2026-10-11</guid>
       <category>WWE premium live event</category>
-    </item>
-    <item>
-      <title>Mathematics</title>
-      <link>https://en.wikipedia.org/wiki/Mathematics</link>
-      <description>Mathematics is a field of knowledge concerned with abstract concepts such as numbers, geometric shapes, sets, functions, and probabilities. It uses logical reasoning and proof to study and establish their properties, often expressed as theorems, formulas, and equations. Mathematics is widely used to model and solve problems in science, engineering, technology, economics, and everyday life.</description>
-      <pubDate>Sat, 10 Oct 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Mathematics#2026-10-10</guid>
-      <category>Field of knowledge</category>
     </item>
   </channel>
 </rss>

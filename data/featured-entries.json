@@ -1629,9 +1629,11 @@
   {
     "title": "List of people who have lived in airports",
     "url": "https://en.wikipedia.org/wiki/List_of_people_who_have_lived_in_airports",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/f/ff/MKNasseri.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Iyad_El-Baghdadi_-_re-publica_2017.jpg/500px-Iyad_El-Baghdadi_-_re-publica_2017.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "imageChecked": true,
-    "socialImage": "File:MKNasseri.jpg"
+    "socialImage": "File:MKNasseri.jpg",
+    "extract": "This is a list of people notable for living for periods of more than a week in airports. The reasons are usually protesting, asylum seeking or having difficulty with visas and passports.",
+    "description": "List of people who have lived in an airport for more than one week"
   },
   {
     "title": "Romeo and Juliet (swans)",

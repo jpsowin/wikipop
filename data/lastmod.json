@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "778e5bdebf34ca59",
-  "lastmod": "2026-11-09"
+  "hash": "3d36b684eb2db444",
+  "lastmod": "2026-11-10"
  },
  "archive.html": {
-  "hash": "75e8812c0d6f962b",
-  "lastmod": "2026-11-09"
+  "hash": "e5c1c245e9351b2a",
+  "lastmod": "2026-11-10"
  },
  "explore.html": {
-  "hash": "48419e9006a188a8",
-  "lastmod": "2026-11-09"
+  "hash": "a199e3fbbf46818a",
+  "lastmod": "2026-11-10"
  },
  "changelog.html": {
   "hash": "323aa7d09edc82ad",
@@ -112,8 +112,8 @@
   "lastmod": "2026-11-04"
  },
  "month/2026-11/": {
-  "hash": "7d493315bb4cf79a",
-  "lastmod": "2026-11-09"
+  "hash": "d0704a215a108303",
+  "lastmod": "2026-11-10"
  },
  "day/2025-01-02-squid-game-season-2/": {
   "hash": "d2821cd8f5fd906a",
@@ -2804,7 +2804,11 @@
   "lastmod": "2026-11-09"
  },
  "day/2026-11-08-godzilla-minus-zero/": {
-  "hash": "ac5ea8d4c7124e36",
-  "lastmod": "2026-11-09"
+  "hash": "883e89822b65a314",
+  "lastmod": "2026-11-10"
+ },
+ "day/2026-11-09-jensen-huang/": {
+  "hash": "6feeb1dde7297edf",
+  "lastmod": "2026-11-10"
  }
 }

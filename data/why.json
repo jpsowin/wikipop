@@ -1311,5 +1311,27 @@
     "generatedAt": "2026-11-09T18:30:27.128Z",
     "notes": "Replaced .xyz (no known reason it was trending) with the owner's pick on 2026-11-09. US/UK release Nov 6 2026, so Nov 8 was opening-weekend Sunday; Japan release Nov 3. About $31M US estimate (TheWrap, Saturday estimate).",
     "imgPos": "50% 0%"
+  },
+  "2026-11-09": {
+    "date": "2026-11-09",
+    "title": "Jensen_Huang",
+    "show": true,
+    "confidence": 95,
+    "bullets": [
+      "[Nvidia](https://en.wikipedia.org/wiki/Nvidia) CEO Jensen Huang [admitted to staff](https://www.axios.com/2026/11/08/nvidia-ceo-jensen-huang-admits-affair-board-to-launch-investigation) he had an affair with a suspected Chinese spy, and the board is investigating.",
+      "The woman, Alice Huang (no relation), [reportedly was recruited](https://www.axios.com/2026/11/09/alice-huang-nvidia-jensen-megaspeed) by China's [Ministry of State Security](https://en.wikipedia.org/wiki/Ministry_of_State_Security_(China)) to influence his views on selling AI chips there.",
+      "[Donald Trump](https://en.wikipedia.org/wiki/Donald_Trump) said the [FBI](https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation) is [looking into it](https://www.pbs.org/newshour/politics/watch-trump-says-fbi-is-looking-into-nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-agent), and called Huang a \"[fine person](https://www.bloomberg.com/news/articles/2026-11-08/trump-defends-nvidia-s-huang-after-he-admits-affair-with-spy)\" who should stay on as CEO.",
+      "Nvidia shares [closed more than 4% lower](https://www.cnbc.com/2026/11/09/nvidia-jensen-huang-chinese-spy-investigation.html) on Monday, even as the rest of the chip sector rallied."
+    ],
+    "hook": "admitted an affair with a suspected Chinese spy.",
+    "sources": [
+      "https://www.axios.com/2026/11/08/nvidia-ceo-jensen-huang-admits-affair-board-to-launch-investigation",
+      "https://www.axios.com/2026/11/09/alice-huang-nvidia-jensen-megaspeed",
+      "https://www.pbs.org/newshour/politics/watch-trump-says-fbi-is-looking-into-nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-agent",
+      "https://www.bloomberg.com/news/articles/2026-11-08/trump-defends-nvidia-s-huang-after-he-admits-affair-with-spy",
+      "https://www.cnbc.com/2026/11/09/nvidia-jensen-huang-chinese-spy-investigation.html"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-10T15:45:26.625Z"
   }
 }
