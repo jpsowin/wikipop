@@ -1333,7 +1333,7 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-10T15:45:26.625Z",
-    "hard": false
+    "approved": true
   },
   "2026-11-10": {
     "date": "2026-11-10",
@@ -1351,6 +1351,7 @@
       "https://www.cnn.com/2026/11/10/entertainment/david-walliams-celebrity-injunction-sexual-misconduct-intl"
     ],
     "model": "claude-sonnet-5-5",
-    "generatedAt": "2026-11-11T15:33:10.667Z"
+    "generatedAt": "2026-11-11T15:33:10.667Z",
+    "approved": true
   }
 }

@@ -50,4 +50,4 @@ Scripts and people both read this file, so each rule is one short line.
 - Trending: "About N people looked it up on Wikipedia." Not "in a single day."
 - End with the image credit: "Image: Author, License, via Wikimedia Commons."
 - Tag an account only when certain (Wikidata's Instagram ID, or a link from the person's official site).
-- Flag dark, political, or sexual picks for review before they post.
+- Flag dark, political, or sexual picks. Until there's a review process, flagged picks still post on schedule; the flag is a note.

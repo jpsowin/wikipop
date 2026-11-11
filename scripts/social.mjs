@@ -21,7 +21,9 @@
 //            bullet or its first clause if short enough, else Wikipedia's short description.
 //   caption  one or two sentences, starting "Title: ...". Default: "<Title>: <first bullet>".
 //   imgPos   CSS object-position for the cover photo. Default "50% 20%" ("50% 100%" for posters).
-//   hard     true: always a Publer draft for review; false: never auto-flag. Default: keyword check.
+//   hard     true: hold as a Publer draft. Flags (keywords, cut text) are only logged for now;
+//            nothing is held automatically until there is a real review process.
+//   approved true once the owner has reviewed it: schedules it even if a check would hold it.
 //
 // data/obscure-slides.json, keyed by entry title:
 //   { slide1: {text}, slide2?: {heading, paras[]}, slide3?: {heading, paras[]},  (slide 1 + at least one more)
@@ -343,6 +345,8 @@ async function buildTrending(article, why, dir, tmp) {
     const hit = [article.extract, article.description, title, ...bullets.map(plain)].join(' ').match(FLAG_RE);
     if (hit) reasons.push(`sensitive topic ("${hit[0]}")`);
   }
+  // The owner looked at it and said post it: no automatic holds.
+  if (why && why.approved === true) reasons.length = 0;
   return { kind: 'trending', title, caption, hook, bullets: bullets.map(plain), slides, reasons, hasWhy: !!w };
 }
 
@@ -532,7 +536,10 @@ async function main() {
 
   // 1) Trending.
   const trending = await buildTrending(article, why[article.date], dir, tmp);
-  trending.state = trending.reasons.length ? 'draft' : 'scheduled';
+  // No review process yet, so flagged posts still go out; the reasons are only
+  // logged. A day marked `hard: true` in why.json is the one way to hold it.
+  const HOLD_FOR_REVIEW = false;
+  trending.state = (HOLD_FOR_REVIEW && trending.reasons.length) || (why[article.date] && why[article.date].hard === true) ? 'draft' : 'scheduled';
   trending.scheduledAt = isoPacific(t1);
   posts.push(trending);
 
@@ -550,7 +557,7 @@ async function main() {
     // WikiPop goes first, always: if the WikiPop post is held for review, the
     // obscure post waits as a draft too, so it can't go out on its own.
     if (trending.state === 'draft') obscure.reasons.push('waiting for the WikiPop post, which is held for review');
-    obscure.state = obscure.reasons.length ? 'draft' : 'scheduled';
+    obscure.state = (HOLD_FOR_REVIEW && obscure.reasons.length) || cur.hard || trending.state === 'draft' ? 'draft' : 'scheduled';
     obscure.scheduledAt = isoPacific(t2);
     if (obscure.errors.length) fail(`Obscure "${oTitle}" won't post: ${obscure.errors.join('; ')}`);
     posts.push(obscure);
@@ -565,7 +572,7 @@ async function main() {
   fs.writeFileSync(path.join(dir, 'post.json'), JSON.stringify(summary, null, 2) + '\n');
   fs.rmSync(tmp, { recursive: true, force: true });
   for (const p of posts) {
-    console.log(`\n[${p.kind}] ${p.title} → ${p.state} at ${p.scheduledAt}${p.reasons.length ? ` (review: ${p.reasons.join('; ')})` : ''}`);
+    console.log(`\n[${p.kind}] ${p.title} → ${p.state} at ${p.scheduledAt}${p.reasons.length ? ` (flags: ${p.reasons.join('; ')})` : ''}`);
     p.slides.forEach(s => console.log(`  ${path.relative(ROOT, s.png)}  ${s.fit.issues.length ? 'ISSUES: ' + s.fit.issues.join(', ') : 'fits'}`));
     console.log('  caption: ' + p.caption.replace(/\n/g, '\n           '));
   }
