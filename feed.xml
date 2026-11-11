@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Wed, 11 Nov 2026 02:11:12 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 15:33:11 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>David Walliams</title>
+      <link>https://en.wikipedia.org/wiki/David_Walliams</link>
+      <description>David Edward Williams, known professionally as David Walliams, is an English actor, comedian, writer and television personality. He rose to prominence for his work with Matt Lucas on the BBC sketch comedy series Little Britain (2003–2006) and Come Fly with Me (2010–2011). From 2012 to 2022, Walliams was a judge on the television talent competition Britain&apos;s Got Talent, for which he received multiple National Television Awards.</description>
+      <pubDate>Tue, 10 Nov 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/David_Walliams#2026-11-10</guid>
+      <category>English comedian, writer and actor (born 1971)</category>
+    </item>
     <item>
       <title>Jensen Huang</title>
       <link>https://en.wikipedia.org/wiki/Jensen_Huang</link>
@@ -248,14 +256,6 @@ This is a list of equations, indicating each Wikipedia page under appropriate ba
       <pubDate>Mon, 12 Oct 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/RJ_Mitte#2026-10-12</guid>
       <category>American actor, film producer, and activist (1992–2026)</category>
-    </item>
-    <item>
-      <title>Money in the Bank (2026)</title>
-      <link>https://en.wikipedia.org/wiki/Money_in_the_Bank_(2026)</link>
-      <description>The 2026 Money in the Bank, also promoted as Money in the Bank: New Orleans, was a professional wrestling premium live event (PLE) produced by WWE. It was held for wrestlers from the promotion&apos;s main roster brands, Raw and SmackDown. It was the 17th annual Money in the Bank event and took place on Saturday, October 10, 2026, at the Smoothie King Center in New Orleans, Louisiana.</description>
-      <pubDate>Sun, 11 Oct 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Money_in_the_Bank_(2026)#2026-10-11</guid>
-      <category>WWE premium live event</category>
     </item>
   </channel>
 </rss>

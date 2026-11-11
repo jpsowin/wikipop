@@ -1638,9 +1638,11 @@
   {
     "title": "Romeo and Juliet (swans)",
     "url": "https://en.wikipedia.org/wiki/Romeo_and_Juliet_(swans)",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Boston_Public_Garden_Swan_Nesting_Area_%28cropped%29.jpg/960px-Boston_Public_Garden_Swan_Nesting_Area_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Boston_Public_Garden_Swan_Nesting_Area_%28cropped%29.jpg/330px-Boston_Public_Garden_Swan_Nesting_Area_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "imageChecked": true,
-    "socialImage": "File:Boston Public Garden Swan Nesting Area (cropped).jpg"
+    "socialImage": "File:Boston Public Garden Swan Nesting Area (cropped).jpg",
+    "extract": "Romeo and Juliet are a pair of female mute swans that previously resided in the pond of the Public Garden of Boston, Massachusetts, United States, during the spring and summer months. Despite being named after the Shakespearean romance, the two swans have been referred to as being lesbian by the news media, as they are notable for being a same-sex couple.",
+    "description": "Homosexual swan couple"
   },
   {
     "title": "Mermaid",

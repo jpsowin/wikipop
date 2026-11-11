@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "3d36b684eb2db444",
-  "lastmod": "2026-11-10"
+  "hash": "62092e2cb7283b80",
+  "lastmod": "2026-11-11"
  },
  "archive.html": {
-  "hash": "e5c1c245e9351b2a",
-  "lastmod": "2026-11-10"
+  "hash": "221ced500958112e",
+  "lastmod": "2026-11-11"
  },
  "explore.html": {
-  "hash": "a199e3fbbf46818a",
-  "lastmod": "2026-11-10"
+  "hash": "a421f25f065f7d95",
+  "lastmod": "2026-11-11"
  },
  "changelog.html": {
   "hash": "323aa7d09edc82ad",
@@ -112,8 +112,8 @@
   "lastmod": "2026-11-04"
  },
  "month/2026-11/": {
-  "hash": "d0704a215a108303",
-  "lastmod": "2026-11-10"
+  "hash": "99795a539087a007",
+  "lastmod": "2026-11-11"
  },
  "day/2025-01-02-squid-game-season-2/": {
   "hash": "d2821cd8f5fd906a",
@@ -2808,7 +2808,11 @@
   "lastmod": "2026-11-10"
  },
  "day/2026-11-09-jensen-huang/": {
-  "hash": "6feeb1dde7297edf",
-  "lastmod": "2026-11-10"
+  "hash": "9da801b460782e07",
+  "lastmod": "2026-11-11"
+ },
+ "day/2026-11-10-david-walliams/": {
+  "hash": "abf7786f0e2d6363",
+  "lastmod": "2026-11-11"
  }
 }

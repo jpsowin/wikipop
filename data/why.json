@@ -1333,5 +1333,23 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-10T15:45:26.625Z"
+  },
+  "2026-11-10": {
+    "date": "2026-11-10",
+    "title": "David_Walliams",
+    "show": true,
+    "confidence": 96,
+    "bullets": [
+      "A three-year [investigation](https://www.cnn.com/2026/11/10/entertainment/david-walliams-celebrity-injunction-sexual-misconduct-intl) by The Guardian and [ITV News](https://en.wikipedia.org/wiki/ITV_News) alleges David Walliams used his fame to pursue teenage girls and young women for sex.",
+      "Walliams denies it, saying he broke no law but is \"devastated\" that some women he met years ago now feel hurt or angry.",
+      "It came out a week after a High Court judge refused his bid to block it, and [HarperCollins](https://en.wikipedia.org/wiki/HarperCollins) had already pulled his books.",
+      "He's one of Britain's best-known children's authors, behind [Gangsta Granny](https://en.wikipedia.org/wiki/Gangsta_Granny) and Billionaire Boy, so the story travelled worldwide."
+    ],
+    "hook": "denies claims in a Guardian and ITV News investigation.",
+    "sources": [
+      "https://www.cnn.com/2026/11/10/entertainment/david-walliams-celebrity-injunction-sexual-misconduct-intl"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-11T15:33:10.667Z"
   }
 }
