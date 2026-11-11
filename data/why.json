@@ -1332,7 +1332,8 @@
       "https://www.cnbc.com/2026/11/09/nvidia-jensen-huang-chinese-spy-investigation.html"
     ],
     "model": "claude-sonnet-5-5",
-    "generatedAt": "2026-11-10T15:45:26.625Z"
+    "generatedAt": "2026-11-10T15:45:26.625Z",
+    "hard": false
   },
   "2026-11-10": {
     "date": "2026-11-10",

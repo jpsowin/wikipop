@@ -547,6 +547,9 @@ async function main() {
     warn(`No curated slides in data/obscure-slides.json for obscure pick "${oTitle}"; skipping the obscure post.`);
   } else {
     obscure = await buildObscure(oTitle, cur, dir, tmp);
+    // WikiPop goes first, always: if the WikiPop post is held for review, the
+    // obscure post waits as a draft too, so it can't go out on its own.
+    if (trending.state === 'draft') obscure.reasons.push('waiting for the WikiPop post, which is held for review');
     obscure.state = obscure.reasons.length ? 'draft' : 'scheduled';
     obscure.scheduledAt = isoPacific(t2);
     if (obscure.errors.length) fail(`Obscure "${oTitle}" won't post: ${obscure.errors.join('; ')}`);
