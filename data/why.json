@@ -1353,5 +1353,27 @@
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-11T15:33:10.667Z",
     "approved": true
+  },
+  "2026-11-11": {
+    "date": "2026-11-11",
+    "title": "Stacy_Keach",
+    "show": true,
+    "confidence": 97,
+    "bullets": [
+      "Stacy Keach, TV's scruffy private eye [Mike Hammer](https://en.wikipedia.org/wiki/Mike_Hammer_(character)) and [one of America's finest stage actors](https://www.cbsnews.com/news/stacy-keach-mike-hammer-stage-dies-85/), has [died at 85](https://www.cnn.com/2026/11/10/entertainment/stacy-keach-death).",
+      "His range ran from [cops and cowboys](https://www.npr.org/2026/11/11/728054385/stacy-keach-dead) to Hamlet and King Lear, and he earned a Tony nomination for [Indians](https://en.wikipedia.org/wiki/Indians_(play)).",
+      "Younger viewers knew him as [Cardinal Kevin Kearns](https://variety.com/2026/film/news/stacy-keach-dead-mike-hammer-fat-city-1236944687/) on [Blue Bloods](https://en.wikipedia.org/wiki/Blue_Bloods), and as a voice on The Simpsons.",
+      "[His wife called him](https://deadline.com/2026/11/stacy-keach-dead-mike-hammer-1237219619/) a legend \"admired and loved by audiences the world over\" and \"the heart of our family.\""
+    ],
+    "hook": "has died at 85, remembered as TV's private eye Mike Hammer.",
+    "sources": [
+      "https://www.cbsnews.com/news/stacy-keach-mike-hammer-stage-dies-85/",
+      "https://www.cnn.com/2026/11/10/entertainment/stacy-keach-death",
+      "https://www.npr.org/2026/11/11/728054385/stacy-keach-dead",
+      "https://variety.com/2026/film/news/stacy-keach-dead-mike-hammer-fat-city-1236944687/",
+      "https://deadline.com/2026/11/stacy-keach-dead-mike-hammer-1237219619/"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-12T04:05:21.701Z"
   }
 }

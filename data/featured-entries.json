@@ -1646,7 +1646,11 @@
   },
   {
     "title": "Mermaid",
-    "url": "https://en.wikipedia.org/wiki/Mermaid"
+    "url": "https://en.wikipedia.org/wiki/Mermaid",
+    "extract": "In folklore, a mermaid is an aquatic creature with the head and upper body of a female human and the tail of a fish. Mermaids appear in the folklore of many cultures worldwide, including Europe, Latin America, Asia, and Africa.",
+    "description": "Legendary aquatic creature with an upper body in human female form",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/John_William_Waterhouse_A_Mermaid.jpg/330px-John_William_Waterhouse_A_Mermaid.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "imageChecked": true
   },
   {
     "title": "Mountain, West Virginia",
