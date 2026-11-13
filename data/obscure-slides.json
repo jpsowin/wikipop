@@ -294,5 +294,298 @@
     "imgPos": "50% 15%",
     "imgZoom": 1,
     "hard": false
+  },
+  "Why did the chicken cross the road?": {
+    "slide1": {
+      "text": "\"Why did the chicken cross the road?\" is a riddle joke with the answer being \"To get to the other side.\" It is an example of [[anti-humor]], in that the setup of the joke leads the listener to expect a punchline, but they are instead given a simple statement of fact."
+    },
+    "slide2": {
+      "heading": "History",
+      "paras": [
+        "According to music critic Gary Giddins, the joke was spread through the United States by minstrel shows beginning in the 1840s as [[one of the first national jokes]].",
+        "In the 1890s, a pun variant appeared: \"Why should not a chicken cross the road? [[It would be a fowl proceeding.]]\""
+      ]
+    },
+    "slide3": {
+      "heading": "Variations",
+      "paras": [
+        "One class of variations enlists a creature other than the chicken to cross the road. For example, a dinosaur crosses [[\"because chickens didn't exist yet\"]].",
+        "\"Why did Darth Vader cross the road? To get to the Dark Side.\"",
+        "\"Why did the chicken cross the Möbius strip? [[To get to the same side.]]\""
+      ]
+    },
+    "extraSlides": [],
+    "caption": "Why did the chicken cross the road?: the classic anti-joke was already in print in 1847, and minstrel shows spread it across America as one of the first national jokes.",
+    "image": {
+      "file": "File:Fear of crossing streets 1 by Greg Nussbaum for the Wikimedia Foundation.png",
+      "artist": "Greg Nussbaum for the Wikimedia Foundation",
+      "license": "CC BY-SA 4.0"
+    },
+    "imgPos": "45% 55%",
+    "imgZoom": 1,
+    "hard": false
+  },
+  "List of helicopter prison escapes": {
+    "slide1": {
+      "text": "There have been multiple prison escapes where an inmate [[escapes by means of a helicopter]]. France has had more recorded helicopter prison escape attempts than any other country, with at least 11."
+    },
+    "extraSlides": [
+      {
+        "heading": "Michel Vaujour",
+        "paras": [
+          "He made his way to the roof by threatening guards with a fake pistol and [[nectarines painted as grenades]].",
+          "On top of the jail he was picked up by his wife Nadine, who had taken helicopter pilot lessons especially for the escape."
+        ],
+        "image": {
+          "file": "File:La-Sante-Prison-MCB.jpg",
+          "artist": "Michael C. Berch",
+          "license": "CC BY-SA 3.0"
+        },
+        "imgPos": "50% 60%"
+      },
+      {
+        "heading": "Pascal Payet",
+        "paras": [
+          "The [[record for most helicopter escapes]] goes to convicted murderer Pascal Payet.",
+          "Payet gained notoriety for using a helicopter in 2001 to escape from Luynes prison and then [[while still on the run]] in 2003 organized another escape for fellow inmates from the same prison."
+        ],
+        "image": {
+          "file": "File:Pascal payet.jpg",
+          "artist": "Terry Nguyen",
+          "license": "CC BY-SA 4.0"
+        },
+        "imgPos": "50% 25%"
+      },
+      {
+        "heading": "Mountjoy Jail, Dublin",
+        "paras": [
+          "An IRA member hijacked a helicopter and forced the pilot to land in the exercise yard.",
+          "Another prisoner was quoted as saying, \"One shamefaced screw said he thought it was the new Minister for Defence arriving. I told him it was [[our Minister of Defence leaving]].\""
+        ],
+        "image": {
+          "file": "File:Mountjoy Prison.jpg",
+          "artist": "HNS",
+          "license": "CC BY-SA 2.0"
+        },
+        "imgPos": "50% 50%"
+      },
+      {
+        "heading": "Vassilis Palaiokostas",
+        "paras": [
+          "Another multiple helicopter escapee is Vassilis Palaiokostas, who escaped for the second time from the same prison.",
+          "Their new prison break took place while [[their trial for the 2006 helicopter-assisted escape]] was ongoing. Paleokostas remains at large."
+        ],
+        "image": {
+          "file": "File:Korydallos Prison.jpg",
+          "artist": "tsiros",
+          "license": "CC BY 2.0"
+        },
+        "imgPos": "55% 45%"
+      },
+      {
+        "heading": "Ben Kramer",
+        "paras": [
+          "Kramer, a famous Apache Boat owner and racer tried to escape by helicopter from the prison. The escape failed when the rookie pilot hovered 12 inches off the ground in a very tight space.",
+          "One of the skids caught on the razor wire, causing the helicopter to [[catapult over the fence and crash into the prison grounds]]."
+        ],
+        "image": null
+      },
+      {
+        "heading": "Lucy Dudko and John Killick",
+        "paras": [
+          "Librarian Lucy Dudko hired a helicopter under the pretence of [[checking out the upcoming Olympic site]] in Sydney. Waiting was Killick, who was serving 28 years for armed robbery.",
+          "Killick was released, but is not allowed to have contact with Dudko [[until he turns 80 years old]]."
+        ],
+        "image": {
+          "file": "File:Silverwater Correctional Complex.jpg",
+          "artist": "Saberwyn",
+          "license": "CC BY-SA 3.0"
+        },
+        "imgPos": "70% 45%"
+      }
+    ],
+    "caption": "List of helicopter prison escapes: France leads the world in helicopter jailbreaks. In one, a man threatened guards with nectarines painted as grenades, then got plucked off the prison roof by his wife, who had taken flying lessons just for the escape.",
+    "image": {
+      "file": "File:Pilatus Agusta A109 Flug.jpg",
+      "artist": "Ikiwaner",
+      "license": "CC BY-SA 3.0"
+    },
+    "imgPos": "50% 50%",
+    "imgZoom": 1,
+    "hard": false
+  },
+  "The Beginning Was the End": {
+    "slide1": {
+      "text": "The Beginning Was the End is a 1971 pseudo-scientific book which claims [[humankind evolved from cannibalistic apes]]. The book's legacy comes largely from the new wave band [[Devo]]."
+    },
+    "slide2": {
+      "heading": "Synopsis",
+      "paras": [
+        "The Beginning Was the End claimed that modern humans devolved from a species of brain-eating apes. Maerth offered no evidence for his theories, basing them largely on his alleged meetings with cannibals and his experiences [[eating raw ape brains in a restaurant]] in Southeast Asia.",
+        "He hints at having activated his latent psychic abilities through [[altering the shape of his skull]]."
+      ]
+    },
+    "slide3": {
+      "heading": "Popular culture",
+      "paras": [
+        "Devo incorporated several elements of the book into their concept of \"de-evolution\" and even adopted the book's title for their short film.",
+        "Gerald V. Casale said of the book, [[\"It's a better story than the Bible as far as DEVO's concerned.\"]]"
+      ]
+    },
+    "extraSlides": [],
+    "caption": "The Beginning Was the End: a 1971 book claimed humans evolved from brain-eating apes, based largely on the author eating raw ape brains in a restaurant. The band Devo built their whole \"de-evolution\" idea around it.",
+    "image": {
+      "file": "File:Devo 2008.05.31 002.jpg",
+      "artist": "livepict.com",
+      "license": "CC BY-SA 3.0"
+    },
+    "imgPos": "50% 30%",
+    "imgZoom": 1,
+    "hard": false
+  },
+  "I Love You, Colonel Sanders!": {
+    "slide1": {
+      "text": "I Love You, Colonel Sanders! is a dating sim commissioned by the restaurant chain KFC. The primary objective of the player is to develop a romantic relationship with [[KFC's founder Colonel Sanders]], portrayed as [[an attractive classmate at a cooking school]]."
+    },
+    "slide2": {
+      "heading": "Gameplay",
+      "paras": [
+        "The game takes place over a three-day semester at the fictional [[University of Cooking School: Academy for Learning]], where the player character is studying to become a chef.",
+        "The player is presented with dialog choices that present opportunities to [[win Sanders' favor]], as well as interactions with rivals Aeshleigh and [[Van Van the Man Man]]."
+      ]
+    },
+    "slide3": {
+      "heading": "Reception",
+      "paras": [
+        "In her review for Kotaku, Gita Jackson criticized the game's over-reliance on \"zaniness\".",
+        "Nicole Carpenter of Polygon criticized it as [[\"less of a game and more of a marketing stunt\"]].",
+        "Metacritic gave the game an aggregate score of 50/100."
+      ]
+    },
+    "extraSlides": [],
+    "caption": "I Love You, Colonel Sanders!: KFC really made a free dating game where you try to win over a dreamy classmate version of Colonel Sanders at cooking school.",
+    "image": {
+      "file": "File:I Love You, Colonel Sanders! logo.png",
+      "artist": "Psyop / KFC",
+      "license": "Fair use"
+    },
+    "imgPos": "100% 35%",
+    "imgZoom": 1,
+    "hard": false
+  },
+  "Dancing baby": {
+    "slide1": {
+      "text": "The \"Dancing Baby\", also called \"the Oogachacka Baby\", is an Internet meme of a 3D-rendered animation of [[a baby performing a cha-cha type dance]]. It quickly became one of the first viral videos in 1996."
+    },
+    "slide2": {
+      "heading": "Origin",
+      "paras": [
+        "The 3-D model of the baby was based on [[a scan of a plastic doll]].",
+        "Unreal Pictures co-founder Michael Girard had discarded the Dancing Baby, opining it was [[\"disturbing\" for its realistic nature]]."
+      ]
+    },
+    "slide3": {
+      "heading": "Spread",
+      "paras": [
+        "A popular variation contained the song [[\"Hooked on a Feeling\"]] by Blue Swede, hence the name \"Oogachacka Baby\".",
+        "Woodell's animated GIF later proceeded to show up in mainstream media, including television dramas such as [[Ally McBeal]]."
+      ]
+    },
+    "extraSlides": [],
+    "caption": "Dancing baby: a 3D baby doing the cha-cha became one of the internet's first viral videos in 1996. Its 3D model came from a scan of a plastic doll, and one of its creators had thrown it out for being \"disturbing.\"",
+    "image": {
+      "file": "File:DancingBaby.jpg",
+      "artist": "Unknown author",
+      "license": "Fair use"
+    },
+    "imgPos": "50% 35%",
+    "imgZoom": 1,
+    "hard": false
+  },
+  "Raël": {
+    "slide1": {
+      "text": "Raël is a French journalist and religious leader who founded and leads the Raëlian Movement, an international [[UFO religion]]. Before becoming a religious leader, Raël, then known as Claude Vorilhon, worked as a sports car journalist and test driver."
+    },
+    "slide2": {
+      "heading": "The Raëlian messages",
+      "paras": [
+        "On December 3, 1973 in a secluded area within a French volcanic crater, Vorilhon claimed to see \"something like a bell\" made of shiny metal coming out from the sky. According to Vorilhon, the face of the extraterrestrial was [[\"full of love.\"]]",
+        "He claimed that he was contacted by one of the Elohim, who took him to another planet to [[meet Buddha, Moses, Jesus and Muhammad]]."
+      ]
+    },
+    "slide3": {
+      "heading": "Promoted technologies",
+      "paras": [
+        "Raël believes that humans are slowly transitioning into a society wherein they will not need to work or have jobs. This is because humans [[\"are not made to work\"]].",
+        "He said that he was presented [[genetically modified flowers, that swayed and changed colors with music]], while on another planet."
+      ]
+    },
+    "extraSlides": [],
+    "caption": "Raël: a former French race-car journalist who says aliens took him to another planet to meet Buddha, Moses, Jesus and Muhammad, and who then founded a UFO religion.",
+    "image": {
+      "file": "File:Claude Vorilhon (Raël) (Santa Maria Times, 1978).jpg",
+      "artist": "Ed Beitiks, Santa Maria Times",
+      "license": "Public domain"
+    },
+    "imgPos": "50% 0%",
+    "imgZoom": 1.05,
+    "hard": false
+  },
+  "Minions, Cornwall": {
+    "slide1": {
+      "text": "Minions is a village in Cornwall, England. Minions is first recorded in 1613 and its meaning is unknown. The village has embraced the coincidence that its name is now shared with [[the Despicable Me characters]]."
+    },
+    "slide2": {
+      "heading": "Popular culture",
+      "paras": [
+        "In May 2015, a custom welcome sign for the village of Minions featured images of Minions. The sign caused traffic and safety issues from vehicles stopping to take photos.",
+        "After several months it was replaced with an ordinary, [[Minions-free sign]], but an anonymous person then decorated the plain \"Welcome to Minions\" sign with [[two stickers of Minions]]."
+      ]
+    },
+    "slide3": {
+      "heading": "Tony & The Bull",
+      "paras": [
+        "A previous resident of Minions and his rather unusual bovine friend were featured in an award-winning short film \"Tony & The Bull\".",
+        "Scrunch, a Highland bull, was found as a calf on the moor, and [[Tony house-trained him]] and lived in a former run-down pub close to Minions. Both have since died and were [[cremated and buried together]]."
+      ]
+    },
+    "extraSlides": [],
+    "caption": "Minions, Cornwall: a real English village that shares its name with the Despicable Me characters. When it put Minions on its welcome sign, so many drivers stopped for photos that it caused traffic problems.",
+    "image": {
+      "file": "File:Panneau minions cornouailles.jpg",
+      "artist": "Skull Kid",
+      "license": "CC BY-SA 4.0"
+    },
+    "imgPos": "50% 38%",
+    "imgZoom": 1,
+    "hard": false
+  },
+  "Wise Men of Gotham": {
+    "slide1": {
+      "text": "Wise Men of Gotham is the name given to the people of Gotham, Nottinghamshire, in allusion to an incident where they supposedly [[feigned idiocy to avoid a Royal visit]]. The most notable use of the name Gotham was by Bill Finger in naming the home of [[Batman]]."
+    },
+    "slide2": {
+      "heading": "Legend",
+      "paras": [
+        "King John's messengers found some of the inhabitants engaged in endeavouring to [[drown an eel in a pool of water]]; others were tumbling their cheeses down a hill, [[that they might find their way to Nottingham]] for sale; and some were employed in hedging in a cuckoo."
+      ]
+    },
+    "slide3": {
+      "heading": "Legacy",
+      "paras": [
+        "Reminded of the foolish ingenuity of Gotham's residents, Washington Irving gave the name \"Gotham\" to [[New York City]].",
+        "In a story titled \"Cityscape\" in Batman Chronicles, Robin reads a journal that tells of how Gotham got its name: \"We could call it 'Gotham' after a village in England – where, according to common belief, [[all are bereft of their wits]].\""
+      ]
+    },
+    "extraSlides": [],
+    "caption": "Wise Men of Gotham: the villagers of Gotham, England, supposedly acted like fools to keep King John away, trying to drown an eel and rolling cheeses to market. Their village later lent its name to New York City and to Batman's Gotham City.",
+    "image": {
+      "file": "File:Wise Men of Gotham 2 - WW Denslow - Project Gutenberg etext 18546.jpg",
+      "artist": "W. W. Denslow",
+      "license": "Public domain"
+    },
+    "imgPos": "50% 45%",
+    "imgZoom": 1,
+    "hard": false
   }
 }
