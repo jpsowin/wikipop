@@ -1375,5 +1375,21 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-12T04:05:21.701Z"
+  },
+  "2026-11-12": {
+    "date": "2026-11-12",
+    "title": "Colette_Kress",
+    "show": true,
+    "confidence": 88,
+    "bullets": [
+      "[Nvidia](https://en.wikipedia.org/wiki/Nvidia) said co-founder [Jensen Huang](https://en.wikipedia.org/wiki/Jensen_Huang) resigned as CEO, and finance chief Colette Kress is stepping in as interim boss.",
+      "Huang's exit followed the [Jensen Huang spying scandal](https://en.wikipedia.org/wiki/Jensen_Huang_spying_scandal), which centered on controversy over his personal life.",
+      "Kress is keeping her CFO job while running the company, so she's covering both roles at once.",
+      "Nvidia spent two years finding her as CFO in 2013; now it's at the center of the [AI boom](https://en.wikipedia.org/wiki/AI_boom)."
+    ],
+    "hook": "became Nvidia's interim CEO after Jensen Huang resigned.",
+    "sources": [],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-13T03:35:10.766Z"
   }
 }

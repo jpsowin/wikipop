@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "fb130816a694458e",
-  "lastmod": "2026-11-12"
+  "hash": "f6f596d3d0c287db",
+  "lastmod": "2026-11-13"
  },
  "archive.html": {
-  "hash": "316e11b7b3d8a532",
-  "lastmod": "2026-11-12"
+  "hash": "0b0dc5ed7acb6d7f",
+  "lastmod": "2026-11-13"
  },
  "explore.html": {
-  "hash": "0a1fba83a6722bca",
-  "lastmod": "2026-11-12"
+  "hash": "bc16e541dd2bf0aa",
+  "lastmod": "2026-11-13"
  },
  "changelog.html": {
   "hash": "323aa7d09edc82ad",
@@ -112,8 +112,8 @@
   "lastmod": "2026-11-04"
  },
  "month/2026-11/": {
-  "hash": "1f4efeb659c6ff06",
-  "lastmod": "2026-11-12"
+  "hash": "b85a191f7dbb56d9",
+  "lastmod": "2026-11-13"
  },
  "day/2025-01-02-squid-game-season-2/": {
   "hash": "d2821cd8f5fd906a",
@@ -2816,7 +2816,11 @@
   "lastmod": "2026-11-12"
  },
  "day/2026-11-11-stacy-keach/": {
-  "hash": "40c0007dcd434409",
-  "lastmod": "2026-11-12"
+  "hash": "ddd0a21ba5e7f979",
+  "lastmod": "2026-11-13"
+ },
+ "day/2026-11-12-colette-kress/": {
+  "hash": "d9d71441d4941cf7",
+  "lastmod": "2026-11-13"
  }
 }

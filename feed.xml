@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Thu, 12 Nov 2026 04:05:22 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 03:35:11 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Colette Kress</title>
+      <link>https://en.wikipedia.org/wiki/Colette_Kress</link>
+      <description>Colette Marie Kress is an American business executive. She has been the interim chief executive officer (CEO) of Nvidia since November 12, 2026. Kress became CEO following the resignation of former CEO and Nvidia co-founder Jensen Huang.</description>
+      <pubDate>Thu, 12 Nov 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Colette_Kress#2026-11-12</guid>
+      <category>American business executive (born 1967)</category>
+    </item>
     <item>
       <title>Stacy Keach</title>
       <link>https://en.wikipedia.org/wiki/Stacy_Keach</link>
@@ -248,14 +256,6 @@ This is a list of equations, indicating each Wikipedia page under appropriate ba
       <pubDate>Wed, 14 Oct 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/List_of_equations#2026-10-14</guid>
       
-    </item>
-    <item>
-      <title>Katie Zacharia</title>
-      <link>https://en.wikipedia.org/wiki/Katie_Zacharia</link>
-      <description>Kate Sharon Zacharia is an American political commentator who has served as the White House press secretary since October 2026.</description>
-      <pubDate>Tue, 13 Oct 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Katie_Zacharia#2026-10-13</guid>
-      <category>American political spokesperson</category>
     </item>
   </channel>
 </rss>

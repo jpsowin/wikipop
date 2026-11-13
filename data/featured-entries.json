@@ -1655,9 +1655,11 @@
   {
     "title": "Mountain, West Virginia",
     "url": "https://en.wikipedia.org/wiki/Mountain%2C_West_Virginia",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Molshopen_in_weiland.jpg/960px-Molshopen_in_weiland.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/USA_West_Virginia_location_map.svg/500px-USA_West_Virginia_location_map.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "imageChecked": true,
-    "socialImage": "File:Molshopen in weiland.jpg"
+    "socialImage": "File:Molshopen in weiland.jpg",
+    "extract": "Mountain is an unincorporated community in Ritchie County, West Virginia, United States. Mountain is located in extreme northeastern Ritchie County along West Virginia Route 74 and the Hughes River, 6.2 miles (10.0 km) north-northeast of Pennsboro. The community was known as Mole Hill prior to 1949, when residents requested that the name be changed to Mountain as part of a publicity stunt to literally make a mountain out of a molehill. Despite the name, there is no mountain in or even visible from the community. The post office ultimately closed on November 9, 2002.",
+    "description": "Unincorporated community in West Virginia, United States"
   },
   {
     "title": "Why did the chicken cross the road?",
