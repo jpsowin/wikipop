@@ -455,6 +455,26 @@ function sendDraftTest(emailId, testEmailAddress) {
   });
 }
 
+function addDay(dateStr) {
+  const d = new Date(dateStr + "T00:00:00Z");
+  d.setUTCDate(d.getUTCDate() + 1);
+  return d.toISOString().slice(0, 10);
+}
+
+// Minutes the time zone is ahead of UTC at that moment (e.g. -480 for PST).
+function tzOffsetMinutes(date, timeZone) {
+  const name = new Intl.DateTimeFormat("en-US", { timeZone, timeZoneName: "longOffset" })
+    .formatToParts(date).find((p) => p.type === "timeZoneName").value;
+  const m = name.match(/GMT([+-])(\d{2}):(\d{2})/);
+  return m ? (m[1] === "-" ? -1 : 1) * (Number(m[2]) * 60 + Number(m[3])) : 0;
+}
+
+// Epoch ms for `hour`:00 on dateStr in timeZone.
+function zonedTime(dateStr, hour, timeZone) {
+  const guess = Date.parse(`${dateStr}T${String(hour).padStart(2, "0")}:00:00Z`);
+  return guess - tzOffsetMinutes(new Date(guess), timeZone) * 60000;
+}
+
 async function main() {
   const todayStr = new Date().toISOString().slice(0, 10);
   const articles = JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
@@ -481,6 +501,16 @@ async function main() {
     // Also handling the case where lastSentRaw was just the todayStr from previous format
     if (lastSentArticleDate === latest.date || lastSentRaw === latest.date) {
       console.log(`An email for article date ${latest.date} has already been sent. Skipping.`);
+      return;
+    }
+  }
+
+  // Hold the email until 6 AM Pacific on the day it's for (the article's date + 1),
+  // even when Wikipedia's data lands the evening before. A later run sends it.
+  if (!process.env.TEST_EMAIL_TO && !process.env.EMAIL_PREVIEW_FILE && !process.env.SEND_NOW) {
+    const sendAt = zonedTime(addDay(latest.date), 6, "America/Los_Angeles");
+    if (Date.now() < sendAt) {
+      console.log(`Holding the email for ${latest.date} until ${new Date(sendAt).toISOString()} (6 AM Pacific).`);
       return;
     }
   }

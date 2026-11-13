@@ -1929,9 +1929,16 @@ async function main() {
   const skipDaily = process.argv.includes("--no-daily") || datesArg.length > 0 || !!redoDate || process.argv.includes("--repick-if-no-why");
 
   if (!skipDaily) {
+    // A day goes up at midnight Eastern, never the evening before, even when
+    // Wikipedia's numbers are out early. (A day's data date + 1 is its day on the site.)
+    const easternToday = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date());
     for (let i = backfillDays; i >= 1; i--) {
       const date = new Date();
       date.setUTCDate(date.getUTCDate() - i);
+      if (date.toISOString().slice(0, 10) >= easternToday) {
+        console.log(`${date.toISOString().slice(0, 10)}: waits until midnight Eastern.`);
+        continue;
+      }
       console.log(`Fetching ${date.toISOString().slice(0, 10)}...`);
 
       const added = await processDate(date, articles, { hourlyFallback });
