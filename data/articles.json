@@ -55960,5 +55960,89 @@
       }
     ],
     "obscure": "https://en.wikipedia.org/wiki/Mountain%2C_West_Virginia"
+  },
+  {
+    "date": "2026-11-13",
+    "title": "Nvidia",
+    "views": 252871,
+    "rank": 8,
+    "type": "standard",
+    "extract": "Nvidia Corporation is an American multinational technology company headquartered in Santa Clara, California. The company develops graphics processing units (GPUs), systems on chips (SoCs), and application programming interfaces (APIs) for gaming, data science, high-performance computing, artificial intelligence (AI) hardware, and mobile and automotive applications. Founded in 1993 by Jensen Huang, Chris Malachowsky, and Curtis Priem, Nvidia is among the largest companies by market capitalization.",
+    "description": "American multinational technology company",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/2788-2888_San_Tomas_Expwy.jpg/330px-2788-2888_San_Tomas_Expwy.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Nvidia",
+    "top10": [
+      {
+        "rank": 3,
+        "title": "Jensen_Huang",
+        "views": 727529,
+        "description": "Taiwanese-American businessman (born 1963)",
+        "url": "https://en.wikipedia.org/wiki/Jensen_Huang"
+      },
+      {
+        "rank": 4,
+        "title": "Ramayana:_Part_1",
+        "views": 618656,
+        "description": "2026 Indian film by Nitesh Tiwari",
+        "url": "https://en.wikipedia.org/wiki/Ramayana%3A_Part_1"
+      },
+      {
+        "rank": 7,
+        "title": "Colette_Kress",
+        "views": 279241,
+        "description": "American business executive (born 1967)",
+        "url": "https://en.wikipedia.org/wiki/Colette_Kress"
+      },
+      {
+        "rank": 8,
+        "title": "Nvidia",
+        "views": 252871,
+        "description": "American multinational technology company",
+        "url": "https://en.wikipedia.org/wiki/Nvidia"
+      },
+      {
+        "rank": 9,
+        "title": "Chris_Van_Hollen",
+        "views": 204913,
+        "description": "American lawyer and politician (born 1959)",
+        "url": "https://en.wikipedia.org/wiki/Chris_Van_Hollen"
+      },
+      {
+        "rank": 10,
+        "title": "Piracy",
+        "views": 201972,
+        "description": "Acts of robbery or criminality at sea",
+        "url": "https://en.wikipedia.org/wiki/Piracy"
+      },
+      {
+        "rank": 11,
+        "title": "Alice_Huang_(executive)",
+        "views": 200012,
+        "description": "Chinese technology executive and investor",
+        "url": "https://en.wikipedia.org/wiki/Alice_Huang_(executive)"
+      },
+      {
+        "rank": 12,
+        "title": "Sam_Hartman",
+        "views": 191577,
+        "description": "American football player (born 1999)",
+        "url": "https://en.wikipedia.org/wiki/Sam_Hartman"
+      },
+      {
+        "rank": 13,
+        "title": "Mauricio_Pochettino",
+        "views": 172224,
+        "description": "Argentine football manager (born 1972)",
+        "url": "https://en.wikipedia.org/wiki/Mauricio_Pochettino"
+      },
+      {
+        "rank": 14,
+        "title": "List_of_highest-grossing_Indian_films",
+        "views": 171338,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/List_of_highest-grossing_Indian_films"
+      }
+    ],
+    "obscure": "https://en.wikipedia.org/wiki/Why_did_the_chicken_cross_the_road%3F"
   }
 ]

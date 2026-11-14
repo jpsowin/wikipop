@@ -1391,5 +1391,25 @@
     "sources": [],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-13T03:35:10.766Z"
+  },
+  "2026-11-13": {
+    "date": "2026-11-13",
+    "title": "Nvidia",
+    "show": true,
+    "confidence": 95,
+    "bullets": [
+      "[Jensen Huang](https://en.wikipedia.org/wiki/Jensen_Huang) [quit as Nvidia's CEO and left its board](https://www.nbcnews.com/tech/tech-news/nvidia-ceo-jensen-huang-resigns-reports-extramarital-relationships-rcna608402) after reports of affairs, one with an alleged Chinese spy.",
+      "The New York Times reported that Chinese tech executive [Alice Huang](https://en.wikipedia.org/wiki/Alice_Huang_(executive)) was [recruited by China's spy agency](https://variety.com/2026/biz/news/nvidia-ceo-jensen-huang-resigns-affairs-alleged-chinese-spy-1236945653/) to learn about Nvidia's AI chips.",
+      "President Trump reportedly [phoned Huang to urge him to fight for his job](https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-ceo-live-updates.html), then posted that Apple's [Tim Cook](https://en.wikipedia.org/wiki/Tim_Cook) should replace him.",
+      "CFO [Colette Kress](https://en.wikipedia.org/wiki/Colette_Kress) is stepping in as interim CEO, and the company says Huang won't be involved going forward."
+    ],
+    "hook": "lost CEO Jensen Huang after reports of an alleged spy affair.",
+    "sources": [
+      "https://www.nbcnews.com/tech/tech-news/nvidia-ceo-jensen-huang-resigns-reports-extramarital-relationships-rcna608402",
+      "https://variety.com/2026/biz/news/nvidia-ceo-jensen-huang-resigns-affairs-alleged-chinese-spy-1236945653/",
+      "https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-ceo-live-updates.html"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-14T14:27:30.958Z"
   }
 }

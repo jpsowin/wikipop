@@ -1663,7 +1663,12 @@
   },
   {
     "title": "Why did the chicken cross the road?",
-    "url": "https://en.wikipedia.org/wiki/Why_did_the_chicken_cross_the_road%3F"
+    "url": "https://en.wikipedia.org/wiki/Why_did_the_chicken_cross_the_road%3F",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Fear_of_crossing_streets_1_by_Greg_Nussbaum_for_the_Wikimedia_Foundation.png/330px-Fear_of_crossing_streets_1_by_Greg_Nussbaum_for_the_Wikimedia_Foundation.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "socialImage": "File:Fear of crossing streets 1 by Greg Nussbaum for the Wikimedia Foundation.png",
+    "imageChecked": true,
+    "extract": "\"Why did the chicken cross the road?\" is a common riddle joke with the answer being \"To get to the other side.\" It is an example of anti-humor, in that the curious setup of the joke leads the listener to expect a traditional punchline, but they are instead given a simple statement of fact. The joke has become iconic as an exemplary generic joke to which most people know the answer, and has been repeated and changed numerous times over the course of history.",
+    "description": "Common joke or riddle"
   },
   {
     "title": "Juan Pujol García",
@@ -1688,7 +1693,10 @@
   },
   {
     "title": "List of helicopter prison escapes",
-    "url": "https://en.wikipedia.org/wiki/List_of_helicopter_prison_escapes"
+    "url": "https://en.wikipedia.org/wiki/List_of_helicopter_prison_escapes",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Pilatus_Agusta_A109_Flug.jpg/960px-Pilatus_Agusta_A109_Flug.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "socialImage": "File:Pilatus Agusta A109 Flug.jpg",
+    "imageChecked": true
   },
   {
     "title": "Montague Street Bridge",
@@ -1700,11 +1708,17 @@
   },
   {
     "title": "The Beginning Was the End",
-    "url": "https://en.wikipedia.org/wiki/The_Beginning_Was_the_End"
+    "url": "https://en.wikipedia.org/wiki/The_Beginning_Was_the_End",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Devo_2008.05.31_002.jpg/960px-Devo_2008.05.31_002.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "socialImage": "File:Devo 2008.05.31 002.jpg",
+    "imageChecked": true
   },
   {
     "title": "I Love You, Colonel Sanders!",
-    "url": "https://en.wikipedia.org/wiki/I_Love_You%2C_Colonel_Sanders!"
+    "url": "https://en.wikipedia.org/wiki/I_Love_You%2C_Colonel_Sanders!",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/e/ee/I_Love_You%2C_Colonel_Sanders%21_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "socialImage": "File:I Love You, Colonel Sanders! logo.png",
+    "imageChecked": true
   },
   {
     "title": "Les Songes drolatiques de Pantagruel",
@@ -1716,19 +1730,31 @@
   },
   {
     "title": "Dancing baby",
-    "url": "https://en.wikipedia.org/wiki/Dancing_baby"
+    "url": "https://en.wikipedia.org/wiki/Dancing_baby",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/c/ce/DancingBaby.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "socialImage": "File:DancingBaby.jpg",
+    "imageChecked": true
   },
   {
     "title": "Raël",
-    "url": "https://en.wikipedia.org/wiki/Ra%C3%ABl"
+    "url": "https://en.wikipedia.org/wiki/Ra%C3%ABl",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Claude_Vorilhon_%28Ra%C3%ABl%29_%28Santa_Maria_Times%2C_1978%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "socialImage": "File:Claude Vorilhon (Raël) (Santa Maria Times, 1978).jpg",
+    "imageChecked": true
   },
   {
     "title": "Minions, Cornwall",
-    "url": "https://en.wikipedia.org/wiki/Minions%2C_Cornwall"
+    "url": "https://en.wikipedia.org/wiki/Minions%2C_Cornwall",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Panneau_minions_cornouailles.jpg/960px-Panneau_minions_cornouailles.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "socialImage": "File:Panneau minions cornouailles.jpg",
+    "imageChecked": true
   },
   {
     "title": "Wise Men of Gotham",
-    "url": "https://en.wikipedia.org/wiki/Wise_Men_of_Gotham"
+    "url": "https://en.wikipedia.org/wiki/Wise_Men_of_Gotham",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Wise_Men_of_Gotham_2_-_WW_Denslow_-_Project_Gutenberg_etext_18546.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "socialImage": "File:Wise Men of Gotham 2 - WW Denslow - Project Gutenberg etext 18546.jpg",
+    "imageChecked": true
   },
   {
     "title": "Norwegian butter crisis",
@@ -22244,6 +22270,10 @@
   },
   {
     "title": "Three Hundred and Thirty Five Years' War",
-    "url": "https://en.wikipedia.org/wiki/Three_Hundred_and_Thirty_Five_Years'_War"
+    "url": "https://en.wikipedia.org/wiki/Three_Hundred_and_Thirty_Five_Years'_War",
+    "extract": "The Three Hundred and Thirty-Five Years' War was an alleged state of war between the Netherlands and the Isles of Scilly. It is said to have been extended by the lack of a peace treaty for 335 years without a single shot being fired, which would make it one of the world's longest wars, and a bloodless war. Despite the uncertain validity of the declaration of war, and thus uncertainty about whether or not a state of war ever actually existed, peace was finally declared in 1986, bringing an end to any hypothetical war that may have been legally considered to exist.",
+    "description": "1651–1986 alleged state of war",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Isles_of_Scilly_and_the_Netherlands_%28335_Years_War_map%29.svg/330px-Isles_of_Scilly_and_the_Netherlands_%28335_Years_War_map%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "imageChecked": true
   }
 ]

@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Fri, 13 Nov 2026 19:37:49 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 14:27:31 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Nvidia</title>
+      <link>https://en.wikipedia.org/wiki/Nvidia</link>
+      <description>Nvidia Corporation is an American multinational technology company headquartered in Santa Clara, California. The company develops graphics processing units (GPUs), systems on chips (SoCs), and application programming interfaces (APIs) for gaming, data science, high-performance computing, artificial intelligence (AI) hardware, and mobile and automotive applications. Founded in 1993 by Jensen Huang, Chris Malachowsky, and Curtis Priem, Nvidia is among the largest companies by market capitalization.</description>
+      <pubDate>Fri, 13 Nov 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Nvidia#2026-11-13</guid>
+      <category>American multinational technology company</category>
+    </item>
     <item>
       <title>Colette Kress</title>
       <link>https://en.wikipedia.org/wiki/Colette_Kress</link>
@@ -247,15 +255,6 @@ Kim Jong Un is a North Korean politician and dictator who has been serving as th
       <pubDate>Thu, 15 Oct 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/GBU-43%2FB_MOAB#2026-10-15</guid>
       <category>American large-yield bomb</category>
-    </item>
-    <item>
-      <title>List of equations</title>
-      <link>https://en.wikipedia.org/wiki/List_of_equations</link>
-      <description>
-This is a list of equations, indicating each Wikipedia page under appropriate bands of their field.</description>
-      <pubDate>Wed, 14 Oct 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/List_of_equations#2026-10-14</guid>
-      
     </item>
   </channel>
 </rss>
