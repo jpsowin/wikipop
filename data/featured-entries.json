@@ -1673,9 +1673,11 @@
   {
     "title": "Juan Pujol García",
     "url": "https://en.wikipedia.org/wiki/Juan_Pujol_Garc%C3%ADa",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/5/57/Joan_pujol_garcia.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Joan_pujol_garcia.jpg/330px-Joan_pujol_garcia.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "imageChecked": true,
-    "socialImage": "File:Joan pujol garcia.jpg"
+    "socialImage": "File:Joan pujol garcia.jpg",
+    "extract": "Juan Pujol García was a Spanish spy who worked as a double agent loyal to the United Kingdom against Nazi Germany during World War II, when he relocated to Britain to carry out fictitious spying activities for the Germans. He was given the codename Garbo by the British; their German counterparts codenamed him Alaric and referred to his non-existent spy network as \"Arabal\".",
+    "description": "Spanish double agent for the British in World War II (1912–1988)"
   },
   {
     "title": "Freddy Got Fingered",

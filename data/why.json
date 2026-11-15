@@ -1411,5 +1411,25 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-14T14:27:30.958Z"
+  },
+  "2026-11-14": {
+    "date": "2026-11-14",
+    "title": "Sean_Duffy",
+    "show": true,
+    "confidence": 88,
+    "bullets": [
+      "A communications outage led the [FAA](https://en.wikipedia.org/wiki/Federal_Aviation_Administration) to order a rare [nationwide ground stop](https://en.wikipedia.org/wiki/2026_FAA_nationwide_ground_stop) Friday, with [Transportation Secretary](https://en.wikipedia.org/wiki/United_States_Secretary_of_Transportation) Sean Duffy fronting the response.",
+      "Duffy first [blamed outdated equipment that got overloaded](https://www.axios.com/2026/11/13/faa-nationwide-ground-stop), then said Saturday the [likely cause](https://www.cnbc.com/2026/11/14/faa-ground-stop-flights-resume-delays.html) was contractors swapping old copper wire for fiber-optic lines.",
+      "Duffy and Homeland Security's [Markwayne Mullin](https://en.wikipedia.org/wiki/Markwayne_Mullin) called for a \"complete overhaul\" of the air traffic control system.",
+      "The White House said there was [no sign of foul play](https://www.cbsnews.com/news/faa-issues-nationwide-ground-stop/)."
+    ],
+    "hook": "explained why every US flight was grounded for hours.",
+    "sources": [
+      "https://www.axios.com/2026/11/13/faa-nationwide-ground-stop",
+      "https://www.cnbc.com/2026/11/14/faa-ground-stop-flights-resume-delays.html",
+      "https://www.cbsnews.com/news/faa-issues-nationwide-ground-stop/"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-15T14:57:21.948Z"
   }
 }

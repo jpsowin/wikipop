@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "257915cc0ec1bed2",
-  "lastmod": "2026-11-14"
+  "hash": "1f99f834d1b97392",
+  "lastmod": "2026-11-15"
  },
  "archive.html": {
-  "hash": "98dd3ecddfce8770",
-  "lastmod": "2026-11-14"
+  "hash": "3feb9e214560f46f",
+  "lastmod": "2026-11-15"
  },
  "explore.html": {
-  "hash": "f2c84839ea06964e",
-  "lastmod": "2026-11-14"
+  "hash": "cd40ef06e68c7ea5",
+  "lastmod": "2026-11-15"
  },
  "changelog.html": {
   "hash": "f7c2d8b0fa2ae966",
@@ -80,8 +80,8 @@
   "lastmod": "2026-10-30"
  },
  "month/2026-03/": {
-  "hash": "1228ae019481ac59",
-  "lastmod": "2026-10-30"
+  "hash": "bb7a9327d445d8cb",
+  "lastmod": "2026-11-15"
  },
  "month/2026-04/": {
   "hash": "946edaa521f9807e",
@@ -2824,7 +2824,11 @@
   "lastmod": "2026-11-14"
  },
  "day/2026-11-13-nvidia/": {
-  "hash": "e4d13b1e6da94075",
-  "lastmod": "2026-11-14"
+  "hash": "ef3c58b23b8544b5",
+  "lastmod": "2026-11-15"
+ },
+ "day/2026-11-14-sean-duffy/": {
+  "hash": "d74b22589f995c85",
+  "lastmod": "2026-11-15"
  }
 }
