@@ -1431,5 +1431,24 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-15T14:57:21.948Z"
+  },
+  "2026-11-15": {
+    "date": "2026-11-15",
+    "title": "Archive_of_Our_Own",
+    "show": true,
+    "confidence": 90,
+    "bullets": [
+      "AO3, the giant free home of [fan fiction](https://en.wikipedia.org/wiki/Fan_fiction), is back online with some features still limited after a security incident knocked it out in late October.",
+      "What was first billed as a 12-hour maintenance break stretched into weeks, and readers went into \"survival mode,\" [leaning on community workarounds](https://www.nbcnews.com/pop-culture/pop-culture-news/a03-security-breach-readers-lean-on-community-rcna606894).",
+      "Co-founder [Naomi Novik](https://en.wikipedia.org/wiki/Naomi_Novik) [told CNN](https://www.cnn.com/2026/11/07/entertainment/ao3-hack-shutdown-cec) she felt a sense of \"resignation\" when she heard about the hack.",
+      "AO3 says no data was lost, but the [Organization for Transformative Works](https://en.wikipedia.org/wiki/Organization_for_Transformative_Works) urges anyone who reused their password elsewhere to change it."
+    ],
+    "hook": "is finally back online after a weeks-long blackout.",
+    "sources": [
+      "https://www.nbcnews.com/pop-culture/pop-culture-news/a03-security-breach-readers-lean-on-community-rcna606894",
+      "https://www.cnn.com/2026/11/07/entertainment/ao3-hack-shutdown-cec"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-16T17:19:09.544Z"
   }
 }

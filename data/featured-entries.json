@@ -1682,9 +1682,11 @@
   {
     "title": "Freddy Got Fingered",
     "url": "https://en.wikipedia.org/wiki/Freddy_Got_Fingered",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/a/a3/Freddy_Got_Fingered_%28movie_poster%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/a/a3/Freddy_Got_Fingered_%28movie_poster%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "imageChecked": true,
-    "socialImage": "File:Freddy Got Fingered (movie poster).jpg"
+    "socialImage": "File:Freddy Got Fingered (movie poster).jpg",
+    "extract": "Freddy Got Fingered is a 2001 American surreal black comedy film directed by Tom Green and written by Green and Derek Harvie. The film stars Green alongside Rip Torn, Marisa Coughlan, Eddie Kaye Thomas and Julie Hagerty. The plot follows a childish slacker who wishes to become a professional cartoonist while dealing with his abusive father's behavior. The title of the film refers to a plot point where Green's character falsely accuses his father of sexually abusing his brother, the eponymous Freddy.",
+    "description": "2001 American film directed by Tom Green"
   },
   {
     "title": "Mattel, Inc. v. MCA Records, Inc.",

@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "1f99f834d1b97392",
-  "lastmod": "2026-11-15"
+  "hash": "29ae3d21ee1d6e47",
+  "lastmod": "2026-11-16"
  },
  "archive.html": {
-  "hash": "3feb9e214560f46f",
-  "lastmod": "2026-11-15"
+  "hash": "13aebd276bc079a5",
+  "lastmod": "2026-11-16"
  },
  "explore.html": {
-  "hash": "cd40ef06e68c7ea5",
-  "lastmod": "2026-11-15"
+  "hash": "95a5e733d9377c67",
+  "lastmod": "2026-11-16"
  },
  "changelog.html": {
   "hash": "f7c2d8b0fa2ae966",
@@ -112,8 +112,8 @@
   "lastmod": "2026-11-04"
  },
  "month/2026-11/": {
-  "hash": "b85a191f7dbb56d9",
-  "lastmod": "2026-11-13"
+  "hash": "c3ed3b0eb1c49e7b",
+  "lastmod": "2026-11-16"
  },
  "day/2025-01-02-squid-game-season-2/": {
   "hash": "b6202627336e6e83",
@@ -2828,7 +2828,11 @@
   "lastmod": "2026-11-15"
  },
  "day/2026-11-14-sean-duffy/": {
-  "hash": "d74b22589f995c85",
-  "lastmod": "2026-11-15"
+  "hash": "2c2b3f99f9236131",
+  "lastmod": "2026-11-16"
+ },
+ "day/2026-11-15-archive-of-our-own/": {
+  "hash": "f6b41113afe596dc",
+  "lastmod": "2026-11-16"
  }
 }

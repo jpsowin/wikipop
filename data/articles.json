@@ -56128,5 +56128,92 @@
       }
     ],
     "obscure": "https://en.wikipedia.org/wiki/Juan_Pujol_Garc%C3%ADa"
+  },
+  {
+    "date": "2026-11-15",
+    "title": "Archive_of_Our_Own",
+    "views": 860729,
+    "rank": 2,
+    "type": "standard",
+    "extract": "Archive of Our Own (AO3) is a nonprofit, open-source repository for fanfiction (fanfic) and other fanworks contributed by users. The site was created in 2008 by the Organization for Transformative Works.",
+    "description": "Nonprofit fanfiction repository",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Ao3-screenshot.png/330px-Ao3-screenshot.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Archive_of_Our_Own",
+    "top10": [
+      {
+        "rank": 2,
+        "title": "Archive_of_Our_Own",
+        "views": 860729,
+        "description": "Nonprofit fanfiction repository",
+        "url": "https://en.wikipedia.org/wiki/Archive_of_Our_Own"
+      },
+      {
+        "rank": 4,
+        "title": "9/11",
+        "views": 673012,
+        "description": "2001 terror attacks in the United States",
+        "url": "https://en.wikipedia.org/wiki/September_11_attacks"
+      },
+      {
+        "rank": 5,
+        "title": "Ramayana:_Part_1",
+        "views": 591692,
+        "description": "2026 Indian film by Nitesh Tiwari",
+        "url": "https://en.wikipedia.org/wiki/Ramayana%3A_Part_1"
+      },
+      {
+        "rank": 7,
+        "title": "List_of_Nazi_concentration_camps",
+        "views": 534193,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/List_of_Nazi_concentration_camps"
+      },
+      {
+        "rank": 8,
+        "title": "UFC_334",
+        "views": 321149,
+        "description": "Mixed martial arts event in 2026",
+        "url": "https://en.wikipedia.org/wiki/UFC_334"
+      },
+      {
+        "rank": 9,
+        "title": "List_of_highest-grossing_Indian_films",
+        "views": 214408,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/List_of_highest-grossing_Indian_films"
+      },
+      {
+        "rank": 10,
+        "title": "Jensen_Huang",
+        "views": 194070,
+        "description": "Taiwanese-American businessman (born 1963)",
+        "url": "https://en.wikipedia.org/wiki/Jensen_Huang"
+      },
+      {
+        "rank": 11,
+        "title": "Full_Gear_(2026)",
+        "views": 175811,
+        "description": "All Elite Wrestling pay-per-view event",
+        "url": "https://en.wikipedia.org/wiki/Full_Gear_(2026)"
+      },
+      {
+        "rank": 12,
+        "title": "Josh_Hokit",
+        "views": 168260,
+        "description": "American mixed martial artist (born 1997)",
+        "url": "https://en.wikipedia.org/wiki/Josh_Hokit"
+      },
+      {
+        "rank": 13,
+        "title": "Sean_Duffy",
+        "views": 161039,
+        "description": "American politician (born 1971)",
+        "url": "https://en.wikipedia.org/wiki/Sean_Duffy"
+      }
+    ],
+    "skipped": [
+      "9/11"
+    ],
+    "obscure": "https://en.wikipedia.org/wiki/Freddy_Got_Fingered"
   }
 ]
