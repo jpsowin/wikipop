@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://wikipop.sowin.io/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-17</lastmod>
   </url>
   <url>
     <loc>https://wikipop.sowin.io/archive.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-17</lastmod>
   </url>
   <url>
     <loc>https://wikipop.sowin.io/explore.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-17</lastmod>
   </url>
   <url>
     <loc>https://wikipop.sowin.io/changelog.html</loc>
@@ -114,7 +114,7 @@
   </url>
   <url>
     <loc>https://wikipop.sowin.io/month/2026-11/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-17</lastmod>
   </url>
   <url>
     <loc>https://wikipop.sowin.io/day/2025-01-02-squid-game-season-2/</loc>
@@ -2834,6 +2834,10 @@
   </url>
   <url>
     <loc>https://wikipop.sowin.io/day/2026-11-15-archive-of-our-own/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://wikipop.sowin.io/day/2026-11-16-robert-pattinson/</loc>
+    <lastmod>2026-11-17</lastmod>
   </url>
 </urlset>

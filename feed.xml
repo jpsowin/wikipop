@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Mon, 16 Nov 2026 17:19:10 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 17:02:45 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Robert Pattinson</title>
+      <link>https://en.wikipedia.org/wiki/Robert_Pattinson</link>
+      <description>Robert Douglas Thomas Pattinson is an English actor and producer. He is known for starring in both major studio productions and independent films, and for portraying eccentric characters across multiple genres. Included on yearly lists of the world&apos;s highest-paid actors, he was ranked by Time as one of the 100 most influential people in the world and featured in the Forbes Celebrity 100 in 2010.</description>
+      <pubDate>Mon, 16 Nov 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Robert_Pattinson#2026-11-16</guid>
+      <category>English actor (born 1986)</category>
+    </item>
     <item>
       <title>Archive of Our Own</title>
       <link>https://en.wikipedia.org/wiki/Archive_of_Our_Own</link>
@@ -247,14 +255,6 @@ Kim Jong Un is a North Korean politician and dictator who has been serving as th
       <pubDate>Sun, 18 Oct 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Elizabeth_Holmes#2026-10-18</guid>
       <category>American businesswoman (born 1984)</category>
-    </item>
-    <item>
-      <title>Ying</title>
-      <link>https://en.wikipedia.org/wiki/Ying</link>
-      <description>Ying may refer to:</description>
-      <pubDate>Sat, 17 Oct 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Ying#2026-10-17</guid>
-      <category>Topics referred to by the same term</category>
     </item>
   </channel>
 </rss>

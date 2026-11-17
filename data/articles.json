@@ -56215,5 +56215,92 @@
       "9/11"
     ],
     "obscure": "https://en.wikipedia.org/wiki/Freddy_Got_Fingered"
+  },
+  {
+    "date": "2026-11-16",
+    "title": "Robert_Pattinson",
+    "views": 1363657,
+    "rank": 2,
+    "type": "standard",
+    "extract": "Robert Douglas Thomas Pattinson is an English actor and producer. He is known for starring in both major studio productions and independent films, and for portraying eccentric characters across multiple genres. Included on yearly lists of the world's highest-paid actors, he was ranked by Time as one of the 100 most influential people in the world and featured in the Forbes Celebrity 100 in 2010.",
+    "description": "English actor (born 1986)",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Robert_Pattinson_Venice_Film_Festival_%283x4_cropped%29.jpg/330px-Robert_Pattinson_Venice_Film_Festival_%283x4_cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Robert_Pattinson",
+    "top10": [
+      {
+        "rank": 2,
+        "title": "Robert_Pattinson",
+        "views": 1363657,
+        "description": "English actor (born 1986)",
+        "url": "https://en.wikipedia.org/wiki/Robert_Pattinson"
+      },
+      {
+        "rank": 4,
+        "title": "Ramayana:_Part_1",
+        "views": 551941,
+        "description": "2026 Indian film by Nitesh Tiwari",
+        "url": "https://en.wikipedia.org/wiki/Ramayana%3A_Part_1"
+      },
+      {
+        "rank": 6,
+        "title": "Archive_of_Our_Own",
+        "views": 463687,
+        "description": "Nonprofit fanfiction repository",
+        "url": "https://en.wikipedia.org/wiki/Archive_of_Our_Own"
+      },
+      {
+        "rank": 7,
+        "title": "Suki_Waterhouse",
+        "views": 378948,
+        "description": "English actress, singer, and model (born 1992)",
+        "url": "https://en.wikipedia.org/wiki/Suki_Waterhouse"
+      },
+      {
+        "rank": 8,
+        "title": "List_of_highest-grossing_Indian_films",
+        "views": 206909,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/List_of_highest-grossing_Indian_films"
+      },
+      {
+        "rank": 9,
+        "title": "Robert_Pattinson_filmography",
+        "views": 191139,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Robert_Pattinson_filmography"
+      },
+      {
+        "rank": 10,
+        "title": "Saturn_Devouring_His_Son",
+        "views": 176155,
+        "description": "Painting by Francisco Goya (c. 1820–1823)",
+        "url": "https://en.wikipedia.org/wiki/Saturn_Devouring_His_Son"
+      },
+      {
+        "rank": 11,
+        "title": "Jensen_Huang",
+        "views": 162987,
+        "description": "Taiwanese-American businessman (born 1963)",
+        "url": "https://en.wikipedia.org/wiki/Jensen_Huang"
+      },
+      {
+        "rank": 13,
+        "title": "The_Body_(TV_series)",
+        "views": 136145,
+        "description": "American television series",
+        "url": "https://en.wikipedia.org/wiki/The_Body_(TV_series)"
+      },
+      {
+        "rank": 14,
+        "title": "Deaths_in_2026",
+        "views": 134818,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
+      }
+    ],
+    "skipped": [
+      "Suki_Waterhouse"
+    ],
+    "obscure": "https://en.wikipedia.org/wiki/Mattel%2C_Inc._v._MCA_Records%2C_Inc."
   }
 ]

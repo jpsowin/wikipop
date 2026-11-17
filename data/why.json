@@ -1450,5 +1450,24 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-16T17:19:09.544Z"
+  },
+  "2026-11-16": {
+    "date": "2026-11-16",
+    "title": "Robert_Pattinson",
+    "show": true,
+    "confidence": 96,
+    "bullets": [
+      "[Amazon MGM Studios](https://en.wikipedia.org/wiki/Amazon_MGM_Studios) [announced](https://www.cbc.ca/news/entertainment/robert-pattinson-james-bond-9.7423506) that Robert Pattinson is the next [James Bond](https://en.wikipedia.org/wiki/James_Bond), with [Denis Villeneuve](https://en.wikipedia.org/wiki/Denis_Villeneuve) directing.",
+      "The first-look photo shows him in a tuxedo aiming a gun, mirroring [Daniel Craig](https://en.wikipedia.org/wiki/Daniel_Craig)'s [first Bond publicity shot](https://abcnews.com/GMA/Culture/robert-pattinson-new-james-bond-amazon-mgm-studios/story?id=135776275).",
+      "Villeneuve says Pattinson has [\"the timeless soul of 007\"](https://deadline.com/2026/11/robert-pattinson-james-bond-role-amazon-mgm-studios-1237225184/), and the two already teamed up on [Dune: Part Three](https://en.wikipedia.org/wiki/Dune:_Part_Three)."
+    ],
+    "hook": "is the next James Bond, with Denis Villeneuve directing.",
+    "sources": [
+      "https://www.cbc.ca/news/entertainment/robert-pattinson-james-bond-9.7423506",
+      "https://abcnews.com/GMA/Culture/robert-pattinson-new-james-bond-amazon-mgm-studios/story?id=135776275",
+      "https://deadline.com/2026/11/robert-pattinson-james-bond-role-amazon-mgm-studios-1237225184/"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-17T17:02:44.586Z"
   }
 }
