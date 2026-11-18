@@ -1469,5 +1469,26 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-17T17:02:44.586Z"
+  },
+  "2026-11-17": {
+    "date": "2026-11-17",
+    "title": "Robert_Pattinson_filmography",
+    "show": true,
+    "confidence": 93,
+    "bullets": [
+      "[Amazon MGM Studios](https://en.wikipedia.org/wiki/Amazon_MGM_Studios) [announced](https://www.cnbc.com/2026/11/16/robert-pattinson-james-bond.html) that [Robert Pattinson](https://en.wikipedia.org/wiki/Robert_Pattinson) will be the next [James Bond](https://en.wikipedia.org/wiki/James_Bond), taking over from [Daniel Craig](https://en.wikipedia.org/wiki/Daniel_Craig).",
+      "Director [Denis Villeneuve](https://en.wikipedia.org/wiki/Denis_Villeneuve) [said](https://www.npr.org/2026/11/16/nx-s1-6042420/james-bond-casting-robert-pattinson) Pattinson has \"the timeless soul of 007\" and a spirit \"that is completely new.\"",
+      "It's a curveball, since [conventional wisdom](https://www.hollywoodreporter.com/movies/movie-news/james-bond-found-robert-pattinson-1236751054/) said Bond would go to a lower-profile actor, not a huge star.",
+      "His old Twilight fans, the \"Twihards,\" are thrilled, and ex-Bond [George Lazenby](https://en.wikipedia.org/wiki/George_Lazenby) [posted a welcome video](https://www.nbcnews.com/pop-culture/movies/robert-pattinson-named-newest-james-bond-rcna607085) for him."
+    ],
+    "hook": "just got a lot more interesting: he's the next James Bond.",
+    "sources": [
+      "https://www.cnbc.com/2026/11/16/robert-pattinson-james-bond.html",
+      "https://www.npr.org/2026/11/16/nx-s1-6042420/james-bond-casting-robert-pattinson",
+      "https://www.hollywoodreporter.com/movies/movie-news/james-bond-found-robert-pattinson-1236751054/",
+      "https://www.nbcnews.com/pop-culture/movies/robert-pattinson-named-newest-james-bond-rcna607085"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-18T16:41:54.646Z"
   }
 }

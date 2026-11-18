@@ -1700,9 +1700,11 @@
   {
     "title": "List of helicopter prison escapes",
     "url": "https://en.wikipedia.org/wiki/List_of_helicopter_prison_escapes",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Pilatus_Agusta_A109_Flug.jpg/960px-Pilatus_Agusta_A109_Flug.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Mountjoy_Prison.jpg/330px-Mountjoy_Prison.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "socialImage": "File:Pilatus Agusta A109 Flug.jpg",
-    "imageChecked": true
+    "imageChecked": true,
+    "extract": "There have been multiple prison escapes where an inmate escapes by means of a helicopter. One of the earliest instances was the escape of Joel David Kaplan, nicknamed \"Man Fan\", on August 19, 1971, from the Santa Martha Acatitla in Mexico. Kaplan was a New York businessman who not only escaped the prison but eventually got out of Mexico and went on to write a book about his experience, The 10-Second Jailbreak.",
+    "description": ""
   },
   {
     "title": "Montague Street Bridge",
