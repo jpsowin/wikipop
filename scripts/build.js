@@ -382,6 +382,7 @@ function buildFeaturedPage() {
     gtag('js', new Date());
     gtag('config', 'G-SBPZDVN4FC');
   </script>
+  <script src="/assets/signup-tracking.js"></script>
 </head>
 <body>
   <nav><a href="index.html" class="logo">Wiki<span>Pop</span></a></nav>
