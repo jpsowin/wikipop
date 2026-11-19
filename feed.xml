@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Thu, 19 Nov 2026 06:46:31 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 16:44:59 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Grand Theft Auto VI</title>
+      <link>https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI</link>
+      <description>Grand Theft Auto VI is a 2026 action-adventure game developed and published by Rockstar Games. It is the eighth main entry in the Grand Theft Auto series, following 2013&apos;s Grand Theft Auto V, and the sixteenth entry overall. Set within the fictional US state of Leonida, based on Florida, and in the fictional city of Vice City, based on Miami, the story follows the criminal duo of Jason Duval and Lucia Caminos. Players are able to freely roam Leonida&apos;s open world.</description>
+      <pubDate>Wed, 18 Nov 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI#2026-11-18</guid>
+      <category>2026 video game</category>
+    </item>
     <item>
       <title>Robert Pattinson filmography</title>
       <link>https://en.wikipedia.org/wiki/Robert_Pattinson_filmography</link>
@@ -247,14 +255,6 @@ Kim Jong Un is a North Korean politician and dictator who has been serving as th
       <pubDate>Tue, 20 Oct 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Kim_Jong_Un#2026-10-20</guid>
       <category>Supreme Leader of North Korea since 2011</category>
-    </item>
-    <item>
-      <title>You Can See Everything</title>
-      <link>https://en.wikipedia.org/wiki/You_Can_See_Everything</link>
-      <description>You Can See Everything is a 2026 American documentary film directed by Nathan Fielder and Lance Oppenheim. It follows Elizabeth Holmes, the founder of the defunct health technology company Theranos, and her partner Billy Evans, who invited a film crew to document them beginning in the weeks before Holmes began serving a United States federal prison sentence for defrauding investors.</description>
-      <pubDate>Mon, 19 Oct 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/You_Can_See_Everything#2026-10-19</guid>
-      <category>2026 documentary film</category>
     </item>
   </channel>
 </rss>

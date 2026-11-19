@@ -1490,5 +1490,23 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-18T16:41:54.646Z"
+  },
+  "2026-11-18": {
+    "date": "2026-11-18",
+    "title": "Grand_Theft_Auto_VI",
+    "show": true,
+    "confidence": 88,
+    "bullets": [
+      "[Rockstar](https://en.wikipedia.org/wiki/Rockstar_Games)'s long-delayed new Grand Theft Auto lands tomorrow on [PS5](https://en.wikipedia.org/wiki/PlayStation_5) and [Xbox](https://en.wikipedia.org/wiki/Xbox_Series_X_and_Series_S), over a decade after [GTA V](https://en.wikipedia.org/wiki/Grand_Theft_Auto_V).",
+      "[CNN calls it](https://www.cnn.com/2026/11/16/media/grand-theft-auto-gta-vi-entertainment-media) the year's biggest entertainment event, bigger than any movie.",
+      "You follow [Lucia Caminos](https://en.wikipedia.org/wiki/Lucia_Caminos) and Jason Duval, a [Bonnie and Clyde](https://en.wikipedia.org/wiki/Bonnie_and_Clyde)-inspired duo, through a fictional Florida and [Vice City](https://en.wikipedia.org/wiki/Vice_City_(Grand_Theft_Auto)).",
+      "Even store-bought copies are download codes, not discs, so fans could start preloading a week early."
+    ],
+    "hook": "finally arrives tomorrow after years of delays.",
+    "sources": [
+      "https://www.cnn.com/2026/11/16/media/grand-theft-auto-gta-vi-entertainment-media"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-19T16:44:58.943Z"
   }
 }

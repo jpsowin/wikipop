@@ -1708,7 +1708,11 @@
   },
   {
     "title": "Montague Street Bridge",
-    "url": "https://en.wikipedia.org/wiki/Montague_Street_Bridge"
+    "url": "https://en.wikipedia.org/wiki/Montague_Street_Bridge",
+    "extract": "The Montague Street Bridge is a railway bridge in South Melbourne, Australia, an inner suburb of Melbourne. The bridge is located at 83 Montague Street, between Woodgate Street and Gladstone Lane.",
+    "description": "Tram bridge in Melbourne, Victoria, Australia",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Montague_Street_Bridge.jpg/330px-Montague_Street_Bridge.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "imageChecked": true
   },
   {
     "title": "Korea Central Zoo",
