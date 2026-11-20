@@ -1508,5 +1508,22 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-19T16:44:58.943Z"
+  },
+  "2026-11-19": {
+    "date": "2026-11-19",
+    "title": "Ella_Langley",
+    "show": true,
+    "confidence": 95,
+    "bullets": [
+      "Ella Langley [won six trophies](https://www.pbs.org/newshour/arts/ella-langley-sweeps-the-2026-cma-awards-and-wins-entertainer-of-the-year) at the [60th CMA Awards](https://en.wikipedia.org/wiki/60th_Annual_Country_Music_Association_Awards), including [Entertainer of the Year](https://en.wikipedia.org/wiki/Country_Music_Association_Award_for_Entertainer_of_the_Year).",
+      "Host [Lainey Wilson](https://en.wikipedia.org/wiki/Lainey_Wilson), the defending champ and Langley's friend, swept the floor around her with a bedazzled broom.",
+      "Her last speech opened with a joke: \"At this point, I'm sick of me.\""
+    ],
+    "hook": "won six CMA Awards, including Entertainer of the Year.",
+    "sources": [
+      "https://www.pbs.org/newshour/arts/ella-langley-sweeps-the-2026-cma-awards-and-wins-entertainer-of-the-year"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-20T16:20:51.412Z"
   }
 }

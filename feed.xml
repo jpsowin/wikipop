@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Thu, 19 Nov 2026 16:44:59 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 16:20:52 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Ella Langley</title>
+      <link>https://en.wikipedia.org/wiki/Ella_Langley</link>
+      <description>Elizabeth Camille Langley is an American singer-songwriter. She is signed to Sony Music Nashville and Columbia Records. Her debut studio album, Hungover (2024), produced breakthrough hits &quot;You Look Like You Love Me&quot; and &quot;Weren&apos;t for the Wind&quot;, which both topped the Country Airplay chart.</description>
+      <pubDate>Thu, 19 Nov 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Ella_Langley#2026-11-19</guid>
+      <category>American country singer-songwriter (born 1999)</category>
+    </item>
     <item>
       <title>Grand Theft Auto VI</title>
       <link>https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI</link>
@@ -245,16 +253,6 @@
       <pubDate>Wed, 21 Oct 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/PHP2Shell#2026-10-21</guid>
       <category>2026 software security vulnerability</category>
-    </item>
-    <item>
-      <title>Kim Jong Un</title>
-      <link>https://en.wikipedia.org/wiki/Kim_Jong_Un</link>
-      <description>
-
-Kim Jong Un is a North Korean politician and dictator who has been serving as the supreme leader of North Korea since 2011, following the death of his father, Kim Jong Il. He is the third ruler from the Kim family to lead the country, which was founded by his grandfather Kim Il Sung. Kim holds the positions of general secretary of the Workers&apos; Party of Korea (WPK) and president of the State Affairs Commission, as well as the highest offices in the Korean People&apos;s Army.</description>
-      <pubDate>Tue, 20 Oct 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Kim_Jong_Un#2026-10-20</guid>
-      <category>Supreme Leader of North Korea since 2011</category>
     </item>
   </channel>
 </rss>

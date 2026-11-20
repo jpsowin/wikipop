@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "c71de6e88ca7d536",
-  "lastmod": "2026-11-19"
+  "hash": "3ce095475dc62e74",
+  "lastmod": "2026-11-20"
  },
  "archive.html": {
-  "hash": "653f45cd42395e95",
-  "lastmod": "2026-11-19"
+  "hash": "465adf8a8dc142f5",
+  "lastmod": "2026-11-20"
  },
  "explore.html": {
-  "hash": "c10e87b5728de5b9",
-  "lastmod": "2026-11-19"
+  "hash": "3cdc6335d67eed46",
+  "lastmod": "2026-11-20"
  },
  "changelog.html": {
   "hash": "7521b5b053dbeceb",
@@ -112,8 +112,8 @@
   "lastmod": "2026-11-19"
  },
  "month/2026-11/": {
-  "hash": "47b01283e3c0f69d",
-  "lastmod": "2026-11-19"
+  "hash": "ab4508b1f9d835c1",
+  "lastmod": "2026-11-20"
  },
  "day/2025-01-02-squid-game-season-2/": {
   "hash": "5060522a2e7477f1",
@@ -2844,7 +2844,11 @@
   "lastmod": "2026-11-19"
  },
  "day/2026-11-18-grand-theft-auto-vi/": {
-  "hash": "d32c17e6d1de268c",
-  "lastmod": "2026-11-19"
+  "hash": "7e9dd99614953ed2",
+  "lastmod": "2026-11-20"
+ },
+ "day/2026-11-19-ella-langley/": {
+  "hash": "a0b4cf75fbdf3a95",
+  "lastmod": "2026-11-20"
  }
 }

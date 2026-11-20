@@ -56470,5 +56470,92 @@
       }
     ],
     "obscure": "https://en.wikipedia.org/wiki/Montague_Street_Bridge"
+  },
+  {
+    "date": "2026-11-19",
+    "title": "Ella_Langley",
+    "views": 189264,
+    "rank": 7,
+    "type": "standard",
+    "extract": "Elizabeth Camille Langley is an American singer-songwriter. She is signed to Sony Music Nashville and Columbia Records. Her debut studio album, Hungover (2024), produced breakthrough hits \"You Look Like You Love Me\" and \"Weren't for the Wind\", which both topped the Country Airplay chart.",
+    "description": "American country singer-songwriter (born 1999)",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Ella_Langley_2026_%28cropped%29.jpg/330px-Ella_Langley_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Ella_Langley",
+    "top10": [
+      {
+        "rank": 3,
+        "title": "Grand_Theft_Auto_VI",
+        "views": 750227,
+        "description": "2026 video game",
+        "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI"
+      },
+      {
+        "rank": 5,
+        "title": "Ramayana:_Part_1",
+        "views": 371581,
+        "description": "2026 Indian film by Nitesh Tiwari",
+        "url": "https://en.wikipedia.org/wiki/Ramayana%3A_Part_1"
+      },
+      {
+        "rank": 6,
+        "title": "Stephen_Wilson_Jr.",
+        "views": 327962,
+        "description": "American musician (born 1979)",
+        "url": "https://en.wikipedia.org/wiki/Stephen_Wilson_Jr."
+      },
+      {
+        "rank": 7,
+        "title": "Ella_Langley",
+        "views": 189264,
+        "description": "American country singer-songwriter (born 1999)",
+        "url": "https://en.wikipedia.org/wiki/Ella_Langley"
+      },
+      {
+        "rank": 8,
+        "title": "Ken_McElroy",
+        "views": 172820,
+        "description": "American criminal and murder victim (1934–1981)",
+        "url": "https://en.wikipedia.org/wiki/Ken_McElroy"
+      },
+      {
+        "rank": 9,
+        "title": "Robert_Pattinson",
+        "views": 172742,
+        "description": "English actor (born 1986)",
+        "url": "https://en.wikipedia.org/wiki/Robert_Pattinson"
+      },
+      {
+        "rank": 10,
+        "title": "Grand_Theft_Auto",
+        "views": 171292,
+        "description": "Video game series",
+        "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto"
+      },
+      {
+        "rank": 11,
+        "title": "Dario_Amodei",
+        "views": 167998,
+        "description": "American businessman (born 1983)",
+        "url": "https://en.wikipedia.org/wiki/Dario_Amodei"
+      },
+      {
+        "rank": 12,
+        "title": "Deaths_in_2026",
+        "views": 133759,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
+      },
+      {
+        "rank": 14,
+        "title": "Larry_Poindexter",
+        "views": 124373,
+        "description": "American actor (1959–2026)",
+        "url": "https://en.wikipedia.org/wiki/Larry_Poindexter"
+      }
+    ],
+    "skipped": [
+      "Stephen_Wilson_Jr."
+    ],
+    "obscure": "https://en.wikipedia.org/wiki/Korea_Central_Zoo"
   }
 ]

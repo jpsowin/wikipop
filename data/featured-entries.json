@@ -1716,7 +1716,11 @@
   },
   {
     "title": "Korea Central Zoo",
-    "url": "https://en.wikipedia.org/wiki/Korea_Central_Zoo"
+    "url": "https://en.wikipedia.org/wiki/Korea_Central_Zoo",
+    "extract": "The Korea Central Zoo, also referred to as the Pyongyang Central Zoo, is the national zoo of North Korea. Opened in April 1960, it is located near Taesŏngsan mountain in downtown Pyongyang, and covers an area of roughly one square kilometre. The zoo has over 5,000 wild animals, comprising a total of 650 species, including elephants, domestic dogs, and chimpanzees. Though the zoo participates in species recovery efforts through breeding programs, it has been criticized for its treatment of animals, especially in the case of Azalea, a chimp who was taught to smoke. Accusations of the starvation, neglect, and inbreeding of animals have also been made.",
+    "description": "Zoo in Pyongyang, North Korea",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Korea_Central_Zoo_in_Pyongyang.jpg/330px-Korea_Central_Zoo_in_Pyongyang.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "imageChecked": true
   },
   {
     "title": "The Beginning Was the End",
