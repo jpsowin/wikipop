@@ -1525,5 +1525,24 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-20T16:20:51.412Z"
+  },
+  "2026-11-20": {
+    "date": "2026-11-20",
+    "title": "The_Hunger_Games:_Sunrise_on_the_Reaping",
+    "show": true,
+    "confidence": 93,
+    "bullets": [
+      "The new [Hunger Games](https://en.wikipedia.org/wiki/The_Hunger_Games_(franchise)) prequel opened with [$21 million in Thursday previews](https://www.hollywoodreporter.com/movies/movie-news/hunger-games-sunrise-on-the-reaping-box-office-previews-1236760000/), second only to Catching Fire in the franchise.",
+      "It's a prequel about young [Haymitch Abernathy](https://en.wikipedia.org/wiki/Haymitch_Abernathy) in the 50th Games, based on [Suzanne Collins](https://en.wikipedia.org/wiki/Suzanne_Collins)'s [novel](https://en.wikipedia.org/wiki/Sunrise_on_the_Reaping).",
+      "Deadline forecasts [a worldwide opening of $160 to $190 million](https://deadline.com/2026/11/hunger-games-sunrise-on-the-reaping-box-office-opening-forecast-1237228101/), the first big global event movie in a sleepy fall.",
+      "It's the first Hunger Games movie since [The Ballad of Songbirds & Snakes](https://en.wikipedia.org/wiki/The_Hunger_Games:_The_Ballad_of_Songbirds_&_Snakes) in 2023, and reviews are mixed."
+    ],
+    "hook": "brings young Haymitch to theaters with a $21M preview haul.",
+    "sources": [
+      "https://www.hollywoodreporter.com/movies/movie-news/hunger-games-sunrise-on-the-reaping-box-office-previews-1236760000/",
+      "https://deadline.com/2026/11/hunger-games-sunrise-on-the-reaping-box-office-opening-forecast-1237228101/"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-21T15:33:07.655Z"
   }
 }

@@ -1725,9 +1725,11 @@
   {
     "title": "The Beginning Was the End",
     "url": "https://en.wikipedia.org/wiki/The_Beginning_Was_the_End",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Devo_2008.05.31_002.jpg/960px-Devo_2008.05.31_002.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/11/TheBeginningWasTheEnd1stEd.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "socialImage": "File:Devo 2008.05.31 002.jpg",
-    "imageChecked": true
+    "imageChecked": true,
+    "extract": "The Beginning Was the End is a 1971 pseudo-scientific book written by Oscar Kiss Maerth which claims humankind evolved from cannibalistic apes. The book has been criticized in relation to racialist and pseudohistorical claims.",
+    "description": "Pseudoscientific book on the evolution of humans"
   },
   {
     "title": "I Love You, Colonel Sanders!",
