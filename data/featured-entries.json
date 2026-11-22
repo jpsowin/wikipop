@@ -1734,9 +1734,11 @@
   {
     "title": "I Love You, Colonel Sanders!",
     "url": "https://en.wikipedia.org/wiki/I_Love_You%2C_Colonel_Sanders!",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/e/ee/I_Love_You%2C_Colonel_Sanders%21_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ee/I_Love_You%2C_Colonel_Sanders%21_logo.png/330px-I_Love_You%2C_Colonel_Sanders%21_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "socialImage": "File:I Love You, Colonel Sanders! logo.png",
-    "imageChecked": true
+    "imageChecked": true,
+    "extract": "I Love You, Colonel Sanders! A Finger Lickin' Good Dating Simulator is a dating sim developed by Psyop. The video game was commissioned by the restaurant chain KFC and released for free on Steam on September 24, 2019. A parody of conventional dating sims, the primary objective of the player is to develop a romantic relationship with a fictionalized version of KFC's founder Colonel Sanders, portrayed as an attractive classmate at a cooking school.",
+    "description": "2019 dating sim game"
   },
   {
     "title": "Les Songes drolatiques de Pantagruel",

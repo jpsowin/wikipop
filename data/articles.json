@@ -56641,5 +56641,89 @@
       }
     ],
     "obscure": "https://en.wikipedia.org/wiki/The_Beginning_Was_the_End"
+  },
+  {
+    "date": "2026-11-21",
+    "title": "Riemann_hypothesis",
+    "views": 388288,
+    "rank": 5,
+    "type": "standard",
+    "extract": "In mathematics, the Riemann hypothesis asserts that the Riemann zeta function has its zeros only at the negative even integers and at complex numbers with real part. First posed in 1859 by Bernhard Riemann, it is considered by pure mathematicians to be one of the most important problems in the field. The result has importance in number theory because it implies bounds on the distribution of prime numbers. The name is also used for some closely related analogues such as the Riemann hypothesis for curves over finite fields, which was proved by André Weil around 1940.",
+    "description": "Statement about zeros of the zeta function",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Riemann_zeta_function_absolute_value.png/330px-Riemann_zeta_function_absolute_value.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://en.wikipedia.org/wiki/Riemann_hypothesis",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Grand_Theft_Auto_VI",
+        "views": 393338,
+        "description": "2026 video game",
+        "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI"
+      },
+      {
+        "rank": 5,
+        "title": "Riemann_hypothesis",
+        "views": 388288,
+        "description": "Statement about zeros of the zeta function",
+        "url": "https://en.wikipedia.org/wiki/Riemann_hypothesis"
+      },
+      {
+        "rank": 6,
+        "title": "Ramayana:_Part_1",
+        "views": 357351,
+        "description": "2026 Indian film by Nitesh Tiwari",
+        "url": "https://en.wikipedia.org/wiki/Ramayana%3A_Part_1"
+      },
+      {
+        "rank": 7,
+        "title": "The_Hunger_Games:_Sunrise_on_the_Reaping",
+        "views": 204097,
+        "description": "2026 American dystopian film",
+        "url": "https://en.wikipedia.org/wiki/The_Hunger_Games%3A_Sunrise_on_the_Reaping"
+      },
+      {
+        "rank": 9,
+        "title": "Deaths_in_2026",
+        "views": 124212,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Deaths_in_2026"
+      },
+      {
+        "rank": 10,
+        "title": "O.M:_Operation_Mole",
+        "views": 123978,
+        "description": "2026 Indian film by Rajkumar Periasamy",
+        "url": "https://en.wikipedia.org/wiki/O.M%3A_Operation_Mole"
+      },
+      {
+        "rank": 11,
+        "title": "List_of_highest-grossing_Indian_films",
+        "views": 122695,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/List_of_highest-grossing_Indian_films"
+      },
+      {
+        "rank": 12,
+        "title": "Ansel_Adams",
+        "views": 121328,
+        "description": "American photographer and environmentalist (1902–1984)",
+        "url": "https://en.wikipedia.org/wiki/Ansel_Adams"
+      },
+      {
+        "rank": 13,
+        "title": "Robert_Pattinson",
+        "views": 119357,
+        "description": "English actor (born 1986)",
+        "url": "https://en.wikipedia.org/wiki/Robert_Pattinson"
+      },
+      {
+        "rank": 14,
+        "title": "The_Body_(TV_series)",
+        "views": 109819,
+        "description": "American television series",
+        "url": "https://en.wikipedia.org/wiki/The_Body_(TV_series)"
+      }
+    ],
+    "obscure": "https://en.wikipedia.org/wiki/I_Love_You%2C_Colonel_Sanders!"
   }
 ]

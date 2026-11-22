@@ -1544,5 +1544,24 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-21T15:33:07.655Z"
+  },
+  "2026-11-21": {
+    "date": "2026-11-21",
+    "title": "Riemann_hypothesis",
+    "show": true,
+    "confidence": 94,
+    "bullets": [
+      "[Levent Alpöge](https://en.wikipedia.org/wiki/Levent_Alpöge) of [Anthropic](https://en.wikipedia.org/wiki/Anthropic) says he and [Claude](https://en.wikipedia.org/wiki/Claude_(AI)) have [proved the Riemann hypothesis](https://www.nature.com/articles/d41586-026-03812-7), math's most famous unsolved puzzle.",
+      "Instead of a paper, he [released it](https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/) as [Lean](https://en.wikipedia.org/wiki/Lean_(proof_assistant)) code that checks every step, and humans can't yet follow it.",
+      "Even so, number theorist [James Maynard](https://en.wikipedia.org/wiki/James_Maynard_(mathematician)) suspects it will turn out to be correct.",
+      "Not everyone's cheering: [Andrew Granville](https://en.wikipedia.org/wiki/Andrew_Granville) criticized the note's clarity and its timing, one day after Anthropic's IPO."
+    ],
+    "hook": "is claimed solved by Anthropic's Levent Alpöge and Claude.",
+    "sources": [
+      "https://www.nature.com/articles/d41586-026-03812-7",
+      "https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-22T15:34:19.562Z"
   }
 }

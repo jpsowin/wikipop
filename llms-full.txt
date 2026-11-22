@@ -5,6 +5,29 @@ Updated daily. Each section is one day. WikiPop's Pick is the curated entry; the
 
 ---
 
+## 2026-11-21 — WikiPop's Pick: Riemann hypothesis
+
+Category: Statement about zeros of the zeta function
+Views: 388,288
+Wikipedia: https://en.wikipedia.org/wiki/Riemann_hypothesis
+On-site page: https://wikipop.sowin.io/day/2026-11-21-riemann-hypothesis/
+
+In mathematics, the Riemann hypothesis asserts that the Riemann zeta function has its zeros only at the negative even integers and at complex numbers with real part. First posed in 1859 by Bernhard Riemann, it is considered by pure mathematicians to be one of the most important problems in the field. The result has importance in number theory because it implies bounds on the distribution of prime numbers. The name is also used for some closely related analogues such as the Riemann hypothesis for curves over finite fields, which was proved by André Weil around 1940.
+
+### Full top 10 on 2026-11-21
+- Grand Theft Auto VI (393,338 views): 2026 video game
+- Riemann hypothesis (388,288 views): Statement about zeros of the zeta function
+- Ramayana: Part 1 (357,351 views): 2026 Indian film by Nitesh Tiwari
+- The Hunger Games: Sunrise on the Reaping (204,097 views): 2026 American dystopian film
+- Deaths in 2026 (124,212 views)
+- O.M: Operation Mole (123,978 views): 2026 Indian film by Rajkumar Periasamy
+- List of highest-grossing Indian films (122,695 views)
+- Ansel Adams (121,328 views): American photographer and environmentalist (1902–1984)
+- Robert Pattinson (119,357 views): English actor (born 1986)
+- The Body (TV series) (109,819 views): American television series
+
+---
+
 ## 2026-11-20 — WikiPop's Pick: The Hunger Games: Sunrise on the Reaping
 
 Category: 2026 American film

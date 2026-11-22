@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Sat, 21 Nov 2026 15:33:08 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 15:34:20 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>Riemann hypothesis</title>
+      <link>https://en.wikipedia.org/wiki/Riemann_hypothesis</link>
+      <description>In mathematics, the Riemann hypothesis asserts that the Riemann zeta function has its zeros only at the negative even integers and at complex numbers with real part. First posed in 1859 by Bernhard Riemann, it is considered by pure mathematicians to be one of the most important problems in the field. The result has importance in number theory because it implies bounds on the distribution of prime numbers. The name is also used for some closely related analogues such as the Riemann hypothesis for curves over finite fields, which was proved by André Weil around 1940.</description>
+      <pubDate>Sat, 21 Nov 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/Riemann_hypothesis#2026-11-21</guid>
+      <category>Statement about zeros of the zeta function</category>
+    </item>
     <item>
       <title>The Hunger Games: Sunrise on the Reaping</title>
       <link>https://en.wikipedia.org/wiki/The_Hunger_Games%3A_Sunrise_on_the_Reaping</link>
@@ -245,14 +253,6 @@
       <pubDate>Fri, 23 Oct 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/Clayface_(film)#2026-10-23</guid>
       <category>2026 DC Studios film</category>
-    </item>
-    <item>
-      <title>Tom Skerritt</title>
-      <link>https://en.wikipedia.org/wiki/Tom_Skerritt</link>
-      <description>Thomas Roy Skerritt was an American actor and director who appeared in over 170 film and television productions between 1962 and 2025. The beginning of his film career coincided with the New Hollywood movement, with a breakthrough role as Duke Forrest in Robert Altman&apos;s M*A*S*H (1970). He then starred in notable films like The Turning Point (1977), Up in Smoke (1978), Ice Castles (1978), Alien (1979), The Dead Zone (1983), Top Gun (1986), SpaceCamp (1986), Steel Magnolias (1989), and A River Runs Through It (1992).</description>
-      <pubDate>Thu, 22 Oct 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/Tom_Skerritt#2026-10-22</guid>
-      <category>American actor (1933–2026)</category>
     </item>
   </channel>
 </rss>
