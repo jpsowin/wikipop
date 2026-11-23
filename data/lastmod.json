@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "ce5d7a912b02db67",
-  "lastmod": "2026-11-22"
+  "hash": "854574928a8452e0",
+  "lastmod": "2026-11-23"
  },
  "archive.html": {
-  "hash": "dd1982d4e76f40c8",
-  "lastmod": "2026-11-22"
+  "hash": "dd062c515b9267d3",
+  "lastmod": "2026-11-23"
  },
  "explore.html": {
-  "hash": "101481d75ad102c4",
-  "lastmod": "2026-11-22"
+  "hash": "a49825e13d512ac8",
+  "lastmod": "2026-11-23"
  },
  "changelog.html": {
   "hash": "7521b5b053dbeceb",
@@ -2856,7 +2856,11 @@
   "lastmod": "2026-11-22"
  },
  "day/2026-11-21-riemann-hypothesis/": {
-  "hash": "1c90cea0f87a8598",
-  "lastmod": "2026-11-22"
+  "hash": "0cec99c756e80ff5",
+  "lastmod": "2026-11-23"
+ },
+ "day/2026-11-22-tom-jackson-american-football-born-1951/": {
+  "hash": "6a3f241c1516fac8",
+  "lastmod": "2026-11-23"
  }
 }

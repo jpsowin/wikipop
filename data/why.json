@@ -1563,5 +1563,25 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-22T15:34:19.562Z"
+  },
+  "2026-11-22": {
+    "date": "2026-11-22",
+    "title": "Tom_Jackson_(American_football,_born_1951)",
+    "show": true,
+    "confidence": 96,
+    "bullets": [
+      "Tom Jackson, a linebacker in the [Denver Broncos](https://en.wikipedia.org/wiki/Denver_Broncos)' [Orange Crush Defense](https://en.wikipedia.org/wiki/Orange_Crush_Defense) and later a beloved ESPN analyst, [died at 75](https://www.nfl.com/news/tom-jackson-dies-age-75-broncos-star-orange-crush-espn).",
+      "Longtime co-host [Chris Berman](https://en.wikipedia.org/wiki/Chris_Berman) told viewers on [Sunday NFL Countdown](https://en.wikipedia.org/wiki/Sunday_NFL_Countdown), \"[He was a vital 75… This is a shock.](https://variety.com/2026/tv/people-news/tom-jackson-dead-espn-analyst-denver-broncos-1236955322/)\"",
+      "ESPN's NFL studio is named for him and Berman, [a distinction unmatched](https://www.cnn.com/2026/11/22/sport/tom-jackson-dies-broncos-espn) in the network's history.",
+      "Their [NFL Primetime](https://en.wikipedia.org/wiki/NFL_Primetime) highlights show was a staple back before highlights were everywhere on social media."
+    ],
+    "hook": "died at 75, mourned by his ESPN partner Chris Berman.",
+    "sources": [
+      "https://www.nfl.com/news/tom-jackson-dies-age-75-broncos-star-orange-crush-espn",
+      "https://variety.com/2026/tv/people-news/tom-jackson-dead-espn-analyst-denver-broncos-1236955322/",
+      "https://www.cnn.com/2026/11/22/sport/tom-jackson-dies-broncos-espn"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-23T19:27:19.410Z"
   }
 }

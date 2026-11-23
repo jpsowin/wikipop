@@ -1742,7 +1742,11 @@
   },
   {
     "title": "Les Songes drolatiques de Pantagruel",
-    "url": "https://en.wikipedia.org/wiki/Les_Songes_drolatiques_de_Pantagruel"
+    "url": "https://en.wikipedia.org/wiki/Les_Songes_drolatiques_de_Pantagruel",
+    "extract": "Les Songes drolatiques de Pantagruel is a woodcut picture book published in 1565 by French illustrator Richard Breton. While Breton released the book, he did not illustrate it. Its original illustrator is unknown, but is speculated to be engraver François Desprez.",
+    "description": "16th century woodcut picture book",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Page_de_titre_des_Songes_pantagru%C3%A9liques-restaured.png/330px-Page_de_titre_des_Songes_pantagru%C3%A9liques-restaured.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "imageChecked": true
   },
   {
     "title": "Swan dress",
