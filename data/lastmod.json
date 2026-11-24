@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "854574928a8452e0",
-  "lastmod": "2026-11-23"
+  "hash": "b38d915335ad2118",
+  "lastmod": "2026-11-24"
  },
  "archive.html": {
-  "hash": "dd062c515b9267d3",
-  "lastmod": "2026-11-23"
+  "hash": "61659eaba75e6660",
+  "lastmod": "2026-11-24"
  },
  "explore.html": {
-  "hash": "a49825e13d512ac8",
-  "lastmod": "2026-11-23"
+  "hash": "8a6877cc6ceb6fa0",
+  "lastmod": "2026-11-24"
  },
  "changelog.html": {
   "hash": "7521b5b053dbeceb",
@@ -112,8 +112,8 @@
   "lastmod": "2026-11-19"
  },
  "month/2026-11/": {
-  "hash": "ab4508b1f9d835c1",
-  "lastmod": "2026-11-20"
+  "hash": "3fd55bca2c1cdee7",
+  "lastmod": "2026-11-24"
  },
  "day/2025-01-02-squid-game-season-2/": {
   "hash": "5060522a2e7477f1",
@@ -2860,7 +2860,11 @@
   "lastmod": "2026-11-23"
  },
  "day/2026-11-22-tom-jackson-american-football-born-1951/": {
-  "hash": "6a3f241c1516fac8",
-  "lastmod": "2026-11-23"
+  "hash": "a13d0b909ac92609",
+  "lastmod": "2026-11-24"
+ },
+ "day/2026-11-23-list-of-highest-grossing-indian-films/": {
+  "hash": "ffc7dbab71211c18",
+  "lastmod": "2026-11-24"
  }
 }

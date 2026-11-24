@@ -56809,5 +56809,94 @@
       }
     ],
     "obscure": "https://en.wikipedia.org/wiki/Les_Songes_drolatiques_de_Pantagruel"
+  },
+  {
+    "date": "2026-11-23",
+    "title": "List_of_highest-grossing_Indian_films",
+    "views": 136937,
+    "rank": 12,
+    "type": "standard",
+    "extract": "This ranking lists the highest-grossing Indian films produced by Indian cinema, based on conservative global box office estimates as reported by organisations classified as green by Wikipedia. The figures are not adjusted for inflation. However, there is no official tracking of figures and sources publishing data are frequently pressured to increase their estimates.",
+    "description": "",
+    "thumbnail": null,
+    "url": "https://en.wikipedia.org/wiki/List_of_highest-grossing_Indian_films",
+    "top10": [
+      {
+        "rank": 4,
+        "title": "Ramayana:_Part_1",
+        "views": 365685,
+        "description": "2026 Indian film by Nitesh Tiwari",
+        "url": "https://en.wikipedia.org/wiki/Ramayana%3A_Part_1"
+      },
+      {
+        "rank": 5,
+        "title": "Grand_Theft_Auto_VI",
+        "views": 266240,
+        "description": "2026 video game",
+        "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI"
+      },
+      {
+        "rank": 6,
+        "title": "Jensen_Huang",
+        "views": 234343,
+        "description": "Taiwanese-American business executive (born 1963)",
+        "url": "https://en.wikipedia.org/wiki/Jensen_Huang"
+      },
+      {
+        "rank": 7,
+        "title": "Moon",
+        "views": 180275,
+        "description": "Natural satellite orbiting Earth",
+        "url": "https://en.wikipedia.org/wiki/Moon"
+      },
+      {
+        "rank": 8,
+        "title": "The_Hunger_Games:_Sunrise_on_the_Reaping",
+        "views": 180185,
+        "description": "2026 film by Francis Lawrence",
+        "url": "https://en.wikipedia.org/wiki/The_Hunger_Games%3A_Sunrise_on_the_Reaping"
+      },
+      {
+        "rank": 9,
+        "title": "Linux",
+        "views": 177023,
+        "description": "Family of Unix-like operating systems that use the Linux kernel",
+        "url": "https://en.wikipedia.org/wiki/Linux"
+      },
+      {
+        "rank": 10,
+        "title": "Blood",
+        "views": 174912,
+        "description": "Body fluid in the circulatory system",
+        "url": "https://en.wikipedia.org/wiki/Blood"
+      },
+      {
+        "rank": 11,
+        "title": "Riemann_hypothesis",
+        "views": 157845,
+        "description": "Statement about zeros of the zeta function",
+        "url": "https://en.wikipedia.org/wiki/Riemann_hypothesis"
+      },
+      {
+        "rank": 12,
+        "title": "List_of_highest-grossing_Indian_films",
+        "views": 136937,
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/List_of_highest-grossing_Indian_films"
+      },
+      {
+        "rank": 13,
+        "title": "Experience_machine",
+        "views": 135474,
+        "description": "Thought experiment posed by Robert Nozick",
+        "url": "https://en.wikipedia.org/wiki/Experience_machine"
+      }
+    ],
+    "skipped": [
+      "Linux",
+      "Moon",
+      "Blood"
+    ],
+    "obscure": "https://en.wikipedia.org/wiki/Swan_dress"
   }
 ]

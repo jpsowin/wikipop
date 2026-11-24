@@ -1750,7 +1750,11 @@
   },
   {
     "title": "Swan dress",
-    "url": "https://en.wikipedia.org/wiki/Swan_dress"
+    "url": "https://en.wikipedia.org/wiki/Swan_dress",
+    "extract": "The swan dress is a dress resembling a mute swan designed by Marjan Pejoski and worn by the Icelandic music artist Björk at the 73rd Academy Awards on March 25, 2001, as well as on the cover of her album Vespertine. A Debenhams poll published in The Daily Telegraph in 2008 voted it the ninth-most iconic red carpet dress of all time. Björk's swan dress was reimagined by Valentino at its Spring 2014 Couture fashion show at Paris Fashion Week, which received praise from fashion blogs and social media. In 2019, the dress was featured in the Metropolitan Museum of Art for the exhibition Camp: Notes on Fashion.",
+    "description": "Gown worn by Björk in 2001",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Swan_Dress.jpg/330px-Swan_Dress.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "imageChecked": true
   },
   {
     "title": "Dancing baby",

@@ -12,8 +12,16 @@
       <link>https://wikipop.sowin.io/</link>
     </image>
     <copyright>Public archive of Wikipedia pageview data. Article content from Wikipedia under CC BY-SA.</copyright>
-    <lastBuildDate>Mon, 23 Nov 2026 19:27:20 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 19:04:28 GMT</lastBuildDate>
     <language>en-us</language>
+    <item>
+      <title>List of highest-grossing Indian films</title>
+      <link>https://en.wikipedia.org/wiki/List_of_highest-grossing_Indian_films</link>
+      <description>This ranking lists the highest-grossing Indian films produced by Indian cinema, based on conservative global box office estimates as reported by organisations classified as green by Wikipedia. The figures are not adjusted for inflation. However, there is no official tracking of figures and sources publishing data are frequently pressured to increase their estimates.</description>
+      <pubDate>Mon, 23 Nov 2026 06:00:00 GMT</pubDate>
+      <guid>https://en.wikipedia.org/wiki/List_of_highest-grossing_Indian_films#2026-11-23</guid>
+      
+    </item>
     <item>
       <title>Tom Jackson (American football, born 1951)</title>
       <link>https://en.wikipedia.org/wiki/Tom_Jackson_(American_football%2C_born_1951)</link>
@@ -245,14 +253,6 @@
       <pubDate>Sun, 25 Oct 2026 06:00:00 GMT</pubDate>
       <guid>https://en.wikipedia.org/wiki/2026_Brazilian_general_election#2026-10-25</guid>
       
-    </item>
-    <item>
-      <title>UFC 333</title>
-      <link>https://en.wikipedia.org/wiki/UFC_333</link>
-      <description>UFC 333: Volkanovski vs. Evloev was a mixed martial arts event produced by the Ultimate Fighting Championship that took place on October 24, 2026, at the Etihad Arena in Abu Dhabi, United Arab Emirates.</description>
-      <pubDate>Sat, 24 Oct 2026 06:00:00 GMT</pubDate>
-      <guid>https://en.wikipedia.org/wiki/UFC_333#2026-10-24</guid>
-      <category>Mixed martial arts event in 2026</category>
     </item>
   </channel>
 </rss>
