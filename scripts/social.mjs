@@ -28,8 +28,9 @@
 // data/obscure-slides.json, keyed by entry title:
 //   { slide1: {text}, slide2?: {heading, paras[]}, slide3?: {heading, paras[]},  (slide 1 + at least one more)
 //     extraSlides: [{heading, paras[], image: {file, artist, license}, imgPos, imgZoom}],
-//     caption, image: {file, artist, license} | null, imgPos, imgZoom, hard }
-//   [[double brackets]] mark a highlight. Entries without curated slides are skipped, never posted raw.
+//     caption, image: {file, artist, license} | null, imgPos, imgZoom, hard, reviewed }
+//   reviewed false: a draft the owner hasn't looked at yet. It still posts (only `hard` holds it).
+//   [[double brackets]] mark a highlight. Entries with no slides at all are skipped, never posted raw.
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -48,6 +49,7 @@ const IG_ACCOUNT_ID = '6aed306842d3fcd3bde900b3';
 const TZ = 'America/Los_Angeles';
 const FIRST_SLOT = [8, 0]; // 8:00 AM Pacific
 const GAP_MS = 5 * 60e3; // obscure 5 minutes after the WikiPop post
+const CATCHUP_SLOT = [18, 0]; // 6:00 PM Pacific, for an obscure entry that missed its day
 const UA = 'WikiPop/1.0 (https://wikipop.sowin.io; daily Instagram post)';
 
 // ---------- args ----------
@@ -389,6 +391,7 @@ async function buildObscure(entryTitle, cur, dir, tmp) {
   const allText = [caption, cur.slide1.text, ...[cur.slide2, cur.slide3, ...(cur.extraSlides || [])].filter(Boolean).flatMap(s => [s.heading, ...(s.paras || [])])];
   reasons.push(...lintCopy(allText));
   if (cur.hard) reasons.push('marked hard in obscure-slides.json');
+  if (cur.reviewed === false) reasons.push('not reviewed yet (posting the draft)');
   // Slide 1 plus at least one more slide (a list entry can be slide 1 + extra slides only).
   if (!cur.slide1 || !cur.slide1.text) errors.push('curated entry is missing slide1');
   if (![cur.slide2, cur.slide3, ...(cur.extraSlides || [])].some(Boolean)) errors.push('curated entry needs at least one slide after slide 1');
@@ -561,6 +564,22 @@ async function main() {
     obscure.scheduledAt = isoPacific(t2);
     if (obscure.errors.length) fail(`Obscure "${oTitle}" won't post: ${obscure.errors.join('; ')}`);
     posts.push(obscure);
+  }
+
+  // 3) Catch-up: an obscure entry that missed its Instagram day, posted on its own in the evening.
+  //    Instagram only (the site and email already featured it). data/obscure-catchup.json: {"YYYY-MM-DD": "Title"}.
+  const catchTitle = !OBSCURE_ARG && readJson(path.join(DATA, 'obscure-catchup.json'), {})[day];
+  if (catchTitle && !curated[catchTitle]) warn(`Catch-up "${catchTitle}" has no slides in data/obscure-slides.json; skipping it.`);
+  else if (catchTitle) {
+    const cdir = path.join(dir, 'catch-up');
+    fs.mkdirSync(cdir, { recursive: true });
+    const c = await buildObscure(catchTitle, curated[catchTitle], cdir, tmp);
+    c.kind = 'obscure catch-up';
+    c.state = curated[catchTitle].hard || trending.state === 'draft' ? 'draft' : 'scheduled';
+    const evening = pacificTime(day, ...CATCHUP_SLOT);
+    c.scheduledAt = isoPacific(evening > t2 ? evening : new Date(t2.getTime() + GAP_MS));
+    if (c.errors.length) fail(`Catch-up "${catchTitle}" won't post: ${c.errors.join('; ')}`);
+    posts.push(c);
   }
 
   const summary = {

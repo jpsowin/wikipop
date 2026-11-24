@@ -44,6 +44,8 @@ Scripts and people both read this file, so each rule is one short line.
 
 ## Obscure carousel
 - Blue dot background, black-bordered white card, and the "WikiPop! Obscure" sticker at the bottom right.
+- Unreviewed drafts post on schedule (with image 1 if none was picked). Reviewing ahead is how to change them; only `hard: true` holds one back.
+- An entry that missed its Instagram day gets a catch-up post on its own at 6 PM Pacific (data/obscure-catchup.json), never a second obscure post right after the morning pair.
 
 ## Captions
 - Start with the title and a colon, then the single most fun fact, in plain English. No hashtags, no emoji.
