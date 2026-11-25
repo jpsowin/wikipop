@@ -1711,16 +1711,18 @@
     "url": "https://en.wikipedia.org/wiki/Montague_Street_Bridge",
     "extract": "The Montague Street Bridge is a railway bridge in South Melbourne, Australia, an inner suburb of Melbourne. The bridge is located at 83 Montague Street, between Woodgate Street and Gladstone Lane.",
     "description": "Tram bridge in Melbourne, Victoria, Australia",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Montague_Street_Bridge.jpg/330px-Montague_Street_Bridge.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-    "imageChecked": true
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Montague_Street_Bridge.jpg/960px-Montague_Street_Bridge.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageChecked": true,
+    "socialImage": "File:Montague Street Bridge.jpg"
   },
   {
     "title": "Korea Central Zoo",
     "url": "https://en.wikipedia.org/wiki/Korea_Central_Zoo",
     "extract": "The Korea Central Zoo, also referred to as the Pyongyang Central Zoo, is the national zoo of North Korea. Opened in April 1960, it is located near Taesŏngsan mountain in downtown Pyongyang, and covers an area of roughly one square kilometre. The zoo has over 5,000 wild animals, comprising a total of 650 species, including elephants, domestic dogs, and chimpanzees. Though the zoo participates in species recovery efforts through breeding programs, it has been criticized for its treatment of animals, especially in the case of Azalea, a chimp who was taught to smoke. Accusations of the starvation, neglect, and inbreeding of animals have also been made.",
     "description": "Zoo in Pyongyang, North Korea",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Korea_Central_Zoo_in_Pyongyang.jpg/330px-Korea_Central_Zoo_in_Pyongyang.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-    "imageChecked": true
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Korea_Central_Zoo_in_Pyongyang.jpg/960px-Korea_Central_Zoo_in_Pyongyang.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageChecked": true,
+    "socialImage": "File:Korea Central Zoo in Pyongyang.jpg"
   },
   {
     "title": "The Beginning Was the End",
@@ -1745,23 +1747,27 @@
     "url": "https://en.wikipedia.org/wiki/Les_Songes_drolatiques_de_Pantagruel",
     "extract": "Les Songes drolatiques de Pantagruel is a woodcut picture book published in 1565 by French illustrator Richard Breton. While Breton released the book, he did not illustrate it. Its original illustrator is unknown, but is speculated to be engraver François Desprez.",
     "description": "16th century woodcut picture book",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Page_de_titre_des_Songes_pantagru%C3%A9liques-restaured.png/330px-Page_de_titre_des_Songes_pantagru%C3%A9liques-restaured.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-    "imageChecked": true
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Songes_drolatiques_de_Pantagruel%2C_pl._CVI.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "imageChecked": true,
+    "socialImage": "File:Songes drolatiques de Pantagruel, pl. CVI.jpg"
   },
   {
     "title": "Swan dress",
     "url": "https://en.wikipedia.org/wiki/Swan_dress",
     "extract": "The swan dress is a dress resembling a mute swan designed by Marjan Pejoski and worn by the Icelandic music artist Björk at the 73rd Academy Awards on March 25, 2001, as well as on the cover of her album Vespertine. A Debenhams poll published in The Daily Telegraph in 2008 voted it the ninth-most iconic red carpet dress of all time. Björk's swan dress was reimagined by Valentino at its Spring 2014 Couture fashion show at Paris Fashion Week, which received praise from fashion blogs and social media. In 2019, the dress was featured in the Metropolitan Museum of Art for the exhibition Camp: Notes on Fashion.",
     "description": "Gown worn by Björk in 2001",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Swan_Dress.jpg/330px-Swan_Dress.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-    "imageChecked": true
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Bj%C3%B6rk_and_the_Swan_Dress.jpg/960px-Bj%C3%B6rk_and_the_Swan_Dress.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageChecked": true,
+    "socialImage": "File:Björk and the Swan Dress.jpg"
   },
   {
     "title": "Dancing baby",
     "url": "https://en.wikipedia.org/wiki/Dancing_baby",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/c/ce/DancingBaby.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/c/ce/DancingBaby.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "socialImage": "File:DancingBaby.jpg",
-    "imageChecked": true
+    "imageChecked": true,
+    "extract": "The \"Dancing Baby\", also called \"Baby Cha-Cha\" or \"the Oogachacka Baby\", is an Internet meme of a 3D-rendered animation of a baby performing a cha-cha type dance. It quickly became a media phenomenon in the United States and one of the first viral videos in 1996.",
+    "description": "Short CGI video and internet meme"
   },
   {
     "title": "Raël",
@@ -1786,47 +1792,80 @@
   },
   {
     "title": "Norwegian butter crisis",
-    "url": "https://en.wikipedia.org/wiki/Norwegian_butter_crisis"
+    "url": "https://en.wikipedia.org/wiki/Norwegian_butter_crisis",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Norwegian_butter.jpg/960px-Norwegian_butter.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "socialImage": "File:Norwegian butter.jpg",
+    "imageChecked": true
   },
   {
     "title": "Plant rights",
-    "url": "https://en.wikipedia.org/wiki/Plant_rights"
+    "url": "https://en.wikipedia.org/wiki/Plant_rights",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Venus_Flytrap_showing_trigger_hairs.jpg/960px-Venus_Flytrap_showing_trigger_hairs.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "socialImage": "File:Venus Flytrap showing trigger hairs.jpg",
+    "imageChecked": true
   },
   {
     "title": "Jumping the shark",
-    "url": "https://en.wikipedia.org/wiki/Jumping_the_shark"
+    "url": "https://en.wikipedia.org/wiki/Jumping_the_shark",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/5/51/Fonzie_jumps_the_shark.PNG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "socialImage": "File:Fonzie jumps the shark.PNG",
+    "imageChecked": true
   },
   {
     "title": "Ryugyong Hotel",
-    "url": "https://en.wikipedia.org/wiki/Ryugyong_Hotel"
+    "url": "https://en.wikipedia.org/wiki/Ryugyong_Hotel",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Pr%C3%A1zdn%C3%A9_slnice_a_rozestav%C4%9Bn%C3%BD_hotel_Ryugyong_-_panoramio.jpg/960px-Pr%C3%A1zdn%C3%A9_slnice_a_rozestav%C4%9Bn%C3%BD_hotel_Ryugyong_-_panoramio.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "socialImage": "File:Prázdné slnice a rozestavěný hotel Ryugyong - panoramio.jpg",
+    "imageChecked": true
   },
   {
     "title": "NORAD Tracks Santa",
-    "url": "https://en.wikipedia.org/wiki/NORAD_Tracks_Santa"
+    "url": "https://en.wikipedia.org/wiki/NORAD_Tracks_Santa",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/NORAD_Tracks_Santa_2007_Ops_Center.jpg/960px-NORAD_Tracks_Santa_2007_Ops_Center.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "socialImage": "File:NORAD Tracks Santa 2007 Ops Center.jpg",
+    "imageChecked": true
   },
   {
     "title": "Oil futures drunk-trading incident",
-    "url": "https://en.wikipedia.org/wiki/Oil_futures_drunk-trading_incident"
+    "url": "https://en.wikipedia.org/wiki/Oil_futures_drunk-trading_incident",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Pint_Glass_with_some_beer.jpg/960px-Pint_Glass_with_some_beer.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "socialImage": "File:Pint Glass with some beer.jpg",
+    "imageChecked": true
   },
   {
     "title": "Darwin (monkey)",
-    "url": "https://en.wikipedia.org/wiki/Darwin_(monkey)"
+    "url": "https://en.wikipedia.org/wiki/Darwin_(monkey)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/3/30/Darwin-IkeaMonkey.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "socialImage": "File:Darwin-IkeaMonkey.png",
+    "imageChecked": true
   },
   {
     "title": "Action Park",
-    "url": "https://en.wikipedia.org/wiki/Action_Park"
+    "url": "https://en.wikipedia.org/wiki/Action_Park",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Action_Park_%282999353205%29.jpg/960px-Action_Park_%282999353205%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "socialImage": "File:Action Park (2999353205).jpg",
+    "imageChecked": true
   },
   {
     "title": "Mall walking",
-    "url": "https://en.wikipedia.org/wiki/Mall_walking"
+    "url": "https://en.wikipedia.org/wiki/Mall_walking",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/2011_Everybody_Walk_Week_5903_%286172210942%29.jpg/960px-2011_Everybody_Walk_Week_5903_%286172210942%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "socialImage": "File:2011 Everybody Walk Week 5903 (6172210942).jpg",
+    "imageChecked": true
   },
   {
     "title": "Legs Diamond (musical)",
-    "url": "https://en.wikipedia.org/wiki/Legs_Diamond_(musical)"
+    "url": "https://en.wikipedia.org/wiki/Legs_Diamond_(musical)",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Times-square-church.jpg/960px-Times-square-church.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "socialImage": "File:Times-square-church.jpg",
+    "imageChecked": true
   },
   {
     "title": "Loveday (1458)",
-    "url": "https://en.wikipedia.org/wiki/Loveday_(1458)"
+    "url": "https://en.wikipedia.org/wiki/Loveday_(1458)",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/King_Henry_VI.jpg/960px-King_Henry_VI.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "socialImage": "File:King Henry VI.jpg",
+    "imageChecked": true
   },
   {
     "title": "The Moon is made of green cheese",

@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "b38d915335ad2118",
-  "lastmod": "2026-11-24"
+  "hash": "1bb703b968c9466b",
+  "lastmod": "2026-11-25"
  },
  "archive.html": {
-  "hash": "61659eaba75e6660",
-  "lastmod": "2026-11-24"
+  "hash": "301a2432d00ef3a7",
+  "lastmod": "2026-11-25"
  },
  "explore.html": {
-  "hash": "8a6877cc6ceb6fa0",
-  "lastmod": "2026-11-24"
+  "hash": "98b78e2f5c901569",
+  "lastmod": "2026-11-25"
  },
  "changelog.html": {
   "hash": "7521b5b053dbeceb",
@@ -2844,12 +2844,12 @@
   "lastmod": "2026-11-19"
  },
  "day/2026-11-18-grand-theft-auto-vi/": {
-  "hash": "7e9dd99614953ed2",
-  "lastmod": "2026-11-20"
+  "hash": "61145236d8073219",
+  "lastmod": "2026-11-25"
  },
  "day/2026-11-19-ella-langley/": {
-  "hash": "7f8ba5624eddb0b4",
-  "lastmod": "2026-11-21"
+  "hash": "1b6cbb870a907712",
+  "lastmod": "2026-11-25"
  },
  "day/2026-11-20-the-hunger-games-sunrise-on-the-reaping/": {
   "hash": "5e55797879299a1e",
@@ -2860,11 +2860,15 @@
   "lastmod": "2026-11-23"
  },
  "day/2026-11-22-tom-jackson-american-football-born-1951/": {
-  "hash": "a13d0b909ac92609",
-  "lastmod": "2026-11-24"
+  "hash": "c0db3f6fdb9a939c",
+  "lastmod": "2026-11-25"
  },
  "day/2026-11-23-list-of-highest-grossing-indian-films/": {
-  "hash": "ffc7dbab71211c18",
-  "lastmod": "2026-11-24"
+  "hash": "17adb72a276ce8d9",
+  "lastmod": "2026-11-25"
+ },
+ "day/2026-11-24-miley-cyrus/": {
+  "hash": "9fd5bb332518f42f",
+  "lastmod": "2026-11-25"
  }
 }

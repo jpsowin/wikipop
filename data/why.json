@@ -1593,5 +1593,24 @@
     "sources": [],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-24T19:04:27.838Z"
+  },
+  "2026-11-24": {
+    "date": "2026-11-24",
+    "title": "Miley_Cyrus",
+    "show": true,
+    "confidence": 88,
+    "bullets": [
+      "Miley Cyrus [married her partner of five years](https://www.rollingstone.com/music/music-news/miley-cyrus-maxx-morando-married-springs-wedding-1235662077/), drummer Maxx Morando, in a small [Palm Springs](https://en.wikipedia.org/wiki/Palm_Springs,_California) ceremony.",
+      "They met on a [blind date in 2021](https://abcnews.com/Entertainment/wireStory/miley-cyrus-marries-rock-drummer-maxx-morando-intimate-138366726), and he proposed in Japan late last year.",
+      "[Wayne Coyne](https://en.wikipedia.org/wiki/Wayne_Coyne) of [The Flaming Lips](https://en.wikipedia.org/wiki/The_Flaming_Lips), her partner on [Dead Petz](https://en.wikipedia.org/wiki/Miley_Cyrus_%26_Her_Dead_Petz), reportedly officiated.",
+      "Morando drums in the band Liily, which Cyrus featured on her 2022 New Year's Eve party."
+    ],
+    "hook": "married drummer Maxx Morando in a Palm Springs ceremony.",
+    "sources": [
+      "https://www.rollingstone.com/music/music-news/miley-cyrus-maxx-morando-married-springs-wedding-1235662077/",
+      "https://abcnews.com/Entertainment/wireStory/miley-cyrus-marries-rock-drummer-maxx-morando-intimate-138366726"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-25T18:10:14.339Z"
   }
 }
