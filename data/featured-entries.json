@@ -1772,9 +1772,11 @@
   {
     "title": "Raël",
     "url": "https://en.wikipedia.org/wiki/Ra%C3%ABl",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Claude_Vorilhon_%28Ra%C3%ABl%29_%28Santa_Maria_Times%2C_1978%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/A_gathering_of_Ra%C3%ABlians_in_South_Korea.jpg/500px-A_gathering_of_Ra%C3%ABlians_in_South_Korea.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "socialImage": "File:Claude Vorilhon (Raël) (Santa Maria Times, 1978).jpg",
-    "imageChecked": true
+    "imageChecked": true,
+    "extract": "Raël is a French journalist and religious leader who founded and leads the Raëlian Movement, an international UFO religion.",
+    "description": "French founder and leader of the Raëlian Movement"
   },
   {
     "title": "Minions, Cornwall",

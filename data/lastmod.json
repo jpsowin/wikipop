@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "1bb703b968c9466b",
-  "lastmod": "2026-11-25"
+  "hash": "9c0b468d2a5f8c4a",
+  "lastmod": "2026-11-26"
  },
  "archive.html": {
-  "hash": "301a2432d00ef3a7",
-  "lastmod": "2026-11-25"
+  "hash": "6805a053c33c4ead",
+  "lastmod": "2026-11-26"
  },
  "explore.html": {
-  "hash": "98b78e2f5c901569",
-  "lastmod": "2026-11-25"
+  "hash": "660793a4b61716ef",
+  "lastmod": "2026-11-26"
  },
  "changelog.html": {
   "hash": "7521b5b053dbeceb",
@@ -2868,7 +2868,11 @@
   "lastmod": "2026-11-25"
  },
  "day/2026-11-24-miley-cyrus/": {
-  "hash": "9fd5bb332518f42f",
-  "lastmod": "2026-11-25"
+  "hash": "f6cc809f28c4ac78",
+  "lastmod": "2026-11-26"
+ },
+ "day/2026-11-25-miss-universe-2026/": {
+  "hash": "45af904f5f14d334",
+  "lastmod": "2026-11-26"
  }
 }

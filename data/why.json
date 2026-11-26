@@ -1612,5 +1612,22 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-25T18:10:14.339Z"
+  },
+  "2026-11-25": {
+    "date": "2026-11-25",
+    "title": "Miss_Universe_2026",
+    "show": true,
+    "confidence": 96,
+    "bullets": [
+      "[Jennifer Barreto](https://en.wikipedia.org/wiki/Jennifer_Barreto) won [Miss Universe](https://en.wikipedia.org/wiki/Miss_Universe) on home soil in Puerto Rico, the [first married woman and first mother](https://www.cnn.com/2026/11/25/style/miss-universe-2026-winner) to take the crown.",
+      "The 27-year-old social worker also ends a long wait: Puerto Rico hadn't won since [Zuleyka Rivera](https://en.wikipedia.org/wiki/Zuleyka_Rivera) took the crown.",
+      "[Fátima Bosch](https://en.wikipedia.org/wiki/F%C3%A1tima_Bosch), winner of [last year's pageant](https://en.wikipedia.org/wiki/Miss_Universe_2025) amid rigging claims the organizers deny, returned to crown her."
+    ],
+    "hook": "went to Puerto Rico's Jennifer Barreto, the first mom to win.",
+    "sources": [
+      "https://www.cnn.com/2026/11/25/style/miss-universe-2026-winner"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-26T17:54:46.998Z"
   }
 }
