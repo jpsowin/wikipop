@@ -1781,9 +1781,11 @@
   {
     "title": "Minions, Cornwall",
     "url": "https://en.wikipedia.org/wiki/Minions%2C_Cornwall",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Panneau_minions_cornouailles.jpg/960px-Panneau_minions_cornouailles.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Minions_-_geograph.org.uk_-_222293.jpg/330px-Minions_-_geograph.org.uk_-_222293.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "socialImage": "File:Panneau minions cornouailles.jpg",
-    "imageChecked": true
+    "imageChecked": true,
+    "extract": "Minions is a village in Cornwall, England, United Kingdom. It is situated on the eastern flank of Bodmin Moor northwest of Caradon Hill approximately four miles (6 km) north of Liskeard. Minions is first recorded in 1613 and its meaning is unknown.",
+    "description": "Human settlement in England"
   },
   {
     "title": "Wise Men of Gotham",

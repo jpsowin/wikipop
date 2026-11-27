@@ -1629,5 +1629,25 @@
     ],
     "model": "claude-sonnet-5-5",
     "generatedAt": "2026-11-26T17:54:46.998Z"
+  },
+  "2026-11-26": {
+    "date": "2026-11-26",
+    "title": "Andy_Taylor_(guitarist)",
+    "show": true,
+    "confidence": 96,
+    "bullets": [
+      "Andy Taylor, the guitarist who gave [Duran Duran](https://en.wikipedia.org/wiki/Duran_Duran) their rock bite, [has died at 65](https://time.com/article/2026/11/26/andy-taylor-death-duran-duran-music-tributes-obituary/).",
+      "He landed the job in 1980 by answering a Melody Maker ad for a \"live-wire guitarist,\" and was no relation to bandmates [John Taylor](https://en.wikipedia.org/wiki/John_Taylor_(bass_guitarist)) or [Roger Taylor](https://en.wikipedia.org/wiki/Roger_Taylor_(Duran_Duran_drummer)).",
+      "[Rolling Stone](https://www.rollingstone.com/music/music-features/duran-duran-andy-taylor-guitarist-tribute-1235664822/) called him \"the wildest of the Wild Boys,\" and [Simon Le Bon](https://en.wikipedia.org/wiki/Simon_Le_Bon) remembered a \"blond bombshell, firebrand teenager.\"",
+      "His wife Tracey [said](https://variety.com/2026/music/news/andy-taylor-dead-duran-duran-guitarist-1236958437/) the world saw a brilliant guitarist, but to the family he was a loving dad and \"proudest grandfather.\""
+    ],
+    "hook": "has died at 65, and his Duran Duran bandmates are mourning him.",
+    "sources": [
+      "https://time.com/article/2026/11/26/andy-taylor-death-duran-duran-music-tributes-obituary/",
+      "https://www.rollingstone.com/music/music-features/duran-duran-andy-taylor-guitarist-tribute-1235664822/",
+      "https://variety.com/2026/music/news/andy-taylor-dead-duran-duran-guitarist-1236958437/"
+    ],
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-11-27T17:37:52.296Z"
   }
 }

@@ -1,15 +1,15 @@
 {
  "": {
-  "hash": "9c0b468d2a5f8c4a",
-  "lastmod": "2026-11-26"
+  "hash": "2351e1fe67e03b1c",
+  "lastmod": "2026-11-27"
  },
  "archive.html": {
-  "hash": "6805a053c33c4ead",
-  "lastmod": "2026-11-26"
+  "hash": "83f1499f67ee8e13",
+  "lastmod": "2026-11-27"
  },
  "explore.html": {
-  "hash": "660793a4b61716ef",
-  "lastmod": "2026-11-26"
+  "hash": "86b7102b2299dc1b",
+  "lastmod": "2026-11-27"
  },
  "changelog.html": {
   "hash": "7521b5b053dbeceb",
@@ -2872,7 +2872,11 @@
   "lastmod": "2026-11-26"
  },
  "day/2026-11-25-miss-universe-2026/": {
-  "hash": "45af904f5f14d334",
-  "lastmod": "2026-11-26"
+  "hash": "cd1a460c263da49a",
+  "lastmod": "2026-11-27"
+ },
+ "day/2026-11-26-andy-taylor-guitarist/": {
+  "hash": "ebaa269014098aaf",
+  "lastmod": "2026-11-27"
  }
 }
